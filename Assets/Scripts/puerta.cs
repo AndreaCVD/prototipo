@@ -13,15 +13,17 @@ public class puerta : MonoBehaviour
     string intel = "2 - Buscar Llave";
     string carisma = "3 - Abrete Sesamo";
 
+    bool open_door;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-       
+       open_door = false;
     }
     //Entrar en la zona
     void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player") && open_door == false)
         {
             Debug.Log("Player ha entrado de la Zona");
             //TEXTOS
@@ -47,7 +49,8 @@ public class puerta : MonoBehaviour
             //int rotacion = Vector3 (0, 90, 0)
             obj_actual.transform.Rotate(0, 90, 0);
             obj_actual.transform.Translate(0f, 0f, -1.5f);
-            animacion.Play();
+            //animacion.Play();
+            open_door=true;
         }
         if (Input.GetKeyDown("3"))
         {

@@ -2,15 +2,11 @@ using UnityEngine;
 
 public class CombatManager : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] CombatMonster playerPersonaje;
+    [SerializeField] CombatMonster enemyPersonaje;
+    public void StartBattle(PersonajesStats player, PersonajesStats enemy)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        playerPersonaje.Init(player);
+        enemyPersonaje.Init(enemy);
     }
 }

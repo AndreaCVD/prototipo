@@ -12,6 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3184c13f5276613429ba2c5118bbc8ba, type: 3}
   m_Name: Personaje 2
   m_EditorClassIdentifier: 
-  namePers: 
+  namePers: Circulo
   stats:
-    values: []
+    values:
+    - value: 3
+      stats: 0
+    - value: 3
+      stats: 1
+    - value: 3
+      stats: 2
+    - value: 3
+      stats: 3
+  modelPrefab: {fileID: 8023408201208121070, guid: c946b909ab67d274089332839512dcd7, type: 3}

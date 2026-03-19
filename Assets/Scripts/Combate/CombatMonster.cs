@@ -2,15 +2,8 @@ using UnityEngine;
 
 public class CombatMonster : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public void Init( PersonajesStats player)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        GameObject modelo = Instantiate(player.modelPrefab, transform);
     }
 }

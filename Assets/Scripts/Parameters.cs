@@ -40,7 +40,7 @@ public class ValueBlock
     }
 }
 
-[CreateAssetMenu(menuName = "Data/Pers")]
+[CreateAssetMenu(menuName = "Data/Personaje")]
 public class Parameters : ScriptableObject
 {
     public string namePers;

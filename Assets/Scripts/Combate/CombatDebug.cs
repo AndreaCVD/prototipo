@@ -1,16 +1,23 @@
+using System.Collections;
+using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 
 public class CombatDebug : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    /*
+    [SerializeField] Parameters player;
+    [SerializeField] Parameters enemy;
+    CombatManager manager;
+
+    private void Awake()
     {
-        
+        manager = GetComponent<CombatManager>();
     }
 
-    // Update is called once per frame
-    void Update()
+
+    void Start()
     {
-        
-    }
+        manager.StartBattle(player, enemy); 
+    }*/
 }

@@ -284,6 +284,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   turnRoundManager: {fileID: 88913839}
+  opponent: {fileID: 1529164169}
 --- !u!1 &216652210
 GameObject:
   m_ObjectHideFlags: 0

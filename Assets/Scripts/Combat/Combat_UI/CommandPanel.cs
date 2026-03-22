@@ -4,11 +4,11 @@ public class CommandPanel : MonoBehaviour
 {
     [SerializeField] CommandManager commandManager;
 
-    //Boton Fuerza
+    //Boton Fuerza, se dire a command manager
     public void Fuerza()
     {
         commandManager.Fuerza();
-        Debug.Log("Fuerza");
+        //Debug.Log("Fuerza");
     }
     //Boton Inteligencia
     public void Intel()

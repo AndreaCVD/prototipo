@@ -2,9 +2,12 @@ using UnityEngine;
 
 public class CommandPanel : MonoBehaviour
 {
+    [SerializeField] CommandManager commandManager;
+
     //Boton Fuerza
     public void Fuerza()
     {
+        commandManager.Fuerza();
         Debug.Log("Fuerza");
     }
     //Boton Inteligencia

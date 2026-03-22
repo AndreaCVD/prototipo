@@ -6,10 +6,10 @@ using System;
 //para indentificar que stat es
 public enum PersonajesStats
 {
-    Fuerza,
-    Inteligencia,
-    Carisma,
-    Constitucion
+    Fuerza,         //0
+    Inteligencia,   //1
+    Carisma,        //2
+    Constitucion    //3
 }
 
 //para poder editarlo en el editor de unity le ponemos serializable
@@ -38,7 +38,14 @@ public class ValueBlock
             values.Add(new ValueContainer(0, (PersonajesStats)i));
         }
     }
+
+    public int Get(PersonajesStats statToGet)
+    {
+        return values[(int)statToGet].value;
+    }
 }
+
+
 
 [CreateAssetMenu(menuName = "Data/Personaje")]
 public class Parameters : ScriptableObject

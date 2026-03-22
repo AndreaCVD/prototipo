@@ -178,6 +178,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83076efc590ce874990a5d0cb470421e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerData: {fileID: 11400000, guid: 3f6552816cb722c46b7ed51c3826b6e0, type: 2}
+  enemyData: {fileID: 11400000, guid: 2007cbc7d80ee3c47b7757d6652637d1, type: 2}
 --- !u!1 &828971477
 GameObject:
   m_ObjectHideFlags: 0
@@ -239,7 +241,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
+  orthographic: 1
   orthographic size: 5
   m_Depth: -1
   m_CullingMask:
@@ -265,7 +267,7 @@ Transform:
   m_GameObject: {fileID: 828971477}
   serializedVersion: 2
   m_LocalRotation: {x: -0.053242546, y: -0.42285594, z: 0.02489469, w: -0.9042889}
-  m_LocalPosition: {x: -8.453185, y: 1.0145577, z: -3.9919605}
+  m_LocalPosition: {x: -7.05, y: 1.64, z: -4.62}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

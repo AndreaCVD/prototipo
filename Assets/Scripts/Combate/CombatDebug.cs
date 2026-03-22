@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Security.Cryptography;
 using UnityEngine;
 
+//para hacer test de combate
 public class CombatDebug : MonoBehaviour
 {
-    /*
-    [SerializeField] Parameters player;
-    [SerializeField] Parameters enemy;
+    [SerializeField] Parameters playerData;
+    [SerializeField] Parameters enemyData;
+    
     CombatManager manager;
 
     private void Awake()
@@ -15,9 +16,8 @@ public class CombatDebug : MonoBehaviour
         manager = GetComponent<CombatManager>();
     }
 
-
-    void Start()
+    private void Start()
     {
-        manager.StartBattle(player, enemy); 
-    }*/
+        manager.StartBattle(playerData, enemyData); 
+    }
 }

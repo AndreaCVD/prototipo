@@ -4,7 +4,7 @@ public class CombatManager : MonoBehaviour
 {
     [SerializeField] CombatMonster playerPersonaje;
     [SerializeField] CombatMonster enemyPersonaje;
-    public void StartBattle(PersonajesStats player, PersonajesStats enemy)
+    public void StartBattle(Parameters player, Parameters enemy)
     {
         playerPersonaje.Init(player);
         enemyPersonaje.Init(enemy);

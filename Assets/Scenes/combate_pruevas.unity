@@ -1399,6 +1399,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1805435055}
     m_Modifications:
+    - target: {fileID: 20387254116006784, guid: 2e5aecda06452a94396695cc19a8ce3f, type: 3}
+      propertyPath: HP
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 662174162678173173, guid: 2e5aecda06452a94396695cc19a8ce3f, type: 3}
       propertyPath: m_Name
       value: Combat Monster

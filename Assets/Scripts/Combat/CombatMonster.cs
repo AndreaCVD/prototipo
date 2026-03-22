@@ -5,7 +5,7 @@ public class CombatMonster : MonoBehaviour
 {
     Parameters personaje;
 
-    public int HP;
+    public Int2Val HP;
     public int damage;
 
     public void Init(Parameters player)
@@ -17,6 +17,9 @@ public class CombatMonster : MonoBehaviour
         //restablecer rotacion
         player.modelPrefab.transform.localPosition = Vector3.zero;
         player.modelPrefab.transform.localRotation = Quaternion.identity;
+        //Setear vida
+        int contitucion = player.stats.Get(PersonajesStats.Constitucion);
+        HP = new Int2Val (contitucion, contitucion);
     }
 
     public void Fuerza(CombatMonster target)
@@ -33,11 +36,11 @@ public class CombatMonster : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        HP -= damage;
-        Debug.Log("Personaje : " + personaje.namePers + "HP : " + HP.ToString());
-        if (HP <= 0)
+        HP.current -= damage;
+        Debug.Log("Personaje : " + personaje.namePers + "HP : " + HP.current.ToString());
+        if (HP.current <= 0)
         {
-            HP = 0;
+            HP.current = 0;
             Debug.Log("Derrotado : " + personaje.namePers);
         }
     }

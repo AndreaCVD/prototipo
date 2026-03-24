@@ -6,7 +6,7 @@ using System;
 //para indentificar que stat es
 public enum PersonajesStats
 {
-    Fuerza = 0,         //0
+    Fuerza,         //0
     Inteligencia,   //1
     Carisma,        //2
     Constitucion    //3

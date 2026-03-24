@@ -12,7 +12,10 @@ public class TintScreen : MonoBehaviour
 
     float t;
     [SerializeField] float speed;
-
+    public void Awake()
+    {
+        Tint();
+    }
     [ContextMenu("Tint")]
     public void Tint()
     {

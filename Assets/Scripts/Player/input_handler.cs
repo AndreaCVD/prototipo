@@ -5,14 +5,16 @@ public class InputHandler : MonoBehaviour
     [Header("Mov normal")]
     public Vector3 MoveInput;  // Store the horizontal and vertical input as a Vector3
     public bool Jump;  // To track if the player presses the jump key
-
+    CharacterInteract characterInteract;
 
     private string horizontalInput = "Horizontal";
     private string verticalInput = "Vertical";
     //private KeyCode jumpKey = KeyCode.Space;
 
-    private void Start()
-    {    }
+    private void Awake()
+    {
+        characterInteract = GetComponent<CharacterInteract>();
+    }
 
     void Update()
     {
@@ -26,6 +28,12 @@ public class InputHandler : MonoBehaviour
         if (Jump)
         {
             Debug.Log("Spacebar Pressed");
+        }
+
+        //Interaccion
+        if(Input.GetMouseButtonDown(1))
+        {
+            characterInteract.Interact();
         }
     }
 }

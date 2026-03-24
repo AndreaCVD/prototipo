@@ -2,8 +2,13 @@ using UnityEngine;
 
 public class CommandPanel : MonoBehaviour
 {
+    [SerializeField] LoadScene loadScene;
     [SerializeField] CommandManager commandManager;
 
+    private void Awake()
+    {
+        //loadScene = GetComponent<LoadScene>();
+    }
     //Boton Fuerza, se dire a command manager
     public void Fuerza()
     {
@@ -24,5 +29,6 @@ public class CommandPanel : MonoBehaviour
     public void Huir()
     {
         Debug.Log("Huir");
+        loadScene.teleport();
     }
 }

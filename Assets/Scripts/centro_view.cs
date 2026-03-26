@@ -6,8 +6,9 @@ using UnityEngine.UI;
 // AJUSTAR OPACIDAD depeniendo si entra o sale del collider del obj
 public class centro_view : MonoBehaviour
 {
-    [Header("Stats")]
-    public personaje player;
+    [Header("Ficha personaje")]
+    public Parameters protagonista;
+    //public personaje player;
     [Header("Canvas")]
     public CanvasGroup grup;
     //Textos
@@ -19,16 +20,21 @@ public class centro_view : MonoBehaviour
     void Start()
     {
         //Seteamos los textos
-        fuerza.text = "Fuerza = " + player.strengh();
-        inteligencia.text = "Inteligencia = " + player.intel();
-        carisma.text = "Carisma = " + player.charm();
+        //fuerza.text = "Fuerza = " + player.strengh();
+        //inteligencia.text = "Inteligencia = " + player.intel();
+        //carisma.text = "Carisma = " + player.charm();
+
+        //Seteamos valores
+        fuerza.text = "Fuerza = " + protagonista.stats.Get(PersonajesStats.Fuerza);
+        inteligencia.text = "Inteligencia = " + protagonista.stats.Get(PersonajesStats.Inteligencia);
+        carisma.text = "Carisma = " + protagonista.stats.Get(PersonajesStats.Carisma);
 
         //Seteamos el canva
         grup = GetComponent<CanvasGroup>();
 
     }
 
-        //Aqui se reciben las nuevas opacidades
+    //Aqui se reciben las nuevas opacidades
     //public void opacidad(float nueva_opacidad)
     //{
     //    grup.alpha = Mathf.Lerp(0f, nueva_opacidad, 5f);

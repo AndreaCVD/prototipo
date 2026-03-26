@@ -15,12 +15,12 @@ MonoBehaviour:
   namePers: Circulo
   stats:
     values:
-    - value: 3
+    - value: 7
       stats: 0
     - value: 3
       stats: 1
     - value: 3
       stats: 2
-    - value: 3
+    - value: 30
       stats: 3
   modelPrefab: {fileID: 8023408201208121070, guid: c946b909ab67d274089332839512dcd7, type: 3}

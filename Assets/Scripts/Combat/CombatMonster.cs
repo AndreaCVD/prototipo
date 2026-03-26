@@ -3,15 +3,16 @@ using UnityEngine;
 
 public class CombatMonster : MonoBehaviour
 {
-    Parameters personaje;
+    Parameters player; //Al que le toque recibir daño
+    Save_Stats guardado; //Enviar las estats
 
     public Int2Val HP;
     public int damage;
 
-    public void Init(Parameters player)
+    public void Init(Parameters player) //Al que le toque atacar
     {
         //inicializamos el jugador
-        personaje = player;
+        this.player = player;
         //colocamos copia del modelo
         GameObject modelo = Instantiate(player.modelPrefab, transform);
         //restablecer rotacion
@@ -22,7 +23,7 @@ public class CombatMonster : MonoBehaviour
         HP = new Int2Val (contitucion, contitucion);
     }
 
-    public void Fuerza(CombatMonster target)
+    public void Fuerza(CombatMonster target) //Enemigo
     {
         //Busca en parameters los stats del personaje anteriormente inicializado
         /*Debug.Log("Personaje: " 
@@ -31,17 +32,28 @@ public class CombatMonster : MonoBehaviour
             + personaje.stats.Get(PersonajesStats.Fuerza)
         );*/
         //Este daño al enemigo
-        target.TakeDamage(personaje.stats.Get(PersonajesStats.Fuerza));
+        //int constitucion = personaje.stats.Get(PersonajesStats.Constitucion);
+        target.TakeDamage(player.stats.Get(PersonajesStats.Fuerza));
+   
     }
 
     public void TakeDamage(int damage)
     {
+
         HP.current -= damage;
-        Debug.Log("Personaje : " + personaje.namePers + "HP : " + HP.current.ToString());
+        // a -= damage;
+        //enemigo.stats.values[3].value++;
+        player.stats.values[3].value -= damage;
+
+        guardado.guardar_stats(player, player.stats.values[3]);
+        Debug.Log(player.stats.values[3].value); 
+
+        Debug.Log("Personaje : " + player.namePers + "HP : " + HP.current.ToString());
+
         if (HP.current <= 0)
         {
             HP.current = 0;
-            Debug.Log("Derrotado : " + personaje.namePers);
+            Debug.Log("Derrotado : " + player.namePers);
         }
     }
 }

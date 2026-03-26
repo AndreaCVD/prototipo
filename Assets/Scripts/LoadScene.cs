@@ -13,6 +13,11 @@ public class LoadScene : MonoBehaviour
         
     }
 
+    public void combate()
+    {
+        pantalla.Tint();
+        SceneManager.LoadScene("combate_pruevas");
+    }
     /*
     public void base_teleport()
     {

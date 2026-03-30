@@ -1062,7 +1062,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5824ea472f47a9f4cb490f25e2608272, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  preload: {fileID: 0}
+  loadScene: {fileID: 0}
   commandManager: {fileID: 88913840}
 --- !u!114 &1058942643
 MonoBehaviour:
@@ -2283,10 +2283,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerPersonaje: {fileID: 0}
-  enemyPersonaje: {fileID: 0}
-  constitucion_prota:
-    value: 0
-    stats: 0
+  vida_prota: 0
+  vida_protaCambio: 0
 --- !u!4 &1865949418
 Transform:
   m_ObjectHideFlags: 0

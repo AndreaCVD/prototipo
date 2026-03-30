@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class CommandPanel : MonoBehaviour
 {
-    //[SerializeField] LoadScene loadScene;
-    [SerializeField] Preload preload;
+    [SerializeField] LoadScene loadScene;
+    //[SerializeField] Preload preload;
     [SerializeField] CommandManager commandManager;
 
     private void Awake()
@@ -30,7 +30,7 @@ public class CommandPanel : MonoBehaviour
     public void Huir()
     {
         Debug.Log("Huir");
-        //loadScene.teleport();
-        preload.cambiarEscena("pruevas_prototipo");
+        loadScene.teleport();
+        //preload.cambiarEscena("pruevas_prototipo");
     }
 }

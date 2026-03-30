@@ -45,7 +45,7 @@ public class CombatMonster : MonoBehaviour
         //enemigo.stats.values[3].value++;
         player.stats.values[3].value -= damage;
 
-        guardado.guardar_stats(player, player.stats.values[3]);
+        guardado.guardar_stats(player, damage);
         Debug.Log(player.stats.values[3].value); 
 
         Debug.Log("Personaje : " + player.namePers + "HP : " + HP.current.ToString());

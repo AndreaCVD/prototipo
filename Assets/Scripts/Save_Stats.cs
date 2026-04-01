@@ -2,13 +2,15 @@ using UnityEngine;
 
 public class Save_Stats : MonoBehaviour
 {
+    [Header("Ficha personaje")]
     //Mover los stats de los personajes del combate a la pantalla principal
     [SerializeField] Parameters playerPersonaje;
     //[SerializeField] ValueContainer constitucion_prota;
 
-    //Valores
+    [Header("Personaje")]
     public int vida_prota;
     public int vida_protaCambio;
+    
 
     //1. Declaro la variable para el objeto Game Manager
     private GameObject gameManager;

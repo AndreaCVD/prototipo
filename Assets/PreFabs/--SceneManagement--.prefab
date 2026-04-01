@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4636500077556328165}
   - component: {fileID: 1942295723155004613}
   - component: {fileID: 7755713674092758166}
+  - component: {fileID: 7782334376583891192}
   m_Layer: 0
   m_Name: --SceneManagement--
   m_TagString: Untagged
@@ -63,6 +64,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pantalla: {fileID: 4636500077556328165}
+  protagonista: {fileID: 0}
+  save_posicion: {fileID: 7782334376583891192}
 --- !u!114 &7755713674092758166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76,6 +79,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerPersonaje: {fileID: 11400000, guid: f0233a249cd1f2b43a3d8f04e1ad2bf2, type: 2}
-  constitucion_prota:
-    value: 0
-    stats: 3
+  vida_prota: 0
+  vida_protaCambio: 0
+--- !u!114 &7782334376583891192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5107496890064737642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6caa9785b92e0b84fb3975cfbea9ac18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  posicion: {x: 0, y: 0, z: 0}
+  protagonista: {fileID: 0}

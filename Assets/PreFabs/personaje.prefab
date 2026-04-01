@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8794624234747956673}
   - component: {fileID: 2806444937246612313}
   - component: {fileID: 186535808222658370}
+  - component: {fileID: 6584073865269333082}
   - component: {fileID: 9093160144732825013}
   - component: {fileID: 8034711890992275256}
   m_Layer: 0
@@ -36,6 +37,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4370632714237647295}
+  - {fileID: 8228228818614247071}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4160010429334866998
@@ -103,7 +105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7dd4300e350a1be4fbddd656bf67cc70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runSpeed: 0
+  speed: 10
   rotationSpeed: 20
   jumpForce: 0
   groundLayer:
@@ -121,8 +123,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d741a5bf2218ae4eae2eac067c732f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveInput: {x: 0, y: 0, z: 0}
+  moveVector: {x: 0, y: 0, z: 0}
   Jump: 0
+--- !u!114 &6584073865269333082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 446173625170946264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a965f8f47ef005c44bcc09cb85888783, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pivot: {fileID: 8228228818614247071}
+  interactAreaSize: {x: 1, y: 1, z: 1}
 --- !u!54 &9093160144732825013
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -279,3 +295,34 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &8673238628218111015
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8228228818614247071}
+  m_Layer: 0
+  m_Name: Interact Pivot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8228228818614247071
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8673238628218111015}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.035499573, y: 0.32806587, z: 1.7117062}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7482857798997454973}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -19,11 +19,6 @@ public class centro_view : MonoBehaviour
 
     void Start()
     {
-        //Seteamos los textos
-        //fuerza.text = "Fuerza = " + player.strengh();
-        //inteligencia.text = "Inteligencia = " + player.intel();
-        //carisma.text = "Carisma = " + player.charm();
-
         //Seteamos valores
         fuerza.text = "Fuerza = " + protagonista.stats.Get(PersonajesStats.Fuerza);
         inteligencia.text = "Inteligencia = " + protagonista.stats.Get(PersonajesStats.Inteligencia);

@@ -3,9 +3,11 @@ using UnityEngine;
 public class InputHandler : MonoBehaviour
 {
     [Header("Mov normal")]
-    public Vector3 MoveInput;  // Store the horizontal and vertical input as a Vector3
+    public Vector3 moveVector;  // Store the horizontal and vertical input as a Vector3
     public bool Jump;  // To track if the player presses the jump key
     CharacterInteract characterInteract;
+
+    player_movement characterMovement;
 
     private string horizontalInput = "Horizontal";
     private string verticalInput = "Vertical";
@@ -13,14 +15,17 @@ public class InputHandler : MonoBehaviour
 
     private void Awake()
     {
+        characterMovement = GetComponent<player_movement>();
         characterInteract = GetComponent<CharacterInteract>();
     }
 
     void Update()
     {
         // Get input for horizontal and vertical axes (e.g., A/D, W/S, Arrow keys, or joystick axes)
-        MoveInput.x = Input.GetAxis(horizontalInput);
-        MoveInput.y = Input.GetAxis(verticalInput);
+        moveVector.x = Input.GetAxis(horizontalInput);
+        moveVector.y = Input.GetAxis(verticalInput);
+
+        //characterMovement.AddMoveVectorInput(moveVector);
 
         //Salto
         Jump = Input.GetKeyDown(KeyCode.Space);

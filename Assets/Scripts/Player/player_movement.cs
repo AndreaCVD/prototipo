@@ -6,8 +6,10 @@ using UnityEngine;
 
 public class player_movement : MonoBehaviour
 {
+    Vector3 moveVectorInput;
+    Vector3 moveDirection;
     [Header("Variables")]
-    public float runSpeed;
+    [SerializeField] float speed = 10f;
     public float rotationSpeed;
     public float jumpForce; //Cambiar este en mov
     private float x, y;
@@ -15,25 +17,31 @@ public class player_movement : MonoBehaviour
     [Header("Anim y Mov")]
     public LayerMask groundLayer;
     private InputHandler _inputHandler;
-    private Rigidbody rb;
+    Rigidbody rb;
     private bool isGrounded;
 
+    public void AddMoveVectorInput(Vector3 moveVector)
+    {
+        moveVectorInput = moveVector;
 
+    }
     void Start()
     {
         // Obtener la referencia del InputHandler
         _inputHandler = GetComponent<InputHandler>();
         rb = GetComponent<Rigidbody>();
         jumpForce = 4f;
-        runSpeed = 5f;
+        //runSpeed = 5f;
         rotationSpeed = 220f;
     }
 
+    //movemos al personaje
     void Update()
     {
+        //HandleMovement();
         // Obtener los valores de movimiento desde InputHandler
-        x = _inputHandler.MoveInput.x;  // Horizontal (movimiento de izquierda/derecha)
-        y = _inputHandler.MoveInput.y;  // Vertical (movimiento hacia adelante/atr�s)
+        x = _inputHandler.moveVector.x;  // Horizontal (movimiento de izquierda/derecha)
+        y = _inputHandler.moveVector.y;  // Vertical (movimiento hacia adelante/atr�s)
 
         isGrounded = CheckGrounded();
 
@@ -48,17 +56,29 @@ public class player_movement : MonoBehaviour
             rb.AddForce(Vector3.down * (jumpForce + 9.81f), ForceMode.Acceleration);
         }
 
-        if (x != 0)
+        if (x != 0 || y != 0)
         {
             RotateCharacter(x);
+            RotateCharacter(y);
         }
 
-        if (y != 0)
+        if (x != 0 || y != 0)
         {
+            MoveCharacter(x);
             MoveCharacter(y);
         }
     }
 
+    private void HandleMovement()
+    {
+        //Calcular direccion dnd se mueve el personaje
+        moveDirection = moveVectorInput;
+
+        Vector3 moveVelocity = moveDirection * speed;
+        moveVelocity += Physics.gravity;
+
+        rb.linearVelocity = moveVelocity;
+    }
 
 
     private void Jump()
@@ -92,7 +112,7 @@ public class player_movement : MonoBehaviour
     {
         Vector3 moveDirection = transform.forward * y;
 
-        rb.MovePosition(rb.position + moveDirection * runSpeed * Time.deltaTime);
+        rb.MovePosition(rb.position + moveDirection * speed * Time.deltaTime);
     }
 
 }

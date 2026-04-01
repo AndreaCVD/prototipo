@@ -35,9 +35,26 @@ public class Save_Stats : MonoBehaviour
     }
 
     public void guardar_stats( Parameters player, int damage)
+    { 
+        //ver si es el prota o no
+        if ( player == playerPersonaje)
+        {
+            player.stats.values[3].value -= damage;
+            vida_protaCambio = player.stats.Get(PersonajesStats.Constitucion);
+        }
+
+    }
+
+    public void alguien_eliminado(Parameters player)
     {
-        player.stats.values[3].value -= damage;
-        vida_protaCambio = player.stats.Get(PersonajesStats.Constitucion);
+        if (player == playerPersonaje)//si el prota se ha quedado sin vida 
+        {
+            //--> fin juego
+        }
+        else //el enemigo ha muerto
+        {
+            //tenemos que destruirlo de la escena
+        }
     }
 
 }

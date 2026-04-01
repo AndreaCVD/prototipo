@@ -45,7 +45,7 @@ public class CombatMonster : MonoBehaviour
         //enemigo.stats.values[3].value++;
         player.stats.values[3].value -= damage;
 
-        guardado.guardar_stats(player, damage);
+        guardado.guardar_stats(player, damage); //guardar estats
         Debug.Log(player.stats.values[3].value); 
 
         Debug.Log("Personaje : " + player.namePers + "HP : " + HP.current.ToString());
@@ -54,6 +54,7 @@ public class CombatMonster : MonoBehaviour
         {
             HP.current = 0;
             Debug.Log("Derrotado : " + player.namePers);
+            guardado.alguien_eliminado(player); //enviara el personaje que se elimine
         }
     }
 }

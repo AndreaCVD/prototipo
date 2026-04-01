@@ -10,7 +10,7 @@ public class Save_Stats : MonoBehaviour
     [Header("Personaje")]
     public int vida_prota;
     public int vida_protaCambio;
-    
+    Vector3 posicion_prota;
 
     //1. Declaro la variable para el objeto Game Manager
     private GameObject gameManager;
@@ -24,7 +24,7 @@ public class Save_Stats : MonoBehaviour
         //3. Le indico que no se destruya entre escenas
         DontDestroyOnLoad(gameManager);
 
-        //Llegar a los valores: (ptoyagonista es parameters
+        //Llegar a los valores: protagonista es parameters
             //protagonista.stats.Get(PersonajesStats.Carisma);
     }
     void Update()
@@ -57,6 +57,11 @@ public class Save_Stats : MonoBehaviour
         {
             //tenemos que destruirlo de la escena
         }
+    }
+
+    public void cambiar_posicion()
+    {
+
     }
 
 }

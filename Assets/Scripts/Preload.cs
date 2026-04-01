@@ -18,23 +18,37 @@ public class Preload : MonoBehaviour
 
     void Awake()
     {       
-        preloadObj = GameObject.Find("--Preload--(Clone)");
+        preloadObj = GameObject.Find("--Preload--");
         PrefabProta = GameObject.Find("personaje");
         vectorPosicion = GetComponent<personaje>();
-        protagonista = GameObject.Find("Player Character(Clone)");
+        protagonista = GameObject.Find("Player Character");
 
-        Scene escenaActual = SceneManager.GetActiveScene();
-        if (escenaActual.name == "pruevas_prototipo")
-        {
-            //Guardamos posicion y la ponemos en el personaje
-            PrefabProta.transform.position = vectorPosicion.load_pos();
-        }
+        //Scene escenaActual = SceneManager.GetActiveScene();
+        //if (escenaActual.name == "pruevas_prototipo")
+        //{
+        //    //Guardamos posicion y la ponemos en el personaje
+        //    PrefabProta.transform.position = vectorPosicion.load_pos();
+        //}
     }
+    //void Update()
+    //{
+    //    //pantalla tint
+    //    if (preloadObj == null)
+    //    {
+    //        preloadObj = GameObject.Find("Player Character");
+    //    }
+    //    //encontrar el personaje prefab
+    //    if (protagonista == null)
+    //    {
+    //        protagonista = GameObject.Find("personaje");
+    //    }
+  
+    //}
      
-    void Start()
-    {
-        //Para que no se destruya
-        DontDestroyOnLoad(preloadObj);
-        DontDestroyOnLoad(protagonista);
-    }
+    //void Start()
+    //{
+    //    //Para que no se destruya
+    //    DontDestroyOnLoad(preloadObj);
+    //    DontDestroyOnLoad(protagonista);
+    //}
 }

@@ -12,14 +12,19 @@ public class crear_obj : MonoBehaviour
     {
         if( !GameObject.Find("--Preload--") && !GameObject.Find("--Preload--(Clone)"))
         {
-            Instantiate(preloadScript);
+            GameObject nuevoObj = Instantiate(preloadScript);
+            nuevoObj.name = "--Preload--";
+            DontDestroyOnLoad(nuevoObj);
         }
-        if ( !GameObject.Find("Player Character"))
+        if ( !GameObject.Find("Player Character") && !GameObject.Find("Player Character(Clone)"))
         {
-            Vector3 position = new Vector3 (0f, 0f, 0f);
-            var rotation = Quaternion.Euler(0f, 0f, 0f);
-            Instantiate(player, position, rotation);
+            //Vector3 position = new Vector3 (0f, 0f, 0f);
+            //var rotation = Quaternion.Euler(0f, 0f, 0f);
+            GameObject nuevoObj = Instantiate(player);
+            nuevoObj.name = "Player Character";
+            DontDestroyOnLoad(nuevoObj);
+
         }
-        
+
     }
 }

@@ -27,17 +27,17 @@ public class LoadScene : MonoBehaviour
     void Update()
     {
         //pantalla tint
-        if (pantalla != null)
+        if (pantalla == null)
         {
             pantalla = GetComponent<TintScreen>();
         }
         //encontrar el personaje prefab
-        if (protagonista != null)
+        if (protagonista == null)
         {
-            protagonista = GameObject.Find("personaje(Clone)");
+            protagonista = GameObject.Find("personaje");
         }
         //scipt dnd guardar stats prota
-        if (save_posicion != null)
+        if (save_posicion == null)
         {
             save_posicion = GetComponent<personaje>();
         }

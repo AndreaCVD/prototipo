@@ -59,9 +59,5 @@ public class Save_Stats : MonoBehaviour
         }
     }
 
-    public void cambiar_posicion()
-    {
-
-    }
 
 }

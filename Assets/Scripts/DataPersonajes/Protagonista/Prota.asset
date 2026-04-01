@@ -15,12 +15,12 @@ MonoBehaviour:
   namePers: Prota
   stats:
     values:
-    - value: 3
+    - value: 10
       stats: 3
     - value: 3
       stats: 1
     - value: 3
       stats: 0
-    - value: 3
+    - value: 2
       stats: 2
   modelPrefab: {fileID: 446173625170946264, guid: 31817a986efa72f418ed20de88438f44, type: 3}

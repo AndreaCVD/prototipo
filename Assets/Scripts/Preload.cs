@@ -18,10 +18,10 @@ public class Preload : MonoBehaviour
 
     void Awake()
     {       
-        preloadObj = GameObject.Find("--Preload--");
+        preloadObj = GameObject.Find("--Preload--(Clone)");
         PrefabProta = GameObject.Find("personaje");
         vectorPosicion = GetComponent<personaje>();
-        protagonista = GameObject.Find("Player Character");
+        protagonista = GameObject.Find("Player Character(Clone)");
 
         Scene escenaActual = SceneManager.GetActiveScene();
         if (escenaActual.name == "pruevas_prototipo")

@@ -19,7 +19,7 @@ public class personaje : MonoBehaviour
 
     void Update()
     {
-        if (PrefabProta != null)
+        if (PrefabProta == null)
         {
             PrefabProta = GameObject.Find("personaje");
         }

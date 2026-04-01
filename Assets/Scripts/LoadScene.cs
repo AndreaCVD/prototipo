@@ -34,7 +34,7 @@ public class LoadScene : MonoBehaviour
         //encontrar el personaje prefab
         if (protagonista != null)
         {
-            protagonista = GameObject.Find("personaje");
+            protagonista = GameObject.Find("personaje(Clone)");
         }
         //scipt dnd guardar stats prota
         if (save_posicion != null)
@@ -45,13 +45,13 @@ public class LoadScene : MonoBehaviour
 
     public void ChangeScene(string sceneName)
     {
-        Scene escenaActual = SceneManager.GetActiveScene();
-        if (escenaActual.name == "pruevas_prototipo")
-        {
-            //Si estamos en mapa normal, no en combate, guardaremos la posicion
-            save_posicion.save_pos();
+        //Scene escenaActual = SceneManager.GetActiveScene();
+        //if (escenaActual.name == "pruevas_prototipo")
+        //{
+        //    //Si estamos en mapa normal, no en combate, guardaremos la posicion
+        //    save_posicion.save_pos();
 
-        }
+        //}
         pantalla.UnTint();
         SceneManager.LoadScene(sceneName);
     }

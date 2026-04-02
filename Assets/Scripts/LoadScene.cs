@@ -6,8 +6,9 @@ public class LoadScene : MonoBehaviour
 {
     [SerializeField] TintScreen pantalla;
     [SerializeField] GameObject protagonista;
+    GameObject obj_saveScript;
     [SerializeField] personaje save_posicion;
-
+    //[SerializeField] Preload preload;
     //moverse entre escenas
     //public void teleport()
     //{
@@ -37,10 +38,16 @@ public class LoadScene : MonoBehaviour
             protagonista = GameObject.Find("personaje");
         }
         //scipt dnd guardar stats prota
-        if (save_posicion == null)
+        if (obj_saveScript == null)
         {
-            save_posicion = GetComponent<personaje>();
+            obj_saveScript = GameObject.Find("--Preload--");
+            save_posicion = obj_saveScript.GetComponent<personaje>();
+            //save_posicion = GetComponent<personaje>();
         }
+        //if (preload == null)
+        //{
+        //    preload = GetComponent<Preload>();
+        //}
     }
 
     public void ChangeScene(string sceneName)
@@ -52,7 +59,14 @@ public class LoadScene : MonoBehaviour
         //    save_posicion.save_pos();
 
         //}
+
         pantalla.UnTint();
+        save_posicion.save_LastPos();
+        //preload.move_player();
+        //if (sceneName == "combate_pruevas")
+        //{
+
+        //}
         SceneManager.LoadScene(sceneName);
     }
     

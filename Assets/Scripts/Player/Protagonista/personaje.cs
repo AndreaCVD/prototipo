@@ -9,6 +9,7 @@ public class personaje : MonoBehaviour
     private GameObject statsPersonaje;
     //[Header("Posicion")]
     public Vector3 posicion;
+    public Vector3 LastPosicion;
     public GameObject PrefabProta;
     
     void Awake()
@@ -40,6 +41,14 @@ public class personaje : MonoBehaviour
         return posicion;
     }
 
+    public void save_LastPos()
+    {
+        LastPosicion = PrefabProta.transform.position;
+    }
+    public Vector3 load_LastPos()
+    {
+        return LastPosicion;
+    }
 
     //void Start()
     //{

@@ -6,7 +6,7 @@ public class crear_obj : MonoBehaviour
 {
     [SerializeField] GameObject player;
     [SerializeField] GameObject preloadScript;
-    [SerializeField] Preload preload;
+    //[SerializeField] Preload preload;
     
     void Awake()
     {

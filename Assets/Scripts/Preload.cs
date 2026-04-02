@@ -23,13 +23,18 @@ public class Preload : MonoBehaviour
         vectorPosicion = GetComponent<personaje>();
         protagonista = GameObject.Find("Player Character");
 
-        //Scene escenaActual = SceneManager.GetActiveScene();
-        //if (escenaActual.name == "pruevas_prototipo")
-        //{
-        //    //Guardamos posicion y la ponemos en el personaje
-        //    PrefabProta.transform.position = vectorPosicion.load_pos();
-        //}
+        Scene escenaActual = SceneManager.GetActiveScene();
+        if (escenaActual.name == "pruevas_prototipo")
+        {
+            //Guardamos posicion y la ponemos en el personaje
+            PrefabProta.transform.position = vectorPosicion.load_LastPos();
+        }
     }
+
+    //public void move_player()
+    //{
+    //    PrefabProta.transform.position = vectorPosicion.load_pos();
+    //}
     //void Update()
     //{
     //    //pantalla tint

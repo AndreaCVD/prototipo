@@ -8,22 +8,10 @@ public class LoadScene : MonoBehaviour
     [SerializeField] GameObject protagonista;
     GameObject obj_saveScript;
     [SerializeField] personaje save_posicion;
+    GameObject obj_input;
+    [SerializeField] InputHandler escenaState;
     //[SerializeField] Preload preload;
-    //moverse entre escenas
-    //public void teleport()
-    //{
-    //    pantalla.UnTint();
-    //    SceneManager.LoadScene("pruevas_prototipo");
 
-    //}
-
-    //public void combate()
-    //{
-    //    //Antes de irnos tenemos que guardar posicion personaje
-    //    Position();
-    //    pantalla.UnTint();
-    //    SceneManager.LoadScene("combate_pruevas");
-    //}
 
     void Update()
     {
@@ -32,7 +20,7 @@ public class LoadScene : MonoBehaviour
         {
             pantalla = GetComponent<TintScreen>();
         }
-        //encontrar el personaje prefab
+        //encontrar el personaje prefab 
         if (protagonista == null)
         {
             protagonista = GameObject.Find("personaje");
@@ -44,6 +32,12 @@ public class LoadScene : MonoBehaviour
             save_posicion = obj_saveScript.GetComponent<personaje>();
             //save_posicion = GetComponent<personaje>();
         }
+        if (escenaState == null)
+        {
+            obj_input = GameObject.Find("personaje");
+            escenaState = obj_input.GetComponent<InputHandler>();
+            //save_posicion = GetComponent<personaje>();
+        }
         //if (preload == null)
         //{
         //    preload = GetComponent<Preload>();
@@ -52,22 +46,32 @@ public class LoadScene : MonoBehaviour
 
     public void ChangeScene(string sceneName)
     {
-        //Scene escenaActual = SceneManager.GetActiveScene();
-        //if (escenaActual.name == "pruevas_prototipo")
-        //{
-        //    //Si estamos en mapa normal, no en combate, guardaremos la posicion
-        //    save_posicion.save_pos();
+        Scene escenaActual = SceneManager.GetActiveScene();
+        if (escenaActual.name == "combate_pruevas")
+        {
+            //si estamos en combate eliminar esta escena
+            //Sacamos la pausa del juego principal
+            escenaState.ScenePause(false); //false, se mueve
+            // Unload Scene
+            SceneManager.UnloadSceneAsync(escenaActual);
+            
+        }
+        else
+        {
+            pantalla.UnTint();
+            save_posicion.save_LastPos();
+            //preload.move_player();
+            //if (sceneName == "combate_pruevas"){ }
+            SceneManager.LoadScene(sceneName);
+        }
+    }
 
-        //}
-
+    public void Combat()
+    {        
+        escenaState.ScenePause(true); //true, se para
         pantalla.UnTint();
         save_posicion.save_LastPos();
-        //preload.move_player();
-        //if (sceneName == "combate_pruevas")
-        //{
-
-        //}
-        SceneManager.LoadScene(sceneName);
+        SceneManager.LoadScene("combate_pruevas", LoadSceneMode.Additive);
     }
     
     //private void Position()

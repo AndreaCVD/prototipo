@@ -54,6 +54,8 @@ public class Parameters : ScriptableObject
     public ValueBlock stats;
 
     public GameObject modelPrefab;
+    public Sprite art;
+    //public GameObject variantModel;
 
     [ContextMenu("Init")]
     public void Init()

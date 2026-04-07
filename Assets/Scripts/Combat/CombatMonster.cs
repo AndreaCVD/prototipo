@@ -42,16 +42,16 @@ public class CombatMonster : MonoBehaviour
         //enemigo.stats.values[3].value++;
         player.stats.values[3].value -= damage;
 
-        guardado.guardar_stats(player, damage); //guardar estats
-        Debug.Log(player.stats.values[3].value); 
+        //guardado.guardar_stats(player, damage); //guardar estats
+        //Debug.Log(player.stats.values[3].value); 
 
-        Debug.Log("Personaje : " + player.namePers + "HP : " + HP.current.ToString());
+        Debug.Log(player.namePers + " ha sido atacado! : "+ "// HP : " + HP.current.ToString());
 
         if (HP.current <= 0)
         {
             HP.current = 0;
             Debug.Log("Derrotado : " + player.namePers);
-            guardado.alguien_eliminado(player); //enviara el personaje que se elimine
+            //guardado.alguien_eliminado(player); //enviara el personaje que se elimine
         }
     }
 }

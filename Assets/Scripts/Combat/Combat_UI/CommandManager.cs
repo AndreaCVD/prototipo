@@ -6,12 +6,18 @@ using UnityEngine;
 public class CommandManager : MonoBehaviour
 {
     [SerializeField] TurnRoundManager turnRoundManager;
-    [SerializeField] CombatMonster opponent;
+    //[SerializeField] CombatMonster opponent;
     
     //le llega la accion, mira la variable de turn,
     // y lo envia a combat monster
     public void Fuerza()
     {
-        turnRoundManager.current.Fuerza(opponent);
+        //current es prota
+        turnRoundManager.current.Fuerza(turnRoundManager.target);
+
+        //Debug.Log("Current is = " + turnRoundManager.current);
+        //Debug.Log("Target is = " + turnRoundManager.target);
+
+        turnRoundManager.ChangeTurn();
     }
 }

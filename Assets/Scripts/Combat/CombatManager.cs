@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class CombatManager : MonoBehaviour
 {
-    [SerializeField] CombatMonster playerPersonaje;
-    [SerializeField] CombatMonster enemyPersonaje;
+    public CombatMonster playerPersonaje;
+    public CombatMonster enemyPersonaje;
     public void StartBattle(Parameters player, Parameters enemy)
     {
         playerPersonaje.Init(player);

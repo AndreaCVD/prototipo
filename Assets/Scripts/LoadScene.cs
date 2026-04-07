@@ -62,7 +62,7 @@ public class LoadScene : MonoBehaviour
             save_posicion.save_LastPos();
             //preload.move_player();
             //if (sceneName == "combate_pruevas"){ }
-            SceneManager.LoadScene(sceneName);
+            Invoke("SceneManager.LoadScene(sceneName)", 2.0f);
         }
     }
 

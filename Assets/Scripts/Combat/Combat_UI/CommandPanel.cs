@@ -10,7 +10,7 @@ public class CommandPanel : MonoBehaviour
     {
         //loadScene = GetComponent<LoadScene>();
     }
-    //Boton Fuerza, se dire a command manager
+    //Boton Fuerza, se dice a command manager
     public void Fuerza()
     {
         commandManager.Fuerza();

@@ -31,7 +31,19 @@ public class CombatMonster : MonoBehaviour
     {
         //Este daño al enemigo
         //int constitucion = personaje.stats.Get(PersonajesStats.Constitucion);
-        target.TakeDamage(player.stats.Get(PersonajesStats.Fuerza));
+        target.TakeDamage(player.stats.Get(PersonajesStats.Fuerza)); //el target recibe daño de la fuerza
+    }
+    public void Inteligencia(CombatMonster target) //Enemigo
+    {
+        //Este daño al enemigo
+        //int constitucion = personaje.stats.Get(PersonajesStats.Constitucion);
+        target.TakeDamage(player.stats.Get(PersonajesStats.Inteligencia)); //el target recibe daño de la fuerza
+    }
+    public void Carisma(CombatMonster target) //Enemigo
+    {
+        //Este daño al enemigo
+        //int constitucion = personaje.stats.Get(PersonajesStats.Constitucion);
+        target.TakeDamage(player.stats.Get(PersonajesStats.Carisma)); //el target recibe daño de la fuerza
     }
 
     public void TakeDamage(int damage)

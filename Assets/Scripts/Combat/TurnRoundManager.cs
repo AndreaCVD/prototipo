@@ -13,9 +13,13 @@ public class TurnRoundManager : MonoBehaviour
 
     //[SerializeField] CombatMonster opponent;
     //[SerializeField] CombatMonster prota;
-    public Animator animation;
+    //public GameObject canvas_animado;
+    [SerializeField] Animator anim;
     [SerializeField] CombatManager Manager;
     [SerializeField] Menu_Command menu_acciones;
+
+    //NPC
+    [SerializeField] NPCAction npcTurn;
     private void Awake()
     {
         //cuando current == prota, es nuestro turno
@@ -24,9 +28,17 @@ public class TurnRoundManager : MonoBehaviour
         Debug.Log("Atacante = " + current);
         Debug.Log("Objetivo = " + target);
         menu_acciones.opacidad(1f);
-        animation.SetBool("TurnProta", true);
-        animation.SetBool("TurnEnemy", false);
+        //if (anim == null)
+        //{
+        //    //canvas_animado = GameObject.Find("Personajes_Canvas");
+        //    anim = canvas_animado.GetComponent<Animator>();
+        //}
+    }
+    private void Start()
+    {
 
+        anim.SetBool("TurnProta", true);
+        anim.SetBool("TurnEnemy", false);
     }
     public void ChangeTurn()
     {
@@ -37,8 +49,8 @@ public class TurnRoundManager : MonoBehaviour
             target = Manager.playerPersonaje;
             Debug.Log("Atacante = " + current);
             Debug.Log("Objetivo = " + target);
-            animation.SetBool("TurnProta", true);
-            animation.SetBool("TurnEnemy", false);
+            anim.SetBool("TurnProta", true);
+            anim.SetBool("TurnEnemy", false);
             menu_acciones.opacidad(1f);
         }
         //turno enemigo
@@ -48,9 +60,10 @@ public class TurnRoundManager : MonoBehaviour
             target = Manager.enemyPersonaje;
             Debug.Log("Atacante = " + current);
             Debug.Log("Objetivo = " + target);
-            animation.SetBool("TurnProta", false);
-            animation.SetBool("TurnEnemy", true);
+            anim.SetBool("TurnProta", false);
+            anim.SetBool("TurnEnemy", true);
             menu_acciones.opacidad(0f);
+            npcTurn.DoAction();
         }
     }
 }

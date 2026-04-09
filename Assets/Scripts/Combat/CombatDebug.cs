@@ -21,4 +21,9 @@ public class CombatDebug : MonoBehaviour
     {
         manager.StartBattle(playerData, enemyData); 
     }
+
+    public Parameters ReturnEnemy()
+    {
+        return enemyData;
+    }
 }

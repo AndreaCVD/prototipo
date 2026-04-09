@@ -20,4 +20,24 @@ public class CommandManager : MonoBehaviour
 
         turnRoundManager.ChangeTurn();
     }
+    public void Inteligencia()
+    {
+        //current es prota
+        turnRoundManager.current.Inteligencia(turnRoundManager.target);
+
+        //Debug.Log("Current is = " + turnRoundManager.current);
+        //Debug.Log("Target is = " + turnRoundManager.target);
+
+        turnRoundManager.ChangeTurn();
+    }
+    public void Carisma()
+    {
+        //current es prota
+        turnRoundManager.current.Carisma(turnRoundManager.target);
+
+        //Debug.Log("Current is = " + turnRoundManager.current);
+        //Debug.Log("Target is = " + turnRoundManager.target);
+
+        turnRoundManager.ChangeTurn();
+    }
 }

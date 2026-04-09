@@ -6,7 +6,10 @@ public class CombatManager : MonoBehaviour
     public CombatMonster enemyPersonaje;
     public void StartBattle(Parameters player, Parameters enemy)
     {
+        //Iniciar los personajes
         playerPersonaje.Init(player);
         enemyPersonaje.Init(enemy);
     }
+
+
 }

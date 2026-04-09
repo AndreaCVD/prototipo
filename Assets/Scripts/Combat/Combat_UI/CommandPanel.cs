@@ -6,25 +6,24 @@ public class CommandPanel : MonoBehaviour
     //[SerializeField] Preload preload;
     [SerializeField] CommandManager commandManager;
 
-    private void Awake()
-    {
-        //loadScene = GetComponent<LoadScene>();
-    }
+
     //Boton Fuerza, se dice a command manager
     public void Fuerza()
     {
         commandManager.Fuerza();
-        //Debug.Log("Fuerza");
+        Debug.Log("Ha usado fuerza");
     }
     //Boton Inteligencia
     public void Intel()
     {
-        Debug.Log("Inteligencia");
+        commandManager.Inteligencia();
+        Debug.Log("Ha usado inteligencia");
     }
     //Boton Carisma
     public void Carisma()
     {
-        Debug.Log("Carisma");
+        commandManager.Carisma();
+        Debug.Log("Ha usado carisma");
     }
     //Boton Huir
     public void Huir()

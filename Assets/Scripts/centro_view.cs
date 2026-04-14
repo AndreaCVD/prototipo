@@ -15,18 +15,57 @@ public class centro_view : MonoBehaviour
     [SerializeField] TMP_Text fuerza;
     [SerializeField] TMP_Text inteligencia;
     [SerializeField] TMP_Text carisma;
+    [SerializeField] TMP_Text constitucion;
 
 
     void Start()
     {
-        //Seteamos valores
-        fuerza.text = "Fuerza = " + protagonista.stats.Get(PersonajesStats.Fuerza);
-        inteligencia.text = "Inteligencia = " + protagonista.stats.Get(PersonajesStats.Inteligencia);
-        carisma.text = "Carisma = " + protagonista.stats.Get(PersonajesStats.Carisma);
+        //Seteamos valores, int -> string
+        int f = protagonista.stats.Get(PersonajesStats.Fuerza);
+        int i = protagonista.stats.Get(PersonajesStats.Inteligencia);
+        int c = protagonista.stats.Get(PersonajesStats.Carisma);
+        //int h = protagonista.stats.Get(PersonajesStats.Constitucion);
+
+        if (f > 0) //positivo
+        {
+            SetFuerza("+");
+            //fuerza.text = "+" + protagonista.stats.Get(PersonajesStats.Fuerza).ToString();
+        }
+        else { SetFuerza("-"); } //negativo
+        if (i > 0) //positivo
+        {
+            SetIntel("+");
+            //fuerza.text = "+" + protagonista.stats.Get(PersonajesStats.Fuerza).ToString();
+        }
+        else { SetIntel("-"); } //negativo     
+        if (c > 0) //positivo
+        {
+            SetCarisma("+");
+            //fuerza.text = "+" + protagonista.stats.Get(PersonajesStats.Fuerza).ToString();
+        }
+        else { SetCarisma("-"); } //negativo
+
+        constitucion.text = protagonista.stats.Get(PersonajesStats.Constitucion).ToString();
 
         //Seteamos el canva
         grup = GetComponent<CanvasGroup>();
 
+    }
+    void SetFuerza(string text)
+    {
+        fuerza.text = text + protagonista.stats.Get(PersonajesStats.Fuerza).ToString();
+        //inteligencia.text = protagonista.stats.Get(PersonajesStats.Inteligencia).ToString();
+        //constitucion.text = protagonista.stats.Get(PersonajesStats.Constitucion).ToString();
+
+    }
+    void SetIntel(string text)
+    {
+        inteligencia.text = text + protagonista.stats.Get(PersonajesStats.Inteligencia).ToString();
+
+    }
+    void SetCarisma(string text)
+    {
+        carisma.text = text + protagonista.stats.Get(PersonajesStats.Carisma).ToString();
     }
 
     //Aqui se reciben las nuevas opacidades

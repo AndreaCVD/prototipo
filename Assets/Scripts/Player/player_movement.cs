@@ -67,6 +67,7 @@ public class player_movement : MonoBehaviour
         if (x != 0 || y != 0)
         {
             MoveCharacter(x);
+            //RotateCharacter(x);
             //MoveCharacter(y);
         }
     }

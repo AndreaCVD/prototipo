@@ -58,14 +58,16 @@ public class player_movement : MonoBehaviour
 
         if (x != 0 || y != 0)
         {
-            RotateCharacter(x);
-            RotateCharacter(y);
+            //RotateCharacter(x);
+            //RotateCharacter(y);
+            MoveCharacter2(y);
+
         }
 
         if (x != 0 || y != 0)
         {
             MoveCharacter(x);
-            MoveCharacter(y);
+            //MoveCharacter(y);
         }
     }
 
@@ -114,5 +116,16 @@ public class player_movement : MonoBehaviour
 
         rb.MovePosition(rb.position + moveDirection * speed * Time.deltaTime);
     }
+    private void MoveCharacter2(float horizontalInput)
+    {
+        Vector3 moveDirection = transform.right * x;
 
+        rb.MovePosition(rb.position + moveDirection * speed * Time.deltaTime);
+    }
+    //private void Turn(Vector3 dir)
+    //{
+    //    Vector3 target = transform.position + dir;
+    //    target.y = transform.position.y;
+    //    transform.LookAt(target);
+    //}
 }

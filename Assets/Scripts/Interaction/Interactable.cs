@@ -11,9 +11,9 @@ public class Interactable : MonoBehaviour
     {
         onInteract?.Invoke();
     }
-    public void DetectObj()
+    public void DetectObj(GameObject a)
     {
-        if ( this.gameObject.name == "Enemy")
+        if ( a.name == "Enemy")
         {
             Debug.Log("This is a Enemy");
         }

@@ -44,6 +44,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: personaje
       objectReference: {fileID: 0}
+    - target: {fileID: 6584073865269333082, guid: 31817a986efa72f418ed20de88438f44, type: 3}
+      propertyPath: pivot_personaje
+      value: 
+      objectReference: {fileID: 2576964640423784762}
     - target: {fileID: 7482857798997454973, guid: 31817a986efa72f418ed20de88438f44, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -89,6 +93,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31817a986efa72f418ed20de88438f44, type: 3}
+--- !u!4 &2576964640423784762 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8228228818614247071, guid: 31817a986efa72f418ed20de88438f44, type: 3}
+  m_PrefabInstance: {fileID: 5905271533610332069}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3903440730127917016 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7482857798997454973, guid: 31817a986efa72f418ed20de88438f44, type: 3}

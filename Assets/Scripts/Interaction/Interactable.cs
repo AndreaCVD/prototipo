@@ -11,4 +11,12 @@ public class Interactable : MonoBehaviour
     {
         onInteract?.Invoke();
     }
+    public void DetectObj()
+    {
+        if ( this.gameObject.name == "Enemy")
+        {
+            Debug.Log("This is a Enemy");
+        }
+        Debug.Log("No hay nada");
+    }
 }

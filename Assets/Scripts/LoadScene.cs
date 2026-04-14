@@ -11,7 +11,7 @@ public class LoadScene : MonoBehaviour
     GameObject obj_input;
     [SerializeField] InputHandler escenaState;
     //[SerializeField] Preload preload;
-
+    string name_anterior;
 
     void Update()
     {
@@ -44,7 +44,7 @@ public class LoadScene : MonoBehaviour
         //}
     }
 
-    public void ChangeScene(string sceneName)
+    public void ChangeScene(string sceneName) //Anar a una escena en especific
     {
         Scene escenaActual = SceneManager.GetActiveScene();
         if (escenaActual.name == "combate_pruevas")
@@ -65,15 +65,45 @@ public class LoadScene : MonoBehaviour
             Invoke("SceneManager.LoadScene(sceneName)", 2.0f);
         }
     }
+    public void EscenaAnterior()//Tornar a una escena anterior
+    {
+        Scene escenaActual = SceneManager.GetActiveScene();
+        if (escenaActual.name == "combate_pruevas")
+        {
+            //si estamos en combate eliminar esta escena
+            //Sacamos la pausa del juego principal
+            escenaState.ScenePause(false); //false, se mueve
+            // Unload Scene
+            SceneManager.UnloadSceneAsync(escenaActual);
 
+        }
+        else
+        {
+            pantalla.UnTint();
+            save_posicion.save_LastPos();
+            //preload.move_player();
+            //if (sceneName == "combate_pruevas"){ }
+            Invoke("SceneManager.LoadScene(name_anterior)", 2.0f);
+        }
+    }
     public void Combat()
-    {        
+    {
+        name_anterior = SceneManager.GetActiveScene().name;
+
         escenaState.ScenePause(true); //true, se para
         pantalla.UnTint();
         save_posicion.save_LastPos();
         SceneManager.LoadScene("combate_pruevas", LoadSceneMode.Additive);
     }
     
+    public void GameOver()
+    {
+        pantalla.UnTint();
+        save_posicion.save_LastPos();
+        //preload.move_player();
+        //if (sceneName == "combate_pruevas"){ }
+        SceneManager.LoadScene("GameOver");
+    }
     //private void Position()
     //{
     //    Vector3 pos = protagonista.transform.position;

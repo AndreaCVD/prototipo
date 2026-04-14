@@ -5,12 +5,23 @@ using UnityEngine.UI;
 
 public class CombatMonster : MonoBehaviour
 {
+
     Parameters player; //Al que le toque recibir daño
     Save_Stats guardado; //Enviar las estats
     [SerializeField] Image imagenPers; 
     public Int2Val HP;
     public int damage;
-
+    GameObject objLoadScene;
+    LoadScene load;
+    private void Start()
+    {
+        if (objLoadScene == null)
+        {
+            objLoadScene = GameObject.Find("--SceneManagement--");
+            load = objLoadScene.GetComponent<LoadScene>();
+            //save_posicion = GetComponent<personaje>();
+        }
+    }
     public void Init(Parameters player) //Al que le toque atacar
     {
         //inicializamos el jugador
@@ -63,6 +74,18 @@ public class CombatMonster : MonoBehaviour
         {
             HP.current = 0;
             Debug.Log("Derrotado : " + player.namePers);
+            //Si es el prota es GAMEOVER
+            if (player.namePers == "Prota")
+            {
+                load.GameOver();
+            }
+            else
+            {
+            //Si pierde el enemigo:
+            //Guardar en preload la nueva constitucion
+            //Hablar con SceneManager -> LoadScene volver a la pantalla anterior
+            load.EscenaAnterior();
+            }
             //guardado.alguien_eliminado(player); //enviara el personaje que se elimine
         }
     }

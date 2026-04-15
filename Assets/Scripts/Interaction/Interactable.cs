@@ -13,10 +13,19 @@ public class Interactable : MonoBehaviour
     }
     public void DetectObj(GameObject a)
     {
-        if ( a.name == "Enemy")
+        switch (a.tag)
         {
-            Debug.Log("This is a Enemy");
+            case "Enemy":
+                Debug.Log("This is a Enemy");
+                break;
+            case "Puzzle":
+                Debug.Log("This is a Puzzle");
+                break;
+            default:
+                Debug.Log("No hay nada");
+                break;
         }
-        Debug.Log("No hay nada");
+
+
     }
 }

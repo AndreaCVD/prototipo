@@ -7,7 +7,7 @@ public class CommandManager : MonoBehaviour
 {
     [SerializeField] TurnRoundManager turnRoundManager;
     [SerializeField] Dice diceRoller;
-
+    bool gameOver;
     //[SerializeField] CombatMonster opponent;
     
     //le llega la accion, mira la variable de turn,
@@ -25,6 +25,7 @@ public class CommandManager : MonoBehaviour
         //Debug.Log("Target is = " + turnRoundManager.target);
 
         turnRoundManager.ChangeTurn();
+        turnRoundManager.EnemyTurn();
     }
     public void Inteligencia()
     {
@@ -35,6 +36,7 @@ public class CommandManager : MonoBehaviour
         //Debug.Log("Target is = " + turnRoundManager.target);
 
         turnRoundManager.ChangeTurn();
+
     }
     public void Carisma()
     {

@@ -95,7 +95,7 @@ public class CombatMonster : MonoBehaviour
             {
                 //load.GameOver();
                 Debug.Log("GAME OVER");
-
+                load.EscenaAnterior();
             }
             else
             {

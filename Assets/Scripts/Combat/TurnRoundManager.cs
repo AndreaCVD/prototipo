@@ -41,10 +41,6 @@ public class TurnRoundManager : MonoBehaviour
         anim.SetBool("TurnProta", true);
         anim.SetBool("TurnEnemy", false);
     }
-    private void Start()
-    {
-
-    }
  
     public void ChangeTurn()
     {
@@ -83,6 +79,15 @@ public class TurnRoundManager : MonoBehaviour
             //Accion NPC, NO METER AQUI DA FALLOS
             //npcTurn.DoAction();
 
+        }
+    }
+    public void EnemyTurn()
+    {
+        //Si es el turno del Enemigo, hacemos que actue solo
+        if (current == Manager.enemyPersonaje)
+        {
+            Debug.Log("");
+            npcTurn.DoAction();
         }
     }
 }

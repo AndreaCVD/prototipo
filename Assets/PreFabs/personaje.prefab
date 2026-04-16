@@ -138,8 +138,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a965f8f47ef005c44bcc09cb85888783, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pivot: {fileID: 8228228818614247071}
-  interactAreaSize: {x: 1, y: 1, z: 1}
+  pivot_personaje: {fileID: 8228228818614247071}
+  interaction: 0
 --- !u!54 &9093160144732825013
 Rigidbody:
   m_ObjectHideFlags: 0

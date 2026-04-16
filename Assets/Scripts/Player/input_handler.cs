@@ -41,11 +41,6 @@ public class InputHandler : MonoBehaviour
                 Debug.Log("Spacebar Pressed");
             }
 
-            //Interaccion
-            if(Input.GetMouseButtonDown(1))
-            {
-                characterInteract.Interact();
-            }
         }
     }
     public void ScenePause(bool newState)

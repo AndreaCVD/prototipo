@@ -38,11 +38,24 @@ public class CombatMonster : MonoBehaviour
         HP = new Int2Val (contitucion, contitucion);
     }
 
-    public void Fuerza(CombatMonster target) //Enemigo
+    public void Fuerza(CombatMonster target, int dice) //Enemigo
     {
         //Este daño al enemigo
-        //int constitucion = personaje.stats.Get(PersonajesStats.Constitucion);
-        target.TakeDamage(player.stats.Get(PersonajesStats.Fuerza)); //el target recibe daño de la fuerza
+
+        //Si Dice + Fuerza no supera AC del enemigo, no se hace el ataque
+        if (player.stats.Get(PersonajesStats.Fuerza) + dice >= target.player.stats.Get(PersonajesStats.ClaseArmadura))
+        {
+            Debug.Log("El que ataca fuerza = " + player.stats.Get(PersonajesStats.Fuerza));
+            Debug.Log("AC enemigo = " + target.player.stats.Get(PersonajesStats.ClaseArmadura));
+
+
+            target.TakeDamage(player.stats.Get(PersonajesStats.Fuerza)); //el target recibe daño de la fuerza
+        }
+        else
+        {
+            Debug.Log("No has llegado al AC del enemigo");
+
+        }
     }
     public void Inteligencia(CombatMonster target) //Enemigo
     {
@@ -56,7 +69,10 @@ public class CombatMonster : MonoBehaviour
         //int constitucion = personaje.stats.Get(PersonajesStats.Constitucion);
         target.TakeDamage(player.stats.Get(PersonajesStats.Carisma)); //el target recibe daño de la fuerza
     }
-
+    public int FuerzaCurrent()
+    {
+        return player.stats.Get(PersonajesStats.Fuerza);
+    }
     public void TakeDamage(int damage)
     {
 

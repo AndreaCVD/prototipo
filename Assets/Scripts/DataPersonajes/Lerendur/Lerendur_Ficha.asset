@@ -23,5 +23,7 @@ MonoBehaviour:
       stats: 2
     - value: 20
       stats: 3
+    - value: 12
+      stats: 4
   modelPrefab: {fileID: 0}
   art: {fileID: 0}

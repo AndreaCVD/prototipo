@@ -22,6 +22,7 @@ public class TurnRoundManager : MonoBehaviour
     [SerializeField] NPCAction npcTurn;
     private void Awake()
     {
+        
         //cuando current == prota, es nuestro turno
         current = Manager.playerPersonaje;
         target = Manager.enemyPersonaje;
@@ -40,6 +41,7 @@ public class TurnRoundManager : MonoBehaviour
         anim.SetBool("TurnProta", true);
         anim.SetBool("TurnEnemy", false);
     }
+ 
     public void ChangeTurn()
     {
         //turno prota

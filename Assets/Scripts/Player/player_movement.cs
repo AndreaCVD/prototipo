@@ -122,12 +122,12 @@ public class player_movement : MonoBehaviour
         if (verticalInput>0)//positivo
         {
             RotateCharacter(0f); //D
-            Debug.Log("DELANTE");
+            //Debug.Log("DELANTE");
         }
         else //negativo
         {
             RotateCharacter(180f); //A
-            Debug.Log("ATRAS");
+            //Debug.Log("ATRAS");
         }
 
         //var rotation = Quaternion.LookRotation(rb.direction);
@@ -142,19 +142,13 @@ public class player_movement : MonoBehaviour
         if (horizontalInput > 0)//positivo
         {
             RotateCharacter(90f); //D
-            Debug.Log("DERECHA");
+            //Debug.Log("DERECHA");
         }
         else //negativo
         {
             RotateCharacter(270f); //S
-            Debug.Log("IZQUIERDA");
+            //Debug.Log("IZQUIERDA");
         }
         // RotateCharacter(horizontalInput);
     }
-    //private void Turn(Vector3 dir)
-    //{
-    //    Vector3 target = transform.position + dir;
-    //    target.y = transform.position.y;
-    //    transform.LookAt(target);
-    //}
 }

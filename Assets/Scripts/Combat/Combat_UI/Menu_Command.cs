@@ -6,7 +6,7 @@ public class Menu_Command : MonoBehaviour
 {
     //Canvas
     [SerializeField] CanvasGroup canvas_acciones;
-
+    [SerializeField] CanvasGroup canva_Arma;
     private void Start()
     {
         //canvas_acciones = GetComponent<CanvasGroup>();

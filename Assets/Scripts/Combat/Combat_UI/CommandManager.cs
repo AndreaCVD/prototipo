@@ -6,14 +6,18 @@ using UnityEngine;
 public class CommandManager : MonoBehaviour
 {
     [SerializeField] TurnRoundManager turnRoundManager;
+    [SerializeField] Dice diceRoller;
+
     //[SerializeField] CombatMonster opponent;
     
     //le llega la accion, mira la variable de turn,
     // y lo envia a combat monster
     public void Fuerza()
     {
-        //current es prota
-        turnRoundManager.current.Fuerza(turnRoundManager.target);
+        //current = al que le toque el turno
+        //Hay que llamar al DiceRoller para ver si superamos el AC
+        int aux = diceRoller.RollDice(20);
+        turnRoundManager.current.Fuerza(turnRoundManager.target, aux);
 
         //Debug.Log("Current is = " + turnRoundManager.current);
         //Debug.Log("Target is = " + turnRoundManager.target);
@@ -22,7 +26,7 @@ public class CommandManager : MonoBehaviour
     }
     public void Inteligencia()
     {
-        //current es prota
+        //current = al que le toque el turno
         turnRoundManager.current.Inteligencia(turnRoundManager.target);
 
         //Debug.Log("Current is = " + turnRoundManager.current);
@@ -32,7 +36,7 @@ public class CommandManager : MonoBehaviour
     }
     public void Carisma()
     {
-        //current es prota
+        //current = al que le toque el turno
         turnRoundManager.current.Carisma(turnRoundManager.target);
 
         //Debug.Log("Current is = " + turnRoundManager.current);

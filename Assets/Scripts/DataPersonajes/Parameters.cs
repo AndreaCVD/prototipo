@@ -9,7 +9,8 @@ public enum PersonajesStats
     Fuerza,         //0
     Inteligencia,   //1
     Carisma,        //2
-    Constitucion    //3
+    Constitucion,   //3
+    ClaseArmadura   //4
 }
 
 //para poder editarlo en el editor de unity le ponemos serializable

@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class CommandPanel : MonoBehaviour
 {
@@ -6,6 +7,10 @@ public class CommandPanel : MonoBehaviour
     //[SerializeField] Preload preload;
     [SerializeField] CommandManager commandManager;
 
+    public List<int> Armas = new List<int>();
+    int daga = 4;
+    int espada = 6;
+    int conjuro = 12;
 
     //Boton Fuerza, se dice a command manager
     public void Fuerza()

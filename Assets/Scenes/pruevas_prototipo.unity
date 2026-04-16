@@ -1222,21 +1222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3d42b3a497006740958fffd87391ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onInteract:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 11500000, guid: 928e23b42561cd34fabc3c1cfd87d7f2, type: 3}
-        m_TargetAssemblyTypeName: UnityEngine.Object, UnityEngine
-        m_MethodName: 
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Combat
-          m_BoolArgument: 0
-        m_CallState: 2
+  load: {fileID: 0}
 --- !u!135 &530621475
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1252,11 +1238,11 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Radius: 0.78
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &530621476
 MeshRenderer:
@@ -1333,7 +1319,7 @@ NavMeshAgent:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 530621473}
-  m_Enabled: 1
+  m_Enabled: 0
   m_AgentTypeID: 0
   m_Radius: 0.5
   m_Speed: 3.5
@@ -1355,7 +1341,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 530621473}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cf2e0d466eb224a4bac1e30b6661f383, type: 3}
   m_Name: 
@@ -1941,21 +1927,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3d42b3a497006740958fffd87391ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  onInteract:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 777538032}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  load: {fileID: 0}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -3997,7 +3969,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2024843469}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
   m_Name: 
@@ -4404,7 +4376,7 @@ SceneRoots:
   - {fileID: 572508698}
   - {fileID: 1973518450}
   - {fileID: 777538037}
+  - {fileID: 530621478}
   - {fileID: 2024843470}
   - {fileID: 685384195}
-  - {fileID: 530621478}
   - {fileID: 1135124530}

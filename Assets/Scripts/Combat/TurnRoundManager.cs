@@ -1,16 +1,19 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TurnRoundManager : MonoBehaviour
 {
     //decir a quien le toca
+    //Canvas
+    [SerializeField] CanvasGroup grup;
+    //Textos
+    [SerializeField] TMP_Text turnoTexto;
 
     //variable de combat monster
     public CombatMonster current;
     public CombatMonster target;
-
     //[SerializeField] CombatMonster opponent;
     //[SerializeField] CombatMonster prota;
     //public GameObject canvas_animado;
@@ -22,7 +25,7 @@ public class TurnRoundManager : MonoBehaviour
     [SerializeField] NPCAction npcTurn;
     private void Awake()
     {
-        
+        turnoTexto.text = "Es turno de: ";
         //cuando current == prota, es nuestro turno
         current = Manager.playerPersonaje;
         target = Manager.enemyPersonaje;
@@ -47,6 +50,8 @@ public class TurnRoundManager : MonoBehaviour
         //turno prota
         if ( current == Manager.playerPersonaje)
         {
+            turnoTexto.text = "Es turno de: Prota ";
+
             current = Manager.enemyPersonaje;
             target = Manager.playerPersonaje;
             Debug.Log("Atacante = " + current);
@@ -58,13 +63,16 @@ public class TurnRoundManager : MonoBehaviour
         //turno enemigo
         else if (current == Manager.enemyPersonaje)
         {
+            turnoTexto.text = "Es turno de: Enemigo";
+
             current = Manager.playerPersonaje;
             target = Manager.enemyPersonaje;
             Debug.Log("Atacante = " + current);
             Debug.Log("Objetivo = " + target);
+            menu_acciones.opacidad(0f);
             anim.SetBool("TurnProta", false);
             anim.SetBool("TurnEnemy", true);
-            menu_acciones.opacidad(0f);
+
             npcTurn.DoAction();
         }
     }

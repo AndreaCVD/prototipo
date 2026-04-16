@@ -23,21 +23,28 @@ public class NPCAction : MonoBehaviour
 
     public void DoAction()
     {
-        switch (bestFeature())
+        char aux = bestFeature();
+        switch (aux)
         {
             case 'f':
                 //Random pero que tenga mas probabilidades de Fuerza
+                Debug.Log("Enemigo ha usado FUERZA");
                 commandManager.Fuerza();
                 break;
             case 'i':
                 //Random pero que tenga mas probabilidades de Fuerza
+                Debug.Log("Enemigo ha usado INTELIGENCIA");
+
                 commandManager.Inteligencia();
                 break;
             case 'c':
                 //Random pero que tenga mas probabilidades de Fuerza
+                Debug.Log("Enemigo ha usado CARISMA");
+
                 commandManager.Carisma();
                 break;
             default:
+                Debug.Log("--default de npc action--");
                 break;
         }
         

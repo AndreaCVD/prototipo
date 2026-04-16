@@ -24,6 +24,7 @@ public class centro_view : MonoBehaviour
         int f = protagonista.stats.Get(PersonajesStats.Fuerza);
         int i = protagonista.stats.Get(PersonajesStats.Inteligencia);
         int c = protagonista.stats.Get(PersonajesStats.Carisma);
+        int h = protagonista.stats.Get(PersonajesStats.Carisma);
         //int h = protagonista.stats.Get(PersonajesStats.Constitucion);
 
         if (f > 0) //positivo
@@ -44,7 +45,12 @@ public class centro_view : MonoBehaviour
             //fuerza.text = "+" + protagonista.stats.Get(PersonajesStats.Fuerza).ToString();
         }
         else { SetCarisma("-"); } //negativo
-
+        if (h > 0) //positivo
+        {
+            SetCarisma("+");
+            //fuerza.text = "+" + protagonista.stats.Get(PersonajesStats.Fuerza).ToString();
+        }
+        else { SetConstitucion("-"); } //negativo
         constitucion.text = protagonista.stats.Get(PersonajesStats.Constitucion).ToString();
 
         //Seteamos el canva
@@ -66,6 +72,10 @@ public class centro_view : MonoBehaviour
     void SetCarisma(string text)
     {
         carisma.text = text + protagonista.stats.Get(PersonajesStats.Carisma).ToString();
+    }
+    void SetConstitucion(string text)
+    {
+        constitucion.text = text + protagonista.stats.Get(PersonajesStats.Constitucion).ToString();
     }
 
     //Aqui se reciben las nuevas opacidades

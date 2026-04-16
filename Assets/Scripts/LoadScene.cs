@@ -12,7 +12,11 @@ public class LoadScene : MonoBehaviour
     [SerializeField] InputHandler escenaState;
     //[SerializeField] Preload preload;
     string name_anterior;
-
+    bool onCombat;
+    private void Start()
+    {
+        onCombat = false;
+    }
     void Update()
     {
         //pantalla tint
@@ -54,7 +58,7 @@ public class LoadScene : MonoBehaviour
             escenaState.ScenePause(false); //false, se mueve
             // Unload Scene
             SceneManager.UnloadSceneAsync(escenaActual);
-            
+            onCombat = false;
         }
         else
         {
@@ -62,7 +66,7 @@ public class LoadScene : MonoBehaviour
             save_posicion.save_LastPos();
             //preload.move_player();
             //if (sceneName == "combate_pruevas"){ }
-            Invoke("SceneManager.LoadScene(sceneName)", 2.0f);
+           SceneManager.LoadScene(sceneName);
         }
     }
     public void EscenaAnterior()//Tornar a una escena anterior
@@ -83,17 +87,21 @@ public class LoadScene : MonoBehaviour
             save_posicion.save_LastPos();
             //preload.move_player();
             //if (sceneName == "combate_pruevas"){ }
-            Invoke("SceneManager.LoadScene(name_anterior)", 2.0f);
+            SceneManager.LoadScene(name_anterior);
         }
     }
     public void Combat()
     {
-        name_anterior = SceneManager.GetActiveScene().name;
+        if (!onCombat)
+        {
+            name_anterior = SceneManager.GetActiveScene().name;
 
-        escenaState.ScenePause(true); //true, se para
-        pantalla.UnTint();
-        save_posicion.save_LastPos();
-        SceneManager.LoadScene("combate_pruevas", LoadSceneMode.Additive);
+            escenaState.ScenePause(true); //true, se para
+            pantalla.UnTint();
+            save_posicion.save_LastPos();
+            SceneManager.LoadScene("combate_pruevas", LoadSceneMode.Additive);
+        }
+
     }
     
     public void GameOver()

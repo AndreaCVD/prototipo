@@ -23,6 +23,7 @@ public class NPCAction : MonoBehaviour
 
     public void DoAction()
     {
+        Debug.Log ("AHORA ATACA EL ENEMIGO");
         char aux = bestFeature();
         switch (aux)
         {

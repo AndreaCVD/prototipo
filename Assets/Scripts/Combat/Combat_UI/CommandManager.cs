@@ -17,7 +17,9 @@ public class CommandManager : MonoBehaviour
         //current = al que le toque el turno
         //Hay que llamar al DiceRoller para ver si superamos el AC
         int aux = diceRoller.RollDice(20);
+        Debug.Log("El dado se ha lanzado");
         turnRoundManager.current.Fuerza(turnRoundManager.target, aux);
+        Debug.Log("Accion completada");
 
         //Debug.Log("Current is = " + turnRoundManager.current);
         //Debug.Log("Target is = " + turnRoundManager.target);

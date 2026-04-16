@@ -25,55 +25,64 @@ public class TurnRoundManager : MonoBehaviour
     [SerializeField] NPCAction npcTurn;
     private void Awake()
     {
-        turnoTexto.text = "Es turno de: ";
+
         //cuando current == prota, es nuestro turno
         current = Manager.playerPersonaje;
         target = Manager.enemyPersonaje;
         Debug.Log("Atacante = " + current);
         Debug.Log("Objetivo = " + target);
-        menu_acciones.opacidad(1f);
+        menu_acciones.opacidad(1f);        
+        turnoTexto.text = "Es turno de: " + current;
         //if (anim == null)
         //{
         //    //canvas_animado = GameObject.Find("Personajes_Canvas");
         //    anim = canvas_animado.GetComponent<Animator>();
         //}
+        anim.SetBool("TurnProta", true);
+        anim.SetBool("TurnEnemy", false);
     }
     private void Start()
     {
 
-        anim.SetBool("TurnProta", true);
-        anim.SetBool("TurnEnemy", false);
     }
  
     public void ChangeTurn()
     {
-        //turno prota
+        Debug.Log("CAMBIO TURNO");
+        //si es el turno del prota, se cambia al enemigo
         if ( current == Manager.playerPersonaje)
         {
-            turnoTexto.text = "Es turno de: Prota ";
-
+            turnoTexto.text = "Es turno de: Enemigo";
+            menu_acciones.opacidad(0f);
+            //Cambiar current y target
             current = Manager.enemyPersonaje;
             target = Manager.playerPersonaje;
-            Debug.Log("Atacante = " + current);
+           
+            Debug.Log("AtacantE = " + current);
             Debug.Log("Objetivo = " + target);
-            anim.SetBool("TurnProta", true);
-            anim.SetBool("TurnEnemy", false);
-            menu_acciones.opacidad(1f);
-        }
-        //turno enemigo
-        else if (current == Manager.enemyPersonaje)
-        {
-            turnoTexto.text = "Es turno de: Enemigo";
-
-            current = Manager.playerPersonaje;
-            target = Manager.enemyPersonaje;
-            Debug.Log("Atacante = " + current);
-            Debug.Log("Objetivo = " + target);
-            menu_acciones.opacidad(0f);
+            //Animacion
             anim.SetBool("TurnProta", false);
             anim.SetBool("TurnEnemy", true);
 
-            npcTurn.DoAction();
+
+        }
+        //si es turno del enemigo, se cambia al prota
+        else if (current == Manager.enemyPersonaje)
+        {
+            turnoTexto.text = "Es turno de: Prota";
+            menu_acciones.opacidad(1f);
+            //Cambiar current y target
+            current = Manager.playerPersonaje;
+            target = Manager.enemyPersonaje;
+
+            Debug.Log("Atacante = " + current);
+            Debug.Log("Objetivo = " + target);
+            //Animacion
+            anim.SetBool("TurnProta", true);
+            anim.SetBool("TurnEnemy", false);
+            //Accion NPC, NO METER AQUI DA FALLOS
+            //npcTurn.DoAction();
+
         }
     }
 }

@@ -47,7 +47,7 @@ public class CombatMonster : MonoBehaviour
         {
             Debug.Log("El que ataca fuerza = " + player.stats.Get(PersonajesStats.Fuerza));
             Debug.Log("AC enemigo = " + target.player.stats.Get(PersonajesStats.ClaseArmadura));
-
+            Debug.Log("Ataque total  = " + (player.stats.Get(PersonajesStats.Fuerza) + dice));
 
             target.TakeDamage(player.stats.Get(PersonajesStats.Fuerza)); //el target recibe daño de la fuerza
         }
@@ -84,7 +84,7 @@ public class CombatMonster : MonoBehaviour
         //guardado.guardar_stats(player, damage); //guardar estats
         //Debug.Log(player.stats.values[3].value); 
 
-        Debug.Log(player.namePers + " ha sido atacado! : "+ "// HP : " + HP.current.ToString());
+        Debug.Log(player.namePers + " ha sido atacado! : "+ "// HP RESTANTE : " + HP.current.ToString());
 
         if (HP.current <= 0)
         {
@@ -93,7 +93,9 @@ public class CombatMonster : MonoBehaviour
             //Si es el prota es GAMEOVER
             if (player.namePers == "Prota")
             {
-                load.GameOver();
+                //load.GameOver();
+                Debug.Log("GAME OVER");
+
             }
             else
             {
@@ -102,7 +104,9 @@ public class CombatMonster : MonoBehaviour
             //Hablar con SceneManager -> LoadScene volver a la pantalla anterior
             load.EscenaAnterior();
             }
+            
             //guardado.alguien_eliminado(player); //enviara el personaje que se elimine
         }
+        Debug.Log("FIN TURNO");
     }
 }

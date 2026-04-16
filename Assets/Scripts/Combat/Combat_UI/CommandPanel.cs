@@ -16,7 +16,7 @@ public class CommandPanel : MonoBehaviour
     public void Fuerza()
     {
         commandManager.Fuerza();
-        Debug.Log("Ha usado fuerza");
+        //Debug.Log("El ataque de fuerza ha acabo");
     }
     //Boton Inteligencia
     public void Intel()

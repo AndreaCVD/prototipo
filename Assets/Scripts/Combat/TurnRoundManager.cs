@@ -86,7 +86,7 @@ public class TurnRoundManager : MonoBehaviour
         //Si es el turno del Enemigo, hacemos que actue solo
         if (current == Manager.enemyPersonaje)
         {
-            Debug.Log("");
+            Debug.Log("------AHORA ATCATA EL ENEMIGO-----");
             npcTurn.DoAction();
         }
     }

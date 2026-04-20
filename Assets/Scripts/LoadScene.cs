@@ -4,12 +4,18 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class LoadScene : MonoBehaviour
 {
+    [Header("Degradado pantalla")]
     [SerializeField] TintScreen pantalla;
+    [Header("Datos prota")]
     [SerializeField] GameObject protagonista;
     GameObject obj_saveScript;
     [SerializeField] personaje save_posicion;
     GameObject obj_input;
+    [Header("Parar movimiento")]
     [SerializeField] InputHandler escenaState;
+    [Header("Preparar el combate")]
+    [SerializeField] Preload preload;
+
     //[SerializeField] Preload preload;
     string name_anterior;
     bool onCombat;
@@ -74,6 +80,7 @@ public class LoadScene : MonoBehaviour
         Scene escenaActual = SceneManager.GetActiveScene();
         if (escenaActual.name == "combate_pruevas")
         {
+            onCombat = false;
             //si estamos en combate eliminar esta escena
             //Sacamos la pausa del juego principal
             escenaState.ScenePause(false); //false, se mueve
@@ -90,14 +97,19 @@ public class LoadScene : MonoBehaviour
             SceneManager.LoadScene(name_anterior);
         }
     }
-    public void Combat()
+    public void Combat(GameObject a)
     {
         if (!onCombat)
         {
+            onCombat = true;
+
             name_anterior = SceneManager.GetActiveScene().name;
 
             escenaState.ScenePause(true); //true, se para
             pantalla.UnTint();
+
+            preload.CombatOpponent(a.name); //Pasem el nom
+
             save_posicion.save_LastPos();
             SceneManager.LoadScene("combate_pruevas", LoadSceneMode.Additive);
         }

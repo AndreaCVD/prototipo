@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using System.Reflection;
 using System.Security.Cryptography;
 using UnityEngine;
@@ -97,12 +98,15 @@ public class CombatMonster : MonoBehaviour
                 Debug.Log("GAME OVER");
                 load.EscenaAnterior();
             }
-            else
+            else //Si pierde el enemigo:
             {
-            //Si pierde el enemigo:
-            //Guardar en preload la nueva constitucion
-            //Hablar con SceneManager -> LoadScene volver a la pantalla anterior
-            load.EscenaAnterior();
+
+                //Guardar en preload la nueva constitucion
+                Debug.Log("HAS GANADO AL ENEMIGO");
+                //hay que destruir el obj del enemigo
+
+                //Hablar con SceneManager -> LoadScene volver a la pantalla anterior
+                load.EscenaAnterior();
             }
             
             //guardado.alguien_eliminado(player); //enviara el personaje que se elimine

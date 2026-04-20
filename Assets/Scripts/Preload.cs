@@ -15,6 +15,8 @@ public class Preload : MonoBehaviour
     private GameObject protagonista;
     //para recibir la posicion anterior
     personaje vectorPosicion;
+    //Para Combat Debug
+    public string NameOpponent = "";
 
     void Awake()
     {       
@@ -30,7 +32,18 @@ public class Preload : MonoBehaviour
             PrefabProta.transform.position = vectorPosicion.load_LastPos();
         }
     }
-
+    public void CombatOpponent(string name)
+    {
+        switch (name)
+        {
+            case "Cubo":
+                NameOpponent = name;
+                break;
+            default:
+                Debug.Log("");
+                break;
+        }
+    }
     //public void move_player()
     //{
     //    PrefabProta.transform.position = vectorPosicion.load_pos();

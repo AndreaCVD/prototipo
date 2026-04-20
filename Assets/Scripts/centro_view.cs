@@ -17,14 +17,19 @@ public class centro_view : MonoBehaviour
     [SerializeField] TMP_Text carisma;
     [SerializeField] TMP_Text constitucion;
 
-
+    void Awake()
+    {
+        protagonista.stats.values[3].value = 12;
+    }
     void Start()
     {
+
+
         //Seteamos valores, int -> string
         int f = protagonista.stats.Get(PersonajesStats.Fuerza);
         int i = protagonista.stats.Get(PersonajesStats.Inteligencia);
         int c = protagonista.stats.Get(PersonajesStats.Carisma);
-        int h = protagonista.stats.Get(PersonajesStats.Carisma);
+        int h = protagonista.stats.Get(PersonajesStats.Constitucion);
         //int h = protagonista.stats.Get(PersonajesStats.Constitucion);
 
         if (f > 0) //positivo
@@ -45,17 +50,24 @@ public class centro_view : MonoBehaviour
             //fuerza.text = "+" + protagonista.stats.Get(PersonajesStats.Fuerza).ToString();
         }
         else { SetCarisma("-"); } //negativo
-        if (h > 0) //positivo
-        {
-            SetCarisma("+");
-            //fuerza.text = "+" + protagonista.stats.Get(PersonajesStats.Fuerza).ToString();
-        }
-        else { SetConstitucion("-"); } //negativo
-        constitucion.text = protagonista.stats.Get(PersonajesStats.Constitucion).ToString();
+        //if (h > 0) //positivo
+        //{
+        //    SetCarisma("+");
+        //    //fuerza.text = "+" + protagonista.stats.Get(PersonajesStats.Fuerza).ToString();
+        //}
+        //else { SetCarisma(""); } //negativo
+        //constitucion.text = protagonista.stats.Get(PersonajesStats.Constitucion).ToString();
 
         //Seteamos el canva
         grup = GetComponent<CanvasGroup>();
 
+    }
+    void Update()
+    {
+        if (constitucion.text != protagonista.stats.Get(PersonajesStats.Constitucion).ToString())
+        {
+            SetConstitucion("");
+        }
     }
     void SetFuerza(string text)
     {

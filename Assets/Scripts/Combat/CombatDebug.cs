@@ -7,14 +7,22 @@ using UnityEngine;
 //para hacer test de combate
 public class CombatDebug : MonoBehaviour
 {
+
+    [Header("Para el combate")]
+    //Prota
     [SerializeField] Parameters playerData;
+    //Oponente combate
     [SerializeField] Parameters enemyData;
     
+    [Header("Possibles enemigos")]
+    [SerializeField] Parameters cubo;
+
     CombatManager manager;
 
     private void Awake()
     {
         manager = GetComponent<CombatManager>();
+
     }
 
     private void Start()

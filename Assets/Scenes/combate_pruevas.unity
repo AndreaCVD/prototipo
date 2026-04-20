@@ -465,8 +465,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83076efc590ce874990a5d0cb470421e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  preload: {fileID: 1521476943}
   playerData: {fileID: 11400000, guid: f0233a249cd1f2b43a3d8f04e1ad2bf2, type: 2}
-  enemyData: {fileID: 11400000, guid: 2007cbc7d80ee3c47b7757d6652637d1, type: 2}
+  cubo: {fileID: 11400000, guid: 3f6552816cb722c46b7ed51c3826b6e0, type: 2}
 --- !u!114 &88913839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2976,7 +2977,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7663525706672394598, guid: 459b944f305510f4c837797037447397, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8402151408438500115, guid: 459b944f305510f4c837797037447397, type: 3}
       propertyPath: m_Pivot.x
@@ -3132,6 +3133,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ca28d6627cc19d84893b1c16657bf7d9, type: 3}
+--- !u!114 &1521476943 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8228760125869817717, guid: ca28d6627cc19d84893b1c16657bf7d9, type: 3}
+  m_PrefabInstance: {fileID: 1521476942}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c72389183d69674ab0699d08e6131a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1529164167
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -97,7 +97,7 @@ public class LoadScene : MonoBehaviour
             SceneManager.LoadScene(name_anterior);
         }
     }
-    public void Combat(GameObject a)
+    public void Combat(/*GameObject enemyName*/)
     {
         if (!onCombat)
         {
@@ -108,7 +108,7 @@ public class LoadScene : MonoBehaviour
             escenaState.ScenePause(true); //true, se para
             pantalla.UnTint();
 
-            preload.CombatOpponent(a.name); //Pasem el nom
+            //preload.CombatOpponent(/*enemyName.name*/); //Pasem el nom
 
             save_posicion.save_LastPos();
             SceneManager.LoadScene("combate_pruevas", LoadSceneMode.Additive);

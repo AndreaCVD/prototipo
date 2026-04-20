@@ -23,7 +23,7 @@ public class TurnRoundManager : MonoBehaviour
 
     //NPC
     [SerializeField] NPCAction npcTurn;
-    private void Awake()
+    private void Start()
     {
 
         //cuando current == prota, es nuestro turno

@@ -16,7 +16,7 @@ public class Preload : MonoBehaviour
     //para recibir la posicion anterior
     personaje vectorPosicion;
     //Para Combat Debug
-    public string NameOpponent = "";
+    public string NameOpponent = "nada";
 
     void Awake()
     {       
@@ -29,20 +29,25 @@ public class Preload : MonoBehaviour
         if (escenaActual.name == "pruevas_prototipo")
         {
             //Guardamos posicion y la ponemos en el personaje
-            PrefabProta.transform.position = vectorPosicion.load_LastPos();
+           // PrefabProta.transform.position = vectorPosicion.load_LastPos();
         }
     }
-    public void CombatOpponent(string name)
+    public string nameOpponent()
     {
-        switch (name)
-        {
-            case "Cubo":
-                NameOpponent = name;
-                break;
-            default:
-                Debug.Log("");
-                break;
-        }
+        return NameOpponent;
+    }
+    public void CombatOpponent(string enemyName)
+    {
+        NameOpponent = enemyName;
+        //switch (enemyName)
+        //{
+        //    case "Cubo":
+        //        NameOpponent = name;
+        //        break;
+        //    default:
+        //        Debug.Log("");
+        //        break;
+        //}
     }
     //public void move_player()
     //{

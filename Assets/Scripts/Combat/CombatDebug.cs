@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
@@ -9,10 +10,11 @@ public class CombatDebug : MonoBehaviour
 {
 
     [Header("Para el combate")]
+    [SerializeField] Preload preload;
     //Prota
     [SerializeField] Parameters playerData;
     //Oponente combate
-    [SerializeField] Parameters enemyData;
+    private Parameters enemyData;
     
     [Header("Possibles enemigos")]
     [SerializeField] Parameters cubo;
@@ -22,14 +24,31 @@ public class CombatDebug : MonoBehaviour
     private void Awake()
     {
         manager = GetComponent<CombatManager>();
-
+        string nameEnemy = preload.nameOpponent();
+        ElegirEnemigo(nameEnemy);
+        manager.StartBattle(playerData, enemyData);   
     }
 
     private void Start()
     {
-        manager.StartBattle(playerData, enemyData); 
-    }
 
+    }
+    private void ElegirEnemigo(string NameEnemy)
+    {
+        //Aqui se tiene que elegir enemigo y enviar los parameters para que el
+        //combate se realize con el oponente correcto
+        enemyData = cubo;
+        Debug.Log("NAME ENEMY="+NameEnemy);
+        if (NameEnemy == "Cubo")
+        {
+            
+            Debug.Log(enemyData);
+        }
+        else
+        {
+            Debug.Log("¿Quien es este enemigo?");
+        }
+    }
     public Parameters ReturnEnemy()
     {
         return enemyData;

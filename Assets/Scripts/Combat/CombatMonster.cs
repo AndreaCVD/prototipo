@@ -95,7 +95,7 @@ public class CombatMonster : MonoBehaviour
             {
                 //load.GameOver();
                 Debug.Log("GAME OVER");
-                load.EscenaAnterior();
+                load.SalirCombate();
             }
             else //Si pierde el enemigo:
             {
@@ -105,7 +105,7 @@ public class CombatMonster : MonoBehaviour
                 //hay que destruir el obj del enemigo
 
                 //Hablar con SceneManager -> LoadScene volver a la pantalla anterior
-                load.EscenaAnterior();
+                load.SalirCombate();
             }
             
             //guardado.alguien_eliminado(player); //enviara el personaje que se elimine

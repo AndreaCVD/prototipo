@@ -20,7 +20,7 @@ public class CommandManager : MonoBehaviour
 
         //Acción
         turnRoundManager.current.Fuerza(turnRoundManager.target, aux);
-        Debug.Log("Accion completada");
+        //Debug.Log("Accion completada");
 
         //Debug.Log("Current is = " + turnRoundManager.current);
         //Debug.Log("Target is = " + turnRoundManager.target);

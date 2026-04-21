@@ -19,7 +19,7 @@ public class centro_view : MonoBehaviour
 
     void Awake()
     {
-        protagonista.stats.values[3].value = 12;
+        //protagonista.stats.values[3].value = 12;
     }
     void Start()
     {

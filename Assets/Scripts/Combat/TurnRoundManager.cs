@@ -31,6 +31,8 @@ public class TurnRoundManager : MonoBehaviour
         target = Manager.enemyPersonaje;
         Debug.Log("Atacante = " + current);
         Debug.Log("Objetivo = " + target);
+        anim.SetBool("TurnProta", true);
+        anim.SetBool("TurnEnemy", false);
         menu_acciones.opacidad(1f);        
         turnoTexto.text = "Es turno de: " + current;
         //if (anim == null)
@@ -38,8 +40,7 @@ public class TurnRoundManager : MonoBehaviour
         //    //canvas_animado = GameObject.Find("Personajes_Canvas");
         //    anim = canvas_animado.GetComponent<Animator>();
         //}
-        anim.SetBool("TurnProta", true);
-        anim.SetBool("TurnEnemy", false);
+
     }
  
     public void ChangeTurn()
@@ -59,6 +60,7 @@ public class TurnRoundManager : MonoBehaviour
             //Animacion
             anim.SetBool("TurnProta", false);
             anim.SetBool("TurnEnemy", true);
+
 
 
         }

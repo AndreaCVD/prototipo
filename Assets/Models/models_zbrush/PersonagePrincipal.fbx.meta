@@ -79,8 +79,514 @@ ModelImporter:
   importAnimation: 1
   humanDescription:
     serializedVersion: 3
-    human: []
-    skeleton: []
+    human:
+    - boneName: Carlitos_Hips
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Carlitos_LeftUpLeg
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Carlitos_RightUpLeg
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Carlitos_LeftLeg
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Carlitos_RightLeg
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Carlitos_LeftFoot
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Carlitos_RightFoot
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Carlitos_Spine
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Carlitos_Spine1
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Carlitos_Neck
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Carlitos_Head
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Carlitos_LeftShoulder
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Carlitos_RightShoulder
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Carlitos_LeftArm
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Carlitos_RightArm
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Carlitos_LeftForeArm
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Carlitos_RightForeArm
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Carlitos_LeftHand
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Carlitos_RightHand
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Carlitos_LeftToeBase
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Carlitos_RightToeBase
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Carlitos_Spine2
+      humanName: UpperChest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: PersonagePrincipal(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Carlos
+      parentName: PersonagePrincipal(Clone)
+      position: {x: 0.000273187, y: 2.8887472, z: -0.22762132}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.017530503, y: 0.017530503, z: 0.017530503}
+    - name: Carlitos_Reference
+      parentName: PersonagePrincipal(Clone)
+      position: {x: 0.00027318476, y: 0.00034833906, z: -0.0071286154}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Carlitos_Hips
+      parentName: Carlitos_Reference
+      position: {x: -1.8626451e-11, y: 0.05306478, z: -0.0014344496}
+      rotation: {x: 0.49953812, y: -0.5004615, z: -0.49953812, w: 0.5004615}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Carlitos_LeftUpLeg
+      parentName: Carlitos_Hips
+      position: {x: 0.0051082, y: -0.0000041145445, z: 0.01262122}
+      rotation: {x: 0.0023785604, y: 0.000486268, z: 0.9999971, w: -0.00006134988}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Carlitos_LeftLeg
+      parentName: Carlitos_LeftUpLeg
+      position: {x: -0.022939054, y: -0.0000008310347, z: -0.0000000056290994}
+      rotation: {x: -0.0009962686, y: 0.00004631776, z: -0.03232224, w: 0.999477}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Carlitos_LeftFoot
+      parentName: Carlitos_LeftLeg
+      position: {x: -0.017694438, y: 0.00000011853074, z: 0.0000000026437432}
+      rotation: {x: 0.0010135463, y: 0.0025140033, z: 0.6149691, w: 0.7885466}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Carlitos_LeftToeBase
+      parentName: Carlitos_LeftFoot
+      position: {x: -0.018509159, y: 0.0000000031362182, z: 0.000000011136565}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Carlitos_RightUpLeg
+      parentName: Carlitos_Hips
+      position: {x: 0.0051082, y: -0.0000041145445, z: -0.01262122}
+      rotation: {x: 0.0004913182, y: -0.0023784922, z: 0.000048248763, w: 0.9999971}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Carlitos_RightLeg
+      parentName: Carlitos_RightUpLeg
+      position: {x: 0.022939054, y: 0.0000015876071, z: 0.0000000035291643}
+      rotation: {x: -0.0009760045, y: 0.000045187786, z: -0.03231401, w: 0.99947727}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Carlitos_RightFoot
+      parentName: Carlitos_RightLeg
+      position: {x: 0.017694436, y: -0.00000011975726, z: -0.0000000028767597}
+      rotation: {x: 0.0009935026, y: 0.0025298335, z: 0.6149725, w: 0.7885439}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Carlitos_RightToeBase
+      parentName: Carlitos_RightFoot
+      position: {x: 0.018509168, y: 5.680903e-10, z: -7.811642e-10}
+      rotation: {x: 0.000025421466, y: -0.00000006332978, z: 1.6099358e-12, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Carlitos_Spine
+      parentName: Carlitos_Hips
+      position: {x: -0.012436173, y: -1.4662717e-10, z: 3.469447e-20}
+      rotation: {x: 4.4037533e-21, y: 4.336585e-19, z: 0.008307675, w: 0.9999655}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Carlitos_Spine1
+      parentName: Carlitos_Spine
+      position: {x: -0.014791668, y: 1.07472295e-10, z: 0}
+      rotation: {x: 6.40579e-21, y: -2.1716908e-19, z: 0.01446776, w: 0.99989533}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Carlitos_Spine2
+      parentName: Carlitos_Spine1
+      position: {x: -0.0057633375, y: 5.0221144e-10, z: -3.469447e-20}
+      rotation: {x: 4.0934378e-21, y: -2.17225e-19, z: -0.003822019, w: 0.9999927}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Carlitos_LeftShoulder
+      parentName: Carlitos_Spine2
+      position: {x: -0.013155765, y: -0.0015095383, z: 0.011264061}
+      rotation: {x: -0.39565504, y: 0.5860521, z: 0.5698641, w: 0.4186346}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Carlitos_LeftArm
+      parentName: Carlitos_LeftShoulder
+      position: {x: -0.009249658, y: 0.0000000056045852, z: -4.440892e-18}
+      rotation: {x: 0.69546455, y: -0.12794812, z: -0.1247315, w: 0.6959888}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Carlitos_LeftForeArm
+      parentName: Carlitos_LeftArm
+      position: {x: -0.019766923, y: 0.0000007477608, z: 0.00000047030107}
+      rotation: {x: -0.00013353155, y: 0.00023239007, z: -0.028178751, w: 0.99960285}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Carlitos_LeftHand
+      parentName: Carlitos_LeftForeArm
+      position: {x: -0.018628545, y: -0.00000005611266, z: -9.207495e-11}
+      rotation: {x: 0, y: 0, z: 0.00003221886, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Carlitos_RightShoulder
+      parentName: Carlitos_Spine2
+      position: {x: -0.013155765, y: -0.0015095383, z: -0.011264061}
+      rotation: {x: 0.5860522, y: 0.39565498, z: -0.41863465, w: 0.56986403}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Carlitos_RightArm
+      parentName: Carlitos_RightShoulder
+      position: {x: 0.009249658, y: -0.0000000056045852, z: 2.220446e-18}
+      rotation: {x: 0.69546413, y: -0.12794855, z: -0.124729075, w: 0.69598955}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Carlitos_RightForeArm
+      parentName: Carlitos_RightArm
+      position: {x: 0.019766934, y: -0.0000006933349, z: -0.00000042341009}
+      rotation: {x: -0.00013262672, y: 0.00023123535, z: -0.028185451, w: 0.9996027}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Carlitos_RightHand
+      parentName: Carlitos_RightForeArm
+      position: {x: 0.01862857, y: 0.000000056201642, z: 0.000000010941328}
+      rotation: {x: 0, y: 0, z: 0.000032116128, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Carlitos_Neck
+      parentName: Carlitos_Spine2
+      position: {x: -0.019230558, y: -2.7893116e-10, z: 3.469447e-20}
+      rotation: {x: -0.000041208274, y: -0.0019014492, z: -0.021666909, w: 0.9997634}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Carlitos_Head
+      parentName: Carlitos_Neck
+      position: {x: -0.03139057, y: -8.7899193e-10, z: 1.9444599e-11}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Carlitos_Ctrl_Reference
+      parentName: PersonagePrincipal(Clone)
+      position: {x: 0.00027318476, y: 0.00034833906, z: -0.0071286154}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Carlitos_Ctrl_HipsEffector
+      parentName: Carlitos_Ctrl_Reference
+      position: {x: -0, y: 0.047956586, z: -0.001429131}
+      rotation: {x: 3.061617e-17, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Carlitos_Ctrl_LeftAnkleEffector
+      parentName: Carlitos_Ctrl_Reference
+      position: {x: -0.012429704, y: 0.007358415, z: -0.0024918055}
+      rotation: {x: -0.0000007338821, y: -0.0010856759, z: -0.00034629545, w: 0.99999934}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Carlitos_Ctrl_RightAnkleEffector
+      parentName: Carlitos_Ctrl_Reference
+      position: {x: 0.012429706, y: 0.007358458, z: -0.0024918227}
+      rotation: {x: -0.00000024959448, y: 0.0010479164, z: 0.00033428543, w: 0.9999994}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Carlitos_Ctrl_LeftWristEffector
+      parentName: Carlitos_Ctrl_Reference
+      position: {x: -0.058339365, y: 0.096618585, z: -0.0031608008}
+      rotation: {x: 0.00011329626, y: 0.025843177, z: -0.007711677, w: 0.9996363}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Carlitos_Ctrl_RightWristEffector
+      parentName: Carlitos_Ctrl_Reference
+      position: {x: 0.058339357, y: 0.096618585, z: -0.003160802}
+      rotation: {x: 0.00011333461, y: -0.025847837, z: 0.0077112974, w: 0.9996362}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Carlitos_Ctrl_LeftKneeEffector
+      parentName: Carlitos_Ctrl_Reference
+      position: {x: -0.012512093, y: 0.025017802, z: -0.0013818728}
+      rotation: {x: 0.031377163, y: -0.00043120416, z: 0.002315712, w: 0.99950486}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Carlitos_Ctrl_RightKneeEffector
+      parentName: Carlitos_Ctrl_Reference
+      position: {x: 0.012512094, y: 0.025017826, z: -0.0013817209}
+      rotation: {x: 0.031381655, y: 0.0004058426, z: -0.0023165138, w: 0.99950475}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Carlitos_Ctrl_LeftElbowEffector
+      parentName: Carlitos_Ctrl_Reference
+      position: {x: -0.039737996, y: 0.0963315, z: -0.00412441}
+      rotation: {x: 0.00011325381, y: 0.025873836, z: -0.007711127, w: 0.9996355}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Carlitos_Ctrl_RightElbowEffector
+      parentName: Carlitos_Ctrl_Reference
+      position: {x: 0.03973799, y: 0.096331514, z: -0.004124584}
+      rotation: {x: 0.000113669994, y: -0.025878422, z: 0.007711015, w: 0.9996354}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Carlitos_Ctrl_ChestOriginEffector
+      parentName: Carlitos_Ctrl_Reference
+      position: {x: -0, y: 0.06550094, z: -0.001457417}
+      rotation: {x: 6.071532e-17, y: -1.0690416e-16, z: 2.0117698e-18, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Carlitos_Ctrl_ChestEndEffector
+      parentName: Carlitos_Ctrl_Reference
+      position: {x: -0, y: 0.099132314, z: -0.0040347744}
+      rotation: {x: 3.8163916e-17, y: -1.0210957e-16, z: 4.237065e-18, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Carlitos_Ctrl_LeftFootEffector
+      parentName: Carlitos_Ctrl_Reference
+      position: {x: -0.012471901, y: 0.001733315, z: 0.015141863}
+      rotation: {x: -0.0000007338821, y: -0.0010856759, z: -0.00034629545, w: 0.99999934}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Carlitos_Ctrl_RightFootEffector
+      parentName: Carlitos_Ctrl_Reference
+      position: {x: 0.012471901, y: 0.0017333411, z: 0.015141849}
+      rotation: {x: -0.00000024959445, y: 0.0010479164, z: 0.0003342854, w: 0.9999994}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Carlitos_Ctrl_LeftShoulderEffector
+      parentName: Carlitos_Ctrl_Reference
+      position: {x: -0.01997375, y: 0.09601823, z: -0.0040347744}
+      rotation: {x: 0.000017398983, y: -0.0022854088, z: -0.007935266, w: 0.9999659}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Carlitos_Ctrl_RightShoulderEffector
+      parentName: Carlitos_Ctrl_Reference
+      position: {x: 0.01997375, y: 0.09601823, z: -0.0040347744}
+      rotation: {x: 0.000016784308, y: 0.0022889255, z: 0.007935116, w: 0.9999659}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Carlitos_Ctrl_HeadEffector
+      parentName: Carlitos_Ctrl_Reference
+      position: {x: 0.00011940297, y: 0.13665245, z: -0.0026554125}
+      rotation: {x: 3.061617e-17, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Carlitos_Ctrl_LeftHipEffector
+      parentName: Carlitos_Ctrl_Reference
+      position: {x: -0.01262122, y: 0.04795658, z: -0.0014291304}
+      rotation: {x: -0.0009545749, y: 0.0004887261, z: 0.0023782838, w: 0.9999966}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Carlitos_Ctrl_RightHipEffector
+      parentName: Carlitos_Ctrl_Reference
+      position: {x: 0.01262122, y: 0.04795658, z: -0.0014291304}
+      rotation: {x: -0.00094477244, y: -0.0004937145, z: -0.0023781913, w: 0.9999966}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Carlitos_Ctrl_Hips
+      parentName: Carlitos_Ctrl_Reference
+      position: {x: -0, y: 0.053064782, z: -0.0014344502}
+      rotation: {x: 3.061617e-17, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Carlitos_Ctrl_LeftUpLeg
+      parentName: Carlitos_Ctrl_Hips
+      position: {x: -0.01262122, y: -0.005108199, z: 0.0000053191184}
+      rotation: {x: -0.0009545749, y: 0.000488726, z: 0.0023782838, w: 0.9999966}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Carlitos_Ctrl_LeftLeg
+      parentName: Carlitos_Ctrl_LeftUpLeg
+      position: {x: -0, y: -0.022939088, z: 0}
+      rotation: {x: 0.032329, y: -0.000996521, z: -0.00004647881, w: 0.9994768}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Carlitos_Ctrl_LeftFoot
+      parentName: Carlitos_Ctrl_LeftLeg
+      position: {x: 2.220446e-18, y: -0.017694408, z: 0}
+      rotation: {x: -0.031380538, y: -0.0006647984, z: -0.0026277686, w: 0.99950385}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Carlitos_Ctrl_LeftToeBase
+      parentName: Carlitos_Ctrl_LeftFoot
+      position: {x: -0.000000011920928, y: -0.0056251385, z: 0.017633703}
+      rotation: {x: 2.2365468e-32, y: -0, z: -1.2246469e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Carlitos_Ctrl_RightUpLeg
+      parentName: Carlitos_Ctrl_Hips
+      position: {x: 0.01262122, y: -0.005108199, z: 0.0000053191184}
+      rotation: {x: -0.00094477244, y: -0.0004937145, z: -0.0023781913, w: 0.9999966}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Carlitos_Ctrl_RightLeg
+      parentName: Carlitos_Ctrl_RightUpLeg
+      position: {x: 0.0000000011920929, y: -0.022939088, z: 0.00000022411346}
+      rotation: {x: 0.032323744, y: 0.0009761314, z: 0.000045397588, w: 0.99947697}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Carlitos_Ctrl_RightFoot
+      parentName: Carlitos_Ctrl_RightLeg
+      position: {x: -0, y: -0.017694408, z: -2.220446e-18}
+      rotation: {x: -0.03138445, y: 0.0006520449, z: 0.0026177466, w: 0.9995038}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Carlitos_Ctrl_RightToeBase
+      parentName: Carlitos_Ctrl_RightFoot
+      position: {x: 0.000001477003, y: -0.0056251385, z: 0.017633704}
+      rotation: {x: 2.2365468e-32, y: -0, z: -1.2246469e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Carlitos_Ctrl_Spine
+      parentName: Carlitos_Ctrl_Hips
+      position: {x: -0, y: 0.0124361515, z: -0.00002296686}
+      rotation: {x: 6.071532e-17, y: -1.0690416e-16, z: 2.0117698e-18, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Carlitos_Ctrl_Spine1
+      parentName: Carlitos_Ctrl_Spine
+      position: {x: -3.469447e-20, y: 0.014789143, z: -0.0002730727}
+      rotation: {x: -3.8163916e-17, y: -2.1148968e-17, z: 2.89148e-17, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Carlitos_Ctrl_Spine2
+      parentName: Carlitos_Ctrl_Spine1
+      position: {x: -0, y: 0.0057568643, z: -0.0002730727}
+      rotation: {x: 3.8163916e-17, y: -1.0210957e-16, z: 4.237065e-18, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Carlitos_Ctrl_LeftShoulder
+      parentName: Carlitos_Ctrl_Spine2
+      position: {x: -0.011264061, y: 0.013085375, z: -0.0020312117}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Carlitos_Ctrl_LeftArm
+      parentName: Carlitos_Ctrl_LeftShoulder
+      position: {x: -0.00870969, y: -0.0031140803, z: 0}
+      rotation: {x: 0.000017404582, y: -0.0022854088, z: -0.007935266, w: 0.9999659}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Carlitos_Ctrl_LeftForeArm
+      parentName: Carlitos_Ctrl_LeftArm
+      position: {x: -0.019766917, y: 0, z: -2.220446e-18}
+      rotation: {x: -0.00012708151, y: 0.028158292, z: 0.00022080065, w: 0.99960345}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Carlitos_Ctrl_LeftHand
+      parentName: Carlitos_Ctrl_LeftForeArm
+      position: {x: -0.018628558, y: 0, z: -2.220446e-18}
+      rotation: {x: 0.00000029300452, y: -0.000030669427, z: -0.00000053919626, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Carlitos_Ctrl_RightShoulder
+      parentName: Carlitos_Ctrl_Spine2
+      position: {x: 0.011264061, y: 0.013085375, z: -0.0020312117}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Carlitos_Ctrl_RightArm
+      parentName: Carlitos_Ctrl_RightShoulder
+      position: {x: 0.00870969, y: -0.0031140803, z: 0}
+      rotation: {x: 0.000016789907, y: 0.0022889252, z: 0.007935116, w: 0.9999659}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Carlitos_Ctrl_RightForeArm
+      parentName: Carlitos_Ctrl_RightArm
+      position: {x: 0.019766917, y: 0, z: 0}
+      rotation: {x: -0.0001261103, y: -0.0281664, z: -0.00022077624, w: 0.9996032}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Carlitos_Ctrl_RightHand
+      parentName: Carlitos_Ctrl_RightForeArm
+      position: {x: 0.018628558, y: 0, z: 2.220446e-18}
+      rotation: {x: -0.000000092207, y: 0.000030597304, z: 0.0000002812496, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Carlitos_Ctrl_Neck
+      parentName: Carlitos_Ctrl_Spine2
+      position: {x: -0, y: 0.019215364, z: -0.0007643056}
+      rotation: {x: 6.565645e-17, y: -2.464866e-19, z: -1.1145598e-16, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Carlitos_Ctrl_Head
+      parentName: Carlitos_Ctrl_Neck
+      position: {x: 0.00011940297, y: 0.03139014, z: 0.000112455484}
+      rotation: {x: 3.061617e-17, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5

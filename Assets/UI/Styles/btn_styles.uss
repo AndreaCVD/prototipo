@@ -1,0 +1,85 @@
+.Btn {
+    width: 490px;
+    height: 90px;
+    background-color: rgb(130, 60, 30);
+    border-top-left-radius: 45px;
+    border-bottom-right-radius: 45px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-left-width: 6px;
+    border-right-width: 6px;
+    border-top-width: 4px;
+    border-bottom-width: 4px;
+    border-color: rgb(212, 175, 55);
+    border-bottom-color: rgb(43, 22, 3);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin: 20px;
+    transition-property: width, background-color, border-radius, border-color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out-cubic;
+    -unity-font-definition: url("project://database/Assets/Art/Fonts/AlegreyaSC-Regular.ttf?fileID=12800000&guid=6083d32f7625d6b4681c08f2b2f44f5f&type=3#AlegreyaSC-Regular");
+    border-left-color: rgb(43, 22, 3);
+    border-right-color: rgb(43, 22, 3);
+    border-top-color: rgb(43, 22, 3);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.Btn--collapsed {
+    width: 100px;
+    background-color: rgb(180, 80, 40);
+    border-color: rgb(255, 230, 150);
+    border-radius: 20px;
+}
+
+.text {
+    opacity: 1;
+    color: rgb(255, 255, 255);
+    -unity-font-style: bold;
+    font-size: 24px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+    transition-property: opacity;
+    transition-duration: 0.3s;
+}
+
+.text--hidden {
+    opacity: 0;
+    display: none;
+}
+
+.sign {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    transition-property: opacity, width, height;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+    align-self: center;
+}
+
+#start_btn .sign{
+    background-image: url("project://database/Assets/Art/Interface/Buttons/play_btn.png?fileID=2800000&guid=bbdea78ac75aefb43b655e54c023d0b9&type=3#play_btn");
+}
+
+#options_btn .sign{
+    background-image: url("project://database/Assets/Art/Interface/Buttons/play_btn.png?fileID=2800000&guid=bbdea78ac75aefb43b655e54c023d0b9&type=3#play_btn");
+}
+
+#exit_btn .sign{
+    background-image: url("project://database/Assets/Art/Interface/Buttons/play_btn.png?fileID=2800000&guid=bbdea78ac75aefb43b655e54c023d0b9&type=3#play_btn");
+}
+
+.sign--visible {
+    opacity: 1;
+    width: 40px;
+    height: 40px;
+    -unity-background-image-tint-color: rgb(0, 0, 0);
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.Btn:active {
+    background-color: rgb(255, 120, 60);
+    scale: 0.98;
+}

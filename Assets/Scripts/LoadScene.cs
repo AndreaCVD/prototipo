@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 public class LoadScene : MonoBehaviour
 {
     [Header("Degradado pantalla")]
@@ -19,10 +20,12 @@ public class LoadScene : MonoBehaviour
     //[SerializeField] Preload preload;
     string name_anterior;
     bool onCombat;
+
     private void Start()
     {
         onCombat = false;
     }
+
     void Update()
     {
         //pantalla tint

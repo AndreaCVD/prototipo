@@ -34,7 +34,7 @@ public class CommandPanel : MonoBehaviour
     public void Huir()
     {
         Debug.Log("Huir");
-        loadScene.ChangeScene("pruevas_prototipo");
+        loadScene.SalirCombate();
         //preload.cambiarEscena("pruevas_prototipo");
     }
 }

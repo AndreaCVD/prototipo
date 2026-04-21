@@ -100,6 +100,18 @@ public class LoadScene : MonoBehaviour
             SceneManager.LoadScene(name_anterior);
         }
     }
+    public void SalirCombate()//Salimos del combate
+    {
+        Scene escenaActual = SceneManager.GetActiveScene();
+
+        onCombat = false;
+        //si estamos en combate eliminar esta escena
+        //Sacamos la pausa del juego principal
+        escenaState.ScenePause(false); //false, se mueve
+        // Unload Scene
+        SceneManager.UnloadSceneAsync(escenaActual);
+
+    }
     public void Combat(/*GameObject enemyName*/)
     {
         if (!onCombat)
@@ -113,7 +125,7 @@ public class LoadScene : MonoBehaviour
 
             //preload.CombatOpponent(/*enemyName.name*/); //Pasem el nom
 
-            save_posicion.save_LastPos();
+            //save_posicion.save_LastPos();
             SceneManager.LoadScene("combate_pruevas", LoadSceneMode.Additive);
         }
 

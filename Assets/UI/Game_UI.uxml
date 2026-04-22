@@ -1,0 +1,27 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/Styles/ingame_elements.uss?fileID=7433441132597879392&amp;guid=62f2e575c0f60374f90bba03685be99b&amp;type=3#ingame_elements" />
+    <ui:VisualElement style="flex-grow: 1;">
+        <ui:VisualElement name="UI_elements" style="flex-grow: 1; position: absolute; width: 100%; height: 100%; flex-direction: row; margin-top: 0; margin-bottom: 0; margin-left: 0; margin-right: 0; padding-top: 20px; padding-left: 40px; padding-bottom: 20px; padding-right: 40px;">
+            <ui:VisualElement name="player_side" style="flex-grow: 1; width: 50%;">
+                <ui:VisualElement name="stats" style="flex-grow: 0; height: 50%; flex-direction: row; flex-wrap: wrap; flex-shrink: 0; margin-top: 0;">
+                    <ui:VisualElement name="FUE" class="stats" style="flex-grow: 0; flex-shrink: 0; background-image: url(&quot;project://database/Assets/Art/Interface/FUE.png?fileID=2800000&amp;guid=c9d7adfdf4a74854c8e9321fc29c505d&amp;type=3#FUE&quot;);">
+                        <ui:IntegerField value="42" class="fuente-personalizada" style="width: 100%; height: 100%; -unity-text-align: middle-center; padding-bottom: 0; padding-top: 40px;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="INT" class="stats" style="flex-grow: 0; flex-shrink: 0; background-image: url(&quot;project://database/Assets/Art/Interface/INT.png?fileID=2800000&amp;guid=78ba820918affd84fad598adb36ca18a&amp;type=3#INT&quot;);">
+                        <ui:IntegerField value="42" class="fuente-personalizada" style="width: 100%; height: 100%; -unity-text-align: middle-center; padding-bottom: 0; padding-top: 40px;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="CAR" class="stats" style="flex-grow: 0; flex-shrink: 0; background-image: url(&quot;project://database/Assets/Art/Interface/CAR.png?fileID=2800000&amp;guid=8ed7e79b10ff0be42a3f938d077ef3eb&amp;type=3#CAR&quot;);">
+                        <ui:IntegerField value="42" class="fuente-personalizada" style="width: 100%; height: 100%; -unity-text-align: middle-center; padding-bottom: 0; padding-top: 40px;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="heart" style="flex-grow: 1; height: 50%; flex-direction: column-reverse;">
+                    <ui:VisualElement name="int_life" class="heart" style="flex-grow: 0; flex-shrink: 0; background-image: url(&quot;project://database/Assets/Art/Interface/Vida-grafic.png?fileID=2800000&amp;guid=a72d0dc1a271e7c4d91c87b55152f2a9&amp;type=3#Vida-grafic&quot;); align-items: center; justify-content: center;">
+                        <ui:IntegerField value="42" class="fuente-personalizada" style="width: 100%; height: 100%; -unity-text-align: middle-center; padding-bottom: 20px;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="enemy_side" style="flex-grow: 1; width: 50%;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="game_window" style="flex-grow: 1;" />
+    </ui:VisualElement>
+</ui:UXML>

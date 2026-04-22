@@ -1,0 +1,21 @@
+.stats {
+    height: 200px;
+    width: 160px;
+    margin-right: 40px;
+}
+
+.heart {
+    height: 140px;
+    width: 160px;
+}
+
+#unity-text-input {
+    border-width: 0;
+    background-color: rgba(255, 255, 255, 0);
+    -unity-text-align: middle-center;
+    font-size: 60;
+}
+
+.fuente-personalizada #unity-text-input {
+    -unity-font-definition: url("project://database/Assets/UI/Fonts/Alegreya_Sans_SC/AlegreyaSansSC-Regular.ttf?fileID=12800000&guid=d6178a5cf8026f746b57e92d6b0e680f&type=3#AlegreyaSansSC-Regular");
+}

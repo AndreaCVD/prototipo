@@ -46,7 +46,8 @@ public class EmpujarObjetos : MonoBehaviour
             // Calcular nueva posición
             Vector3 nuevaPos = transform.position + direccion * distanciaCasilla;
 
-            // Comprobar si hay algo en la nueva posición
+            //Comprovar tmb si esta el final del puzzle, que se mueva igual
+            // Comprobar si hay algo en la nueva posición 
             if (!Physics.CheckBox(nuevaPos, Vector3.one * 0.4f))
             {
                 destino = nuevaPos;

@@ -28,7 +28,7 @@ public class btn_events : MonoBehaviour
             btn.RegisterCallback<ClickEvent>(evt => {
                 if (btn.name == "start_btn")
                 {
-                    ChangeSceneUI("pruevas_prototipo");
+                    ChangeSceneUI("first_floor");
 
                 }
                 else if(btn.name == "options_btn")

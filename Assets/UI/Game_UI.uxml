@@ -5,18 +5,18 @@
             <ui:VisualElement name="player_side" style="flex-grow: 1; width: 50%;">
                 <ui:VisualElement name="stats" style="flex-grow: 0; height: 50%; flex-direction: row; flex-wrap: wrap; flex-shrink: 0; margin-top: 0;">
                     <ui:VisualElement name="FUE" class="stats" style="flex-grow: 0; flex-shrink: 0; background-image: url(&quot;project://database/Assets/Art/Interface/FUE.png?fileID=2800000&amp;guid=c9d7adfdf4a74854c8e9321fc29c505d&amp;type=3#FUE&quot;);">
-                        <ui:IntegerField value="42" class="fuente-personalizada" style="width: 100%; height: 100%; -unity-text-align: middle-center; padding-bottom: 0; padding-top: 40px;" />
+                        <ui:IntegerField value="42" focusable="false" class="fuente-personalizada" style="width: 100%; height: 100%; -unity-text-align: middle-center; padding-bottom: 0; padding-top: 40px;" />
                     </ui:VisualElement>
                     <ui:VisualElement name="INT" class="stats" style="flex-grow: 0; flex-shrink: 0; background-image: url(&quot;project://database/Assets/Art/Interface/INT.png?fileID=2800000&amp;guid=78ba820918affd84fad598adb36ca18a&amp;type=3#INT&quot;);">
-                        <ui:IntegerField value="42" class="fuente-personalizada" style="width: 100%; height: 100%; -unity-text-align: middle-center; padding-bottom: 0; padding-top: 40px;" />
+                        <ui:IntegerField value="42" focusable="false" class="fuente-personalizada" style="width: 100%; height: 100%; -unity-text-align: middle-center; padding-bottom: 0; padding-top: 40px;" />
                     </ui:VisualElement>
                     <ui:VisualElement name="CAR" class="stats" style="flex-grow: 0; flex-shrink: 0; background-image: url(&quot;project://database/Assets/Art/Interface/CAR.png?fileID=2800000&amp;guid=8ed7e79b10ff0be42a3f938d077ef3eb&amp;type=3#CAR&quot;);">
-                        <ui:IntegerField value="42" class="fuente-personalizada" style="width: 100%; height: 100%; -unity-text-align: middle-center; padding-bottom: 0; padding-top: 40px;" />
+                        <ui:IntegerField value="42" focusable="false" class="fuente-personalizada" style="width: 100%; height: 100%; -unity-text-align: middle-center; padding-bottom: 0; padding-top: 40px;" />
                     </ui:VisualElement>
                 </ui:VisualElement>
                 <ui:VisualElement name="heart" style="flex-grow: 1; height: 50%; flex-direction: column-reverse;">
                     <ui:VisualElement name="int_life" class="heart" style="flex-grow: 0; flex-shrink: 0; background-image: url(&quot;project://database/Assets/Art/Interface/Vida-grafic.png?fileID=2800000&amp;guid=a72d0dc1a271e7c4d91c87b55152f2a9&amp;type=3#Vida-grafic&quot;); align-items: center; justify-content: center;">
-                        <ui:IntegerField value="42" class="fuente-personalizada" style="width: 100%; height: 100%; -unity-text-align: middle-center; padding-bottom: 20px;" />
+                        <ui:IntegerField value="42" focusable="false" class="fuente-personalizada" style="width: 100%; height: 100%; -unity-text-align: middle-center; padding-bottom: 20px;" />
                     </ui:VisualElement>
                 </ui:VisualElement>
             </ui:VisualElement>

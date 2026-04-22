@@ -1,5 +1,6 @@
-using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UIElements;
 
 public class CommandPanel : MonoBehaviour
 {
@@ -12,11 +13,44 @@ public class CommandPanel : MonoBehaviour
     int espada = 6;
     int conjuro = 12;
 
+    [SerializeField] UIDocument uIDocument;
+    private VisualElement root;
+
+    void Start()
+    {
+        uIDocument = GetComponent<UIDocument>();
+        root = uIDocument.rootVisualElement;
+        List<VisualElement> allButtons = root.Query<VisualElement>(className: "combat_btns").ToList();
+
+        foreach (VisualElement btn in allButtons)
+        {
+
+            btn.RegisterCallback<ClickEvent>(evt => {
+                if (btn.name == "opt_fue")
+                {
+                    Fuerza();
+                }
+                else if (btn.name == "opt_int")
+                {
+                    Intel();
+                }
+                else if (btn.name == "opt_car")
+                {
+                    Carisma();
+                }
+                else if (btn.name == "opt_run")
+                {
+                    Huir();
+                }
+            });
+        }
+    }
+
     //Boton Fuerza, se dice a command manager
     public void Fuerza()
     {
         commandManager.Fuerza();
-        //Debug.Log("El ataque de fuerza ha acabo");
+        Debug.Log("El ataque de fuerza ha acabo");
     }
     //Boton Inteligencia
     public void Intel()

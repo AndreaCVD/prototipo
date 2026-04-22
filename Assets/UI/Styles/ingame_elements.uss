@@ -1,3 +1,4 @@
+@import url("project://database/Assets/UI/Styles/general_colors.uss?fileID=7433441132597879392&guid=ad6a76f9ae4c3674d898b1a5433c7bf6&type=3#general_colors");
 .stats {
     height: 200px;
     width: 160px;
@@ -13,9 +14,48 @@
     border-width: 0;
     background-color: rgba(255, 255, 255, 0);
     -unity-text-align: middle-center;
-    font-size: 60;
+    font-size: 60px;
+    color: var(--color-antique-white);
+    -unity-font-definition: var(--font-buttons);
 }
 
 .fuente-personalizada #unity-text-input {
-    -unity-font-definition: url("project://database/Assets/UI/Fonts/Alegreya_Sans_SC/AlegreyaSansSC-Regular.ttf?fileID=12800000&guid=d6178a5cf8026f746b57e92d6b0e680f&type=3#AlegreyaSansSC-Regular");
+    -unity-font-definition: var(--font-buttons);
+}
+
+.combat_btns {
+    width: 400px;
+    height: 100px;
+    background-color: var(--combat-primary);
+    border-width: 4px;
+    border-color: var(--combat-primary);
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    color: var(--combat-text-normal);
+    font-size: 24px;
+    -unity-font-style: bold;
+    margin-top: 20px;
+    transition-property: background-color, color, top, left, border-width;
+    transition-duration: 0.2s;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.combat_btns:hover {
+    background-color: var(--combat-hover-bg);
+    color: var(--combat-hover-text);
+    top: -6px;
+    left: -6px;
+    border-right-width: 10px;
+    border-bottom-width: 10px;
+    border-left-width: 4px;
+    border-top-width: 4px;
+}
+
+.combat_btns:active {
+    top: 0;
+    left: 0;
+    border-width: 4px;
 }

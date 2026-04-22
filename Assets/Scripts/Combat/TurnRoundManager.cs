@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 public class TurnRoundManager : MonoBehaviour
 {
@@ -10,6 +11,11 @@ public class TurnRoundManager : MonoBehaviour
     [SerializeField] CanvasGroup grup;
     //Textos
     [SerializeField] TMP_Text turnoTexto;
+
+    //UI
+    [SerializeField] UIDocument uIDocument;
+    private VisualElement root;
+    VisualElement combat_options;
 
     //variable de combat monster
     public CombatMonster current;
@@ -23,6 +29,33 @@ public class TurnRoundManager : MonoBehaviour
 
     //NPC
     [SerializeField] NPCAction npcTurn;
+
+    private void OnEnable()
+    {
+        // 1. Usar la variable serializada 'uIDocument' que ya tienes declarada arriba
+        // en lugar de intentar un GetComponent que puede fallar.
+        if (uIDocument == null)
+        {
+            uIDocument = GetComponent<UIDocument>();
+        }
+
+        // 2. Verificación de seguridad
+        if (uIDocument != null && uIDocument.rootVisualElement != null)
+        {
+            root = uIDocument.rootVisualElement;
+            combat_options = root.Q<VisualElement>("combat_options");
+
+            if (combat_options == null)
+            {
+                Debug.LogWarning("No se encontró el elemento 'combat_options' en el UXML.");
+            }
+        }
+        else
+        {
+            Debug.LogError("TurnRoundManager: No hay un UIDocument asignado o el root está vacío.");
+        }
+    }
+
     private void Start()
     {
 
@@ -45,6 +78,8 @@ public class TurnRoundManager : MonoBehaviour
  
     public void ChangeTurn()
     {
+
+
         Debug.Log("CAMBIO TURNO");
         //si es el turno del prota, se cambia al enemigo
         if ( current == Manager.playerPersonaje)
@@ -55,13 +90,15 @@ public class TurnRoundManager : MonoBehaviour
             current = Manager.enemyPersonaje;
             target = Manager.playerPersonaje;
            
-            Debug.Log("AtacantE = " + current);
-            Debug.Log("Objetivo = " + target);
+            //Debug.Log("AtacantE = " + current);
+            //Debug.Log("Objetivo = " + target);
+
             //Animacion
             anim.SetBool("TurnProta", false);
             anim.SetBool("TurnEnemy", true);
 
-
+            //Ocultar el menu de combate
+            combat_options.style.display = DisplayStyle.None;
 
         }
         //si es turno del enemigo, se cambia al prota
@@ -73,13 +110,17 @@ public class TurnRoundManager : MonoBehaviour
             current = Manager.playerPersonaje;
             target = Manager.enemyPersonaje;
 
-            Debug.Log("Atacante = " + current);
-            Debug.Log("Objetivo = " + target);
+            //Debug.Log("Atacante = " + current);
+            //Debug.Log("Objetivo = " + target);
+
             //Animacion
             anim.SetBool("TurnProta", true);
             anim.SetBool("TurnEnemy", false);
             //Accion NPC, NO METER AQUI DA FALLOS
             //npcTurn.DoAction();
+
+            //Mostrar el menu de las opciones de combate
+            combat_options.style.display = DisplayStyle.Flex;
 
         }
     }

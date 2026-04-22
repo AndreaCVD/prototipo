@@ -25,5 +25,5 @@ MonoBehaviour:
       stats: 3
     - value: 6
       stats: 4
-  modelPrefab: {fileID: 1020682024789459226, guid: 45ae0625c9b1c37438adf7660dc32968, type: 3}
+  modelPrefab: {fileID: 6902702733525548753, guid: 72ba70447d044094c8668fff4b0afd52, type: 3}
   art: {fileID: 21300000, guid: 957bca12a87790740a6ec033d64d4b65, type: 3}

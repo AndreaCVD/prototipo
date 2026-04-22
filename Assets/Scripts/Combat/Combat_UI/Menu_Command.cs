@@ -21,7 +21,8 @@ public class Menu_Command : MonoBehaviour
     [SerializeField] TMP_Text text_cari;
     [SerializeField] TMP_Text text_const;
 
-    private string h;
+    private string h = "enemyData.stats.Get(PersonajesStats.Constitucion).ToString()";
+
     private void Start()
     {
         info_enemy = GetComponent<CombatDebug>();
@@ -35,7 +36,7 @@ public class Menu_Command : MonoBehaviour
         int f = enemyData.stats.Get(PersonajesStats.Fuerza);
         int i = enemyData.stats.Get(PersonajesStats.Inteligencia);
         int c = enemyData.stats.Get(PersonajesStats.Carisma);
-        h = enemyData.stats.Get(PersonajesStats.Constitucion).ToString();
+ 
         SetFuerza();
         SetIntel();
         SetCarisma();
@@ -90,7 +91,7 @@ public class Menu_Command : MonoBehaviour
     void SetConstitucion(/*string text*/)
     {
         text_const.text = enemyData.stats.Get(PersonajesStats.Constitucion).ToString();
-        h = enemyData.stats.Get(PersonajesStats.Constitucion).ToString();
+        //h = enemyData.stats.Get(PersonajesStats.Constitucion).ToString();
     }
 
 

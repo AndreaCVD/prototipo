@@ -17,7 +17,7 @@ public class centro_view : MonoBehaviour
     [SerializeField] TMP_Text carisma;
     [SerializeField] TMP_Text constitucion;
 
-    private string h;
+    private string h = "protagonista.stats.Get(PersonajesStats.Constitucion).ToString()";
     void Awake()
     {
         //protagonista.stats.values[3].value = 12;
@@ -30,7 +30,7 @@ public class centro_view : MonoBehaviour
         int f = protagonista.stats.Get(PersonajesStats.Fuerza);
         int i = protagonista.stats.Get(PersonajesStats.Inteligencia);
         int c = protagonista.stats.Get(PersonajesStats.Carisma);
-        h = protagonista.stats.Get(PersonajesStats.Constitucion).ToString();
+        //h = protagonista.stats.Get(PersonajesStats.Constitucion).ToString();
         //int h = protagonista.stats.Get(PersonajesStats.Constitucion);
 
         if (f > 0) //positivo

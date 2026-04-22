@@ -123,6 +123,7 @@ public class CombatMonster : MonoBehaviour
         if (HP.current <= 0)
         {
             HP.current = 0;
+            player.stats.values[3].value = 0;
             Debug.Log("Derrotado : " + player.namePers);
             //Si es el prota es GAMEOVER
             if (player.namePers == "Prota")

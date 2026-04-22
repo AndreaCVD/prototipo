@@ -49,20 +49,33 @@ public class NPCAction : MonoBehaviour
         //    }
         //}
         //[Random.Range(0,5)
-        int random = Random.Range(0, 4);
-        //3 posibilidades de 5 de usar esta
-        if ( fuerza > intel && fuerza > carisma && random%2 == 0)//Si Fuerza es lo mejor
+        int random = Random.Range(0, 2);
+        if (random == 0)
         {
             return 'f';
         }
-        else if ( intel > carisma && random % 2 == 0)//Si Inteligencia es lo mejor
+        else if (random == 1)
         {
             return 'i';
         }
-        else//Si Carisma es lo mejor
+        else
         {
             return 'c';
         }
+        //Si Fuerza es lo mejor
+        //3 posibilidades de 5 de usar esta
+        //if ( fuerza > intel && fuerza > carisma && random%2 == 0)//Si Fuerza es lo mejor
+        //{
+        //    return 'f';
+        //}
+        //else if ( intel > carisma && random % 2 == 0)//Si Inteligencia es lo mejor
+        //{
+        //    return 'i';
+        //}
+        //else//Si Carisma es lo mejor
+        //{
+        //    return 'c';
+        //}
     }
     IEnumerator EsperarYContinuar(float segundos)
     {

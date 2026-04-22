@@ -33,7 +33,7 @@ public class CommandManager : MonoBehaviour
         int aux = lanzarDado(20);
 
         //Acción
-        turnRoundManager.current.Inteligencia(turnRoundManager.target);
+        turnRoundManager.current.Inteligencia(turnRoundManager.target, aux);
 
 
         NextTurn();
@@ -46,7 +46,7 @@ public class CommandManager : MonoBehaviour
         int aux = lanzarDado(20);
 
         //Acción
-        turnRoundManager.current.Carisma(turnRoundManager.target);
+        turnRoundManager.current.Carisma(turnRoundManager.target, aux);
 
         NextTurn();
     }

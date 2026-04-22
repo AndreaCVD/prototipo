@@ -103,13 +103,16 @@ public class LoadScene : MonoBehaviour
     public void SalirCombate()//Salimos del combate
     {
         Scene escenaActual = SceneManager.GetActiveScene();
-
-        onCombat = false;
-        //si estamos en combate eliminar esta escena
-        //Sacamos la pausa del juego principal
-        escenaState.ScenePause(false); //false, se mueve
-        // Unload Scene
-        SceneManager.UnloadSceneAsync(escenaActual);
+        if (escenaActual.name == "combate_pruevas")
+        {
+            Debug.Log("Salimos de combate");
+            onCombat = false;
+            //si estamos en combate eliminar esta escena
+            //Sacamos la pausa del juego principal
+            escenaState.ScenePause(false); //false, se mueve
+                                           // Unload Scene
+            SceneManager.UnloadSceneAsync(escenaActual);
+        }
 
     }
     public void Combat(/*GameObject enemyName*/)

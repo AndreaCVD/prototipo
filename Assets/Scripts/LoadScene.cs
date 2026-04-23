@@ -17,6 +17,8 @@ public class LoadScene : MonoBehaviour
     [Header("Preparar el combate")]
     [SerializeField] Preload preload;
 
+    [SerializeField] crear_obj destroyObjs;
+
     //[SerializeField] Preload preload;
     string name_anterior;
     bool onCombat;
@@ -55,6 +57,12 @@ public class LoadScene : MonoBehaviour
         //{
         //    preload = GetComponent<Preload>();
         //}
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            destroyObjs.destroyAll();
+            ChangeScene("Start_MainMenu");
+        }
     }
 
     public void ChangeScene(string sceneName) //Anar a una escena en especific
@@ -137,6 +145,8 @@ public class LoadScene : MonoBehaviour
         //if (sceneName == "combate_pruevas"){ }
         SceneManager.LoadScene("GameOver");
     }
+
+
     //private void Position()
     //{
     //    Vector3 pos = protagonista.transform.position;

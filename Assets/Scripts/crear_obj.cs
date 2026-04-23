@@ -27,4 +27,17 @@ public class crear_obj : MonoBehaviour
         }
 
     }
+
+    public void destroyAll()
+    {
+        GameObject preloadObj = GameObject.Find("--Preload--");
+        Destroy(preloadObj);
+
+        GameObject playerObj = GameObject.Find("Player Character");
+        Destroy(playerObj);
+
+        GameObject sceneMObj = GameObject.Find("--SceneManagement--");
+        Destroy(sceneMObj);
+
+    }
 }

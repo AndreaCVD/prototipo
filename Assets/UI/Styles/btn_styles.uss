@@ -1,86 +1,58 @@
+@import url("project://database/Assets/UI/Styles/general_colors.uss?fileID=7433441132597879392&guid=ad6a76f9ae4c3674d898b1a5433c7bf6&type=3#general_colors");
+
 .Btn {
     width: 490px;
     height: 90px;
-    background-color: rgb(130, 60, 30);
+    margin: 20px;
+    padding: 4px;
+    background-color: var(--color-black);
+    border-width: 2px;
+    border-color: var(--color-antique-white);
+    border-radius: 12px;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+    transition-property: scale;
+    transition-duration: 0.2s;
+}
+
+.text {
+    width: 95%;
+    height: 80%;
+    background-color: var(--color-antique-white);
+    color: var(--color-black);
     border-top-left-radius: 45px;
     border-bottom-right-radius: 45px;
     border-top-right-radius: 5px;
     border-bottom-left-radius: 5px;
-    border-left-width: 6px;
-    border-right-width: 6px;
-    border-top-width: 4px;
-    border-bottom-width: 4px;
-    border-color: rgb(212, 175, 55);
-    border-bottom-color: rgb(43, 22, 3);
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    margin: 20px;
-    transition-property: width, background-color, border-radius, border-color;
-    transition-duration: 0.3s;
-    transition-timing-function: ease-out-cubic;
-    -unity-font-definition: url('project://database/Assets/Art/Fonts/AlegreyaSC-Regular.ttf?fileID=12800000&guid=6083d32f7625d6b4681c08f2b2f44f5f&type=3#AlegreyaSC-Regular');
-    border-left-color: rgb(43, 22, 3);
-    border-right-color: rgb(43, 22, 3);
-    border-top-color: rgb(43, 22, 3);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
-}
-
-.Btn--collapsed {
-    width: 100px;
-    background-color: rgb(180, 80, 40);
-    border-color: rgb(255, 230, 150);
-    border-radius: 20px;
-}
-
-.text {
-    opacity: 1;
-    color: rgb(255, 255, 255);
+    border-width: 2px;
+    border-color: var(--color-antique-white);
+    border-bottom-width: 10px;
+    border-bottom-color: var(--color-white);
+    position: relative;
+    bottom: 8px;
     -unity-font-style: bold;
-    font-size: 64px;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
-    transition-property: opacity;
-    transition-duration: 0.3s;
-    -unity-font-definition: url("project://database/Assets/UI/Fonts/Alegreya_Sans_SC/AlegreyaSansSC-Regular.ttf?fileID=12800000&guid=d6178a5cf8026f746b57e92d6b0e680f&type=3#AlegreyaSansSC-Regular");
+    font-size: 40px;
+    -unity-text-align: middle-center;
+    -unity-font-definition: var(--font-regular);
+    transition-property: bottom, border-bottom-width, background-color;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-out-cubic;
 }
 
-.text--hidden {
-    opacity: 0;
-    display: none;
-}
-
-.sign {
-    opacity: 0;
-    width: 0;
-    height: 0;
-    transition-property: opacity, width, height;
-    transition-duration: 0.3s;
-    transition-timing-function: ease-out;
-    align-self: center;
-}
-
-#start_btn .sign {
-    background-image: url("project://database/Assets/Art/Interface/Buttons/play_btn.png?fileID=2800000&guid=bbdea78ac75aefb43b655e54c023d0b9&type=3#play_btn");
-}
-
-#options_btn .sign {
-    background-image: url("project://database/Assets/Art/Interface/Buttons/play_btn.png?fileID=2800000&guid=bbdea78ac75aefb43b655e54c023d0b9&type=3#play_btn");
-}
-
-#exit_btn .sign {
-    background-image: url("project://database/Assets/Art/Interface/Buttons/play_btn.png?fileID=2800000&guid=bbdea78ac75aefb43b655e54c023d0b9&type=3#play_btn");
-}
-
-.sign--visible {
-    opacity: 1;
-    width: 40px;
-    height: 40px;
-    -unity-background-image-tint-color: rgb(0, 0, 0);
-    -unity-background-scale-mode: scale-to-fit;
+.Btn:hover .text {
+    bottom: -2px;
+    border-bottom-width: 2px;
+    background-color: var(--color-warm-tan);
+    border-color: var(--color-warm-tan);
+    color: var(--color-antique-white);
 }
 
 .Btn:active {
-    background-color: rgb(255, 120, 60);
-    scale: 0.98;
+    scale: 0.96;
+}
+
+#turno{
+    -unity-font-definition: var(--font-regular);
+    font-size: 60px;
 }

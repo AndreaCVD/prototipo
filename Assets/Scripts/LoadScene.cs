@@ -60,7 +60,7 @@ public class LoadScene : MonoBehaviour
     public void ChangeScene(string sceneName) //Anar a una escena en especific
     {
         Scene escenaActual = SceneManager.GetActiveScene();
-        if (escenaActual.name == "combate_pruevas")
+        if (escenaActual.name == "combat_scene")
         {
             //si estamos en combate eliminar esta escena
             //Sacamos la pausa del juego principal
@@ -81,7 +81,7 @@ public class LoadScene : MonoBehaviour
     public void EscenaAnterior()//Tornar a una escena anterior
     {
         Scene escenaActual = SceneManager.GetActiveScene();
-        if (escenaActual.name == "combate_pruevas")
+        if (escenaActual.name == "combat_scene")
         {
             onCombat = false;
             //si estamos en combate eliminar esta escena
@@ -108,7 +108,7 @@ public class LoadScene : MonoBehaviour
             //Sacamos la pausa del juego principal
             escenaState.ScenePause(false); //false, se mueve
             // Unload Scene
-            SceneManager.UnloadSceneAsync("combate_pruevas");
+            SceneManager.UnloadSceneAsync("combat_scene");
     }
     public void Combat(/*GameObject enemyName*/)
     {
@@ -124,7 +124,7 @@ public class LoadScene : MonoBehaviour
             //preload.CombatOpponent(/*enemyName.name*/); //Pasem el nom
 
             //save_posicion.save_LastPos();
-            SceneManager.LoadScene("combate_pruevas", LoadSceneMode.Additive);
+            SceneManager.LoadScene("combat_scene", LoadSceneMode.Additive);
         }
 
     }

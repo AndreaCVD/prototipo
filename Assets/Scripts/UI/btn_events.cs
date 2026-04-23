@@ -18,18 +18,11 @@ public class btn_events : MonoBehaviour
 
         foreach (VisualElement btn in allButtons)
         {
-            VisualElement sign = btn.Q(className: "sign");
-            VisualElement text = btn.Q(className: "text");
-
-            // Registramos las funciones que tienes abajo
-            btn.RegisterCallback<MouseEnterEvent>(evt => OnEnter(btn, sign, text));
-            btn.RegisterCallback<MouseLeaveEvent>(evt => OnLeave(btn, sign, text));
 
             btn.RegisterCallback<ClickEvent>(evt => {
                 if (btn.name == "start_btn")
                 {
-                    ChangeSceneUI("pruevas_prototipo");
-
+                    ChangeSceneUI("first_floor");
                 }
                 else if(btn.name == "options_btn")
                 {
@@ -45,20 +38,6 @@ public class btn_events : MonoBehaviour
                 }
             });
         }
-    }
-
-    private void OnEnter(VisualElement btn, VisualElement sign, VisualElement text)
-    {
-        btn.AddToClassList("Btn--collapsed");
-        sign?.AddToClassList("sign--visible");
-        text?.AddToClassList("text--hidden");
-    }
-
-    private void OnLeave(VisualElement btn, VisualElement sign, VisualElement text)
-    {
-        btn.RemoveFromClassList("Btn--collapsed");
-        sign?.RemoveFromClassList("sign--visible");
-        text?.RemoveFromClassList("text--hidden");
     }
 
     public void ChangeSceneUI(string sceneName)

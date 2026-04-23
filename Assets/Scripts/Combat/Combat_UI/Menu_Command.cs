@@ -1,8 +1,10 @@
 using System;
 using System.Collections.Generic;
+using System.Reflection;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
 public class Menu_Command : MonoBehaviour
 {
     //Canvas
@@ -21,50 +23,49 @@ public class Menu_Command : MonoBehaviour
     [SerializeField] TMP_Text text_cari;
     [SerializeField] TMP_Text text_const;
 
-    private string h = "enemyData.stats.Get(PersonajesStats.Constitucion).ToString()";
+    //UI
+    [SerializeField] UIDocument uIDocument;
+    private VisualElement root;
+    private IntegerField enemyConst;
+
+    private void OnEnable()
+    {
+        var uiDocument = GetComponent<UIDocument>();
+        root = uIDocument.rootVisualElement;
+
+        //enemyConst = root.Q("int_enemy_life").Q<IntegerField>();
+        enemyConst = root.Q("int_life").Q<IntegerField>();
+    }
 
     private void Start()
     {
-        info_enemy = GetComponent<CombatDebug>();
-        //canvas_acciones = GetComponent<CanvasGroup>();
-        //Seteamos  opacidad
-        //opacidad(0f);
-
         //iniciamos las stats del enemigo
-        //Encontrar el script y las datas
+        //encontrar el script y las datas
+        info_enemy = GetComponent<CombatDebug>();
         enemyData = info_enemy.ReturnEnemy();
-        int f = enemyData.stats.Get(PersonajesStats.Fuerza);
-        int i = enemyData.stats.Get(PersonajesStats.Inteligencia);
-        int c = enemyData.stats.Get(PersonajesStats.Carisma);
+
+        enemyData = info_enemy.ReturnEnemy();
+        //int f = enemyData.stats.Get(PersonajesStats.Fuerza);
+        //int i = enemyData.stats.Get(PersonajesStats.Inteligencia);
+        //int c = enemyData.stats.Get(PersonajesStats.Carisma);
  
-        SetFuerza();
-        SetIntel();
-        SetCarisma();
-        text_name.text = enemyData.namePers;
-        //if (f > 0) //positivo
-        //{
-        //    SetFuerza("+");
-        //}
-        //else { SetFuerza("-"); } //negativo
-        //if (i > 0) //positivo
-        //{
-        //    SetIntel("+");
-        //}
-        //else { SetIntel("-"); } //negativo     
-        //if (c > 0) //positivo
-        //{
-        //    SetCarisma("+");
-        //}
-        //else { SetCarisma("-"); } //negativo
+        //SetFuerza();
+        //SetIntel();
+        //SetCarisma();
+        //text_name.text = enemyData.namePers;
+
     }
     void Update()
     {
-        //actualizar la constitucion del enemigo
-        if (text_const.text != h)
+
+        int aux = enemyData.stats.Get(PersonajesStats.Constitucion);
+        if (enemyConst.value != aux)
         {
-            SetConstitucion();
+            SetConstitucion(aux);
         }
+
     }
+
     //Aqui se reciben las nuevas opacidades
     public void opacidad(float nueva_opacidad)
     {
@@ -72,26 +73,30 @@ public class Menu_Command : MonoBehaviour
         // 1 == se ve
         canvas_acciones.alpha = Mathf.Lerp(0f, nueva_opacidad, 5f);
     }
-    void SetFuerza(/*string text*/)
-    {
-        text_fuerza.text = enemyData.stats.Get(PersonajesStats.Fuerza).ToString();
-        //inteligencia.text = protagonista.stats.Get(PersonajesStats.Inteligencia).ToString();
-        //constitucion.text = protagonista.stats.Get(PersonajesStats.Constitucion).ToString();
 
-    }
-    void SetIntel(/*string text*/)
-    {
-        text_intel.text = enemyData.stats.Get(PersonajesStats.Inteligencia).ToString();
+    //void SetFuerza(/*string text*/)
+    //{
+    //    text_fuerza.text = enemyData.stats.Get(PersonajesStats.Fuerza).ToString();
+    //    //inteligencia.text = protagonista.stats.Get(PersonajesStats.Inteligencia).ToString();
+    //    //constitucion.text = protagonista.stats.Get(PersonajesStats.Constitucion).ToString();
 
-    }
-    void SetCarisma(/*string text*/)
+    //}
+    //void SetIntel(/*string text*/)
+    //{
+    //    text_intel.text = enemyData.stats.Get(PersonajesStats.Inteligencia).ToString();
+
+    //}
+    //void SetCarisma(/*string text*/)
+    //{
+    //    text_cari.text = enemyData.stats.Get(PersonajesStats.Carisma).ToString();
+    //}
+
+    void SetConstitucion(int num)
     {
-        text_cari.text = enemyData.stats.Get(PersonajesStats.Carisma).ToString();
-    }
-    void SetConstitucion(/*string text*/)
-    {
-        text_const.text = enemyData.stats.Get(PersonajesStats.Constitucion).ToString();
-        //h = enemyData.stats.Get(PersonajesStats.Constitucion).ToString();
+
+        enemyConst.value = num;
+
+        //text_const.text = enemyData.stats.Get(PersonajesStats.Constitucion).ToString();
     }
 
 

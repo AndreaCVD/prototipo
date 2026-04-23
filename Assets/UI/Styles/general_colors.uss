@@ -15,5 +15,13 @@
     --combat-hover-text: var(--color-antique-white);
     --combat-text-normal: var(--color-antique-white);
 
+    /* Options buttons */
+    --options-primary: var(--color-burnt-sienna);
+    --options-hover-bg: var(--color-deep-earth);
+    --options-hover-text: var(--color-antique-white);
+    --options-text-normal: var(--color-antique-white);
+
+    /*Fonts*/
     --font-buttons: url("project://database/Assets/UI/Fonts/Alegreya_Sans_SC/AlegreyaSansSC-Bold.ttf?fileID=12800000&guid=3dd824cdb4f3e3b45a1d07d43edcfa14&type=3#AlegreyaSansSC-Bold");
+    --font-regular: url("project://database/Assets/UI/Fonts/Alegreya_Sans_SC/AlegreyaSansSC-Regular.ttf?fileID=12800000&guid=d6178a5cf8026f746b57e92d6b0e680f&type=3#AlegreyaSansSC-Regular");
 }

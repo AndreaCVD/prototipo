@@ -15,12 +15,13 @@ public class CommandPanel : MonoBehaviour
 
     [SerializeField] UIDocument uIDocument;
     private VisualElement root;
+    List<VisualElement> allButtons;
 
     void Start()
     {
         uIDocument = GetComponent<UIDocument>();
         root = uIDocument.rootVisualElement;
-        List<VisualElement> allButtons = root.Query<VisualElement>(className: "combat_btns").ToList();
+        allButtons = root.Query<VisualElement>(className: "combat_btns").ToList();
 
         foreach (VisualElement btn in allButtons)
         {
@@ -41,6 +42,14 @@ public class CommandPanel : MonoBehaviour
                 else if (btn.name == "opt_run")
                 {
                     Huir();
+                }
+                else if (btn.name == "opt_attack")
+                {
+                    changeMenu("Attack");
+                }
+                else if (btn.name == "opt_goBack")
+                {
+                    changeMenu("Initial");
                 }
             });
         }
@@ -70,5 +79,29 @@ public class CommandPanel : MonoBehaviour
         Debug.Log("Huir");
         loadScene.SalirCombate();
         //preload.cambiarEscena("pruevas_prototipo");
+    }
+    public void changeMenu(string menuType)
+    {
+        foreach (VisualElement btn in allButtons)
+        {
+            switch (menuType)
+            {
+                case "Initial":
+                    // En el menú inicial solo vemos Ataque y Huir
+                    if (btn.name == "opt_attack" || btn.name == "opt_run")
+                        btn.style.display = DisplayStyle.Flex;
+                    else
+                        btn.style.display = DisplayStyle.None;
+                    break;
+
+                case "Attack":
+                    // En el menú de ataque vemos los ataques
+                    if (btn.name == "opt_attack" || btn.name == "opt_run")
+                        btn.style.display = DisplayStyle.None;
+                    else
+                        btn.style.display = DisplayStyle.Flex;
+                    break;
+            }
+        }
     }
 }

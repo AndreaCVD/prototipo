@@ -16,6 +16,7 @@ public class TurnRoundManager : MonoBehaviour
     [SerializeField] UIDocument uIDocument;
     private VisualElement root;
     VisualElement combat_options;
+    Label turno;
 
     //variable de combat monster
     public CombatMonster current;
@@ -44,6 +45,7 @@ public class TurnRoundManager : MonoBehaviour
         {
             root = uIDocument.rootVisualElement;
             combat_options = root.Q<VisualElement>("combat_options");
+            turno = root.Q<Label>("turno");
 
             if (combat_options == null)
             {
@@ -62,12 +64,18 @@ public class TurnRoundManager : MonoBehaviour
         //cuando current == prota, es nuestro turno
         current = Manager.playerPersonaje;
         target = Manager.enemyPersonaje;
-        Debug.Log("Atacante = " + current);
-        Debug.Log("Objetivo = " + target);
+
+        //Debug.Log("Atacante = " + current);
+        //Debug.Log("Objetivo = " + target);
+        
         anim.SetBool("TurnProta", true);
         anim.SetBool("TurnEnemy", false);
-        menu_acciones.opacidad(1f);        
-        turnoTexto.text = "Es turno de: " + current;
+
+        //menu_acciones.opacidad(1f);
+
+        turno.text = "Es turno de: " + current;
+
+        //turnoTexto.text = "Es turno de: " + current;
         //if (anim == null)
         //{
         //    //canvas_animado = GameObject.Find("Personajes_Canvas");
@@ -84,8 +92,12 @@ public class TurnRoundManager : MonoBehaviour
         //si es el turno del prota, se cambia al enemigo
         if ( current == Manager.playerPersonaje)
         {
-            turnoTexto.text = "Es turno de: Enemigo";
-            menu_acciones.opacidad(0f);
+
+            turno.text = "Es turno de: Enemigo";
+
+            //turnoTexto.text = "Es turno de: Enemigo";
+            //menu_acciones.opacidad(0f);
+
             //Cambiar current y target
             current = Manager.enemyPersonaje;
             target = Manager.playerPersonaje;
@@ -104,8 +116,11 @@ public class TurnRoundManager : MonoBehaviour
         //si es turno del enemigo, se cambia al prota
         else if (current == Manager.enemyPersonaje)
         {
-            turnoTexto.text = "Es turno de: Prota";
-            menu_acciones.opacidad(1f);
+            turno.text = "Es turno de: Prota";
+
+            //turnoTexto.text = "Es turno de: Prota";
+            //menu_acciones.opacidad(1f);
+
             //Cambiar current y target
             current = Manager.playerPersonaje;
             target = Manager.enemyPersonaje;
@@ -129,7 +144,7 @@ public class TurnRoundManager : MonoBehaviour
         //Si es el turno del Enemigo, hacemos que actue solo
         if (current == Manager.enemyPersonaje)
         {
-            Debug.Log("------AHORA ATCATA EL ENEMIGO-----");
+            //Debug.Log("------AHORA ATCATA EL ENEMIGO-----");
             npcTurn.DoAction();
         }
     }

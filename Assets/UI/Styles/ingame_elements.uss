@@ -24,17 +24,14 @@
 }
 
 .combat_btns {
-    width: 400px;
-    height: 100px;
-    background-color: var(--combat-primary);
+    width: 300px;
+    height: 80px;
     border-width: 4px;
-    border-color: var(--combat-primary);
     border-radius: 10px;
     justify-content: center;
     align-items: center;
-    color: var(--combat-text-normal);
-    font-size: 24px;
-    -unity-font-style: bold;
+    font-size: 40px;
+    -unity-font-definition: var(--font-regular);
     margin-top: 20px;
     transition-property: background-color, color, top, left, border-width;
     transition-duration: 0.2s;
@@ -44,8 +41,6 @@
 }
 
 .combat_btns:hover {
-    background-color: var(--combat-hover-bg);
-    color: var(--combat-hover-text);
     top: -6px;
     left: -6px;
     border-right-width: 10px;
@@ -58,4 +53,31 @@
     top: 0;
     left: 0;
     border-width: 4px;
+}
+
+#turno {
+    font-size: 60px;
+    -unity-font-definition: var(--font-buttons);
+}
+
+.option_btn_color {
+    background-color: var(--options-primary);
+    border-color: var(--options-primary);
+    color: var(--options-text-normal);
+}
+
+.option_btn_color:hover {
+    background-color: var(--options-hover-bg);
+    color: var(--options-hover-text);
+}
+
+.combat_btn_color {
+    background-color: var(--combat-primary);
+    border-color: var(--combat-primary);
+    color: var(--combat-text-normal);
+}
+
+.combat_btn_color:hover {
+    background-color: var(--combat-hover-bg);
+    color: var(--combat-hover-text);
 }

@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/first_floor.unity
     guid: 7d1679dbd444d0f45923431d7812a08a
   - enabled: 1
+    path: Assets/Scenes/combat_scene.unity
+    guid: 7b59625fafe258a44802b7066431c748
+  - enabled: 1
     path: Assets/Scenes/combate_pruevas.unity
     guid: 7f3f975d67e5bef4d9ac8db85b779ebe
   - enabled: 1

@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Dialogo Prueva Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Dialogo Prueva
+  m_TableCollectionNameGuidString: bfa41515759b64a4bbfd0fa683c6097d
+  m_Entries:
+  - m_Id: 8844743077888
+    m_Key: text key
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8844772438016
+    m_Key: NombreID
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8844772438017
+    m_Key: Answer_abdac563-656b-4389-88c7-e42c59b0b31c
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8844772438018
+    m_Key: Answer_8fb08ab0-ccb1-4d5c-8224-f722380e5e9e
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8844772438019
+    m_Key: Answer_e9cef166-32e4-4bb6-b69d-874b735e0374
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8844772438020
+    m_Key: 
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8844772438021
+    m_Key: SentenceName_1bfde2b7-64da-48a0-b083-d602c2171494
+    m_Metadata:
+      m_Items: []
+  - m_Id: 8844772438022
+    m_Key: SentenceName_174de7e9-84c0-48c1-8eb4-f0bd0b2d3959
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 2461586097738350817
+  references:
+    version: 2
+    RefIds:
+    - rid: 2461586097738350817
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1777070893294

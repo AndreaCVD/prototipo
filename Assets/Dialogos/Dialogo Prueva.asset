@@ -15,12 +15,12 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 72.89995
-    y: 300.00006
+    x: 22.499939
+    y: 259.20007
     width: 190
     height: 135
   IsDragging: 1
-  IsSelected: 0
+  IsSelected: 1
   _sentence:
     CharacterName: nam1
     Text: text1
@@ -29,8 +29,8 @@ MonoBehaviour:
   ChildNode: {fileID: 7496212918730753316}
   _isExternalFunc: 0
   _externalFunctionName: 
-  CharacterNameKey: e
-  SentenceTextKey: e
+  CharacterNameKey: NombreID
+  SentenceTextKey: text key
 --- !u!114 &-2831128672432884902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46,12 +46,12 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 620
-    y: 342.00003
+    x: 547.2001
+    y: 352.40005
     width: 190
     height: 135
   IsDragging: 1
-  IsSelected: 1
+  IsSelected: 0
   _sentence:
     CharacterName: poss 2
     Text: a
@@ -61,7 +61,7 @@ MonoBehaviour:
   ChildNode: {fileID: 0}
   _isExternalFunc: 0
   _externalFunctionName: 
-  CharacterNameKey: 
+  CharacterNameKey: SentenceName_174de7e9-84c0-48c1-8eb4-f0bd0b2d3959
   SentenceTextKey: 
 --- !u!114 &11400000
 MonoBehaviour:
@@ -80,12 +80,12 @@ MonoBehaviour:
   - {fileID: 7496212918730753316}
   - {fileID: 51963938754518780}
   - {fileID: -2831128672432884902}
-  VariablesConfig: {fileID: 0}
-  _localizationTableName: 
+  VariablesConfig: {fileID: 11400000, guid: dc1df8d3f3c40484bae171f6bc0d555d, type: 2}
+  _localizationTableName: Dialogo Prueva
   _characterNamesLocalizationName: 
   NodeToDrawLineFrom: {fileID: 0}
   LinePosition: {x: 0, y: 0}
-  IsLocalizationSetUp: 0
+  IsLocalizationSetUp: 1
 --- !u!114 &51963938754518780
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -101,8 +101,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 617.6
-    y: 136.39998
+    x: 544.80005
+    y: 146.8
     width: 190
     height: 135
   IsDragging: 1
@@ -116,7 +116,7 @@ MonoBehaviour:
   ChildNode: {fileID: 0}
   _isExternalFunc: 0
   _externalFunctionName: 
-  CharacterNameKey: 
+  CharacterNameKey: SentenceName_1bfde2b7-64da-48a0-b083-d602c2171494
   SentenceTextKey: 
 --- !u!114 &7496212918730753316
 MonoBehaviour:
@@ -133,8 +133,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 330.3999
-    y: 241.99997
+    x: 257.59988
+    y: 252.4
     width: 190
     height: 155
   IsDragging: 1
@@ -143,7 +143,10 @@ MonoBehaviour:
   - f
   - a
   - f
-  AnswerKeys: []
+  AnswerKeys:
+  - Answer_abdac563-656b-4389-88c7-e42c59b0b31c
+  - Answer_8fb08ab0-ccb1-4d5c-8224-f722380e5e9e
+  - Answer_e9cef166-32e4-4bb6-b69d-874b735e0374
   ParentNodes: []
   ChildNodes:
   - {fileID: 51963938754518780}

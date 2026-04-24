@@ -826,7 +826,7 @@ PlayerSettings:
   webGLCloseOnQuit: 0
   webWasm2023: 0
   scriptingDefineSymbols:
-    Standalone: UNITY_TIMELINE
+    Standalone: UNITY_TIMELINE;ADDRESSABLES_LOG_ALL;UNITY_LOCALIZATION
   additionalCompilerArguments: {}
   platformArchitecture: {}
   scriptingBackend:

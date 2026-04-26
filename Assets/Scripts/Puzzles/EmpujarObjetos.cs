@@ -62,7 +62,6 @@ public class EmpujarObjetos : MonoBehaviour
             {
                 Collider[] hit = Physics.OverlapBox(nuevaPos, Vector3.one * 0.4f, Quaternion.identity, layerMask);
                 //Para ver el tag:
-                Debug.Log("AAAAAAA");
                 foreach (var colision in hit)
                 {
                     if ( colision.gameObject.CompareTag("FinalPuzzle"))
@@ -71,6 +70,7 @@ public class EmpujarObjetos : MonoBehaviour
                         destino = nuevaPos;
                         enMovimiento = true;
                         puzzlefinished = true;
+                        enviarVal();
                     }
 
                 }
@@ -80,5 +80,10 @@ public class EmpujarObjetos : MonoBehaviour
             }
         }
 
+    }
+    private void enviarVal()
+    {
+        Interactable interact = this.GetComponent<Interactable>();
+        interact.PuzzleFinished();
     }
 }

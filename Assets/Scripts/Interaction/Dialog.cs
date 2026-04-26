@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-//public void BindExternalFunction(string funcName, Action function);
+
 
 public class Dialog : MonoBehaviour
 {
@@ -30,9 +30,10 @@ public class Dialog : MonoBehaviour
         this.obj = obj;
         Debug.Log(this.obj);
         //Llamar a funcion
+            //BindExternalFunction(string funcName, Action function);
         _dialogBehaviour.BindExternalFunction("Destroy", DestroyObj);
 
-         //Le enviamos el dialogo que tiene que hacer
+         //Le enviamos el dialogo que tiene que hacer --> ESTE SIEMPRE ÚLTIMO
         _dialogBehaviour.StartDialog(dialogo);
 
 
@@ -40,6 +41,10 @@ public class Dialog : MonoBehaviour
     public void DestroyObj()
     {
         Destroy(obj);
+    }
+    public void SetBool(string nombreVal, bool val)
+    {
+        _dialogBehaviour.SetVariableValue(nombreVal, val);
     }
 }
 

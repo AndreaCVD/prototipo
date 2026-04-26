@@ -63,4 +63,8 @@ public class Interactable : MonoBehaviour
 
 
     }
+    public void PuzzleFinished()
+    {
+        //dialogo.SetBool("puzzleDone",true);
+    }
 }

@@ -3,12 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+
 //Cualquier obj que sea interactuable tendra este script
 public class Interactable : MonoBehaviour
 {
-    [SerializeField] private LoadScene load;
-    [SerializeField] private Preload preload;
+    [Header("EL DIALOGO DEL OBJ")]
+    [SerializeField] cherrydev.DialogNodeGraph dialogo;
+    //Para encontrar los scripts de SceneManager
+    private LoadScene load;
+    private Preload preload;
     private GameObject script_load;
+
+    //Para encontrar los scripts de DialogManager
+    private Dialog dialog;
+    private GameObject script_dialog;
     //public UnityEvent onInteract;
 
     private void Start()
@@ -18,6 +26,11 @@ public class Interactable : MonoBehaviour
             script_load = GameObject.Find("--SceneManagement--");
             load = script_load.GetComponent<LoadScene>();
             preload = script_load.GetComponent<Preload>();
+        }
+        if (script_dialog == null)
+        {
+            script_dialog = GameObject.Find("--DialogManager--");
+            dialog = script_dialog.GetComponent<Dialog>();
         }
     }
     public void Interact()
@@ -37,6 +50,10 @@ public class Interactable : MonoBehaviour
                 break;
             case "Puzzle":
                 Debug.Log("This is a Puzzle");
+                break;
+            case "Interact_Scene":
+                Debug.Log("Interaccionable por dialogo");
+                dialog.StartDialog(dialogo);
                 break;
             default:
                 Debug.Log("No hay nada");

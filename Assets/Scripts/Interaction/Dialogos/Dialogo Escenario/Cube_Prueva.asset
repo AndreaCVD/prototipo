@@ -15,8 +15,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 404.80002
-    y: 133.99997
+    x: 168.39935
+    y: 256.4001
     width: 190
     height: 155
   IsDragging: 1
@@ -31,6 +31,7 @@ MonoBehaviour:
   ChildNodes:
   - {fileID: -5450974861438277695}
   - {fileID: -992676036078422122}
+  - {fileID: 3783077360279000041}
 --- !u!114 &-5450974861438277695
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46,8 +47,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 679.2001
-    y: 66.8
+    x: 436.3996
+    y: 97.99997
     width: 190
     height: 135
   IsDragging: 1
@@ -55,10 +56,10 @@ MonoBehaviour:
   _sentence:
     CharacterName: Prota
     Text: Aqui se destruye la caja
-    CharacterSprite: {fileID: 0}
+    CharacterSprite: {fileID: 21300000, guid: 2b450e9a5258c5f46a99683d158539a4, type: 3}
   ParentNodes:
   - {fileID: -5798957116250347863}
-  ChildNode: {fileID: 0}
+  ChildNode: {fileID: 6823969739944273956}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: 
@@ -78,8 +79,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 104.80002
-    y: 161.20001
+    x: -111.60077
+    y: 283.60025
     width: 190
     height: 135
   IsDragging: 1
@@ -94,6 +95,69 @@ MonoBehaviour:
   _externalFunctionName: 
   CharacterNameKey: SentenceName_844bfe9c-591e-4f67-bd7e-95e10fbd3921
   SentenceTextKey: 
+--- !u!114 &-3224348639949310251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 1155.6011
+    y: 181.19989
+    width: 190
+    height: 135
+  IsDragging: 0
+  IsSelected: 0
+  _sentence:
+    CharacterName: bool
+    Text: true
+    CharacterSprite: {fileID: 0}
+  ParentNodes:
+  - {fileID: -2628015457405260817}
+  ChildNode: {fileID: 0}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+--- !u!114 &-2628015457405260817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38789157e7795244280823d019530045, type: 3}
+  m_Name: Variable Condition Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 753.19934
+    y: 294.80026
+    width: 240
+    height: 160
+  IsDragging: 1
+  IsSelected: 0
+  _variableName: puzzleDone
+  _conditionType: 0
+  _boolTargetValue: 0
+  _intTargetValue: 0
+  _floatTargetValue: 0
+  _stringTargetValue: 
+  ParentNodes:
+  - {fileID: 3783077360279000041}
+  TrueChildNode: {fileID: -3224348639949310251}
+  FalseChildNode: {fileID: 7350993972020689904}
 --- !u!114 &-992676036078422122
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109,8 +173,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 682.4
-    y: 201.99998
+    x: 433.19952
+    y: 280.40018
     width: 190
     height: 135
   IsDragging: 1
@@ -143,9 +207,104 @@ MonoBehaviour:
   - {fileID: -5798957116250347863}
   - {fileID: -992676036078422122}
   - {fileID: -5450974861438277695}
-  VariablesConfig: {fileID: 0}
+  - {fileID: 3783077360279000041}
+  - {fileID: -2628015457405260817}
+  - {fileID: -3224348639949310251}
+  - {fileID: 7350993972020689904}
+  - {fileID: 6823969739944273956}
+  VariablesConfig: {fileID: 11400000, guid: f97a5d7383e8dba4c9328a83d105bb83, type: 2}
   _localizationTableName: 
   _characterNamesLocalizationName: 
   NodeToDrawLineFrom: {fileID: 0}
   LinePosition: {x: 0, y: 0}
   IsLocalizationSetUp: 0
+--- !u!114 &3783077360279000041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 437.99945
+    y: 412.4002
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Prota
+    Text: Ve voy
+    CharacterSprite: {fileID: 21300000, guid: 2b450e9a5258c5f46a99683d158539a4, type: 3}
+  ParentNodes:
+  - {fileID: -5798957116250347863}
+  ChildNode: {fileID: -2628015457405260817}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+--- !u!114 &6823969739944273956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f4b3c64aaf434ea0df52154c1c7680, type: 3}
+  m_Name: External Function Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 675.5995
+    y: 131.59985
+    width: 190
+    height: 80
+  IsDragging: 1
+  IsSelected: 1
+  _functionName: Destroy
+  _description: Para llamar a la funcion Destroy()
+  ParentNodes:
+  - {fileID: -5450974861438277695}
+  ChildNode: {fileID: 0}
+--- !u!114 &7350993972020689904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 1155.6011
+    y: 314.00024
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: bool
+    Text: false
+    CharacterSprite: {fileID: 0}
+  ParentNodes:
+  - {fileID: -2628015457405260817}
+  ChildNode: {fileID: 0}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 

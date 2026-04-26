@@ -19,6 +19,7 @@ public class Interactable : MonoBehaviour
     private GameObject script_dialog;
     //public UnityEvent onInteract;
 
+    //para acceder al obj que tiene el script le mandamos this.GameObject
     private void Start()
     {
         if (script_load == null)
@@ -53,7 +54,7 @@ public class Interactable : MonoBehaviour
                 break;
             case "Interact_Scene":
                 Debug.Log("Interaccionable por dialogo");
-                dialog.StartDialog(dialogo);
+                dialog.StartDialog(dialogo, a);
                 break;
             default:
                 Debug.Log("No hay nada");

@@ -21,7 +21,7 @@ public class Preload : MonoBehaviour
     //para recibir la posicion anterior
     personaje vectorPosicion;
     //Para Combat Debug
-    public string NameOpponent = "nada";
+    [SerializeField] string NameOpponent;
 
 
     void Awake()
@@ -37,14 +37,14 @@ public class Preload : MonoBehaviour
             //Guardamos posicion y la ponemos en el personaje
            // PrefabProta.transform.position = vectorPosicion.load_LastPos();
         }
+        //NameOpponent = "nada";
     }
-    public string nameOpponent()
-    {
-        return NameOpponent;
-    }
+
     public void CombatOpponent(string enemyName)
     {
+        
         NameOpponent = enemyName;
+        Debug.Log(NameOpponent);
         //switch (enemyName)
         //{
         //    case "Cubo":
@@ -53,9 +53,13 @@ public class Preload : MonoBehaviour
         //    default:
         //        Debug.Log("");
         //        break;
-        //}
+        //} 
     }
-    
+    public string nameOpponent()
+    {
+        return NameOpponent;
+    }
+
     //puzzles que tienen que ser false:
     //void Start()
     //{

@@ -64,9 +64,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pantalla: {fileID: 4636500077556328165}
-  protagonista: {fileID: 0}
-  save_posicion: {fileID: 0}
   escenaState: {fileID: 0}
+  preload: {fileID: 0}
+  destroyObjs: {fileID: 0}
 --- !u!114 &7755713674092758166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -94,3 +94,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c72389183d69674ab0699d08e6131a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Puzzles_Pruevas: 
+  NameOpponent: 

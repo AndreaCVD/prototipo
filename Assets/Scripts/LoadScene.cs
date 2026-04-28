@@ -41,12 +41,12 @@ public class LoadScene : MonoBehaviour
             protagonista = GameObject.Find("personaje");
         }
         //scipt dnd guardar stats prota
-        if (obj_saveScript == null)
-        {
-            obj_saveScript = GameObject.Find("--Preload--");
-            save_posicion = obj_saveScript.GetComponent<personaje>();
-            //save_posicion = GetComponent<personaje>();
-        }
+        //if (obj_saveScript == null)
+        //{
+        //    obj_saveScript = GameObject.Find("--Preload--");
+        //    save_posicion = obj_saveScript.GetComponent<personaje>();
+        //    //save_posicion = GetComponent<personaje>();
+        //}
         if (escenaState == null)
         {
             obj_input = GameObject.Find("personaje");
@@ -80,7 +80,7 @@ public class LoadScene : MonoBehaviour
         else
         {
             pantalla.UnTint();
-            save_posicion.save_LastPos();
+            //save_posicion.save_LastPos();
             //preload.move_player();
             //if (sceneName == "combate_pruevas"){ }
            SceneManager.LoadScene(sceneName);
@@ -102,7 +102,7 @@ public class LoadScene : MonoBehaviour
         else
         {
             pantalla.UnTint();
-            save_posicion.save_LastPos();
+            //save_posicion.save_LastPos();
             //preload.move_player();
             //if (sceneName == "combate_pruevas"){ }
             SceneManager.LoadScene(name_anterior);
@@ -118,7 +118,7 @@ public class LoadScene : MonoBehaviour
             // Unload Scene
             SceneManager.UnloadSceneAsync("combat_scene");
     }
-    public void Combat(/*GameObject enemyName*/)
+    public void Combat(GameObject enemyName)
     {
         if (!onCombat)
         {
@@ -129,7 +129,7 @@ public class LoadScene : MonoBehaviour
             escenaState.ScenePause(true); //true, se para
             pantalla.UnTint();
 
-            //preload.CombatOpponent(/*enemyName.name*/); //Pasem el nom
+            preload.CombatOpponent(enemyName.name); //Pasem el nom
 
             //save_posicion.save_LastPos();
             SceneManager.LoadScene("combat_scene", LoadSceneMode.Additive);
@@ -140,7 +140,7 @@ public class LoadScene : MonoBehaviour
     public void GameOver()
     {
         pantalla.UnTint();
-        save_posicion.save_LastPos();
+        //save_posicion.save_LastPos();
         //preload.move_player();
         //if (sceneName == "combate_pruevas"){ }
         SceneManager.LoadScene("GameOver");

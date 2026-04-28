@@ -15,6 +15,11 @@ MonoBehaviour:
   m_GroupName: Localization-Assets-Shared
   m_GUID: 47f921677bea8b246adf25729ebe1bb4
   m_SerializeEntries:
+  - m_GUID: a71f8ed6b3a3fb84fbd035b0efa114fa
+    m_Address: Assets/Localization/test/test Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: bfa41515759b64a4bbfd0fa683c6097d
     m_Address: Assets/Localization/Dialogo Prueva/Dialogo Prueva Shared Data.asset
     m_ReadOnly: 1

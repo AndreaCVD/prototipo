@@ -14,7 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Default Local Group
   m_GUID: 1bb51f078a4198b4d98dc1e04cdea125
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: f97a5d7383e8dba4c9328a83d105bb83
+    m_Address: Assets/Scripts/Interaction/Dialogos/Dialogo Escenario/Variables_Prueba.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: c828fb5033bcd1d459d934b965acaac2, type: 2}
   m_SchemaSet:

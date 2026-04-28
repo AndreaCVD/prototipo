@@ -8,7 +8,7 @@ using UnityEngine.Events;
 public class Interactable : MonoBehaviour
 {
     [Header("EL DIALOGO DEL OBJ")]
-    [SerializeField] cherrydev.DialogNodeGraph dialogo;
+    [SerializeField] cherrydev.DialogNodeGraph dialogo_obj;
     //Para encontrar los scripts de SceneManager
     private LoadScene load;
     private Preload preload;
@@ -54,7 +54,7 @@ public class Interactable : MonoBehaviour
                 break;
             case "Interact_Scene":
                 Debug.Log("Interaccionable por dialogo");
-                dialog.StartDialog(dialogo, a);
+                dialog.EmpezarDialogo(dialogo_obj, a);
                 break;
             default:
                 Debug.Log("No hay nada");
@@ -65,6 +65,6 @@ public class Interactable : MonoBehaviour
     }
     public void PuzzleFinished()
     {
-        //dialogo.SetBool("puzzleDone",true);
+        dialog.SetBool("puzzleDone",true);
     }
 }

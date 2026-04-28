@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-
+using cherrydev;
 
 public class Dialog : MonoBehaviour
 {
@@ -25,10 +25,10 @@ public class Dialog : MonoBehaviour
     //{
     //    _dialogBehaviour.StartDialog(dialogGraph);
     //}
-    public void StartDialog(cherrydev.DialogNodeGraph dialogo, GameObject obj)
+    public void EmpezarDialogo(DialogNodeGraph dialogo, GameObject obj)
     {
         this.obj = obj;
-        Debug.Log(this.obj);
+        //Debug.Log(this.obj);
         //Llamar a funcion
             //BindExternalFunction(string funcName, Action function);
         _dialogBehaviour.BindExternalFunction("Destroy", DestroyObj);

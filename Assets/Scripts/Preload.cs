@@ -7,6 +7,10 @@ using UnityEngine.SceneManagement;
 //esto no se destruira entre escenas
 public class Preload : MonoBehaviour
 {
+    //Para encontrar los scripts de DialogManager
+    [SerializeField] Dialog dialog;
+    //private GameObject script_dialog;
+
     //guardar las variables para no perderlas
     private GameObject preloadObj;
     //public Vector3 posicion;
@@ -17,6 +21,7 @@ public class Preload : MonoBehaviour
     personaje vectorPosicion;
     //Para Combat Debug
     public string NameOpponent = "nada";
+
 
     void Awake()
     {       
@@ -49,6 +54,16 @@ public class Preload : MonoBehaviour
         //        break;
         //}
     }
+    
+    //puzzles que tienen que ser false:
+    void Start()
+    {
+        dialog.SetBool("puzzleDone", false);
+    }
+
+
+
+
     //public void move_player()
     //{
     //    PrefabProta.transform.position = vectorPosicion.load_pos();
@@ -65,9 +80,9 @@ public class Preload : MonoBehaviour
     //    {
     //        protagonista = GameObject.Find("personaje");
     //    }
-  
+
     //}
-     
+
     //void Start()
     //{
     //    //Para que no se destruya

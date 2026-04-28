@@ -359,7 +359,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3d42b3a497006740958fffd87391ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogo_obj: {fileID: 11400000, guid: 12ad4c09dbc1a1446860d5d2251ec641, type: 2}
+  dialogo_obj: {fileID: 11400000, guid: b2bf21a806edd9d4d8731028775c16fd, type: 2}
 --- !u!1 &132182610
 GameObject:
   m_ObjectHideFlags: 0

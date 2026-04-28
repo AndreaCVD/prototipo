@@ -8,10 +8,10 @@ public class LoadScene : MonoBehaviour
     [Header("Degradado pantalla")]
     [SerializeField] TintScreen pantalla;
     [Header("Datos prota")]
-    [SerializeField] GameObject protagonista;
+    private GameObject protagonista;
     GameObject obj_saveScript;
-    [SerializeField] personaje save_posicion;
-    GameObject obj_input;
+    private personaje save_posicion;
+    private GameObject obj_input;
     [Header("Parar movimiento")]
     [SerializeField] InputHandler escenaState;
     [Header("Preparar el combate")]

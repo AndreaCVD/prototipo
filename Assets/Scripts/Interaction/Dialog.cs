@@ -44,7 +44,9 @@ public class Dialog : MonoBehaviour
     }
     public void SetBool(string nombreVal, bool val)
     {
+        Debug.Log(val);
         _dialogBehaviour.SetVariableValue(nombreVal, val);
     }
+
 }
 

@@ -15,10 +15,12 @@ public class EmpujarObjetos : MonoBehaviour
         destino = transform.position; // Posición inicial
         puzzlefinished = false;
         layerMask = 1 << LayerMask.NameToLayer("FinPuzzle");
+        //enviarVal(false);
     }
 
     void Update()
     {
+
         // Movimiento suave hacia el destino
         if (enMovimiento)
         {
@@ -70,7 +72,7 @@ public class EmpujarObjetos : MonoBehaviour
                         destino = nuevaPos;
                         enMovimiento = true;
                         puzzlefinished = true;
-                        enviarVal();
+                        enviarVal(true);
                     }
 
                 }
@@ -81,9 +83,9 @@ public class EmpujarObjetos : MonoBehaviour
         }
 
     }
-    private void enviarVal()
+    private void enviarVal(bool val)
     {
         Interactable interact = this.GetComponent<Interactable>();
-        interact.PuzzleFinished();
+        interact.PuzzleFinished(val);
     }
 }

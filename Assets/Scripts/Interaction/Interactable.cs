@@ -20,7 +20,7 @@ public class Interactable : MonoBehaviour
     //public UnityEvent onInteract;
 
     //para acceder al obj que tiene el script le mandamos this.GameObject
-    private void Start()
+    private void Awake()
     {
         if (script_load == null)
         {
@@ -63,8 +63,17 @@ public class Interactable : MonoBehaviour
 
 
     }
-    public void PuzzleFinished()
+    public void PuzzleFinished(bool val)
     {
-        dialog.SetBool("puzzleDone",true);
+        bool aux = val;
+        if (aux)
+        {
+            dialog.SetBool("puzzleDone", val);
+        }
+        else
+        {
+            dialog.SetBool("puzzleDone", val);
+        }
     }
+
 }

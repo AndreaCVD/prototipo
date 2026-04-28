@@ -8,8 +8,9 @@ using UnityEngine.SceneManagement;
 public class Preload : MonoBehaviour
 {
     //Para encontrar los scripts de DialogManager
-    [SerializeField] Dialog dialog;
+    //[SerializeField] Dialog dialog;
     //private GameObject script_dialog;
+    [SerializeField] List<bool> Puzzles_Pruevas = new List<bool>();
 
     //guardar las variables para no perderlas
     private GameObject preloadObj;
@@ -56,10 +57,10 @@ public class Preload : MonoBehaviour
     }
     
     //puzzles que tienen que ser false:
-    void Start()
-    {
-        dialog.SetBool("puzzleDone", false);
-    }
+    //void Start()
+    //{
+    //    dialog.SetBool("puzzleDone", false);
+    //}
 
 
 

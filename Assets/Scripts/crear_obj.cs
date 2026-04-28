@@ -7,6 +7,7 @@ public class crear_obj : MonoBehaviour
     [SerializeField] GameObject player;
     [SerializeField] GameObject preloadScript;
     [SerializeField] GameObject screenTint;
+    [SerializeField] GameObject dialog;
     //[SerializeField] Preload preload;
 
     void Awake()
@@ -32,6 +33,12 @@ public class crear_obj : MonoBehaviour
             nuevoObj.name = "ScreenTint";
             DontDestroyOnLoad(nuevoObj);
         }
+        if (!GameObject.Find("--DialogManager--") && !GameObject.Find("--DialogManager--(Clone)"))
+        {
+            GameObject nuevoObj = Instantiate(dialog);
+            nuevoObj.name = "--DialogManager--";
+            DontDestroyOnLoad(nuevoObj);
+        }
     }
 
     public void destroyAll()
@@ -45,5 +52,7 @@ public class crear_obj : MonoBehaviour
         GameObject sceneMObj = GameObject.Find("--SceneManagement--");
         Destroy(sceneMObj);
 
+        GameObject dialogObj = GameObject.Find("--DialogManager--");
+        Destroy(dialogObj);
     }
 }

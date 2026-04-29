@@ -26,10 +26,10 @@ public class Preload : MonoBehaviour
 
     void Awake()
     {       
-        preloadObj = GameObject.Find("--Preload--");
-        PrefabProta = GameObject.Find("personaje");
-        vectorPosicion = GetComponent<personaje>();
-        protagonista = GameObject.Find("Player Character");
+        //preloadObj = GameObject.Find("--Preload--");
+        //PrefabProta = GameObject.Find("personaje");
+        //vectorPosicion = GetComponent<personaje>();
+        //protagonista = GameObject.Find("Player Character");
 
         Scene escenaActual = SceneManager.GetActiveScene();
         if (escenaActual.name == "pruevas_prototipo")

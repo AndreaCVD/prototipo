@@ -8,13 +8,14 @@ using UnityEngine;
 //para hacer test de combate
 public class CombatDebug : MonoBehaviour
 {
-
-    [Header("Para el combate")]
-    [SerializeField] Preload preload;
-    //Prota
-    [SerializeField] Parameters playerData;
-    //Oponente combate
-    private Parameters enemyData;
+    private Preload preload;
+    private GameObject script_load;
+    //[SerializeField] Preload preload;
+    
+    
+    [Header("Datos del prota")]
+    /*Prota --> */ [SerializeField] Parameters playerData;
+    /*Oponente combate --> */ private Parameters enemyData;
     
     [Header("Possibles enemigos a combatir")]
     //[SerializeField] List<Parameters> Enemigos = new List<Parameters>();
@@ -28,6 +29,12 @@ public class CombatDebug : MonoBehaviour
     {
         manager = GetComponent<CombatManager>();
 
+        if (script_load == null)
+        {
+            script_load = GameObject.Find("--SceneManagement--");
+            //load = script_load.GetComponent<LoadScene>();
+            preload = script_load.GetComponent<Preload>();
+        }
 
     }
 
@@ -39,6 +46,7 @@ public class CombatDebug : MonoBehaviour
     }
     private void ElegirEnemigo()
     {
+
         string nameEnemy = preload.nameOpponent();
 
         //Aqui se tiene que elegir enemigo y enviar los parameters para que el
@@ -49,7 +57,7 @@ public class CombatDebug : MonoBehaviour
 
         switch (nameEnemy)
         {
-            case "nada":
+            case "Slime":
                 enemyData = cubo;
                 break;
             case "Caballero":

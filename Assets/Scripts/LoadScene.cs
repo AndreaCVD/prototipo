@@ -133,6 +133,7 @@ public class LoadScene : MonoBehaviour
 
             //save_posicion.save_LastPos();
             SceneManager.LoadScene("combat_scene", LoadSceneMode.Additive);
+
         }
 
     }

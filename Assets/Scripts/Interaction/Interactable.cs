@@ -46,7 +46,7 @@ public class Interactable : MonoBehaviour
 
                 Debug.Log("This is a Enemy");
                 Debug.Log(a.name);
-                preload.CombatOpponent( a.name );
+                preload.CombatOpponent( a );
                 load.Combat(a);
                 break;
             case "Puzzle":

@@ -22,7 +22,7 @@ public class Preload : MonoBehaviour
     personaje vectorPosicion;
     //Para Combat Debug
     [SerializeField] string NameOpponent;
-
+    public GameObject enemigo;
 
     void Awake()
     {       
@@ -40,10 +40,10 @@ public class Preload : MonoBehaviour
         //NameOpponent = "nada";
     }
 
-    public void CombatOpponent(string enemyName)
+    public void CombatOpponent(GameObject enemyName)
     {
-        
-        NameOpponent = enemyName;
+        enemigo = enemyName;
+        NameOpponent = enemyName.name;
         Debug.Log(NameOpponent);
         //switch (enemyName)
         //{
@@ -59,7 +59,17 @@ public class Preload : MonoBehaviour
     {
         return NameOpponent;
     }
-
+    public void DestroyEnemy()
+    {
+        if (enemigo != null)
+        {   
+            Destroy(enemigo);
+        }
+        else
+        {
+            Debug.Log("No hay enemigo a destruir");
+        }
+    }
     //puzzles que tienen que ser false:
     //void Start()
     //{

@@ -129,7 +129,7 @@ public class LoadScene : MonoBehaviour
             escenaState.ScenePause(true); //true, se para
             pantalla.UnTint();
 
-            preload.CombatOpponent(enemyName.name); //Pasem el nom
+            preload.CombatOpponent(enemyName); //Pasem el nom
 
             //save_posicion.save_LastPos();
             SceneManager.LoadScene("combat_scene", LoadSceneMode.Additive);

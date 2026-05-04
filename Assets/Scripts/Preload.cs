@@ -8,9 +8,11 @@ using UnityEngine.SceneManagement;
 public class Preload : MonoBehaviour
 {
     //Para encontrar los scripts de DialogManager
-    //[SerializeField] Dialog dialog;
-    //private GameObject script_dialog;
+    [SerializeField] Dialog dialog;
+    private GameObject script_dialog;
+    //Listas
     [SerializeField] List<bool> Puzzles_Pruevas = new List<bool>();
+    [SerializeField] List<GameObject> Puertas = new List<GameObject>();
 
     //guardar las variables para no perderlas
     private GameObject preloadObj;
@@ -45,15 +47,7 @@ public class Preload : MonoBehaviour
         enemigo = enemyName;
         NameOpponent = enemyName.name;
         Debug.Log(NameOpponent);
-        //switch (enemyName)
-        //{
-        //    case "Cubo":
-        //        NameOpponent = name;
-        //        break;
-        //    default:
-        //        Debug.Log("");
-        //        break;
-        //} 
+
     }
     public string nameOpponent()
     {
@@ -77,31 +71,16 @@ public class Preload : MonoBehaviour
     //}
 
 
-
-
     //public void move_player()
     //{
     //    PrefabProta.transform.position = vectorPosicion.load_pos();
     //}
-    //void Update()
-    //{
-    //    //pantalla tint
-    //    if (preloadObj == null)
-    //    {
-    //        preloadObj = GameObject.Find("Player Character");
-    //    }
-    //    //encontrar el personaje prefab
-    //    if (protagonista == null)
-    //    {
-    //        protagonista = GameObject.Find("personaje");
-    //    }
+    void Start()
+    {
+        //if puzzle esta hecho --> colocar la puerta apartada para que se pueda passar
+        // else, que la puerta bloquee el paso
 
-    //}
+        //encontrar la puerta por el nombre, foreach()
+    }
 
-    //void Start()
-    //{
-    //    //Para que no se destruya
-    //    DontDestroyOnLoad(preloadObj);
-    //    DontDestroyOnLoad(protagonista);
-    //}
 }

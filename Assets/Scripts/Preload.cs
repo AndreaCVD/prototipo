@@ -2,11 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+    
+public enum NombrePuzzles
+    {
+        puzzle_1,
+        puzzle_2,
+        puzzle_3
+    }
 //Cargar todas las cosas antes de la escena normal, no combate
 //esto no se destruira entre escenas
 public class Preload : MonoBehaviour
 {
+   // public NombrePuzzles Puzzles;
+
     //Para encontrar los scripts de DialogManager
     [SerializeField] Dialog dialog;
     private GameObject script_dialog;
@@ -26,10 +34,13 @@ public class Preload : MonoBehaviour
     [SerializeField] string NameOpponent;
     public GameObject enemigo;
 
+    //bools
+    bool prueva_p1;
+
     void Awake()
-    {       
-        //preloadObj = GameObject.Find("--Preload--");
-        //PrefabProta = GameObject.Find("personaje");
+    {
+        Puzzles_Pruevas.Add(prueva_p1);
+
         //vectorPosicion = GetComponent<personaje>();
         //protagonista = GameObject.Find("Player Character");
 
@@ -82,5 +93,13 @@ public class Preload : MonoBehaviour
 
         //encontrar la puerta por el nombre, foreach()
     }
-
+    public void puzzleTrue(string namePuzzle)
+    {
+        string aux = namePuzzle;
+        foreach (bool obj in Puzzles_Pruevas)
+        {
+            Debug.Log(namePuzzle);
+            Debug.Log(obj);
+        }
+    }
 }

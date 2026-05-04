@@ -3652,6 +3652,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1691644935}
     - target: {fileID: 8228760125869817717, guid: ca28d6627cc19d84893b1c16657bf7d9, type: 3}
+      propertyPath: Puzzles
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8228760125869817717, guid: ca28d6627cc19d84893b1c16657bf7d9, type: 3}
       propertyPath: Puertas.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -3659,6 +3663,10 @@ PrefabInstance:
       propertyPath: 'Puertas.Array.data[0]'
       value: 
       objectReference: {fileID: 514556448}
+    - target: {fileID: 8228760125869817717, guid: ca28d6627cc19d84893b1c16657bf7d9, type: 3}
+      propertyPath: Puzzles_Pruevas.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5431,6 +5439,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3859146759075316617, guid: 008e265248192be43828fc642a5dbe72, type: 3}
+      propertyPath: dialogo_obj
+      value: 
+      objectReference: {fileID: 11400000, guid: cbbe85d89f5758143acb164b3feaf66b, type: 2}
     - target: {fileID: 6561422104601387215, guid: 008e265248192be43828fc642a5dbe72, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.57

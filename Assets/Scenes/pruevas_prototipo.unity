@@ -3660,11 +3660,35 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8228760125869817717, guid: ca28d6627cc19d84893b1c16657bf7d9, type: 3}
+      propertyPath: ListClass.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8228760125869817717, guid: ca28d6627cc19d84893b1c16657bf7d9, type: 3}
       propertyPath: 'Puertas.Array.data[0]'
       value: 
       objectReference: {fileID: 514556448}
     - target: {fileID: 8228760125869817717, guid: ca28d6627cc19d84893b1c16657bf7d9, type: 3}
+      propertyPath: ListaPuzzles.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8228760125869817717, guid: ca28d6627cc19d84893b1c16657bf7d9, type: 3}
       propertyPath: Puzzles_Pruevas.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8228760125869817717, guid: ca28d6627cc19d84893b1c16657bf7d9, type: 3}
+      propertyPath: ListClass.Array.data[0].name
+      value: puzzle_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8228760125869817717, guid: ca28d6627cc19d84893b1c16657bf7d9, type: 3}
+      propertyPath: ListClass.Array.data[0].value
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8228760125869817717, guid: ca28d6627cc19d84893b1c16657bf7d9, type: 3}
+      propertyPath: ListaPuzzles.Array.data[0].name
+      value: puzzle_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8228760125869817717, guid: ca28d6627cc19d84893b1c16657bf7d9, type: 3}
+      propertyPath: ListaPuzzles.Array.data[0].value
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -5485,7 +5509,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8987765881091770296, guid: 008e265248192be43828fc642a5dbe72, type: 3}
       propertyPath: m_Name
-      value: Cube_puzzle
+      value: puzzle_1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

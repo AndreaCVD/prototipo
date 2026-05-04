@@ -1,14 +1,17 @@
 using System.Collections;
+using System;
+
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-    
-public enum NombrePuzzles
-    {
-        puzzle_1,
-        puzzle_2,
-        puzzle_3
-    }
+//using System.Collections.Generic.Dictionary;
+
+[Serializable]
+public class NamePuzzles
+{
+    public string name;
+    public bool value;
+}
 //Cargar todas las cosas antes de la escena normal, no combate
 //esto no se destruira entre escenas
 public class Preload : MonoBehaviour
@@ -19,8 +22,9 @@ public class Preload : MonoBehaviour
     [SerializeField] Dialog dialog;
     private GameObject script_dialog;
     //Listas
-    [SerializeField] List<bool> Puzzles_Pruevas = new List<bool>();
+    public Dictionary<string, bool> Puzzles_Pruevas = new Dictionary<string, bool>();
     [SerializeField] List<GameObject> Puertas = new List<GameObject>();
+    [SerializeField] List<NamePuzzles> ListaPuzzles = new List<NamePuzzles>();
 
     //guardar las variables para no perderlas
     private GameObject preloadObj;
@@ -39,7 +43,8 @@ public class Preload : MonoBehaviour
 
     void Awake()
     {
-        Puzzles_Pruevas.Add(prueva_p1);
+        Puzzles_Pruevas.Add("puzzle_1", false);
+        Puzzles_Pruevas.Add("puzzle_2", false);
 
         //vectorPosicion = GetComponent<personaje>();
         //protagonista = GameObject.Find("Player Character");
@@ -96,10 +101,26 @@ public class Preload : MonoBehaviour
     public void puzzleTrue(string namePuzzle)
     {
         string aux = namePuzzle;
-        foreach (bool obj in Puzzles_Pruevas)
+        string changeVal;
+        foreach (var obj in ListaPuzzles)
         {
-            Debug.Log(namePuzzle);
-            Debug.Log(obj);
+            if (obj.name.Equals(aux)) //que funcion mas divertida me acaba de aparecer con el tab jahsjsahjashjash
+            {
+                obj.value = true;
+            }
         }
+        //foreach (var (name, val) in Puzzles_Pruevas) //deconstruimos el dictionario
+        //{
+        //    if (name == aux)
+        //    {
+        //        boolTrue(name);
+        //    }
+        //    Debug.Log(name + "=" + val); // [puzzle_1, False] si  no 
+        //}
+
     }
+    //void boolTrue(string namePuzzle)
+    //{
+    //    Puzzles_Pruevas[namePuzzle] = true;
+    //}
 }

@@ -137,7 +137,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3d42b3a497006740958fffd87391ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogo_obj: {fileID: 11400000, guid: b2bf21a806edd9d4d8731028775c16fd, type: 2}
+  dialogo_obj: {fileID: 0}
 --- !u!54 &5209426863682793152
 Rigidbody:
   m_ObjectHideFlags: 0

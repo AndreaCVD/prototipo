@@ -24,13 +24,13 @@
 }
 
 .combat_btns {
-    width: 300px;
+    width: 200px;
     height: 80px;
     border-width: 4px;
     border-radius: 10px;
     justify-content: center;
     align-items: center;
-    font-size: 40px;
+    font-size: 35px;
     -unity-font-definition: var(--font-regular);
     margin-top: 20px;
     transition-property: background-color, color, top, left, border-width;

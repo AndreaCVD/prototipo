@@ -1,53 +1,128 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
 public class EnemyWalk : MonoBehaviour
 {
-    public NavMeshAgent enemy;
-    public float velocidad;
-    public bool persiguiendo;
-    public float rango; //distancia en que te ve el enemigo
+    public bool isHome;
+    [SerializeField] Transform home;
+    [SerializeField] Transform pivot_caballero;
+    public float distanciaRayCast;
+    public bool firstWalk;
 
-    public float distancia; //valor que representa que tan lejos el enemigo esta del prota
+    private float tiempoEspera = 3.5f;
+    //private Coroutine miCoroutine;
+
+    [Header("Conf Walk")]
+    [SerializeField] NavMeshAgent enemy;
+    [SerializeField] float velocidad;
+    [SerializeField] bool persiguiendo;
+    [SerializeField] float rango; //distancia en que te ve el enemigo
+
+    [SerializeField]  float distancia; //valor que representa que tan lejos el enemigo esta del prota
     float distanciaExtra;
-    public Transform objetivo; //lo que persigue el enemigo
+    [SerializeField] Transform objetivo; //lo que persigue el enemigo
    
     [Header("Animaciones")]
-    public Animation anim;
-    public string nombreAnimacionWalk;
-    public string nombreAnimQuieto;
+    Animation anim;
+    string nombreAnimacionWalk;
+    string nombreAnimQuieto;
+    //[Header("Raycast")]
+    RaycastHit hitInfo; //Informacion de cuando el raycast del personaje se encuentre con un obj
+    Ray ray;
+    void Start()
+    {
+        isHome = true;
+        firstWalk = false;
 
+    }
     private void Update()
     {
-        //primero hacemos que se calcule la distancia entre el y el jugador
-        distancia = Vector3.Distance(enemy.transform.position, objetivo.position);
-
-        //que el eneimgo detecte el jugador a cierta distancia
-        if(distancia < rango)
+        //a la primera vez, la estatua no se mueve hasta que el prota pasa por delante
+        //De dnd sale y adonde va
+        if (!firstWalk && isHome)
         {
-            persiguiendo = true;
-            Debug.Log("persiguiendo");
-        }
-        else if(distancia > rango + distanciaExtra)
-        {
-            persiguiendo = false;
-            Debug.Log("no persiguiendo");
-
+            ray = new Ray(pivot_caballero.transform.position, pivot_caballero.transform.forward);
+            Invoke(nameof(Interact), 1.0f);
         }
 
-        if (!persiguiendo)
+        if (firstWalk)
         {
-            enemy.speed = 0;
-            //anim.CrossFade("Stand");
-        }
-        else if (persiguiendo)
-        {
-            enemy.speed = velocidad;
-            ///anim.CrossFade(nombreAnimacionWalk);
-            enemy.SetDestination(objetivo.position);
+            //primero hacemos que se calcule la distancia entre el y el jugador
+            distancia = Vector3.Distance(enemy.transform.position, objetivo.position);
+
+            //que el eneimgo detecte el jugador a cierta distancia
+            if (distancia < rango && !persiguiendo)
+            {
+                //if (isHome)
+                //{
+                //    isHome = false;
+                //}
+                persiguiendo = true;
+                Debug.Log("persiguiendo");
+            }
+            else if (distancia > rango + distanciaExtra && persiguiendo)
+            {
+                persiguiendo = false;
+                Debug.Log("no persiguiendo");
+
+            }
+
+            if (!persiguiendo)
+            {
+                //if (!isHome)
+                //{
+                //    //si despues de X tiempo aun no vuelve a pareer el plaer vuelve a la posicion
+                //    StartCoroutine(EsperarYComprovar());
+                //}
+
+                enemy.speed = 0;
+                //anim.CrossFade("Stand");
+            }
+            else if (persiguiendo)
+            {
+                //StopCoroutine(miCoroutine);
+                enemy.speed = velocidad;
+                ///anim.CrossFade(nombreAnimacionWalk);
+                enemy.SetDestination(objetivo.position);
+            }
         }
     }
+    //Si hay collide vamos al combate
+    public void ActivateCombat()
+    {
 
+    }
+    //Volver a la posicion original si no esta el prota en X tiempo
+    IEnumerator EsperarYComprovar()
+    {
+        yield return new WaitForSeconds(tiempoEspera);
+        Debug.Log("Han pasado " + tiempoEspera + " segundos.");
+        if ( !persiguiendo && !isHome)
+        {
+            Debug.Log("???????????");
+            enemy.speed = velocidad;
+            enemy.SetDestination(home.transform.position);
+            isHome = true;
+        }
+    }
+    public void Interact()
+    {
+        //detectar todos los objetos DELANTE del enemigo
+        //Collider[] colliders = Physics.OverlapBox(pivot.position, interactAreaSize);
+        //Distancia máxima del ray, sino con Mathf.Infinity no tiene limite
+        if (Physics.Raycast(ray, out hitInfo, distanciaRayCast))
+        {
+            Debug.DrawRay(ray.origin, ray.direction * 1f, Color.red);
+            if (hitInfo.transform.tag == "Player")
+            {
+                Debug.Log("El jugador ha pasado por delante");
+                firstWalk = true;
+            }
+        }
+    }
+    //Dibujar el rango en unity
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;

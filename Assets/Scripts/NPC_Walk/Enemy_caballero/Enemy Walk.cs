@@ -5,6 +5,9 @@ using UnityEngine.AI;
 
 public class EnemyWalk : MonoBehaviour
 {
+    private LoadScene load;
+    private GameObject script_load;
+
     public bool isHome;
     [SerializeField] Transform home;
     [SerializeField] Transform pivot_caballero;
@@ -36,6 +39,11 @@ public class EnemyWalk : MonoBehaviour
         isHome = true;
         firstWalk = false;
 
+        if (script_load == null)
+        {
+            script_load = GameObject.Find("--SceneManagement--");
+            load = script_load.GetComponent<LoadScene>();
+        }
     }
     private void Update()
     {
@@ -90,12 +98,16 @@ public class EnemyWalk : MonoBehaviour
         }
     }
     //Si hay collide vamos al combate
-    public void ActivateCombat()
+    void OnCollisionEnter(Collision col)
     {
-
+        if (col.gameObject.CompareTag("Player") )
+        {
+            //Combat(GameObject enemyName)
+            load.Combat(this.gameObject);
+        }
     }
-    //Volver a la posicion original si no esta el prota en X tiempo
-    IEnumerator EsperarYComprovar()
+            //Volver a la posicion original si no esta el prota en X tiempo
+            IEnumerator EsperarYComprovar()
     {
         yield return new WaitForSeconds(tiempoEspera);
         Debug.Log("Han pasado " + tiempoEspera + " segundos.");
@@ -104,6 +116,8 @@ public class EnemyWalk : MonoBehaviour
             Debug.Log("???????????");
             enemy.speed = velocidad;
             enemy.SetDestination(home.transform.position);
+            //transform.position = Vector3.MoveTowards(transform.position, destino, velocidadMovimiento * Time.deltaTime);
+
             isHome = true;
         }
     }

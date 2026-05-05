@@ -8,14 +8,16 @@ public class LoadScene : MonoBehaviour
     [Header("Degradado pantalla")]
     [SerializeField] TintScreen pantalla;
     [Header("Datos prota")]
-    [SerializeField] GameObject protagonista;
+    private GameObject protagonista;
     GameObject obj_saveScript;
-    [SerializeField] personaje save_posicion;
-    GameObject obj_input;
+    private personaje save_posicion;
+    private GameObject obj_input;
     [Header("Parar movimiento")]
     [SerializeField] InputHandler escenaState;
     [Header("Preparar el combate")]
     [SerializeField] Preload preload;
+
+    [SerializeField] crear_obj destroyObjs;
 
     //[SerializeField] Preload preload;
     string name_anterior;
@@ -39,12 +41,12 @@ public class LoadScene : MonoBehaviour
             protagonista = GameObject.Find("personaje");
         }
         //scipt dnd guardar stats prota
-        if (obj_saveScript == null)
-        {
-            obj_saveScript = GameObject.Find("--Preload--");
-            save_posicion = obj_saveScript.GetComponent<personaje>();
-            //save_posicion = GetComponent<personaje>();
-        }
+        //if (obj_saveScript == null)
+        //{
+        //    obj_saveScript = GameObject.Find("--Preload--");
+        //    save_posicion = obj_saveScript.GetComponent<personaje>();
+        //    //save_posicion = GetComponent<personaje>();
+        //}
         if (escenaState == null)
         {
             obj_input = GameObject.Find("personaje");
@@ -55,6 +57,12 @@ public class LoadScene : MonoBehaviour
         //{
         //    preload = GetComponent<Preload>();
         //}
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            destroyObjs.destroyAll();
+            ChangeScene("Start_MainMenu");
+        }
     }
 
     public void ChangeScene(string sceneName) //Anar a una escena en especific
@@ -72,7 +80,7 @@ public class LoadScene : MonoBehaviour
         else
         {
             pantalla.UnTint();
-            save_posicion.save_LastPos();
+            //save_posicion.save_LastPos();
             //preload.move_player();
             //if (sceneName == "combate_pruevas"){ }
            SceneManager.LoadScene(sceneName);
@@ -94,7 +102,7 @@ public class LoadScene : MonoBehaviour
         else
         {
             pantalla.UnTint();
-            save_posicion.save_LastPos();
+            //save_posicion.save_LastPos();
             //preload.move_player();
             //if (sceneName == "combate_pruevas"){ }
             SceneManager.LoadScene(name_anterior);
@@ -110,7 +118,7 @@ public class LoadScene : MonoBehaviour
             // Unload Scene
             SceneManager.UnloadSceneAsync("combat_scene");
     }
-    public void Combat(/*GameObject enemyName*/)
+    public void Combat(GameObject enemyName)
     {
         if (!onCombat)
         {
@@ -121,10 +129,11 @@ public class LoadScene : MonoBehaviour
             escenaState.ScenePause(true); //true, se para
             pantalla.UnTint();
 
-            //preload.CombatOpponent(/*enemyName.name*/); //Pasem el nom
+            preload.CombatOpponent(enemyName); //Pasem el nom
 
             //save_posicion.save_LastPos();
             SceneManager.LoadScene("combat_scene", LoadSceneMode.Additive);
+
         }
 
     }
@@ -132,11 +141,13 @@ public class LoadScene : MonoBehaviour
     public void GameOver()
     {
         pantalla.UnTint();
-        save_posicion.save_LastPos();
+        //save_posicion.save_LastPos();
         //preload.move_player();
         //if (sceneName == "combate_pruevas"){ }
         SceneManager.LoadScene("GameOver");
     }
+
+
     //private void Position()
     //{
     //    Vector3 pos = protagonista.transform.position;

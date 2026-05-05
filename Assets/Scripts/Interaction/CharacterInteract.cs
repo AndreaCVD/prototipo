@@ -33,13 +33,16 @@ public class CharacterInteract : MonoBehaviour
             //Si no es null -> ha encontrado algo que tiene Interactable
             if (hitInfo.transform.gameObject.GetComponent<Interactable>() != null && !interaction)
             {
+                //Bool true asi no se sobreponen otras interacciones
+                interaction = true;    
+                
                 //Devuelve Obj que tiene Interactable
-                Debug.Log(hitInfo.transform.gameObject.GetComponent<Interactable>());
+                //Debug.Log(hitInfo.transform.gameObject.GetComponent<Interactable>());
                 interactable = hitInfo.transform.gameObject.GetComponent<Interactable>();
+
                 interactable.DetectObj(hitInfo.transform.gameObject);
                     
-                //Bool true asi no se sobreponen otras interacciones
-                interaction = true;
+
             }
                        
                 //Debug.Log("No tiene Ineteractable");

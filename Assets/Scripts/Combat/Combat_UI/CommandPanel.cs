@@ -4,7 +4,8 @@ using UnityEngine.UIElements;
 
 public class CommandPanel : MonoBehaviour
 {
-    [SerializeField] LoadScene loadScene;
+    private GameObject load_script;
+    private LoadScene loadScene;
     //[SerializeField] Preload preload;
     [SerializeField] CommandManager commandManager;
 
@@ -19,6 +20,12 @@ public class CommandPanel : MonoBehaviour
 
     void Start()
     {
+        if (load_script == null)
+        {
+            load_script = GameObject.Find("--SceneManagement--");
+            loadScene = load_script.GetComponent<LoadScene>();
+
+        }
         uIDocument = GetComponent<UIDocument>();
         root = uIDocument.rootVisualElement;
         allButtons = root.Query<VisualElement>(className: "combat_btns").ToList();
@@ -29,6 +36,7 @@ public class CommandPanel : MonoBehaviour
             btn.RegisterCallback<ClickEvent>(evt => {
                 if (btn.name == "opt_fue")
                 {
+                    Debug.Log("Llega aqui?");
                     Fuerza();
                 }
                 else if (btn.name == "opt_int")
@@ -41,14 +49,17 @@ public class CommandPanel : MonoBehaviour
                 }
                 else if (btn.name == "opt_run")
                 {
+                    Debug.Log("Llega aqui?");
                     Huir();
                 }
                 else if (btn.name == "opt_attack")
                 {
+
                     changeMenu("Attack");
                 }
                 else if (btn.name == "opt_goBack")
                 {
+                    Debug.Log("Llega aqui?");
                     changeMenu("Initial");
                 }
             });

@@ -12,13 +12,16 @@ public class CombatMonster : MonoBehaviour
     public Int2Val HP;
     public int damage;
     GameObject objLoadScene;
-    LoadScene load;
+    private LoadScene load;
+    private Preload preload;
     private void Start()
     {
         if (objLoadScene == null)
         {
             objLoadScene = GameObject.Find("--SceneManagement--");
             load = objLoadScene.GetComponent<LoadScene>();
+            preload = objLoadScene.GetComponent<Preload>();
+
             //save_posicion = GetComponent<personaje>();
         }
     }
@@ -138,7 +141,7 @@ public class CombatMonster : MonoBehaviour
                 //Guardar en preload la nueva constitucion
                 Debug.Log("HAS GANADO AL ENEMIGO");
                 //hay que destruir el obj del enemigo
-
+                preload.DestroyEnemy();
                 //Hablar con SceneManager -> LoadScene volver a la pantalla anterior
                 load.SalirCombate();
                 

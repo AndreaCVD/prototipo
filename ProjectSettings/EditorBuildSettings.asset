@@ -14,12 +14,14 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/combat_scene.unity
     guid: 7b59625fafe258a44802b7066431c748
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/combate_pruevas.unity
     guid: 7f3f975d67e5bef4d9ac8db85b779ebe
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/pruevas_prototipo.unity
     guid: 99c9720ab356a0642a771bea13969a05
   m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: a028e39953340324ca0ac3c1d91e7b7b, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+    com.unity.localization.settings: {fileID: 11400000, guid: 7a8750748930c6b4a93df8c8bf106dda, type: 2}
   m_UseUCBPForAssetBundles: 0

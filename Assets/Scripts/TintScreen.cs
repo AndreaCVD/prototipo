@@ -14,6 +14,7 @@ public class TintScreen : MonoBehaviour
     [SerializeField] float speed;
     public void Awake()
     {
+
         UnTint();
     }
     [ContextMenu("Tint")]

@@ -9,6 +9,7 @@ TagManager:
   - Puzzle
   - FinalPuzzle
   - Interact_Scene
+  - SueloPuzzle
   layers:
   - Default
   - TransparentFX

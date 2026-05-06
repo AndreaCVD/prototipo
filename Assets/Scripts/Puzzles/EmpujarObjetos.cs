@@ -8,12 +8,12 @@ public class EmpujarObjetos : MonoBehaviour
     private Vector3 destino;
 
     private LayerMask layerMask;
-    private bool puzzlefinished;
+    private bool puzzleFinished;
 
     void Start()
     {
         destino = transform.position; // Posición inicial
-        puzzlefinished = false;
+        puzzleFinished = false;
         layerMask = 1 << LayerMask.NameToLayer("FinPuzzle");
         //enviarVal(false);
     }
@@ -38,7 +38,7 @@ public class EmpujarObjetos : MonoBehaviour
     void OnCollisionEnter(Collision col)
     {
         // Si el jugador choca con este objeto y el puzzle no esta completado
-        if (col.gameObject.CompareTag("Player") && !enMovimiento && !puzzlefinished)
+        if (col.gameObject.CompareTag("Player") && !enMovimiento && !puzzleFinished)
         {
             // Dirección del empuje (basada en la posición del jugador)
             Vector3 direccion = (transform.position - col.transform.position).normalized;
@@ -71,8 +71,8 @@ public class EmpujarObjetos : MonoBehaviour
                         Debug.Log("El puzzle se ha completado");
                         destino = nuevaPos;
                         enMovimiento = true;
-                        puzzlefinished = true;
-                        enviarVal(true);
+                        puzzleFinished = true;
+                        enviarVal();
                     }
 
                 }
@@ -81,11 +81,19 @@ public class EmpujarObjetos : MonoBehaviour
 
             }
         }
+        if (col.gameObject.CompareTag("SueloPuzzle") && !enMovimiento)
+        {
+            //enMovimiento = true;
+            puzzleFinished = true;
+            Debug.Log("Suelo puzzle alcanzado");
+        }
 
     }
-    private void enviarVal(bool val)
+    private void enviarVal()
     {
         Interactable interact = this.GetComponent<Interactable>();
-        interact.PuzzleFinished(val);
+        interact.PuzzleFinished(true);
     }
+    //si encuentra suelo mazmorra (negro) se tiene que bloquear
+
 }

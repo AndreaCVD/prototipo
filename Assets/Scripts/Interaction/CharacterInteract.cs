@@ -19,7 +19,7 @@ public class CharacterInteract : MonoBehaviour
         //De dnd sale y adonde va
         ray = new Ray(pivot_personaje.transform.position, pivot_personaje.transform.forward);
 
-        Invoke(nameof(Interact), 2.0f);
+        Invoke(nameof(Interact), 1.0f);
     }
     public void Interact()
     {

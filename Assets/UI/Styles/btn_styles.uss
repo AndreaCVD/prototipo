@@ -1,8 +1,7 @@
 @import url("project://database/Assets/UI/Styles/general_colors.uss?fileID=7433441132597879392&guid=ad6a76f9ae4c3674d898b1a5433c7bf6&type=3#general_colors");
-
 .Btn {
-    width: 490px;
-    height: 90px;
+    width: 360px;
+    height: 60px;
     margin: 20px;
     padding: 4px;
     background-color: var(--color-black);
@@ -32,7 +31,7 @@
     position: relative;
     bottom: 8px;
     -unity-font-style: bold;
-    font-size: 40px;
+    font-size: 20px;
     -unity-text-align: middle-center;
     -unity-font-definition: var(--font-regular);
     transition-property: bottom, border-bottom-width, background-color;
@@ -52,7 +51,7 @@
     scale: 0.96;
 }
 
-#turno{
+#turno {
     -unity-font-definition: var(--font-regular);
     font-size: 60px;
 }

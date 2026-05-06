@@ -1,10 +1,10 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI/Styles/ingame_elements.uss?fileID=7433441132597879392&amp;guid=62f2e575c0f60374f90bba03685be99b&amp;type=3#ingame_elements" />
     <Style src="project://database/Assets/UI/Styles/general_colors.uss?fileID=7433441132597879392&amp;guid=ad6a76f9ae4c3674d898b1a5433c7bf6&amp;type=3#general_colors" />
-    <ui:VisualElement style="flex-grow: 1;">
+    <ui:VisualElement style="flex-grow: 1; display: none;">
         <ui:VisualElement name="UI_elements" style="flex-grow: 1; position: absolute; width: 100%; height: 100%; flex-direction: row; margin-top: 0; margin-bottom: 0; margin-left: 0; margin-right: 0; padding-top: 20px; padding-left: 40px; padding-bottom: 20px; padding-right: 40px;">
-            <ui:VisualElement name="player_side" style="flex-grow: 1; width: 50%; display: none;" />
-            <ui:VisualElement name="enemy_side" style="flex-grow: 1; width: 50%;">
+            <ui:VisualElement name="player_side" style="flex-grow: 1; width: 50%; display: flex;" />
+            <ui:VisualElement name="enemy_side" style="flex-grow: 1; width: 50%; display: flex;">
                 <ui:VisualElement name="heart" style="flex-grow: 1; height: 50%; flex-direction: column-reverse; align-items: flex-end;">
                     <ui:VisualElement name="int_life" class="heart" style="flex-grow: 0; flex-shrink: 0; background-image: url(&quot;project://database/Assets/Art/Interface/Vida-grafic.png?fileID=2800000&amp;guid=a72d0dc1a271e7c4d91c87b55152f2a9&amp;type=3#Vida-grafic&quot;); align-items: center; justify-content: center;">
                         <ui:IntegerField value="42" focusable="false" class="fuente-personalizada" style="width: 100%; height: 100%; -unity-text-align: middle-center; padding-bottom: 20px;" />
@@ -19,7 +19,7 @@
                     <ui:Label text="Label" name="turno" class="turno" style="flex-wrap: nowrap; white-space: normal; -unity-text-align: middle-center; width: 100%; height: 100%;" />
                 </ui:VisualElement>
                 <ui:VisualElement style="flex-grow: 1; height: 100%;" />
-                <ui:VisualElement name="combat_options" style="flex-grow: 1; align-items: center; justify-content: center; height: 100%; flex-direction: row; flex-wrap: wrap; align-self: center; align-content: auto;">
+                <ui:VisualElement name="combat_options" style="flex-grow: 1; align-items: center; justify-content: center; height: 100%; flex-direction: row; flex-wrap: wrap; align-self: center; align-content: auto; width: 100%;">
                     <ui:VisualElement style="flex-grow: 1; justify-content: center; align-items: center;">
                         <ui:Button text="Atacar" name="opt_attack" class="combat_btns combat_btn_color" style="margin-right: 0; margin-left: 0; margin-bottom: 0; margin-top: 0;" />
                         <ui:Button text="Fuerza" name="opt_fue" class="combat_btns combat_btn_color" style="display: none; margin-right: 0; margin-bottom: 0; margin-left: 0;" />
@@ -33,6 +33,22 @@
                 </ui:VisualElement>
             </ui:VisualElement>
             <ui:VisualElement style="flex-grow: 1; width: 100%;" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement style="flex-grow: 1; display: flex;">
+        <ui:VisualElement style="flex-grow: 1; height: 70%;" />
+        <ui:VisualElement style="flex-grow: 1; height: 30%; flex-direction: row; width: 100%; background-color: rgb(186, 186, 186); border-top-width: 5px; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0);">
+            <ui:VisualElement name="player_side" style="flex-grow: 1; width: 40%; height: 100%; flex-wrap: wrap;" />
+            <ui:VisualElement style="flex-grow: 1; width: 100%; height: 100%; flex-wrap: wrap; align-items: center; justify-content: center; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0;">
+                <ui:Button text="Button" style="width: 160px; height: 60px; background-image: url(&quot;project://database/Assets/Art/Interface/pixelart_buttons/button_1.png?fileID=21300000&amp;guid=f4537e443a1b5b94fa62141b300e4870&amp;type=3#button_1&quot;); border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="enemy_side" style="flex-grow: 1; width: 40%; height: 100%; flex-wrap: wrap; align-items: center; justify-content: center; align-content: center;">
+                <ui:VisualElement name="heart" style="flex-grow: 0; height: 50%; flex-direction: column-reverse; align-items: flex-end; align-self: center; align-content: auto; flex-shrink: 0;">
+                    <ui:VisualElement name="int_life" class="heart" style="flex-grow: 0; flex-shrink: 0; background-image: url(&quot;project://database/Assets/Art/Interface/Vida-grafic.png?fileID=2800000&amp;guid=a72d0dc1a271e7c4d91c87b55152f2a9&amp;type=3#Vida-grafic&quot;); align-items: center; justify-content: center;">
+                        <ui:IntegerField value="42" focusable="false" class="fuente-personalizada" style="width: 100%; height: 100%; -unity-text-align: middle-center; padding-bottom: 20px;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

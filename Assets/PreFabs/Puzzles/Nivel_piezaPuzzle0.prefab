@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3859146759075316617}
   - component: {fileID: 5209426863682793152}
   m_Layer: 0
-  m_Name: Cube_puzzle
+  m_Name: Nivel_piezaPuzzle0
   m_TagString: Puzzle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

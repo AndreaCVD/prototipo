@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7185529689369193912}
   m_Layer: 0
   m_Name: EndPuzzle
-  m_TagString: Untagged
+  m_TagString: FinalPuzzle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

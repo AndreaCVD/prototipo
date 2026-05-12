@@ -15,8 +15,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 69.99948
-    y: 289.19977
+    x: -312.40057
+    y: 175.59975
     width: 190
     height: 155
   IsDragging: 1
@@ -47,8 +47,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 337.9998
-    y: 130.79965
+    x: -44.40029
+    y: 17.19963
     width: 190
     height: 135
   IsDragging: 1
@@ -79,8 +79,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -210.00076
-    y: 316.39993
+    x: -592.40015
+    y: 202.79991
     width: 190
     height: 135
   IsDragging: 1
@@ -110,8 +110,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1057.202
-    y: 213.99957
+    x: 674.80365
+    y: 100.39955
     width: 190
     height: 135
   IsDragging: 0
@@ -142,8 +142,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 654.7994
-    y: 327.5999
+    x: 272.39917
+    y: 213.9999
     width: 240
     height: 160
   IsDragging: 1
@@ -173,8 +173,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 334.7997
-    y: 313.19986
+    x: -47.600243
+    y: 199.59984
     width: 190
     height: 135
   IsDragging: 1
@@ -233,8 +233,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 339.59976
-    y: 445.1999
+    x: -42.800316
+    y: 331.59995
     width: 190
     height: 135
   IsDragging: 1
@@ -265,12 +265,12 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 577.19965
-    y: 164.39954
+    x: 194.79935
+    y: 50.799515
     width: 190
     height: 80
   IsDragging: 1
-  IsSelected: 1
+  IsSelected: 0
   _functionName: Destroy
   _description: Para llamar a la funcion Destroy()
   ParentNodes:
@@ -291,8 +291,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1057.202
-    y: 346.79993
+    x: 674.80365
+    y: 233.1999
     width: 190
     height: 135
   IsDragging: 1

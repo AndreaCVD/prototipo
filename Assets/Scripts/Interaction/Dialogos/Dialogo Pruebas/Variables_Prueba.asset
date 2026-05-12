@@ -16,7 +16,7 @@ MonoBehaviour:
   - _name: puzzleDone
     _type: 0
     _saveToPrefs: 1
-    _boolValue: 0
+    _boolValue: 1
     _intValue: 0
     _floatValue: 0
     _stringValue: 

@@ -12,13 +12,16 @@ public class CombatMonster : MonoBehaviour
     public Int2Val HP;
     public int damage;
     GameObject objLoadScene;
-    LoadScene load;
+    private LoadScene load;
+    private Preload preload;
     private void Start()
     {
         if (objLoadScene == null)
         {
             objLoadScene = GameObject.Find("--SceneManagement--");
             load = objLoadScene.GetComponent<LoadScene>();
+            preload = objLoadScene.GetComponent<Preload>();
+
             //save_posicion = GetComponent<personaje>();
         }
     }
@@ -38,25 +41,75 @@ public class CombatMonster : MonoBehaviour
         HP = new Int2Val (contitucion, contitucion);
     }
 
-    public void Fuerza(CombatMonster target) //Enemigo
+    public void Fuerza(CombatMonster target, int dice) //Enemigo
     {
         //Este daño al enemigo
-        //int constitucion = personaje.stats.Get(PersonajesStats.Constitucion);
-        target.TakeDamage(player.stats.Get(PersonajesStats.Fuerza)); //el target recibe daño de la fuerza
+        int stat_enemigo = player.stats.Get(PersonajesStats.Fuerza);
+        //Clase Armadura oponente
+        int armadura = target.player.stats.Get(PersonajesStats.ClaseArmadura);
+        
+        //Si Dice + Fuerza no supera AC del enemigo, no se hace el ataque
+        if ( (stat_enemigo+ dice) >= armadura)
+        {
+            //Escibimos Debug.Log
+            Commando(stat_enemigo, armadura, dice);
+            //Target recibe daño de la fuerza
+            target.TakeDamage(stat_enemigo + dice); 
+        }
+        else
+        {
+            Debug.Log("No has llegado al AC del enemigo");
+        }
     }
-    public void Inteligencia(CombatMonster target) //Enemigo
+    public void Inteligencia(CombatMonster target, int dice) //Enemigo
     {
         //Este daño al enemigo
-        //int constitucion = personaje.stats.Get(PersonajesStats.Constitucion);
-        target.TakeDamage(player.stats.Get(PersonajesStats.Inteligencia)); //el target recibe daño de la fuerza
-    }
-    public void Carisma(CombatMonster target) //Enemigo
-    {
-        //Este daño al enemigo
-        //int constitucion = personaje.stats.Get(PersonajesStats.Constitucion);
-        target.TakeDamage(player.stats.Get(PersonajesStats.Carisma)); //el target recibe daño de la fuerza
-    }
+        int stat_enemigo = player.stats.Get(PersonajesStats.Inteligencia);
+        //Clase Armadura oponente
+        int armadura = target.player.stats.Get(PersonajesStats.ClaseArmadura);
 
+        //Si Dice + Inteligencia no supera AC del enemigo, no se hace el ataque
+        if ((stat_enemigo + dice) >= armadura)
+        {
+            //Escibimos Debug.Log
+            Commando(stat_enemigo, armadura, dice);
+            //Target recibe daño de la fuerza
+            target.TakeDamage(stat_enemigo + dice);
+        }
+        else
+        {
+            Debug.Log("No has llegado al AC del enemigo");
+        }
+    }
+    public void Carisma(CombatMonster target, int dice) //Enemigo
+    {
+        //Este daño al enemigo
+        int stat_enemigo = player.stats.Get(PersonajesStats.Carisma);
+        //Clase Armadura oponente
+        int armadura = target.player.stats.Get(PersonajesStats.ClaseArmadura);
+
+        //Si Dice + Carisma no supera AC del enemigo, no se hace el ataque
+        if ((stat_enemigo + dice) >= armadura)
+        {
+            //Escibimos Debug.Log
+            Commando(stat_enemigo, armadura, dice);
+            //Target recibe daño de la fuerza
+            target.TakeDamage(stat_enemigo + dice);
+        }
+        else
+        {
+            Debug.Log("No has llegado al AC del enemigo");
+        }
+    }
+    private void Commando(int stat_enemigo, int armadura, int dice)
+    {
+        Debug.Log("AC enemigo = " + armadura);
+        Debug.Log("Stat = " + stat_enemigo + "| Dice = " + dice + "| Ataque total  = " + (stat_enemigo + dice));
+    }
+    public int FuerzaCurrent()
+    {
+        return player.stats.Get(PersonajesStats.Fuerza);
+    }
     public void TakeDamage(int damage)
     {
 
@@ -68,25 +121,37 @@ public class CombatMonster : MonoBehaviour
         //guardado.guardar_stats(player, damage); //guardar estats
         //Debug.Log(player.stats.values[3].value); 
 
-        Debug.Log(player.namePers + " ha sido atacado! : "+ "// HP : " + HP.current.ToString());
+        Debug.Log(player.namePers + " ha sido atacado! : "+ "// HP RESTANTE : " + HP.current.ToString());
 
         if (HP.current <= 0)
         {
             HP.current = 0;
+            player.stats.values[3].value = 0;
             Debug.Log("Derrotado : " + player.namePers);
             //Si es el prota es GAMEOVER
             if (player.namePers == "Prota")
             {
-                load.GameOver();
+                //load.GameOver();
+                Debug.Log("GAME OVER");
+                load.SalirCombate();
             }
-            else
+            else //Si pierde el enemigo:
             {
-            //Si pierde el enemigo:
-            //Guardar en preload la nueva constitucion
-            //Hablar con SceneManager -> LoadScene volver a la pantalla anterior
-            load.EscenaAnterior();
+
+                //Guardar en preload la nueva constitucion
+                Debug.Log("HAS GANADO AL ENEMIGO");
+                //hay que destruir el obj del enemigo
+                preload.DestroyEnemy();
+                //Hablar con SceneManager -> LoadScene volver a la pantalla anterior
+                load.SalirCombate();
+                
             }
+
             //guardado.alguien_eliminado(player); //enviara el personaje que se elimine
+        }
+        else
+        {
+            Debug.Log("FIN TURNO");
         }
     }
 }

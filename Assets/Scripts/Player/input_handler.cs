@@ -15,7 +15,7 @@ public class InputHandler : MonoBehaviour
     private string verticalInput = "Vertical";
     //private KeyCode jumpKey = KeyCode.Space;
 
-    private void Awake()
+    private void Start()
     {
         scenePaused = false;
         characterMovement = GetComponent<player_movement>();
@@ -25,7 +25,7 @@ public class InputHandler : MonoBehaviour
     void Update()
     {
         //si la escena no esta pausada
-        if ( scenePaused == false)
+        if ( scenePaused == false) 
         {
             // Get input for horizontal and vertical axes (e.g., A/D, W/S, Arrow keys, or joystick axes)
             moveVector.x = Input.GetAxis(horizontalInput);
@@ -41,6 +41,11 @@ public class InputHandler : MonoBehaviour
                 Debug.Log("Spacebar Pressed");
             }
 
+        }
+        else
+        {
+            moveVector.x = 0;
+            moveVector.y = 0;
         }
     }
     public void ScenePause(bool newState)

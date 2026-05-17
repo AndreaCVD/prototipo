@@ -7,6 +7,9 @@ TagManager:
   - Ground
   - Enemy
   - Puzzle
+  - FinalPuzzle
+  - Interact_Scene
+  - SueloPuzzle
   layers:
   - Default
   - TransparentFX
@@ -15,7 +18,7 @@ TagManager:
   - Water
   - UI
   - DiceRoller
-  - 
+  - FinPuzzle
   - 
   - 
   - 
@@ -43,6 +46,9 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Dice
+    uniqueID: 1934750759
     locked: 0
   m_RenderingLayers:
   - Default

@@ -1,0 +1,48 @@
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
+using System.Collections.Generic;
+
+public class btn_events : MonoBehaviour
+{
+    [SerializeField] UIDocument uIDocument;
+    private VisualElement root;
+
+    [Header("Degradado pantalla")]
+    [SerializeField] TintScreen pantalla;
+
+    void Start()
+    {
+        root = uIDocument.rootVisualElement;
+        List<VisualElement> allButtons = root.Query<VisualElement>(className: "Btn").ToList();
+
+        foreach (VisualElement btn in allButtons)
+        {
+
+            btn.RegisterCallback<ClickEvent>(evt => {
+                if (btn.name == "start_btn")
+                {
+                    ChangeSceneUI("first_floor");
+                }
+                else if(btn.name == "options_btn")
+                {
+                    ChangeSceneUI("pruevas_prototipo");
+                }
+                else if (btn.name == "exit_btn")
+                {
+                    #if UNITY_EDITOR
+                        UnityEditor.EditorApplication.isPlaying = false;
+                    #else
+                        Application.Quit();
+                    #endif
+                }
+            });
+        }
+    }
+
+    public void ChangeSceneUI(string sceneName)
+    {
+        if (pantalla != null) pantalla.UnTint();
+        SceneManager.LoadScene(sceneName);
+    }
+}

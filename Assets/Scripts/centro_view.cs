@@ -17,13 +17,20 @@ public class centro_view : MonoBehaviour
     [SerializeField] TMP_Text carisma;
     [SerializeField] TMP_Text constitucion;
 
-
+    private string h = "protagonista.stats.Get(PersonajesStats.Constitucion).ToString()";
+    void Awake()
+    {
+        //protagonista.stats.values[3].value = 12;
+    }
     void Start()
     {
+
+
         //Seteamos valores, int -> string
         int f = protagonista.stats.Get(PersonajesStats.Fuerza);
         int i = protagonista.stats.Get(PersonajesStats.Inteligencia);
         int c = protagonista.stats.Get(PersonajesStats.Carisma);
+        //h = protagonista.stats.Get(PersonajesStats.Constitucion).ToString();
         //int h = protagonista.stats.Get(PersonajesStats.Constitucion);
 
         if (f > 0) //positivo
@@ -44,12 +51,24 @@ public class centro_view : MonoBehaviour
             //fuerza.text = "+" + protagonista.stats.Get(PersonajesStats.Fuerza).ToString();
         }
         else { SetCarisma("-"); } //negativo
-
-        constitucion.text = protagonista.stats.Get(PersonajesStats.Constitucion).ToString();
+        //if (h > 0) //positivo
+        //{
+        //    SetCarisma("+");
+        //    //fuerza.text = "+" + protagonista.stats.Get(PersonajesStats.Fuerza).ToString();
+        //}
+        //else { SetCarisma(""); } //negativo
+        //constitucion.text = protagonista.stats.Get(PersonajesStats.Constitucion).ToString();
 
         //Seteamos el canva
         grup = GetComponent<CanvasGroup>();
 
+    }
+    void Update()
+    {
+        if (constitucion.text != h)
+        {
+            SetConstitucion("");
+        }
     }
     void SetFuerza(string text)
     {
@@ -66,6 +85,10 @@ public class centro_view : MonoBehaviour
     void SetCarisma(string text)
     {
         carisma.text = text + protagonista.stats.Get(PersonajesStats.Carisma).ToString();
+    }
+    void SetConstitucion(string text)
+    {
+        constitucion.text = text + protagonista.stats.Get(PersonajesStats.Constitucion).ToString();
     }
 
     //Aqui se reciben las nuevas opacidades

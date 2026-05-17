@@ -1,0 +1,57 @@
+@import url("project://database/Assets/UI/Styles/general_colors.uss?fileID=7433441132597879392&guid=ad6a76f9ae4c3674d898b1a5433c7bf6&type=3#general_colors");
+.Btn {
+    width: 360px;
+    height: 60px;
+    margin: 20px;
+    padding: 4px;
+    background-color: var(--color-black);
+    border-width: 2px;
+    border-color: var(--color-antique-white);
+    border-radius: 12px;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+    transition-property: scale;
+    transition-duration: 0.2s;
+}
+
+.text {
+    width: 95%;
+    height: 80%;
+    background-color: var(--color-antique-white);
+    color: var(--color-black);
+    border-top-left-radius: 45px;
+    border-bottom-right-radius: 45px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-width: 2px;
+    border-color: var(--color-antique-white);
+    border-bottom-width: 10px;
+    border-bottom-color: var(--color-white);
+    position: relative;
+    bottom: 8px;
+    -unity-font-style: bold;
+    font-size: 20px;
+    -unity-text-align: middle-center;
+    -unity-font-definition: var(--font-regular);
+    transition-property: bottom, border-bottom-width, background-color;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-out-cubic;
+}
+
+.Btn:hover .text {
+    bottom: -2px;
+    border-bottom-width: 2px;
+    background-color: var(--color-warm-tan);
+    border-color: var(--color-warm-tan);
+    color: var(--color-antique-white);
+}
+
+.Btn:active {
+    scale: 0.96;
+}
+
+#turno {
+    -unity-font-definition: var(--font-regular);
+    font-size: 60px;
+}

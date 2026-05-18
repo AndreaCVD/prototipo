@@ -9,11 +9,10 @@ using TMPro;
 
 public class PuzzleZone : MonoBehaviour
 {
-    public bool playerInside;
+    public bool playerInside;    
+    public bool restart;
     //Canvas
     [SerializeField] CanvasGroup grup;
-    //Textos
-    //[SerializeField] TMP_Text input;
 
     [Header("Listas")]
     public List<GameObject> Children = new List<GameObject>();
@@ -21,12 +20,12 @@ public class PuzzleZone : MonoBehaviour
     [SerializeField] List<GameObject> PiezasPuzzles = new List<GameObject>();
     [SerializeField] List<GameObject> SitioReinicio = new List<GameObject>();
 
-    public bool restart;  // To track if the player presses the jump key
+
 
     void Start()
     {
         playerInside = false;
-        //input.text = "R - Para reiniciar el puzzle";
+
         opacidad(0f);
         //Localizar los primeros hijos
         foreach (Transform child in transform)
@@ -55,22 +54,10 @@ public class PuzzleZone : MonoBehaviour
         }
 
     }
-    void OnTriggerEnter(Collider other)
+    private void FixedUpdate()
     {
-        if (other.tag == "Player")
+        if (playerInside)
         {
-            Debug.Log("Player ha entrado en la zona");
-            Debug.Log("1. Dar opcion de reseteo");
-            //Enseñar canvas
-            opacidad(1f);
-        }
-
-    }
-    void OnTriggerStay(Collider other)
-    {
-        if (other.tag == "Player")
-        {
-            
             // BOTON REINICIO 
             restart = Input.GetKeyDown(KeyCode.R);
             //Mirar si barra espaciadora esta activada
@@ -79,6 +66,37 @@ public class PuzzleZone : MonoBehaviour
                 Debug.Log("Reinicio");
                 RestartPuzzle();
             }
+        }
+    }
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            Debug.Log("Player ha entrado en la zona");
+            Debug.Log("1. Dar opcion de reseteo");
+            //Enseñar canvas
+            
+
+            if (!playerInside)
+            {
+                playerInside = true;
+                opacidad(1f);
+            }
+            else
+            {
+                playerInside = false;
+                opacidad(0f);
+
+            }
+        }
+
+    }
+    void OnTriggerStay(Collider other)
+    {
+        if (other.tag == "Player")
+        {
+            
+
 
 
         }
@@ -86,7 +104,7 @@ public class PuzzleZone : MonoBehaviour
     void OnTriggerExit()
     {
         //Hablar con preload para guardar posiciones si el puzzle se ha cumplido
-        opacidad(0f);
+        //opacidad(0f);
 
     }
 

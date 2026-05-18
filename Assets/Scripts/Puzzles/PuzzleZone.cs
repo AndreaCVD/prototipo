@@ -4,9 +4,18 @@ using System;
 using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class PuzzleZone : MonoBehaviour
 {
+    public bool playerInside;
+    //Canvas
+    [SerializeField] CanvasGroup grup;
+    //Textos
+    //[SerializeField] TMP_Text input;
+
+    [Header("Listas")]
     public List<GameObject> Children = new List<GameObject>();
 
     [SerializeField] List<GameObject> PiezasPuzzles = new List<GameObject>();
@@ -16,7 +25,9 @@ public class PuzzleZone : MonoBehaviour
 
     void Start()
     {
-
+        playerInside = false;
+        //input.text = "R - Para reiniciar el puzzle";
+        opacidad(0f);
         //Localizar los primeros hijos
         foreach (Transform child in transform)
         {
@@ -50,11 +61,10 @@ public class PuzzleZone : MonoBehaviour
         {
             Debug.Log("Player ha entrado en la zona");
             Debug.Log("1. Dar opcion de reseteo");
-
-
-
+            //Enseñar canvas
+            opacidad(1f);
         }
-        
+
     }
     void OnTriggerStay(Collider other)
     {
@@ -70,13 +80,14 @@ public class PuzzleZone : MonoBehaviour
                 RestartPuzzle();
             }
 
-            //Opacidad(1f)
+
         }
     }
-    void OnTriggerLeave()
+    void OnTriggerExit()
     {
         //Hablar con preload para guardar posiciones si el puzzle se ha cumplido
-        //Opacidad(0f)
+        opacidad(0f);
+
     }
 
     void RestartPuzzle()
@@ -86,7 +97,13 @@ public class PuzzleZone : MonoBehaviour
             GameObject pieza = PiezasPuzzles[i];
             GameObject trans = SitioReinicio[i];
 
-            //pieza.transform = 
+            pieza.transform.position = new Vector3(trans.transform.position.x, trans.transform.position.y, trans.transform.position.z );
+            Debug.Log(pieza + "- se ha movido a - " + trans);
         }
+    }
+    //Aqui se reciben las nuevas opacidades
+    public void opacidad(float nueva_opacidad)
+    {
+        grup.alpha = Mathf.Lerp(0f, nueva_opacidad, 5f);
     }
 }

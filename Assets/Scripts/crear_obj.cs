@@ -48,7 +48,7 @@ public class crear_obj : MonoBehaviour
         else
         {
             GameObject dialog = GameObject.Find("--DialogManager--");
-            dialog.name = "ScreenTint";
+            dialog.name = "--DialogManager--";
             DontDestroyOnLoad(dialog);
         }
     }

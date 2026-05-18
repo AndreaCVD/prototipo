@@ -9,6 +9,7 @@ using TMPro;
 
 public class PuzzleZone : MonoBehaviour
 {
+    [SerializeField] GameObject player;
     public bool playerInside;    
     public bool restart;
     //Canvas
@@ -19,11 +20,13 @@ public class PuzzleZone : MonoBehaviour
 
     [SerializeField] List<GameObject> PiezasPuzzles = new List<GameObject>();
     [SerializeField] List<GameObject> SitioReinicio = new List<GameObject>();
-
+    [SerializeField] Transform pos_player;
 
 
     void Start()
     {
+        player = GameObject.Find("personaje");
+
         playerInside = false;
 
         opacidad(0f);
@@ -45,7 +48,11 @@ public class PuzzleZone : MonoBehaviour
                 {
                     SitioReinicio.Add(b);//Posicion Original
                 }
-                else       
+                else if (b.name.Contains("player"))
+                {
+                    pos_player = b.transform;
+                }
+                else if (b.name.Contains("_"))
                 {
                     PiezasPuzzles.Add(b);//Piezas
                 }
@@ -72,11 +79,8 @@ public class PuzzleZone : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            Debug.Log("Player ha entrado en la zona");
-            Debug.Log("1. Dar opcion de reseteo");
-            //Enseñar canvas
-            
-
+             //Enseñar canvas
+           
             if (!playerInside)
             {
                 playerInside = true;
@@ -91,25 +95,15 @@ public class PuzzleZone : MonoBehaviour
         }
 
     }
-    void OnTriggerStay(Collider other)
+
+    public void PositionPlayer()
     {
-        if (other.tag == "Player")
-        {
-            
-
-
-
-        }
-    }
-    void OnTriggerExit()
-    {
-        //Hablar con preload para guardar posiciones si el puzzle se ha cumplido
-        //opacidad(0f);
-
+        player.transform.position = new Vector3(pos_player.position.x, pos_player.position.y, pos_player.position.z);
     }
 
     void RestartPuzzle()
     {
+        //Piezas
         for (int i = 0; i < PiezasPuzzles.Count; i++)
         {
             GameObject pieza = PiezasPuzzles[i];
@@ -118,6 +112,8 @@ public class PuzzleZone : MonoBehaviour
             pieza.transform.position = new Vector3(trans.transform.position.x, trans.transform.position.y, trans.transform.position.z );
             Debug.Log(pieza + "- se ha movido a - " + trans);
         }
+        //Jugador
+        PositionPlayer();
     }
     //Aqui se reciben las nuevas opacidades
     public void opacidad(float nueva_opacidad)

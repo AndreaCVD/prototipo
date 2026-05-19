@@ -21,6 +21,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-de-DE
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3d94a5e37bd9b984bab36efc7ae7d877
+    m_Address: Cofre_de-DE
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de-DE
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f36f0721cf44fd04fbd8263d782cdbcb
     m_Address: DemoNodeGraph_de-DE
     m_ReadOnly: 1

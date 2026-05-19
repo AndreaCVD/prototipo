@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4160010429334866998}
   - component: {fileID: 2806444937246612313}
   - component: {fileID: 186535808222658370}
+  - component: {fileID: 2097209248022267400}
   - component: {fileID: 6584073865269333082}
   - component: {fileID: 9093160144732825013}
   - component: {fileID: 7369219175338903835}
@@ -84,6 +85,19 @@ MonoBehaviour:
   moveVector: {x: 0, y: 0, z: 0}
   Jump: 0
   scenePaused: 0
+--- !u!114 &2097209248022267400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 446173625170946264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9d564e6156226940a3c4f6c8ef7df8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Llaves: []
 --- !u!114 &6584073865269333082
 MonoBehaviour:
   m_ObjectHideFlags: 0

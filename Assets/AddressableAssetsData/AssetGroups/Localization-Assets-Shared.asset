@@ -25,6 +25,11 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d922aef77150fda4d9b79c911ee605ed
+    m_Address: Assets/Localization/Cofre/Cofre Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e49352c0d5424b2428d61347135a0f1a
     m_Address: Assets/Localization/Cube_Prueva/Cube_Prueva Shared Data.asset
     m_ReadOnly: 1

@@ -10,6 +10,8 @@ TagManager:
   - FinalPuzzle
   - Interact_Scene
   - SueloPuzzle
+  - Llave
+  - Cofre
   layers:
   - Default
   - TransparentFX

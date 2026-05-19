@@ -13,7 +13,9 @@ public class Interactable : MonoBehaviour
     private LoadScene load;
     private Preload preload;
     private GameObject script_load;
-
+    //Para encontrar los scripts de Inventario
+    private Inventario inventario;
+    private GameObject script_inventario;
     //Para encontrar los scripts de DialogManager
     private Dialog dialog;
     private GameObject script_dialog;
@@ -32,6 +34,11 @@ public class Interactable : MonoBehaviour
         {
             script_dialog = GameObject.Find("--DialogManager--");
             dialog = script_dialog.GetComponent<Dialog>();
+        }
+        if (script_inventario == null)
+        {
+            script_inventario = GameObject.Find("personaje");
+            inventario = script_inventario.GetComponent<Inventario>();
         }
     }
     public void Interact()
@@ -55,6 +62,10 @@ public class Interactable : MonoBehaviour
             case "Interact_Scene":
                 Debug.Log("Interaccionable por dialogo");
                 dialog.EmpezarDialogo(dialogo_obj, a);
+                break;
+            case "Cofre":
+                Debug.Log("This is a Cofre");
+                inventario.CofreKey(a, dialogo_obj);
                 break;
             default:
                 Debug.Log("No hay nada");

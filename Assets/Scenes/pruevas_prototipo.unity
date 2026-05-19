@@ -1303,9 +1303,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3f9a4500e8aae54a8ce6f109d486905, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obj_actual: {fileID: 161758122}
-  centro: {fileID: 572508699}
-  animacion: {fileID: 161758128}
 --- !u!111 &161758128
 Animation:
   m_ObjectHideFlags: 0
@@ -4704,7 +4701,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!225 &572508694
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -4812,10 +4809,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3adabc2e9461aa4694274f73da35b57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grup: {fileID: 572508694}
-  op_fuerza: {fileID: 1887805666}
-  op_intel: {fileID: 748062727}
-  op_cari: {fileID: 2071764881}
 --- !u!1001 &586843471
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9358,11 +9351,6 @@ Transform:
   - {fileID: 619123610}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1137760704 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4837695691031659835, guid: e8318014be2a6564483413a01d82d5e4, type: 3}
-  m_PrefabInstance: {fileID: 1462352814947350004}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1142201645
 GameObject:
   m_ObjectHideFlags: 0
@@ -16600,7 +16588,7 @@ Transform:
   m_GameObject: {fileID: 2071291346}
   serializedVersion: 2
   m_LocalRotation: {x: 0.23911765, y: 0.3696438, z: -0.09904577, w: 0.89239913}
-  m_LocalPosition: {x: -31.97, y: 23.2, z: -21.73}
+  m_LocalPosition: {x: -34.02, y: 25.48, z: -17.82}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -18728,7 +18716,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d61b7bc671069ed429c0d29d58124cac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FinalPuzzle: {fileID: 1137760704}
+  player: {fileID: 0}
+  playerInside: 0
+  restart: 0
+  grup: {fileID: 0}
+  Children: []
+  PiezasPuzzles: []
+  SitioReinicio: []
+  pos_player: {fileID: 0}
 --- !u!224 &7532875825681605188
 RectTransform:
   m_ObjectHideFlags: 0

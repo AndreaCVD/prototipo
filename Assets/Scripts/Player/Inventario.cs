@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class Inventario : MonoBehaviour
 {
+    [SerializeField] Parameters prota;
     //Para encontrar los scripts de DialogManager
     private Dialog dialog;
     private GameObject script_dialog;
@@ -12,6 +13,7 @@ public class Inventario : MonoBehaviour
 
     private void Start()
     {
+        //prota.Inventario.Clear();
         if (script_dialog == null)
         {
             script_dialog = GameObject.Find("--DialogManager--");
@@ -28,13 +30,17 @@ public class Inventario : MonoBehaviour
         if (other.gameObject.tag == "Llave")
         {
             //posible_llave = other.gameObject;
-            Llaves.Add(other.gameObject.name);
+            //Llaves.Add(other.gameObject.name);
+            //prota.modelPrefab
+            prota.Inventario.Add(other.gameObject.name);
             Destroy(other.gameObject);
         }
     }
 
     public void CofreKey(GameObject cofre, cherrydev.DialogNodeGraph dialogo_obj)
     {
+        Llaves = prota.Inventario;
+        //List<string> listaB = new List<string>(listaA);
         bool keyFound = false;
         //Leer el nombre de este cofre
         string nombre = this.name; //Prota es THIS

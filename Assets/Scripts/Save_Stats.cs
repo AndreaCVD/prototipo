@@ -10,11 +10,18 @@ public class Save_Stats : MonoBehaviour
     [Header("Personaje")]
     public int vida_prota;
     public int vida_protaCambio;
-    Vector3 posicion_prota;
 
     //1. Declaro la variable para el objeto Game Manager
     private GameObject gameManager;
 
+    private void Awake()
+    {
+        //Setear los valores para cada vez
+
+        //Player
+        playerPersonaje.Inventario.Clear(); //Vaciamos el Inventario
+        //playerPersonaje.stats.values[]
+    }
     void Start()
     {
         int vida_prota = playerPersonaje.stats.Get(PersonajesStats.Constitucion);

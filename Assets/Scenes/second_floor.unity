@@ -1973,7 +1973,7 @@ PrefabInstance:
     - target: {fileID: 1942295723155004613, guid: ca28d6627cc19d84893b1c16657bf7d9, type: 3}
       propertyPath: destroyObjs
       value: 
-      objectReference: {fileID: 7504769943272521612}
+      objectReference: {fileID: 0}
     - target: {fileID: 1942295723155004613, guid: ca28d6627cc19d84893b1c16657bf7d9, type: 3}
       propertyPath: protagonista
       value: 
@@ -3149,23 +3149,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c897a4dddd7061f4292b1cb900937df4, type: 3}
---- !u!1 &5813735079108692484
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7504769943272521611}
-  - component: {fileID: 7504769943272521612}
-  m_Layer: 0
-  m_Name: --WorldManagement--
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1001 &6375450260528934756
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3280,37 +3263,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69d2d316d2a5aaa479974c5fd0614c9c, type: 3}
---- !u!4 &7504769943272521611
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5813735079108692484}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 32.34513, y: -14.314364, z: 41.05336}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7504769943272521612
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5813735079108692484}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e4b45cc0e58ae0243b8724d93c921438, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 7081842167822430468, guid: e1e382eeb87f205439904cd395ba77a9, type: 3}
-  preloadScript: {fileID: 4036775137380825858, guid: 0a1692f5f48d672428f108a2d4c16fbc, type: 3}
-  screenTint: {fileID: 7663525706672394598, guid: 459b944f305510f4c837797037447397, type: 3}
-  dialog: {fileID: 3726092340330504558, guid: 3848a681804d73d4fb34add03acbdab0, type: 3}
 --- !u!1001 &7826614722561219910
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3380,7 +3332,6 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 7504769943272521611}
   - {fileID: 28596013}
   - {fileID: 1521476942}
   - {fileID: 685384195}

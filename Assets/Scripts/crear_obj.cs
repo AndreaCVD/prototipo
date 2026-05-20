@@ -8,6 +8,7 @@ public class crear_obj : MonoBehaviour
     [SerializeField] GameObject preloadScript;
     [SerializeField] GameObject screenTint;
     [SerializeField] GameObject dialog;
+    [SerializeField] GameObject saveInfo;
     //[SerializeField] Preload preload;
 
     void Awake()
@@ -27,6 +28,18 @@ public class crear_obj : MonoBehaviour
         //    DontDestroyOnLoad(nuevoObj);
 
         //}
+        if (!GameObject.Find("-- Save Info --") && !GameObject.Find("-- Save Info --(Clone)"))
+        {
+            GameObject nuevoObj = Instantiate(saveInfo);
+            nuevoObj.name = "-- Save Info --";
+            DontDestroyOnLoad(nuevoObj);
+        }
+        else
+        {
+            GameObject x = GameObject.Find("-- Save Info --");
+            x.name = "-- Save Info --";
+            DontDestroyOnLoad(x);
+        }
         if (!GameObject.Find("ScreenTint") && !GameObject.Find("ScreenTint(Clone)"))
         {
             GameObject nuevoObj = Instantiate(screenTint);

@@ -54,6 +54,8 @@ public class Parameters : ScriptableObject
 {
     public string namePers;
     public ValueBlock stats;
+    
+    public List<string> Inventario = new List<string>();
 
     public GameObject modelPrefab;
     public Sprite art;
@@ -65,4 +67,5 @@ public class Parameters : ScriptableObject
         stats = new ValueBlock();
         stats.InitPersonaje();
     }
+
 }

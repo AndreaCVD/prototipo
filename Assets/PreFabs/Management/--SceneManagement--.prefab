@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4557602514861464371}
   - component: {fileID: 4636500077556328165}
   - component: {fileID: 1942295723155004613}
-  - component: {fileID: 7755713674092758166}
   - component: {fileID: 8228760125869817717}
   m_Layer: 0
   m_Name: --SceneManagement--
@@ -67,21 +66,6 @@ MonoBehaviour:
   escenaState: {fileID: 0}
   preload: {fileID: 0}
   destroyObjs: {fileID: 0}
---- !u!114 &7755713674092758166
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5107496890064737642}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae2af2d79b9c39a4d817bd6894acd09e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerPersonaje: {fileID: 11400000, guid: f0233a249cd1f2b43a3d8f04e1ad2bf2, type: 2}
-  vida_prota: 0
-  vida_protaCambio: 0
 --- !u!114 &8228760125869817717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -94,5 +78,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c72389183d69674ab0699d08e6131a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Puzzles_Pruevas: 
+  dialog: {fileID: 0}
+  Puertas: []
+  ListaPuzzles: []
   NameOpponent: 
+  enemigo: {fileID: 0}

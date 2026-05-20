@@ -3,16 +3,23 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.UIElements; // Imprescindible para UI Toolkit
+using System.Linq; //Comparacion de Listas
 
 public class stats_UI : MonoBehaviour
 {
     [Header("Ficha personaje")]
-    public Parameters protagonista;
+    [SerializeField] Parameters protagonista;
 
     private VisualElement root;
     //ref del UI
     private IntegerField fieldFUE, fieldINT, fieldCAR, fieldLIFE;
+    
+   // [SerializeField] TMP_Text texto_inventario;
+    [SerializeField] GameObject prefabElemento; // Arrastra el Text prefab aquí en el inspector
+    public Transform contenedor; // Arrastra el "ContenedorLista" del Canvas aquí
 
+    private List<string> aux = new List<string>();
+    // var listaX;
     private void OnEnable()
     {
         var uiDocument = GetComponent<UIDocument>();
@@ -42,7 +49,10 @@ public class stats_UI : MonoBehaviour
 
             SetCarisma(c);
 
+        //SetInventario();
+        aux = new List<string>(protagonista.Inventario);
     }
+
     void Update()
     {
         int aux = protagonista.stats.Get(PersonajesStats.Constitucion);
@@ -50,6 +60,32 @@ public class stats_UI : MonoBehaviour
         {
             SetConstitucion(aux);
         }
+
+        bool x = areListEqual();
+        if (!x)
+        {
+            SetInventario(/*protagonista.Inventario*/);
+        }
+    }
+    bool areListEqual()
+    {
+        var x = new List<string>(protagonista.Inventario);
+        //Si  no son iguales de largo entonces estaran mal
+        Debug.Log(aux.Count);
+        Debug.Log(x.Count);
+        if (aux.Count != x.Count) return false;
+        
+        //Si son del mismo tamaño
+        for (int i = 0; i < x.Count; i++)
+        {
+            if (x[i] != aux[i])
+            {
+                Debug.Log("The " + i.ToString() + "th character is different.");
+                return false;
+            }
+        }
+
+        return true;
     }
     void SetFuerza(int num)
     {
@@ -71,11 +107,28 @@ public class stats_UI : MonoBehaviour
         fieldLIFE.value = num;
 
     }
+    void SetInventario(/*List<string> listaX*/)
+    {
+        List<string> inv = new List<string>(protagonista.Inventario);
+        Debug.Log(inv);
+        //Primero destruimos todos los hijos
+        foreach (Transform child in contenedor)
+        {
+            Destroy(child.gameObject);
+        }
+        //Volvemos a llenar todo
+        foreach (string dato in inv)
+        {
+            // 1. Clonar el prefab
+            GameObject nuevoElemento = Instantiate(prefabElemento, contenedor);
 
-    //Aqui se reciben las nuevas opacidades
-    //public void opacidad(float nueva_opacidad)
-    //{
-    //    grup.alpha = Mathf.Lerp(0f, nueva_opacidad, 5f);
-    //}
+            // 2. Asignar el texto
+            Text textoComponente = nuevoElemento.GetComponent<Text>();
+            if (textoComponente != null)
+            {
+                textoComponente.text = dato;
+            }
+        }
+    }
 
 }

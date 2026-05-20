@@ -33,13 +33,16 @@ public class Inventario : MonoBehaviour
             //Llaves.Add(other.gameObject.name);
             //prota.modelPrefab
             prota.Inventario.Add(other.gameObject.name);
+            Llaves = new List<string>(prota.Inventario);
             Destroy(other.gameObject);
         }
     }
 
     public void CofreKey(GameObject cofre, cherrydev.DialogNodeGraph dialogo_obj)
     {
-        Llaves = prota.Inventario;
+        Llaves = new List<string>(prota.Inventario);
+
+        //Llaves = prota.Inventario;
         //List<string> listaB = new List<string>(listaA);
         bool keyFound = false;
         //Leer el nombre de este cofre

@@ -12,6 +12,10 @@ TagManager:
   - SueloPuzzle
   - Llave
   - Cofre
+  - LlaveMaestra
+  - Daga
+  - Espada
+  - PocionVida
   layers:
   - Default
   - TransparentFX

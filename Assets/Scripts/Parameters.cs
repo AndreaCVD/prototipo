@@ -54,8 +54,8 @@ public class Parameters : ScriptableObject
 {
     public string namePers;
     public ValueBlock stats;
-    
-    public List<string> Inventario = new List<string>();
+    public Bolsa Inventario;
+    //public List<A> X;
 
     public GameObject modelPrefab;
     public Sprite art;
@@ -69,3 +69,15 @@ public class Parameters : ScriptableObject
     }
 
 }
+[CreateAssetMenu(fileName = "Nuevo Inventario", menuName = "Bolsa/Bag")]
+public class Bolsa : ScriptableObject
+{
+    public string nombreObj;
+    public List<string> Llave;
+    public List<string> LlaveMaestra;
+    public List<string> PocionVida;
+    public List<string> Daga;
+    public List<string> Espada;
+
+}
+

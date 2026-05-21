@@ -8,8 +8,10 @@ public class Inventario : MonoBehaviour
     private Dialog dialog;
     private GameObject script_dialog;
     //----------
-    [SerializeField] List<string> Llaves = new List<string>();
+    [SerializeField] List<int> Llaves = new List<int>();
     private GameObject posible_llave;
+    //public List<int[]> x = new List<int[]>();
+
 
     private void Start()
     {
@@ -29,18 +31,34 @@ public class Inventario : MonoBehaviour
     {
         if (other.gameObject.tag == "Llave")
         {
-            //posible_llave = other.gameObject;
-            //Llaves.Add(other.gameObject.name);
-            //prota.modelPrefab
-            prota.Inventario.Add(other.gameObject.name);
-            Llaves = new List<string>(prota.Inventario);
+            prota.Inventario.Llave.Add(other.gameObject.name);          
+            Destroy(other.gameObject);
+        }
+        else if (other.gameObject.tag == "LlaveMaestra")
+        {
+            prota.Inventario.Llave.Add(other.gameObject.name);
+            Destroy(other.gameObject);
+        }
+        else if (other.gameObject.tag == "PocionVida")
+        {
+            prota.Inventario.Llave.Add(other.gameObject.name);
+            Destroy(other.gameObject);
+        }
+        else if (other.gameObject.tag == "Daga")
+        {
+            prota.Inventario.Llave.Add(other.gameObject.name);
+            Destroy(other.gameObject);
+        }
+        else if (other.gameObject.tag == "Espada")
+        {
+            prota.Inventario.Llave.Add(other.gameObject.name);
             Destroy(other.gameObject);
         }
     }
 
     public void CofreKey(GameObject cofre, cherrydev.DialogNodeGraph dialogo_obj)
     {
-        Llaves = new List<string>(prota.Inventario);
+        //Llaves = new List<int>(prota.Inventario);
 
         //Llaves = prota.Inventario;
         //List<string> listaB = new List<string>(listaA);
@@ -48,17 +66,17 @@ public class Inventario : MonoBehaviour
         //Leer el nombre de este cofre
         string nombre = this.name; //Prota es THIS
         //Recorremos nuestro inventario para ver si coincide alguna
-        foreach(string a in Llaves)
-        {
-            if ( a == cofre.name)
-            {
-                Debug.Log(a);
-                //Si tiene mismo nombre se abre
-                AbrirCofre();
-                keyFound = true;
-                break;
-            }
-        }
+        //foreach (string[] a in Llaves)
+        //{
+        //    if (a == cofre.name)
+        //    {
+        //        Debug.Log(a);
+        //        Si tiene mismo nombre se abre
+        //        AbrirCofre();
+        //        keyFound = true;
+        //        break;
+        //    }
+        //}
         //Si el cofre comparte numero codigo con la llave --> se abre
         if (!keyFound)
         {

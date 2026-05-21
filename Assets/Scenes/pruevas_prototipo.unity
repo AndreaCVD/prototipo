@@ -13865,6 +13865,10 @@ PrefabInstance:
       propertyPath: prota
       value: 
       objectReference: {fileID: 11400000, guid: f0233a249cd1f2b43a3d8f04e1ad2bf2, type: 2}
+    - target: {fileID: 5542090142335494573, guid: e1e382eeb87f205439904cd395ba77a9, type: 3}
+      propertyPath: Llaves.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7081842167822430468, guid: e1e382eeb87f205439904cd395ba77a9, type: 3}
       propertyPath: m_Name
       value: Player Character

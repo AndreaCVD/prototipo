@@ -10,6 +10,7 @@ public class stats_UI : MonoBehaviour
     [Header("Ficha personaje")]
     [SerializeField] Parameters protagonista;
 
+
     private VisualElement root;
     //ref del UI
     private IntegerField fieldFUE, fieldINT, fieldCAR, fieldLIFE;
@@ -17,8 +18,11 @@ public class stats_UI : MonoBehaviour
    // [SerializeField] TMP_Text texto_inventario;
     [SerializeField] GameObject prefabElemento; // Arrastra el Text prefab aquí en el inspector
     public Transform contenedor; // Arrastra el "ContenedorLista" del Canvas aquí
-
-    private List<string> aux = new List<string>();
+    private int llaves;
+    private int llaveMaestra;
+    private int daga;
+    private int espada;
+    private int pocionVida;
     // var listaX;
     private void OnEnable()
     {
@@ -33,7 +37,11 @@ public class stats_UI : MonoBehaviour
 
     void Start()
     {
-
+        llaves = 0;
+        llaveMaestra = 0;
+        espada = 0;
+        daga = 0;
+        pocionVida = 0;
 
         //Seteamos valores, int -> string
         int f = protagonista.stats.Get(PersonajesStats.Fuerza);
@@ -50,7 +58,7 @@ public class stats_UI : MonoBehaviour
             SetCarisma(c);
 
         //SetInventario();
-        aux = new List<string>(protagonista.Inventario);
+        //aux = new List<int>(protagonista.Inventario);
     }
 
     void Update()
@@ -64,71 +72,44 @@ public class stats_UI : MonoBehaviour
         bool x = areListEqual();
         if (!x)
         {
-            SetInventario(/*protagonista.Inventario*/);
+            SetInventario();
         }
     }
     bool areListEqual()
     {
-        var x = new List<string>(protagonista.Inventario);
-        //Si  no son iguales de largo entonces estaran mal
-        Debug.Log(aux.Count);
-        Debug.Log(x.Count);
-        if (aux.Count != x.Count) return false;
-        
-        //Si son del mismo tamaño
-        for (int i = 0; i < x.Count; i++)
-        {
-            if (x[i] != aux[i])
-            {
-                Debug.Log("The " + i.ToString() + "th character is different.");
-                return false;
-            }
-        }
+        //Si  no son iguales de largo entonces estaran mal 100%
+        if (protagonista.Inventario.Llave.Count() != llaves) return false;
+        if (protagonista.Inventario.LlaveMaestra.Count() != llaveMaestra) return false;
+        if (protagonista.Inventario.PocionVida.Count() != pocionVida) return false;
+        if (protagonista.Inventario.Daga.Count() != daga) return false;
+        if (protagonista.Inventario.Espada.Count() != espada) return false;
 
         return true;
     }
     void SetFuerza(int num)
     {
         fieldFUE.value = num;
-
     }
     void SetIntel(int num)
     {
         fieldINT.value = num;
-
     }
     void SetCarisma(int num)
     {
         fieldCAR.value = num;
-
     }
     void SetConstitucion(int num)
     {
         fieldLIFE.value = num;
-
     }
-    void SetInventario(/*List<string> listaX*/)
+    void SetInventario()
     {
-        List<string> inv = new List<string>(protagonista.Inventario);
-        Debug.Log(inv);
-        //Primero destruimos todos los hijos
-        foreach (Transform child in contenedor)
-        {
-            Destroy(child.gameObject);
-        }
-        //Volvemos a llenar todo
-        foreach (string dato in inv)
-        {
-            // 1. Clonar el prefab
-            GameObject nuevoElemento = Instantiate(prefabElemento, contenedor);
+        llaves = protagonista.Inventario.Llave.Count();
+        llaveMaestra = protagonista.Inventario.LlaveMaestra.Count();
+        pocionVida = protagonista.Inventario.PocionVida.Count();
+        daga = protagonista.Inventario.Daga.Count();
+        espada = protagonista.Inventario.Espada.Count();
 
-            // 2. Asignar el texto
-            Text textoComponente = nuevoElemento.GetComponent<Text>();
-            if (textoComponente != null)
-            {
-                textoComponente.text = dato;
-            }
-        }
     }
 
 }

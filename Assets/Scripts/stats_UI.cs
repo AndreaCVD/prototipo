@@ -14,10 +14,18 @@ public class stats_UI : MonoBehaviour
     private VisualElement root;
     //ref del UI
     private IntegerField fieldFUE, fieldINT, fieldCAR, fieldLIFE;
-    
-   // [SerializeField] TMP_Text texto_inventario;
+    private bool canvas_open;
+    public CanvasGroup canvas_inventario;
+    [SerializeField] TMP_Text llave_text;
+    [SerializeField] TMP_Text llaveMaestra_text;
+    [SerializeField] TMP_Text daga_text;
+    [SerializeField] TMP_Text espada_text;
+    [SerializeField] TMP_Text pocionVida_text;
+
+    // [SerializeField] TMP_Text texto_inventario;
     [SerializeField] GameObject prefabElemento; // Arrastra el Text prefab aquí en el inspector
     public Transform contenedor; // Arrastra el "ContenedorLista" del Canvas aquí
+    
     private int llaves;
     private int llaveMaestra;
     private int daga;
@@ -43,6 +51,8 @@ public class stats_UI : MonoBehaviour
         daga = 0;
         pocionVida = 0;
 
+        canvas_open = true;
+        abrirInventario();
         //Seteamos valores, int -> string
         int f = protagonista.stats.Get(PersonajesStats.Fuerza);
         int i = protagonista.stats.Get(PersonajesStats.Inteligencia);
@@ -51,13 +61,13 @@ public class stats_UI : MonoBehaviour
         //int h = protagonista.stats.Get(PersonajesStats.Constitucion);
 
 
-            SetFuerza(f);
+        SetFuerza(f);
 
-            SetIntel(i);
+        SetIntel(i);
 
-            SetCarisma(c);
+        SetCarisma(c);
 
-        //SetInventario();
+        SetInventario();
         //aux = new List<int>(protagonista.Inventario);
     }
 
@@ -110,6 +120,25 @@ public class stats_UI : MonoBehaviour
         daga = protagonista.Inventario.Daga.Count();
         espada = protagonista.Inventario.Espada.Count();
 
+        llave_text.text = "Llaves = " + llaves.ToString();
+        llaveMaestra_text.text = "Llave Maestra = " + llaveMaestra.ToString();
+        pocionVida_text.text = "Pocion = " + pocionVida.ToString();
+        daga_text.text = "Daga = " + daga.ToString();
+        espada_text.text = "Espada = " + espada.ToString();
     }
+    public void abrirInventario()
+    {
+        //Debug.Log("se esta cerrando?");
+        //if(!canvas_open)
+        //{
+        //    canvas_open = true;
+        //    canvas_inventario.alpha = Mathf.Lerp(0f, 1f, 5f);
+        //}
+        //else
+        //{
+        //    canvas_open = false;
+        //    canvas_inventario.alpha = Mathf.Lerp(0f, 0f, 5f);
+        //}
 
+    }
 }

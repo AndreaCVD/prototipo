@@ -50,7 +50,7 @@ public class Save_Stats : MonoBehaviour
         //caballero.stats.values[2].value = 3; //Carisma
         //caballero.stats.values[3].value = 50; //Vida
         //caballero.stats.values[4].value = 14; //Armadura
-
+        //se guarda?
         ////Libro
         //libro.stats.values[0].value = 5; //Fuerza
         //libro.stats.values[1].value = 3; //Inteligencia

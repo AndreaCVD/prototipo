@@ -9,27 +9,47 @@ public class CommandManager : MonoBehaviour
     [SerializeField] Dice diceRoller;
     bool gameOver;
     //[SerializeField] CombatMonster opponent;
-    
+
+    //current = al que le toque el turno
+
     //le llega la accion, mira la variable de turn,
     // y lo envia a combat monster
+    public void Llave()
+    {
+        //turnRoundManager.current.Fuerza(turnRoundManager.target, aux);
+
+    }
+    public void LlaveMaestra()
+    {
+
+    }
+    public void Daga()
+    {
+        //Subir ataque por 1 turno
+    }
+    public void Espada()
+    {
+        //Subir ataque
+
+    }
+    public void PocionVida()
+    {
+        //Subir vida
+        turnRoundManager.current.cambiarVida(10);
+    }
+
     public void Fuerza()
     {
-        //current = al que le toque el turno
         //Hay que llamar al DiceRoller para ver si superamos el AC
         int aux = lanzarDado(20);
 
         //Acción
         turnRoundManager.current.Fuerza(turnRoundManager.target, aux);
-        //Debug.Log("Accion completada");
 
-        //Debug.Log("Current is = " + turnRoundManager.current);
-        //Debug.Log("Target is = " + turnRoundManager.target);
         NextTurn();
     }
     public void Inteligencia()
     {
-        //current = al que le toque el turno
-        //Hay que llamar al DiceRoller para ver si superamos el AC
         int aux = lanzarDado(20);
 
         //Acción
@@ -41,8 +61,6 @@ public class CommandManager : MonoBehaviour
     }
     public void Carisma()
     {
-        //current = al que le toque el turno
-        //Hay que llamar al DiceRoller para ver si superamos el AC
         int aux = lanzarDado(20);
 
         //Acción

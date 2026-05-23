@@ -12,23 +12,15 @@ public class crear_obj : MonoBehaviour
     [SerializeField] GameObject UIdocument;
     //[SerializeField] Preload preload;
 
+    private GameObject gameManager;
+
     void Awake()
     {
-        //if( !GameObject.Find("--Preload--") && !GameObject.Find("--Preload--(Clone)"))
-        //{
-        //    GameObject nuevoObj = Instantiate(preloadScript);
-        //    nuevoObj.name = "--Preload--";
-        //    DontDestroyOnLoad(nuevoObj);
-        //}
-        //if ( !GameObject.Find("Player Character") && !GameObject.Find("Player Character(Clone)"))
-        //{
-        //    //Vector3 position = new Vector3 (0f, 0f, 0f);
-        //    //var rotation = Quaternion.Euler(0f, 0f, 0f);
-        //    GameObject nuevoObj = Instantiate(player);
-        //    nuevoObj.name = "Player Character";
-        //    DontDestroyOnLoad(nuevoObj);
+        //Busco el objeto GameManager en la escena y lo asocio a la variable
+        gameManager = GameObject.Find("--SceneManagement--");
+        //Le indico que no se destruya entre escenas
+        DontDestroyOnLoad(gameManager);
 
-        //}
         if (!GameObject.Find("-- Save Info --") && !GameObject.Find("-- Save Info --(Clone)"))
         {
             GameObject nuevoObj = Instantiate(saveInfo);

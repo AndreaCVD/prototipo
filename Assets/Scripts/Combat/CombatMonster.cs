@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class CombatMonster : MonoBehaviour
 {
 
-    Parameters player; //Al que le toque recibir daño
+    Parameters player; //El que tiene el script (todos)
     Save_Stats guardado; //Enviar las estats
     [SerializeField] Image imagenPers; 
     public Int2Val HP;
@@ -14,8 +14,20 @@ public class CombatMonster : MonoBehaviour
     GameObject objLoadScene;
     private LoadScene load;
     private Preload preload;
+
+    //Si cambiamos las stats de Fuerza
+    private bool stat_change; //si se cambia un stat volver al anterior despues de turno
+    private int fuerzaChanged;
+    private int intelChanged;
+    private int carismaChanged;
+
     private void Start()
     {
+        stat_change = false;
+        fuerzaChanged = 0;
+        intelChanged = 0;
+        carismaChanged = 0;
+
         if (objLoadScene == null)
         {
             objLoadScene = GameObject.Find("--SceneManagement--");
@@ -24,6 +36,7 @@ public class CombatMonster : MonoBehaviour
 
             //save_posicion = GetComponent<personaje>();
         }
+        cambiarVida(0);
     }
     public void Init(Parameters player) //Al que le toque atacar
     {
@@ -51,6 +64,10 @@ public class CombatMonster : MonoBehaviour
         //Si Dice + Fuerza no supera AC del enemigo, no se hace el ataque
         if ( (stat_enemigo+ dice) >= armadura)
         {
+            if (stat_change)
+            {
+                restaurarStat(0); //Restauramos Fuerza
+            }
             //Escibimos Debug.Log
             Commando(stat_enemigo, armadura, dice);
             //Target recibe daño de la fuerza
@@ -137,21 +154,56 @@ public class CombatMonster : MonoBehaviour
             }
             else //Si pierde el enemigo:
             {
-
                 //Guardar en preload la nueva constitucion
                 Debug.Log("HAS GANADO AL ENEMIGO");
+                restaurarStat(10); //Restaurar todos los stats si han sido cambiados
                 //hay que destruir el obj del enemigo
                 preload.DestroyEnemy();
                 //Hablar con SceneManager -> LoadScene volver a la pantalla anterior
                 load.SalirCombate();
                 
             }
-
             //guardado.alguien_eliminado(player); //enviara el personaje que se elimine
         }
         else
         {
             Debug.Log("FIN TURNO");
+        }
+    }
+
+    public void cambiarFuerza(int damage)
+    {
+        //Subir Fuerza
+        stat_change = true;
+        fuerzaChanged = damage;
+        player.stats.values[0].value += damage; //Le cambiamos la fuerza
+    }
+    public void cambiarVida(int vida)
+    {
+        player.stats.values[3].value += vida; //Le sumamos la vida
+    }
+    void restaurarStat(int stat)
+    {
+        stat_change = false;
+        switch(stat)
+        { 
+            case 0:
+                player.stats.values[stat].value -= fuerzaChanged; //Le cambiamos la fuerza
+                break;
+            case 1:
+                player.stats.values[stat].value -= intelChanged; //Le cambiamos la fuerza
+                break;
+            case 2:
+                player.stats.values[stat].value -= carismaChanged; //Le cambiamos la fuerza
+                break;
+            case 10: //CAMBIAR TODOS LOS STATS
+                player.stats.values[0].value -= fuerzaChanged;
+                player.stats.values[1].value -= intelChanged;
+                player.stats.values[2].value -= carismaChanged; 
+                break;
+            default:
+                Debug.Log("No se ha restaurado bien el stat");
+                break;
         }
     }
 }

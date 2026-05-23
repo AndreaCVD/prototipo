@@ -14,7 +14,7 @@ public class stats_UI : MonoBehaviour
     private VisualElement root;
     //ref del UI
     private IntegerField fieldFUE, fieldINT, fieldCAR, fieldLIFE;
-    private bool canvas_open;
+    public bool canvas_open;
     public CanvasGroup canvas_inventario;
     [SerializeField] TMP_Text llave_text;
     [SerializeField] TMP_Text llaveMaestra_text;
@@ -23,8 +23,8 @@ public class stats_UI : MonoBehaviour
     [SerializeField] TMP_Text pocionVida_text;
 
     // [SerializeField] TMP_Text texto_inventario;
-    [SerializeField] GameObject prefabElemento; // Arrastra el Text prefab aquí en el inspector
-    public Transform contenedor; // Arrastra el "ContenedorLista" del Canvas aquí
+    //[SerializeField] GameObject prefabElemento; // Arrastra el Text prefab aquí en el inspector
+    //public Transform contenedor; // Arrastra el "ContenedorLista" del Canvas aquí
     
     private int llaves;
     private int llaveMaestra;
@@ -52,7 +52,7 @@ public class stats_UI : MonoBehaviour
         pocionVida = 0;
 
         canvas_open = true;
-        abrirInventario();
+        //abrirInventario();
         //Seteamos valores, int -> string
         int f = protagonista.stats.Get(PersonajesStats.Fuerza);
         int i = protagonista.stats.Get(PersonajesStats.Inteligencia);
@@ -129,7 +129,7 @@ public class stats_UI : MonoBehaviour
     public void abrirInventario()
     {
         //Debug.Log("se esta cerrando?");
-        //if(!canvas_open)
+        //if (!canvas_open)
         //{
         //    canvas_open = true;
         //    canvas_inventario.alpha = Mathf.Lerp(0f, 1f, 5f);

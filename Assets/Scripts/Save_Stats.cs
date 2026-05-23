@@ -10,14 +10,12 @@ public class Save_Stats : MonoBehaviour
     [SerializeField] Parameters slime;
     [SerializeField] Parameters caballero;
     [SerializeField] Parameters libro;
+    [SerializeField] Parameters yusseif;
     //[SerializeField] ValueContainer constitucion_prota;
 
     [Header("Personaje")]
     public int vida_prota;
     public int vida_protaCambio;
-
-    //1. Declaro la variable para el objeto Game Manager
-    private GameObject gameManager;
 
     private void Awake()
     {
@@ -38,25 +36,32 @@ public class Save_Stats : MonoBehaviour
         // playerPersonaje.Inventario.Clear(); //Vaciamos el Inventario
 
         ////Slime
-        //slime.stats.values[0].value = 5; //Fuerza
-        //slime.stats.values[1].value = 3; //Inteligencia
-        //slime.stats.values[2].value = 3; //Carisma
-        //slime.stats.values[3].value = 50; //Vida
-        //slime.stats.values[4].value = 14; //Armadura
+        slime.stats.values[0].value = 5; //Fuerza
+        slime.stats.values[1].value = 0; //Inteligencia
+        slime.stats.values[2].value = 0; //Carisma
+        slime.stats.values[3].value = 30; //Vida
+        slime.stats.values[4].value = 6; //Armadura
 
         ////Cabellero
-        //caballero.stats.values[0].value = 5; //Fuerza
-        //caballero.stats.values[1].value = 3; //Inteligencia
-        //caballero.stats.values[2].value = 3; //Carisma
-        //caballero.stats.values[3].value = 50; //Vida
-        //caballero.stats.values[4].value = 14; //Armadura
-        //se guarda?
+        caballero.stats.values[0].value = 2; //Fuerza
+        caballero.stats.values[1].value = 0; //Inteligencia
+        caballero.stats.values[2].value = 0; //Carisma
+        caballero.stats.values[3].value = 16; //Vida
+        caballero.stats.values[4].value = 17; //Armadura
+  
         ////Libro
-        //libro.stats.values[0].value = 5; //Fuerza
-        //libro.stats.values[1].value = 3; //Inteligencia
-        //libro.stats.values[2].value = 3; //Carisma
-        //libro.stats.values[3].value = 50; //Vida
-        //libro.stats.values[4].value = 14; //Armadura
+        libro.stats.values[0].value = 1; //Fuerza
+        libro.stats.values[1].value = 4; //Inteligencia
+        libro.stats.values[2].value = 6; //Carisma
+        libro.stats.values[3].value = 40; //Vida
+        libro.stats.values[4].value = 15; //Armadura
+
+        ////Libro
+        yusseif.stats.values[0].value = 3; //Fuerza
+        yusseif.stats.values[1].value = 5; //Inteligencia
+        yusseif.stats.values[2].value = 2; //Carisma
+        yusseif.stats.values[3].value = 60; //Vida
+        yusseif.stats.values[4].value = 17; //Armadura
 
         //Empezar el inventario
         //playerPersonaje.Inventario.Add(playerPersonaje.llave);
@@ -67,24 +72,11 @@ public class Save_Stats : MonoBehaviour
     }
     void Start()
     {
-        int vida_prota = playerPersonaje.stats.Get(PersonajesStats.Constitucion);
-        //2. Busco el objeto GameManager en la escena y lo asocio a la variable
-        gameManager = GameObject.Find("--SceneManagement--");
-
-        //3. Le indico que no se destruya entre escenas
-        DontDestroyOnLoad(gameManager);
 
         //Llegar a los valores: protagonista es parameters
             //protagonista.stats.Get(PersonajesStats.Carisma);
     }
-    void Update()
-    {
-        if ( vida_prota != vida_protaCambio)
-        {
-            playerPersonaje.stats.values[3].value -= vida_protaCambio;
-            vida_prota = vida_protaCambio;
-        }
-    }
+
 
     public void guardar_stats( Parameters player, int damage)
     { 

@@ -33,6 +33,7 @@ public class crear_obj : MonoBehaviour
             x.name = "-- Save Info --";
             DontDestroyOnLoad(x);
         }
+
         //if (!GameObject.Find("UI") && !GameObject.Find("UI(Clone)"))
         //{
         //    GameObject nuevoObj = Instantiate(UIdocument);

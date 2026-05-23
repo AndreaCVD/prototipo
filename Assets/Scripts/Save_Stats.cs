@@ -13,9 +13,6 @@ public class Save_Stats : MonoBehaviour
     [SerializeField] Parameters yusseif;
     //[SerializeField] ValueContainer constitucion_prota;
 
-    [Header("Personaje")]
-    public int vida_prota;
-    public int vida_protaCambio;
 
     private void Awake()
     {
@@ -81,11 +78,11 @@ public class Save_Stats : MonoBehaviour
     public void guardar_stats( Parameters player, int damage)
     { 
         //ver si es el prota o no
-        if ( player == playerPersonaje)
-        {
-            player.stats.values[3].value -= damage;
-            vida_protaCambio = player.stats.Get(PersonajesStats.Constitucion);
-        }
+        //if ( player == playerPersonaje)
+        //{
+        //    player.stats.values[3].value -= damage;
+        //    vida_protaCambio = player.stats.Get(PersonajesStats.Constitucion);
+        //}
 
     }
 

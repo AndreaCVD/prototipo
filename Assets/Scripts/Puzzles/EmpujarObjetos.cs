@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class EmpujarObjetos : MonoBehaviour
 {
+
     public float distanciaCasilla = 1f;   // Tamaño de la casilla (1 unidad por defecto)
     public float velocidadMovimiento = 5f; // Velocidad de desplazamiento
     private bool enMovimiento = false;
@@ -13,14 +14,17 @@ public class EmpujarObjetos : MonoBehaviour
     void Start()
     {
         destino = transform.position; // Posición inicial
-        puzzleFinished = false;
+
+        puzzleFinished = false; //Leer de Preload
+        
         layerMask = 1 << LayerMask.NameToLayer("FinPuzzle");
         //enviarVal(false);
+
+        //hablar con Preload para ver si esta acabado el puzzle o no
     }
 
     void Update()
     {
-
         // Movimiento suave hacia el destino
         if (enMovimiento)
         {

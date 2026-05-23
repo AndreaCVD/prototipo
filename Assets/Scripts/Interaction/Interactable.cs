@@ -78,14 +78,14 @@ public class Interactable : MonoBehaviour
     {
         bool aux = val;
         preload.puzzleTrue(this.gameObject.name);
-        if (aux)
-        {
-            dialog.SetBool("puzzleDone", val);
-        }
-        else
-        {
-            dialog.SetBool("puzzleDone", val);
-        }
+        //if (aux)
+        //{
+        //    dialog.SetBool("puzzleDone", val);
+        //}
+        //else
+        //{
+        //    dialog.SetBool("puzzleDone", val);
+        //}
     }
 
 }

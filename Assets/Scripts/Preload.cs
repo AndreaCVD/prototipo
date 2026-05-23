@@ -6,25 +6,21 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 //using System.Collections.Generic.Dictionary;
 
-[Serializable]
-public class NamePuzzles
+public class ListaPuzzles
 {
     public string name;
-    public bool value;
+    public bool acabado;
 }
 //Cargar todas las cosas antes de la escena normal, no combate
-//esto no se destruira entre escenas
 public class Preload : MonoBehaviour
 {
-   // public NombrePuzzles Puzzles;
-
-    //Para encontrar los scripts de DialogManager
-    [SerializeField] Dialog dialog;
+    private GameObject save_puzz;
+    private SavePuzzle savePuzzle;
+    
     private GameObject script_dialog;
-    //Listas
-    public Dictionary<string, bool> Puzzles_Pruevas = new Dictionary<string, bool>();
-    [SerializeField] List<GameObject> Puertas = new List<GameObject>();
-    [SerializeField] List<NamePuzzles> ListaPuzzles = new List<NamePuzzles>();
+    private Dialog dialog;
+    
+    [SerializeField] List<ListaPuzzles> ListaPuzzles = new List<ListaPuzzles>();   
 
     //guardar las variables para no perderlas
     private GameObject preloadObj;
@@ -38,14 +34,10 @@ public class Preload : MonoBehaviour
     [SerializeField] string NameOpponent;
     public GameObject enemigo;
 
-    //bools
-    bool prueva_p1;
 
     void Awake()
     {
-        Puzzles_Pruevas.Add("puzzle_1", false);
-        Puzzles_Pruevas.Add("puzzle_2", false);
-
+    
         //vectorPosicion = GetComponent<personaje>();
         //protagonista = GameObject.Find("Player Character");
 
@@ -80,19 +72,22 @@ public class Preload : MonoBehaviour
             Debug.Log("No hay enemigo a destruir");
         }
     }
-    //puzzles que tienen que ser false:
+
     //void Start()
     //{
     //    dialog.SetBool("puzzleDone", false);
     //}
 
 
-    //public void move_player()
-    //{
-    //    PrefabProta.transform.position = vectorPosicion.load_pos();
-    //}
-    void Start()
+    void Update()
     {
+        //Encontrar el SavePuzzle
+        if (script_dialog == null)
+        {
+            save_puzz = GameObject.Find("--Save Puzzle--");
+            savePuzzle = save_puzz.GetComponent<SavePuzzle>();
+        }
+
         //if puzzle esta hecho --> colocar la puerta apartada para que se pueda passar
         // else, que la puerta bloquee el paso
 
@@ -100,23 +95,15 @@ public class Preload : MonoBehaviour
     }
     public void puzzleTrue(string namePuzzle)
     {
-        string aux = namePuzzle;
-        string changeVal;
+
         foreach (var obj in ListaPuzzles)
         {
-            if (obj.name.Equals(aux)) //que funcion mas divertida me acaba de aparecer con el tab jahsjsahjashjash
+            if (obj.name.Equals(namePuzzle)) //que funcion mas divertida me acaba de aparecer con el tab jahsjsahjashjash
             {
-                obj.value = true;
+                obj.acabado = true;
             }
         }
-        //foreach (var (name, val) in Puzzles_Pruevas) //deconstruimos el dictionario
-        //{
-        //    if (name == aux)
-        //    {
-        //        boolTrue(name);
-        //    }
-        //    Debug.Log(name + "=" + val); // [puzzle_1, False] si  no 
-        //}
+
 
     }
     //void boolTrue(string namePuzzle)

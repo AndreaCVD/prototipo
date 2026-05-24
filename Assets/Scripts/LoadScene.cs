@@ -5,19 +5,20 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 public class LoadScene : MonoBehaviour
 {
-    [Header("Degradado pantalla")]
+        [Header("Degradado pantalla")]
     [SerializeField] TintScreen pantalla;
-    [Header("Datos prota")]
+        [Header("Datos prota")]
     private GameObject protagonista;
     GameObject obj_saveScript;
     private personaje save_posicion;
     private GameObject obj_input;
-    [Header("Parar movimiento")]
+        [Header("Parar movimiento")]
     [SerializeField] InputHandler escenaState;
-    [Header("Preparar el combate")]
+        [Header("Preparar el combate")]
     [SerializeField] Preload preload;
-
     [SerializeField] crear_obj destroyObjs;
+    
+    private SavePuzzle puzz;
 
     //[SerializeField] Preload preload;
     string name_anterior;
@@ -25,6 +26,8 @@ public class LoadScene : MonoBehaviour
 
     private void Start()
     {
+        puzz = this.GetComponent<SavePuzzle>();
+
         onCombat = false;
     }
 
@@ -40,23 +43,12 @@ public class LoadScene : MonoBehaviour
         {
             protagonista = GameObject.Find("personaje");
         }
-        //scipt dnd guardar stats prota
-        //if (obj_saveScript == null)
-        //{
-        //    obj_saveScript = GameObject.Find("--Preload--");
-        //    save_posicion = obj_saveScript.GetComponent<personaje>();
-        //    //save_posicion = GetComponent<personaje>();
-        //}
         if (escenaState == null)
         {
             obj_input = GameObject.Find("personaje");
             escenaState = obj_input.GetComponent<InputHandler>();
             //save_posicion = GetComponent<personaje>();
         }
-        //if (preload == null)
-        //{
-        //    preload = GetComponent<Preload>();
-        //}
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -80,10 +72,10 @@ public class LoadScene : MonoBehaviour
         else
         {
             pantalla.UnTint();
-            //save_posicion.save_LastPos();
             //preload.move_player();
-            //if (sceneName == "combate_pruevas"){ }
-           SceneManager.LoadScene(sceneName);
+            SceneManager.LoadScene(sceneName);
+            //PUZZLES --> Mirar si hay alguno ya hecho
+            puzz.revisarLista();
         }
     }
     public void EscenaAnterior()//Tornar a una escena anterior
@@ -142,8 +134,7 @@ public class LoadScene : MonoBehaviour
     {
         pantalla.UnTint();
         //save_posicion.save_LastPos();
-        //preload.move_player();
-        //if (sceneName == "combate_pruevas"){ }
+
         SceneManager.LoadScene("GameOver");
     }
 

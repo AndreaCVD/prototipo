@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4636500077556328165}
   - component: {fileID: 1942295723155004613}
   - component: {fileID: 8228760125869817717}
+  - component: {fileID: 4190567916740077200}
   m_Layer: 0
   m_Name: --SceneManagement--
   m_TagString: Untagged
@@ -78,8 +79,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c72389183d69674ab0699d08e6131a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialog: {fileID: 0}
-  Puertas: []
-  ListaPuzzles: []
   NameOpponent: 
   enemigo: {fileID: 0}
+--- !u!114 &4190567916740077200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5107496890064737642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65ba87fe6bf211246bf769a72a64b71a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ListaPuzzles: []

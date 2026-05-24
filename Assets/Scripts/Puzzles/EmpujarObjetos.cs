@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class EmpujarObjetos : MonoBehaviour
 {
+    private SavePuzzle savePuzzle;
 
     public float distanciaCasilla = 1f;   // Tamaño de la casilla (1 unidad por defecto)
     public float velocidadMovimiento = 5f; // Velocidad de desplazamiento
@@ -13,14 +14,15 @@ public class EmpujarObjetos : MonoBehaviour
 
     void Start()
     {
+        GameObject aux = GameObject.Find("-- SavePuzzle --");
+        savePuzzle = aux.GetComponent<SavePuzzle>();
+
         destino = transform.position; // Posición inicial
 
         puzzleFinished = false; //Leer de Preload
         
         layerMask = 1 << LayerMask.NameToLayer("FinPuzzle");
         //enviarVal(false);
-
-        //hablar con Preload para ver si esta acabado el puzzle o no
     }
 
     void Update()
@@ -89,6 +91,7 @@ public class EmpujarObjetos : MonoBehaviour
         {
             //enMovimiento = true;
             puzzleFinished = true;
+            savePuzzle.pieceDone(this.name);
             Debug.Log("Suelo puzzle alcanzado");
         }
 

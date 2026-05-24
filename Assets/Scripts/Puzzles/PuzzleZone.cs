@@ -15,9 +15,9 @@ public class PuzzleZone : MonoBehaviour
     //Canvas
     [SerializeField] CanvasGroup grup;
 
+    private List<GameObject> Children = new List<GameObject>();
     [Header("Listas")]
-    public List<GameObject> Children = new List<GameObject>();
-
+    [SerializeField] string nombre;
     [SerializeField] List<GameObject> PiezasPuzzles = new List<GameObject>();
     [SerializeField] List<GameObject> SitioReinicio = new List<GameObject>();
     [SerializeField] Transform pos_player;
@@ -25,6 +25,8 @@ public class PuzzleZone : MonoBehaviour
 
     void Start()
     {
+        nombre = this.name;
+
         player = GameObject.Find("personaje");
 
         playerInside = false;
@@ -56,7 +58,7 @@ public class PuzzleZone : MonoBehaviour
                 {
                     PiezasPuzzles.Add(b);//Piezas
                 }
-                Debug.Log(b);
+                //Debug.Log(b);
             }
         }
 

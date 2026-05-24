@@ -14,7 +14,7 @@ public class ListaPuzzles
 //Cargar todas las cosas antes de la escena normal, no combate
 public class Preload : MonoBehaviour
 {
-    private GameObject save_puzz;
+
     private SavePuzzle savePuzzle;
     
     private GameObject script_dialog;
@@ -37,6 +37,7 @@ public class Preload : MonoBehaviour
 
     void Awake()
     {
+
     
         //vectorPosicion = GetComponent<personaje>();
         //protagonista = GameObject.Find("Player Character");
@@ -82,11 +83,11 @@ public class Preload : MonoBehaviour
     void Update()
     {
         //Encontrar el SavePuzzle
-        if (script_dialog == null)
-        {
-            save_puzz = GameObject.Find("--Save Puzzle--");
-            savePuzzle = save_puzz.GetComponent<SavePuzzle>();
-        }
+        //if (savePuzzle == null)
+        //{
+        //    GameObject aux = GameObject.Find("-- SavePuzzle --");
+        //    savePuzzle = aux.GetComponent<SavePuzzle>();
+        //}
 
         //if puzzle esta hecho --> colocar la puerta apartada para que se pueda passar
         // else, que la puerta bloquee el paso

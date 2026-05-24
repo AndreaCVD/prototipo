@@ -80,4 +80,11 @@ public class Bolsa : ScriptableObject
     public List<string> Espada;
 
 }
+[CreateAssetMenu(fileName = "Puzzles", menuName = "Puzzle/ListPuzzle")]
+public class Puzzle : ScriptableObject
+{
+    public List<Puzzles> First_Floor = new List<Puzzles>();
+    public List<Puzzles> Second_Floor = new List<Puzzles>();
+
+}
 

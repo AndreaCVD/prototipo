@@ -1,4 +1,5 @@
 :root {
+    /* === tus variables existentes === */
     --color-crimson-red: #9E0606;
     --color-deep-earth: #441C04;
     --color-burnt-sienna: #892C08;
@@ -7,21 +8,58 @@
     --color-black: #000000;
     --color-white: #FFFFFF;
 
+    /* === spacing system === */
+    --space-xs:  4px;
+    --space-sm:  8px;
+    --space-md:  12px;
+    --space-lg:  16px;
+    --space-xl:  24px;
+    --space-2xl: 40px;
+    --space-safe: 60px;   /* safe zone desde borde de pantalla */
+
+    /* === tipografía === */
+    --font-size-hud-value:   22px;   /* número de vida, valores de carta */
+    --font-size-body:        16px;   /* texto de menú, labels */
+    --font-size-label:       12px;   /* subtítulos, tooltips */
+    --font-size-title:       28px;   /* títulos de pantalla */
+
+    /* === componentes HUD === */
+    --hud-card-width:   120px;
+    --hud-card-height:  150px;
+    --hud-card-radius:  10px;
+    --hud-card-gap:     12px;
+
+    --hud-health-icon:  52px;
+    --hud-zone-top:     150px;
+    --hud-zone-bottom:  80px;
+
+    /* === botones (extendiendo los tuyos) === */
+    --btn-height-lg:    52px;
+    --btn-height-md:    44px;
+    --btn-height-sm:    36px;
+    --btn-radius:       8px;
+    --btn-pad-h-lg:     24px;
+    --btn-pad-h-md:     18px;
+
+    /* === colores semánticos (usan tus primitivos) === */
+    --color-surface:        var(--color-deep-earth);
+    --color-surface-hover:  var(--color-burnt-sienna);
+    --color-text-primary:   var(--color-antique-white);
+    --color-text-muted:     rgba(255, 237, 200, 0.55);  /* antique-white al 55% */
+    --color-border:         rgba(255, 237, 200, 0.15);
+    --color-border-hover:   rgba(255, 237, 200, 0.35);
+    --color-danger:         var(--color-crimson-red);
+
+    /* === tus variables existentes de botones y fuentes === */
     --background_main_color: var(--color-warm-tan);
-
-    /* Combat buttons */
-    --combat-primary: var(--color-deep-earth);
-    --combat-hover-bg: var(--color-burnt-sienna);
-    --combat-hover-text: var(--color-antique-white);
-    --combat-text-normal: var(--color-antique-white);
-
-    /* Options buttons */
-    --options-primary: var(--color-burnt-sienna);
-    --options-hover-bg: var(--color-deep-earth);
-    --options-hover-text: var(--color-antique-white);
-    --options-text-normal: var(--color-antique-white);
-
-    /*Fonts*/
+    --combat-primary:        var(--color-deep-earth);
+    --combat-hover-bg:       var(--color-burnt-sienna);
+    --combat-hover-text:     var(--color-antique-white);
+    --combat-text-normal:    var(--color-antique-white);
+    --options-primary:       var(--color-burnt-sienna);
+    --options-hover-bg:      var(--color-deep-earth);
+    --options-hover-text:    var(--color-antique-white);
+    --options-text-normal:   var(--color-antique-white);
     --font-buttons: url("project://database/Assets/UI/Fonts/Alegreya_Sans_SC/AlegreyaSansSC-Bold.ttf?fileID=12800000&guid=3dd824cdb4f3e3b45a1d07d43edcfa14&type=3#AlegreyaSansSC-Bold");
     --font-regular: url("project://database/Assets/UI/Fonts/Alegreya_Sans_SC/AlegreyaSansSC-Regular.ttf?fileID=12800000&guid=d6178a5cf8026f746b57e92d6b0e680f&type=3#AlegreyaSansSC-Regular");
 }

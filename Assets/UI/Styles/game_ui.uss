@@ -1,0 +1,112 @@
+@import url("project://database/Assets/UI/Styles/general_colors.uss?fileID=7433441132597879392&guid=ad6a76f9ae4c3674d898b1a5433c7bf6&type=3#general_colors");
+.root {
+    width: 100%;
+    height: 100%;
+    padding: var(--space-safe);
+    flex-direction: column;
+}
+
+    /* === GENERAL === */
+
+.hud-top {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: var(--hud-zone-top);
+}
+
+    /* === STATS === */
+
+.card-row {
+    flex-direction: row;
+}
+
+.card-row > .stats {
+    margin-right: var(--hud-card-gap);
+}
+
+.stats {
+    height: var(--hud-card-height);
+    width: var(--hud-card-width);
+    -unity-background-scale-mode: scale-to-fit;
+    padding: var(--space-sm);
+    padding-bottom: var(--space-xl);
+    align-items: center;
+    justify-content: flex-end;
+    transition-property: background-color, border-color;
+    transition-duration: 0.2s;
+}
+
+.card__value {
+    font-size: var(--font-size-hud-value);
+    -unity-font-definition: var(--font-buttons);
+    color: var(--combat-text-normal);
+    -unity-text-align: middle-center;
+    background-color: rgba(255, 255, 255, 0);
+    border-width: 0;
+    width: 100%;
+}
+
+.card__value #unity-text-input {
+    border-width: 0;
+    background-color: rgba(255, 255, 255, 0);
+    -unity-text-align: middle-center;
+    font-size: var(--font-size-hud-value);
+    color: var(--combat-text-normal);
+    -unity-font-definition: var(--font-buttons);
+    padding: 0;
+}
+
+#card-0 {
+    background-image: url("project://database/Assets/Art/Interface/FUE.png?fileID=2800000&guid=c9d7adfdf4a74854c8e9321fc29c505d&type=3#FUE");
+}
+
+#card-1 {
+    background-image: url("project://database/Assets/Art/Interface/INT.png?fileID=2800000&guid=78ba820918affd84fad598adb36ca18a&type=3#INT");
+}
+
+#card-2 {
+    background-image: url("project://database/Assets/Art/Interface/CAR.png?fileID=2800000&guid=8ed7e79b10ff0be42a3f938d077ef3eb&type=3#CAR");
+}
+
+    /* === INVENTORY === */
+
+.inventory-row {
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.inventory-btn {
+    width: var(--hud-card-width);       /* 120px — mismo ancho que las cartas */
+    height: var(--hud-card-width);      /* cuadrado */
+    background-color: rgba(255,255,255,0);
+    border-width: 0;
+    border-radius: var(--hud-card-radius);
+    background-image: url("project://database/Assets/UI/Icons/mochila.png");
+    -unity-background-scale-mode: scale-to-fit;
+    transition-property: background-color, scale;
+    transition-duration: 0.15s;
+}
+.inventory-btn:hover {
+    background-color: rgba(68, 28, 4, 0.4);   /* --color-deep-earth con alpha */
+    scale: 1.05;
+}
+.inventory-btn:active {
+    scale: 0.95;
+}
+
+.char-badge {
+    font-size: 16px;                        /* era var(--font-size-label) = 12px */
+    -unity-font-definition: var(--font-buttons);
+    color: var(--color-crimson-red);
+    background-color: var(--color-antique-white);
+    padding-left: var(--space-sm);          /* era xs = 4px, ahora sm = 8px */
+    padding-right: var(--space-sm);
+    padding-top: var(--space-xs);           /* 4px */
+    padding-bottom: var(--space-xs);
+    border-radius: 4px;
+    margin-top: var(--space-xs);
+    align-self: flex-end;
+    min-width: 24px;
+    -unity-text-align: middle-center;
+}

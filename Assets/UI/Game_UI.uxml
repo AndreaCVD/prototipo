@@ -1,7 +1,7 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI/Styles/game_ui.uss?fileID=7433441132597879392&amp;guid=9067a09fa4e7f914ebacaaa1c73abafc&amp;type=3#game_ui" />
     <ui:VisualElement name="root" style="flex-grow: 1; flex-direction: column; margin-top: 40px; margin-bottom: 40px; margin-left: 60px; margin-right: 60px;">
-        <ui:VisualElement name="hud-top" class="hud-top" style="flex-grow: 1; height: 150px;">
+        <ui:VisualElement name="hud-top" class="hud-top" style="flex-grow: 0; height: 150px;">
             <ui:VisualElement name="card-row" class="card-row" style="flex-grow: 1;">
                 <ui:VisualElement name="FUE" class="stats" style="background-image: url(&quot;project://database/Assets/Art/Interface/FUE.png?fileID=2800000&amp;guid=c9d7adfdf4a74854c8e9321fc29c505d&amp;type=3#FUE&quot;);">
                     <ui:IntegerField value="0" focusable="false" class="card__value" />
@@ -19,6 +19,41 @@
             </ui:VisualElement>
         </ui:VisualElement>
         <ui:VisualElement name="play-area" style="flex-grow: 1;" />
-        <ui:VisualElement name="hud-bottom" style="flex-grow: 1; height: 60px;" />
+        <ui:VisualElement name="hud-bottom" class="hud-bottom">
+            <ui:VisualElement name="health-container" class="health-container">
+                <ui:VisualElement name="heart-icon" class="heart">
+                    <ui:VisualElement name="heart-empty" class="heart__empty" style="background-image: url(&quot;project://database/Assets/Art/Interface/vida_empty.png?fileID=2800000&amp;guid=595e52d69c11e104680841d4dc26555d&amp;type=3#vida_empty&quot;);" />
+                    <ui:VisualElement name="heart-fill" class="heart__fill" style="background-image: url(&quot;project://database/Assets/Art/Interface/vida_fill.png?fileID=2800000&amp;guid=aa8f6e8a6c73c864ea67ebc2ced06049&amp;type=3#vida_fill&quot;);" />
+                    <ui:IntegerField name="int_life" value="60" focusable="false" class="fuente-personalizada card__value" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="inventory-grid" class="inventory-grid" style="justify-content: space-evenly;">
+                <ui:VisualElement name="slot-0" class="inv-slot">
+                    <ui:VisualElement name="slot-0-icon" class="inv-slot__icon" />
+                    <ui:Label name="slot-0-badge" text="0" class="inv-slot__badge" />
+                </ui:VisualElement>
+                <ui:VisualElement name="slot-1" class="inv-slot">
+                    <ui:VisualElement name="slot-1-icon" class="inv-slot__icon" />
+                    <ui:Label name="slot-1-badge" text="0" class="inv-slot__badge" />
+                </ui:VisualElement>
+                <ui:VisualElement name="slot-2" class="inv-slot">
+                    <ui:VisualElement name="slot-2-icon" class="inv-slot__icon" />
+                    <ui:Label name="slot-2-badge" text="0" class="inv-slot__badge" />
+                </ui:VisualElement>
+                <ui:VisualElement name="slot-3" class="inv-slot">
+                    <ui:VisualElement name="slot-3-icon" class="inv-slot__icon" />
+                    <ui:Label name="slot-3-badge" text="0" class="inv-slot__badge" />
+                </ui:VisualElement>
+                <ui:VisualElement name="slot-4" class="inv-slot">
+                    <ui:VisualElement name="slot-4-icon" class="inv-slot__icon" />
+                    <ui:Label name="slot-4-badge" text="0" class="inv-slot__badge" />
+                </ui:VisualElement>
+                <ui:VisualElement name="slot-5" class="inv-slot">
+                    <ui:VisualElement name="slot-5-icon" class="inv-slot__icon" />
+                    <ui:Label name="slot-5-badge" text="0" class="inv-slot__badge" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="hud-bottom-right" class="hud-bottom-right" />
+        </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

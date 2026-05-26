@@ -15,6 +15,22 @@
     height: var(--hud-zone-top);
 }
 
+.hud-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: var(--hud-zone-bottom);      /* 80px */
+}
+
+#unity-text-input {
+    border-width: 0;
+    background-color: rgba(255, 255, 255, 0);
+    -unity-text-align: middle-center;
+    font-size: var(--font-size-hud-value);   /* era 22px hardcodeado */
+    color: var(--color-antique-white);
+    -unity-font-definition: var(--font-buttons);
+}
+
     /* === STATS === */
 
 .card-row {
@@ -69,7 +85,7 @@
     background-image: url("project://database/Assets/Art/Interface/CAR.png?fileID=2800000&guid=8ed7e79b10ff0be42a3f938d077ef3eb&type=3#CAR");
 }
 
-    /* === INVENTORY === */
+    /* === INVENTORY - button === */
 
 .inventory-row {
     flex-direction: column;
@@ -96,7 +112,7 @@
 }
 
 .char-badge {
-    font-size: 16px;                        /* era var(--font-size-label) = 12px */
+    font-size: var(--font-size-label);
     -unity-font-definition: var(--font-buttons);
     color: var(--color-crimson-red);
     background-color: var(--color-antique-white);
@@ -108,5 +124,112 @@
     margin-top: var(--space-xs);
     align-self: flex-end;
     min-width: 24px;
+    -unity-text-align: middle-center;
+}
+
+    /* === HEALTH === */
+
+.health-container  { flex: 1; flex-direction: row; align-items: center; }
+
+.health-container > .heart {
+    margin-right: var(--space-sm);
+}
+
+.heart {
+    width: var(--hud-health-icon);
+    height: var(--hud-health-icon);
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.heart__empty {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("project://...heart_empty.png");
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.heart__fill {
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 100%;
+    height: 100%;        /* C# lo ajusta en runtime */
+    background-image: url("project://...heart_fill.png");
+    -unity-background-scale-mode: scale-to-fit;
+}
+
+.heart > .fuente-personalizada {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(255, 255, 255, 0);
+    border-width: 0;
+}
+
+.heart > .fuente-personalizada #unity-text-input {
+    border-width: 0;
+    background-color: rgba(255, 255, 255, 0);
+    -unity-text-align: middle-center;
+    font-size: var(--font-size-hud-value);
+    color: var(--color-antique-white);
+    -unity-font-definition: var(--font-buttons);
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+    /* === INVENTORY - grid === */
+
+.inventory-grid    { flex: 1; flex-direction: row; align-items: center; justify-content: space-evenly; }
+.hud-bottom-right  { flex: 1; }
+
+/* slots */
+.inventory-grid {
+    background-color: var(--color-deep-earth);
+    border-radius: var(--btn-radius);
+    padding: var(--space-xs);
+}
+.inv-slot {
+    width: var(--hud-inv-slot);
+    height: var(--hud-inv-slot);
+    background-color: var(--color-burnt-sienna);
+    border-radius: 6px;
+    margin-right: 4px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-size: var(--font-size-hud-value);
+}
+.inv-slot--active {
+    background-color: var(--color-warm-tan);
+}
+.inv-slot__icon {
+    width: 70%;
+    height: 70%;
+    -unity-background-scale-mode: scale-to-fit;
+    background-color: rgba(255,255,255,0);
+}
+.inv-slot__badge {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    font-size: var(--font-size-label);
+    -unity-font-definition: var(--font-buttons);
+    color: var(--color-deep-earth);
+    background-color: var(--color-antique-white);
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-radius: 3px;
+    min-width: 20px;
     -unity-text-align: middle-center;
 }

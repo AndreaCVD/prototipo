@@ -10,12 +10,16 @@ public class stats_UI : MonoBehaviour
     [Header("Ficha personaje")]
     [SerializeField] Parameters protagonista;
 
-
-    private VisualElement root;
     //ref del UI
+    private VisualElement root;
     private IntegerField fieldFUE, fieldINT, fieldCAR, fieldLIFE;
     public bool canvas_open;
     public CanvasGroup canvas_inventario;
+
+    private VisualElement heartFill;
+    private int maxLife;
+
+    [Header("Inventario")]
     [SerializeField] TMP_Text llave_text;
     [SerializeField] TMP_Text llaveMaestra_text;
     [SerializeField] TMP_Text daga_text;
@@ -40,7 +44,9 @@ public class stats_UI : MonoBehaviour
         fieldFUE = root.Q("FUE").Q<IntegerField>();
         fieldINT = root.Q("INT").Q<IntegerField>();
         fieldCAR = root.Q("CAR").Q<IntegerField>();
+
         fieldLIFE = root.Q("int_life").Q<IntegerField>();
+        heartFill = root.Q<VisualElement>("heart-fill");
     }
 
     void Start()
@@ -60,6 +66,7 @@ public class stats_UI : MonoBehaviour
         //h = protagonista.stats.Get(PersonajesStats.Constitucion).ToString();
         //int h = protagonista.stats.Get(PersonajesStats.Constitucion);
 
+        maxLife = protagonista.stats.Get(PersonajesStats.Constitucion);
 
         SetFuerza(f);
 
@@ -111,6 +118,14 @@ public class stats_UI : MonoBehaviour
     void SetConstitucion(int num)
     {
         fieldLIFE.value = num;
+        ActualizarCorazon(num);
+    }
+    void ActualizarCorazon(int vidaActual)
+    {
+        float porcentaje = Mathf.Clamp01((float)vidaActual / maxLife);
+        heartFill.style.height = new StyleLength(
+            new Length(porcentaje * 100f, LengthUnit.Percent)
+        );
     }
     void SetInventario()
     {

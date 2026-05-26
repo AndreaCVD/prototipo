@@ -18,9 +18,9 @@
     --space-safe: 60px;   /* safe zone desde borde de pantalla */
 
     /* === tipografía === */
-    --font-size-hud-value:   22px;   /* número de vida, valores de carta */
+    --font-size-hud-value:   30px;   /* número de vida, valores de carta */
     --font-size-body:        16px;   /* texto de menú, labels */
-    --font-size-label:       12px;   /* subtítulos, tooltips */
+    --font-size-label:       20px;   /* subtítulos, tooltips */
     --font-size-title:       28px;   /* títulos de pantalla */
 
     /* === componentes HUD === */
@@ -29,9 +29,10 @@
     --hud-card-radius:  10px;
     --hud-card-gap:     12px;
 
-    --hud-health-icon:  52px;
+    --hud-health-icon:  82px;
+    --hud-inv-slot:  80px;
     --hud-zone-top:     150px;
-    --hud-zone-bottom:  80px;
+    --hud-zone-bottom:  100px;
 
     /* === botones (extendiendo los tuyos) === */
     --btn-height-lg:    52px;

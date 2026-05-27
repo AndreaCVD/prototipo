@@ -606,7 +606,7 @@ GameObject:
   - component: {fileID: 495269048}
   - component: {fileID: 495269047}
   m_Layer: 0
-  m_Name: UI
+  m_Name: UI_HUB
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

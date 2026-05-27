@@ -439,14 +439,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23f28074ff9ac86448bb4dc085c4b13f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvas_acciones: {fileID: 0}
+  canvas_acciones: {fileID: 854865972}
   canva_Arma: {fileID: 77761947}
-  canvas_enemy: {fileID: 0}
-  text_name: {fileID: 0}
-  text_fuerza: {fileID: 0}
-  text_intel: {fileID: 0}
-  text_cari: {fileID: 0}
-  text_const: {fileID: 0}
   uIDocument: {fileID: 1278551825}
 --- !u!114 &88913842
 MonoBehaviour:

@@ -11,17 +11,10 @@ public class Menu_Command : MonoBehaviour
     [Header("Canvas")]
     [SerializeField] CanvasGroup canvas_acciones;
     [SerializeField] CanvasGroup canva_Arma;
-    [SerializeField] CanvasGroup canvas_enemy;
+
     [Header("Extraer info enemigo")]
     private CombatDebug info_enemy;
     private Parameters enemyData;
-
-    [Header("Textos status")]
-    [SerializeField] TMP_Text text_name;
-    [SerializeField] TMP_Text text_fuerza;
-    [SerializeField] TMP_Text text_intel;
-    [SerializeField] TMP_Text text_cari;
-    [SerializeField] TMP_Text text_const;
 
     //UI
     [SerializeField] UIDocument uIDocument;
@@ -57,12 +50,12 @@ public class Menu_Command : MonoBehaviour
     }
     void Update()
     {
-
-        int aux = enemyData.stats.Get(PersonajesStats.Constitucion);
-        if (enemyConst.value != aux)
-        {
-            SetConstitucion(aux);
-        }
+        //Mostrar Vida
+        //int aux = enemyData.stats.Get(PersonajesStats.Constitucion);
+        //if (enemyConst.value != aux)
+        //{
+        //    SetConstitucion(aux);
+        //}
 
     }
 

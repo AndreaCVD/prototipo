@@ -77,7 +77,7 @@ public class CommandPanel : MonoBehaviour
     void OnDisable()
     {
         btnFUE.clicked -= Fuerza;
-        btnCAR.clicked -= Intel;
+        btnCAR.clicked -= Intel; //que es intel
         btnINT.clicked -= Carisma;
         //Por implementar
         btnItem.clicked -= UsarItem;
@@ -93,6 +93,8 @@ public class CommandPanel : MonoBehaviour
     {
         commandManager.Fuerza();
         Debug.Log("Ataque de fuerza");
+        OcultarCombate();
+
     }
     //Boton Inteligencia
     public void Intel()
@@ -128,6 +130,7 @@ public class CommandPanel : MonoBehaviour
 
     public void MostrarCombate()
     {
+        Debug.Log("mostrar combate");
         combatScreen.style.display = DisplayStyle.Flex;
         if (gameHud != null)
             gameHud.style.display = DisplayStyle.None;
@@ -135,6 +138,8 @@ public class CommandPanel : MonoBehaviour
 
     public void OcultarCombate()
     {
+        Debug.Log("mostrar combate");
+
         combatScreen.style.display = DisplayStyle.None;
         if (gameHud != null)
             gameHud.style.display = DisplayStyle.Flex;

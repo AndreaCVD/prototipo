@@ -22,20 +22,20 @@ public class FirstFloorPuzzle : MonoBehaviour
     {
         revisarPuzzle();
 
-        zona_1.finished = lista.Second_Floor[0].acabado;
-        zona_1.finished = lista.Second_Floor[1].acabado;
+        zona_1.finished = lista.Nivel_1[0].acabado;
+        zona_1.finished = lista.Nivel_1[1].acabado;
 
     }
 
     void Update()
     {
-        if (!lista.Second_Floor[0].acabado)
+        if (!lista.Nivel_1[0].acabado)
         {
-            lista.Second_Floor[0].acabado = zona_1.finished;
+            lista.Nivel_1[0].acabado = zona_1.finished;
         }
-        if (!lista.Second_Floor[1].acabado)
+        if (!lista.Nivel_1[1].acabado)
         {
-            lista.Second_Floor[1].acabado = zona_2.finished;
+            lista.Nivel_1[1].acabado = zona_2.finished;
         }
 
     }
@@ -44,12 +44,11 @@ public class FirstFloorPuzzle : MonoBehaviour
     public void revisarPuzzle()
     {
         //Vemos si hay un puzzle acabado
-        for (int i = 0; i < lista.Second_Floor.Count; i++)
+        for (int i = 0; i < lista.Nivel_1.Count; i++)
         {
-            Debug.Log(lista.Second_Floor[i].acabado);
-            if (lista.Second_Floor[i].acabado)
+            if (lista.Nivel_1[i].acabado)
             {
-                switch (lista.Second_Floor[i].name)
+                switch (lista.Nivel_1[i].name)
                 {
                     case "Puzzle_1":
                         eliminarLista_1("puzz_1");

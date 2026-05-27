@@ -1277,7 +1277,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 202546004232601461, guid: 11447d67a5b1b5e4eab82e7e47d4c58e, type: 3}
       propertyPath: nextScene
-      value: second_floor
+      value: Nivel_1
       objectReference: {fileID: 0}
     - target: {fileID: 7415072469460505303, guid: 11447d67a5b1b5e4eab82e7e47d4c58e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2395,6 +2395,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3336957546838342352, guid: 96ae6b2309cd7c54c9cec56069f50c80, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8883086688304210616, guid: 96ae6b2309cd7c54c9cec56069f50c80, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

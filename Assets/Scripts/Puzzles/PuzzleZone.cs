@@ -20,7 +20,7 @@ public class PuzzleZone : MonoBehaviour
     [Header("Listas")]
     [SerializeField] string nombre;
     public List<GameObject> PiezasPuzzles = new List<GameObject>();
-    [SerializeField] List<GameObject> SitioReinicio = new List<GameObject>();
+    [SerializeField] List<Transform> SitioReinicio = new List<Transform>();
     [SerializeField] List<Transform> UltimaPos = new List<Transform>();
     [SerializeField] Transform pos_player;
 
@@ -50,7 +50,7 @@ public class PuzzleZone : MonoBehaviour
 
                 if (b.name.Contains("_pos"))
                 {
-                    SitioReinicio.Add(b);//Posicion Original
+                    SitioReinicio.Add(b.transform);//Posicion Original
                 }
                 else if (b.name.Contains("player"))
                 {
@@ -59,6 +59,7 @@ public class PuzzleZone : MonoBehaviour
                 else if (b.name.Contains("_"))
                 {
                     PiezasPuzzles.Add(b);//Piezas
+
                 }
                 //Debug.Log(b);
             }
@@ -126,9 +127,9 @@ public class PuzzleZone : MonoBehaviour
         for (int i = 0; i < PiezasPuzzles.Count; i++)
         {
             GameObject pieza = PiezasPuzzles[i];
-            GameObject trans = SitioReinicio[i];
+            Transform trans = SitioReinicio[i];
 
-            pieza.transform.position = new Vector3(trans.transform.position.x, trans.transform.position.y, trans.transform.position.z );
+            pieza.transform.position = new Vector3(trans.position.x, trans.position.y, trans.position.z );
             Debug.Log(pieza + "- se ha movido a - " + trans);
         }
         //Jugador

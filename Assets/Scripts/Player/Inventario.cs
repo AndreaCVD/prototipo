@@ -1,9 +1,11 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Inventario : MonoBehaviour
 {
     [SerializeField] Parameters prota;
+    [SerializeField] Puzzle lista;
     //Para encontrar los scripts de DialogManager
     private Dialog dialog;
     private GameObject script_dialog;
@@ -31,7 +33,9 @@ public class Inventario : MonoBehaviour
     {
         if (other.gameObject.tag == "Llave")
         {
-            prota.Inventario.Llave.Add(other.gameObject.name);          
+            prota.Inventario.Llave.Add(other.gameObject.name);
+            //Marcar que se ha acabado el puzzle
+            puzzleAcabado(other.gameObject.name);
             Destroy(other.gameObject);
         }
         else if (other.gameObject.tag == "LlaveMaestra")
@@ -87,5 +91,36 @@ public class Inventario : MonoBehaviour
     {
         Debug.Log("El cofre se abre");
 
+    }
+    private void puzzleAcabado(string obj)
+    {
+        Debug.Log(obj);
+        Scene escenaActual = SceneManager.GetActiveScene(); 
+        switch( escenaActual.name )
+        {
+            case "Nivel_0":
+                if (obj.Contains("a1"))
+                {
+                    Debug.Log("es del escenario A");
+                }
+                    break;
+            case "Nivel_1":
+                if (obj.Contains("b1"))
+                {
+                    lista.Nivel_1[0].acabado = true;
+                }               
+                else if (obj.Contains("b2"))
+                {
+                    lista.Nivel_1[1].acabado = true;
+                }
+                break;
+            case "Nivel_2":
+                break;
+            case "Nivel_3":
+                break;
+            default:
+                Debug.Log("Error en inventario");
+                break;
+        }
     }
 }

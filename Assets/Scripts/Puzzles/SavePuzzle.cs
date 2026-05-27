@@ -2,7 +2,7 @@ using System.Collections;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+
 [Serializable]
 public class Bools
 {
@@ -21,17 +21,17 @@ public class Puzzles
 
 public class SavePuzzle : MonoBehaviour
 {
+
+    public Parameters prota;
     public Puzzle lista;
-    private Preload preload;
-    private FirstFloorPuzzle firstFloor;
+
 
     void Awake()
     {
-        for (int i = 0; i < lista.Second_Floor.Count; i++)
+        for (int i = 0; i < lista.Nivel_1.Count; i++)
         {
-            Debug.Log("Puzzles todos false");
-            //aquest escript no s'ha de destruir, o fer-ho en una altre part
-            lista.Second_Floor[i].acabado = false;
+            //Debug.Log("Puzzles todos false");
+            lista.Nivel_1[i].acabado = false;
 
         }
     }

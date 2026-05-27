@@ -84,9 +84,9 @@ public class Bolsa : ScriptableObject
 public class Puzzle : ScriptableObject
 {
 
-    public List<Bools> Second_Floor = new List<Bools>();
-    public List<Bools> Puzzle_b3 = new List<Bools>();
-    public List<Bools> Puzzle_b2 = new List<Bools>();
+    public List<Bools> Nivel_0 = new List<Bools>();
+    public List<Bools> Nivel_1 = new List<Bools>();
+    public List<Bools> Nivel_2 = new List<Bools>();
 
 }
 

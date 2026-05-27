@@ -6,7 +6,7 @@ using UnityEngine.UIElements;
 public class LoadScene : MonoBehaviour
 {
         [Header("Degradado pantalla")]
-    [SerializeField] TintScreen pantalla;
+    private TintScreen pantalla;
         [Header("Datos prota")]
     private GameObject protagonista;
     GameObject obj_saveScript;
@@ -28,15 +28,11 @@ public class LoadScene : MonoBehaviour
 
         destroyObjs = this.GetComponent<crear_obj>();
         preload = this.GetComponent<Preload>();
+        pantalla = this.GetComponent<TintScreen>();
     }
 
     void Update()
     {
-        //pantalla tint
-        if (pantalla == null)
-        {
-            pantalla = GetComponent<TintScreen>();
-        }
         //encontrar el personaje prefab 
         if (protagonista == null)
         {

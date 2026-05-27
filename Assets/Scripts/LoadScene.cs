@@ -75,7 +75,7 @@ public class LoadScene : MonoBehaviour
             //preload.move_player();
             SceneManager.LoadScene(sceneName);
             //PUZZLES --> Mirar si hay alguno ya hecho
-            puzz.revisarLista();
+
         }
     }
     public void EscenaAnterior()//Tornar a una escena anterior

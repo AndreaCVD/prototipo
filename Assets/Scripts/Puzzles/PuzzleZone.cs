@@ -18,8 +18,9 @@ public class PuzzleZone : MonoBehaviour
     private List<GameObject> Children = new List<GameObject>();
     [Header("Listas")]
     [SerializeField] string nombre;
-    [SerializeField] List<GameObject> PiezasPuzzles = new List<GameObject>();
+    public List<GameObject> PiezasPuzzles = new List<GameObject>();
     [SerializeField] List<GameObject> SitioReinicio = new List<GameObject>();
+    [SerializeField] List<Transform> UltimaPos = new List<Transform>();
     [SerializeField] Transform pos_player;
 
 

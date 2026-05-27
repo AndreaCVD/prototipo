@@ -44,9 +44,9 @@ public class PuzzleZone : MonoBehaviour
         int lenght = Children.Count;
         for (int i = 0;  i < lenght; i++)
         {
-            foreach (GameObject a in Children)
+            foreach (Transform a in Children[i].transform)
             {
-                GameObject b = a.transform.GetChild(i).gameObject;
+                GameObject b = a.gameObject;
 
                 if (b.name.Contains("_pos"))
                 {

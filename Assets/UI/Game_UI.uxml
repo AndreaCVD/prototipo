@@ -13,9 +13,10 @@
                     <ui:IntegerField value="0" focusable="false" class="card__value" />
                 </ui:VisualElement>
             </ui:VisualElement>
-            <ui:VisualElement name="inventory-row" class="inventory-row">
-                <ui:Button name="btn-inventory" class="inventory-btn" style="background-image: url(&quot;project://database/Assets/Art/Interface/inventory.png?fileID=2800000&amp;guid=b787edb1344ca4745ba4a6dcce51a01b&amp;type=3#inventory&quot;);" />
-                <ui:Label name="char-badge" text="R" class="char-badge" />
+            <ui:VisualElement name="inventory-row" class="inventory-row" style="flex-direction: row-reverse; align-self: center;">
+                <ui:Button name="btn-inventory" class="inventory-btn" style="background-image: url(&quot;project://database/Assets/Art/Interface/inventory.png?fileID=2800000&amp;guid=b787edb1344ca4745ba4a6dcce51a01b&amp;type=3#inventory&quot;); flex-direction: column; justify-content: space-between; align-content: flex-start;">
+                    <ui:Label name="char-badge" text="I" class="char-badge" />
+                </ui:Button>
             </ui:VisualElement>
         </ui:VisualElement>
         <ui:VisualElement name="play-area" style="flex-grow: 1;" />
@@ -27,7 +28,7 @@
                     <ui:IntegerField name="int_life" value="60" focusable="false" class="fuente-personalizada card__value" />
                 </ui:VisualElement>
             </ui:VisualElement>
-            <ui:VisualElement name="inventory-grid" class="inventory-grid" style="justify-content: space-evenly;">
+            <ui:VisualElement name="inventory-grid" class="inventory-grid" style="justify-content: space-evenly; display: none;">
                 <ui:VisualElement name="slot-0" class="inv-slot">
                     <ui:VisualElement name="slot-0-icon" class="inv-slot__icon" />
                     <ui:Label name="slot-0-badge" text="0" class="inv-slot__badge" />

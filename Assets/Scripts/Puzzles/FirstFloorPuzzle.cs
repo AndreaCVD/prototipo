@@ -21,26 +21,26 @@ public class FirstFloorPuzzle : MonoBehaviour
     void Start()
     {
         revisarPuzzle();
+
+        zona_1.finished = lista.Second_Floor[0].acabado;
+        zona_1.finished = lista.Second_Floor[1].acabado;
+
     }
 
     void Update()
     {
         if (!lista.Second_Floor[0].acabado)
         {
-            for (int i = 0; i < zona_1.PiezasPuzzles.Count; i++)
-            {
-                if (!zona_1.PiezasPuzzles[i].GetComponent<EmpujarObjetos>().returnState())
-                {
-                    return;
-                }
-            }
-            //zona_1_acabada=true;
-            lista.Second_Floor[0].acabado = true;
-            revisarPuzzle();
-            Debug.Log("Se ha terminado el puzzle de la Zona 1");
+            lista.Second_Floor[0].acabado = zona_1.finished;
+        }
+        if (!lista.Second_Floor[1].acabado)
+        {
+            lista.Second_Floor[1].acabado = zona_2.finished;
         }
 
     }
+
+
     public void revisarPuzzle()
     {
         //Vemos si hay un puzzle acabado
@@ -49,7 +49,7 @@ public class FirstFloorPuzzle : MonoBehaviour
             Debug.Log(lista.Second_Floor[i].acabado);
             if (lista.Second_Floor[i].acabado)
             {
-                switch(lista.Second_Floor[i].name)
+                switch (lista.Second_Floor[i].name)
                 {
                     case "Puzzle_1":
                         eliminarLista_1("puzz_1");
@@ -66,23 +66,22 @@ public class FirstFloorPuzzle : MonoBehaviour
 
     }
 
-    private void eliminarLista_1(string name)
+    void eliminarLista_1(string name)
     {
-            Debug.Log("se destruye?");
         foreach (var a in p1_eliminarObj)
         {
 
             Destroy(a);
         }
     }
-    private void eliminarLista_2(string name)
+    void eliminarLista_2(string name)
     {
         foreach (var a in p2_eliminarObj)
         {
             Destroy(a);
         }
     }
-    private void lastPos_1()
+    void lastPos_1()
     {
         //anar per tota la llista y guardar cada posicio
     }

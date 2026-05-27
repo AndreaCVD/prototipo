@@ -29,6 +29,7 @@ public class SavePuzzle : MonoBehaviour
     {
         for (int i = 0; i < lista.Second_Floor.Count; i++)
         {
+            Debug.Log("Puzzles todos false");
             //aquest escript no s'ha de destruir, o fer-ho en una altre part
             lista.Second_Floor[i].acabado = false;
 
@@ -36,11 +37,7 @@ public class SavePuzzle : MonoBehaviour
     }
 
 }
-
-
-
     //La recompensa si es fa el puzzle
 
     //Puzzle 1 --> que la llave y el cofre desaparezcan si se abren
     //Puzzle 2 --> las dos cajas en el interruptor
-

@@ -12,6 +12,7 @@ public class PuzzleZone : MonoBehaviour
     [SerializeField] GameObject player;
     public bool playerInside;    
     public bool restart;
+    public bool finished;
     //Canvas
     [SerializeField] CanvasGroup grup;
 
@@ -66,6 +67,7 @@ public class PuzzleZone : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        //reinicio puzzle
         if (playerInside)
         {
             // BOTON REINICIO 
@@ -76,6 +78,20 @@ public class PuzzleZone : MonoBehaviour
                 Debug.Log("Reinicio");
                 RestartPuzzle();
             }
+        }
+        //---Puzzle---
+        if (!finished)
+        {
+            for (int i = 0; i < PiezasPuzzles.Count; i++)
+            {
+                if (!PiezasPuzzles[i].GetComponent<EmpujarObjetos>().returnState())
+                {
+                    return;
+                }
+            }
+            finished = true;
+            Debug.Log("Se ha terminado el puzzle de la Zona");
+
         }
     }
     void OnTriggerEnter(Collider other)

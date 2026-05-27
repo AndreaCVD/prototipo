@@ -17,8 +17,6 @@ public class LoadScene : MonoBehaviour
         [Header("Preparar el combate")]
     [SerializeField] Preload preload;
     [SerializeField] crear_obj destroyObjs;
-    
-    private SavePuzzle puzz;
 
     //[SerializeField] Preload preload;
     string name_anterior;
@@ -26,8 +24,6 @@ public class LoadScene : MonoBehaviour
 
     private void Start()
     {
-        puzz = this.GetComponent<SavePuzzle>();
-
         onCombat = false;
     }
 

@@ -11,7 +11,7 @@ public class CommandPanel : MonoBehaviour
 
     private VisualElement root;
     private VisualElement combatScreen;
-    private VisualElement gameHud;
+    private GameObject gameHudObject;
 
     //fila principal
     private Button btnFUE, btnCAR, btnINT;
@@ -36,18 +36,13 @@ public class CommandPanel : MonoBehaviour
         var uIDocument = GetComponent<UIDocument>();
         root = uIDocument.rootVisualElement;
 
-        // busca el UIDocument del HUD en todas las escenas cargadas
-        UIDocument[] allDocs = FindObjectsByType<UIDocument>(FindObjectsSortMode.None);
-        foreach (UIDocument doc in allDocs)
+        gameHudObject = GameObject.Find("UI_HUB");
+        if (gameHudObject == null)
         {
-            if (doc.gameObject.name == "UI_HUB")   // ← nombre exacto del GameObject del HUD
-            {
-                gameHud = doc.rootVisualElement;
-                break;
-            }
+            Debug.LogWarning("CommandPanel: no se encontro UI_HUB :c");
         }
 
-        if (gameHud == null)
+        if (gameHudObject == null)
             Debug.LogWarning("CommandPanel: no se encontró UI_HUB en la escena.");
 
         //refs
@@ -129,14 +124,14 @@ public class CommandPanel : MonoBehaviour
     public void MostrarCombate()
     {
         combatScreen.style.display = DisplayStyle.Flex;
-        if (gameHud != null)
-            gameHud.style.display = DisplayStyle.None;
+        if (gameHudObject != null)
+            gameHudObject.SetActive(false);
     }
 
     public void OcultarCombate()
     {
         combatScreen.style.display = DisplayStyle.None;
-        if (gameHud != null)
-            gameHud.style.display = DisplayStyle.Flex;
+        if (gameHudObject != null)
+            gameHudObject.SetActive(true);
     }
 }

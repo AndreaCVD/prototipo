@@ -62,26 +62,15 @@ public class Inventario : MonoBehaviour
 
     public void CofreKey(GameObject cofre, cherrydev.DialogNodeGraph dialogo_obj)
     {
-        //Llaves = new List<int>(prota.Inventario);
-
-        //Llaves = prota.Inventario;
-        //List<string> listaB = new List<string>(listaA);
         bool keyFound = false;
-        //Leer el nombre de este cofre
-        string nombre = this.name; //Prota es THIS
-        //Recorremos nuestro inventario para ver si coincide alguna
-        //foreach (string[] a in Llaves)
-        //{
-        //    if (a == cofre.name)
-        //    {
-        //        Debug.Log(a);
-        //        Si tiene mismo nombre se abre
-        //        AbrirCofre();
-        //        keyFound = true;
-        //        break;
-        //    }
-        //}
-        //Si el cofre comparte numero codigo con la llave --> se abre
+
+        //Recorremos nuestro inventario para ver si tenemos llaves
+        if ( prota.Inventario.Llave.Count > 0 )
+        {
+            AbrirCofre();
+            prota.Inventario.Llave.RemoveAt(prota.Inventario.Llave.Count - 1);
+            keyFound = true;
+        }
         if (!keyFound)
         {
             dialog.EmpezarDialogo(dialogo_obj, cofre);
@@ -94,7 +83,6 @@ public class Inventario : MonoBehaviour
     }
     private void puzzleAcabado(string obj)
     {
-        Debug.Log(obj);
         Scene escenaActual = SceneManager.GetActiveScene(); 
         switch( escenaActual.name )
         {

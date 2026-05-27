@@ -88,7 +88,7 @@ public class CommandPanel : MonoBehaviour
     {
         commandManager.Fuerza();
         Debug.Log("Ataque de fuerza");
-        OcultarCombate();
+        //OcultarCombate();
 
     }
     //Boton Inteligencia

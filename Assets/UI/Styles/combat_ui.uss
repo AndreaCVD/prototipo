@@ -1,9 +1,19 @@
 @import url("project://database/Assets/UI/Styles/general_colors.uss?fileID=7433441132597879392&guid=ad6a76f9ae4c3674d898b1a5433c7bf6&type=3#general_colors");
+.unity-text-element {
+    border-width: 0;
+    background-color: rgba(255, 255, 255, 0);
+    -unity-text-align: middle-center;
+    font-size: var(--font-size-hud-value);
+    color: var(--color-antique-white);
+    -unity-font-definition: var(--font-buttons);
+}
 
 .combat-screen {
     position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     flex-direction: column;
     justify-content: space-between;
     padding: var(--space-safe);
@@ -22,8 +32,16 @@
     justify-content: flex-end;
     padding-bottom: var(--space-md);
 }
-.combat-zone--player { background-color: rgba(68, 28, 4, 0.25); border-radius: var(--btn-radius); }
-.combat-zone--enemy  { background-color: rgba(158, 6, 6, 0.15); border-radius: var(--btn-radius); }
+
+.combat-zone--player {
+    background-color: rgba(68, 28, 4, 0.25);
+    border-radius: var(--btn-radius);
+}
+
+.combat-zone--enemy {
+    background-color: rgba(158, 6, 6, 0.15);
+    border-radius: var(--btn-radius);
+}
 
 .combat-sprite {
     flex-grow: 1;
@@ -40,10 +58,26 @@
     margin-bottom: 4px;
 }
 
-.combat-hp__label { font-size: var(--font-size-label); color: var(--color-antique-white); }
-.combat-hp__bar { height: 8px; background-color: rgba(255,255,255,0.1); border-radius: 4px; }
-.combat-hp__fill { height: 100%; border-radius: 4px; background-color: #1D9E75; }
-.combat-hp__fill--enemy { background-color: var(--color-crimson-red); }
+.combat-hp__label {
+    font-size: var(--font-size-label);
+    color: var(--color-antique-white);
+}
+
+.combat-hp__bar {
+    height: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+.combat-hp__fill {
+    height: 100%;
+    border-radius: 4px;
+    background-color: rgb(29, 158, 117);
+}
+
+.combat-hp__fill--enemy {
+    background-color: var(--color-crimson-red);
+}
 
 .combat-dialog {
     width: 32%;
@@ -52,6 +86,7 @@
     padding: var(--space-lg);
     justify-content: flex-end;
 }
+
 .combat-dialog__text {
     font-size: var(--font-size-body);
     color: var(--color-antique-white);
@@ -81,9 +116,11 @@
     flex-direction: row;
     justify-content: center;
 }
+
 .combat-row > .combat_btns {
     flex: 1;
     max-width: 320px;
+    height: 64px;
     margin-top: 0;
     margin-right: var(--space-md);
 }
@@ -94,3 +131,54 @@
     margin-left: var(--space-xl);
     margin-right: var(--space-xl);
 }
+
+    /* === BUTTONS - attack === */
+
+.combat_btn_color {
+    background-image: url("project://database/Assets/Art/Interface/Buttons/buttons_attack/attack_normal.png?fileID=21300000&guid=7376ed8a40d83fa479c695354b0ce0e4&type=3#attack_normal");
+    border-width: 0;
+    scale: 1;
+    transition-property: scale;
+    transition-duration: 0.12s;
+    transition-timing-function: ease-out;
+}
+
+.combat_btn_color:hover {
+    background-image: url("project://database/Assets/Art/Interface/Buttons/buttons_attack/attack_hover.png?fileID=21300000&guid=43f2a1ed895be02448cda4fc1c4aa904&type=3#attack_hover");
+    scale: 1.05;
+    top: 0;
+    left: 0;
+}
+
+.combat_btn_color:active {
+    background-image: url("project://database/Assets/Art/Interface/Buttons/buttons_attack/attack_pressed.png?fileID=21300000&guid=dae905cfaa37f6b42bfe57d8410e6073&type=3#attack_pressed");
+    scale: 0.96;
+    top: 0;
+    left: 0;
+}
+
+        /* === BUTTONS - items === */
+
+.items_btn_color {
+    background-image: url("project://database/Assets/Art/Interface/Buttons/buttons_attack/attack_normal.png?fileID=21300000&guid=7376ed8a40d83fa479c695354b0ce0e4&type=3#attack_normal");
+    border-width: 0;
+    scale: 1;
+    transition-property: scale;
+    transition-duration: 0.12s;
+    transition-timing-function: ease-out;
+}
+
+.items_btn_color:hover {
+    background-image: url("project://database/Assets/Art/Interface/Buttons/buttons_attack/attack_hover.png?fileID=21300000&guid=43f2a1ed895be02448cda4fc1c4aa904&type=3#attack_hover");
+    scale: 1.05;
+    top: 0;
+    left: 0;
+}
+
+.items_btn_color:active {
+    background-image: url("project://database/Assets/Art/Interface/Buttons/buttons_attack/attack_pressed.png?fileID=21300000&guid=dae905cfaa37f6b42bfe57d8410e6073&type=3#attack_pressed");
+    scale: 0.96;
+    top: 0;
+    left: 0;
+
+        /* === BUTTONS - run === */

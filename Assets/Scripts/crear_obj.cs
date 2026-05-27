@@ -9,8 +9,6 @@ public class crear_obj : MonoBehaviour
     [SerializeField] GameObject preloadScript;
     [SerializeField] GameObject screenTint;
     [SerializeField] GameObject dialog;
-    [SerializeField] GameObject saveInfo;
-    [SerializeField] GameObject UIdocument;
     //[SerializeField] Preload preload;
 
     private GameObject gameManager;
@@ -22,18 +20,6 @@ public class crear_obj : MonoBehaviour
         //Le indico que no se destruya entre escenas
         DontDestroyOnLoad(gameManager);
 
-        if (!GameObject.Find("-- Save Info --") && !GameObject.Find("-- Save Info --(Clone)"))
-        {
-            GameObject nuevoObj = Instantiate(saveInfo);
-            nuevoObj.name = "-- Save Info --";
-            DontDestroyOnLoad(nuevoObj);
-        }
-        else
-        {
-            GameObject x = GameObject.Find("-- Save Info --");
-            x.name = "-- Save Info --";
-            DontDestroyOnLoad(x);
-        }
         if (!GameObject.Find("--WorldManagement--") && !GameObject.Find("--WorldManagement--(Clone)"))
         {
             GameObject nuevoObj = Instantiate(world);
@@ -47,18 +33,6 @@ public class crear_obj : MonoBehaviour
             DontDestroyOnLoad(x);
         }
 
-        //if (!GameObject.Find("UI") && !GameObject.Find("UI(Clone)"))
-        //{
-        //    GameObject nuevoObj = Instantiate(UIdocument);
-        //    nuevoObj.name = "UI";
-        //    DontDestroyOnLoad(nuevoObj);
-        //}
-        //else
-        //{
-        //    GameObject x = GameObject.Find("UI");
-        //    x.name = "UI";
-        //    DontDestroyOnLoad(x);
-        //}
         if (!GameObject.Find("ScreenTint") && !GameObject.Find("ScreenTint(Clone)"))
         {
             GameObject nuevoObj = Instantiate(screenTint);
@@ -71,18 +45,18 @@ public class crear_obj : MonoBehaviour
             tint.name = "ScreenTint";
             DontDestroyOnLoad(tint);
         }
-        if (!GameObject.Find("--DialogManager--") && !GameObject.Find("--DialogManager--(Clone)"))
-        {
-            GameObject nuevoObj = Instantiate(dialog);
-            nuevoObj.name = "--DialogManager--";
-            DontDestroyOnLoad(nuevoObj);
-        }
-        else
-        {
+        //if (!GameObject.Find("--DialogManager--") && !GameObject.Find("--DialogManager--(Clone)"))
+        //{
+        //    GameObject nuevoObj = Instantiate(dialog);
+        //    nuevoObj.name = "--DialogManager--";
+        //    DontDestroyOnLoad(nuevoObj);
+        //}
+        //else
+        
             GameObject dialog = GameObject.Find("--DialogManager--");
             dialog.name = "--DialogManager--";
             DontDestroyOnLoad(dialog);
-        }
+        Debug.Log("what");
     }
 
     public void destroyAll()

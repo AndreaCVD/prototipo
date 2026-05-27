@@ -15,8 +15,8 @@ public class LoadScene : MonoBehaviour
         [Header("Parar movimiento")]
     [SerializeField] InputHandler escenaState;
         [Header("Preparar el combate")]
-    [SerializeField] Preload preload;
-    [SerializeField] crear_obj destroyObjs;
+    private Preload preload;
+    private crear_obj destroyObjs;
 
     //[SerializeField] Preload preload;
     string name_anterior;
@@ -25,6 +25,9 @@ public class LoadScene : MonoBehaviour
     private void Start()
     {
         onCombat = false;
+
+        destroyObjs = this.GetComponent<crear_obj>();
+        preload = this.GetComponent<Preload>();
     }
 
     void Update()
@@ -129,16 +132,8 @@ public class LoadScene : MonoBehaviour
     public void GameOver()
     {
         pantalla.UnTint();
-        //save_posicion.save_LastPos();
-
+ 
         SceneManager.LoadScene("GameOver");
     }
 
-
-    //private void Position()
-    //{
-    //    Vector3 pos = protagonista.transform.position;
-    //    //la enviamos
-    //    save_posicion.save_pos(pos);
-    //}
 }

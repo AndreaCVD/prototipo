@@ -393,12 +393,19 @@ PrefabInstance:
       propertyPath: playerPersonaje
       value: 
       objectReference: {fileID: 11400000, guid: f0233a249cd1f2b43a3d8f04e1ad2bf2, type: 2}
+    - target: {fileID: 5575179095691700204, guid: 4997a3c32d5a68645b6a390ac1a63c05, type: 3}
+      propertyPath: world
+      value: 
+      objectReference: {fileID: 7052334839938477842, guid: 4997a3c32d5a68645b6a390ac1a63c05, type: 3}
+    - target: {fileID: 5575179095691700204, guid: 4997a3c32d5a68645b6a390ac1a63c05, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7052334839938477842, guid: 4997a3c32d5a68645b6a390ac1a63c05, type: 3}
       propertyPath: m_Name
       value: --WorldManagement--
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 5731112017506974367, guid: 4997a3c32d5a68645b6a390ac1a63c05, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -1378,7 +1385,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7663525706672394598, guid: 459b944f305510f4c837797037447397, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8402151408438500115, guid: 459b944f305510f4c837797037447397, type: 3}
       propertyPath: m_Pivot.x

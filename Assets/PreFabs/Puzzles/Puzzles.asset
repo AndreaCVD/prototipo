@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Puzzle
   Second_Floor:
   - name: Puzzle_1
-    acabado: 0
+    acabado: 1
   - name: Puzzle_2
     acabado: 0
   Puzzle_b3:

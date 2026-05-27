@@ -12,14 +12,16 @@ public class PuzzleZone : MonoBehaviour
     [SerializeField] GameObject player;
     public bool playerInside;    
     public bool restart;
+    public bool finished;
     //Canvas
     [SerializeField] CanvasGroup grup;
 
     private List<GameObject> Children = new List<GameObject>();
     [Header("Listas")]
     [SerializeField] string nombre;
-    [SerializeField] List<GameObject> PiezasPuzzles = new List<GameObject>();
+    public List<GameObject> PiezasPuzzles = new List<GameObject>();
     [SerializeField] List<GameObject> SitioReinicio = new List<GameObject>();
+    [SerializeField] List<Transform> UltimaPos = new List<Transform>();
     [SerializeField] Transform pos_player;
 
 
@@ -65,6 +67,7 @@ public class PuzzleZone : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        //reinicio puzzle
         if (playerInside)
         {
             // BOTON REINICIO 
@@ -75,6 +78,20 @@ public class PuzzleZone : MonoBehaviour
                 Debug.Log("Reinicio");
                 RestartPuzzle();
             }
+        }
+        //---Puzzle---
+        if (!finished)
+        {
+            for (int i = 0; i < PiezasPuzzles.Count; i++)
+            {
+                if (!PiezasPuzzles[i].GetComponent<EmpujarObjetos>().returnState())
+                {
+                    return;
+                }
+            }
+            finished = true;
+            Debug.Log("Se ha terminado el puzzle de la Zona");
+
         }
     }
     void OnTriggerEnter(Collider other)

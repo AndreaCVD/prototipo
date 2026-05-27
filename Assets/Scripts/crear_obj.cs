@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class crear_obj : MonoBehaviour
 {
+    [SerializeField] GameObject world;
     [SerializeField] GameObject player;
     [SerializeField] GameObject preloadScript;
     [SerializeField] GameObject screenTint;
@@ -31,6 +32,18 @@ public class crear_obj : MonoBehaviour
         {
             GameObject x = GameObject.Find("-- Save Info --");
             x.name = "-- Save Info --";
+            DontDestroyOnLoad(x);
+        }
+        if (!GameObject.Find("--WorldManagement--") && !GameObject.Find("--WorldManagement--(Clone)"))
+        {
+            GameObject nuevoObj = Instantiate(world);
+            nuevoObj.name = "--WorldManagement--";
+            DontDestroyOnLoad(nuevoObj);
+        }
+        else
+        {
+            GameObject x = GameObject.Find("--WorldManagement--");
+            x.name = "--WorldManagement--";
             DontDestroyOnLoad(x);
         }
 

@@ -12,15 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: Puzzles
   m_EditorClassIdentifier: Assembly-CSharp::Puzzle
-  First_Floor: []
   Second_Floor:
   - name: Puzzle_1
-    Acabado:
-    - name: b3_1
-      acabado: 0
-    - name: b3_2
-      acabado: 0
-    SitioFijo: []
-  - name: 
-    Acabado: []
-    SitioFijo: []
+    acabado: 0
+  - name: Puzzle_2
+    acabado: 0
+  Puzzle_b3:
+  - name: b3_1
+    acabado: 0
+  - name: b3_2
+    acabado: 0
+  Puzzle_b2: []

@@ -83,8 +83,10 @@ public class Bolsa : ScriptableObject
 [CreateAssetMenu(fileName = "Puzzles", menuName = "Puzzle/ListPuzzle")]
 public class Puzzle : ScriptableObject
 {
-    public List<Puzzles> First_Floor = new List<Puzzles>();
-    public List<Puzzles> Second_Floor = new List<Puzzles>();
+
+    public List<Bools> Second_Floor = new List<Bools>();
+    public List<Bools> Puzzle_b3 = new List<Bools>();
+    public List<Bools> Puzzle_b2 = new List<Bools>();
 
 }
 

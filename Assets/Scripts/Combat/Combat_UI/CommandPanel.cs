@@ -57,7 +57,7 @@ public class CommandPanel : MonoBehaviour
 
         // eventos
         btnFUE.clicked += Fuerza;
-        btnCAR.clicked += Intel;
+        btnCAR.clicked += Intel; //da error? obj reference not set
         btnINT.clicked += Carisma;
         //Por implementar
         btnItem.clicked += UsarItem;

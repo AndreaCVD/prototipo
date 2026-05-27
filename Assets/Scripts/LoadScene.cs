@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 public class LoadScene : MonoBehaviour
 {
+    private GameObject uiHub;
         [Header("Degradado pantalla")]
     private TintScreen pantalla;
         [Header("Datos prota")]
@@ -33,6 +34,7 @@ public class LoadScene : MonoBehaviour
 
     void Update()
     {
+        uiHub = GameObject.Find("UI_HUB");
         //encontrar el personaje prefab 
         if (protagonista == null)
         {
@@ -97,13 +99,15 @@ public class LoadScene : MonoBehaviour
     }
     public void SalirCombate()//Salimos del combate
     {
-            Debug.Log("Salimos de combate");
-            onCombat = false;
-            //si estamos en combate eliminar esta escena
-            //Sacamos la pausa del juego principal
-            escenaState.ScenePause(false); //false, se mueve
-            // Unload Scene
-            SceneManager.UnloadSceneAsync("combat_scene");
+        Debug.Log("Salimos de combate");
+        onCombat = false;
+        //si estamos en combate eliminar esta escena
+        //Sacamos la pausa del juego principal
+        escenaState.ScenePause(false); //false, se mueve
+        uiHub.SetActive(true); //volvemos a ver la ui
+
+        // Unload Scene
+        SceneManager.UnloadSceneAsync("combat_scene");
     }
     public void Combat(GameObject enemyName)
     {
@@ -115,6 +119,8 @@ public class LoadScene : MonoBehaviour
 
             escenaState.ScenePause(true); //true, se para
             pantalla.UnTint();
+
+            uiHub.SetActive(false);
 
             preload.CombatOpponent(enemyName); //Pasem el nom
 

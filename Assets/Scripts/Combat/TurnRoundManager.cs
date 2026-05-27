@@ -44,7 +44,7 @@ public class TurnRoundManager : MonoBehaviour
         if (uIDocument != null && uIDocument.rootVisualElement != null)
         {
             root = uIDocument.rootVisualElement;
-            combat_options = root.Q<VisualElement>("combat_options");
+            combat_options = root.Q<VisualElement>("combat-menu");
             //turno = root.Q<Label>("turno");
 
             if (combat_options == null)
@@ -110,6 +110,7 @@ public class TurnRoundManager : MonoBehaviour
             anim.SetBool("TurnEnemy", true);
 
             //Ocultar el menu de combate
+            Debug.Log(combat_options);
             combat_options.style.display = DisplayStyle.None;
 
         }

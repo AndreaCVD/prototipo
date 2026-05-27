@@ -27,7 +27,7 @@ public class Menu_Command : MonoBehaviour
         root = uIDocument.rootVisualElement;
 
         //enemyConst = root.Q("int_enemy_life").Q<IntegerField>();
-        enemyConst = root.Q("int_life").Q<IntegerField>();
+       // enemyConst = root.Q("int_life").Q<IntegerField>();
     }
 
     private void Start()
@@ -87,7 +87,7 @@ public class Menu_Command : MonoBehaviour
     void SetConstitucion(int num)
     {
 
-        enemyConst.value = num;
+        //enemyConst.value = num;
 
         //text_const.text = enemyData.stats.Get(PersonajesStats.Constitucion).ToString();
     }

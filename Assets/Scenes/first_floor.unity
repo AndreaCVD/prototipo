@@ -625,13 +625,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   protagonista: {fileID: 11400000, guid: f0233a249cd1f2b43a3d8f04e1ad2bf2, type: 2}
-  canvas_open: 0
-  canvas_inventario: {fileID: 0}
+  iconoLlave: {fileID: 21300000, guid: 764e82350a826cd438522e00383357e7, type: 3}
+  iconoLlaveMaestra: {fileID: 21300000, guid: 6c588ff092212ef4ba0298e3524ab9e4, type: 3}
+  iconoPocionVida: {fileID: 0}
+  iconoDaga: {fileID: 0}
+  iconoEspada: {fileID: 0}
   llave_text: {fileID: 0}
   llaveMaestra_text: {fileID: 0}
   daga_text: {fileID: 0}
   espada_text: {fileID: 0}
   pocionVida_text: {fileID: 0}
+  canvas_open: 0
+  canvas_inventario: {fileID: 0}
 --- !u!114 &495269048
 MonoBehaviour:
   m_ObjectHideFlags: 0

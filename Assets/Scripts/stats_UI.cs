@@ -10,6 +10,13 @@ public class stats_UI : MonoBehaviour
     [Header("Ficha personaje")]
     [SerializeField] Parameters protagonista;
 
+    [Header("Iconos Inventario")]
+    [SerializeField] Sprite iconoLlave;
+    [SerializeField] Sprite iconoLlaveMaestra;
+    [SerializeField] Sprite iconoPocionVida;
+    [SerializeField] Sprite iconoDaga;
+    [SerializeField] Sprite iconoEspada;
+
     //ref del UI
     private VisualElement root;
     private IntegerField fieldFUE, fieldINT, fieldCAR, fieldLIFE;
@@ -159,6 +166,13 @@ public class stats_UI : MonoBehaviour
         daga = protagonista.Inventario.Daga.Count();
         espada = protagonista.Inventario.Espada.Count();
 
+        SetSlot(0, iconoLlave, llaves);
+        SetSlot(1, iconoLlaveMaestra, llaveMaestra);
+        SetSlot(2, iconoPocionVida, pocionVida);
+        SetSlot(3, iconoDaga, daga);
+        SetSlot(4, iconoEspada, espada);
+        SetSlot(5, null, 0);
+
         /*para eliminar
         llave_text.text = "Llaves = " + llaves.ToString();
         llaveMaestra_text.text = "Llave Maestra = " + llaveMaestra.ToString();
@@ -166,5 +180,28 @@ public class stats_UI : MonoBehaviour
         daga_text.text = "Daga = " + daga.ToString();
         espada_text.text = "Espada = " + espada.ToString();
         */
+    }
+
+    void SetSlot(int index, Sprite icono, int cantidad)
+    {
+        var slotIcon = root.Q<VisualElement>($"slot-{index}-icon");
+        var slotBadge = root.Q<Label>($"slot-{index}-badge");
+        var slot = root.Q<VisualElement>($"slot-{index}");
+
+        if (icono != null)
+        {
+            slotIcon.style.backgroundImage = new StyleBackground(icono);
+            slot.AddToClassList("inv-slot--active");
+        }
+        else
+        {
+            slotIcon.style.backgroundImage = StyleKeyword.None;
+            slot.RemoveFromClassList("inv-slot--active");
+        }
+
+        slotBadge.text = cantidad.ToString();
+        slotBadge.style.display = cantidad > 0
+            ? DisplayStyle.Flex
+            : DisplayStyle.None;
     }
 }

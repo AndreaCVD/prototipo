@@ -1,9 +1,11 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Inventario : MonoBehaviour
 {
     [SerializeField] Parameters prota;
+    [SerializeField] Puzzle lista;
     //Para encontrar los scripts de DialogManager
     private Dialog dialog;
     private GameObject script_dialog;
@@ -31,7 +33,9 @@ public class Inventario : MonoBehaviour
     {
         if (other.gameObject.tag == "Llave")
         {
-            prota.Inventario.Llave.Add(other.gameObject.name);          
+            prota.Inventario.Llave.Add(other.gameObject.name);
+            //Marcar que se ha acabado el puzzle
+            puzzleAcabado(other.gameObject.name);
             Destroy(other.gameObject);
         }
         else if (other.gameObject.tag == "LlaveMaestra")
@@ -58,34 +62,83 @@ public class Inventario : MonoBehaviour
 
     public void CofreKey(GameObject cofre, cherrydev.DialogNodeGraph dialogo_obj)
     {
-        //Llaves = new List<int>(prota.Inventario);
-
-        //Llaves = prota.Inventario;
-        //List<string> listaB = new List<string>(listaA);
         bool keyFound = false;
-        //Leer el nombre de este cofre
-        string nombre = this.name; //Prota es THIS
-        //Recorremos nuestro inventario para ver si coincide alguna
-        //foreach (string[] a in Llaves)
-        //{
-        //    if (a == cofre.name)
-        //    {
-        //        Debug.Log(a);
-        //        Si tiene mismo nombre se abre
-        //        AbrirCofre();
-        //        keyFound = true;
-        //        break;
-        //    }
-        //}
-        //Si el cofre comparte numero codigo con la llave --> se abre
+
+        //Recorremos nuestro inventario para ver si tenemos llaves
+        if ( prota.Inventario.Llave.Count > 0 )
+        {
+            prota.Inventario.Llave.RemoveAt(prota.Inventario.Llave.Count - 1);
+            AbrirCofre(cofre.name);
+            keyFound = true;
+        }
         if (!keyFound)
         {
             dialog.EmpezarDialogo(dialogo_obj, cofre);
         }
     }
-    private void AbrirCofre()
+    private void AbrirCofre(string a)
     {
         Debug.Log("El cofre se abre");
+        //Activar animacion
+        //Activar UI del loot que ha salido --> brillo bolsa UI
 
+        //Cofre B1 --> Llave Maestra
+        //Cofre C2 --> Espada
+        //Cofre C5 --> Pocion Nivel_3
+        //Cofre C6 --> Llave Maestra
+        //Cofre D5 --> Pocion Vida y Espada de Lava
+        switch (a)
+        {
+            case string b when b.Contains("b1"):
+                prota.Inventario.LlaveMaestra.Add("llave_cofre");
+                break;
+            case string b when b.Contains("c2"):
+                prota.Inventario.Espada.Add("espada_cofre");
+                break;
+            case string b when b.Contains("c5"):
+                prota.Inventario.PocionVida.Add("pocion_cofre");
+                break;
+            case string b when b.Contains("c6"):
+                prota.Inventario.LlaveMaestra.Add("llave_cofre");
+                break;
+            case string b when b.Contains("d5"):
+                prota.Inventario.Espada.Add("espada_cofre");
+                prota.Inventario.PocionVida.Add("pocion_cofre");
+                break;
+
+        }
+    }
+    private void puzzleAcabado(string obj)
+    {
+        string a1 = "a1";
+        string b1 = "b1"; //Cofre
+        string b2 = "b2"; //Cofre
+        Scene escenaActual = SceneManager.GetActiveScene(); 
+        switch( escenaActual.name )
+        {
+            case "Nivel_0":
+                if (obj.Contains(a1))
+                {
+                    Debug.Log("es del escenario A");
+                }
+                    break;
+            case "Nivel_1":
+                if (obj.Contains(b1))
+                {
+                    lista.Nivel_1[0].acabado = true;
+                }               
+                else if (obj.Contains(b2))
+                {
+                    lista.Nivel_1[1].acabado = true;
+                }
+                break;
+            case "Nivel_2":
+                break;
+            case "Nivel_3":
+                break;
+            default:
+                Debug.Log("Error en inventario");
+                break;
+        }
     }
 }

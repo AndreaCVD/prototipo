@@ -12,14 +12,16 @@ public class PuzzleZone : MonoBehaviour
     [SerializeField] GameObject player;
     public bool playerInside;    
     public bool restart;
+    public bool finished;
     //Canvas
     [SerializeField] CanvasGroup grup;
 
     private List<GameObject> Children = new List<GameObject>();
     [Header("Listas")]
     [SerializeField] string nombre;
-    [SerializeField] List<GameObject> PiezasPuzzles = new List<GameObject>();
-    [SerializeField] List<GameObject> SitioReinicio = new List<GameObject>();
+    public List<GameObject> PiezasPuzzles = new List<GameObject>();
+    [SerializeField] List<Transform> SitioReinicio = new List<Transform>();
+    [SerializeField] List<Transform> UltimaPos = new List<Transform>();
     [SerializeField] Transform pos_player;
 
 
@@ -48,7 +50,7 @@ public class PuzzleZone : MonoBehaviour
 
                 if (b.name.Contains("_pos"))
                 {
-                    SitioReinicio.Add(b);//Posicion Original
+                    SitioReinicio.Add(b.transform);//Posicion Original
                 }
                 else if (b.name.Contains("player"))
                 {
@@ -57,6 +59,7 @@ public class PuzzleZone : MonoBehaviour
                 else if (b.name.Contains("_"))
                 {
                     PiezasPuzzles.Add(b);//Piezas
+
                 }
                 //Debug.Log(b);
             }
@@ -65,6 +68,7 @@ public class PuzzleZone : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        //reinicio puzzle
         if (playerInside)
         {
             // BOTON REINICIO 
@@ -75,6 +79,20 @@ public class PuzzleZone : MonoBehaviour
                 Debug.Log("Reinicio");
                 RestartPuzzle();
             }
+        }
+        //---Puzzle---
+        if (!finished)
+        {
+            for (int i = 0; i < PiezasPuzzles.Count; i++)
+            {
+                if (!PiezasPuzzles[i].GetComponent<EmpujarObjetos>().returnState())
+                {
+                    return;
+                }
+            }
+            finished = true;
+            Debug.Log("Se ha terminado el puzzle de la Zona");
+
         }
     }
     void OnTriggerEnter(Collider other)
@@ -109,9 +127,9 @@ public class PuzzleZone : MonoBehaviour
         for (int i = 0; i < PiezasPuzzles.Count; i++)
         {
             GameObject pieza = PiezasPuzzles[i];
-            GameObject trans = SitioReinicio[i];
+            Transform trans = SitioReinicio[i];
 
-            pieza.transform.position = new Vector3(trans.transform.position.x, trans.transform.position.y, trans.transform.position.z );
+            pieza.transform.position = new Vector3(trans.position.x, trans.position.y, trans.position.z );
             Debug.Log(pieza + "- se ha movido a - " + trans);
         }
         //Jugador

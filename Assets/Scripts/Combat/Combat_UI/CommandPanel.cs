@@ -57,7 +57,7 @@ public class CommandPanel : MonoBehaviour
 
         // eventos
         btnFUE.clicked += Fuerza;
-        btnCAR.clicked += Intel;
+        btnCAR.clicked += Intel; //da error? obj reference not set
         btnINT.clicked += Carisma;
         //Por implementar
         btnItem.clicked += UsarItem;
@@ -72,7 +72,7 @@ public class CommandPanel : MonoBehaviour
     void OnDisable()
     {
         btnFUE.clicked -= Fuerza;
-        btnCAR.clicked -= Intel;
+        btnCAR.clicked -= Intel; //que es intel
         btnINT.clicked -= Carisma;
         //Por implementar
         btnItem.clicked -= UsarItem;
@@ -88,6 +88,8 @@ public class CommandPanel : MonoBehaviour
     {
         commandManager.Fuerza();
         Debug.Log("Ataque de fuerza");
+        OcultarCombate();
+
     }
     //Boton Inteligencia
     public void Intel()
@@ -123,6 +125,7 @@ public class CommandPanel : MonoBehaviour
 
     public void MostrarCombate()
     {
+        Debug.Log("mostrar combate");
         combatScreen.style.display = DisplayStyle.Flex;
         if (gameHudObject != null)
             gameHudObject.SetActive(false);
@@ -130,6 +133,8 @@ public class CommandPanel : MonoBehaviour
 
     public void OcultarCombate()
     {
+        Debug.Log("mostrar combate");
+
         combatScreen.style.display = DisplayStyle.None;
         if (gameHudObject != null)
             gameHudObject.SetActive(true);

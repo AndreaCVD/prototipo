@@ -44,8 +44,8 @@ public class TurnRoundManager : MonoBehaviour
         if (uIDocument != null && uIDocument.rootVisualElement != null)
         {
             root = uIDocument.rootVisualElement;
-            combat_options = root.Q<VisualElement>("combat_options");
-            turno = root.Q<Label>("turno");
+            combat_options = root.Q<VisualElement>("combat-menu");
+            //turno = root.Q<Label>("turno");
 
             if (combat_options == null)
             {
@@ -73,7 +73,7 @@ public class TurnRoundManager : MonoBehaviour
 
         //menu_acciones.opacidad(1f);
 
-        turno.text = "Es turno de: " + current;
+        //turno.text = "Es turno de: " + current;
 
         //turnoTexto.text = "Es turno de: " + current;
         //if (anim == null)
@@ -93,7 +93,7 @@ public class TurnRoundManager : MonoBehaviour
         if ( current == Manager.playerPersonaje)
         {
 
-            turno.text = "Es turno de: Enemigo";
+            //turno.text = "Es turno de: Enemigo";
 
             //turnoTexto.text = "Es turno de: Enemigo";
             //menu_acciones.opacidad(0f);
@@ -110,13 +110,14 @@ public class TurnRoundManager : MonoBehaviour
             anim.SetBool("TurnEnemy", true);
 
             //Ocultar el menu de combate
+            Debug.Log(combat_options);
             combat_options.style.display = DisplayStyle.None;
 
         }
         //si es turno del enemigo, se cambia al prota
         else if (current == Manager.enemyPersonaje)
         {
-            turno.text = "Es turno de: Prota";
+            //turno.text = "Es turno de: Prota";
 
             //turnoTexto.text = "Es turno de: Prota";
             //menu_acciones.opacidad(1f);

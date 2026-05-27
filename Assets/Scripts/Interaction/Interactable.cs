@@ -50,21 +50,18 @@ public class Interactable : MonoBehaviour
         switch (a.tag)
         {
             case "Enemy":
-
-                Debug.Log("This is a Enemy");
-                Debug.Log(a.name);
                 preload.CombatOpponent( a );
                 load.Combat(a);
                 break;
-            case "Puzzle":
-                Debug.Log("This is a Puzzle");
-                break;
+            //case "Puzzle":
+            //    //Debug.Log("This is a Puzzle");
+            //    break;
             case "Interact_Scene":
-                Debug.Log("Interaccionable por dialogo");
+                //Debug.Log("Interaccionable por dialogo");
                 dialog.EmpezarDialogo(dialogo_obj, a);
                 break;
             case "Cofre":
-                Debug.Log("This is a Cofre");
+                //Debug.Log("This is a Cofre");
                 inventario.CofreKey(a, dialogo_obj);
                 break;
             default:

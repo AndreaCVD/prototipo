@@ -3,7 +3,8 @@ using TMPro;
 using UnityEngine;
 using UI = UnityEngine.UI;
 using UnityEngine.UIElements; // Imprescindible para UI Toolkit
-using System.Linq; //Comparacion de Listas
+using System.Linq;
+using System.Collections; //Comparacion de Listas
 
 public class stats_UI : MonoBehaviour
 {
@@ -26,6 +27,9 @@ public class stats_UI : MonoBehaviour
     //inv en el UI
     private VisualElement inventoryGrid;
     private Button btnInventory;
+    private VisualElement itemNotification;
+    private VisualElement notifIcon;
+    private Coroutine notifCoroutine;
 
     //contadores inventory
     private int llaves;
@@ -62,6 +66,9 @@ public class stats_UI : MonoBehaviour
         btnInventory.clicked += ToggleInventary;
 
         inventoryGrid.style.display = DisplayStyle.None;
+
+        itemNotification = root.Q<VisualElement>("item-notification");
+        notifIcon = root.Q<VisualElement>("notif-icon");
     }
     private void OnDisable()
     {
@@ -158,6 +165,27 @@ public class stats_UI : MonoBehaviour
             new Length(porcentaje * 100f, LengthUnit.Percent)
         );
     }
+
+    public void MostrarNotificacion(Sprite icono)
+    {
+        if (notifCoroutine != null)
+        {
+            StopCoroutine(notifCoroutine);
+        }
+
+        notifIcon.style.backgroundImage = new StyleBackground(icono);
+        itemNotification.style.display = DisplayStyle.Flex;
+
+        notifCoroutine = StartCoroutine(OcultarNotificacion(2.5f));
+    }
+
+    IEnumerator OcultarNotificacion(float segundos)
+    {
+        yield return new WaitForSeconds(segundos);
+        itemNotification.style.display = DisplayStyle.None;
+        notifCoroutine = null;
+    }
+
     void SetInventario()
     {
         llaves = protagonista.Inventario.Llave.Count();
@@ -166,20 +194,12 @@ public class stats_UI : MonoBehaviour
         daga = protagonista.Inventario.Daga.Count();
         espada = protagonista.Inventario.Espada.Count();
 
-        SetSlot(0, iconoLlave, llaves);
-        SetSlot(1, iconoLlaveMaestra, llaveMaestra);
-        SetSlot(2, iconoPocionVida, pocionVida);
-        SetSlot(3, iconoDaga, daga);
-        SetSlot(4, iconoEspada, espada);
+        SetSlot(0, llaves > 0 ? iconoLlave : null, llaves);
+        SetSlot(1, llaveMaestra > 0 ? iconoLlaveMaestra : null, llaveMaestra);
+        SetSlot(2, pocionVida > 0 ? iconoPocionVida : null, pocionVida);
+        SetSlot(3, daga > 0 ? iconoDaga : null, daga);
+        SetSlot(4, espada > 0 ? iconoEspada : null, espada);
         SetSlot(5, null, 0);
-
-        /*para eliminar
-        llave_text.text = "Llaves = " + llaves.ToString();
-        llaveMaestra_text.text = "Llave Maestra = " + llaveMaestra.ToString();
-        pocionVida_text.text = "Pocion = " + pocionVida.ToString();
-        daga_text.text = "Daga = " + daga.ToString();
-        espada_text.text = "Espada = " + espada.ToString();
-        */
     }
 
     void SetSlot(int index, Sprite icono, int cantidad)
@@ -190,8 +210,13 @@ public class stats_UI : MonoBehaviour
 
         if (icono != null)
         {
+            //si antes estaba vacio
+            bool esNuevo = !slot.ClassListContains("inv-slot-active");
             slotIcon.style.backgroundImage = new StyleBackground(icono);
             slot.AddToClassList("inv-slot--active");
+
+            if (esNuevo) MostrarNotificacion(icono); 
+
         }
         else
         {

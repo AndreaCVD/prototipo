@@ -17,6 +17,10 @@
                 <ui:Button name="btn-inventory" class="inventory-btn" style="background-image: url(&quot;project://database/Assets/Art/Interface/inventory.png?fileID=2800000&amp;guid=b787edb1344ca4745ba4a6dcce51a01b&amp;type=3#inventory&quot;); flex-direction: column; justify-content: space-between; align-content: flex-start;">
                     <ui:Label name="char-badge" text="I" class="char-badge" />
                 </ui:Button>
+                <ui:VisualElement name="item-notification" class="item-notification" style="display: none; background-color: rgba(68, 28, 4, 0.61);">
+                    <ui:VisualElement name="notif-icon" class="notif-icon" />
+                    <ui:Label name="notif-label" text="NEW" class="notif-label" />
+                </ui:VisualElement>
             </ui:VisualElement>
         </ui:VisualElement>
         <ui:VisualElement name="play-area" style="flex-grow: 1;" />
@@ -54,7 +58,7 @@
                     <ui:Label name="slot-5-badge" text="0" class="inv-slot__badge" />
                 </ui:VisualElement>
             </ui:VisualElement>
-            <ui:VisualElement name="hud-bottom-right" class="hud-bottom-right" />
+            <ui:VisualElement name="hud-bottom-right" class="hud-bottom-right" style="flex-direction: row-reverse;" />
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

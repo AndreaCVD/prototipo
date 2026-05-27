@@ -22,6 +22,13 @@
     height: var(--hud-zone-bottom);      /* 80px */
 }
 
+.hub-bottom-right {
+    flex: 1;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+}
+
 #unity-text-input {
     border-width: 0;
     background-color: rgba(255, 255, 255, 0);
@@ -90,11 +97,12 @@
 .inventory-row {
     flex-direction: column;
     align-items: flex-end;
+    position: relative;
 }
 
 .inventory-btn {
-    width: var(--hud-card-width);       /* 120px — mismo ancho que las cartas */
-    height: var(--hud-card-width);      /* cuadrado */
+    width: var(--hud-card-width);
+    height: var(--hud-card-width);
     background-color: rgba(255,255,255,0);
     border-width: 0;
     border-radius: var(--hud-card-radius);
@@ -116,15 +124,54 @@
     -unity-font-definition: var(--font-buttons);
     color: var(--color-crimson-red);
     background-color: var(--color-antique-white);
-    padding-left: var(--space-sm);          /* era xs = 4px, ahora sm = 8px */
+    padding-left: var(--space-sm);
     padding-right: var(--space-sm);
-    padding-top: var(--space-xs);           /* 4px */
+    padding-top: var(--space-xs);
     padding-bottom: var(--space-xs);
     border-radius: 4px;
     margin-top: var(--space-xs);
     align-self: flex-end;
     min-width: 24px;
     -unity-text-align: middle-center;
+}
+
+    /* === INVENTORY - item notification === */
+
+.item-notification {
+    position: absolute;
+    right: 85px;
+    top: 0;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-deep-earth);
+    border-radius: var(--btn-radius);
+    border-color: var(--color-border);
+    border-width: 1px;
+    width: 80px;
+    height: 80px;
+    display: none;
+}
+
+.notif-icon {
+    width: 90%;
+    height: 90%;
+    -unity-background-scale-mode: scale-to-fit;
+    background-color: rgba(255,255,255,0);
+}
+
+.notif-label {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    font-size: 11px;
+    -unity-font-definition: var(--font-buttons);
+    color: var(--color-deep-earth);
+    background-color: var(--color-antique-white);
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-radius: 3px;
 }
 
     /* === HEALTH === */
@@ -156,7 +203,7 @@
     position: absolute;
     bottom: 0; left: 0;
     width: 100%;
-    height: 100%;        /* C# lo ajusta en runtime */
+    height: 100%;
     background-image: url("project://...heart_fill.png");
     -unity-background-scale-mode: scale-to-fit;
 }

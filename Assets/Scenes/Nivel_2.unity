@@ -787,7 +787,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &441547830
 Transform:
   m_ObjectHideFlags: 0
@@ -4059,7 +4059,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5128642398234967854, guid: 63bdcb29bc1b3fe45a67d0aeeb59566e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.47
+      value: -2.61
       objectReference: {fileID: 0}
     - target: {fileID: 5128642398234967854, guid: 63bdcb29bc1b3fe45a67d0aeeb59566e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4067,11 +4067,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5128642398234967854, guid: 63bdcb29bc1b3fe45a67d0aeeb59566e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.08
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 5128642398234967854, guid: 63bdcb29bc1b3fe45a67d0aeeb59566e, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5128642398234967854, guid: 63bdcb29bc1b3fe45a67d0aeeb59566e, type: 3}
       propertyPath: m_LocalRotation.x
@@ -4079,11 +4079,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5128642398234967854, guid: 63bdcb29bc1b3fe45a67d0aeeb59566e, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5128642398234967854, guid: 63bdcb29bc1b3fe45a67d0aeeb59566e, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5128642398234967854, guid: 63bdcb29bc1b3fe45a67d0aeeb59566e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4091,7 +4091,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5128642398234967854, guid: 63bdcb29bc1b3fe45a67d0aeeb59566e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 5128642398234967854, guid: 63bdcb29bc1b3fe45a67d0aeeb59566e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z

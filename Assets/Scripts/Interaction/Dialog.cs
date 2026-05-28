@@ -28,7 +28,7 @@ public class Dialog : MonoBehaviour
         //Llamar a funcion
             //BindExternalFunction(string funcName, Action function);
         _dialogBehaviour.BindExternalFunction("Destroy", DestroyObj);
-        _dialogBehaviour.BindExternalFunction("EstadoEtkis", a);
+        _dialogBehaviour.BindExternalFunction("EstadoEtkis", estadoEtkis);
 
         //Le enviamos el dialogo que tiene que hacer --> ESTE SIEMPRE ÚLTIMO
         _dialogBehaviour.StartDialog(dialogo);
@@ -45,7 +45,7 @@ public class Dialog : MonoBehaviour
         _dialogBehaviour.SetVariableValue(nombreVal, val);
     }
 
-    public void a()
+    public void estadoEtkis()
     {
         if (lista.Nivel_1[1].acabado)
         {
@@ -55,7 +55,7 @@ public class Dialog : MonoBehaviour
         else
         {
             Debug.Log("Etkis no es libre");
-            _dialogBehaviour.SetVariableValue("b", 2);
+            _dialogBehaviour.SetVariableValue("b", 0);
         }
     }
 

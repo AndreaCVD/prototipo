@@ -1771,6 +1771,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5552926222123737107, guid: c946b909ab67d274089332839512dcd7, type: 3}
   m_PrefabInstance: {fileID: 1757346912}
   m_PrefabAsset: {fileID: 0}
+--- !u!195 &1517391699 stripped
+NavMeshAgent:
+  m_CorrespondingSourceObject: {fileID: 1303463467012935945, guid: c946b909ab67d274089332839512dcd7, type: 3}
+  m_PrefabInstance: {fileID: 1757346912}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1521476942
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1912,6 +1917,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6322439225566761541, guid: c946b909ab67d274089332839512dcd7, type: 3}
+      propertyPath: enemy
+      value: 
+      objectReference: {fileID: 1517391699}
     - target: {fileID: 8023408201208121070, guid: c946b909ab67d274089332839512dcd7, type: 3}
       propertyPath: m_Name
       value: Caballero

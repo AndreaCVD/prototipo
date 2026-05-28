@@ -132,8 +132,6 @@
     margin-right: var(--space-xl);
 }
 
-    /* === BUTTONS - attack === */
-
 .combat_btn_color {
     background-image: url("project://database/Assets/Art/Interface/Buttons/buttons_attack/attack_normal.png?fileID=21300000&guid=7376ed8a40d83fa479c695354b0ce0e4&type=3#attack_normal");
     border-width: 0;
@@ -157,10 +155,8 @@
     left: 0;
 }
 
-        /* === BUTTONS - items === */
-
 .items_btn_color {
-    background-image: url("project://database/Assets/Art/Interface/Buttons/buttons_attack/attack_normal.png?fileID=21300000&guid=7376ed8a40d83fa479c695354b0ce0e4&type=3#attack_normal");
+    background-image: url("project://database/Assets/Art/Interface/Buttons/buttons_items/items_normal.png?fileID=21300000&guid=b6995a595fdc30b40b1db27cc4811b0b&type=3#items_normal");
     border-width: 0;
     scale: 1;
     transition-property: scale;
@@ -169,16 +165,15 @@
 }
 
 .items_btn_color:hover {
-    background-image: url("project://database/Assets/Art/Interface/Buttons/buttons_attack/attack_hover.png?fileID=21300000&guid=43f2a1ed895be02448cda4fc1c4aa904&type=3#attack_hover");
+    background-image: url("project://database/Assets/Art/Interface/Buttons/buttons_items/items_hover.png?fileID=21300000&guid=c5e36a203dd1c9a4a994eadf3d839666&type=3#items_hover");
     scale: 1.05;
     top: 0;
     left: 0;
 }
 
 .items_btn_color:active {
-    background-image: url("project://database/Assets/Art/Interface/Buttons/buttons_attack/attack_pressed.png?fileID=21300000&guid=dae905cfaa37f6b42bfe57d8410e6073&type=3#attack_pressed");
+    background-image: url("project://database/Assets/Art/Interface/Buttons/buttons_items/items_pressed.png?fileID=21300000&guid=4f7208a763de22541854f8e070073ef9&type=3#items_pressed");
     scale: 0.96;
     top: 0;
     left: 0;
-
-        /* === BUTTONS - run === */
+}

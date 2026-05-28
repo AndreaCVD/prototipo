@@ -6,15 +6,11 @@ using cherrydev;
 
 public class Dialog : MonoBehaviour
 {
+    [Header("LISTA PUZZLE")]
+    [SerializeField] Puzzle lista;
     [Header("EL PREFAB")]
     [SerializeField] private cherrydev.DialogBehaviour _dialogBehaviour;
-    [Header("DIALOGOS PERSONAJES")]
-    [SerializeField] List<cherrydev.DialogNodeGraph> Viejo = new List<cherrydev.DialogNodeGraph>();
-    [SerializeField] List<cherrydev.DialogNodeGraph> Nim = new List<cherrydev.DialogNodeGraph>();
-    [SerializeField] List<cherrydev.DialogNodeGraph> Etkis = new List<cherrydev.DialogNodeGraph>();
-    [SerializeField] List<cherrydev.DialogNodeGraph> Lerendur = new List<cherrydev.DialogNodeGraph>();
-    [SerializeField] List<cherrydev.DialogNodeGraph> Libro = new List<cherrydev.DialogNodeGraph>();
-
+    
     private GameObject obj;
 
     ////La conversa, podemos tener todas las conversas guardadas y enviar la que se necesite
@@ -32,8 +28,9 @@ public class Dialog : MonoBehaviour
         //Llamar a funcion
             //BindExternalFunction(string funcName, Action function);
         _dialogBehaviour.BindExternalFunction("Destroy", DestroyObj);
+        _dialogBehaviour.BindExternalFunction("EstadoEtkis", a);
 
-         //Le enviamos el dialogo que tiene que hacer --> ESTE SIEMPRE ÚLTIMO
+        //Le enviamos el dialogo que tiene que hacer --> ESTE SIEMPRE ÚLTIMO
         _dialogBehaviour.StartDialog(dialogo);
 
 
@@ -46,6 +43,20 @@ public class Dialog : MonoBehaviour
     {
         Debug.Log(val);
         _dialogBehaviour.SetVariableValue(nombreVal, val);
+    }
+
+    public void a()
+    {
+        if (lista.Nivel_1[1].acabado)
+        {
+            Debug.Log("Etkis es libre");
+            _dialogBehaviour.SetVariableValue("b", 1);
+        }
+        else
+        {
+            Debug.Log("Etkis no es libre");
+            _dialogBehaviour.SetVariableValue("b", 2);
+        }
     }
 
 }

@@ -127,6 +127,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3241330531271212881, guid: 3848a681804d73d4fb34add03acbdab0, type: 3}
+      propertyPath: lista
+      value: 
+      objectReference: {fileID: 11400000, guid: 92b50351187af094c96f6e51da1599fa, type: 2}
     - target: {fileID: 3726092340330504558, guid: 3848a681804d73d4fb34add03acbdab0, type: 3}
       propertyPath: m_Name
       value: --DialogManager--
@@ -879,7 +883,6 @@ MonoBehaviour:
   restart: 0
   finished: 0
   grup: {fileID: 1677097599}
-  nombre: 
   PiezasPuzzles: []
   SitioReinicio: []
   UltimaPos: []
@@ -1842,6 +1845,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &835221125 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 226029627934134637, guid: f23b3ccdbe607104b83739d3e31b1890, type: 3}
+  m_PrefabInstance: {fileID: 1697831443}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &855512450
 GameObject:
   m_ObjectHideFlags: 0
@@ -2008,7 +2016,7 @@ Transform:
   m_GameObject: {fileID: 1066588292}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.8, y: 0.45, z: 1.4}
+  m_LocalPosition: {x: 15.8, y: -1.51, z: 1.4}
   m_LocalScale: {x: 8.7343, y: 1.8054, z: 0.39356}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2140,6 +2148,46 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 605967329478183895, guid: f23b3ccdbe607104b83739d3e31b1890, type: 3}
   m_PrefabInstance: {fileID: 1697831443}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1270266186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 835221125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3d42b3a497006740958fffd87391ec7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogo_obj: {fileID: 11400000, guid: abf526e898de352478f2eea6b3c2beea, type: 2}
+--- !u!54 &1270266187
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 835221125}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1294138128
 GameObject:
   m_ObjectHideFlags: 0
@@ -2307,7 +2355,6 @@ MonoBehaviour:
   restart: 0
   finished: 0
   grup: {fileID: 1677097599}
-  nombre: 
   PiezasPuzzles: []
   SitioReinicio: []
   UltimaPos: []
@@ -2836,6 +2883,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Etkis
       objectReference: {fileID: 0}
+    - target: {fileID: 226029627934134637, guid: f23b3ccdbe607104b83739d3e31b1890, type: 3}
+      propertyPath: m_TagString
+      value: Interact_Scene
+      objectReference: {fileID: 0}
     - target: {fileID: 605967329478183895, guid: f23b3ccdbe607104b83739d3e31b1890, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.201
@@ -2891,7 +2942,13 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 226029627934134637, guid: f23b3ccdbe607104b83739d3e31b1890, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1270266186}
+    - targetCorrespondingSourceObject: {fileID: 226029627934134637, guid: f23b3ccdbe607104b83739d3e31b1890, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1270266187}
   m_SourcePrefab: {fileID: 100100000, guid: f23b3ccdbe607104b83739d3e31b1890, type: 3}
 --- !u!4 &1790650581 stripped
 Transform:

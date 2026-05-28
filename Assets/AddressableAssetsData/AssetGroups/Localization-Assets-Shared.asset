@@ -35,6 +35,11 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ec42f3d6da1e0304d80c27ada008b92a
+    m_Address: Assets/Localization/Etkis/Etkis Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f5475e6fe92ef8b4e84387af526257a0
     m_Address: Assets/Plugins/DialogNodeBasedSystem/Demo/Localization/DemoNodeGraph/DemoNodeGraph
       Shared Data.asset

@@ -18,7 +18,6 @@ public class PuzzleZone : MonoBehaviour
 
     private List<GameObject> Children = new List<GameObject>();
     [Header("Listas")]
-    [SerializeField] string nombre;
     public List<GameObject> PiezasPuzzles = new List<GameObject>();
     [SerializeField] List<Transform> SitioReinicio = new List<Transform>();
     [SerializeField] List<Transform> UltimaPos = new List<Transform>();
@@ -27,7 +26,6 @@ public class PuzzleZone : MonoBehaviour
 
     void Start()
     {
-        nombre = this.name;
 
         player = GameObject.Find("personaje");
 

@@ -31,6 +31,9 @@ public class CommandPanel : MonoBehaviour
 
         }
 
+        var uIDocument = GetComponent<UIDocument>();
+        root = uIDocument.rootVisualElement;
+
         btnFUE = root.Q<Button>("btn-FUE");
         btnCAR = root.Q<Button>("btn-CAR");
         btnINT = root.Q<Button>("btn-INT");

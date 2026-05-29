@@ -15,6 +15,11 @@ MonoBehaviour:
   m_GroupName: Localization-Assets-Shared
   m_GUID: 47f921677bea8b246adf25729ebe1bb4
   m_SerializeEntries:
+  - m_GUID: 6a64efac0607ef64ab2101a3daabcdb1
+    m_Address: Assets/Localization/Fogata/Fogata Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a71f8ed6b3a3fb84fbd035b0efa114fa
     m_Address: Assets/Localization/test/test Shared Data.asset
     m_ReadOnly: 1
@@ -48,6 +53,11 @@ MonoBehaviour:
   - m_GUID: f5475e6fe92ef8b4e84387af526257a0
     m_Address: Assets/Plugins/DialogNodeBasedSystem/Demo/Localization/DemoNodeGraph/DemoNodeGraph
       Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f9f0ff4644c1d2c4aa02c95e61211e9a
+    m_Address: Assets/Localization/Tienda/Tienda Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

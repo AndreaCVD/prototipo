@@ -10,13 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f5927d572625f42479a7826aa95bdd97, type: 3}
-  m_Name: Variables_Prueba
+  m_Name: Variables
   m_EditorClassIdentifier: 
   _variables:
-  - _name: puzzleDone
-    _type: 0
-    _saveToPrefs: 1
-    _boolValue: 1
+  - _name: Loot
+    _type: 1
+    _saveToPrefs: 0
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+    _stringValue: 
+  - _name: ataque
+    _type: 1
+    _saveToPrefs: 0
+    _boolValue: 0
     _intValue: 0
     _floatValue: 0
     _stringValue: 

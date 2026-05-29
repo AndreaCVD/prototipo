@@ -13,11 +13,8 @@ MonoBehaviour:
   m_Name: Inventario_Prota
   m_EditorClassIdentifier: Assembly-CSharp::Bolsa
   nombreObj: Inventario Prota
-  Llave:
-  - 
-  - 
-  LlaveMaestra:
-  - 
+  Llave: []
+  LlaveMaestra: []
   PocionVida: []
   Daga: []
   Espada: []

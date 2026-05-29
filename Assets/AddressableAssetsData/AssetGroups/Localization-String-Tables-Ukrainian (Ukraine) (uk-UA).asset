@@ -15,6 +15,18 @@ MonoBehaviour:
   m_GroupName: Localization-String-Tables-Ukrainian (Ukraine) (uk-UA)
   m_GUID: 3c2e50b38bf116d4eb26b2e0956cbbd5
   m_SerializeEntries:
+  - m_GUID: 05f4f9e20ac2ad34da6248c9773a8471
+    m_Address: Tienda_uk-UA
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-uk-UA
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 060b2513f9e43ff4cbc82762b60e83b1
+    m_Address: Fogata_uk-UA
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-uk-UA
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 08775f534b4364145a9460a9fb1b380e
     m_Address: Arbol_uk-UA
     m_ReadOnly: 1

@@ -33,8 +33,20 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-fr-FR
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7b467b6931cde304fa84a69332cebaf0
+    m_Address: Tienda_fr-FR
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-fr-FR
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 9b69939639db29b4bb4bb36d2a39d2d7
     m_Address: test_fr-FR
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-fr-FR
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cf0c52b9b690c3848b5d57c0cfefb3f7
+    m_Address: Fogata_fr-FR
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-fr-FR

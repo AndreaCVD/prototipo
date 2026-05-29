@@ -15,6 +15,18 @@ MonoBehaviour:
   m_GroupName: Localization-String-Tables-English (United States) (en-US)
   m_GUID: 84260f83885e9064a89fd1b9a7948800
   m_SerializeEntries:
+  - m_GUID: 0692839064997e449b4d510f35f428a3
+    m_Address: Fogata_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 13cd415db377cd34c89d42347a743f5a
+    m_Address: Tienda_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 43cf4a5dac5c02f4994885954219a488
     m_Address: DemoNodeGraph_en-US
     m_ReadOnly: 1

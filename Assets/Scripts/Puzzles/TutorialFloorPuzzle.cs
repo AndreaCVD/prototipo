@@ -13,14 +13,16 @@ public class TutorialFloorPuzzle : MonoBehaviour
 
     [Header("Obj a modificar al acabar puzzle")]
     [SerializeField] Animator puertaMazmorra;
+    [SerializeField] Animator candado_1;
+
     private bool puertaAbierta;
     [Header("Puzzle_1")]
     [SerializeField] PuzzleZone zona_1;
     [SerializeField] List<GameObject> p1_eliminarObj = new List<GameObject>();
 
     [Header("Personajes a instanciar")]
-    [SerializeField] GameObject Viejo_tunica; 
-    [SerializeField] GameObject Viejo_playa; //Entrar a nivel 1 (nivel_0.acabado)
+    [SerializeField] List<GameObject> Viejo = new List<GameObject>();
+
     [SerializeField] GameObject Etkis; //Mirar Puzzle B2
     [SerializeField] GameObject Nim; //Mirar Puzzle C6_2
     [SerializeField] GameObject Lerendur; //Ganar pelea final
@@ -45,6 +47,9 @@ public class TutorialFloorPuzzle : MonoBehaviour
         if (lista.Nivel_0[0].acabado && !puertaAbierta)
         {
             puertaAbierta = true;
+            lista.NivelDesbloqueado[0].acabado = true;
+            //Animacion Candado y eliminarlo
+            candado_1.SetBool("candadoOpen", true);
             puertaMazmorra.SetBool("doorOpen", true);
         }
 
@@ -61,7 +66,7 @@ public class TutorialFloorPuzzle : MonoBehaviour
                 switch (lista.Nivel_0[i].name)
                 {
                     case "Puzzle_A1":
-                        eliminarLista_1("puzz_1");
+                        eliminarLista_1();
                         break;
 
                     default:
@@ -72,7 +77,7 @@ public class TutorialFloorPuzzle : MonoBehaviour
 
     }
 
-    void eliminarLista_1(string name)
+    void eliminarLista_1()
     {
         foreach (var a in p1_eliminarObj)
         {
@@ -83,6 +88,15 @@ public class TutorialFloorPuzzle : MonoBehaviour
     
     void InstanciarPers()
     {
+        if (lista.NivelDesbloqueado[0].acabado)
+        {
+            //Se instancia viejo de playa
+            Instantiate(Viejo[2], Viejo[3].transform.position, Viejo[3].transform.rotation);
+        }
+        else
+        {
+            Instantiate(Viejo[0], Viejo[1].transform.position, Viejo[1].transform.rotation);
 
+        }
     }
 }

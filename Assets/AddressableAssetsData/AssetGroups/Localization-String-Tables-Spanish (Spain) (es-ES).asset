@@ -15,8 +15,20 @@ MonoBehaviour:
   m_GroupName: Localization-String-Tables-Spanish (Spain) (es-ES)
   m_GUID: 85be4569b1ec24045a3b89994da212a3
   m_SerializeEntries:
+  - m_GUID: 18eeef6a57bbc3c4492f5f4888da81f2
+    m_Address: Fogata_es-ES
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es-ES
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 1f425eeeeaba4d544965080314f07bec
     m_Address: Cofre_es-ES
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es-ES
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 202ec8262b2a99245950bfb93c176a78
+    m_Address: Tienda_es-ES
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-es-ES

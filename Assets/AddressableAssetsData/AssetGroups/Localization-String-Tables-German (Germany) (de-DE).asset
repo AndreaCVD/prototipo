@@ -27,6 +27,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-de-DE
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3da380a133aadf14c991170fa9a48098
+    m_Address: Arbol_de-DE
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de-DE
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 77a0dda5010ccb94680731078208bd7e
     m_Address: Etkis_de-DE
     m_ReadOnly: 1

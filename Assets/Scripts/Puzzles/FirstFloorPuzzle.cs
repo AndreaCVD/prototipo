@@ -13,7 +13,8 @@ public class FirstFloorPuzzle : MonoBehaviour
     [Header("Obj a modificar al acabar puzzle")]
     [SerializeField] Animator puertaMaestra;
     [SerializeField] Animator jaulaEtkis;
-
+    private bool puertaAbierta;
+    private bool jaulaAbierta;
     [Header("Puzzle_1")]
     [SerializeField] PuzzleZone zona_1;
     [SerializeField] List<GameObject> p1_eliminarObj = new List<GameObject>();
@@ -41,12 +42,14 @@ public class FirstFloorPuzzle : MonoBehaviour
         {
             lista.Nivel_1[1].acabado = zona_2.finished;
         }
-        if (lista.NivelDesbloqueado[1].acabado)
+        if (lista.NivelDesbloqueado[1].acabado && !puertaAbierta)
         {
+            puertaAbierta = true;
             puertaMaestra.SetBool("doorOpen", true);
         }
-        if (lista.Nivel_1[1].acabado) //Completar puzzle B2
+        if (lista.Nivel_1[1].acabado && !jaulaAbierta) //Completar puzzle B2
         {
+            jaulaAbierta = true;
             jaulaEtkis.SetBool("barrotesOpen", true);
         }
     }
@@ -61,11 +64,11 @@ public class FirstFloorPuzzle : MonoBehaviour
             {
                 switch (lista.Nivel_1[i].name)
                 {
-                    case "Puzzle_1":
+                    case "Puzzle_B1":
                         eliminarLista_1("puzz_1");
                         lastPos_1();
                         break;
-                    case "Puzzle_2":
+                    case "Puzzle_B2":
                         eliminarLista_2("puzz_2");
                         break;
                     default:

@@ -15,6 +15,12 @@ MonoBehaviour:
   m_GroupName: Localization-String-Tables-Ukrainian (Ukraine) (uk-UA)
   m_GUID: 3c2e50b38bf116d4eb26b2e0956cbbd5
   m_SerializeEntries:
+  - m_GUID: 08775f534b4364145a9460a9fb1b380e
+    m_Address: Arbol_uk-UA
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-uk-UA
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 0edd5ef656b18d24d8ccae0d6ff85baf
     m_Address: DemoNodeGraph_uk-UA
     m_ReadOnly: 1

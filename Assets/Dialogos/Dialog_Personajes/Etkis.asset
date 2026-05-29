@@ -15,8 +15,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 648.80054
-    y: 357.19998
+    x: 508.0005
+    y: 390.80002
     width: 190
     height: 135
   IsDragging: 1
@@ -30,7 +30,7 @@ MonoBehaviour:
   ChildNode: {fileID: 0}
   _isExternalFunc: 0
   _externalFunctionName: 
-  CharacterNameKey: 
+  CharacterNameKey: SentenceName_20de78f3-5c32-4182-91be-63fbae1fd0d4
   SentenceTextKey: 
 --- !u!114 &-941718847844076716
 MonoBehaviour:
@@ -47,12 +47,12 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 296
-    y: 245.99997
+    x: 155.20001
+    y: 279.6
     width: 240
     height: 160
   IsDragging: 1
-  IsSelected: 1
+  IsSelected: 0
   _variableName: b
   _conditionType: 1
   _boolTargetValue: 0
@@ -101,16 +101,16 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 652.00037
-    y: 123.59999
+    x: 511.20038
+    y: 157.20003
     width: 190
     height: 135
   IsDragging: 1
-  IsSelected: 0
+  IsSelected: 1
   _sentence:
     CharacterName: ???
     Text: "\xA1\xA1HEY TU!! AYUDAME A SALIR DE AQUI R\xC1PIDO"
-    CharacterSprite: {fileID: 0}
+    CharacterSprite: {fileID: 21300000, guid: 188c9c70c95021041b246ae393708be3, type: 3}
   ParentNodes:
   - {fileID: -941718847844076716}
   ChildNode: {fileID: 0}
@@ -133,8 +133,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 35.99997
-    y: 287.6
+    x: -104.80002
+    y: 321.20004
     width: 190
     height: 80
   IsDragging: 1

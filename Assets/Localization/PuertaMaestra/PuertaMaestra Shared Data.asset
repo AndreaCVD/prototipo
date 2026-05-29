@@ -10,35 +10,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
-  m_Name: Etkis Shared Data
+  m_Name: PuertaMaestra Shared Data
   m_EditorClassIdentifier: 
-  m_TableCollectionName: Etkis
-  m_TableCollectionNameGuidString: ec42f3d6da1e0304d80c27ada008b92a
+  m_TableCollectionName: PuertaMaestra
+  m_TableCollectionNameGuidString: f30f0fc7543156d42932b581e60f3b90
   m_Entries:
-  - m_Id: 327033398030336
-    m_Key: SentenceText_efa2a1e0-4655-49ea-8935-169ac3b42566
+  - m_Id: 15179509760
+    m_Key: SentenceText_bde71f92-65f7-4f66-b98c-95e0e334de74
     m_Metadata:
       m_Items: []
-  - m_Id: 327033431584768
-    m_Key: SentenceName_8f16f028-df13-40f5-9a00-c92527f49ba5
-    m_Metadata:
-      m_Items: []
-  - m_Id: 327033431584769
-    m_Key: 
-    m_Metadata:
-      m_Items: []
-  - m_Id: 327033431584770
-    m_Key: SentenceName_20de78f3-5c32-4182-91be-63fbae1fd0d4
+  - m_Id: 15179509761
+    m_Key: SentenceName_93af2d7e-aaa2-4806-8ace-d1a1e7919f3b
     m_Metadata:
       m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
-    rid: 2271896218601259464
+    rid: 2271896242449285289
   references:
     version: 2
     RefIds:
-    - rid: 2271896218601259464
+    - rid: 2271896242449285289
       type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
       data:
-        m_CustomEpoch: 1779926827970
+        m_CustomEpoch: 1780012757323

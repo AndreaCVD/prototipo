@@ -15,6 +15,12 @@ MonoBehaviour:
   m_GroupName: Localization-String-Tables-French (France) (fr-FR)
   m_GUID: 32608ab7fcbbd1b428909e4edd915863
   m_SerializeEntries:
+  - m_GUID: 09b65a02356da8342bd120aaa05fcde0
+    m_Address: PuertaMaestra_fr-FR
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-fr-FR
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 1ecc56ed8dbd7224aaa0ded1d7203d43
     m_Address: Etkis_fr-FR
     m_ReadOnly: 1

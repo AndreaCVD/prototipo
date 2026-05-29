@@ -8,7 +8,7 @@ public class EmpujarObjetos : MonoBehaviour
     private Vector3 destino;
 
     private LayerMask layerMask;
-    public bool puzzleFinished;
+    private bool puzzleFinished;
 
     void Start()
     {
@@ -41,6 +41,10 @@ public class EmpujarObjetos : MonoBehaviour
     public bool returnState()
     {
         return puzzleFinished;
+    }
+    public void restartState()
+    {
+        puzzleFinished = false;
     }
     void OnCollisionEnter(Collision col)
     {

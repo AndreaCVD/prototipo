@@ -51,6 +51,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-es-ES
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f27573134cfe8c448ae4e87ffb483478
+    m_Address: PuertaMaestra_es-ES
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es-ES
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: c828fb5033bcd1d459d934b965acaac2, type: 2}
   m_SchemaSet:

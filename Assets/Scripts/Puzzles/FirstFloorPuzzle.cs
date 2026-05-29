@@ -7,9 +7,13 @@ using UnityEngine.SceneManagement;
 public class FirstFloorPuzzle : MonoBehaviour
 {
     [SerializeField] Puzzle lista;
+
     private bool preload;
 
     [Header("Obj a modificar al acabar puzzle")]
+    [SerializeField] Animator puertaMaestra;
+    [SerializeField] Animator jaulaEtkis;
+
     [Header("Puzzle_1")]
     [SerializeField] PuzzleZone zona_1;
     [SerializeField] List<GameObject> p1_eliminarObj = new List<GameObject>();
@@ -17,14 +21,14 @@ public class FirstFloorPuzzle : MonoBehaviour
     [Header("Puzzle_2")]
     [SerializeField] PuzzleZone zona_2;
     [SerializeField] List<GameObject> p2_eliminarObj = new List<GameObject>();
-
+    
     void Start()
     {
         revisarPuzzle();
-
+        //Treure pq sino sempre es reinicien?
         zona_1.finished = lista.Nivel_1[0].acabado;
         zona_1.finished = lista.Nivel_1[1].acabado;
-
+        lista.NivelDesbloqueado[1].acabado = false;
     }
 
     void Update()
@@ -37,7 +41,14 @@ public class FirstFloorPuzzle : MonoBehaviour
         {
             lista.Nivel_1[1].acabado = zona_2.finished;
         }
-
+        if (lista.NivelDesbloqueado[1].acabado)
+        {
+            puertaMaestra.SetBool("doorOpen", true);
+        }
+        if (lista.Nivel_1[1].acabado) //Completar puzzle B2
+        {
+            jaulaEtkis.SetBool("barrotesOpen", true);
+        }
     }
 
 

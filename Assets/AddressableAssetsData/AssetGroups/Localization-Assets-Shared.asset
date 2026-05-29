@@ -40,6 +40,11 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f30f0fc7543156d42932b581e60f3b90
+    m_Address: Assets/Localization/PuertaMaestra/PuertaMaestra Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f5475e6fe92ef8b4e84387af526257a0
     m_Address: Assets/Plugins/DialogNodeBasedSystem/Demo/Localization/DemoNodeGraph/DemoNodeGraph
       Shared Data.asset

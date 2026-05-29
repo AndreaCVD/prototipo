@@ -76,6 +76,22 @@ public class Inventario : MonoBehaviour
             dialog.EmpezarDialogo(dialogo_obj, cofre);
         }
     }
+    public void PuertaMaestraKey(GameObject puerta, cherrydev.DialogNodeGraph dialogo_obj)
+    {
+        bool keyFound = false;
+
+        //Recorremos nuestro inventario para ver si tenemos llaves
+        if ( prota.Inventario.LlaveMaestra.Count > 0 )
+        {
+            prota.Inventario.LlaveMaestra.RemoveAt(prota.Inventario.LlaveMaestra.Count - 1);
+            AbrirPuertaMaestra(puerta.name);
+            keyFound = true;
+        }
+        if (!keyFound)
+        {
+            dialog.EmpezarDialogo(dialogo_obj, puerta);
+        }
+    }
     private void AbrirCofre(string a)
     {
         Debug.Log("El cofre se abre");
@@ -106,6 +122,28 @@ public class Inventario : MonoBehaviour
                 prota.Inventario.PocionVida.Add("pocion_cofre");
                 break;
 
+        }
+    }
+    private void AbrirPuertaMaestra(string a)
+    {
+        Debug.Log("La puerta se abre");
+        //Activar animacion
+
+        switch (a)
+        {
+            case string b when b.Contains("A"):
+
+                break;
+            case string b when b.Contains("B"):
+                //Puerta Maestra del Nivel 1 se ha abierto
+                lista.NivelDesbloqueado[1].acabado = true;
+                break;
+            case string b when b.Contains("C"):
+
+                break;
+            case string b when b.Contains("E"):
+
+                break;
         }
     }
     private void puzzleAcabado(string obj)

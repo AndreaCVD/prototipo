@@ -58,6 +58,9 @@ public class Dialog : MonoBehaviour
             _dialogBehaviour.SetVariableValue("b", 0);
         }
     }
-
+    public void estadoCofre()
+    {
+        //Ver si hemos completado el puzzle del cofre
+    }
 }
 

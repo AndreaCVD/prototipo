@@ -21,6 +21,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-uk-UA
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 45f72722f87ccfc4ebdd26bb124d1b36
+    m_Address: PuertaMaestra_uk-UA
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-uk-UA
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 5117ca583d5e368469147797b6e1dcea
     m_Address: Etkis_uk-UA
     m_ReadOnly: 1

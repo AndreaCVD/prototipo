@@ -20,9 +20,15 @@ public class PuzzleZone : MonoBehaviour
     [Header("Listas")]
     public List<GameObject> PiezasPuzzles = new List<GameObject>();
     [SerializeField] List<Transform> SitioReinicio = new List<Transform>();
-    [SerializeField] List<Transform> UltimaPos = new List<Transform>();
     [SerializeField] Transform pos_player;
 
+    //Para encontrar los scripts de DialogManager
+    private Dialog dialog;
+    private GameObject script_dialog;
+    [Header("EL DIALOGO DEL OBJ")]
+    [SerializeField] cherrydev.DialogNodeGraph dialogo_obj;
+    //Hi ha habitacions on es necesita que el dialeg es dispari nomes si el puzzle no s'ha fet
+    [SerializeField] bool dialogOnEnter;
 
     void Start()
     {
@@ -30,6 +36,12 @@ public class PuzzleZone : MonoBehaviour
         player = GameObject.Find("personaje");
 
         playerInside = false;
+
+        if (script_dialog == null)
+        {
+            script_dialog = GameObject.Find("--DialogManager--");
+            dialog = script_dialog.GetComponent<Dialog>();
+        }
 
         opacidad(0f);
         //Localizar los primeros hijos
@@ -103,6 +115,11 @@ public class PuzzleZone : MonoBehaviour
             {
                 playerInside = true;
                 opacidad(1f);
+                if ( dialogOnEnter && !finished)
+                {
+
+                    dialog.EmpezarDialogo(dialogo_obj, this.gameObject);
+                }
             }
             else
             {
@@ -126,7 +143,10 @@ public class PuzzleZone : MonoBehaviour
         {
             GameObject pieza = PiezasPuzzles[i];
             Transform trans = SitioReinicio[i];
-
+            if (PiezasPuzzles[i].GetComponent<EmpujarObjetos>().returnState())
+            {
+                PiezasPuzzles[i].GetComponent<EmpujarObjetos>().restartState();
+            }
             pieza.transform.position = new Vector3(trans.position.x, trans.position.y, trans.position.z );
             Debug.Log(pieza + "- se ha movido a - " + trans);
         }

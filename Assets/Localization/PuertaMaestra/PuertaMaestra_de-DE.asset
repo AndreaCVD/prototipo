@@ -10,28 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
-  m_Name: Etkis_de-DE
+  m_Name: PuertaMaestra_de-DE
   m_EditorClassIdentifier: 
   m_LocaleId:
     m_Code: de-DE
-  m_SharedData: {fileID: 11400000, guid: ec42f3d6da1e0304d80c27ada008b92a, type: 2}
+  m_SharedData: {fileID: 11400000, guid: f30f0fc7543156d42932b581e60f3b90, type: 2}
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 327033398030336
-    m_Localized: "\xA1\xA1HEY TU!! AYUDAME A SALIR DE AQUI R\xC1PIDO"
+  - m_Id: 15179509760
+    m_Localized: Necesito una llave especial...
     m_Metadata:
       m_Items: []
-  - m_Id: 327033431584768
-    m_Localized: ???
-    m_Metadata:
-      m_Items: []
-  - m_Id: 327033431584769
-    m_Localized: Gracias...
-    m_Metadata:
-      m_Items: []
-  - m_Id: 327033431584770
-    m_Localized: Etkis
+  - m_Id: 15179509761
+    m_Localized: Prota
     m_Metadata:
       m_Items: []
   references:

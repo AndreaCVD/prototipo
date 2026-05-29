@@ -45,6 +45,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-en-US
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c540fce034e36b2448896c19d84502b9
+    m_Address: PuertaMaestra_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: fe37854bce8887f43b293d741ec9aec0
     m_Address: test_en-US
     m_ReadOnly: 1

@@ -20,7 +20,7 @@ MonoBehaviour:
     width: 190
     height: 80
   IsDragging: 1
-  IsSelected: 1
+  IsSelected: 0
   _functionName: 
   _description: 
   ParentNodes: []
@@ -72,7 +72,7 @@ MonoBehaviour:
   _sentence:
     CharacterName: Prota
     Text: Vaya...me falta la llave
-    CharacterSprite: {fileID: 0}
+    CharacterSprite: {fileID: 21300000, guid: 472171fd2197ff74cbfdc794d44e7dfb, type: 3}
   ParentNodes: []
   ChildNode: {fileID: 0}
   _isExternalFunc: 0
@@ -94,12 +94,12 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 250.40002
-    y: 232.4
+    x: 302.40002
+    y: 243.6
     width: 210
     height: 155
   IsDragging: 1
-  IsSelected: 0
+  IsSelected: 1
   _variableName: 
   _modifyType: 0
   _boolValue: 0
@@ -123,8 +123,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 620
-    y: 358
+    x: 614.39996
+    y: 355.6
     width: 190
     height: 135
   IsDragging: 1

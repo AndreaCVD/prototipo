@@ -64,8 +64,12 @@ public class Interactable : MonoBehaviour
                 //Debug.Log("This is a Cofre");
                 inventario.CofreKey(a, dialogo_obj);
                 break;
+            case "PuertaMaestra":
+                Debug.Log("This is a PuertaMaestra");
+                inventario.PuertaMaestraKey(a, dialogo_obj);
+                break;
             default:
-                Debug.Log("No hay nada");
+                //Debug.Log("No hay nada");
                 break;
         }
 

@@ -49,8 +49,8 @@ public class CommandPanel : MonoBehaviour
         combatScreen = root.Q<VisualElement>("combat-screen");
 
         btnFUE = root.Q<Button>("btn-FUE");
-        btnCAR = root.Q<Button>("btnCAR");
-        btnINT = root.Q<Button>("btnINT");
+        btnCAR = root.Q<Button>("btn-CAR");
+        btnINT = root.Q<Button>("btn-INT");
         btnItem = root.Q<Button>("btn-item");
         btnDefend = root.Q<Button>("btn-defender");
         btnRun = root.Q<Button>("btn-huir");

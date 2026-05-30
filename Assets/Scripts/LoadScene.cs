@@ -104,7 +104,8 @@ public class LoadScene : MonoBehaviour
         //si estamos en combate eliminar esta escena
         //Sacamos la pausa del juego principal
         escenaState.ScenePause(false); //false, se mueve
-        uiHub.SetActive(true); //volvemos a ver la ui
+        
+        //uiHub.SetActive(true); //volvemos a ver la ui
 
         // Unload Scene
         SceneManager.UnloadSceneAsync("combat_scene");
@@ -120,7 +121,7 @@ public class LoadScene : MonoBehaviour
             escenaState.ScenePause(true); //true, se para
             pantalla.UnTint();
 
-            uiHub.SetActive(false);
+            //uiHub.SetActive(false);
 
             preload.CombatOpponent(enemyName); //Pasem el nom
 

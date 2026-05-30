@@ -13,6 +13,7 @@ public class PuzzleZone : MonoBehaviour
     public bool playerInside;    
     public bool restart;
     public bool finished;
+
     //Canvas
     [SerializeField] CanvasGroup grup;
 
@@ -29,6 +30,12 @@ public class PuzzleZone : MonoBehaviour
     [SerializeField] cherrydev.DialogNodeGraph dialogo_obj;
     //Hi ha habitacions on es necesita que el dialeg es dispari nomes si el puzzle no s'ha fet
     [SerializeField] bool dialogOnEnter;
+
+    [Header("Puzzle de 1 interruptor")]
+    [SerializeField] bool cajasExtras;
+    [SerializeField] int interruptores;
+    //Puzzle C6a --> solo 1
+    //Puzzle C6b --> solo 1 + C6a
 
     void Start()
     {
@@ -91,7 +98,41 @@ public class PuzzleZone : MonoBehaviour
             }
         }
         //---Puzzle---
-        if (!finished)
+        if (!finished && Children.Count != 0 && !cajasExtras)
+        {
+            for (int i = 0; i < PiezasPuzzles.Count; i++)
+            {
+                if (!PiezasPuzzles[i].GetComponent<EmpujarObjetos>().returnState())
+                {
+                    return;
+                }
+            }
+            finished = true;
+            Debug.Log("Se ha terminado el puzzle de la Zona");
+
+        }
+        //---Puzzle---
+        if (!finished && Children.Count != 0 && cajasExtras)
+        {
+            int falsasCajas = 0;
+            for (int i = 0; i < PiezasPuzzles.Count; i++)
+            {
+                //Al menos que una pieza sea TRUE
+                if (!PiezasPuzzles[i].GetComponent<EmpujarObjetos>().returnState())
+                {
+                    falsasCajas++;
+                }                    
+            }
+            if (falsasCajas != PiezasPuzzles.Count)
+            {
+                finished = true;
+                Debug.Log("Se ha hecho un interruptor");
+            }
+
+
+        }
+        //---Puzzle---
+        if (!finished && Children.Count != 0)
         {
             for (int i = 0; i < PiezasPuzzles.Count; i++)
             {

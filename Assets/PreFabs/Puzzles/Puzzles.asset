@@ -23,9 +23,9 @@ MonoBehaviour:
   Nivel_2:
   - name: Puzzle_C3
     acabado: 0
-  - name: Puzzle_C6_1
+  - name: Puzzle_C6_a
     acabado: 0
-  - name: Puzzle_C6_2
+  - name: Puzzle_C6_b
     acabado: 0
   NivelDesbloqueado:
   - name: Nivel_0

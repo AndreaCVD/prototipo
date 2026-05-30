@@ -8,7 +8,7 @@ public class EmpujarObjetos : MonoBehaviour
     private Vector3 destino;
 
     private LayerMask layerMask;
-    private bool puzzleFinished;
+    public bool puzzleFinished;
 
     void Start()
     {

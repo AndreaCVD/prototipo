@@ -32,6 +32,7 @@ public class SecondFloorPuzzle : MonoBehaviour
     void Start()
     {
         revisarPuzzle();
+        InstanciarPers();
         //Treure pq sino sempre es reinicien?
         zona_1.finished = lista.Nivel_2[0].acabado; //Puzzle C3
         zona_2a.finished = lista.Nivel_2[1].acabado; //Puzzle C6_1
@@ -63,7 +64,8 @@ public class SecondFloorPuzzle : MonoBehaviour
         }
     }
 
-
+    //Para C6a --> solo 1 caja tiene que ser true
+    //Para C6b --> 2 cajas tienen que ser true
     public void revisarPuzzle()
     {
         //Vemos si hay un puzzle acabado

@@ -29,7 +29,7 @@ public class SecondFloorPuzzle : MonoBehaviour
     [Header("Puzzle_2b")]
     [SerializeField] PuzzleZone zona_2b;
     [SerializeField] List<GameObject> p2b_eliminarObj = new List<GameObject>();
-
+    private bool puerta_c6b;
     [Header("Personajes a instanciar")]
     [SerializeField] List<GameObject> Nim = new List<GameObject>();
 
@@ -61,22 +61,23 @@ public class SecondFloorPuzzle : MonoBehaviour
         {
             lista.Nivel_2[1].acabado = zona_2a.finished;
         }
-        else if (!puerta_c3)
+        else if (!nivelAgua)
         {
             nivelAgua = true;
             Debug.Log("El nivel de agua baja");
             //anim_puertaC3.SetBool("doorOpen", true);
         }
         //Puzzle C6_2 --> llave maestra
-        if (!lista.Nivel_2[2].acabado)
+        if (!lista.Nivel_2[2].acabado && nivelAgua)
         {
             lista.Nivel_2[2].acabado = zona_2b.finished;
         }
-        if (lista.NivelDesbloqueado[2].acabado && !puertaMaestraAbierta)
+        else if (!puerta_c6b)
         {
-            puertaMaestraAbierta = true;
-            puertaMaestra.SetBool("doorOpen", true);
+            puerta_c6b = true;
+            anim_puertaC6.SetBool("doorOpen", true);
         }
+        //Puerta Maestra
     }
 
     //Para C6a --> solo 1 caja tiene que ser true

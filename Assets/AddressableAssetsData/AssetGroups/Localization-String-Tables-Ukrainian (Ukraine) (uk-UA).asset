@@ -69,6 +69,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-uk-UA
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9a242cf143048504f9778dda87567106
+    m_Address: Nim_uk-UA
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-uk-UA
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: df489edfbcd38de48ae50fdd200db61f
     m_Address: CofreVacio_uk-UA
     m_ReadOnly: 1

@@ -51,6 +51,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-fr-FR
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b023825b5b1e50243863e603c92154c9
+    m_Address: Nim_fr-FR
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-fr-FR
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: cf0c52b9b690c3848b5d57c0cfefb3f7
     m_Address: Fogata_fr-FR
     m_ReadOnly: 1

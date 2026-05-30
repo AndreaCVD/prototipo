@@ -51,6 +51,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-en-US
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 708c8d10225b45b47bda275925e9a144
+    m_Address: Nim_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7298f0fc752a0784f9ff61aadaa33ad1
     m_Address: Dialogo Prueva_en-US
     m_ReadOnly: 1

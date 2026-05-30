@@ -33,7 +33,8 @@ public class PuzzleZone : MonoBehaviour
 
     [Header("Puzzle de 1 interruptor")]
     [SerializeField] bool cajasExtras;
-    [SerializeField] int interruptores;
+    private bool zona_2_finished;
+    [SerializeField] PuzzleZone zona_b;
     //Puzzle C6a --> solo 1
     //Puzzle C6b --> solo 1 + C6a
 
@@ -111,7 +112,7 @@ public class PuzzleZone : MonoBehaviour
             Debug.Log("Se ha terminado el puzzle de la Zona");
 
         }
-        //---Puzzle---
+        //---Puzzle Secundario---
         if (!finished && Children.Count != 0 && cajasExtras)
         {
             int falsasCajas = 0;
@@ -126,24 +127,25 @@ public class PuzzleZone : MonoBehaviour
             if (falsasCajas != PiezasPuzzles.Count)
             {
                 finished = true;
-                Debug.Log("Se ha hecho un interruptor");
             }
-
-
         }
-        //---Puzzle---
-        if (!finished && Children.Count != 0)
+        else if (!zona_2_finished && cajasExtras)
         {
+            int falsasCajas = 0;
             for (int i = 0; i < PiezasPuzzles.Count; i++)
             {
+                //Al menos que una pieza sea TRUE
                 if (!PiezasPuzzles[i].GetComponent<EmpujarObjetos>().returnState())
                 {
-                    return;
+                    falsasCajas++;
                 }
             }
-            finished = true;
-            Debug.Log("Se ha terminado el puzzle de la Zona");
-
+            if (falsasCajas != PiezasPuzzles.Count - 1)
+            {
+                zona_b.finished = true;
+                zona_2_finished = true;
+                Debug.Log("Se ha hecho la Zona B");
+            }
         }
     }
     void OnTriggerEnter(Collider other)

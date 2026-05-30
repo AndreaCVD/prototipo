@@ -12,9 +12,11 @@ public class SecondFloorPuzzle : MonoBehaviour
 
     [Header("Obj a modificar al acabar puzzle")]
     [SerializeField] Animator puertaMaestra;
+    [SerializeField] Animator candado_1;
     [SerializeField] Animator anim_puertaC3;
     [SerializeField] Animator anim_puertaC6;
     private bool puertaMaestraAbierta;
+
 
     [Header("Puzzle_1")]
     [SerializeField] PuzzleZone zona_1;
@@ -72,12 +74,18 @@ public class SecondFloorPuzzle : MonoBehaviour
         {
             lista.Nivel_2[2].acabado = zona_2b.finished;
         }
-        else if (!puerta_c6b)
+        else if (!puerta_c6b && nivelAgua)
         {
             puerta_c6b = true;
             anim_puertaC6.SetBool("doorOpen", true);
         }
         //Puerta Maestra
+        if (lista.NivelDesbloqueado[2].acabado && !puertaMaestraAbierta)
+        {
+            puertaMaestraAbierta = true;
+            candado_1.SetBool("candadoOpen", true); 
+            puertaMaestra.SetBool("doorOpen", true);
+        }
     }
 
     //Para C6a --> solo 1 caja tiene que ser true

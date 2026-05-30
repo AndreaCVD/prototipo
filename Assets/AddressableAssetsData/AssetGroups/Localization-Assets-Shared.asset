@@ -15,6 +15,11 @@ MonoBehaviour:
   m_GroupName: Localization-Assets-Shared
   m_GUID: 47f921677bea8b246adf25729ebe1bb4
   m_SerializeEntries:
+  - m_GUID: 1b22461cddf1c434ba221e09e37c647b
+    m_Address: Assets/Localization/Nim/Nim Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 6a64efac0607ef64ab2101a3daabcdb1
     m_Address: Assets/Localization/Fogata/Fogata Shared Data.asset
     m_ReadOnly: 1

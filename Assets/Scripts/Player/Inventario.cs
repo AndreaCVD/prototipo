@@ -66,7 +66,11 @@ public class Inventario : MonoBehaviour
         bool keyFound = false;
 
         //hay cofres que se abren sin llave, los loot
-        if (!cofre.name.Contains("loot"))
+        if (cofre.name.Contains("noKey"))
+        {
+            AbrirCofre(cofre.name);
+        }
+        else if (!cofre.name.Contains("loot"))
         {
 
             //Recorremos nuestro inventario para ver si tenemos llaves
@@ -180,17 +184,22 @@ public class Inventario : MonoBehaviour
         switch (a)
         {
             case string b when b.Contains("A"):
-
+                //Puerta Maestra del Nivel 0 se ha abierto
+                lista.NivelDesbloqueado[0].acabado = true;
                 break;
             case string b when b.Contains("B"):
                 //Puerta Maestra del Nivel 1 se ha abierto
                 lista.NivelDesbloqueado[1].acabado = true;
                 break;
             case string b when b.Contains("C"):
-
+                //Puerta Maestra del Nivel 2 se ha abierto
+                lista.NivelDesbloqueado[2].acabado = true;
                 break;
             case string b when b.Contains("E"):
 
+                break;
+            default:
+                Debug.Log("No se ha leido bien la Puerta Maestra");
                 break;
         }
     }

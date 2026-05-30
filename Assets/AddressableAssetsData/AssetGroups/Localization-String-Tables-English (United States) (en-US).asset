@@ -75,6 +75,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-en-US
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d9aee3cd41fa2ea4ebfdc3b9a77f47c3
+    m_Address: CofreVacio_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: fe37854bce8887f43b293d741ec9aec0
     m_Address: test_en-US
     m_ReadOnly: 1

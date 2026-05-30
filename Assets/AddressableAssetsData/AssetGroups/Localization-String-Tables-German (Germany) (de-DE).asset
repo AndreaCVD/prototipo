@@ -63,6 +63,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-de-DE
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f681157caebb65e4cac5ec2cfd71456a
+    m_Address: CofreVacio_de-DE
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de-DE
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: fbd444631065f9a479573ee11c86ba24
     m_Address: PuertaMaestra_de-DE
     m_ReadOnly: 1

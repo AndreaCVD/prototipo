@@ -69,6 +69,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-uk-UA
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: df489edfbcd38de48ae50fdd200db61f
+    m_Address: CofreVacio_uk-UA
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-uk-UA
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 1
   m_Settings: {fileID: 11400000, guid: c828fb5033bcd1d459d934b965acaac2, type: 2}
   m_SchemaSet:

@@ -63,6 +63,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-es-ES
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ae3d46905fb64db45b87df4a01d6d84d
+    m_Address: CofreVacio_es-ES
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es-ES
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: daf0e0ed2001d404da7207f5b4078afc
     m_Address: Etkis_es-ES
     m_ReadOnly: 1

@@ -12,16 +12,20 @@ public class SecondFloorPuzzle : MonoBehaviour
 
     [Header("Obj a modificar al acabar puzzle")]
     [SerializeField] Animator puertaMaestra;
+    [SerializeField] Animator anim_puertaC3;
+    [SerializeField] Animator anim_puertaC6;
+    private bool puertaMaestraAbierta;
 
-    private bool puertaAbierta;
-    private bool jaulaAbierta;
     [Header("Puzzle_1")]
     [SerializeField] PuzzleZone zona_1;
     [SerializeField] List<GameObject> p1_eliminarObj = new List<GameObject>();
-
+    private bool puerta_c3;
+    
     [Header("Puzzle_2a")]
     [SerializeField] PuzzleZone zona_2a;
     [SerializeField] List<GameObject> p2a_eliminarObj = new List<GameObject>();
+    private bool nivelAgua;
+
     [Header("Puzzle_2b")]
     [SerializeField] PuzzleZone zona_2b;
     [SerializeField] List<GameObject> p2b_eliminarObj = new List<GameObject>();
@@ -47,19 +51,30 @@ public class SecondFloorPuzzle : MonoBehaviour
         {
             lista.Nivel_2[0].acabado = zona_1.finished;
         }
-        //Puzzle C6_1
+        else if (!puerta_c3)
+        {
+            puerta_c3 = true;
+            anim_puertaC3.SetBool("doorOpen", true);
+        }
+        //Puzzle C6_1 --> agua
         if (!lista.Nivel_2[1].acabado)
         {
             lista.Nivel_2[1].acabado = zona_2a.finished;
         }
-        //Puzzle C6_2
+        else if (!puerta_c3)
+        {
+            nivelAgua = true;
+            Debug.Log("El nivel de agua baja");
+            //anim_puertaC3.SetBool("doorOpen", true);
+        }
+        //Puzzle C6_2 --> llave maestra
         if (!lista.Nivel_2[2].acabado)
         {
             lista.Nivel_2[2].acabado = zona_2b.finished;
         }
-        if (lista.NivelDesbloqueado[2].acabado && !puertaAbierta)
+        if (lista.NivelDesbloqueado[2].acabado && !puertaMaestraAbierta)
         {
-            puertaAbierta = true;
+            puertaMaestraAbierta = true;
             puertaMaestra.SetBool("doorOpen", true);
         }
     }

@@ -206,7 +206,7 @@ GameObject:
   - component: {fileID: 108969934}
   - component: {fileID: 108969933}
   - component: {fileID: 108969932}
-  - component: {fileID: 108969931}
+  - component: {fileID: 108969936}
   m_Layer: 0
   m_Name: Puerta_c5-c1
   m_TagString: Puerta
@@ -222,35 +222,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 108969929}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -6.7800007, y: -1.5737431, z: -0.47}
-  m_LocalScale: {x: 2, y: 2.5, z: 0.2}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: -6.7800007, y: -1.573743, z: -0.47000122}
+  m_LocalScale: {x: 2, y: 2.5, z: 0.20000002}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 964997173}
+  m_Father: {fileID: 338616604}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!95 &108969931
-Animator:
-  serializedVersion: 7
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 108969929}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0e795f919c3e489479e58142c8c20d89, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_AnimatePhysics: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &108969932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -338,6 +316,28 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 108969929}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!95 &108969936
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 108969929}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b7dd62e1886655140af8baa64ec3a086, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &132487626
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1332,6 +1332,39 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 802928151823835335, guid: c897a4dddd7061f4292b1cb900937df4, type: 3}
   m_PrefabInstance: {fileID: 314591735}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &338616603
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 338616604}
+  m_Layer: 0
+  m_Name: Puertas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &338616604
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 338616603}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 108969930}
+  - {fileID: 2092286826}
+  m_Father: {fileID: 1802207494}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &401208619 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4422654857273546205, guid: c98c5db09364c72448207e384aad76a1, type: 3}
@@ -2717,8 +2750,6 @@ Transform:
   - {fileID: 301429709}
   - {fileID: 261143045}
   - {fileID: 1582157002}
-  - {fileID: 108969930}
-  - {fileID: 2092286826}
   m_Father: {fileID: 1802207494}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1024842783 stripped
@@ -3273,6 +3304,14 @@ PrefabInstance:
       propertyPath: grup
       value: 
       objectReference: {fileID: 1926101353}
+    - target: {fileID: 3946282649668958653, guid: c98c5db09364c72448207e384aad76a1, type: 3}
+      propertyPath: cajasExtras
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3946282649668958653, guid: c98c5db09364c72448207e384aad76a1, type: 3}
+      propertyPath: interruptores
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4218244021328579001, guid: c98c5db09364c72448207e384aad76a1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.35
@@ -4239,6 +4278,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lista: {fileID: 11400000, guid: 92b50351187af094c96f6e51da1599fa, type: 2}
   puertaMaestra: {fileID: 582203474}
+  anim_puertaC3: {fileID: 108969936}
+  anim_puertaC6: {fileID: 2092286827}
   zona_1: {fileID: 1183468414}
   p1_eliminarObj: []
   zona_2a: {fileID: 740511707}
@@ -4605,6 +4646,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 338616604}
   - {fileID: 964997173}
   - {fileID: 1244398257}
   - {fileID: 1114307509}
@@ -5441,12 +5483,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2092286825}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 13.27, y: -1.5737431, z: -0.47}
-  m_LocalScale: {x: 2, y: 2.5, z: 0.2}
+  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalPosition: {x: 13.27, y: -1.5737431, z: -0.47000122}
+  m_LocalScale: {x: 2, y: 2.5, z: 0.20000002}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 964997173}
+  m_Father: {fileID: 338616604}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!95 &2092286827
 Animator:

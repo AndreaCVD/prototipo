@@ -61,6 +61,7 @@ public class Interactable : MonoBehaviour
                 dialog.EmpezarDialogo(dialogo_obj, a);
                 break;
             case "Cofre":
+                Debug.Log("Interaccionable por dialogo");
                 inventario.CofreKey(a, dialogo_obj);
                 break;
             case "Puerta":

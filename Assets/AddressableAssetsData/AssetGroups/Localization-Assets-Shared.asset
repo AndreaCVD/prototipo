@@ -30,6 +30,11 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a9d91e9fc8b606140a261c903b0bb7cb
+    m_Address: Assets/Localization/CofreVacio/CofreVacio Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: bfa41515759b64a4bbfd0fa683c6097d
     m_Address: Assets/Localization/Dialogo Prueva/Dialogo Prueva Shared Data.asset
     m_ReadOnly: 1

@@ -63,6 +63,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-fr-FR
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e4db610beb5dc8b4d8c02990f6f30216
+    m_Address: CofreVacio_fr-FR
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-fr-FR
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f64f7af07d6ba924ca3d3dbb69656349
     m_Address: DemoNodeGraph_fr-FR
     m_ReadOnly: 1

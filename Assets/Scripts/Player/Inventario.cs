@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Random = UnityEngine.Random;
 
 public class Inventario : MonoBehaviour
 {
@@ -64,16 +65,25 @@ public class Inventario : MonoBehaviour
     {
         bool keyFound = false;
 
-        //Recorremos nuestro inventario para ver si tenemos llaves
-        if ( prota.Inventario.Llave.Count > 0 )
+        //hay cofres que se abren sin llave, los loot
+        if (!cofre.name.Contains("loot"))
         {
-            prota.Inventario.Llave.RemoveAt(prota.Inventario.Llave.Count - 1);
-            AbrirCofre(cofre.name);
-            keyFound = true;
+
+            //Recorremos nuestro inventario para ver si tenemos llaves
+            if (prota.Inventario.Llave.Count > 0)
+            {
+                prota.Inventario.Llave.RemoveAt(prota.Inventario.Llave.Count - 1);
+                AbrirCofre(cofre.name);
+                keyFound = true;
+            }
+            if (!keyFound)
+            {
+                dialog.EmpezarDialogo(dialogo_obj, cofre);
+            }
         }
-        if (!keyFound)
+        else
         {
-            dialog.EmpezarDialogo(dialogo_obj, cofre);
+            AbrirCofre("aleatorio");
         }
     }
     public void PuertaMaestraKey(GameObject puerta, cherrydev.DialogNodeGraph dialogo_obj)
@@ -116,7 +126,7 @@ public class Inventario : MonoBehaviour
         //Activar UI del loot que ha salido --> brillo bolsa UI
 
         //Cofre B1 --> Llave Maestra
-        //Cofre C2 --> Espada
+        //Cofre C2 --> Loot aleatorio
         //Cofre C5 --> Pocion Nivel_3
         //Cofre C6 --> Llave Maestra
         //Cofre D5 --> Pocion Vida y Espada de Lava
@@ -138,7 +148,28 @@ public class Inventario : MonoBehaviour
                 prota.Inventario.Espada.Add("espada_cofre");
                 prota.Inventario.PocionVida.Add("pocion_cofre");
                 break;
+            case "aleatorio":
+                lootAleatorio();
+                break;
 
+        }
+    }
+    public void lootAleatorio()
+    {
+        int a = Random.Range(1, 3);
+        switch (a)
+        {
+            case 1:
+                prota.Inventario.Espada.Add("Espada_Loot");
+                break;
+            case 2:
+                prota.Inventario.Daga.Add("Daga_Loot");
+                break;
+            case 3:
+                prota.Inventario.PocionVida.Add("PocionVida_Loot");
+                break;
+            default:
+                break;
         }
     }
     private void AbrirPuertaMaestra(string a)

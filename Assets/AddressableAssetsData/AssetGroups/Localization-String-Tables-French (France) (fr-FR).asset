@@ -15,14 +15,62 @@ MonoBehaviour:
   m_GroupName: Localization-String-Tables-French (France) (fr-FR)
   m_GUID: 32608ab7fcbbd1b428909e4edd915863
   m_SerializeEntries:
+  - m_GUID: 09b65a02356da8342bd120aaa05fcde0
+    m_Address: PuertaMaestra_fr-FR
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-fr-FR
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 19e1b2b83a353434e9249c6089f8876e
+    m_Address: Puerta_fr-FR
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-fr-FR
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1ecc56ed8dbd7224aaa0ded1d7203d43
+    m_Address: Etkis_fr-FR
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-fr-FR
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2de06b2e62ecfed4797e82529d852bcb
+    m_Address: Arbol_fr-FR
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-fr-FR
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7b467b6931cde304fa84a69332cebaf0
+    m_Address: Tienda_fr-FR
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-fr-FR
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 9b69939639db29b4bb4bb36d2a39d2d7
     m_Address: test_fr-FR
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-fr-FR
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b023825b5b1e50243863e603c92154c9
+    m_Address: Nim_fr-FR
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-fr-FR
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cf0c52b9b690c3848b5d57c0cfefb3f7
+    m_Address: Fogata_fr-FR
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-fr-FR
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: cfa3c2dff72d12d4ba4f0b5a7f1f3c1f
     m_Address: Cofre_fr-FR
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-fr-FR
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e4db610beb5dc8b4d8c02990f6f30216
+    m_Address: CofreVacio_fr-FR
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-fr-FR

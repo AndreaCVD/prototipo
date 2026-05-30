@@ -13,25 +13,43 @@ public class PuzzleZone : MonoBehaviour
     public bool playerInside;    
     public bool restart;
     public bool finished;
+
     //Canvas
     [SerializeField] CanvasGroup grup;
 
     private List<GameObject> Children = new List<GameObject>();
     [Header("Listas")]
-    [SerializeField] string nombre;
     public List<GameObject> PiezasPuzzles = new List<GameObject>();
     [SerializeField] List<Transform> SitioReinicio = new List<Transform>();
-    [SerializeField] List<Transform> UltimaPos = new List<Transform>();
     [SerializeField] Transform pos_player;
 
+    //Para encontrar los scripts de DialogManager
+    private Dialog dialog;
+    private GameObject script_dialog;
+    [Header("EL DIALOGO DEL OBJ")]
+    [SerializeField] cherrydev.DialogNodeGraph dialogo_obj;
+    //Hi ha habitacions on es necesita que el dialeg es dispari nomes si el puzzle no s'ha fet
+    [SerializeField] bool dialogOnEnter;
+
+    [Header("Puzzle de 1 interruptor")]
+    [SerializeField] bool cajasExtras;
+    private bool zona_2_finished;
+    [SerializeField] PuzzleZone zona_b;
+    //Puzzle C6a --> solo 1
+    //Puzzle C6b --> solo 1 + C6a
 
     void Start()
     {
-        nombre = this.name;
 
         player = GameObject.Find("personaje");
 
         playerInside = false;
+
+        if (script_dialog == null)
+        {
+            script_dialog = GameObject.Find("--DialogManager--");
+            dialog = script_dialog.GetComponent<Dialog>();
+        }
 
         opacidad(0f);
         //Localizar los primeros hijos
@@ -44,9 +62,9 @@ public class PuzzleZone : MonoBehaviour
         int lenght = Children.Count;
         for (int i = 0;  i < lenght; i++)
         {
-            foreach (GameObject a in Children)
+            foreach (Transform a in Children[i].transform)
             {
-                GameObject b = a.transform.GetChild(i).gameObject;
+                GameObject b = a.gameObject;
 
                 if (b.name.Contains("_pos"))
                 {
@@ -81,7 +99,7 @@ public class PuzzleZone : MonoBehaviour
             }
         }
         //---Puzzle---
-        if (!finished)
+        if (!finished && Children.Count != 0 && !cajasExtras)
         {
             for (int i = 0; i < PiezasPuzzles.Count; i++)
             {
@@ -94,6 +112,41 @@ public class PuzzleZone : MonoBehaviour
             Debug.Log("Se ha terminado el puzzle de la Zona");
 
         }
+        //---Puzzle Secundario---
+        if (!finished && Children.Count != 0 && cajasExtras)
+        {
+            int falsasCajas = 0;
+            for (int i = 0; i < PiezasPuzzles.Count; i++)
+            {
+                //Al menos que una pieza sea TRUE
+                if (!PiezasPuzzles[i].GetComponent<EmpujarObjetos>().returnState())
+                {
+                    falsasCajas++;
+                }                    
+            }
+            if (falsasCajas != PiezasPuzzles.Count)
+            {
+                finished = true;
+            }
+        }
+        else if (!zona_2_finished && cajasExtras)
+        {
+            int falsasCajas = 0;
+            for (int i = 0; i < PiezasPuzzles.Count; i++)
+            {
+                //Al menos que una pieza sea TRUE
+                if (!PiezasPuzzles[i].GetComponent<EmpujarObjetos>().returnState())
+                {
+                    falsasCajas++;
+                }
+            }
+            if (falsasCajas != PiezasPuzzles.Count - 1)
+            {
+                zona_b.finished = true;
+                zona_2_finished = true;
+                Debug.Log("Se ha hecho la Zona B");
+            }
+        }
     }
     void OnTriggerEnter(Collider other)
     {
@@ -105,6 +158,11 @@ public class PuzzleZone : MonoBehaviour
             {
                 playerInside = true;
                 opacidad(1f);
+                if ( dialogOnEnter && !finished)
+                {
+
+                    dialog.EmpezarDialogo(dialogo_obj, this.gameObject);
+                }
             }
             else
             {
@@ -128,7 +186,10 @@ public class PuzzleZone : MonoBehaviour
         {
             GameObject pieza = PiezasPuzzles[i];
             Transform trans = SitioReinicio[i];
-
+            if (PiezasPuzzles[i].GetComponent<EmpujarObjetos>().returnState())
+            {
+                PiezasPuzzles[i].GetComponent<EmpujarObjetos>().restartState();
+            }
             pieza.transform.position = new Vector3(trans.position.x, trans.position.y, trans.position.z );
             Debug.Log(pieza + "- se ha movido a - " + trans);
         }

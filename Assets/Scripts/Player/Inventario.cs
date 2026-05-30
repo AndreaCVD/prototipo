@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Random = UnityEngine.Random;
 
 public class Inventario : MonoBehaviour
 {
@@ -64,16 +65,62 @@ public class Inventario : MonoBehaviour
     {
         bool keyFound = false;
 
-        //Recorremos nuestro inventario para ver si tenemos llaves
-        if ( prota.Inventario.Llave.Count > 0 )
+        //hay cofres que se abren sin llave, los loot
+        if (cofre.name.Contains("noKey"))
         {
-            prota.Inventario.Llave.RemoveAt(prota.Inventario.Llave.Count - 1);
             AbrirCofre(cofre.name);
+        }
+        else if (!cofre.name.Contains("loot"))
+        {
+
+            //Recorremos nuestro inventario para ver si tenemos llaves
+            if (prota.Inventario.Llave.Count > 0)
+            {
+                prota.Inventario.Llave.RemoveAt(prota.Inventario.Llave.Count - 1);
+                AbrirCofre(cofre.name);
+                keyFound = true;
+            }
+            if (!keyFound)
+            {
+                dialog.EmpezarDialogo(dialogo_obj, cofre);
+            }
+        }
+        else
+        {
+            AbrirCofre("aleatorio");
+        }
+    }
+    public void PuertaMaestraKey(GameObject puerta, cherrydev.DialogNodeGraph dialogo_obj)
+    {
+        bool keyFound = false;
+
+        //Recorremos nuestro inventario para ver si tenemos llaves
+        if ( prota.Inventario.LlaveMaestra.Count > 0 )
+        {
+            prota.Inventario.LlaveMaestra.RemoveAt(prota.Inventario.LlaveMaestra.Count - 1);
+            AbrirPuertaMaestra(puerta.name);
             keyFound = true;
         }
         if (!keyFound)
         {
-            dialog.EmpezarDialogo(dialogo_obj, cofre);
+            dialog.EmpezarDialogo(dialogo_obj, puerta);
+        }
+    }
+    public void PuertaKey(GameObject puerta, cherrydev.DialogNodeGraph dialogo_obj)
+    {
+        bool keyFound = false;
+
+        //Recorremos nuestro inventario para ver si tenemos llaves
+        if ( prota.Inventario.Llave.Count > 0 )
+        {
+            prota.Inventario.Llave.RemoveAt(prota.Inventario.Llave.Count - 1);
+            Destroy(puerta);
+            //AbrirPuerta(puerta.name);
+            keyFound = true;
+        }
+        if (!keyFound)
+        {
+            dialog.EmpezarDialogo(dialogo_obj, puerta);
         }
     }
     private void AbrirCofre(string a)
@@ -83,7 +130,7 @@ public class Inventario : MonoBehaviour
         //Activar UI del loot que ha salido --> brillo bolsa UI
 
         //Cofre B1 --> Llave Maestra
-        //Cofre C2 --> Espada
+        //Cofre C2 --> Loot aleatorio
         //Cofre C5 --> Pocion Nivel_3
         //Cofre C6 --> Llave Maestra
         //Cofre D5 --> Pocion Vida y Espada de Lava
@@ -105,7 +152,55 @@ public class Inventario : MonoBehaviour
                 prota.Inventario.Espada.Add("espada_cofre");
                 prota.Inventario.PocionVida.Add("pocion_cofre");
                 break;
+            case "aleatorio":
+                lootAleatorio();
+                break;
 
+        }
+    }
+    public void lootAleatorio()
+    {
+        int a = Random.Range(1, 3);
+        switch (a)
+        {
+            case 1:
+                prota.Inventario.Espada.Add("Espada_Loot");
+                break;
+            case 2:
+                prota.Inventario.Daga.Add("Daga_Loot");
+                break;
+            case 3:
+                prota.Inventario.PocionVida.Add("PocionVida_Loot");
+                break;
+            default:
+                break;
+        }
+    }
+    private void AbrirPuertaMaestra(string a)
+    {
+        Debug.Log("La puerta se abre");
+        //Activar animacion
+
+        switch (a)
+        {
+            case string b when b.Contains("A"):
+                //Puerta Maestra del Nivel 0 se ha abierto
+                lista.NivelDesbloqueado[0].acabado = true;
+                break;
+            case string b when b.Contains("B"):
+                //Puerta Maestra del Nivel 1 se ha abierto
+                lista.NivelDesbloqueado[1].acabado = true;
+                break;
+            case string b when b.Contains("C"):
+                //Puerta Maestra del Nivel 2 se ha abierto
+                lista.NivelDesbloqueado[2].acabado = true;
+                break;
+            case string b when b.Contains("E"):
+
+                break;
+            default:
+                Debug.Log("No se ha leido bien la Puerta Maestra");
+                break;
         }
     }
     private void puzzleAcabado(string obj)

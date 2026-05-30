@@ -42,6 +42,10 @@ public class EmpujarObjetos : MonoBehaviour
     {
         return puzzleFinished;
     }
+    public void restartState()
+    {
+        puzzleFinished = false;
+    }
     void OnCollisionEnter(Collision col)
     {
         // Si el jugador choca con este objeto y el puzzle no esta completado
@@ -75,7 +79,7 @@ public class EmpujarObjetos : MonoBehaviour
                 {
                     if ( colision.gameObject.CompareTag("FinalPuzzle"))
                     {
-                        Debug.Log("El puzzle se ha completado");
+                        //Debug.Log("El puzzle se ha completado");
                         destino = nuevaPos;
                         enMovimiento = true;
                         puzzleFinished = true;

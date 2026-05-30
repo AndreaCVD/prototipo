@@ -10,8 +10,6 @@ public class CommandPanel : MonoBehaviour
     private LoadScene loadScene;
 
     private VisualElement root;
-    private VisualElement combatScreen;
-    private GameObject gameHudObject;
 
     //fila principal
     private Button btnFUE, btnCAR, btnINT;
@@ -36,18 +34,6 @@ public class CommandPanel : MonoBehaviour
         var uIDocument = GetComponent<UIDocument>();
         root = uIDocument.rootVisualElement;
 
-        gameHudObject = GameObject.Find("UI_HUB");
-        if (gameHudObject == null)
-        {
-            Debug.LogWarning("CommandPanel: no se encontro UI_HUB :c");
-        }
-
-        if (gameHudObject == null)
-            Debug.LogWarning("CommandPanel: no se encontró UI_HUB en la escena.");
-
-        //refs
-        combatScreen = root.Q<VisualElement>("combat-screen");
-
         btnFUE = root.Q<Button>("btn-FUE");
         btnCAR = root.Q<Button>("btn-CAR");
         btnINT = root.Q<Button>("btn-INT");
@@ -57,30 +43,26 @@ public class CommandPanel : MonoBehaviour
 
         // eventos
         btnFUE.clicked += Fuerza;
-        btnCAR.clicked += Intel; //da error? obj reference not set
-        btnINT.clicked += Carisma;
+        btnINT.clicked += Intel;
+        btnCAR.clicked += Carisma;
         //Por implementar
         btnItem.clicked += UsarItem;
         btnDefend.clicked += Defender;
 
         btnRun.clicked += Huir;
 
-        MostrarCombate();
-
     }
 
     void OnDisable()
     {
         btnFUE.clicked -= Fuerza;
-        btnCAR.clicked -= Intel; //que es intel
-        btnINT.clicked -= Carisma;
+        btnINT.clicked -= Intel; //que es intel
+        btnCAR.clicked -= Carisma;
         //Por implementar
         btnItem.clicked -= UsarItem;
         btnDefend.clicked -= Defender;
 
         btnRun.clicked -= Huir;
-
-        OcultarCombate();
     }
 
     //Boton Fuerza, se dice a command manager
@@ -88,7 +70,6 @@ public class CommandPanel : MonoBehaviour
     {
         commandManager.Fuerza();
         Debug.Log("Ataque de fuerza");
-        OcultarCombate();
 
     }
     //Boton Inteligencia
@@ -121,22 +102,5 @@ public class CommandPanel : MonoBehaviour
     {
         Debug.Log("Defender");
         // pendiente: commandManager.Defender() para que pueda usar algo para defenderse(? ya sea un item o un stat
-    }
-
-    public void MostrarCombate()
-    {
-        Debug.Log("mostrar combate");
-        combatScreen.style.display = DisplayStyle.Flex;
-        if (gameHudObject != null)
-            gameHudObject.SetActive(false);
-    }
-
-    public void OcultarCombate()
-    {
-        Debug.Log("mostrar combate");
-
-        combatScreen.style.display = DisplayStyle.None;
-        if (gameHudObject != null)
-            gameHudObject.SetActive(true);
     }
 }

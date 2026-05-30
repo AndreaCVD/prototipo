@@ -34,7 +34,7 @@ public class LoadScene : MonoBehaviour
 
     void Update()
     {
-        uiHub = GameObject.Find("UI_HUB");
+
         //encontrar el personaje prefab 
         if (protagonista == null)
         {

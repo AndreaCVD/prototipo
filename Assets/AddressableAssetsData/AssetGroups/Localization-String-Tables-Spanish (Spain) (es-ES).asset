@@ -69,6 +69,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-es-ES
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e8711e4ea718f9349b0f669466f6a057
+    m_Address: Puerta_es-ES
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es-ES
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f27573134cfe8c448ae4e87ffb483478
     m_Address: PuertaMaestra_es-ES
     m_ReadOnly: 1

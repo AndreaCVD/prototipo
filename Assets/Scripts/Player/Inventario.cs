@@ -92,6 +92,23 @@ public class Inventario : MonoBehaviour
             dialog.EmpezarDialogo(dialogo_obj, puerta);
         }
     }
+    public void PuertaKey(GameObject puerta, cherrydev.DialogNodeGraph dialogo_obj)
+    {
+        bool keyFound = false;
+
+        //Recorremos nuestro inventario para ver si tenemos llaves
+        if ( prota.Inventario.Llave.Count > 0 )
+        {
+            prota.Inventario.Llave.RemoveAt(prota.Inventario.Llave.Count - 1);
+            Destroy(puerta);
+            //AbrirPuerta(puerta.name);
+            keyFound = true;
+        }
+        if (!keyFound)
+        {
+            dialog.EmpezarDialogo(dialogo_obj, puerta);
+        }
+    }
     private void AbrirCofre(string a)
     {
         Debug.Log("El cofre se abre");

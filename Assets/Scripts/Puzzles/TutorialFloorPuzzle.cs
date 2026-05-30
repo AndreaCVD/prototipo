@@ -22,10 +22,9 @@ public class TutorialFloorPuzzle : MonoBehaviour
 
     [Header("Personajes a instanciar")]
     [SerializeField] List<GameObject> Viejo = new List<GameObject>();
-
-    [SerializeField] GameObject Etkis; //Mirar Puzzle B2
-    [SerializeField] GameObject Nim; //Mirar Puzzle C6_2
-    [SerializeField] GameObject Lerendur; //Ganar pelea final
+    [SerializeField] List<GameObject> Etkis = new List<GameObject>(); //Mirar Puzzle B2
+    [SerializeField] List<GameObject> Nim = new List<GameObject>();//Mirar Puzzle C6_2
+    [SerializeField] List<GameObject> Lerendur = new List<GameObject>();//Ganar pelea final
 
     void Start()
     {
@@ -88,6 +87,7 @@ public class TutorialFloorPuzzle : MonoBehaviour
     
     void InstanciarPers()
     {
+        //Viejo
         if (lista.NivelDesbloqueado[0].acabado)
         {
             //Se instancia viejo de playa
@@ -97,6 +97,23 @@ public class TutorialFloorPuzzle : MonoBehaviour
         {
             Instantiate(Viejo[0], Viejo[1].transform.position, Viejo[1].transform.rotation);
 
+        }
+        //Etkis --> Mirar Puzzle B2
+        if (lista.Nivel_1[1].acabado)
+        {
+            //Se instancia Etkis
+            Instantiate(Etkis[0], Etkis[1].transform.position, Etkis[1].transform.rotation);
+        }
+        //Nim --> Mirar Puzzle C6_2
+        if (lista.Nivel_2[2].acabado)
+        {
+            //Se instancia Nim
+            Instantiate(Nim[0], Nim[1].transform.position, Nim[1].transform.rotation);
+        }
+        //Lerendur --> Ganar pelea final
+        if (lista.NivelDesbloqueado[3].acabado)
+        {
+            Instantiate(Lerendur[2], Lerendur[3].transform.position, Lerendur[3].transform.rotation);
         }
     }
 }

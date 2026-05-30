@@ -1,0 +1,118 @@
+using System.Collections;
+using System;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class SecondFloorPuzzle : MonoBehaviour
+{
+    [SerializeField] Puzzle lista;
+
+    private bool preload;
+
+    [Header("Obj a modificar al acabar puzzle")]
+    [SerializeField] Animator puertaMaestra;
+
+    private bool puertaAbierta;
+    private bool jaulaAbierta;
+    [Header("Puzzle_1")]
+    [SerializeField] PuzzleZone zona_1;
+    [SerializeField] List<GameObject> p1_eliminarObj = new List<GameObject>();
+
+    [Header("Puzzle_2a")]
+    [SerializeField] PuzzleZone zona_2a;
+    [SerializeField] List<GameObject> p2a_eliminarObj = new List<GameObject>();
+    [Header("Puzzle_2b")]
+    [SerializeField] PuzzleZone zona_2b;
+    [SerializeField] List<GameObject> p2b_eliminarObj = new List<GameObject>();
+
+    [Header("Personajes a instanciar")]
+    [SerializeField] List<GameObject> Nim = new List<GameObject>();
+
+    void Start()
+    {
+        revisarPuzzle();
+        //Treure pq sino sempre es reinicien?
+        zona_1.finished = lista.Nivel_2[0].acabado; //Puzzle C3
+        zona_2a.finished = lista.Nivel_2[1].acabado; //Puzzle C6_1
+        zona_2b.finished = lista.Nivel_2[2].acabado; //Puzzle C6_2
+        lista.NivelDesbloqueado[2].acabado = false; //
+    }
+
+    void Update()
+    {
+        //Puzzle C3
+        if (!lista.Nivel_2[0].acabado)
+        {
+            lista.Nivel_2[0].acabado = zona_1.finished;
+        }
+        //Puzzle C6_1
+        if (!lista.Nivel_2[1].acabado)
+        {
+            lista.Nivel_2[1].acabado = zona_2a.finished;
+        }
+        //Puzzle C6_2
+        if (!lista.Nivel_2[2].acabado)
+        {
+            lista.Nivel_2[2].acabado = zona_2b.finished;
+        }
+        if (lista.NivelDesbloqueado[2].acabado && !puertaAbierta)
+        {
+            puertaAbierta = true;
+            puertaMaestra.SetBool("doorOpen", true);
+        }
+    }
+
+
+    public void revisarPuzzle()
+    {
+        //Vemos si hay un puzzle acabado
+        for (int i = 0; i < lista.Nivel_1.Count; i++)
+        {
+            if (lista.Nivel_1[i].acabado)
+            {
+                switch (lista.Nivel_1[i].name)
+                {
+                    case "Puzzle_B1":
+                        eliminarLista_1("puzz_1");
+                        lastPos_1();
+                        break;
+                    case "Puzzle_B2":
+                        eliminarLista_2("puzz_2");
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
+
+    }
+
+    void eliminarLista_1(string name)
+    {
+        foreach (var a in p1_eliminarObj)
+        {
+
+            Destroy(a);
+        }
+    }
+    void eliminarLista_2(string name)
+    {
+        foreach (var a in p2a_eliminarObj)
+        {
+            Destroy(a);
+        }
+    }
+    void lastPos_1()
+    {
+        //anar per tota la llista y guardar cada posicio
+    }
+    void InstanciarPers()
+    {
+        if (!lista.Nivel_2[2].acabado)
+        {
+            //Si nunca se ha hecho el puzzle B2 etkis no es libre
+            Instantiate(Nim[0], Nim[1].transform.position, Nim[1].transform.rotation);
+        }
+    }
+}

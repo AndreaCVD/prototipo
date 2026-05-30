@@ -39,6 +39,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-uk-UA
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3ea728ea1d3512240a8a293e0b825050
+    m_Address: Puerta_uk-UA
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-uk-UA
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 45f72722f87ccfc4ebdd26bb124d1b36
     m_Address: PuertaMaestra_uk-UA
     m_ReadOnly: 1

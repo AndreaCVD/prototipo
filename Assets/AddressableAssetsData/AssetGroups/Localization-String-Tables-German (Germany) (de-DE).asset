@@ -39,6 +39,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-de-DE
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 44a3506f256d5d6409a99014154938d7
+    m_Address: Puerta_de-DE
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de-DE
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 671a74bdfbae80e42847c9ec5a68cef3
     m_Address: Fogata_de-DE
     m_ReadOnly: 1

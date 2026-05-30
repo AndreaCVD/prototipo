@@ -33,6 +33,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-en-US
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4d56061cf96c80f4c8fe00af7c073c8e
+    m_Address: Puerta_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 669e75a086264bf48ad70f38cbbd4cec
     m_Address: Etkis_en-US
     m_ReadOnly: 1

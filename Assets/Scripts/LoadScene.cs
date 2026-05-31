@@ -105,6 +105,8 @@ public class LoadScene : MonoBehaviour
         //Sacamos la pausa del juego principal
         escenaState.ScenePause(false); //false, se mueve
         
+        //recibir loot
+
         //uiHub.SetActive(true); //volvemos a ver la ui
 
         // Unload Scene

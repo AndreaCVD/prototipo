@@ -10,21 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3184c13f5276613429ba2c5118bbc8ba, type: 3}
-  m_Name: Caballero
+  m_Name: Mimic
   m_EditorClassIdentifier: 
-  namePers: Caballero
+  namePers: 
   stats:
     values:
-    - value: 2
+    - value: 3
       stats: 0
     - value: 0
       stats: 1
     - value: 0
       stats: 2
-    - value: 16
+    - value: 20
       stats: 3
-    - value: 17
+    - value: 12
       stats: 4
   Inventario: {fileID: 0}
-  modelPrefab: {fileID: 5305385646599809368, guid: 18956a4a129394a42aeebd1263fb6080, type: 3}
-  art: {fileID: 21300000, guid: 282c6090ceaf83e40b737abf15268cee, type: 3}
+  modelPrefab: {fileID: 0}
+  art: {fileID: 0}

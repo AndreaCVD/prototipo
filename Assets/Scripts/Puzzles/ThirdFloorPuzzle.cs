@@ -38,30 +38,30 @@ public class ThirdFloorPuzzle : MonoBehaviour
     public void revisarPuzzle()
     {
         //Vemos si hay un puzzle acabado
-        for (int i = 0; i < lista.Nivel_1.Count; i++)
-        {
-            if (lista.Nivel_1[i].acabado)
-            {
-                switch (lista.Nivel_1[i].name)
-                {
-                    case "Puzzle_B1":
+        //for (int i = 0; i < lista.Nivel_1.Count; i++)
+        //{
+        //    if (lista.Nivel_1[i].acabado)
+        //    {
+        //        switch (lista.Nivel_1[i].name)
+        //        {
+        //            case "Puzzle_B1":
 
-                        break;
-                    case "Puzzle_B2":
+        //                break;
+        //            case "Puzzle_B2":
 
-                        break;
-                    default:
-                        break;
-                }
-            }
-        }
+        //                break;
+        //            default:
+        //                break;
+        //        }
+        //    }
+        //}
 
     }
 
     void InstanciarPers()
     {
         //Instanciar Llibre + Lerendur
-        if (!lista.Nivel_1[1].acabado)
+        if (!lista.NivelDesbloqueado[3].acabado)
         {
             //Si nunca se ha hecho el puzzle B2 etkis no es libre
             Instantiate(JefeFinal[0], JefeFinal[1].transform.position, JefeFinal[1].transform.rotation);

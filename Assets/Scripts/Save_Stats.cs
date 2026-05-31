@@ -8,6 +8,7 @@ public class Save_Stats : MonoBehaviour
     //Mover los stats de los personajes del combate a la pantalla principal
     [SerializeField] Parameters playerPersonaje;
     [SerializeField] Parameters slime;
+    [SerializeField] Parameters mimic;
     [SerializeField] Parameters caballero;
     [SerializeField] Parameters libro;
     [SerializeField] Parameters yusseif;
@@ -30,9 +31,15 @@ public class Save_Stats : MonoBehaviour
         playerPersonaje.Inventario.Espada.Clear();
         playerPersonaje.Inventario.PocionVida.Clear();
 
-        // playerPersonaje.Inventario.Clear(); //Vaciamos el Inventario
-
+        //Los enemigos tienen que hacerse en cada cambio de escena
         ////Slime
+        mimic.stats.values[0].value = 3; //Fuerza
+        mimic.stats.values[1].value = 0; //Inteligencia
+        mimic.stats.values[2].value = 0; //Carisma
+        mimic.stats.values[3].value = 20; //Vida
+        mimic.stats.values[4].value = 12; //Armadura
+
+        ////Mimic
         slime.stats.values[0].value = 5; //Fuerza
         slime.stats.values[1].value = 0; //Inteligencia
         slime.stats.values[2].value = 0; //Carisma
@@ -67,12 +74,6 @@ public class Save_Stats : MonoBehaviour
         //playerPersonaje.Inventario.Add(playerPersonaje.daga);
         //playerPersonaje.Inventario.Add(playerPersonaje.espada);
     }
-    void Start()
-    {
-
-        //Llegar a los valores: protagonista es parameters
-            //protagonista.stats.Get(PersonajesStats.Carisma);
-    }
 
 
     public void guardar_stats( Parameters player, int damage)
@@ -84,6 +85,24 @@ public class Save_Stats : MonoBehaviour
         //    vida_protaCambio = player.stats.Get(PersonajesStats.Constitucion);
         //}
 
+    }
+
+    public void restaurarVidaEnemigo()
+    {
+        ////Slime
+        mimic.stats.values[3].value = 20; //Vida
+
+        ////Mimic
+        slime.stats.values[3].value = 30; //Vida
+
+        ////Cabellero
+        caballero.stats.values[3].value = 16; //Vida
+
+        ////Libro
+        libro.stats.values[3].value = 40; //Vida
+
+        ////Yusseif
+        yusseif.stats.values[3].value = 60; //Vida
     }
 
     public void alguien_eliminado(Parameters player)

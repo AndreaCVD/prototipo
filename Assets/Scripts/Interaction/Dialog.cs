@@ -30,6 +30,7 @@ public class Dialog : MonoBehaviour
         //Llamar a funcion
             //BindExternalFunction(string funcName, Action function);
         _dialogBehaviour.BindExternalFunction("Destroy", DestroyObj);
+        _dialogBehaviour.BindExternalFunction("Combat", Combate);
         _dialogBehaviour.BindExternalFunction("EstadoEtkis", estadoEtkis);
         _dialogBehaviour.BindExternalFunction("EstadoNim", estadoNim);
         _dialogBehaviour.BindExternalFunction("RecuperarVida", vidaParcial);
@@ -42,6 +43,10 @@ public class Dialog : MonoBehaviour
     public void DestroyObj()
     {
         Destroy(obj);
+    }
+    public void Combate()
+    {
+        Debug.Log("Inicia combate por dialogo");
     }
     public void SetBool(string nombreVal, bool val)
     {

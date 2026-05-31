@@ -18,20 +18,24 @@ MonoBehaviour:
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 327033398030336
+  - m_Id: 1273508990873600
     m_Localized: "\xA1\xA1HEY TU!! AYUDAME A SALIR DE AQUI R\xC1PIDO"
     m_Metadata:
       m_Items: []
-  - m_Id: 327033431584768
+  - m_Id: 1273509007650816
     m_Localized: ???
     m_Metadata:
       m_Items: []
-  - m_Id: 327033431584769
+  - m_Id: 1273509007650817
     m_Localized: Gracias...
     m_Metadata:
       m_Items: []
-  - m_Id: 327033431584770
+  - m_Id: 1273509007650818
     m_Localized: Etkis
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1273509007650819
+    m_Localized: "\xA1\xA1No me dejes aqu\xED por favor!!"
     m_Metadata:
       m_Items: []
   references:

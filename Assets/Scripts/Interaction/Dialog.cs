@@ -31,6 +31,7 @@ public class Dialog : MonoBehaviour
             //BindExternalFunction(string funcName, Action function);
         _dialogBehaviour.BindExternalFunction("Destroy", DestroyObj);
         _dialogBehaviour.BindExternalFunction("EstadoEtkis", estadoEtkis);
+        _dialogBehaviour.BindExternalFunction("EstadoNim", estadoNim);
         _dialogBehaviour.BindExternalFunction("RecuperarVida", vidaParcial);
         _dialogBehaviour.BindExternalFunction("FullVida", fullVida);
         _dialogBehaviour.BindExternalFunction("randLoot", lootRandom);
@@ -59,6 +60,19 @@ public class Dialog : MonoBehaviour
         {
             Debug.Log("Etkis no es libre");
             _dialogBehaviour.SetVariableValue("b", 0);
+        }
+    }
+    public void estadoNim()
+    {
+        if (lista.Nivel_2[2].acabado)
+        {
+            Debug.Log("Nim es libre");
+            _dialogBehaviour.SetVariableValue("nim_libre_nivel2", 1);
+        }
+        else
+        {
+            Debug.Log("Nim no es libre");
+            _dialogBehaviour.SetVariableValue("nim_libre_nivel2", 0);
         }
     }
     public void vidaParcial()

@@ -75,6 +75,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-en-US
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ad0c7b89e5f1d034693b74aa91bb8729
+    m_Address: Nimrodel_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c540fce034e36b2448896c19d84502b9
     m_Address: PuertaMaestra_en-US
     m_ReadOnly: 1

@@ -75,6 +75,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-es-ES
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c73489b5fdb94654799d1c9e041101a1
+    m_Address: Nimrodel_es-ES
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es-ES
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: daf0e0ed2001d404da7207f5b4078afc
     m_Address: Etkis_es-ES
     m_ReadOnly: 1

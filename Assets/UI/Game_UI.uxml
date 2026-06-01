@@ -24,15 +24,22 @@
             </ui:VisualElement>
         </ui:VisualElement>
         <ui:VisualElement name="play-area" style="flex-grow: 1; flex-direction: column-reverse;">
-            <ui:VisualElement name="dialog-box" style="flex-grow: 1;">
-                <ui:VisualElement name="sentence-panel" style="flex-grow: 1;">
+            <ui:VisualElement name="dialog-box" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); width: auto; height: 230px;">
+                <ui:VisualElement name="sentence-panel" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); display: flex;">
+                    <ui:VisualElement name="character-image" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/PreFabs/UI/png%20vacio.png?fileID=21300000&amp;guid=d4d3a38f353de664aa8174df9aee9edc&amp;type=3#png vacio&quot;); background-color: rgba(0, 0, 0, 0); top: auto; left: auto; right: 10px; bottom: 0; width: 240px; height: 240px; background-size: cover;" />
                     <ui:Label text="name" name="character-name" />
-                    <ui:Label text="Label" name="dialogue-text" />
-                    <ui:VisualElement name="character-image" style="flex-grow: 1;" />
+                    <ui:Label text="Label" name="dialogue-text" style="width: 60%; align-self: center; justify-content: center; align-content: auto; background-color: rgba(0, 0, 0, 0);" />
+                </ui:VisualElement>
+                <ui:VisualElement name="answer-panel" style="flex-grow: 1; display: flex;">
+                    <ui:VisualElement name="buttons-container" style="flex-grow: 1;" />
                 </ui:VisualElement>
             </ui:VisualElement>
-            <ui:VisualElement name="answer-panel" style="flex-grow: 1;">
-                <ui:VisualElement name="buttons" style="flex-grow: 1;" />
+            <ui:VisualElement name="dialog-box" style="flex-grow: 1; display: none;">
+                <ui:VisualElement name="sentence-panel" style="flex-grow: 1;">
+                    <ui:VisualElement name="character-image" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/PreFabs/UI/png%20vacio.png?fileID=21300000&amp;guid=d4d3a38f353de664aa8174df9aee9edc&amp;type=3#png vacio&quot;);" />
+                    <ui:Label text="name" name="character-name" />
+                    <ui:Label text="Label" name="dialogue-text" />
+                </ui:VisualElement>
             </ui:VisualElement>
         </ui:VisualElement>
         <ui:VisualElement name="hud-bottom" class="hud-bottom">

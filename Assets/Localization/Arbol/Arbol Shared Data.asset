@@ -15,51 +15,51 @@ MonoBehaviour:
   m_TableCollectionName: Arbol
   m_TableCollectionNameGuidString: fe800632eaa52c44aa464f7154565792
   m_Entries:
-  - m_Id: 131909065961472
+  - m_Id: 945060387188736
     m_Key: SentenceText_84659038-5208-4f05-9627-fa7e5d81d5db
     m_Metadata:
       m_Items: []
-  - m_Id: 131909179207680
+  - m_Id: 945060466880512
     m_Key: SentenceName_500b0ae1-3809-464f-ab3b-715e19b4b52d
     m_Metadata:
       m_Items: []
-  - m_Id: 131909187596288
+  - m_Id: 945060471074816
     m_Key: Answer_00831d57-9b71-45e8-862e-faf45ee27c4d
     m_Metadata:
       m_Items: []
-  - m_Id: 131909187596289
+  - m_Id: 945060471074817
     m_Key: Answer_13e680a5-3af8-4672-9975-36dc121849f9
     m_Metadata:
       m_Items: []
-  - m_Id: 131909187596290
+  - m_Id: 945060471074818
     m_Key: Answer_75bfd1b6-e4da-4fed-988b-201a3471bd4f
     m_Metadata:
       m_Items: []
-  - m_Id: 131909187596291
+  - m_Id: 945060471074819
     m_Key: Answer_846fbebf-36a3-4ea2-86a6-2b824d035672
     m_Metadata:
       m_Items: []
-  - m_Id: 131909187596292
+  - m_Id: 945060471074820
     m_Key: SentenceText_7554a099-3564-413e-8913-5b47ca6484ee
     m_Metadata:
       m_Items: []
-  - m_Id: 131909187596293
+  - m_Id: 945060471074821
     m_Key: SentenceName_d11fb0ec-ec7f-4ad3-976d-b3631e311e31
     m_Metadata:
       m_Items: []
-  - m_Id: 131909187596294
+  - m_Id: 945060471074822
     m_Key: SentenceText_65ad6e38-07d4-4009-8fcf-c6e80ee16688
     m_Metadata:
       m_Items: []
-  - m_Id: 131909187596295
+  - m_Id: 945060471074823
     m_Key: SentenceName_8beae72b-b5d9-4d62-b3d3-03569c8873fe
     m_Metadata:
       m_Items: []
-  - m_Id: 131909191790592
+  - m_Id: 945060471074824
     m_Key: 
     m_Metadata:
       m_Items: []
-  - m_Id: 131909191790593
+  - m_Id: 945060471074825
     m_Key: SentenceText_ca37c217-024c-4dc0-9bb5-8e85036ee872
     m_Metadata:
       m_Items: []

@@ -18,51 +18,51 @@ MonoBehaviour:
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 131909065961472
+  - m_Id: 945060387188736
     m_Localized: Deberia practicar
     m_Metadata:
       m_Items: []
-  - m_Id: 131909179207680
+  - m_Id: 945060466880512
     m_Localized: Prota
     m_Metadata:
       m_Items: []
-  - m_Id: 131909187596288
+  - m_Id: 945060471074816
     m_Localized: Fuerza
     m_Metadata:
       m_Items: []
-  - m_Id: 131909187596289
+  - m_Id: 945060471074817
     m_Localized: Inteligencia
     m_Metadata:
       m_Items: []
-  - m_Id: 131909187596290
+  - m_Id: 945060471074818
     m_Localized: Carisma
     m_Metadata:
       m_Items: []
-  - m_Id: 131909187596291
+  - m_Id: 945060471074819
     m_Localized: Huir
     m_Metadata:
       m_Items: []
-  - m_Id: 131909187596292
+  - m_Id: 945060471074820
     m_Localized: El ataque no ha hecho nada...
     m_Metadata:
       m_Items: []
-  - m_Id: 131909187596293
+  - m_Id: 945060471074821
     m_Localized: 
     m_Metadata:
       m_Items: []
-  - m_Id: 131909187596294
+  - m_Id: 945060471074822
     m_Localized: "\xA1EY! Cuidado"
     m_Metadata:
       m_Items: []
-  - m_Id: 131909187596295
+  - m_Id: 945060471074823
     m_Localized: Arbol
     m_Metadata:
       m_Items: []
-  - m_Id: 131909191790592
+  - m_Id: 945060471074824
     m_Localized: Un arbol te ha intimidado...
     m_Metadata:
       m_Items: []
-  - m_Id: 131909191790593
+  - m_Id: 945060471074825
     m_Localized: El arbol muestra interes en ti
     m_Metadata:
       m_Items: []

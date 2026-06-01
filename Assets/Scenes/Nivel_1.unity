@@ -833,13 +833,6 @@ MonoBehaviour:
   iconoPocionVida: {fileID: 0}
   iconoDaga: {fileID: 0}
   iconoEspada: {fileID: 0}
-  llave_text: {fileID: 0}
-  llaveMaestra_text: {fileID: 0}
-  daga_text: {fileID: 0}
-  espada_text: {fileID: 0}
-  pocionVida_text: {fileID: 0}
-  canvas_open: 0
-  canvas_inventario: {fileID: 0}
 --- !u!114 &495269048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1090,7 +1083,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7663525706672394598, guid: 459b944f305510f4c837797037447397, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8402151408438500115, guid: 459b944f305510f4c837797037447397, type: 3}
       propertyPath: m_Pivot.x

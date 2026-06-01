@@ -80,6 +80,11 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ee6d761b3a9f1b347a7161315d9eb079
+    m_Address: Assets/Localization/Puzzle Tutorial/Puzzle Tutorial Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f30f0fc7543156d42932b581e60f3b90
     m_Address: Assets/Localization/PuertaMaestra/PuertaMaestra Shared Data.asset
     m_ReadOnly: 1

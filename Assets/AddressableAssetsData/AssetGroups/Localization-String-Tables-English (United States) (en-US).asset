@@ -45,6 +45,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-en-US
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 596b545dafb1d1f40a3c2cec49904d7f
+    m_Address: Puzzle Tutorial_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 669e75a086264bf48ad70f38cbbd4cec
     m_Address: Etkis_en-US
     m_ReadOnly: 1

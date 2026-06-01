@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Puzzle Tutorial Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Puzzle Tutorial
+  m_TableCollectionNameGuidString: ee6d761b3a9f1b347a7161315d9eb079
+  m_Entries:
+  - m_Id: 1678523035648
+    m_Key: SentenceText_0bf93236-b393-4211-9c73-887a72bab0cc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1678523035649
+    m_Key: SentenceName_c99a10a8-9909-429b-a785-fe381317f4b2
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 9006459327453593600
+  references:
+    version: 2
+    RefIds:
+    - rid: 9006459327453593600
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1780353592906

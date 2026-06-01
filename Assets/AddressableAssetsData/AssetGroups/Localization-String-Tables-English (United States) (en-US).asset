@@ -75,6 +75,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-en-US
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a55a5c8499807ac40a0b9b04f1b37988
+    m_Address: Viejo Tunica_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ad0c7b89e5f1d034693b74aa91bb8729
     m_Address: Nimrodel_en-US
     m_ReadOnly: 1

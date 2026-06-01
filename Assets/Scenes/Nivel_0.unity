@@ -984,13 +984,6 @@ MonoBehaviour:
   iconoPocionVida: {fileID: 0}
   iconoDaga: {fileID: 0}
   iconoEspada: {fileID: 0}
-  llave_text: {fileID: 0}
-  llaveMaestra_text: {fileID: 0}
-  daga_text: {fileID: 0}
-  espada_text: {fileID: 0}
-  pocionVida_text: {fileID: 0}
-  canvas_open: 0
-  canvas_inventario: {fileID: 0}
 --- !u!114 &495269048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1253,6 +1246,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c897a4dddd7061f4292b1cb900937df4, type: 3}
+--- !u!114 &672386819 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6009218590695330023, guid: e1e382eeb87f205439904cd395ba77a9, type: 3}
+  m_PrefabInstance: {fileID: 1862948798}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d741a5bf2218ae4eae2eac067c732f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &685384195
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1267,7 +1271,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7663525706672394598, guid: 459b944f305510f4c837797037447397, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8402151408438500115, guid: 459b944f305510f4c837797037447397, type: 3}
       propertyPath: m_Pivot.x
@@ -2212,6 +2216,10 @@ PrefabInstance:
       propertyPath: prota
       value: 
       objectReference: {fileID: 11400000, guid: f0233a249cd1f2b43a3d8f04e1ad2bf2, type: 2}
+    - target: {fileID: 3241330531271212881, guid: 3848a681804d73d4fb34add03acbdab0, type: 3}
+      propertyPath: escenaState
+      value: 
+      objectReference: {fileID: 672386819}
     - target: {fileID: 3726092340330504558, guid: 3848a681804d73d4fb34add03acbdab0, type: 3}
       propertyPath: m_Name
       value: --DialogManager--
@@ -2276,6 +2284,9 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3726092340330504558, guid: 3848a681804d73d4fb34add03acbdab0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1470492425}
     - targetCorrespondingSourceObject: {fileID: 2981868588886401191, guid: 3848a681804d73d4fb34add03acbdab0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1430939758}
@@ -2464,6 +2475,25 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dfde021bd3e93984490b17c715c82b27, type: 3}
+--- !u!1 &1470492422 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3726092340330504558, guid: 3848a681804d73d4fb34add03acbdab0, type: 3}
+  m_PrefabInstance: {fileID: 1369073472}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1470492425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1470492422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1f4d6f34d4805c4184238335ec09872, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  diceText: {fileID: 0}
+  imagenesDados: []
 --- !u!4 &1517391698 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5552926222123737107, guid: c946b909ab67d274089332839512dcd7, type: 3}

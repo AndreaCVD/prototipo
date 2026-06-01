@@ -42,7 +42,7 @@ public class ValueBlock
 
     public int Get(PersonajesStats statToGet)
     {
-        int a = (int)statToGet;
+        int a = (int)statToGet; 
         return values[a].value;
     }
 }

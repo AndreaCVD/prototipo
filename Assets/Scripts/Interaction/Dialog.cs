@@ -6,10 +6,13 @@ using cherrydev;
 
 public class Dialog : MonoBehaviour
 {
+    Dice dados;
     [Header("LISTA PUZZLE")]
     [SerializeField] Puzzle lista;
     [Header("PROTAGONISTA")]
     [SerializeField] Parameters prota;
+    //[Header("Parar movimiento")]
+    [SerializeField] InputHandler escenaState;
     [Header("EL PREFAB")]
     [SerializeField] private cherrydev.DialogBehaviour _dialogBehaviour;
     
@@ -22,23 +25,73 @@ public class Dialog : MonoBehaviour
 
     ////Para que el dialogo se active necesitamos esto:
     //    _dialogBehaviour.StartDialog(dialogGraph);
-
+    public void Awake()
+    {
+        //Setear todos las variables cuando se abre el juego por primera vez
+    }
+    public void Start()
+    {
+        dados = this.GetComponent<Dice>();
+    }
     public void EmpezarDialogo(DialogNodeGraph dialogo, GameObject obj)
     {
         //this.obj = obj;
         //Debug.Log(this.obj);
         //Llamar a funcion
-            //BindExternalFunction(string funcName, Action function);
+        //BindExternalFunction(string funcName, Action function);
+
+        //Dados
+        _dialogBehaviour.BindExternalFunction("dadoFuerza", dadoFuerza);
+        _dialogBehaviour.BindExternalFunction("dadoIntel", dadoIntel);
+        _dialogBehaviour.BindExternalFunction("dadoCarisma", dadoCarisma);
+
+        //Funciones pa todos
+        _dialogBehaviour.BindExternalFunction("ContinuarMov", continuarMov);
+        _dialogBehaviour.BindExternalFunction("PararMov", pararMov);
         _dialogBehaviour.BindExternalFunction("Destroy", DestroyObj);
         _dialogBehaviour.BindExternalFunction("Combat", Combate);
+
+        //Personajes
         _dialogBehaviour.BindExternalFunction("EstadoEtkis", estadoEtkis);
         _dialogBehaviour.BindExternalFunction("EstadoNim", estadoNim);
+
+        //Prota
         _dialogBehaviour.BindExternalFunction("RecuperarVida", vidaParcial);
         _dialogBehaviour.BindExternalFunction("FullVida", fullVida);
         _dialogBehaviour.BindExternalFunction("randLoot", lootRandom);
         //Le enviamos el dialogo que tiene que hacer --> ESTE SIEMPRE ÚLTIMO
         _dialogBehaviour.StartDialog(dialogo);
 
+    }
+    //Dados
+    public void dadoFuerza()
+    {
+        int aux = dados.RollDice(20);
+        int tirada = prota.stats.Get(PersonajesStats.Fuerza) + aux;
+        _dialogBehaviour.SetVariableValue("tiradaFuerza", tirada);
+    }
+    public void dadoIntel()
+    {
+        int aux = dados.RollDice(20);
+        int tirada = prota.stats.Get(PersonajesStats.Inteligencia) + aux;
+        _dialogBehaviour.SetVariableValue("tiradaIntel", tirada);
+
+    }
+    public void dadoCarisma()
+    {
+        int aux = dados.RollDice(20);
+        int tirada = prota.stats.Get(PersonajesStats.Carisma) + aux;
+        _dialogBehaviour.SetVariableValue("tiradaCarisma", tirada);
+
+    }
+    //Moviment
+    public void continuarMov()
+    {
+        escenaState.ScenePause(false); //false, se mueve
+    }
+    public void pararMov()
+    {
+        escenaState.ScenePause(true); //true, no se mueve
     }
     public void DestroyObj()
     {
@@ -97,7 +150,7 @@ public class Dialog : MonoBehaviour
     {
         prota.stats.values[3].value = vidaMax;
     }
-
+    //Cofre
     public void lootRandom()
     {
         int a = Random.Range(1, objMax);

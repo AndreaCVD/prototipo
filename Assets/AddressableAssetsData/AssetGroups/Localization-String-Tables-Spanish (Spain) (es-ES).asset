@@ -45,6 +45,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-es-ES
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 47f73c4a26d56ac49aee43f9bb4cfebf
+    m_Address: Viejo Tunica_es-ES
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es-ES
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4891109a4b7150f4e8471e9eb2dad0a7
     m_Address: Dialogo Prueva_es-ES
     m_ReadOnly: 1

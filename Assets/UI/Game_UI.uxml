@@ -23,7 +23,18 @@
                 </ui:VisualElement>
             </ui:VisualElement>
         </ui:VisualElement>
-        <ui:VisualElement name="play-area" style="flex-grow: 1;" />
+        <ui:VisualElement name="play-area" style="flex-grow: 1; flex-direction: column-reverse;">
+            <ui:VisualElement name="dialog-box" style="flex-grow: 1;">
+                <ui:VisualElement name="sentence-panel" style="flex-grow: 1;">
+                    <ui:Label text="name" name="character-name" />
+                    <ui:Label text="Label" name="dialogue-text" />
+                    <ui:VisualElement name="character-image" style="flex-grow: 1;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="answer-panel" style="flex-grow: 1;">
+                <ui:VisualElement name="buttons" style="flex-grow: 1;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
         <ui:VisualElement name="hud-bottom" class="hud-bottom">
             <ui:VisualElement name="health-container" class="health-container">
                 <ui:VisualElement name="heart-icon" class="heart">

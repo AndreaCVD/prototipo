@@ -173,6 +173,7 @@ public class Inventario : MonoBehaviour
                 break;
 
         }
+        //Abrir cofre por animacion
         Destroy(cofre);
         Debug.Log("Cofre destruido");
     }

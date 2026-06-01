@@ -22,7 +22,7 @@ public class btn_events : MonoBehaviour
             btn.RegisterCallback<ClickEvent>(evt => {
                 if (btn.name == "start_btn")
                 {
-                    ChangeSceneUI("first_floor");
+                    ChangeSceneUI("Nivel_0");
                 }
                 else if(btn.name == "options_btn")
                 {

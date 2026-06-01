@@ -15,8 +15,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 2119.1948
-    y: -201.19994
+    x: 2395.9917
+    y: -103.599976
     width: 190
     height: 135
   IsDragging: 1
@@ -47,8 +47,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 782.4003
-    y: -3.5999603
+    x: 1059.1997
+    y: 94.000015
     width: 190
     height: 135
   IsDragging: 1
@@ -80,8 +80,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1235.9973
-    y: -20.399979
+    x: 1512.7964
+    y: 77.2
     width: 190
     height: 155
   IsDragging: 1
@@ -115,8 +115,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1496
-    y: 93.19997
+    x: 1772.7988
+    y: 190.79993
     width: 190
     height: 135
   IsDragging: 1
@@ -148,8 +148,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 2121.5952
-    y: -66.80003
+    x: 2398.392
+    y: 30.799942
     width: 190
     height: 135
   IsDragging: 1
@@ -180,8 +180,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -164.0032
-    y: 174.80013
+    x: 112.79642
+    y: 272.40012
     width: 190
     height: 80
   IsDragging: 1
@@ -205,8 +205,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 126.39719
-    y: -71.59996
+    x: 403.19623
+    y: 26.000015
     width: 210
     height: 155
   IsDragging: 1
@@ -270,8 +270,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1485.5977
-    y: 11.600174
+    x: 1762.3965
+    y: 109.20015
     width: 190
     height: 80
   IsDragging: 1
@@ -296,12 +296,12 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 425.59906
-    y: 190.00015
+    x: 687.19867
+    y: 383.60013
     width: 190
     height: 135
   IsDragging: 1
-  IsSelected: 0
+  IsSelected: 1
   _sentence:
     CharacterName: Yusseif
     Text: "\xBFQue pasa? \xBFTienes miedo?"
@@ -328,8 +328,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 79.19647
-    y: 129.20003
+    x: 355.9959
+    y: 226.79999
     width: 240
     height: 160
   IsDragging: 1
@@ -359,8 +359,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1476.7976
-    y: -141.19994
+    x: 1753.5964
+    y: -43.59996
     width: 190
     height: 135
   IsDragging: 1
@@ -391,8 +391,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1761.5977
-    y: -108.40001
+    x: 2038.397
+    y: -10.800034
     width: 240
     height: 160
   IsDragging: 1
@@ -422,8 +422,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 575.2016
-    y: -2.7999115
+    x: 852.00104
+    y: 94.800064
     width: 190
     height: 135
   IsDragging: 1
@@ -455,8 +455,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1870.3958
-    y: 158.00014
+    x: 2147.1943
+    y: 255.60013
     width: 190
     height: 80
   IsDragging: 1
@@ -484,8 +484,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 358.3992
-    y: -0.39988708
+    x: 635.19885
+    y: 97.20009
     width: 190
     height: 135
   IsDragging: 1
@@ -516,8 +516,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 999.1978
-    y: -2.7999725
+    x: 1275.9966
+    y: 94.8
     width: 190
     height: 135
   IsDragging: 1

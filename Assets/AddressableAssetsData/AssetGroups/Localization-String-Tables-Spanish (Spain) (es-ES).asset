@@ -87,6 +87,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-es-ES
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: afc59f4a4dd87fc4e9e622b02250bb19
+    m_Address: Viejo Playa_es-ES
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es-ES
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c73489b5fdb94654799d1c9e041101a1
     m_Address: Nimrodel_es-ES
     m_ReadOnly: 1

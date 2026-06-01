@@ -20,6 +20,11 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 13e892fd12643e14c8c6f8a790ceda91
+    m_Address: Assets/Localization/Lerendur/Lerendur Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 1b22461cddf1c434ba221e09e37c647b
     m_Address: Assets/Localization/Nim/Nim Shared Data.asset
     m_ReadOnly: 1

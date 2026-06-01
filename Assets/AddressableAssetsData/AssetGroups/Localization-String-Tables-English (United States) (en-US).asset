@@ -87,6 +87,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-en-US
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b7efd19dc95750e4a970529bf2062884
+    m_Address: Lerendur_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c540fce034e36b2448896c19d84502b9
     m_Address: PuertaMaestra_en-US
     m_ReadOnly: 1

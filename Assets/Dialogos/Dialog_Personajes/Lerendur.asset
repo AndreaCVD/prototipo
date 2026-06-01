@@ -1,5 +1,40 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8319330092286238503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1717f3c6dba9fa40844ddacac301510, type: 3}
+  m_Name: Answer Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 360.79993
+    y: 120.400024
+    width: 190
+    height: 155
+  IsDragging: 1
+  IsSelected: 0
+  Answers:
+  - "Bien ahora que est\xE1s aqu\xED"
+  - Normal
+  - (Quedarse quieto)
+  AnswerKeys:
+  - Answer_83bf95a4-446d-4f04-a22f-53a99714f377
+  - Answer_4258a36f-0a4e-4b70-a21a-13e83a59eba9
+  - Answer_7596a4ad-6f20-4147-8a59-397621e79354
+  ParentNodes:
+  - {fileID: 3231145681667128611}
+  ChildNodes:
+  - {fileID: 8578341496193681062}
+  - {fileID: 570273466155666702}
+  - {fileID: 2102689393997127125}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12,10 +47,143 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33f741ea10ebcf842a91c9b871dd032a, type: 3}
   m_Name: Lerendur
   m_EditorClassIdentifier: 
-  NodesList: []
+  NodesList:
+  - {fileID: 3231145681667128611}
+  - {fileID: -8319330092286238503}
+  - {fileID: 8578341496193681062}
+  - {fileID: 570273466155666702}
+  - {fileID: 2102689393997127125}
   VariablesConfig: {fileID: 0}
-  _localizationTableName: 
+  _localizationTableName: Lerendur
   _characterNamesLocalizationName: 
   NodeToDrawLineFrom: {fileID: 0}
   LinePosition: {x: 0, y: 0}
-  IsLocalizationSetUp: 0
+  IsLocalizationSetUp: 1
+--- !u!114 &570273466155666702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 592.7999
+    y: 154.00003
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Lerendur
+    Text: "Si quieres hablar estar\xE9 aqu\xED, no creo que entre en una mazmorra
+      en un tiempo"
+    CharacterSprite: {fileID: 0}
+  ParentNodes:
+  - {fileID: -8319330092286238503}
+  ChildNode: {fileID: 0}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: SentenceName_11671a8a-0876-4bfa-ac30-2197679ce6f8
+  SentenceTextKey: SentenceText_1643fbef-d672-48ae-b383-75c7e13182fc
+--- !u!114 &2102689393997127125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 587.99994
+    y: 286.80002
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 1
+  _sentence:
+    CharacterName: Lerendur
+    Text: ...(Lerendur se ha incomodado)
+    CharacterSprite: {fileID: 0}
+  ParentNodes:
+  - {fileID: -8319330092286238503}
+  ChildNode: {fileID: 0}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: SentenceName_11671a8a-0876-4bfa-ac30-2197679ce6f8
+  SentenceTextKey: SentenceText_34e5c004-faef-4d57-a4c4-120922af9d13
+--- !u!114 &3231145681667128611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 123.20001
+    y: 134.80002
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Lerendur
+    Text: "Hola, \xBFcomo est\xE1s?"
+    CharacterSprite: {fileID: 0}
+  ParentNodes: []
+  ChildNode: {fileID: -8319330092286238503}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: SentenceName_11671a8a-0876-4bfa-ac30-2197679ce6f8
+  SentenceTextKey: SentenceText_42e5e143-e512-47fe-954e-15fdd7964092
+--- !u!114 &8578341496193681062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 591.9999
+    y: 22.800018
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Lerendur
+    Text: jajaja
+    CharacterSprite: {fileID: 0}
+  ParentNodes:
+  - {fileID: -8319330092286238503}
+  ChildNode: {fileID: 0}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: SentenceName_11671a8a-0876-4bfa-ac30-2197679ce6f8
+  SentenceTextKey: SentenceText_e9fe430f-d056-4259-963c-16a2dce80595

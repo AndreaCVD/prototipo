@@ -16,6 +16,7 @@ public class Inventario : MonoBehaviour
     //public List<int[]> x = new List<int[]>();
 
 
+
     private void Start()
     {
         //prota.Inventario.Clear();
@@ -59,8 +60,18 @@ public class Inventario : MonoBehaviour
             prota.Inventario.Llave.Add(other.gameObject.name);
             Destroy(other.gameObject);
         }
-    }
 
+    }
+    public void restarVida()
+    {
+
+         Debug.Log("lava");
+        if (prota.stats.values[3].value >= 0)
+        {
+            prota.stats.values[3].value--;
+        }
+
+    }
     public void CofreKey(GameObject cofre, cherrydev.DialogNodeGraph dialogo_obj)
     {
         bool keyFound = false;

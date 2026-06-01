@@ -18,79 +18,76 @@ MonoBehaviour:
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 32616313319424
+  - m_Id: 35444155019264
     m_Localized: "Ah, tu eres el del rescate, \xBFno es as\xED?"
     m_Metadata:
       m_Items: []
-  - m_Id: 32616338485248
+  - m_Id: 35444155019265
     m_Localized: ???
     m_Metadata:
       m_Items: []
-  - m_Id: 32616338485249
+  - m_Id: 35444155019266
     m_Localized: "\xBFQue pasa? \xBFTienes miedo?"
     m_Metadata:
       m_Items: []
-  - m_Id: 32616338485250
+  - m_Id: 35444155019267
     m_Localized: Yusseif
     m_Metadata:
       m_Items: []
-  - m_Id: 32616338485251
+  - m_Id: 35444155019268
     m_Localized: "Este es el grupo de tres aventureros que se qued\xF3 atrapado buscando
       algo. Una banda de in\xFAtiles, vaya. "
     m_Metadata:
       m_Items: []
-  - m_Id: 32616338485252
+  - m_Id: 35444155019269
     m_Localized: ???
     m_Metadata:
       m_Items: []
-  - m_Id: 32616338485253
+  - m_Id: 35444155019270
     m_Localized: "Y tu... Porfin te has decidido a venir, eh, que ya tardabas. F\xEDjate
       que hasta me iba a poner yo y todo. "
     m_Metadata:
       m_Items: []
-  - m_Id: 32616338485254
+  - m_Id: 35444155019271
     m_Localized: "Pero como ves, yo estoy muy mayor como para rescatar a nadie, as\xED
       que tendr\xE1s que hacerlo tu."
     m_Metadata:
       m_Items: []
-  - m_Id: 32616338485255
+  - m_Id: 35444155019272
     m_Localized: (Observar detenidamente)
     m_Metadata:
       m_Items: []
-  - m_Id: 32616338485256
+  - m_Id: 35444155019273
     m_Localized: "\xBFSeria tan amable de obsequiarme con su ayuda?"
     m_Metadata:
       m_Items: []
-  - m_Id: 32616338485257
+  - m_Id: 35444155019274
     m_Localized: (Quedarse callado)
     m_Metadata:
       m_Items: []
-  - m_Id: 32616338485258
+  - m_Id: 35444155019275
     m_Localized: "\xBF...qu\xE9 le pasa?"
     m_Metadata:
       m_Items: []
-  - m_Id: 32616338485259
+  - m_Id: 35444155019276
     m_Localized: Prota
     m_Metadata:
       m_Items: []
-  - m_Id: 32616338485260
-    m_Localized: superas carisma
-    m_Metadata:
-      m_Items: []
-  - m_Id: 32616338485261
-    m_Localized: 
-    m_Metadata:
-      m_Items: []
-  - m_Id: 32616338485262
-    m_Localized: no superas carisma
-    m_Metadata:
-      m_Items: []
-  - m_Id: 32616338485263
+  - m_Id: 35444155019277
     m_Localized: superas intel
     m_Metadata:
       m_Items: []
-  - m_Id: 32616338485264
+  - m_Id: 35444155019278
+    m_Localized: 
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35444155019279
     m_Localized: no superas intel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 35444155019280
+    m_Localized: "\xBFA qu\xE9 esperas? Va, a trabajar. Yo me quedar\xE9 aqu\xED
+      sentado, que me duelen los pies."
     m_Metadata:
       m_Items: []
   references:

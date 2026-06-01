@@ -508,6 +508,10 @@ PrefabInstance:
       propertyPath: grup
       value: 
       objectReference: {fileID: 1929930509}
+    - target: {fileID: 3946282649668958653, guid: c98c5db09364c72448207e384aad76a1, type: 3}
+      propertyPath: dialogOnEnter
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4161892772836474422, guid: c98c5db09364c72448207e384aad76a1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.32

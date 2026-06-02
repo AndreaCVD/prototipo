@@ -15,11 +15,11 @@ MonoBehaviour:
   m_TableCollectionName: Viejo Playa
   m_TableCollectionNameGuidString: 745a3c678fcc0bd4684fd7e68280f505
   m_Entries:
-  - m_Id: 5333871554560
+  - m_Id: 300640116699136
     m_Key: SentenceText_97fa757e-2e95-4150-9d9a-47651640b597
     m_Metadata:
       m_Items: []
-  - m_Id: 5333871554561
+  - m_Id: 300640158642176
     m_Key: SentenceName_2296ed98-516f-41a5-9e1c-048605448b3c
     m_Metadata:
       m_Items: []

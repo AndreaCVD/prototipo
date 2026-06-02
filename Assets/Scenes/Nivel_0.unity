@@ -2394,6 +2394,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1543364198}
   - component: {fileID: 1543364197}
+  - component: {fileID: 1543364199}
   m_Layer: 0
   m_Name: Arbol
   m_TagString: Interact_Scene
@@ -2423,13 +2424,34 @@ Transform:
   m_GameObject: {fileID: 1543364196}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 5.39, y: 0.11, z: 8.52}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5328278314455604310}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1543364199
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1543364196}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 7.4163485, z: 1}
+  m_Center: {x: 0, y: 3.2081738, z: 0}
 --- !u!1001 &1757346912
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3162,7 +3184,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1833810152192036645, guid: 9100bc75706fe4949a2c04d71f10e0ba, type: 3}
+  - {fileID: 2100000, guid: d49aca012b16676458a659e946184c05, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3207,7 +3229,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1833810152192036645, guid: 9100bc75706fe4949a2c04d71f10e0ba, type: 3}
+  - {fileID: 2100000, guid: 62fef795697a4e641a43acf2d239437a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3559,6 +3581,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tienda Etkis
       objectReference: {fileID: 0}
+    - target: {fileID: 5816118659043015534, guid: 5c79d546b7316ef46949f82b1b50dfb6, type: 3}
+      propertyPath: m_Size.x
+      value: 2.0922785
+      objectReference: {fileID: 0}
+    - target: {fileID: 5816118659043015534, guid: 5c79d546b7316ef46949f82b1b50dfb6, type: 3}
+      propertyPath: m_Size.z
+      value: 1.5649704
+      objectReference: {fileID: 0}
+    - target: {fileID: 5816118659043015534, guid: 5c79d546b7316ef46949f82b1b50dfb6, type: 3}
+      propertyPath: m_Center.x
+      value: 0.05649686
+      objectReference: {fileID: 0}
+    - target: {fileID: 5816118659043015534, guid: 5c79d546b7316ef46949f82b1b50dfb6, type: 3}
+      propertyPath: m_Center.z
+      value: -0.056497127
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3776,6 +3814,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 159974027835816755, guid: e5229923ae0643d4391e988c8ec51f14, type: 3}
+      propertyPath: m_Size.x
+      value: 2.3935957
+      objectReference: {fileID: 0}
+    - target: {fileID: 159974027835816755, guid: e5229923ae0643d4391e988c8ec51f14, type: 3}
+      propertyPath: m_Size.z
+      value: 1.677966
+      objectReference: {fileID: 0}
+    - target: {fileID: 159974027835816755, guid: e5229923ae0643d4391e988c8ec51f14, type: 3}
+      propertyPath: m_Center.x
+      value: 0.13182664
+      objectReference: {fileID: 0}
+    - target: {fileID: 159974027835816755, guid: e5229923ae0643d4391e988c8ec51f14, type: 3}
+      propertyPath: m_Center.z
+      value: -0.000000059604645
+      objectReference: {fileID: 0}
     - target: {fileID: 8754678865317439754, guid: e5229923ae0643d4391e988c8ec51f14, type: 3}
       propertyPath: m_Name
       value: Tienda Lerendur
@@ -3889,6 +3943,22 @@ PrefabInstance:
     - target: {fileID: 1475459728727015370, guid: 4185c72d3485a5f4b809abd1dc4642dc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2563606901059642709, guid: 4185c72d3485a5f4b809abd1dc4642dc, type: 3}
+      propertyPath: m_Size.x
+      value: 2.0922778
+      objectReference: {fileID: 0}
+    - target: {fileID: 2563606901059642709, guid: 4185c72d3485a5f4b809abd1dc4642dc, type: 3}
+      propertyPath: m_Size.z
+      value: 1.5273114
+      objectReference: {fileID: 0}
+    - target: {fileID: 2563606901059642709, guid: 4185c72d3485a5f4b809abd1dc4642dc, type: 3}
+      propertyPath: m_Center.x
+      value: 0.546139
+      objectReference: {fileID: 0}
+    - target: {fileID: 2563606901059642709, guid: 4185c72d3485a5f4b809abd1dc4642dc, type: 3}
+      propertyPath: m_Center.z
+      value: -0.000000089406974
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4134,6 +4204,22 @@ PrefabInstance:
     - target: {fileID: 416058362421274246, guid: 8b8041c12468cd148b48edef00fa5254, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7510427241499838383, guid: 8b8041c12468cd148b48edef00fa5254, type: 3}
+      propertyPath: m_Size.x
+      value: 1.71253
+      objectReference: {fileID: 0}
+    - target: {fileID: 7510427241499838383, guid: 8b8041c12468cd148b48edef00fa5254, type: 3}
+      propertyPath: m_Size.z
+      value: 1.7532928
+      objectReference: {fileID: 0}
+    - target: {fileID: 7510427241499838383, guid: 8b8041c12468cd148b48edef00fa5254, type: 3}
+      propertyPath: m_Center.x
+      value: -1.0342315
+      objectReference: {fileID: 0}
+    - target: {fileID: 7510427241499838383, guid: 8b8041c12468cd148b48edef00fa5254, type: 3}
+      propertyPath: m_Center.z
+      value: 0.2259897
       objectReference: {fileID: 0}
     - target: {fileID: 8716770995105355727, guid: 8b8041c12468cd148b48edef00fa5254, type: 3}
       propertyPath: m_Name

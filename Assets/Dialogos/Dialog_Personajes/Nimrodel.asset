@@ -15,8 +15,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 287.2
-    y: 536.4
+    x: 1186.3969
+    y: 416.3993
     width: 190
     height: 135
   IsDragging: 1
@@ -47,8 +47,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -491.19983
-    y: 418.79993
+    x: 407.9995
+    y: 298.7997
     width: 240
     height: 160
   IsDragging: 1
@@ -61,8 +61,63 @@ MonoBehaviour:
   _stringTargetValue: 
   ParentNodes:
   - {fileID: 4625890934883243529}
-  TrueChildNode: {fileID: 2906684726791145148}
+  TrueChildNode: {fileID: 4465875053746251338}
   FalseChildNode: {fileID: -1279169774656766350}
+--- !u!114 &-6552043252258347893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f4b3c64aaf434ea0df52154c1c7680, type: 3}
+  m_Name: External Function Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -10.400879
+    y: 337.1993
+    width: 190
+    height: 80
+  IsDragging: 1
+  IsSelected: 0
+  _functionName: PararMov
+  _description: 
+  ParentNodes: []
+  ChildNode: {fileID: 4625890934883243529}
+--- !u!114 &-5011386013020974302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30402c10d300488491eb82eed1db9a20, type: 3}
+  m_Name: Modify Variable Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 1999.2003
+    y: 30
+    width: 210
+    height: 155
+  IsDragging: 1
+  IsSelected: 0
+  _variableName: nimFirstTalk
+  _modifyType: 1
+  _boolValue: 0
+  _intValue: 1
+  _floatValue: 0
+  _stringValue: 
+  ParentNodes:
+  - {fileID: 4358054593532728303}
+  ChildNode: {fileID: -115284910943934760}
 --- !u!114 &-3813369594341399467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78,8 +133,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 557.60266
-    y: 890.80005
+    x: 1456.7988
+    y: 770.79956
     width: 190
     height: 135
   IsDragging: 1
@@ -110,8 +165,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -232.00003
-    y: 581.9999
+    x: 667.1997
+    y: 461.99915
     width: 210
     height: 155
   IsDragging: 1
@@ -140,8 +195,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 553.6024
-    y: 726.7998
+    x: 1452.7986
+    y: 606.7991
     width: 190
     height: 135
   IsDragging: 1
@@ -157,6 +212,69 @@ MonoBehaviour:
   _externalFunctionName: 
   CharacterNameKey: SentenceName_786741ee-59ca-4f56-a450-943daddd6124
   SentenceTextKey: 
+--- !u!114 &-757927954411997888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 1355.2002
+    y: 36.40001
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Nim
+    Text: "Yo soy Nim, estaba explorando la mazmorra con mis compa\xF1eros pero los
+      he perdido."
+    CharacterSprite: {fileID: 0}
+  ParentNodes:
+  - {fileID: 8555634608489872703}
+  ChildNode: {fileID: 4403890096492632132}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: SentenceName_786741ee-59ca-4f56-a450-943daddd6124
+  SentenceTextKey: SentenceText_86e04efc-ddb4-4142-bf86-80f09029fe7c
+--- !u!114 &-115284910943934760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f4b3c64aaf434ea0df52154c1c7680, type: 3}
+  m_Name: External Function Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 1795.998
+    y: 611.59924
+    width: 190
+    height: 80
+  IsDragging: 0
+  IsSelected: 0
+  _functionName: ContinuarMov
+  _description: 
+  ParentNodes:
+  - {fileID: 4107401635619704217}
+  - {fileID: 2006683775137913384}
+  - {fileID: 7555530103016500975}
+  - {fileID: 3016076916678253701}
+  - {fileID: -5011386013020974302}
+  ChildNode: {fileID: 0}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -184,6 +302,14 @@ MonoBehaviour:
   - {fileID: 9042625799450569983}
   - {fileID: 8555634608489872703}
   - {fileID: 7555530103016500975}
+  - {fileID: -6552043252258347893}
+  - {fileID: -115284910943934760}
+  - {fileID: 4465875053746251338}
+  - {fileID: 3016076916678253701}
+  - {fileID: -757927954411997888}
+  - {fileID: 4403890096492632132}
+  - {fileID: 4358054593532728303}
+  - {fileID: -5011386013020974302}
   VariablesConfig: {fileID: 11400000, guid: 18b09256f245a3742aa99b349e6e8cc1, type: 2}
   _localizationTableName: Nimrodel
   _characterNamesLocalizationName: 
@@ -205,8 +331,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 267.20026
-    y: 713.9999
+    x: 1166.3973
+    y: 593.9989
     width: 240
     height: 160
   IsDragging: 1
@@ -236,8 +362,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 536.80164
-    y: 518.0001
+    x: 1435.9974
+    y: 397.99936
     width: 210
     height: 155
   IsDragging: 1
@@ -251,7 +377,7 @@ MonoBehaviour:
   ParentNodes:
   - {fileID: -8415152273574053422}
   - {fileID: -1205426587130540191}
-  ChildNode: {fileID: 0}
+  ChildNode: {fileID: -115284910943934760}
 --- !u!114 &2068089868072973428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -267,8 +393,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -4.80011
-    y: 583.6
+    x: 894.4
+    y: 463.59906
     width: 240
     height: 160
   IsDragging: 1
@@ -298,8 +424,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -215.20007
-    y: 287.60004
+    x: 684
+    y: 167.59988
     width: 190
     height: 135
   IsDragging: 1
@@ -309,12 +435,44 @@ MonoBehaviour:
     Text: zzzzzzzz
     CharacterSprite: {fileID: 21300000, guid: d1a6ce6e8d4da514e8a1e914f4ca408c, type: 3}
   ParentNodes:
-  - {fileID: -6572792284226475781}
+  - {fileID: 4465875053746251338}
   ChildNode: {fileID: 9042625799450569983}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: SentenceName_3b0f6ea5-1cfe-4d16-81f7-0507fcf0f561
   SentenceTextKey: 
+--- !u!114 &3016076916678253701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 692.8002
+    y: -38.00003
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Nim
+    Text: Quiero volver arriba...
+    CharacterSprite: {fileID: 0}
+  ParentNodes:
+  - {fileID: 4465875053746251338}
+  ChildNode: {fileID: -115284910943934760}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: SentenceName_7a815833-a613-4c51-b2aa-34236001e372
+  SentenceTextKey: SentenceText_d5135786-5787-4363-8e89-a6a648dadc81
 --- !u!114 &4107401635619704217
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -330,8 +488,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 787.2036
-    y: 876.4
+    x: 1686.4001
+    y: 756.39954
     width: 210
     height: 155
   IsDragging: 1
@@ -344,7 +502,103 @@ MonoBehaviour:
   _stringValue: 
   ParentNodes:
   - {fileID: -3813369594341399467}
-  ChildNode: {fileID: 0}
+  ChildNode: {fileID: -115284910943934760}
+--- !u!114 &4358054593532728303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 1755.2002
+    y: 34
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Nim
+    Text: Y como no sabia que hacer, me hize una siesta
+    CharacterSprite: {fileID: 0}
+  ParentNodes:
+  - {fileID: 4403890096492632132}
+  ChildNode: {fileID: -5011386013020974302}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: SentenceName_7a815833-a613-4c51-b2aa-34236001e372
+  SentenceTextKey: SentenceText_65da8874-f4d6-45cd-9a66-0c1688866398
+--- !u!114 &4403890096492632132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 1555.2002
+    y: 36.39998
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Nim
+    Text: "Etkis se quedo en el piso de arriba y no se donde esta Lerendur. Yo he
+      quedado aqu\xED atrapada sin poder salir."
+    CharacterSprite: {fileID: 0}
+  ParentNodes:
+  - {fileID: -757927954411997888}
+  ChildNode: {fileID: 4358054593532728303}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: SentenceName_7a815833-a613-4c51-b2aa-34236001e372
+  SentenceTextKey: SentenceText_9f3cd871-edeb-4eb3-912f-90482ecd9758
+--- !u!114 &4465875053746251338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38789157e7795244280823d019530045, type: 3}
+  m_Name: Variable Condition Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 416.00018
+    y: 120.399994
+    width: 240
+    height: 160
+  IsDragging: 1
+  IsSelected: 0
+  _variableName: nimFirstTalk
+  _conditionType: 0
+  _boolTargetValue: 0
+  _intTargetValue: 0
+  _floatTargetValue: 0
+  _stringTargetValue: 
+  ParentNodes:
+  - {fileID: -6572792284226475781}
+  TrueChildNode: {fileID: 2906684726791145148}
+  FalseChildNode: {fileID: 3016076916678253701}
 --- !u!114 &4625890934883243529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -360,15 +614,16 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -708.80005
-    y: 456.39993
+    x: 190.39948
+    y: 336.39902
     width: 190
     height: 80
   IsDragging: 1
   IsSelected: 0
   _functionName: EstadoNim
   _description: 
-  ParentNodes: []
+  ParentNodes:
+  - {fileID: -6552043252258347893}
   ChildNode: {fileID: -6572792284226475781}
 --- !u!114 &7555530103016500975
 MonoBehaviour:
@@ -385,8 +640,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 233.6001
-    y: 311.60007
+    x: 1132.7974
+    y: 191.59991
     width: 190
     height: 135
   IsDragging: 1
@@ -397,7 +652,7 @@ MonoBehaviour:
     CharacterSprite: {fileID: 0}
   ParentNodes:
   - {fileID: 9042625799450569983}
-  ChildNode: {fileID: 0}
+  ChildNode: {fileID: -115284910943934760}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: SentenceName_d38615c1-d6e9-4dcb-b6f5-5311316f050c
@@ -417,8 +672,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 228.00012
-    y: 157.19997
+    x: 1127.1973
+    y: 37.19989
     width: 190
     height: 135
   IsDragging: 1
@@ -429,7 +684,7 @@ MonoBehaviour:
     CharacterSprite: {fileID: 0}
   ParentNodes:
   - {fileID: 9042625799450569983}
-  ChildNode: {fileID: 0}
+  ChildNode: {fileID: -757927954411997888}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: SentenceName_3b0f6ea5-1cfe-4d16-81f7-0507fcf0f561
@@ -449,8 +704,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -12.799988
-    y: 286.00006
+    x: 886.4
+    y: 165.99991
     width: 190
     height: 135
   IsDragging: 1

@@ -22,7 +22,6 @@ public class player_movement : MonoBehaviour
     [SerializeField] private Transform modelTransform;
     Rigidbody rb;
     private bool isGrounded;
-    private float modelOffsetY;
 
     public void AddMoveVectorInput(Vector3 moveVector)
     {
@@ -37,7 +36,6 @@ public class player_movement : MonoBehaviour
         rb.isKinematic = false;
         jumpForce = 4f;
         rotationSpeed = 220f;
-        modelOffsetY = modelTransform.localPosition.y;
     }
 
     void Update()
@@ -62,13 +60,6 @@ public class player_movement : MonoBehaviour
             MoveCharacter(x, y);
     }
 
-    void LateUpdate()
-    {
-        Vector3 localPos = modelTransform.localPosition;
-        localPos.y = modelOffsetY;
-        modelTransform.localPosition = localPos;
-    }
-
     private void MoveCharacter(float horizontalInput, float verticalInput)
     {
         Vector3 moveDirection = new Vector3(horizontalInput, 0f, verticalInput).normalized;
@@ -77,7 +68,7 @@ public class player_movement : MonoBehaviour
         if (moveDirection != Vector3.zero)
         {
             Quaternion targetRotation = Quaternion.LookRotation(moveDirection);
-            rb.rotation = Quaternion.RotateTowards(rb.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+            rb.rotation = Quaternion.Slerp(rb.rotation, targetRotation, rotationSpeed * Time.deltaTime);
         }
     }
 

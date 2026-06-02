@@ -18,36 +18,36 @@ MonoBehaviour:
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 432336896
+  - m_Id: 432908548763648
     m_Localized: "Hola, \xBFcomo est\xE1s?"
     m_Metadata:
       m_Items: []
-  - m_Id: 444919808
+  - m_Id: 432908561346560
     m_Localized: Lerendur
     m_Metadata:
       m_Items: []
-  - m_Id: 444919809
+  - m_Id: 432908561346561
     m_Localized: "Bien ahora que est\xE1s aqu\xED"
     m_Metadata:
       m_Items: []
-  - m_Id: 444919810
+  - m_Id: 432908561346562
     m_Localized: Normal
     m_Metadata:
       m_Items: []
-  - m_Id: 444919811
+  - m_Id: 432908561346563
     m_Localized: (Quedarse quieto)
     m_Metadata:
       m_Items: []
-  - m_Id: 444919812
+  - m_Id: 432908561346564
     m_Localized: jajaja
     m_Metadata:
       m_Items: []
-  - m_Id: 444919813
+  - m_Id: 432908561346565
     m_Localized: "Si quieres hablar estar\xE9 aqu\xED, no creo que entre en una mazmorra
       en un tiempo"
     m_Metadata:
       m_Items: []
-  - m_Id: 444919814
+  - m_Id: 432908561346566
     m_Localized: ...(Lerendur se ha incomodado)
     m_Metadata:
       m_Items: []

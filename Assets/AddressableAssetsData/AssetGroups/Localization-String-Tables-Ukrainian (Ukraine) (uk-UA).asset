@@ -15,6 +15,12 @@ MonoBehaviour:
   m_GroupName: Localization-String-Tables-Ukrainian (Ukraine) (uk-UA)
   m_GUID: 3c2e50b38bf116d4eb26b2e0956cbbd5
   m_SerializeEntries:
+  - m_GUID: 02fdcb37cbb4e5f44bea478226cba5e7
+    m_Address: Libro Jefe_uk-UA
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-uk-UA
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 05f4f9e20ac2ad34da6248c9773a8471
     m_Address: Tienda_uk-UA
     m_ReadOnly: 1

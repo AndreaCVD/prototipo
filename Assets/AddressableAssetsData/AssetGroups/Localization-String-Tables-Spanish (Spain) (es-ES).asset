@@ -117,6 +117,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-es-ES
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cc81fec3d54ac004cbb1dabf197d07eb
+    m_Address: Libro Jefe_es-ES
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es-ES
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: daf0e0ed2001d404da7207f5b4078afc
     m_Address: Etkis_es-ES
     m_ReadOnly: 1

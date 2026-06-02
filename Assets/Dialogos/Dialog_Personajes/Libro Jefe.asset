@@ -12,10 +12,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33f741ea10ebcf842a91c9b871dd032a, type: 3}
   m_Name: Libro Jefe
   m_EditorClassIdentifier: 
-  NodesList: []
+  NodesList:
+  - {fileID: 5328373985199432021}
   VariablesConfig: {fileID: 0}
-  _localizationTableName: 
+  _localizationTableName: Libro Jefe
   _characterNamesLocalizationName: 
   NodeToDrawLineFrom: {fileID: 0}
   LinePosition: {x: 0, y: 0}
-  IsLocalizationSetUp: 0
+  IsLocalizationSetUp: 1
+--- !u!114 &5328373985199432021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 516.00006
+    y: 238.80002
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 1
+  _sentence:
+    CharacterName: ???
+    Text: Que lejos has llegado...
+    CharacterSprite: {fileID: 21300000, guid: cb49f1d4184a4b146bdfee8689056089, type: 3}
+  ParentNodes: []
+  ChildNode: {fileID: 0}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: SentenceName_1dcec883-d328-4f13-b704-2a0ca3787930
+  SentenceTextKey: SentenceText_2bfc4fbe-c961-4532-a94d-09bee40885f4

@@ -50,6 +50,11 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 900f512c17324f54fae6655aaa49cf62
+    m_Address: Assets/Localization/Libro Jefe/Libro Jefe Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 99f4bb6cd2f98764d9372525066d1b93
     m_Address: Assets/Localization/Etkis Libre/Etkis Libre Shared Data.asset
     m_ReadOnly: 1

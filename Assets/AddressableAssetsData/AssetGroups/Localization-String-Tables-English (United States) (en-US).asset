@@ -129,6 +129,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-en-US
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c755410bcdf389741bc6dfcf207715aa
+    m_Address: Libro Jefe_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d9aee3cd41fa2ea4ebfdc3b9a77f47c3
     m_Address: CofreVacio_en-US
     m_ReadOnly: 1

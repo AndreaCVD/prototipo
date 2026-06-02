@@ -15,8 +15,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 223.2
-    y: 266.80002
+    x: 335.20004
+    y: 249.20001
     width: 190
     height: 135
   IsDragging: 0
@@ -24,7 +24,7 @@ MonoBehaviour:
   _sentence:
     CharacterName: Yusseif
     Text: Han salido X gente
-    CharacterSprite: {fileID: 0}
+    CharacterSprite: {fileID: 21300000, guid: 0f39758af95060149ad9e71f80df61d3, type: 3}
   ParentNodes: []
   ChildNode: {fileID: 0}
   _isExternalFunc: 0

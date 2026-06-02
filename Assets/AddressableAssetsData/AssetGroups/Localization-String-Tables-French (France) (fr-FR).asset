@@ -45,6 +45,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-fr-FR
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3a9dd471fc7648c4bb7c821bc90ff568
+    m_Address: Libro Jefe_fr-FR
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-fr-FR
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7b467b6931cde304fa84a69332cebaf0
     m_Address: Tienda_fr-FR
     m_ReadOnly: 1

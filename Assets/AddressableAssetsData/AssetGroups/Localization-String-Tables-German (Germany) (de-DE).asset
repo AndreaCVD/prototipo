@@ -21,6 +21,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-de-DE
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1afab2a3e49e6bc43a45335ed67f0b7b
+    m_Address: Libro Jefe_de-DE
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de-DE
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 207fd56f492ee0747bd1faf66395c474
     m_Address: test_de-DE
     m_ReadOnly: 1

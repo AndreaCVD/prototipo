@@ -15,8 +15,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 640.79596
-    y: 55.599945
+    x: 571.1958
+    y: -18.80008
     width: 210
     height: 155
   IsDragging: 1
@@ -45,8 +45,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -591.20087
-    y: 248.3999
+    x: -660.8009
+    y: 173.99988
     width: 190
     height: 80
   IsDragging: 1
@@ -70,8 +70,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 925.5999
-    y: 280.40002
+    x: 855.99915
+    y: 205.99997
     width: 210
     height: 155
   IsDragging: 1
@@ -100,8 +100,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 408.7998
-    y: 429.99997
+    x: 339.1997
+    y: 355.6
     width: 190
     height: 135
   IsDragging: 1
@@ -109,7 +109,7 @@ MonoBehaviour:
   _sentence:
     CharacterName: Etkis
     Text: Me voy arriba, espero que ese viejo no me haya robado nada.
-    CharacterSprite: {fileID: 0}
+    CharacterSprite: {fileID: 21300000, guid: daf2b0df47633724bb021d5e79f67ce0, type: 3}
   ParentNodes:
   - {fileID: 6499817178236791268}
   ChildNode: {fileID: -637543577219836419}
@@ -132,8 +132,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 639.9954
-    y: -102.00011
+    x: 570.39526
+    y: -176.40013
     width: 210
     height: 155
   IsDragging: 1
@@ -162,8 +162,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 85.600006
-    y: -31.600006
+    x: 15.9999695
+    y: -106.00003
     width: 240
     height: 160
   IsDragging: 1
@@ -193,8 +193,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 421.60065
-    y: 233.19998
+    x: 352.0005
+    y: 158.79996
     width: 190
     height: 135
   IsDragging: 1
@@ -202,7 +202,7 @@ MonoBehaviour:
   _sentence:
     CharacterName: Etkis
     Text: Gracias...
-    CharacterSprite: {fileID: 0}
+    CharacterSprite: {fileID: 21300000, guid: daf2b0df47633724bb021d5e79f67ce0, type: 3}
   ParentNodes:
   - {fileID: 6499817178236791268}
   ChildNode: {fileID: 2358140374074757382}
@@ -225,8 +225,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 931.19324
-    y: 81.99988
+    x: 861.59265
+    y: 7.5998535
     width: 190
     height: 80
   IsDragging: 1
@@ -254,8 +254,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -192.80002
-    y: 197.19995
+    x: -262.40002
+    y: 122.79993
     width: 240
     height: 160
   IsDragging: 1
@@ -285,8 +285,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 667.99994
-    y: 432.40002
+    x: 598.39966
+    y: 358.00015
     width: 210
     height: 155
   IsDragging: 1
@@ -349,8 +349,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 648.79987
-    y: 233.99997
+    x: 579.1997
+    y: 159.59995
     width: 190
     height: 135
   IsDragging: 1
@@ -358,7 +358,7 @@ MonoBehaviour:
   _sentence:
     CharacterName: Etkis
     Text: "He perdido a mis compa\xF1eros, estan mas abajo, son dos elfos."
-    CharacterSprite: {fileID: 0}
+    CharacterSprite: {fileID: 21300000, guid: daf2b0df47633724bb021d5e79f67ce0, type: 3}
   ParentNodes:
   - {fileID: -2469484456262454194}
   ChildNode: {fileID: -7781373260608017088}
@@ -381,8 +381,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 411.99933
-    y: 63.599945
+    x: 342.39917
+    y: -10.800079
     width: 190
     height: 135
   IsDragging: 1
@@ -413,8 +413,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 409.5999
-    y: -81.20006
+    x: 339.99976
+    y: -155.60008
     width: 190
     height: 135
   IsDragging: 1
@@ -445,8 +445,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -390.39984
-    y: 247.59998
+    x: -459.99988
+    y: 173.19995
     width: 190
     height: 80
   IsDragging: 1
@@ -471,8 +471,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 108.80005
-    y: 333.99988
+    x: 39.200043
+    y: 259.6
     width: 240
     height: 160
   IsDragging: 1

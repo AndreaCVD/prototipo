@@ -5900,13 +5900,6 @@ MonoBehaviour:
   iconoPocionVida: {fileID: 0}
   iconoDaga: {fileID: 0}
   iconoEspada: {fileID: 0}
-  llave_text: {fileID: 0}
-  llaveMaestra_text: {fileID: 0}
-  daga_text: {fileID: 0}
-  espada_text: {fileID: 0}
-  pocionVida_text: {fileID: 0}
-  canvas_open: 0
-  canvas_inventario: {fileID: 0}
 --- !u!114 &1753848651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6018,6 +6011,37 @@ Transform:
   - {fileID: 1965265711}
   - {fileID: 229746242}
   m_Father: {fileID: 1183468412}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1892406310
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1892406311}
+  m_Layer: 0
+  m_Name: Nim
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1892406311
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1892406310}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.287951, y: 8.863314, z: 1.5996495}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!225 &1926101353 stripped
 CanvasGroup:
@@ -7328,3 +7352,4 @@ SceneRoots:
   - {fileID: 2137292238}
   - {fileID: 359799218}
   - {fileID: 934874911}
+  - {fileID: 1892406311}

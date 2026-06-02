@@ -51,8 +51,26 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-fr-FR
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 943b3fcf88463a741824b2e079c72a5a
+    m_Address: Lerendur Libre_fr-FR
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-fr-FR
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 9b69939639db29b4bb4bb36d2a39d2d7
     m_Address: test_fr-FR
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-fr-FR
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9c0d6903ea208bd4885479546b0128e8
+    m_Address: Nimrodel Libre_fr-FR
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-fr-FR
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: af542ee911502b8449434a4040122214
+    m_Address: Etkis Libre_fr-FR
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-fr-FR

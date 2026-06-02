@@ -18,24 +18,32 @@ MonoBehaviour:
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 1273508990873600
+  - m_Id: 1843879838281728
     m_Localized: "\xA1\xA1HEY TU!! AYUDAME A SALIR DE AQUI R\xC1PIDO"
     m_Metadata:
       m_Items: []
-  - m_Id: 1273509007650816
+  - m_Id: 1843879838281729
     m_Localized: ???
     m_Metadata:
       m_Items: []
-  - m_Id: 1273509007650817
+  - m_Id: 1843879838281730
     m_Localized: Gracias...
     m_Metadata:
       m_Items: []
-  - m_Id: 1273509007650818
+  - m_Id: 1843879838281731
     m_Localized: Etkis
     m_Metadata:
       m_Items: []
-  - m_Id: 1273509007650819
+  - m_Id: 1843879838281732
     m_Localized: "\xA1\xA1No me dejes aqu\xED por favor!!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1843879838281733
+    m_Localized: "He perdido a mis compa\xF1eros, estan mas abajo, son dos elfos."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1843879838281734
+    m_Localized: Me voy arriba, espero que ese viejo no me haya robado nada.
     m_Metadata:
       m_Items: []
   references:

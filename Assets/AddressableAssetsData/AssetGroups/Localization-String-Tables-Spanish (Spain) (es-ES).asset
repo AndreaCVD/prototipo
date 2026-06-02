@@ -33,6 +33,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-es-ES
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 276b1de77ed49d0448ca62d1970a2565
+    m_Address: Lerendur Libre_es-ES
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es-ES
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 2cdbf478573988841bcd2e991a40b632
     m_Address: Lerendur_es-ES
     m_ReadOnly: 1
@@ -99,6 +105,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-es-ES
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b2aa64ff85904294face96289f9d0c20
+    m_Address: Etkis Libre_es-ES
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es-ES
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c73489b5fdb94654799d1c9e041101a1
     m_Address: Nimrodel_es-ES
     m_ReadOnly: 1
@@ -113,6 +125,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e8711e4ea718f9349b0f669466f6a057
     m_Address: Puerta_es-ES
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es-ES
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ee2c12b3f6326084486570ac58517f91
+    m_Address: Nimrodel Libre_es-ES
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-es-ES

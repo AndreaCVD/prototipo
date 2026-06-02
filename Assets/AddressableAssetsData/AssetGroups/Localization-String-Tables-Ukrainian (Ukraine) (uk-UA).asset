@@ -45,6 +45,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-uk-UA
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 426e13b74b0121e47a982d5ba6bd0cbe
+    m_Address: Lerendur Libre_uk-UA
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-uk-UA
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 45f72722f87ccfc4ebdd26bb124d1b36
     m_Address: PuertaMaestra_uk-UA
     m_ReadOnly: 1
@@ -75,8 +81,20 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-uk-UA
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dd6900f450260424cb179122198b7c24
+    m_Address: Nimrodel Libre_uk-UA
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-uk-UA
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: df489edfbcd38de48ae50fdd200db61f
     m_Address: CofreVacio_uk-UA
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-uk-UA
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f9e90169dd45e37449f8713b620462f7
+    m_Address: Etkis Libre_uk-UA
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-uk-UA

@@ -15,8 +15,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 168.80011
-    y: 122.00006
+    x: 640.79596
+    y: 55.599945
     width: 210
     height: 155
   IsDragging: 1
@@ -29,7 +29,7 @@ MonoBehaviour:
   _stringValue: 
   ParentNodes:
   - {fileID: 2849589255257469543}
-  ChildNode: {fileID: 0}
+  ChildNode: {fileID: -2164909623706080416}
 --- !u!114 &-7792155415567131863
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45,16 +45,78 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -1063.2
-    y: 314.80002
+    x: -591.20087
+    y: 248.3999
     width: 190
     height: 80
   IsDragging: 1
-  IsSelected: 1
+  IsSelected: 0
   _functionName: PararMov
   _description: 
   ParentNodes: []
   ChildNode: {fileID: 5732629150119791949}
+--- !u!114 &-7781373260608017088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30402c10d300488491eb82eed1db9a20, type: 3}
+  m_Name: Modify Variable Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 925.5999
+    y: 280.40002
+    width: 210
+    height: 155
+  IsDragging: 1
+  IsSelected: 0
+  _variableName: etkisFirstTalk
+  _modifyType: 1
+  _boolValue: 0
+  _intValue: 1
+  _floatValue: 0
+  _stringValue: 
+  ParentNodes:
+  - {fileID: 2358140374074757382}
+  ChildNode: {fileID: -2164909623706080416}
+--- !u!114 &-4778476200547826698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 408.7998
+    y: 429.99997
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Etkis
+    Text: Me voy arriba, espero que ese viejo no me haya robado nada.
+    CharacterSprite: {fileID: 0}
+  ParentNodes:
+  - {fileID: 6499817178236791268}
+  ChildNode: {fileID: -637543577219836419}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: SentenceName_20de78f3-5c32-4182-91be-63fbae1fd0d4
+  SentenceTextKey: SentenceText_4a10b9b2-3a7e-48bc-af95-a3f7c0132122
 --- !u!114 &-4546857607134023867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70,8 +132,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 167.99982
-    y: -35.59999
+    x: 639.9954
+    y: -102.00011
     width: 210
     height: 155
   IsDragging: 1
@@ -84,7 +146,7 @@ MonoBehaviour:
   _stringValue: 
   ParentNodes:
   - {fileID: 3313434976028799794}
-  ChildNode: {fileID: 0}
+  ChildNode: {fileID: -2164909623706080416}
 --- !u!114 &-2633657587399954946
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -100,8 +162,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -386.39975
-    y: 34.80011
+    x: 85.600006
+    y: -31.600006
     width: 240
     height: 160
   IsDragging: 1
@@ -131,8 +193,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -371.99905
-    y: 286.8001
+    x: 421.60065
+    y: 233.19998
     width: 190
     height: 135
   IsDragging: 1
@@ -142,8 +204,8 @@ MonoBehaviour:
     Text: Gracias...
     CharacterSprite: {fileID: 0}
   ParentNodes:
-  - {fileID: -941718847844076716}
-  ChildNode: {fileID: 0}
+  - {fileID: 6499817178236791268}
+  ChildNode: {fileID: 2358140374074757382}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: SentenceName_20de78f3-5c32-4182-91be-63fbae1fd0d4
@@ -163,15 +225,19 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 690.4
-    y: 282.80002
+    x: 931.19324
+    y: 81.99988
     width: 190
-    height: 135
-  IsDragging: 0
+    height: 80
+  IsDragging: 1
   IsSelected: 0
-  _functionName: 
+  _functionName: ContinuarMov
   _description: 
-  ParentNodes: []
+  ParentNodes:
+  - {fileID: -4546857607134023867}
+  - {fileID: -8540350519875252422}
+  - {fileID: -637543577219836419}
+  - {fileID: -7781373260608017088}
   ChildNode: {fileID: 0}
 --- !u!114 &-941718847844076716
 MonoBehaviour:
@@ -188,8 +254,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -664.7996
-    y: 263.60007
+    x: -192.80002
+    y: 197.19995
     width: 240
     height: 160
   IsDragging: 1
@@ -203,7 +269,37 @@ MonoBehaviour:
   ParentNodes:
   - {fileID: 5732629150119791949}
   TrueChildNode: {fileID: -2633657587399954946}
-  FalseChildNode: {fileID: -2469484456262454194}
+  FalseChildNode: {fileID: 6499817178236791268}
+--- !u!114 &-637543577219836419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30402c10d300488491eb82eed1db9a20, type: 3}
+  m_Name: Modify Variable Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 667.99994
+    y: 432.40002
+    width: 210
+    height: 155
+  IsDragging: 1
+  IsSelected: 1
+  _variableName: etkisFirstTalk
+  _modifyType: 2
+  _boolValue: 0
+  _intValue: 1
+  _floatValue: 0
+  _stringValue: 
+  ParentNodes:
+  - {fileID: -4778476200547826698}
+  ChildNode: {fileID: -2164909623706080416}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -227,12 +323,49 @@ MonoBehaviour:
   - {fileID: -8540350519875252422}
   - {fileID: -7792155415567131863}
   - {fileID: -2164909623706080416}
+  - {fileID: 6499817178236791268}
+  - {fileID: 2358140374074757382}
+  - {fileID: -4778476200547826698}
+  - {fileID: -637543577219836419}
+  - {fileID: -7781373260608017088}
   VariablesConfig: {fileID: 11400000, guid: 9c2ab0fabf10d764fbff8462f9b9f886, type: 2}
   _localizationTableName: Etkis
   _characterNamesLocalizationName: 
   NodeToDrawLineFrom: {fileID: 0}
   LinePosition: {x: 0, y: 0}
   IsLocalizationSetUp: 1
+--- !u!114 &2358140374074757382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 648.79987
+    y: 233.99997
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Etkis
+    Text: "He perdido a mis compa\xF1eros, estan mas abajo, son dos elfos."
+    CharacterSprite: {fileID: 0}
+  ParentNodes:
+  - {fileID: -2469484456262454194}
+  ChildNode: {fileID: -7781373260608017088}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: SentenceName_20de78f3-5c32-4182-91be-63fbae1fd0d4
+  SentenceTextKey: SentenceText_297fd028-85e2-4dcb-9132-56b0d4381bcf
 --- !u!114 &2849589255257469543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -248,8 +381,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -59.99991
-    y: 130.00006
+    x: 411.99933
+    y: 63.599945
     width: 190
     height: 135
   IsDragging: 1
@@ -280,8 +413,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -62.3992
-    y: -14.799942
+    x: 409.5999
+    y: -81.20006
     width: 190
     height: 135
   IsDragging: 1
@@ -312,8 +445,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -862.39935
-    y: 314.0001
+    x: -390.39984
+    y: 247.59998
     width: 190
     height: 80
   IsDragging: 1
@@ -323,3 +456,34 @@ MonoBehaviour:
   ParentNodes:
   - {fileID: -7792155415567131863}
   ChildNode: {fileID: -941718847844076716}
+--- !u!114 &6499817178236791268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38789157e7795244280823d019530045, type: 3}
+  m_Name: Variable Condition Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 108.80005
+    y: 333.99988
+    width: 240
+    height: 160
+  IsDragging: 1
+  IsSelected: 0
+  _variableName: etkisFirstTalk
+  _conditionType: 0
+  _boolTargetValue: 0
+  _intTargetValue: 0
+  _floatTargetValue: 0
+  _stringTargetValue: 
+  ParentNodes:
+  - {fileID: -941718847844076716}
+  TrueChildNode: {fileID: -2469484456262454194}
+  FalseChildNode: {fileID: -4778476200547826698}

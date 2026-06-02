@@ -129,7 +129,7 @@ public class PuzzleZone : MonoBehaviour
                 finished = true;
             }
         }
-        else if (!zona_2_finished && cajasExtras)
+        else if (!zona_2_finished && cajasExtras && zona_b != null)
         {
             int falsasCajas = 0;
             for (int i = 0; i < PiezasPuzzles.Count; i++)

@@ -1,7 +1,5 @@
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
-using UI = UnityEngine.UI;
 using UnityEngine.UIElements; // Imprescindible para UI Toolkit
 using System.Linq;
 using System.Collections; //Comparacion de Listas
@@ -38,16 +36,6 @@ public class stats_UI : MonoBehaviour
     private int espada;
     private int pocionVida;
 
-    //lo del canva para quitar en el futuro
-    [Header("Inventario")]
-    [SerializeField] TMP_Text llave_text;
-    [SerializeField] TMP_Text llaveMaestra_text;
-    [SerializeField] TMP_Text daga_text;
-    [SerializeField] TMP_Text espada_text;
-    [SerializeField] TMP_Text pocionVida_text;
-    public bool canvas_open;
-    public CanvasGroup canvas_inventario;
-
     private void OnEnable()
     {
         var uiDocument = GetComponent<UIDocument>();
@@ -83,8 +71,6 @@ public class stats_UI : MonoBehaviour
         daga = 0;
         pocionVida = 0;
 
-        canvas_open = false;
-
         //Seteamos valores, int -> string
         int f = protagonista.stats.Get(PersonajesStats.Fuerza);
         int i = protagonista.stats.Get(PersonajesStats.Inteligencia);
@@ -98,7 +84,6 @@ public class stats_UI : MonoBehaviour
         SetIntel(i);
         SetCarisma(c);
         SetInventario();
-
     }
 
     void Update()

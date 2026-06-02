@@ -15,6 +15,16 @@ MonoBehaviour:
   m_GroupName: Localization-Assets-Shared
   m_GUID: 47f921677bea8b246adf25729ebe1bb4
   m_SerializeEntries:
+  - m_GUID: 0e2128e9652d23a4d93569f4522f9c2f
+    m_Address: Assets/Localization/Nimrodel/Nimrodel Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 13e892fd12643e14c8c6f8a790ceda91
+    m_Address: Assets/Localization/Lerendur/Lerendur Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 1b22461cddf1c434ba221e09e37c647b
     m_Address: Assets/Localization/Nim/Nim Shared Data.asset
     m_ReadOnly: 1
@@ -25,8 +35,18 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 745a3c678fcc0bd4684fd7e68280f505
+    m_Address: Assets/Localization/Viejo Playa/Viejo Playa Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 77f6bfb189ad01143a2632e17e45e31c
     m_Address: Assets/Localization/Puerta/Puerta Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 815d8418464589a4cbd0763fcc0c6dec
+    m_Address: Assets/Localization/Viejo Tunica/Viejo Tunica Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -57,6 +77,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ec42f3d6da1e0304d80c27ada008b92a
     m_Address: Assets/Localization/Etkis/Etkis Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ee6d761b3a9f1b347a7161315d9eb079
+    m_Address: Assets/Localization/Puzzle Tutorial/Puzzle Tutorial Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

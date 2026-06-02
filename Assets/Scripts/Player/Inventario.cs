@@ -16,6 +16,7 @@ public class Inventario : MonoBehaviour
     //public List<int[]> x = new List<int[]>();
 
 
+
     private void Start()
     {
         //prota.Inventario.Clear();
@@ -59,8 +60,18 @@ public class Inventario : MonoBehaviour
             prota.Inventario.Llave.Add(other.gameObject.name);
             Destroy(other.gameObject);
         }
-    }
 
+    }
+    public void restarVida()
+    {
+
+         Debug.Log("lava");
+        if (prota.stats.values[3].value >= 0)
+        {
+            prota.stats.values[3].value--;
+        }
+
+    }
     public void CofreKey(GameObject cofre, cherrydev.DialogNodeGraph dialogo_obj)
     {
         bool keyFound = false;
@@ -68,16 +79,17 @@ public class Inventario : MonoBehaviour
         //hay cofres que se abren sin llave, los loot
         if (cofre.name.Contains("noKey"))
         {
-            AbrirCofre(cofre.name);
+            //Si llave, puede ser aleatorio o no
+            AbrirCofre(cofre);
         }
         else if (!cofre.name.Contains("loot"))
         {
-
+            //No aleatorio con llave
             //Recorremos nuestro inventario para ver si tenemos llaves
             if (prota.Inventario.Llave.Count > 0)
             {
                 prota.Inventario.Llave.RemoveAt(prota.Inventario.Llave.Count - 1);
-                AbrirCofre(cofre.name);
+                AbrirCofre(cofre);
                 keyFound = true;
             }
             if (!keyFound)
@@ -87,7 +99,8 @@ public class Inventario : MonoBehaviour
         }
         else
         {
-            AbrirCofre("aleatorio");
+            //Si contiene loot es aleatorio con llave
+            AbrirCofre(cofre);
         }
     }
     public void PuertaMaestraKey(GameObject puerta, cherrydev.DialogNodeGraph dialogo_obj)
@@ -123,7 +136,7 @@ public class Inventario : MonoBehaviour
             dialog.EmpezarDialogo(dialogo_obj, puerta);
         }
     }
-    private void AbrirCofre(string a)
+    private void AbrirCofre(GameObject cofre)
     {
         Debug.Log("El cofre se abre");
         //Activar animacion
@@ -134,7 +147,7 @@ public class Inventario : MonoBehaviour
         //Cofre C5 --> Pocion Nivel_3
         //Cofre C6 --> Llave Maestra
         //Cofre D5 --> Pocion Vida y Espada de Lava
-        switch (a)
+        switch (cofre.name)
         {
             case string b when b.Contains("b1"):
                 prota.Inventario.LlaveMaestra.Add("llave_cofre");
@@ -148,15 +161,21 @@ public class Inventario : MonoBehaviour
             case string b when b.Contains("c6"):
                 prota.Inventario.LlaveMaestra.Add("llave_cofre");
                 break;
+            case string b when b.Contains("d3"):
+                prota.Inventario.LlaveMaestra.Add("llave_cofre");
+                break;
             case string b when b.Contains("d5"):
                 prota.Inventario.Espada.Add("espada_cofre");
                 prota.Inventario.PocionVida.Add("pocion_cofre");
                 break;
-            case "aleatorio":
+            default:
                 lootAleatorio();
                 break;
 
         }
+        //Abrir cofre por animacion
+        Destroy(cofre);
+        Debug.Log("Cofre destruido");
     }
     public void lootAleatorio()
     {

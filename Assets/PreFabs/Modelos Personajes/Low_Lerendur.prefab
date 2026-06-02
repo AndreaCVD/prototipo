@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3d42b3a497006740958fffd87391ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogo_obj: {fileID: 0}
+  dialogo_obj: {fileID: 11400000, guid: d1a6cd785e8e8524a816cec347c93ae3, type: 2}
 --- !u!136 &5782549888867065012
 CapsuleCollider:
   m_ObjectHideFlags: 0

@@ -29,6 +29,7 @@ public class FirstFloorPuzzle : MonoBehaviour
     void Start()
     {
         revisarPuzzle();
+        InstanciarPers();
         //Treure pq sino sempre es reinicien?
         zona_1.finished = lista.Nivel_1[0].acabado;
         zona_1.finished = lista.Nivel_1[1].acabado;

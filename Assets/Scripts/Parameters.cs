@@ -42,7 +42,7 @@ public class ValueBlock
 
     public int Get(PersonajesStats statToGet)
     {
-        int a = (int)statToGet;
+        int a = (int)statToGet; 
         return values[a].value;
     }
 }
@@ -78,6 +78,7 @@ public class Bolsa : ScriptableObject
     public List<string> PocionVida;
     public List<string> Daga;
     public List<string> Espada;
+    public List<string> PocionLava;
 
 }
 [CreateAssetMenu(fileName = "Puzzles", menuName = "Puzzle/ListPuzzle")]

@@ -33,6 +33,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-fr-FR
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 244197ddfceff8548a5f6446bf38be53
+    m_Address: Nimrodel_fr-FR
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-fr-FR
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 2de06b2e62ecfed4797e82529d852bcb
     m_Address: Arbol_fr-FR
     m_ReadOnly: 1

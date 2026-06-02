@@ -33,6 +33,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-es-ES
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2cdbf478573988841bcd2e991a40b632
+    m_Address: Lerendur_es-ES
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es-ES
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 392235e076f41074bb69169ff699dbf1
     m_Address: Nim_es-ES
     m_ReadOnly: 1
@@ -45,8 +51,20 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-es-ES
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 47f73c4a26d56ac49aee43f9bb4cfebf
+    m_Address: Viejo Tunica_es-ES
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es-ES
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4891109a4b7150f4e8471e9eb2dad0a7
     m_Address: Dialogo Prueva_es-ES
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es-ES
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 60d82fd0cbcf1694780b3ee53f1b454c
+    m_Address: Puzzle Tutorial_es-ES
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-es-ES
@@ -71,6 +89,18 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ae3d46905fb64db45b87df4a01d6d84d
     m_Address: CofreVacio_es-ES
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es-ES
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: afc59f4a4dd87fc4e9e622b02250bb19
+    m_Address: Viejo Playa_es-ES
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es-ES
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c73489b5fdb94654799d1c9e041101a1
+    m_Address: Nimrodel_es-ES
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-es-ES

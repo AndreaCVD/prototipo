@@ -68,6 +68,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Low_Viejo_Tunica
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fa710a55156d29344b6e0ad4d1274273, type: 3}
+      propertyPath: m_TagString
+      value: Interact_Scene
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -78,6 +82,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fa710a55156d29344b6e0ad4d1274273, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8972351846773623450}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fa710a55156d29344b6e0ad4d1274273, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2097802856533356626}
   m_SourcePrefab: {fileID: 100100000, guid: fa710a55156d29344b6e0ad4d1274273, type: 3}
 --- !u!1 &4409744597917144691 stripped
 GameObject:
@@ -134,3 +141,16 @@ CapsuleCollider:
   m_Height: 9.223257
   m_Direction: 1
   m_Center: {x: -0.008305507, y: -2.8184552, z: 0}
+--- !u!114 &2097802856533356626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4409744597917144691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3d42b3a497006740958fffd87391ec7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogo_obj: {fileID: 11400000, guid: 9b3756fe82d36214eb47b1ea5cfb735f, type: 2}

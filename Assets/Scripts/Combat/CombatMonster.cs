@@ -23,6 +23,9 @@ public class CombatMonster : MonoBehaviour
 
     private void Start()
     {
+        GameObject a = GameObject.Find("--WorldManagement--");
+        guardado = a.GetComponent<Save_Stats>();
+
         stat_change = false;
         fuerzaChanged = 0;
         intelChanged = 0;
@@ -33,8 +36,6 @@ public class CombatMonster : MonoBehaviour
             objLoadScene = GameObject.Find("--SceneManagement--");
             load = objLoadScene.GetComponent<LoadScene>();
             preload = objLoadScene.GetComponent<Preload>();
-
-            //save_posicion = GetComponent<personaje>();
         }
         cambiarVida(0);
     }
@@ -148,20 +149,22 @@ public class CombatMonster : MonoBehaviour
             //Si es el prota es GAMEOVER
             if (player.namePers == "Prota")
             {
+                Debug.Log("Prota ha perdido");
                 //load.GameOver();
                 Debug.Log("GAME OVER");
                 load.SalirCombate();
             }
             else //Si pierde el enemigo:
             {
-                //Guardar en preload la nueva constitucion
                 Debug.Log("HAS GANADO AL ENEMIGO");
-                restaurarStat(10); //Restaurar todos los stats si han sido cambiados
-                //hay que destruir el obj del enemigo
+                //Restaurar constitucino ficha enemigo
+                guardado.restaurarVidaEnemigo();
+                restaurarStat(10); //Restaurar todos los stats prota si han sido cambiados
+                //destruir el obj del enemigo
                 preload.DestroyEnemy();
                 //Hablar con SceneManager -> LoadScene volver a la pantalla anterior
                 load.SalirCombate();
-                
+       
             }
             //guardado.alguien_eliminado(player); //enviara el personaje que se elimine
         }
@@ -206,4 +209,5 @@ public class CombatMonster : MonoBehaviour
                 break;
         }
     }
+
 }

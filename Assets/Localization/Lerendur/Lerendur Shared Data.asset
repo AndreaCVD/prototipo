@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Lerendur Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Lerendur
+  m_TableCollectionNameGuidString: 13e892fd12643e14c8c6f8a790ceda91
+  m_Entries:
+  - m_Id: 432336896
+    m_Key: SentenceText_42e5e143-e512-47fe-954e-15fdd7964092
+    m_Metadata:
+      m_Items: []
+  - m_Id: 444919808
+    m_Key: SentenceName_11671a8a-0876-4bfa-ac30-2197679ce6f8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 444919809
+    m_Key: Answer_83bf95a4-446d-4f04-a22f-53a99714f377
+    m_Metadata:
+      m_Items: []
+  - m_Id: 444919810
+    m_Key: Answer_4258a36f-0a4e-4b70-a21a-13e83a59eba9
+    m_Metadata:
+      m_Items: []
+  - m_Id: 444919811
+    m_Key: Answer_7596a4ad-6f20-4147-8a59-397621e79354
+    m_Metadata:
+      m_Items: []
+  - m_Id: 444919812
+    m_Key: SentenceText_e9fe430f-d056-4259-963c-16a2dce80595
+    m_Metadata:
+      m_Items: []
+  - m_Id: 444919813
+    m_Key: SentenceText_1643fbef-d672-48ae-b383-75c7e13182fc
+    m_Metadata:
+      m_Items: []
+  - m_Id: 444919814
+    m_Key: SentenceText_34e5c004-faef-4d57-a4c4-120922af9d13
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 9006459322396049597
+  references:
+    version: 2
+    RefIds:
+    - rid: 9006459322396049597
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1780336134187

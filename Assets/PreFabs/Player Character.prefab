@@ -40,6 +40,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 874913250704937769}
     m_Modifications:
+    - target: {fileID: 275737516125493434, guid: 31817a986efa72f418ed20de88438f44, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 8cda01b70e37d0243811eef625a83adc, type: 2}
     - target: {fileID: 446173625170946264, guid: 31817a986efa72f418ed20de88438f44, type: 3}
       propertyPath: m_Name
       value: personaje

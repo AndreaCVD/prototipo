@@ -3,11 +3,46 @@ guid: 4187bbb44e6bf454391d59723ac5ef68
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: nim_botas
+    second: {fileID: 2100000, guid: 4627ddb94d773384997745add00df5fc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: nim_cara
+    second: {fileID: 2100000, guid: 0ab4358c9a404bd4388cde7799bf2699, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: nim_cuerpo
+    second: {fileID: 2100000, guid: 45494216077a61a49911b0ca56cd7209, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: nim_detalles_ropa
+    second: {fileID: 2100000, guid: 351cf7130d2efbe439b02b71fb71f06a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: nim_hojas
+    second: {fileID: 2100000, guid: ef89f8fd769213944a7760a164d9e5a8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: nim_pelo
+    second: {fileID: 2100000, guid: 7d1dfa5009d86e0488a4d3e558592449, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: nim_ropa
+    second: {fileID: 2100000, guid: 0c38e28d0e21d8e478515bebcdf28f3d, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
-    materialSearch: 1
+    materialSearch: 0
     materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
@@ -105,7 +140,7 @@ ModelImporter:
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
   referencedClips: []
-  importAnimation: 1
+  importAnimation: 0
   humanDescription:
     serializedVersion: 3
     human:

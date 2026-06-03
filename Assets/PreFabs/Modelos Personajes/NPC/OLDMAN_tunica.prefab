@@ -48,10 +48,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7324992761110174514, guid: fb7d8789053d61245bc0ce1243476752, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bebe25195e4ccc4694dcefa7397ca0f, type: 2}
+    - target: {fileID: -7324992761110174514, guid: fb7d8789053d61245bc0ce1243476752, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bebe25195e4ccc4694dcefa7397ca0f, type: 2}
+    - target: {fileID: -7324992761110174514, guid: fb7d8789053d61245bc0ce1243476752, type: 3}
+      propertyPath: 'm_Materials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bebe25195e4ccc4694dcefa7397ca0f, type: 2}
+    - target: {fileID: -894924960853817053, guid: fb7d8789053d61245bc0ce1243476752, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 1cb30811739961e40880e6630796368a, type: 2}
     - target: {fileID: 919132149155446097, guid: fb7d8789053d61245bc0ce1243476752, type: 3}
       propertyPath: m_Name
       value: OLDMAN_tunica
       objectReference: {fileID: 0}
+    - target: {fileID: 6135069787504564420, guid: fb7d8789053d61245bc0ce1243476752, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bebe25195e4ccc4694dcefa7397ca0f, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

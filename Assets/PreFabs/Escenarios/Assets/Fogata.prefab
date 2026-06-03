@@ -736,7 +736,7 @@ Light:
   serializedVersion: 11
   m_Type: 0
   m_Color: {r: 1, g: 0.41568628, b: 0, a: 1}
-  m_Intensity: 15
+  m_Intensity: 20
   m_Range: 12.27
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -826,8 +826,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fireLight: {fileID: 6627724097555873664}
-  minIntensity: 10
-  maxIntensity: 20
+  minIntensity: 15
+  maxIntensity: 30
   flickerSpeed: 8
 --- !u!1 &7643168651704350208
 GameObject:

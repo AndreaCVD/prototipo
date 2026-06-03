@@ -46,7 +46,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 999ac9c26c23f8949b945e510e2a5eb8, type: 3}
   m_Resource: {fileID: 8300000, guid: 999ac9c26c23f8949b945e510e2a5eb8, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.5
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -143,7 +143,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 7bb4596838a9d5b47a7cf45399ddbc67, type: 3}
   m_Resource: {fileID: 8300000, guid: 7bb4596838a9d5b47a7cf45399ddbc67, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.8
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0

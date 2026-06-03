@@ -215,7 +215,7 @@ public class Inventario : MonoBehaviour
                 lista.NivelDesbloqueado[2].acabado = true;
                 break;
             case string b when b.Contains("E"):
-
+                lista.NivelDesbloqueado[3].acabado = true;
                 break;
             default:
                 Debug.Log("No se ha leido bien la Puerta Maestra");

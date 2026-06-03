@@ -22,17 +22,19 @@ MonoBehaviour:
     acabado: 0
   Nivel_2:
   - name: Puzzle_C3
-    acabado: 0
+    acabado: 1
   - name: Puzzle_C6_a
-    acabado: 0
+    acabado: 1
   - name: Puzzle_C6_b
-    acabado: 0
+    acabado: 1
   NivelDesbloqueado:
   - name: Nivel_0
     acabado: 1
   - name: Nivel_1
     acabado: 1
   - name: Nivel_2
+    acabado: 1
+  - name: Nivel_3
     acabado: 0
   - name: Jefe_Final
     acabado: 0

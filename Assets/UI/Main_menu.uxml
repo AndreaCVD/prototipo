@@ -3,7 +3,7 @@
     <Style src="project://database/Assets/UI/Styles/opt_styles.uss?fileID=7433441132597879392&amp;guid=d6e248ec91fc6ed4697f1ebf65dd6d4c&amp;type=3#opt_styles" />
     <ui:VisualElement name="VisualElement" style="flex-grow: 1; background-color: rgb(255, 237, 200); width: 100%; height: 100%; flex-direction: row; flex-wrap: wrap; align-self: center; justify-content: center; align-content: stretch;">
         <ui:VisualElement style="flex-grow: 1; width: 60%; height: 100%; flex-wrap: wrap; justify-content: center; align-self: center; align-content: stretch;">
-            <ui:VisualElement name="Main_menu" style="flex-grow: 1;">
+            <ui:VisualElement name="Main_menu" style="flex-grow: 1; display: none;">
                 <ui:VisualElement style="flex-grow: 1; height: 70%; align-items: center; justify-content: center; padding-bottom: 0;">
                     <ui:Label text="Deep In Rescue" style="-unity-font-definition: url(&quot;project://database/Assets/UI/Fonts/Macondo_Swash_Caps/MacondoSwashCaps-Regular.ttf?fileID=12800000&amp;guid=5546ed486a9069048a9db0b71fda3440&amp;type=3#MacondoSwashCaps-Regular&quot;); font-size: 128px; margin-bottom: 40px; margin-top: 40px;" />
                     <ui:VisualElement name="btns" class="btns" style="flex-grow: 1; align-items: center; justify-content: center; width: 100%;">
@@ -22,7 +22,7 @@
                     <ui:VisualElement style="flex-grow: 0; background-image: url(&quot;project://database/Assets/Art/Interface/team_logo.png?fileID=2800000&amp;guid=62587fdd6e98df6418fe5bcf60e807b7&amp;type=3#team_logo&quot;); width: 240px; height: 200px; align-self: center; flex-shrink: 0; -unity-background-image-tint-color: rgb(255, 255, 255);" />
                 </ui:VisualElement>
             </ui:VisualElement>
-            <ui:VisualElement name="Options" style="flex-grow: 1; display: none; align-items: center; justify-content: center;">
+            <ui:VisualElement name="Options" style="flex-grow: 1; display: flex; align-items: center; justify-content: center;">
                 <ui:VisualElement class="opt-panel">
                     <ui:VisualElement class="opt-header">
                         <ui:Label text="Opciones" class="opt-title" />
@@ -89,8 +89,12 @@
                             <ui:Button name="key-jump" text="Space" class="opt-key" />
                         </ui:VisualElement>
                         <ui:VisualElement class="opt-row">
-                            <ui:Label text="Interactuar" class="opt-label" />
-                            <ui:Button name="key-interact" text="E" class="opt-key" />
+                            <ui:Label text="Inventario" class="opt-label" />
+                            <ui:Button name="key-interact" text="I" class="opt-key" />
+                        </ui:VisualElement>
+                        <ui:VisualElement class="opt-row">
+                            <ui:Label text="Reset Puzzle" class="opt-label" />
+                            <ui:Button name="key-interact" text="R" class="opt-key" />
                         </ui:VisualElement>
                     </ui:VisualElement>
                     <ui:VisualElement class="opt-footer">

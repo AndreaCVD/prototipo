@@ -5625,6 +5625,7 @@ PrefabInstance:
     - target: {fileID: 7052334839938477842, guid: 4997a3c32d5a68645b6a390ac1a63c05, type: 3}
       propertyPath: m_Name
       value: --WorldManagement--
+      objectReference: {fileID: 0}
     - target: {fileID: 7061097095983472112, guid: 003f3b5576696d24b8f1b50d2b060d6a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -24.13
@@ -8526,7 +8527,8 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 6085245211131076399, guid: f3c8c08f1df45eb4d95f4c65aa86e954, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3471499848450924075, guid: f3c8c08f1df45eb4d95f4c65aa86e954, type: 3}
@@ -9279,4 +9281,3 @@ SceneRoots:
   - {fileID: 717158619}
   - {fileID: 903920794}
   - {fileID: 1856689453}
-  - {fileID: 1253502818}

@@ -15,7 +15,7 @@ public class CommandPanel : MonoBehaviour
     private Button btnFUE, btnCAR, btnINT;
 
     //fila secundaria
-    private Button btnItem, btnDefend, btnRun;
+    private Button btnItem, btnRun;
 
     public List<int> Armas = new List<int>();
     int daga = 4;
@@ -38,17 +38,13 @@ public class CommandPanel : MonoBehaviour
         btnCAR = root.Q<Button>("btn-CAR");
         btnINT = root.Q<Button>("btn-INT");
         btnItem = root.Q<Button>("btn-item");
-        btnDefend = root.Q<Button>("btn-defender");
         btnRun = root.Q<Button>("btn-huir");
 
         // eventos
         btnFUE.clicked += Fuerza;
         btnINT.clicked += Intel;
         btnCAR.clicked += Carisma;
-        //Por implementar
         btnItem.clicked += UsarItem;
-        btnDefend.clicked += Defender;
-
         btnRun.clicked += Huir;
 
     }
@@ -58,10 +54,7 @@ public class CommandPanel : MonoBehaviour
         btnFUE.clicked -= Fuerza;
         btnINT.clicked -= Intel; //que es intel
         btnCAR.clicked -= Carisma;
-        //Por implementar
         btnItem.clicked -= UsarItem;
-        btnDefend.clicked -= Defender;
-
         btnRun.clicked -= Huir;
     }
 
@@ -97,10 +90,5 @@ public class CommandPanel : MonoBehaviour
     {
         Debug.Log("Usar ítem");
         // pendiente: abrir submenú de ítems
-    }
-    public void Defender()
-    {
-        Debug.Log("Defender");
-        // pendiente: commandManager.Defender() para que pueda usar algo para defenderse(? ya sea un item o un stat
     }
 }

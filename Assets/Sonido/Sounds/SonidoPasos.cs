@@ -1,17 +1,28 @@
 using UnityEngine;
-using System.Collections;
-using System.Collections.Generic;
 
 public class SonidoPasos : MonoBehaviour
 {
-    public AudioSource Pie;
+    public AudioSource pie;
 
-    void OnTriggerEnter(Collider other)
+    public float velocidadMinima = 0.1f;
+    private Rigidbody rb;
+
+    private float cooldown = 0.4f;
+    private float tiempo;
+
+    void Start()
     {
-        if (other.gameObject.tag == "Terrain")
+        rb = GetComponentInParent<Rigidbody>();
+    }
+
+    void Update()
+    {
+        tiempo += Time.deltaTime;
+
+        if (rb.linearVelocity.magnitude > velocidadMinima && tiempo > cooldown)
         {
-            Pie.Play();
+            pie.Play();
+            tiempo = 0f;
         }
-        
     }
 }

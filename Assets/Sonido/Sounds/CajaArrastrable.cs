@@ -3,24 +3,28 @@ using UnityEngine;
 public class CajaArrastrable : MonoBehaviour
 {
     private AudioSource audioSource;
-    private Rigidbody rb;
+    private Vector3 lastPosition;
 
-    private void Start()
+    void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        rb = GetComponent<Rigidbody>();
+        lastPosition = transform.position;
     }
 
-    private void Update()
+    void Update()
     {
-        if (rb.linearVelocity.magnitude > 0.1f)
+        float speed = (transform.position - lastPosition).magnitude / Time.deltaTime;
+        lastPosition = transform.position;
+
+        if (speed > 0.05f)
         {
             if (!audioSource.isPlaying)
                 audioSource.Play();
         }
         else
         {
-            audioSource.Stop();
+            if (audioSource.isPlaying)
+                audioSource.Stop();
         }
     }
 }

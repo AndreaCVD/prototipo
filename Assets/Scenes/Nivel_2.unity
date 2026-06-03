@@ -3382,6 +3382,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Caballero
       objectReference: {fileID: 0}
+    - target: {fileID: 6043108632883557339, guid: 18956a4a129394a42aeebd1263fb6080, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6691557478830491062, guid: 18956a4a129394a42aeebd1263fb6080, type: 3}
       propertyPath: m_LocalPosition.x
       value: 14.97
@@ -3422,7 +3426,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3061432036549576514, guid: 18956a4a129394a42aeebd1263fb6080, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -8517,6 +8522,9 @@ PrefabInstance:
     - {fileID: 6085245211131076399, guid: f3c8c08f1df45eb4d95f4c65aa86e954, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6338566132306605374, guid: f3c8c08f1df45eb4d95f4c65aa86e954, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2137292242}
     - targetCorrespondingSourceObject: {fileID: 3471499848450924075, guid: f3c8c08f1df45eb4d95f4c65aa86e954, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2137292240}
@@ -8557,6 +8565,43 @@ MonoBehaviour:
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: da7288751a1bc5344a64733936aff15f, type: 2}
+  m_BuildHeightMesh: 0
+--- !u!1 &2137292241 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6338566132306605374, guid: f3c8c08f1df45eb4d95f4c65aa86e954, type: 3}
+  m_PrefabInstance: {fileID: 2137292238}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2137292242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2137292241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: 5773373511d16004d826e2bdc3e5602b, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1001 &2139073638
 PrefabInstance:

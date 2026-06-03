@@ -1413,7 +1413,7 @@ MonoBehaviour:
   p1_eliminarObj:
   - {fileID: 86490983}
   Viejo:
-  - {fileID: 7133974697767074764, guid: dc88d0fe488a0d6418eb952c2a3f6af9, type: 3}
+  - {fileID: 7496059058313035101, guid: 37466921ec1ecb84c817adf207f10a55, type: 3}
   - {fileID: 715465669}
   - {fileID: 6721974915179715331, guid: a8e537b490800004695d70a1e60297c1, type: 3}
   - {fileID: 945437737}
@@ -1424,7 +1424,7 @@ MonoBehaviour:
   - {fileID: 5129983443918336922, guid: c1c05c21c0054414ea9f1de4ff63c4f5, type: 3}
   - {fileID: 1538598620}
   Lerendur:
-  - {fileID: 6216235725652669195, guid: 79ee0dd65e362fe498e3a4a50acb261d, type: 3}
+  - {fileID: 9065448973874852632, guid: 2f2f2188d2e9c6f44a7f9a41c1027b58, type: 3}
   - {fileID: 966352730}
 --- !u!4 &993586341 stripped
 Transform:
@@ -3311,6 +3311,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 99425f30ac45152409f585f5116344b4, type: 2}
+    - target: {fileID: 8347525137303985768, guid: 5c79d546b7316ef46949f82b1b50dfb6, type: 3}
+      propertyPath: dialogo_obj
+      value: 
+      objectReference: {fileID: 11400000, guid: 10b25ac636882024cbc6bcd6b7a8bed5, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3648,6 +3652,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1065879838}
     m_Modifications:
+    - target: {fileID: 167340333359884298, guid: 4185c72d3485a5f4b809abd1dc4642dc, type: 3}
+      propertyPath: dialogo_obj
+      value: 
+      objectReference: {fileID: 11400000, guid: 10b25ac636882024cbc6bcd6b7a8bed5, type: 2}
     - target: {fileID: 1332034927812465775, guid: 4185c72d3485a5f4b809abd1dc4642dc, type: 3}
       propertyPath: m_Name
       value: Tienda Nim

@@ -5,6 +5,7 @@ using Random = UnityEngine.Random;
 
 public class Inventario : MonoBehaviour
 {
+    LoadScene load;
     [SerializeField] Parameters prota;
     [SerializeField] Puzzle lista;
     //Para encontrar los scripts de DialogManager
@@ -31,6 +32,11 @@ public class Inventario : MonoBehaviour
         {
             script_dialog = GameObject.Find("--DialogManager--");
             dialog = script_dialog.GetComponent<Dialog>();
+        }
+        if (load == null)
+        {
+            GameObject aux = GameObject.Find("--SceneManagement--");
+            load = aux.GetComponent<LoadScene>();
         }
     }
     public void InsertKey(GameObject x)
@@ -73,9 +79,13 @@ public class Inventario : MonoBehaviour
     {
 
          Debug.Log("lava");
-        if (prota.stats.values[3].value >= 0)
+        if (prota.stats.values[3].value > 0)
         {
             prota.stats.values[3].value--;
+        }
+        if (prota.stats.values[3].value <= 0)
+        {
+            load.GameOver();
         }
 
     }
@@ -273,6 +283,6 @@ public class Inventario : MonoBehaviour
         {
             return false;
         }
-
+   
     }
 }

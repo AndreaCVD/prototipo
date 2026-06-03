@@ -22,7 +22,6 @@ public class ThirdFloorPuzzle : MonoBehaviour
     void Start()
     {
         InstanciarPers();
-        //Treure pq sino sempre es reinicien?
     }
 
     void Update()

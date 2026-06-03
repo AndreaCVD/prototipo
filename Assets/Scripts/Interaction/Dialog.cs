@@ -18,7 +18,7 @@ public class Dialog : MonoBehaviour
     [SerializeField] private cherrydev.DialogBehaviour _dialogBehaviour;
     
     private GameObject obj;
-    private int vidaMax = 40;
+    private int vidaMax = 50;
     private int objMax = 3;
 
     ////La conversa, podemos tener todas las conversas guardadas y enviar la que se necesite

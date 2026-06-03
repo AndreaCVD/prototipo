@@ -15,8 +15,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1092.797
-    y: 163.60022
+    x: 1680.7959
+    y: 162.80023
     width: 190
     height: 80
   IsDragging: 1
@@ -41,16 +41,16 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 787.9983
-    y: -38.79991
+    x: 1367.198
+    y: -39.59993
     width: 190
     height: 135
   IsDragging: 1
   IsSelected: 0
   _sentence:
-    CharacterName: El Creador
+    CharacterName: Creador
     Text: Pero cuando por fin estaba todo controlado, vino una cuarta persona...
-    CharacterSprite: {fileID: 0}
+    CharacterSprite: {fileID: 21300000, guid: cb49f1d4184a4b146bdfee8689056089, type: 3}
   ParentNodes:
   - {fileID: -27375284302923651}
   ChildNode: {fileID: 8769178697009473957}
@@ -73,8 +73,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 895.1979
-    y: 298.00027
+    x: 1483.197
+    y: 297.20026
     width: 190
     height: 135
   IsDragging: 1
@@ -105,8 +105,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -90.39987
-    y: 10.000092
+    x: 497.60065
+    y: 9.200027
     width: 190
     height: 135
   IsDragging: 1
@@ -141,8 +141,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1172.7975
-    y: 323.6008
+    x: 1760.7961
+    y: 322.80078
     width: 190
     height: 80
   IsDragging: 1
@@ -167,8 +167,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -618.4
-    y: 103.600266
+    x: -30.399986
+    y: 102.80023
     width: 240
     height: 160
   IsDragging: 1
@@ -198,8 +198,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -112.00037
-    y: -210.7998
+    x: 476.00006
+    y: -211.59982
     width: 190
     height: 135
   IsDragging: 1
@@ -231,8 +231,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -24.000946
-    y: 316.40097
+    x: 563.9999
+    y: 315.60095
     width: 190
     height: 135
   IsDragging: 1
@@ -264,8 +264,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -1234.4008
-    y: 364.40042
+    x: -646.40125
+    y: 363.6003
     width: 190
     height: 80
   IsDragging: 1
@@ -289,8 +289,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 663.99585
-    y: 133.20024
+    x: 1251.9968
+    y: 132.4002
     width: 190
     height: 135
   IsDragging: 1
@@ -321,14 +321,14 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 555.9983
-    y: -32.39995
+    x: 1143.9988
+    y: -33.199966
     width: 190
     height: 135
   IsDragging: 1
   IsSelected: 0
   _sentence:
-    CharacterName: El Creador
+    CharacterName: Creador
     Text: Hasta que esos tres se metieron y empezaron a matar a mis creaciones, tuve
       que paralos, seguro me entiendes.
     CharacterSprite: {fileID: 21300000, guid: cb49f1d4184a4b146bdfee8689056089, type: 3}
@@ -395,14 +395,14 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 119.99933
-    y: 5.2000427
+    x: 708.0001
+    y: 4.399994
     width: 190
     height: 135
   IsDragging: 1
-  IsSelected: 0
+  IsSelected: 1
   _sentence:
-    CharacterName: El Creador
+    CharacterName: Creador
     Text: "\xBFLerendur? No, no, yo soy el CREADOR."
     CharacterSprite: {fileID: 21300000, guid: cb49f1d4184a4b146bdfee8689056089, type: 3}
   ParentNodes:
@@ -427,8 +427,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -318.4004
-    y: 231.60062
+    x: 269.60016
+    y: 230.80066
     width: 240
     height: 160
   IsDragging: 1
@@ -458,8 +458,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 189.59991
-    y: 315.60117
+    x: 777.60095
+    y: 314.80115
     width: 190
     height: 135
   IsDragging: 1
@@ -490,8 +490,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1300.7968
-    y: 163.60022
+    x: 1888.7952
+    y: 162.80023
     width: 190
     height: 80
   IsDragging: 1
@@ -516,8 +516,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -827.9995
-    y: 98.80017
+    x: -239.99951
+    y: 98.00012
     width: 190
     height: 135
   IsDragging: 1
@@ -548,8 +548,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -416.00034
-    y: -103.59973
+    x: 172.00008
+    y: -104.39975
     width: 240
     height: 160
   IsDragging: 1
@@ -579,14 +579,14 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 884.7975
-    y: 121.20012
+    x: 1472.7966
+    y: 120.400085
     width: 190
     height: 135
   IsDragging: 1
   IsSelected: 0
   _sentence:
-    CharacterName: El Creador
+    CharacterName: Creador
     Text: Tu lo has querido...
     CharacterSprite: {fileID: 21300000, guid: cb49f1d4184a4b146bdfee8689056089, type: 3}
   ParentNodes:
@@ -611,8 +611,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 339.1985
-    y: -27.599869
+    x: 927.199
+    y: -28.399918
     width: 190
     height: 135
   IsDragging: 1
@@ -644,8 +644,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -1081.6006
-    y: 123.6001
+    x: -493.60022
+    y: 122.80005
     width: 210
     height: 155
   IsDragging: 1
@@ -674,8 +674,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -960.7999
-    y: 326.8002
+    x: -372.79968
+    y: 326.00012
     width: 240
     height: 160
   IsDragging: 1
@@ -705,14 +705,14 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 396.79858
-    y: 158.00014
+    x: 984.7992
+    y: 157.20007
     width: 190
     height: 135
   IsDragging: 1
-  IsSelected: 1
+  IsSelected: 0
   _sentence:
-    CharacterName: El Creador
+    CharacterName: Creador
     Text: "Es tu \xFAltima advertencia, da la vuelta, y no vuelvas."
     CharacterSprite: {fileID: 21300000, guid: cb49f1d4184a4b146bdfee8689056089, type: 3}
   ParentNodes:

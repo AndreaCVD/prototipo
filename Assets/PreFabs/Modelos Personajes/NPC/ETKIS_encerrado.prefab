@@ -70,7 +70,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: a33e01e51d4d8d843bcc021cbac51c2c, type: 2}
     - target: {fileID: 919132149155446097, guid: 0a0a1eb2df3ea234bb04209f3a115f56, type: 3}
       propertyPath: m_Name
-      value: ETKIS_Libre
+      value: ETKIS_encerrado
       objectReference: {fileID: 0}
     - target: {fileID: 3404357179546756212, guid: 0a0a1eb2df3ea234bb04209f3a115f56, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -122,7 +122,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4319122541119545550}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 9000000, guid: 0a0a1eb2df3ea234bb04209f3a115f56, type: 3}
   m_Controller: {fileID: 9100000, guid: e55cdf5be586e9741bad8e76c124466b, type: 2}
   m_CullingMode: 0
@@ -196,4 +196,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3d42b3a497006740958fffd87391ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogo_obj: {fileID: 11400000, guid: 27962f46d95a98f458c65917a4f6d544, type: 2}
+  dialogo_obj: {fileID: 11400000, guid: abf526e898de352478f2eea6b3c2beea, type: 2}

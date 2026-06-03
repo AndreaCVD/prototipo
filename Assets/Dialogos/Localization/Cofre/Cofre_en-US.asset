@@ -18,12 +18,12 @@ MonoBehaviour:
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 2943043133304832
+  - m_Id: 5489130620645376
     m_Localized: Vaya...me falta la llave
     m_Metadata:
       m_Items: []
-  - m_Id: 2943043187830784
-    m_Localized: Prota
+  - m_Id: 5489130629033984
+    m_Localized: Carlos
     m_Metadata:
       m_Items: []
   references:

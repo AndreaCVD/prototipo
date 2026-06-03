@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3184c13f5276613429ba2c5118bbc8ba, type: 3}
   m_Name: Libro
   m_EditorClassIdentifier: 
-  namePers: 
+  namePers: Jefe Libro
   stats:
     values:
     - value: 1
@@ -27,4 +27,4 @@ MonoBehaviour:
       stats: 4
   Inventario: {fileID: 0}
   modelPrefab: {fileID: 0}
-  art: {fileID: 0}
+  art: {fileID: 21300000, guid: c321d5205b202404bb7a77e6f9916dbd, type: 3}

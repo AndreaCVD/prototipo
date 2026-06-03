@@ -40,6 +40,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5286120530900622907}
     m_Modifications:
+    - target: {fileID: 2185183449313418342, guid: 5073572a63fa27549bc5dfeeb0a96bf4, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bebe25195e4ccc4694dcefa7397ca0f, type: 2}
     - target: {fileID: 3925274058513239241, guid: 5073572a63fa27549bc5dfeeb0a96bf4, type: 3}
       propertyPath: m_LocalPosition.x
       value: 4.96
@@ -84,6 +88,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Low_Viejo_Tunica
       objectReference: {fileID: 0}
+    - target: {fileID: 8579892645539421437, guid: 5073572a63fa27549bc5dfeeb0a96bf4, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6bebe25195e4ccc4694dcefa7397ca0f, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

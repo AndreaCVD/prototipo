@@ -48,10 +48,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: personaje
       objectReference: {fileID: 0}
+    - target: {fileID: 688934149860756587, guid: 31817a986efa72f418ed20de88438f44, type: 3}
+      propertyPath: m_AABB.m_Center.y
+      value: 26.826485
+      objectReference: {fileID: 0}
+    - target: {fileID: 688934149860756587, guid: 31817a986efa72f418ed20de88438f44, type: 3}
+      propertyPath: m_AABB.m_Center.z
+      value: -21.160942
+      objectReference: {fileID: 0}
+    - target: {fileID: 688934149860756587, guid: 31817a986efa72f418ed20de88438f44, type: 3}
+      propertyPath: m_AABB.m_Extent.y
+      value: 92.45258
+      objectReference: {fileID: 0}
+    - target: {fileID: 688934149860756587, guid: 31817a986efa72f418ed20de88438f44, type: 3}
+      propertyPath: m_AABB.m_Extent.z
+      value: 45.112
+      objectReference: {fileID: 0}
     - target: {fileID: 6584073865269333082, guid: 31817a986efa72f418ed20de88438f44, type: 3}
       propertyPath: pivot_personaje
       value: 
       objectReference: {fileID: 2576964640423784762}
+    - target: {fileID: 7250735351300395433, guid: 31817a986efa72f418ed20de88438f44, type: 3}
+      propertyPath: m_Size.y
+      value: 1.6155472
+      objectReference: {fileID: 0}
+    - target: {fileID: 7250735351300395433, guid: 31817a986efa72f418ed20de88438f44, type: 3}
+      propertyPath: m_Center.y
+      value: -0.42794228
+      objectReference: {fileID: 0}
     - target: {fileID: 7482857798997454973, guid: 31817a986efa72f418ed20de88438f44, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

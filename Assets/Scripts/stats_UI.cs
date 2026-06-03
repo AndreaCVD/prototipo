@@ -15,6 +15,7 @@ public class stats_UI : MonoBehaviour
     [SerializeField] Sprite iconoPocionVida;
     [SerializeField] Sprite iconoDaga;
     [SerializeField] Sprite iconoEspada;
+    [SerializeField] Sprite iconoPocionLava;
 
     //ref del UI
     private VisualElement root;
@@ -35,6 +36,7 @@ public class stats_UI : MonoBehaviour
     private int daga;
     private int espada;
     private int pocionVida;
+    private int pocionLava;
 
     private void OnEnable()
     {
@@ -70,6 +72,7 @@ public class stats_UI : MonoBehaviour
         espada = 0;
         daga = 0;
         pocionVida = 0;
+        pocionLava = 0;
 
         //Seteamos valores, int -> string
         int f = protagonista.stats.Get(PersonajesStats.Fuerza);
@@ -125,11 +128,13 @@ public class stats_UI : MonoBehaviour
         if (protagonista.Inventario.LlaveMaestra == null) return false;
         if (protagonista.Inventario.PocionVida == null) return false;
         if (protagonista.Inventario.Daga == null) return false;
+        if (protagonista.Inventario.PocionLava == null) return false;
         if (protagonista.Inventario.Espada == null) return false;
 
         if (protagonista.Inventario.Llave.Count() != llaves) return false;
         if (protagonista.Inventario.LlaveMaestra.Count() != llaveMaestra) return false;
         if (protagonista.Inventario.PocionVida.Count() != pocionVida) return false;
+        if (protagonista.Inventario.PocionLava.Count() != pocionVida) return false;
         if (protagonista.Inventario.Daga.Count() != daga) return false;
         if (protagonista.Inventario.Espada.Count() != espada) return false;
 
@@ -188,12 +193,14 @@ public class stats_UI : MonoBehaviour
         if (protagonista.Inventario.Llave == null) return;
         if (protagonista.Inventario.LlaveMaestra == null) return;
         if (protagonista.Inventario.PocionVida == null) return;
+        if (protagonista.Inventario.PocionLava == null) return;
         if (protagonista.Inventario.Daga == null) return;
         if (protagonista.Inventario.Espada == null) return;
 
         llaves = protagonista.Inventario.Llave.Count();
         llaveMaestra = protagonista.Inventario.LlaveMaestra.Count();
         pocionVida = protagonista.Inventario.PocionVida.Count();
+        pocionLava = protagonista.Inventario.PocionLava.Count();
         daga = protagonista.Inventario.Daga.Count();
         espada = protagonista.Inventario.Espada.Count();
 
@@ -202,7 +209,7 @@ public class stats_UI : MonoBehaviour
         SetSlot(2, pocionVida > 0 ? iconoPocionVida : null, pocionVida);
         SetSlot(3, daga > 0 ? iconoDaga : null, daga);
         SetSlot(4, espada > 0 ? iconoEspada : null, espada);
-        SetSlot(5, null, 0);
+        SetSlot(5, pocionLava > 0 ? iconoPocionLava : null, pocionLava);
     }
 
     void SetSlot(int index, Sprite icono, int cantidad)

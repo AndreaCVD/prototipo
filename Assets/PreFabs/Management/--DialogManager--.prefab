@@ -456,8 +456,6 @@ MonoBehaviour:
   prota: {fileID: 0}
   escenaState: {fileID: 0}
   _dialogBehaviour: {fileID: 337099933847317424}
-  vidaMax: 40
-  objMax: 3
 --- !u!1 &6336766162337916526
 GameObject:
   m_ObjectHideFlags: 0

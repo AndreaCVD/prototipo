@@ -18,50 +18,50 @@ MonoBehaviour:
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 869872754290688
+  - m_Id: 1170409265623040
     m_Localized: zzzzzzzz
     m_Metadata:
       m_Items: []
-  - m_Id: 869872754290689
+  - m_Id: 1170409265623041
     m_Localized: ???
     m_Metadata:
       m_Items: []
-  - m_Id: 869872754290690
+  - m_Id: 1170409265623042
     m_Localized: Nim
     m_Metadata:
       m_Items: []
-  - m_Id: 869872754290691
-    m_Localized: 
+  - m_Id: 1170409265623043
+    m_Localized: Nim
     m_Metadata:
       m_Items: []
-  - m_Id: 869872754290692
+  - m_Id: 1170409265623044
     m_Localized: Despertar
     m_Metadata:
       m_Items: []
-  - m_Id: 869872754290693
+  - m_Id: 1170409265623045
     m_Localized: Dejarle dormir
     m_Metadata:
       m_Items: []
-  - m_Id: 869872754290694
+  - m_Id: 1170409265623046
     m_Localized: Prota
     m_Metadata:
       m_Items: []
-  - m_Id: 869872754290695
+  - m_Id: 1170409265623047
     m_Localized: Quiero volver arriba...
     m_Metadata:
       m_Items: []
-  - m_Id: 869872754290696
+  - m_Id: 1170409265623048
     m_Localized: "Yo soy Nim, estaba explorando la mazmorra con mis compa\xF1eros
       pero los he perdido."
     m_Metadata:
       m_Items: []
-  - m_Id: 869872754290697
-    m_Localized: "Etkis se quedo en el piso de arriba y no se donde esta Lerendur.
+  - m_Id: 1170409265623049
+    m_Localized: "Etkis se qued\xF3 en el piso de arriba y no se donde esta Lerendur.
       Yo he quedado aqu\xED atrapada sin poder salir."
     m_Metadata:
       m_Items: []
-  - m_Id: 869872754290698
-    m_Localized: Y como no sabia que hacer, me hize una siesta
+  - m_Id: 1170409265623050
+    m_Localized: Y como no sabia que hacer, me heche una siesta
     m_Metadata:
       m_Items: []
   references:

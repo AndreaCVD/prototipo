@@ -427,9 +427,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d59f62e3936f37042bb932934b34b69c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menuCommand: {fileID: 0}
+  menuCommand: {fileID: 88913841}
   turnRoundManager: {fileID: 88913839}
-  combatDebug: {fileID: 0}
+  combatDebug: {fileID: 88913838}
   diceRoller: {fileID: 88913843}
 --- !u!114 &88913841
 MonoBehaviour:
@@ -799,7 +799,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: -169, y: 225}
-  m_SizeDelta: {x: 80, y: 80}
+  m_SizeDelta: {x: 64, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &336598089
 MonoBehaviour:
@@ -1649,7 +1649,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -236, y: 0}
-  m_SizeDelta: {x: 64, y: 158}
+  m_SizeDelta: {x: 64, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &878334522
 MonoBehaviour:
@@ -2651,7 +2651,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   commandManager: {fileID: 88913840}
-  Armas: 
 --- !u!1 &1281419176
 GameObject:
   m_ObjectHideFlags: 0
@@ -3804,7 +3803,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   commandManager: {fileID: 88913840}
-  Armas: 
 --- !u!114 &1977436079
 MonoBehaviour:
   m_ObjectHideFlags: 0

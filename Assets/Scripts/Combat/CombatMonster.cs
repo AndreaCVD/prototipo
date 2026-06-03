@@ -152,7 +152,7 @@ public class CombatMonster : MonoBehaviour
                 Debug.Log("Prota ha perdido");
                 //load.GameOver();
                 Debug.Log("GAME OVER");
-                load.SalirCombate();
+                load.GameOver();
             }
             else //Si pierde el enemigo:
             {

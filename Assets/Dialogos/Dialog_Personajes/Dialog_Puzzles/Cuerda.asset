@@ -1,0 +1,520 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7401661441927131018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f4b3c64aaf434ea0df52154c1c7680, type: 3}
+  m_Name: External Function Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 208.79984
+    y: 388.39957
+    width: 190
+    height: 80
+  IsDragging: 1
+  IsSelected: 0
+  _functionName: ContinuarMov
+  _description: 
+  ParentNodes:
+  - {fileID: -887244613691101627}
+  - {fileID: 9024950101025651931}
+  - {fileID: 4760993107417321355}
+  - {fileID: -2381589728315482750}
+  ChildNode: {fileID: -617770388122609846}
+--- !u!114 &-3425903161041344827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f4b3c64aaf434ea0df52154c1c7680, type: 3}
+  m_Name: External Function Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -646.3998
+    y: 211.6
+    width: 190
+    height: 80
+  IsDragging: 1
+  IsSelected: 0
+  _functionName: PisosDesbloqueados
+  _description: 
+  ParentNodes:
+  - {fileID: 3093827038934681396}
+  ChildNode: {fileID: 7722732253474417685}
+--- !u!114 &-2381589728315482750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1717f3c6dba9fa40844ddacac301510, type: 3}
+  m_Name: Answer Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 520.80054
+    y: -141.20009
+    width: 190
+    height: 175
+  IsDragging: 1
+  IsSelected: 0
+  Answers:
+  - Campamento
+  - Primer Nivel
+  - Segundo Nivel
+  - Tercer Nivel
+  AnswerKeys: []
+  ParentNodes:
+  - {fileID: 5018439262714322912}
+  ChildNodes:
+  - {fileID: -7401661441927131018}
+  - {fileID: 3640164698885939766}
+  - {fileID: -2106874830306727601}
+  - {fileID: -1896232509494548426}
+--- !u!114 &-2106874830306727601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f4b3c64aaf434ea0df52154c1c7680, type: 3}
+  m_Name: External Function Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 836.7992
+    y: 138.00003
+    width: 190
+    height: 80
+  IsDragging: 1
+  IsSelected: 0
+  _functionName: ContinuarMov
+  _description: 
+  ParentNodes:
+  - {fileID: 4760993107417321355}
+  - {fileID: -2381589728315482750}
+  ChildNode: {fileID: 308131441627324060}
+--- !u!114 &-1896232509494548426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f4b3c64aaf434ea0df52154c1c7680, type: 3}
+  m_Name: External Function Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 827.1991
+    y: -49.19998
+    width: 190
+    height: 80
+  IsDragging: 1
+  IsSelected: 0
+  _functionName: ContinuarMov
+  _description: 
+  ParentNodes:
+  - {fileID: -2381589728315482750}
+  ChildNode: {fileID: 3542580953609265815}
+--- !u!114 &-887244613691101627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1717f3c6dba9fa40844ddacac301510, type: 3}
+  m_Name: Answer Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -99.20005
+    y: 274.00034
+    width: 190
+    height: 115
+  IsDragging: 1
+  IsSelected: 0
+  Answers:
+  - Campamento
+  AnswerKeys: []
+  ParentNodes:
+  - {fileID: 7722732253474417685}
+  ChildNodes:
+  - {fileID: -7401661441927131018}
+--- !u!114 &-617770388122609846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f4b3c64aaf434ea0df52154c1c7680, type: 3}
+  m_Name: External Function Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 219.99982
+    y: 473.99954
+    width: 190
+    height: 80
+  IsDragging: 1
+  IsSelected: 0
+  _functionName: irCampamento
+  _description: 
+  ParentNodes:
+  - {fileID: -7401661441927131018}
+  ChildNode: {fileID: 0}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33f741ea10ebcf842a91c9b871dd032a, type: 3}
+  m_Name: Cuerda
+  m_EditorClassIdentifier: 
+  NodesList:
+  - {fileID: 3093827038934681396}
+  - {fileID: -2381589728315482750}
+  - {fileID: -3425903161041344827}
+  - {fileID: 7722732253474417685}
+  - {fileID: 6901883310320801876}
+  - {fileID: 5018439262714322912}
+  - {fileID: 4760993107417321355}
+  - {fileID: 9024950101025651931}
+  - {fileID: -887244613691101627}
+  - {fileID: -7401661441927131018}
+  - {fileID: -617770388122609846}
+  - {fileID: 2187321377584024926}
+  - {fileID: 3640164698885939766}
+  - {fileID: -2106874830306727601}
+  - {fileID: 308131441627324060}
+  - {fileID: -1896232509494548426}
+  - {fileID: 3542580953609265815}
+  VariablesConfig: {fileID: 11400000, guid: fd3c0eeb49ef7a944b8628ab44b19a6e, type: 2}
+  _localizationTableName: 
+  _characterNamesLocalizationName: 
+  NodeToDrawLineFrom: {fileID: 0}
+  LinePosition: {x: 0, y: 0}
+  IsLocalizationSetUp: 0
+--- !u!114 &308131441627324060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f4b3c64aaf434ea0df52154c1c7680, type: 3}
+  m_Name: External Function Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 909.599
+    y: 266.0001
+    width: 190
+    height: 80
+  IsDragging: 1
+  IsSelected: 0
+  _functionName: irNivel_2
+  _description: 
+  ParentNodes:
+  - {fileID: -2106874830306727601}
+  ChildNode: {fileID: 0}
+--- !u!114 &2187321377584024926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f4b3c64aaf434ea0df52154c1c7680, type: 3}
+  m_Name: External Function Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 580.7993
+    y: 409.19998
+    width: 190
+    height: 80
+  IsDragging: 1
+  IsSelected: 0
+  _functionName: irNivel_1
+  _description: 
+  ParentNodes:
+  - {fileID: 3640164698885939766}
+  ChildNode: {fileID: 0}
+--- !u!114 &3093827038934681396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f4b3c64aaf434ea0df52154c1c7680, type: 3}
+  m_Name: External Function Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -862.40186
+    y: 214.80008
+    width: 190
+    height: 80
+  IsDragging: 1
+  IsSelected: 0
+  _functionName: PararMov
+  _description: 
+  ParentNodes: []
+  ChildNode: {fileID: -3425903161041344827}
+--- !u!114 &3542580953609265815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f4b3c64aaf434ea0df52154c1c7680, type: 3}
+  m_Name: External Function Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 1053.5989
+    y: -43.599976
+    width: 190
+    height: 80
+  IsDragging: 1
+  IsSelected: 1
+  _functionName: irNivel_3
+  _description: 
+  ParentNodes:
+  - {fileID: -1896232509494548426}
+  ChildNode: {fileID: 0}
+--- !u!114 &3640164698885939766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f4b3c64aaf434ea0df52154c1c7680, type: 3}
+  m_Name: External Function Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 559.19946
+    y: 305.20016
+    width: 190
+    height: 80
+  IsDragging: 1
+  IsSelected: 0
+  _functionName: ContinuarMov
+  _description: 
+  ParentNodes:
+  - {fileID: 9024950101025651931}
+  - {fileID: 4760993107417321355}
+  - {fileID: -2381589728315482750}
+  ChildNode: {fileID: 2187321377584024926}
+--- !u!114 &4760993107417321355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1717f3c6dba9fa40844ddacac301510, type: 3}
+  m_Name: Answer Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 521.60034
+    y: 38.80002
+    width: 190
+    height: 155
+  IsDragging: 1
+  IsSelected: 0
+  Answers:
+  - Campamento
+  - Primer Nivel
+  - Segundo Nivel
+  AnswerKeys: []
+  ParentNodes:
+  - {fileID: 5018439262714322912}
+  ChildNodes:
+  - {fileID: -7401661441927131018}
+  - {fileID: 3640164698885939766}
+  - {fileID: -2106874830306727601}
+--- !u!114 &5018439262714322912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38789157e7795244280823d019530045, type: 3}
+  m_Name: Variable Condition Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 140.80008
+    y: -57.200012
+    width: 240
+    height: 160
+  IsDragging: 1
+  IsSelected: 0
+  _variableName: nivel_3
+  _conditionType: 0
+  _boolTargetValue: 0
+  _intTargetValue: 0
+  _floatTargetValue: 0
+  _stringTargetValue: 
+  ParentNodes:
+  - {fileID: 6901883310320801876}
+  TrueChildNode: {fileID: -2381589728315482750}
+  FalseChildNode: {fileID: 4760993107417321355}
+--- !u!114 &6901883310320801876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38789157e7795244280823d019530045, type: 3}
+  m_Name: Variable Condition Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -150.4
+    y: -5.199951
+    width: 240
+    height: 160
+  IsDragging: 1
+  IsSelected: 0
+  _variableName: nivel_2
+  _conditionType: 0
+  _boolTargetValue: 0
+  _intTargetValue: 1
+  _floatTargetValue: 0
+  _stringTargetValue: 
+  ParentNodes:
+  - {fileID: 7722732253474417685}
+  TrueChildNode: {fileID: 5018439262714322912}
+  FalseChildNode: {fileID: 9024950101025651931}
+--- !u!114 &7722732253474417685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38789157e7795244280823d019530045, type: 3}
+  m_Name: Variable Condition Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -412.79993
+    y: 143.6
+    width: 240
+    height: 160
+  IsDragging: 1
+  IsSelected: 0
+  _variableName: nivel_1
+  _conditionType: 0
+  _boolTargetValue: 0
+  _intTargetValue: 1
+  _floatTargetValue: 0
+  _stringTargetValue: 
+  ParentNodes:
+  - {fileID: -3425903161041344827}
+  TrueChildNode: {fileID: 6901883310320801876}
+  FalseChildNode: {fileID: -887244613691101627}
+--- !u!114 &9024950101025651931
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1717f3c6dba9fa40844ddacac301510, type: 3}
+  m_Name: Answer Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 158.39993
+    y: 157.20004
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  Answers:
+  - Campamento
+  - Primer Nivel
+  AnswerKeys: []
+  ParentNodes:
+  - {fileID: 6901883310320801876}
+  ChildNodes:
+  - {fileID: -7401661441927131018}
+  - {fileID: 3640164698885939766}

@@ -23,9 +23,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Nivel_3.unity
     guid: 84bfb7edd1bfc6c4388e5edb044217c6
-  - enabled: 0
-    path: Assets/Scenes/combate_pruevas.unity
-    guid: 7f3f975d67e5bef4d9ac8db85b779ebe
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: 17d492beabbd2f94b938bc309306b692
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: a028e39953340324ca0ac3c1d91e7b7b, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}

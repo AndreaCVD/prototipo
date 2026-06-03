@@ -43,7 +43,7 @@
                     <ui:IntegerField name="int_life" value="60" focusable="false" class="fuente-personalizada card__value" />
                 </ui:VisualElement>
             </ui:VisualElement>
-            <ui:VisualElement name="inventory-grid" class="inventory-grid" style="justify-content: space-evenly; display: none;">
+            <ui:VisualElement name="inventory-grid" class="inventory-grid" style="justify-content: space-evenly; display: flex;">
                 <ui:VisualElement name="slot-0" class="inv-slot">
                     <ui:VisualElement name="slot-0-icon" class="inv-slot__icon" />
                     <ui:Label name="slot-0-badge" text="0" class="inv-slot__badge" />

@@ -52,6 +52,14 @@ PrefabInstance:
       propertyPath: pivot_personaje
       value: 
       objectReference: {fileID: 2576964640423784762}
+    - target: {fileID: 7250735351300395433, guid: 31817a986efa72f418ed20de88438f44, type: 3}
+      propertyPath: m_Size.y
+      value: 1.6155472
+      objectReference: {fileID: 0}
+    - target: {fileID: 7250735351300395433, guid: 31817a986efa72f418ed20de88438f44, type: 3}
+      propertyPath: m_Center.y
+      value: -0.42794228
+      objectReference: {fileID: 0}
     - target: {fileID: 7482857798997454973, guid: 31817a986efa72f418ed20de88438f44, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

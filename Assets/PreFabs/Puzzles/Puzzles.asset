@@ -17,7 +17,7 @@ MonoBehaviour:
     acabado: 0
   Nivel_1:
   - name: Puzzle_B1
-    acabado: 0
+    acabado: 1
   - name: Puzzle_B2
     acabado: 0
   Nivel_2:
@@ -29,9 +29,9 @@ MonoBehaviour:
     acabado: 0
   NivelDesbloqueado:
   - name: Nivel_0
-    acabado: 0
+    acabado: 1
   - name: Nivel_1
-    acabado: 0
+    acabado: 1
   - name: Nivel_2
     acabado: 0
   - name: Jefe_Final

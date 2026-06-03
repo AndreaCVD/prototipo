@@ -13,6 +13,8 @@ public class FirstFloorPuzzle : MonoBehaviour
     [Header("Obj a modificar al acabar puzzle")]
     [SerializeField] Animator puertaMaestra;
     [SerializeField] Animator jaulaEtkis;
+    [SerializeField] Animator candado_1;
+
     private bool puertaAbierta;
     private bool jaulaAbierta;
     [Header("Puzzle_1")]
@@ -33,7 +35,6 @@ public class FirstFloorPuzzle : MonoBehaviour
         //Treure pq sino sempre es reinicien?
         zona_1.finished = lista.Nivel_1[0].acabado;
         zona_1.finished = lista.Nivel_1[1].acabado;
-        lista.NivelDesbloqueado[1].acabado = false;
     }
 
     void Update()
@@ -50,6 +51,7 @@ public class FirstFloorPuzzle : MonoBehaviour
         {
             puertaAbierta = true;
             puertaMaestra.SetBool("doorOpen", true);
+            candado_1.SetBool("candadoOpen", true);
         }
         if (lista.Nivel_1[1].acabado && !jaulaAbierta) //Completar puzzle B2
         {

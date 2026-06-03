@@ -77,4 +77,9 @@ public class CombatDebug : MonoBehaviour
     {
         return enemyData;
     }
+
+    public Parameters ReturnPlayer()
+    {
+        return playerData;
+    }
 }

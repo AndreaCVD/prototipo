@@ -52,7 +52,7 @@ public class Dice : MonoBehaviour
     {
         int a = Random.Range(1, maxValue);
         Debug.Log("Dice=" + a);
-        //StartCoroutine(ChangeText(a));
+        StartCoroutine(ChangeText(a));
         //MoveDice(a);
         return a;
         

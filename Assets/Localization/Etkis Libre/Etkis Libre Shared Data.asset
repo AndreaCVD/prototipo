@@ -15,12 +15,92 @@ MonoBehaviour:
   m_TableCollectionName: Etkis Libre
   m_TableCollectionNameGuidString: 99f4bb6cd2f98764d9372525066d1b93
   m_Entries:
-  - m_Id: 9873715200
+  - m_Id: 579849425317888
     m_Key: SentenceText_7b81a8f9-5d89-45b2-b106-0b727939b0d0
     m_Metadata:
       m_Items: []
-  - m_Id: 9873715201
+  - m_Id: 579849425317889
     m_Key: SentenceName_500abd90-bc44-431f-bcb6-62cb1220d93f
+    m_Metadata:
+      m_Items: []
+  - m_Id: 579849425317890
+    m_Key: SentenceText_c264d969-15d9-4454-9f2e-29b9afe60351
+    m_Metadata:
+      m_Items: []
+  - m_Id: 579849425317891
+    m_Key: SentenceName_197f6e10-1852-42fe-82ec-091aa4f4e6c2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 579849429512192
+    m_Key: SentenceText_f3772b88-4581-4e0a-8778-56fba6075ed6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 579849429512193
+    m_Key: Answer_b8d2693c-c3e1-4ff1-8b6e-f5cab6f58a3e
+    m_Metadata:
+      m_Items: []
+  - m_Id: 579849429512194
+    m_Key: Answer_18d92958-268f-471f-abd6-920bb9dd5316
+    m_Metadata:
+      m_Items: []
+  - m_Id: 579849429512195
+    m_Key: Answer_9dc9d530-e703-4ade-84ee-0da737e54bd9
+    m_Metadata:
+      m_Items: []
+  - m_Id: 579849429512196
+    m_Key: SentenceText_cddd5e90-884b-4386-b8b1-ba5174456680
+    m_Metadata:
+      m_Items: []
+  - m_Id: 579849429512197
+    m_Key: SentenceText_03f1977a-93f0-4cdc-bfd2-ead89be87baf
+    m_Metadata:
+      m_Items: []
+  - m_Id: 579849429512198
+    m_Key: SentenceText_8826c410-241e-4c15-add4-a1040309931b
+    m_Metadata:
+      m_Items: []
+  - m_Id: 579849429512199
+    m_Key: SentenceName_6f02acfc-ec41-487d-aea3-a88f2ea91776
+    m_Metadata:
+      m_Items: []
+  - m_Id: 579849429512200
+    m_Key: SentenceText_31bbb755-0d75-46a8-982f-6e454b889f13
+    m_Metadata:
+      m_Items: []
+  - m_Id: 579849429512201
+    m_Key: SentenceText_aa3117ef-9d6f-48ab-8411-c7274f52ed6e
+    m_Metadata:
+      m_Items: []
+  - m_Id: 579849429512202
+    m_Key: SentenceText_016da039-a37e-4a66-b8f0-36401d991347
+    m_Metadata:
+      m_Items: []
+  - m_Id: 579849429512203
+    m_Key: SentenceText_071ec462-5290-4217-9ebc-9941c41ecd97
+    m_Metadata:
+      m_Items: []
+  - m_Id: 579849429512204
+    m_Key: SentenceText_b269d080-d663-4837-9b18-c2ac77e82aa3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 579849429512205
+    m_Key: SentenceText_4fd86d3f-015e-432b-9408-2506980a0517
+    m_Metadata:
+      m_Items: []
+  - m_Id: 579849429512206
+    m_Key: SentenceText_280414f6-e343-420c-a778-914d617e0eef
+    m_Metadata:
+      m_Items: []
+  - m_Id: 579849429512207
+    m_Key: SentenceText_9f078a7d-c749-4828-8380-952ec27aec25
+    m_Metadata:
+      m_Items: []
+  - m_Id: 579849429512208
+    m_Key: SentenceText_98bdc120-deae-45a3-80f3-024cb65f40da
+    m_Metadata:
+      m_Items: []
+  - m_Id: 579849429512209
+    m_Key: SentenceText_12f21c8c-fef1-4862-89bc-e6d4ea7942d6
     m_Metadata:
       m_Items: []
   m_Metadata:

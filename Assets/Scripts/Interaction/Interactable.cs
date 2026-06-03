@@ -57,7 +57,7 @@ public class Interactable : MonoBehaviour
             //    //Debug.Log("This is a Puzzle");
             //    break;
             case "Interact_Scene":
-                //Debug.Log("Interaccionable por dialogo");
+                Debug.Log("Interaccionable por dialogo");
                 dialog.EmpezarDialogo(dialogo_obj, a);
                 break;
             case "Cofre":

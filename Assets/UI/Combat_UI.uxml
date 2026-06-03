@@ -7,8 +7,8 @@
                 <ui:VisualElement name="player-sprite" class="combat-sprite" />
                 <ui:VisualElement name="player-hp" class="combat-hp">
                     <ui:Label text="HP" class="combat-hp__label" />
-                    <ui:VisualElement class="combat-hp__bar">
-                        <ui:VisualElement name="player-hp-fill" class="combat-hp__fill" />
+                    <ui:VisualElement class="combat-hp__bar" style="width: 100%; flex-direction: row;">
+                        <ui:VisualElement name="player-hp-fill" class="combat-hp__fill" style="width: 100%;" />
                     </ui:VisualElement>
                 </ui:VisualElement>
             </ui:VisualElement>
@@ -19,8 +19,8 @@
                 <ui:VisualElement name="enemy-sprite" class="combat-sprite" />
                 <ui:VisualElement name="enemy-hp" class="combat-hp">
                     <ui:Label text="HP" class="combat-hp__label" />
-                    <ui:VisualElement class="combat-hp__bar">
-                        <ui:VisualElement name="enemy-hp-fill" class="combat-hp__fill combat-hp__fill--enemy" />
+                    <ui:VisualElement class="combat-hp__bar" style="width: 100%; flex-direction: row;">
+                        <ui:VisualElement name="enemy-hp-fill" class="combat-hp__fill combat-hp__fill--enemy" style="width: 100%;" />
                     </ui:VisualElement>
                 </ui:VisualElement>
             </ui:VisualElement>
@@ -34,8 +34,7 @@
             <ui:VisualElement class="combat-divider" />
             <ui:VisualElement class="combat-row">
                 <ui:Button name="btn-item" text="Items" class="combat_btns items_btn_color" />
-                <ui:Button name="btn-defender" text="Defenderse" class="combat_btns option_btn_color" />
-                <ui:Button name="btn-huir" text="Huir" class="combat_btns option_btn_color" />
+                <ui:Button name="btn-huir" text="Huir" class="combat_btns option_btn_color flee_btn_color" />
             </ui:VisualElement>
         </ui:VisualElement>
     </ui:VisualElement>

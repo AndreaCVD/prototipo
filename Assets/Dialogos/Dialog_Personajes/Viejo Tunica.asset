@@ -15,23 +15,55 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 2328.794
-    y: -55.59996
+    x: 2243.1987
+    y: -105.99991
     width: 190
     height: 135
   IsDragging: 1
   IsSelected: 0
   _sentence:
-    CharacterName: 
-    Text: superas intel
+    CharacterName: Yusseif
+    Text: "Bueno, si me lo dices as\xED..."
     CharacterSprite: {fileID: 21300000, guid: ba9938e5f4d041b40ac8c5f6316c4210, type: 3}
   ParentNodes:
   - {fileID: 3389797826953741457}
-  ChildNode: {fileID: 4684282728229059287}
+  ChildNode: {fileID: 8273924187952059092}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: SentenceName_80ed632c-42fd-4020-ae50-db154045d989
   SentenceTextKey: SentenceText_9558c466-1ab0-4b98-9a70-4ac481eac251
+--- !u!114 &-7759637944755910918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 808.8001
+    y: 405.20056
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Yusseif
+    Text: "...Si quieres practicar tienes ese \xE1rbol redondo."
+    CharacterSprite: {fileID: 21300000, guid: ba9938e5f4d041b40ac8c5f6316c4210, type: 3}
+  ParentNodes:
+  - {fileID: 1436545033789331739}
+  ChildNode: {fileID: 5573192301709980262}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: SentenceName_68c76cc9-f0a3-4680-b2b7-cfaa42a79a96
+  SentenceTextKey: SentenceText_2b074a5f-0444-46ce-b775-271ed4c7149c
 --- !u!114 &-6479709222405977522
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47,8 +79,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 991.99994
-    y: 142.00006
+    x: 948.79974
+    y: 111.60019
     width: 190
     height: 135
   IsDragging: 1
@@ -80,8 +112,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1445.5955
-    y: 125.20007
+    x: 1402.3965
+    y: 94.8002
     width: 190
     height: 155
   IsDragging: 1
@@ -115,8 +147,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1705.5984
-    y: 238.79999
+    x: 1662.3997
+    y: 208.40005
     width: 190
     height: 135
   IsDragging: 1
@@ -148,15 +180,15 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 2331.1943
-    y: 78.79996
+    x: 2234.399
+    y: 41.200012
     width: 190
     height: 135
   IsDragging: 1
   IsSelected: 0
   _sentence:
     CharacterName: 
-    Text: no superas intel
+    Text: No. Ponte a trabajar.
     CharacterSprite: {fileID: 21300000, guid: ba9938e5f4d041b40ac8c5f6316c4210, type: 3}
   ParentNodes:
   - {fileID: 3389797826953741457}
@@ -180,8 +212,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 45.59738
-    y: 320.4002
+    x: 2.3988342
+    y: 290.00055
     width: 190
     height: 80
   IsDragging: 1
@@ -205,8 +237,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 335.9973
-    y: 74.00003
+    x: 292.79834
+    y: 43.600067
     width: 210
     height: 155
   IsDragging: 1
@@ -249,6 +281,10 @@ MonoBehaviour:
   - {fileID: 4684282728229059287}
   - {fileID: -1731573587171935537}
   - {fileID: -3260478697219280420}
+  - {fileID: 5573192301709980262}
+  - {fileID: -7759637944755910918}
+  - {fileID: 8273924187952059092}
+  - {fileID: 2816176419974027607}
   VariablesConfig: {fileID: 11400000, guid: 61133ed5c4a3f7d488a61fd3977e33ab, type: 2}
   _localizationTableName: Viejo Tunica
   _characterNamesLocalizationName: 
@@ -270,8 +306,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1695.196
-    y: 157.20026
+    x: 1651.9976
+    y: 126.800446
     width: 190
     height: 80
   IsDragging: 1
@@ -296,19 +332,19 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 619.9989
-    y: 431.60034
+    x: 576.7998
+    y: 401.20068
     width: 190
     height: 135
   IsDragging: 1
-  IsSelected: 1
+  IsSelected: 0
   _sentence:
     CharacterName: Yusseif
     Text: "\xBFQue pasa? \xBFTienes miedo?"
     CharacterSprite: {fileID: 21300000, guid: ba9938e5f4d041b40ac8c5f6316c4210, type: 3}
   ParentNodes:
   - {fileID: 1485920470349927989}
-  ChildNode: {fileID: 0}
+  ChildNode: {fileID: -7759637944755910918}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: SentenceName_68c76cc9-f0a3-4680-b2b7-cfaa42a79a96
@@ -328,8 +364,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 288.79688
-    y: 274.80005
+    x: 245.59763
+    y: 244.40005
     width: 240
     height: 160
   IsDragging: 1
@@ -359,16 +395,16 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1686.3962
-    y: 4.400055
+    x: 1643.1978
+    y: -25.999878
     width: 190
     height: 135
   IsDragging: 1
   IsSelected: 0
   _sentence:
-    CharacterName: Prota
+    CharacterName: Carlos
     Text: "\xBF...qu\xE9 le pasa?"
-    CharacterSprite: {fileID: 21300000, guid: ba9938e5f4d041b40ac8c5f6316c4210, type: 3}
+    CharacterSprite: {fileID: 21300000, guid: a188ce1c9b6fce644b5efac5bf9be647, type: 3}
   ParentNodes:
   - {fileID: -4619645803194315248}
   ChildNode: {fileID: 4684282728229059287}
@@ -376,6 +412,38 @@ MonoBehaviour:
   _externalFunctionName: 
   CharacterNameKey: SentenceName_91ccb710-7fa3-461b-91e0-4714cd3e5f28
   SentenceTextKey: SentenceText_edd821af-c10d-4356-b932-e58895ec239c
+--- !u!114 &2816176419974027607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 2703.2012
+    y: -110.7999
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Yusseif
+    Text: "\xBFC\xF3mo lo ves?"
+    CharacterSprite: {fileID: 21300000, guid: ba9938e5f4d041b40ac8c5f6316c4210, type: 3}
+  ParentNodes:
+  - {fileID: 8273924187952059092}
+  ChildNode: {fileID: 4684282728229059287}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: SentenceName_68c76cc9-f0a3-4680-b2b7-cfaa42a79a96
+  SentenceTextKey: SentenceText_cb86d033-bbff-408f-b01d-736b52d2fcfe
 --- !u!114 &3389797826953741457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -391,8 +459,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1971.1973
-    y: 37.19998
+    x: 1928.0005
+    y: 6.800049
     width: 240
     height: 160
   IsDragging: 1
@@ -422,8 +490,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 784.80115
-    y: 142.80011
+    x: 741.6017
+    y: 112.4003
     width: 190
     height: 135
   IsDragging: 1
@@ -455,8 +523,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 2079.9944
-    y: 303.60022
+    x: 2036.7974
+    y: 273.20038
     width: 190
     height: 80
   IsDragging: 1
@@ -464,10 +532,36 @@ MonoBehaviour:
   _functionName: ContinuarMov
   _description: 
   ParentNodes:
-  - {fileID: -8838253120316274746}
   - {fileID: -2332625085684898466}
   - {fileID: 1932907521391142652}
   - {fileID: -3260478697219280420}
+  - {fileID: 2816176419974027607}
+  ChildNode: {fileID: 0}
+--- !u!114 &5573192301709980262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f4b3c64aaf434ea0df52154c1c7680, type: 3}
+  m_Name: External Function Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 1078.4006
+    y: 428.4005
+    width: 190
+    height: 80
+  IsDragging: 1
+  IsSelected: 0
+  _functionName: ContinuarMov
+  _description: 
+  ParentNodes:
+  - {fileID: -7759637944755910918}
   ChildNode: {fileID: 0}
 --- !u!114 &7821905148948879972
 MonoBehaviour:
@@ -484,8 +578,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 567.9998
-    y: 145.2002
+    x: 524.80066
+    y: 114.80032
     width: 190
     height: 135
   IsDragging: 1
@@ -516,8 +610,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1208.7961
-    y: 142.80005
+    x: 1165.5967
+    y: 112.40024
     width: 190
     height: 135
   IsDragging: 1
@@ -534,3 +628,35 @@ MonoBehaviour:
   _externalFunctionName: 
   CharacterNameKey: SentenceName_e253742b-8e28-4f47-92e0-81dd3c9710e3
   SentenceTextKey: SentenceText_1ee94dce-ee07-4f61-99f3-9cfa4eaf7f19
+--- !u!114 &8273924187952059092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 2488.002
+    y: -105.99991
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Yusseif
+    Text: "Puedo irte a buscar pociones al pueblo, \xA1y no te cobro comisiones!"
+    CharacterSprite: {fileID: 21300000, guid: ba9938e5f4d041b40ac8c5f6316c4210, type: 3}
+  ParentNodes:
+  - {fileID: -8838253120316274746}
+  ChildNode: {fileID: 2816176419974027607}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: SentenceName_68c76cc9-f0a3-4680-b2b7-cfaa42a79a96
+  SentenceTextKey: SentenceText_7a28e8ab-9d89-442b-9d5c-be016a2b7d25

@@ -15,32 +15,48 @@ MonoBehaviour:
   m_TableCollectionName: Nimrodel
   m_TableCollectionNameGuidString: 0e2128e9652d23a4d93569f4522f9c2f
   m_Entries:
-  - m_Id: 13522759680
+  - m_Id: 869872754290688
     m_Key: 
     m_Metadata:
       m_Items: []
-  - m_Id: 13522759681
+  - m_Id: 869872754290689
     m_Key: SentenceName_3b0f6ea5-1cfe-4d16-81f7-0507fcf0f561
     m_Metadata:
       m_Items: []
-  - m_Id: 13522759682
+  - m_Id: 869872754290690
     m_Key: SentenceName_7a815833-a613-4c51-b2aa-34236001e372
     m_Metadata:
       m_Items: []
-  - m_Id: 13522759683
+  - m_Id: 869872754290691
     m_Key: SentenceName_786741ee-59ca-4f56-a450-943daddd6124
     m_Metadata:
       m_Items: []
-  - m_Id: 13522759684
+  - m_Id: 869872754290692
     m_Key: Answer_6fd4ffaf-3496-4347-996f-03cc3fe126ea
     m_Metadata:
       m_Items: []
-  - m_Id: 13522759685
+  - m_Id: 869872754290693
     m_Key: Answer_e12b2006-d4d4-4667-b67b-72edf6004f08
     m_Metadata:
       m_Items: []
-  - m_Id: 13522759686
+  - m_Id: 869872754290694
     m_Key: SentenceName_d38615c1-d6e9-4dcb-b6f5-5311316f050c
+    m_Metadata:
+      m_Items: []
+  - m_Id: 869872754290695
+    m_Key: SentenceText_d5135786-5787-4363-8e89-a6a648dadc81
+    m_Metadata:
+      m_Items: []
+  - m_Id: 869872754290696
+    m_Key: SentenceText_86e04efc-ddb4-4142-bf86-80f09029fe7c
+    m_Metadata:
+      m_Items: []
+  - m_Id: 869872754290697
+    m_Key: SentenceText_9f3cd871-edeb-4eb3-912f-90482ecd9758
+    m_Metadata:
+      m_Items: []
+  - m_Id: 869872754290698
+    m_Key: SentenceText_65da8874-f4d6-45cd-9a66-0c1688866398
     m_Metadata:
       m_Items: []
   m_Metadata:

@@ -15,35 +15,35 @@ MonoBehaviour:
   m_TableCollectionName: Lerendur
   m_TableCollectionNameGuidString: 13e892fd12643e14c8c6f8a790ceda91
   m_Entries:
-  - m_Id: 432336896
+  - m_Id: 432908548763648
     m_Key: SentenceText_42e5e143-e512-47fe-954e-15fdd7964092
     m_Metadata:
       m_Items: []
-  - m_Id: 444919808
+  - m_Id: 432908561346560
     m_Key: SentenceName_11671a8a-0876-4bfa-ac30-2197679ce6f8
     m_Metadata:
       m_Items: []
-  - m_Id: 444919809
+  - m_Id: 432908561346561
     m_Key: Answer_83bf95a4-446d-4f04-a22f-53a99714f377
     m_Metadata:
       m_Items: []
-  - m_Id: 444919810
+  - m_Id: 432908561346562
     m_Key: Answer_4258a36f-0a4e-4b70-a21a-13e83a59eba9
     m_Metadata:
       m_Items: []
-  - m_Id: 444919811
+  - m_Id: 432908561346563
     m_Key: Answer_7596a4ad-6f20-4147-8a59-397621e79354
     m_Metadata:
       m_Items: []
-  - m_Id: 444919812
+  - m_Id: 432908561346564
     m_Key: SentenceText_e9fe430f-d056-4259-963c-16a2dce80595
     m_Metadata:
       m_Items: []
-  - m_Id: 444919813
+  - m_Id: 432908561346565
     m_Key: SentenceText_1643fbef-d672-48ae-b383-75c7e13182fc
     m_Metadata:
       m_Items: []
-  - m_Id: 444919814
+  - m_Id: 432908561346566
     m_Key: SentenceText_34e5c004-faef-4d57-a4c4-120922af9d13
     m_Metadata:
       m_Items: []

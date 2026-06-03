@@ -15,8 +15,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 2395.9917
-    y: -103.599976
+    x: 2267.993
+    y: -94.79994
     width: 190
     height: 135
   IsDragging: 1
@@ -24,7 +24,7 @@ MonoBehaviour:
   _sentence:
     CharacterName: 
     Text: superas intel
-    CharacterSprite: {fileID: 0}
+    CharacterSprite: {fileID: 21300000, guid: ba9938e5f4d041b40ac8c5f6316c4210, type: 3}
   ParentNodes:
   - {fileID: 3389797826953741457}
   ChildNode: {fileID: 4684282728229059287}
@@ -47,8 +47,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1059.1997
-    y: 94.000015
+    x: 931.19995
+    y: 102.80008
     width: 190
     height: 135
   IsDragging: 1
@@ -57,7 +57,7 @@ MonoBehaviour:
     CharacterName: ???
     Text: "Y tu... Porfin te has decidido a venir, eh, que ya tardabas. F\xEDjate
       que hasta me iba a poner yo y todo. "
-    CharacterSprite: {fileID: 0}
+    CharacterSprite: {fileID: 21300000, guid: ba9938e5f4d041b40ac8c5f6316c4210, type: 3}
   ParentNodes:
   - {fileID: 4293345670854002962}
   ChildNode: {fileID: 8023769765697480976}
@@ -80,8 +80,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1512.7964
-    y: 77.2
+    x: 1384.7954
+    y: 86.00009
     width: 190
     height: 155
   IsDragging: 1
@@ -115,8 +115,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1772.7988
-    y: 190.79993
+    x: 1644.7983
+    y: 199.6
     width: 190
     height: 135
   IsDragging: 1
@@ -125,7 +125,7 @@ MonoBehaviour:
     CharacterName: ???
     Text: "\xBFA qu\xE9 esperas? Va, a trabajar. Yo me quedar\xE9 aqu\xED sentado,
       que me duelen los pies."
-    CharacterSprite: {fileID: 0}
+    CharacterSprite: {fileID: 21300000, guid: ba9938e5f4d041b40ac8c5f6316c4210, type: 3}
   ParentNodes:
   - {fileID: -4619645803194315248}
   ChildNode: {fileID: 4684282728229059287}
@@ -148,8 +148,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 2398.392
-    y: 30.799942
+    x: 2270.3933
+    y: 39.599976
     width: 190
     height: 135
   IsDragging: 1
@@ -157,7 +157,7 @@ MonoBehaviour:
   _sentence:
     CharacterName: 
     Text: no superas intel
-    CharacterSprite: {fileID: 0}
+    CharacterSprite: {fileID: 21300000, guid: ba9938e5f4d041b40ac8c5f6316c4210, type: 3}
   ParentNodes:
   - {fileID: 3389797826953741457}
   ChildNode: {fileID: 4684282728229059287}
@@ -180,8 +180,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 112.79642
-    y: 272.40012
+    x: -15.202637
+    y: 281.20023
     width: 190
     height: 80
   IsDragging: 1
@@ -205,8 +205,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 403.19623
-    y: 26.000015
+    x: 275.1973
+    y: 34.80005
     width: 210
     height: 155
   IsDragging: 1
@@ -270,8 +270,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1762.3965
-    y: 109.20015
+    x: 1634.396
+    y: 118.000275
     width: 190
     height: 80
   IsDragging: 1
@@ -296,8 +296,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 687.19867
-    y: 383.60013
+    x: 559.19885
+    y: 392.40036
     width: 190
     height: 135
   IsDragging: 1
@@ -305,7 +305,7 @@ MonoBehaviour:
   _sentence:
     CharacterName: Yusseif
     Text: "\xBFQue pasa? \xBFTienes miedo?"
-    CharacterSprite: {fileID: 0}
+    CharacterSprite: {fileID: 21300000, guid: ba9938e5f4d041b40ac8c5f6316c4210, type: 3}
   ParentNodes:
   - {fileID: 1485920470349927989}
   ChildNode: {fileID: 0}
@@ -328,8 +328,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 355.9959
-    y: 226.79999
+    x: 227.99686
+    y: 235.60007
     width: 240
     height: 160
   IsDragging: 1
@@ -359,8 +359,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1753.5964
-    y: -43.59996
+    x: 1625.5962
+    y: -34.799927
     width: 190
     height: 135
   IsDragging: 1
@@ -368,7 +368,7 @@ MonoBehaviour:
   _sentence:
     CharacterName: Prota
     Text: "\xBF...qu\xE9 le pasa?"
-    CharacterSprite: {fileID: 0}
+    CharacterSprite: {fileID: 21300000, guid: ba9938e5f4d041b40ac8c5f6316c4210, type: 3}
   ParentNodes:
   - {fileID: -4619645803194315248}
   ChildNode: {fileID: 4684282728229059287}
@@ -391,8 +391,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 2038.397
-    y: -10.800034
+    x: 1910.3972
+    y: -2
     width: 240
     height: 160
   IsDragging: 1
@@ -422,8 +422,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 852.00104
-    y: 94.800064
+    x: 724.0011
+    y: 103.60013
     width: 190
     height: 135
   IsDragging: 1
@@ -432,7 +432,7 @@ MonoBehaviour:
     CharacterName: ???
     Text: "Este es el grupo de tres aventureros que se qued\xF3 atrapado buscando
       algo. Una banda de in\xFAtiles, vaya. "
-    CharacterSprite: {fileID: 0}
+    CharacterSprite: {fileID: 21300000, guid: ba9938e5f4d041b40ac8c5f6316c4210, type: 3}
   ParentNodes:
   - {fileID: 7821905148948879972}
   ChildNode: {fileID: -6479709222405977522}
@@ -455,8 +455,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 2147.1943
-    y: 255.60013
+    x: 2019.1943
+    y: 264.40024
     width: 190
     height: 80
   IsDragging: 1
@@ -484,8 +484,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 635.19885
-    y: 97.20009
+    x: 507.1998
+    y: 106.00021
     width: 190
     height: 135
   IsDragging: 1
@@ -493,7 +493,7 @@ MonoBehaviour:
   _sentence:
     CharacterName: ???
     Text: "Ah, tu eres el del rescate, \xBFno es as\xED?"
-    CharacterSprite: {fileID: 0}
+    CharacterSprite: {fileID: 21300000, guid: ba9938e5f4d041b40ac8c5f6316c4210, type: 3}
   ParentNodes:
   - {fileID: -1731573587171935537}
   ChildNode: {fileID: 4293345670854002962}
@@ -516,8 +516,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1275.9966
-    y: 94.8
+    x: 1147.9958
+    y: 103.60007
     width: 190
     height: 135
   IsDragging: 1
@@ -526,7 +526,7 @@ MonoBehaviour:
     CharacterName: ???
     Text: "Pero como ves, yo estoy muy mayor como para rescatar a nadie, as\xED que
       tendr\xE1s que hacerlo tu."
-    CharacterSprite: {fileID: 0}
+    CharacterSprite: {fileID: 21300000, guid: ba9938e5f4d041b40ac8c5f6316c4210, type: 3}
   ParentNodes:
   - {fileID: -6479709222405977522}
   ChildNode: {fileID: -4619645803194315248}

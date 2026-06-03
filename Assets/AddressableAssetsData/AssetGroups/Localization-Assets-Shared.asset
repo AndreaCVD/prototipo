@@ -50,6 +50,16 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 900f512c17324f54fae6655aaa49cf62
+    m_Address: Assets/Localization/Libro Jefe/Libro Jefe Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 99f4bb6cd2f98764d9372525066d1b93
+    m_Address: Assets/Localization/Etkis Libre/Etkis Libre Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a71f8ed6b3a3fb84fbd035b0efa114fa
     m_Address: Assets/Localization/test/test Shared Data.asset
     m_ReadOnly: 1
@@ -85,8 +95,18 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f1680531366f277408c4b77a8b41cc80
+    m_Address: Assets/Localization/Lerendur Libre/Lerendur Libre Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f30f0fc7543156d42932b581e60f3b90
     m_Address: Assets/Localization/PuertaMaestra/PuertaMaestra Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f33ec81ece197714f8835bb327ce54bf
+    m_Address: Assets/Localization/Nimrodel Libre/Nimrodel Libre Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

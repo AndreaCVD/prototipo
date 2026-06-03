@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5be51871efa6c3e4eae1703925c8f5ac, type: 3}
+  m_Name: Libro Jefe
+  m_EditorClassIdentifier: 
+  m_SharedTableData: {fileID: 11400000, guid: 900f512c17324f54fae6655aaa49cf62, type: 2}
+  m_Tables:
+  - {fileID: 11400000, guid: cc81fec3d54ac004cbb1dabf197d07eb, type: 2}
+  - {fileID: 11400000, guid: c755410bcdf389741bc6dfcf207715aa, type: 2}
+  - {fileID: 11400000, guid: 3a9dd471fc7648c4bb7c821bc90ff568, type: 2}
+  - {fileID: 11400000, guid: 1afab2a3e49e6bc43a45335ed67f0b7b, type: 2}
+  - {fileID: 11400000, guid: 02fdcb37cbb4e5f44bea478226cba5e7, type: 2}
+  m_Extensions: []
+  m_Group: String Table
+  references:
+    version: 2
+    RefIds: []

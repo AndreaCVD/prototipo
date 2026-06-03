@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5be51871efa6c3e4eae1703925c8f5ac, type: 3}
+  m_Name: Nimrodel Libre
+  m_EditorClassIdentifier: 
+  m_SharedTableData: {fileID: 11400000, guid: f33ec81ece197714f8835bb327ce54bf, type: 2}
+  m_Tables:
+  - {fileID: 11400000, guid: ee2c12b3f6326084486570ac58517f91, type: 2}
+  - {fileID: 11400000, guid: 35786883742faf14b8b2ee75b98ace9e, type: 2}
+  - {fileID: 11400000, guid: 9c0d6903ea208bd4885479546b0128e8, type: 2}
+  - {fileID: 11400000, guid: 34f75d529f315fe4bb3c0713980cdf64, type: 2}
+  - {fileID: 11400000, guid: dd6900f450260424cb179122198b7c24, type: 2}
+  m_Extensions: []
+  m_Group: String Table
+  references:
+    version: 2
+    RefIds: []

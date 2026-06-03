@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Fogata_uk-UA
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: uk-UA
+  m_SharedData: {fileID: 11400000, guid: 6a64efac0607ef64ab2101a3daabcdb1, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 3583806599168
+    m_Localized: Descansar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3583831764992
+    m_Localized: Irse
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3583835959296
+    m_Localized: "\xA1\xA1Que buena siesta!!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 3583835959297
+    m_Localized: Prota
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

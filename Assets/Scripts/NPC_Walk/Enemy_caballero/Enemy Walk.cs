@@ -61,7 +61,7 @@ public class EnemyWalk : MonoBehaviour
             distancia = Vector3.Distance(enemy.transform.position, objetivo.position);
 
             //que el eneimgo detecte el jugador a cierta distancia
-            if (distancia < rango && !persiguiendo)
+            if (distancia < rango && distancia > 1.33f && !persiguiendo)
             {
                 //if (isHome)
                 //{
@@ -103,6 +103,9 @@ public class EnemyWalk : MonoBehaviour
         if (col.gameObject.CompareTag("Player") )
         {
             //Combat(GameObject enemyName)
+            //Parar la persecusion
+            persiguiendo = false;
+            enemy.speed = 0;
             load.Combat(this.gameObject);
         }
     }
@@ -129,7 +132,7 @@ public class EnemyWalk : MonoBehaviour
         if (Physics.Raycast(ray, out hitInfo, distanciaRayCast))
         {
             Debug.DrawRay(ray.origin, ray.direction * 1f, Color.red);
-            if (hitInfo.transform.tag == "Player")
+            if (hitInfo.transform.tag == "Player" && !firstWalk)
             {
                 Debug.Log("El jugador ha pasado por delante");
                 firstWalk = true;

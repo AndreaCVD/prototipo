@@ -15,8 +15,26 @@ MonoBehaviour:
   m_GroupName: Localization-String-Tables-German (Germany) (de-DE)
   m_GUID: 9747d406630ec724db78be649e8e76df
   m_SerializeEntries:
+  - m_GUID: 12f0214d11b4c224a8476d2dee0ef127
+    m_Address: Tienda_de-DE
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de-DE
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1afab2a3e49e6bc43a45335ed67f0b7b
+    m_Address: Libro Jefe_de-DE
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de-DE
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 207fd56f492ee0747bd1faf66395c474
     m_Address: test_de-DE
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de-DE
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 34f75d529f315fe4bb3c0713980cdf64
+    m_Address: Nimrodel Libre_de-DE
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-de-DE
@@ -27,8 +45,68 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-de-DE
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3da380a133aadf14c991170fa9a48098
+    m_Address: Arbol_de-DE
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de-DE
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 408ff2f9869857846b129f09e6188cba
+    m_Address: Lerendur Libre_de-DE
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de-DE
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 44a3506f256d5d6409a99014154938d7
+    m_Address: Puerta_de-DE
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de-DE
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 671a74bdfbae80e42847c9ec5a68cef3
+    m_Address: Fogata_de-DE
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de-DE
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 77a0dda5010ccb94680731078208bd7e
+    m_Address: Etkis_de-DE
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de-DE
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8bd1e972effffad4087491c75bb66d60
+    m_Address: Nimrodel_de-DE
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de-DE
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9af49136d6d23bd41967e535cc41e62a
+    m_Address: Nim_de-DE
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de-DE
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9b0f4ab99cb935a46b5724cf51861249
+    m_Address: Etkis Libre_de-DE
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de-DE
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f36f0721cf44fd04fbd8263d782cdbcb
     m_Address: DemoNodeGraph_de-DE
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de-DE
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f681157caebb65e4cac5ec2cfd71456a
+    m_Address: CofreVacio_de-DE
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de-DE
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fbd444631065f9a479573ee11c86ba24
+    m_Address: PuertaMaestra_de-DE
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-de-DE

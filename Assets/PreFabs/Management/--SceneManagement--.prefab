@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4636500077556328165}
   - component: {fileID: 1942295723155004613}
   - component: {fileID: 8228760125869817717}
-  - component: {fileID: 4190567916740077200}
+  - component: {fileID: 6506991104880826745}
   m_Layer: 0
   m_Name: --SceneManagement--
   m_TagString: Untagged
@@ -81,7 +81,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NameOpponent: 
   enemigo: {fileID: 0}
---- !u!114 &4190567916740077200
+--- !u!114 &6506991104880826745
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -93,4 +93,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65ba87fe6bf211246bf769a72a64b71a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ListaPuzzles: []
+  lista: {fileID: 11400000, guid: 92b50351187af094c96f6e51da1599fa, type: 2}

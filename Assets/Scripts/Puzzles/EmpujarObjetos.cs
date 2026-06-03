@@ -2,20 +2,18 @@ using UnityEngine;
 
 public class EmpujarObjetos : MonoBehaviour
 {
-    private SavePuzzle savePuzzle;
-
     public float distanciaCasilla = 1f;   // Tamaño de la casilla (1 unidad por defecto)
     public float velocidadMovimiento = 5f; // Velocidad de desplazamiento
     private bool enMovimiento = false;
     private Vector3 destino;
 
     private LayerMask layerMask;
-    private bool puzzleFinished;
+    public bool puzzleFinished;
 
     void Start()
     {
         GameObject aux = GameObject.Find("-- SavePuzzle --");
-        savePuzzle = aux.GetComponent<SavePuzzle>();
+        //savePuzzle = aux.GetComponent<SavePuzzle>();
 
         destino = transform.position; // Posición inicial
 
@@ -40,7 +38,14 @@ public class EmpujarObjetos : MonoBehaviour
             }
         }
     }
-
+    public bool returnState()
+    {
+        return puzzleFinished;
+    }
+    public void restartState()
+    {
+        puzzleFinished = false;
+    }
     void OnCollisionEnter(Collision col)
     {
         // Si el jugador choca con este objeto y el puzzle no esta completado
@@ -74,7 +79,7 @@ public class EmpujarObjetos : MonoBehaviour
                 {
                     if ( colision.gameObject.CompareTag("FinalPuzzle"))
                     {
-                        Debug.Log("El puzzle se ha completado");
+                        //Debug.Log("El puzzle se ha completado");
                         destino = nuevaPos;
                         enMovimiento = true;
                         puzzleFinished = true;
@@ -91,7 +96,6 @@ public class EmpujarObjetos : MonoBehaviour
         {
             //enMovimiento = true;
             puzzleFinished = true;
-            savePuzzle.pieceDone(this.name);
             Debug.Log("Suelo puzzle alcanzado");
         }
 

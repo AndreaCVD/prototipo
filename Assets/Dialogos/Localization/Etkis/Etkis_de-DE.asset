@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Etkis_de-DE
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: de-DE
+  m_SharedData: {fileID: 11400000, guid: ec42f3d6da1e0304d80c27ada008b92a, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 2416452074532864
+    m_Localized: "\xA1\xA1HEY TU!! AYUDAME A SALIR DE AQUI R\xC1PIDO"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2416452074532865
+    m_Localized: ???
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2416452074532866
+    m_Localized: Gracias...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2416452074532867
+    m_Localized: Etkis
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2416452074532868
+    m_Localized: "\xA1\xA1No me dejes aqu\xED por favor!!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2416452074532869
+    m_Localized: "He perdido a mis compa\xF1eros, estan mas abajo, son dos elfos."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2416452074532870
+    m_Localized: Me voy arriba, espero que ese viejo no me haya robado nada.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2416452074532871
+    m_Localized: "Soy Etkis, uno de los tres aventureros que se perdi\xF3."
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

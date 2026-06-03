@@ -44,8 +44,8 @@ public class TurnRoundManager : MonoBehaviour
         if (uIDocument != null && uIDocument.rootVisualElement != null)
         {
             root = uIDocument.rootVisualElement;
-            combat_options = root.Q<VisualElement>("combat_options");
-            turno = root.Q<Label>("turno");
+            combat_options = root.Q<VisualElement>("combat-menu");
+            //turno = root.Q<Label>("turno");
 
             if (combat_options == null)
             {
@@ -60,7 +60,6 @@ public class TurnRoundManager : MonoBehaviour
 
     private void Start()
     {
-
         //cuando current == prota, es nuestro turno
         current = Manager.playerPersonaje;
         target = Manager.enemyPersonaje;
@@ -71,11 +70,6 @@ public class TurnRoundManager : MonoBehaviour
         anim.SetBool("TurnProta", true);
         anim.SetBool("TurnEnemy", false);
 
-        //menu_acciones.opacidad(1f);
-
-        turno.text = "Es turno de: " + current;
-
-        //turnoTexto.text = "Es turno de: " + current;
         //if (anim == null)
         //{
         //    //canvas_animado = GameObject.Find("Personajes_Canvas");
@@ -86,47 +80,33 @@ public class TurnRoundManager : MonoBehaviour
  
     public void ChangeTurn()
     {
-
-
         Debug.Log("CAMBIO TURNO");
         //si es el turno del prota, se cambia al enemigo
         if ( current == Manager.playerPersonaje)
         {
-
-            turno.text = "Es turno de: Enemigo";
-
-            //turnoTexto.text = "Es turno de: Enemigo";
-            //menu_acciones.opacidad(0f);
+            //turno.text = "Es turno de: Enemigo";
 
             //Cambiar current y target
             current = Manager.enemyPersonaje;
             target = Manager.playerPersonaje;
-           
-            //Debug.Log("AtacantE = " + current);
-            //Debug.Log("Objetivo = " + target);
 
             //Animacion
             anim.SetBool("TurnProta", false);
             anim.SetBool("TurnEnemy", true);
 
             //Ocultar el menu de combate
+            Debug.Log(combat_options);
             combat_options.style.display = DisplayStyle.None;
 
         }
         //si es turno del enemigo, se cambia al prota
         else if (current == Manager.enemyPersonaje)
         {
-            turno.text = "Es turno de: Prota";
-
-            //turnoTexto.text = "Es turno de: Prota";
-            //menu_acciones.opacidad(1f);
+            //turno.text = "Es turno de: Prota";
 
             //Cambiar current y target
             current = Manager.playerPersonaje;
             target = Manager.enemyPersonaje;
-
-            //Debug.Log("Atacante = " + current);
-            //Debug.Log("Objetivo = " + target);
 
             //Animacion
             anim.SetBool("TurnProta", true);
@@ -136,7 +116,6 @@ public class TurnRoundManager : MonoBehaviour
 
             //Mostrar el menu de las opciones de combate
             combat_options.style.display = DisplayStyle.Flex;
-
         }
     }
     public void EnemyTurn()

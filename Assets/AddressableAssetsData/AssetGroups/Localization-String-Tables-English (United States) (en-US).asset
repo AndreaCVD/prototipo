@@ -15,14 +15,80 @@ MonoBehaviour:
   m_GroupName: Localization-String-Tables-English (United States) (en-US)
   m_GUID: 84260f83885e9064a89fd1b9a7948800
   m_SerializeEntries:
+  - m_GUID: 0581118ec2dc2674eb5a1059c3345d85
+    m_Address: Lerendur Libre_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0692839064997e449b4d510f35f428a3
+    m_Address: Fogata_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 13cd415db377cd34c89d42347a743f5a
+    m_Address: Tienda_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 33a2dab61baffad4ab805517a95cfdfa
+    m_Address: Viejo Playa_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 35786883742faf14b8b2ee75b98ace9e
+    m_Address: Nimrodel Libre_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 43cf4a5dac5c02f4994885954219a488
     m_Address: DemoNodeGraph_en-US
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en-US
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4d56061cf96c80f4c8fe00af7c073c8e
+    m_Address: Puerta_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 596b545dafb1d1f40a3c2cec49904d7f
+    m_Address: Puzzle Tutorial_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 669e75a086264bf48ad70f38cbbd4cec
+    m_Address: Etkis_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6816f13fab043a1469ce8d1d0d1fb7ee
+    m_Address: Arbol_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 708c8d10225b45b47bda275925e9a144
+    m_Address: Nim_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7298f0fc752a0784f9ff61aadaa33ad1
     m_Address: Dialogo Prueva_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7f6917ab81034614784c5fbc0575e3db
+    m_Address: Etkis Libre_en-US
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en-US
@@ -35,6 +101,42 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 831370fa8b135e14fa6bcde5aaed427c
     m_Address: Cube_Prueva_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a55a5c8499807ac40a0b9b04f1b37988
+    m_Address: Viejo Tunica_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ad0c7b89e5f1d034693b74aa91bb8729
+    m_Address: Nimrodel_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b7efd19dc95750e4a970529bf2062884
+    m_Address: Lerendur_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c540fce034e36b2448896c19d84502b9
+    m_Address: PuertaMaestra_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c755410bcdf389741bc6dfcf207715aa
+    m_Address: Libro Jefe_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d9aee3cd41fa2ea4ebfdc3b9a77f47c3
+    m_Address: CofreVacio_en-US
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en-US

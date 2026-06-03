@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Viejo Tunica Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Viejo Tunica
+  m_TableCollectionNameGuidString: 815d8418464589a4cbd0763fcc0c6dec
+  m_Entries:
+  - m_Id: 735936736718848
+    m_Key: SentenceText_3e8d5adb-651a-44fa-9836-4290d9ae2d2d
+    m_Metadata:
+      m_Items: []
+  - m_Id: 735936736718849
+    m_Key: SentenceName_e253742b-8e28-4f47-92e0-81dd3c9710e3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 735936736718850
+    m_Key: SentenceText_ddfe1473-90f4-46be-a42e-865f4fe450df
+    m_Metadata:
+      m_Items: []
+  - m_Id: 735936736718851
+    m_Key: SentenceName_68c76cc9-f0a3-4680-b2b7-cfaa42a79a96
+    m_Metadata:
+      m_Items: []
+  - m_Id: 735936736718852
+    m_Key: SentenceText_25b95a35-0865-4e77-8e80-4cd5cf52beb8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 735936736718853
+    m_Key: SentenceName_e10afa9f-edad-46ba-94f8-105dc50cf245
+    m_Metadata:
+      m_Items: []
+  - m_Id: 735936736718854
+    m_Key: SentenceText_2ca42b92-57ba-4619-9544-2fb1aa67a5b3
+    m_Metadata:
+      m_Items: []
+  - m_Id: 735936736718855
+    m_Key: SentenceText_1ee94dce-ee07-4f61-99f3-9cfa4eaf7f19
+    m_Metadata:
+      m_Items: []
+  - m_Id: 735936736718856
+    m_Key: Answer_9e541cba-0d0b-4f58-8bab-5e6aef23e0f8
+    m_Metadata:
+      m_Items: []
+  - m_Id: 735936736718857
+    m_Key: Answer_2e8d9761-7242-41ea-ad95-3b58ed7f5720
+    m_Metadata:
+      m_Items: []
+  - m_Id: 735936736718858
+    m_Key: Answer_233a8b88-db36-4007-8cf0-9ad60372cab2
+    m_Metadata:
+      m_Items: []
+  - m_Id: 735936736718859
+    m_Key: SentenceText_edd821af-c10d-4356-b932-e58895ec239c
+    m_Metadata:
+      m_Items: []
+  - m_Id: 735936736718860
+    m_Key: SentenceName_91ccb710-7fa3-461b-91e0-4714cd3e5f28
+    m_Metadata:
+      m_Items: []
+  - m_Id: 735936736718861
+    m_Key: SentenceText_9558c466-1ab0-4b98-9a70-4ac481eac251
+    m_Metadata:
+      m_Items: []
+  - m_Id: 735936736718862
+    m_Key: SentenceName_80ed632c-42fd-4020-ae50-db154045d989
+    m_Metadata:
+      m_Items: []
+  - m_Id: 735936736718863
+    m_Key: SentenceText_006b5d11-ade9-4526-ba64-5862a554fe74
+    m_Metadata:
+      m_Items: []
+  - m_Id: 735936736718864
+    m_Key: SentenceText_017ab963-4cd2-42be-9a24-6409297ca005
+    m_Metadata:
+      m_Items: []
+  - m_Id: 735936736718865
+    m_Key: SentenceText_2b074a5f-0444-46ce-b775-271ed4c7149c
+    m_Metadata:
+      m_Items: []
+  - m_Id: 735936736718866
+    m_Key: SentenceText_7a28e8ab-9d89-442b-9d5c-be016a2b7d25
+    m_Metadata:
+      m_Items: []
+  - m_Id: 735936736718867
+    m_Key: SentenceText_cb86d033-bbff-408f-b01d-736b52d2fcfe
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 9006459319209689243
+  references:
+    version: 2
+    RefIds:
+    - rid: 9006459319209689243
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1780327276176

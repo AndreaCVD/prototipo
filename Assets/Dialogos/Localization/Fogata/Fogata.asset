@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5be51871efa6c3e4eae1703925c8f5ac, type: 3}
+  m_Name: Fogata
+  m_EditorClassIdentifier: 
+  m_SharedTableData: {fileID: 11400000, guid: 6a64efac0607ef64ab2101a3daabcdb1, type: 2}
+  m_Tables:
+  - {fileID: 11400000, guid: 18eeef6a57bbc3c4492f5f4888da81f2, type: 2}
+  - {fileID: 11400000, guid: 0692839064997e449b4d510f35f428a3, type: 2}
+  - {fileID: 11400000, guid: cf0c52b9b690c3848b5d57c0cfefb3f7, type: 2}
+  - {fileID: 11400000, guid: 671a74bdfbae80e42847c9ec5a68cef3, type: 2}
+  - {fileID: 11400000, guid: 060b2513f9e43ff4cbc82762b60e83b1, type: 2}
+  m_Extensions: []
+  m_Group: String Table
+  references:
+    version: 2
+    RefIds: []

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5be51871efa6c3e4eae1703925c8f5ac, type: 3}
+  m_Name: Nim
+  m_EditorClassIdentifier: 
+  m_SharedTableData: {fileID: 11400000, guid: 1b22461cddf1c434ba221e09e37c647b, type: 2}
+  m_Tables:
+  - {fileID: 11400000, guid: 392235e076f41074bb69169ff699dbf1, type: 2}
+  - {fileID: 11400000, guid: 708c8d10225b45b47bda275925e9a144, type: 2}
+  - {fileID: 11400000, guid: b023825b5b1e50243863e603c92154c9, type: 2}
+  - {fileID: 11400000, guid: 9af49136d6d23bd41967e535cc41e62a, type: 2}
+  - {fileID: 11400000, guid: 9a242cf143048504f9778dda87567106, type: 2}
+  m_Extensions: []
+  m_Group: String Table
+  references:
+    version: 2
+    RefIds: []

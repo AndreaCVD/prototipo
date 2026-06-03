@@ -1,0 +1,107 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Viejo Tunica_es-ES
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: es-ES
+  m_SharedData: {fileID: 11400000, guid: 815d8418464589a4cbd0763fcc0c6dec, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 735936736718848
+    m_Localized: "Ah, tu eres el del rescate, \xBFno es as\xED?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 735936736718849
+    m_Localized: ???
+    m_Metadata:
+      m_Items: []
+  - m_Id: 735936736718850
+    m_Localized: "\xBFQue pasa? \xBFTienes miedo?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 735936736718851
+    m_Localized: Yusseif
+    m_Metadata:
+      m_Items: []
+  - m_Id: 735936736718852
+    m_Localized: "Este es el grupo de tres aventureros que se qued\xF3 atrapado buscando
+      algo. Una banda de in\xFAtiles, vaya. "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 735936736718853
+    m_Localized: ???
+    m_Metadata:
+      m_Items: []
+  - m_Id: 735936736718854
+    m_Localized: "Y tu... Porfin te has decidido a venir, eh, que ya tardabas. F\xEDjate
+      que hasta me iba a poner yo y todo. "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 735936736718855
+    m_Localized: "Pero como ves, yo estoy muy mayor como para rescatar a nadie, as\xED
+      que tendr\xE1s que hacerlo tu."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 735936736718856
+    m_Localized: (Observar detenidamente)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 735936736718857
+    m_Localized: "\xBFSeria tan amable de obsequiarme con su ayuda?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 735936736718858
+    m_Localized: (Quedarse callado)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 735936736718859
+    m_Localized: "\xBF...qu\xE9 le pasa?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 735936736718860
+    m_Localized: Carlos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 735936736718861
+    m_Localized: "Bueno, si me lo dices as\xED..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 735936736718862
+    m_Localized: Yusseif
+    m_Metadata:
+      m_Items: []
+  - m_Id: 735936736718863
+    m_Localized: No. Ponte a trabajar.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 735936736718864
+    m_Localized: "\xBFA qu\xE9 esperas? Va, a trabajar. Yo me quedar\xE9 aqu\xED
+      sentado, que me duelen los pies."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 735936736718865
+    m_Localized: "...Si quieres practicar tienes ese \xE1rbol redondo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 735936736718866
+    m_Localized: "Puedo irte a buscar pociones al pueblo, \xA1y no te cobro comisiones!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 735936736718867
+    m_Localized: "\xBFC\xF3mo lo ves?"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

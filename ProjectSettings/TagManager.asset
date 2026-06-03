@@ -16,6 +16,8 @@ TagManager:
   - Daga
   - Espada
   - PocionVida
+  - PuertaMaestra
+  - Puerta
   layers:
   - Default
   - TransparentFX

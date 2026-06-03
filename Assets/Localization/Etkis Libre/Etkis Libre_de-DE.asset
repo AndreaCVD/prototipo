@@ -1,0 +1,113 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Etkis Libre_de-DE
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: de-DE
+  m_SharedData: {fileID: 11400000, guid: 99f4bb6cd2f98764d9372525066d1b93, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 582833953632256
+    m_Localized: "\xA1Hola! Aqu\xED arriba se esta bien \xBFno? jajaja"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 582833978798080
+    m_Localized: Etkis
+    m_Metadata:
+      m_Items: []
+  - m_Id: 582833978798081
+    m_Localized: "\xA1Eh el chico de antes! \xA1Hola!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 582833978798082
+    m_Localized: Nim
+    m_Metadata:
+      m_Items: []
+  - m_Id: 582833978798083
+    m_Localized: "\xBFNo habr\xE1s visto una elfa por all\xE1 bajo?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 582833982992384
+    m_Localized: No, lo siento
+    m_Metadata:
+      m_Items: []
+  - m_Id: 582833982992385
+    m_Localized: "\xBFEra de pelo violeta?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 582833982992386
+    m_Localized: "\xBFVas a bajar si te digo que no?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 582833982992387
+    m_Localized: ...no hace falta mentir tampoco eh.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 582833982992388
+    m_Localized: De acuerdo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 582833982992389
+    m_Localized: "\xBFMe vas a decir que si?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 582833982992390
+    m_Localized: Etkis
+    m_Metadata:
+      m_Items: []
+  - m_Id: 582833982992391
+    m_Localized: "\xA1R\xE1pido Etkis, dale una recompensa!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 582833982992392
+    m_Localized: "\xA1Qu\xE9 dices! N-no no, somos pobres..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 582833982992393
+    m_Localized: "\xBFTambi\xE9n vienes a descansar?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 582833982992394
+    m_Localized: "\xBFViste a un elfo vestido de rojo?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 582833982992395
+    m_Localized: "La \xFAltima vez que lo vimos es cuando encontramos un libro raro..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 582833982992396
+    m_Localized: Se llama Lerendur. Venimos a explorar pero al final nada mas entrar
+      nos perdimos todos...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 582833982992397
+    m_Localized: Ya..fue muy raro.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 582833982992398
+    m_Localized: "Lerendur parece haberse dado un golpe en la cabeza...\xBFse habr\xE1
+      caido?...\xBFFuiste t\xFA?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 582833982992399
+    m_Localized: "Quiz\xE1s solo este cansado, \xBFno?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 582833982992400
+    m_Localized: "Bueno, no te preocupes, al menos estar\xE1 quieto y no se perder\xE1."
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

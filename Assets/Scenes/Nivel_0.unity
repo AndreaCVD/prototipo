@@ -734,7 +734,7 @@ MonoBehaviour:
   iconoPocionVida: {fileID: 21300000, guid: b65d9610dbda6ba46a32505c0e82604c, type: 3}
   iconoDaga: {fileID: 21300000, guid: dd10b42ca8b4b0e4880a096072aff5ad, type: 3}
   iconoEspada: {fileID: 21300000, guid: e9a57d8d864fc2443b5bdcfed074ea39, type: 3}
-  iconoPocionLava: {fileID: 0}
+  iconoPocionLava: {fileID: 21300000, guid: 966a370916b06b940b0edfc209421ad2, type: 3}
 --- !u!114 &495269048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -824,13 +824,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: Viejo Playa Position
       objectReference: {fileID: 0}
+    - target: {fileID: 2627135360209072268, guid: c897a4dddd7061f4292b1cb900937df4, type: 3}
+      propertyPath: m_Size.y
+      value: 0.22619878
+      objectReference: {fileID: 0}
+    - target: {fileID: 2627135360209072268, guid: c897a4dddd7061f4292b1cb900937df4, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2627135360209072268, guid: c897a4dddd7061f4292b1cb900937df4, type: 3}
+      propertyPath: m_Center.y
+      value: -0.3869009
+      objectReference: {fileID: 0}
     - target: {fileID: 3637282513239384025, guid: c897a4dddd7061f4292b1cb900937df4, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.48
       objectReference: {fileID: 0}
     - target: {fileID: 3637282513239384025, guid: c897a4dddd7061f4292b1cb900937df4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.07
+      value: -2.31
       objectReference: {fileID: 0}
     - target: {fileID: 3637282513239384025, guid: c897a4dddd7061f4292b1cb900937df4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -864,7 +876,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2627135360209072268, guid: c897a4dddd7061f4292b1cb900937df4, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

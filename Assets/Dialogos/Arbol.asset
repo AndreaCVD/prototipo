@@ -15,8 +15,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -733.00024
-    y: 22.999786
+    x: -671.40027
+    y: 74.1998
     width: 190
     height: 135
   IsDragging: 1
@@ -47,8 +47,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -193.80014
-    y: 48.599792
+    x: -132.20016
+    y: 99.799805
     width: 190
     height: 80
   IsDragging: 1
@@ -73,8 +73,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 339.99994
-    y: -38.00003
+    x: 401.5999
+    y: 13.199982
     width: 190
     height: 135
   IsDragging: 1
@@ -105,8 +105,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 264
-    y: 244.4
+    x: 325.59998
+    y: 295.6
     width: 190
     height: 135
   IsDragging: 1
@@ -114,7 +114,7 @@ MonoBehaviour:
   _sentence:
     CharacterName: 
     Text: "El \xE1rbol se ha sonrojado. \xA1Te da dado un regalo!)"
-    CharacterSprite: {fileID: 0}
+    CharacterSprite: {fileID: 21300000, guid: 01949879673663e4c8a338c1ad9b5d2d, type: 3}
   ParentNodes:
   - {fileID: -1143254665683468856}
   ChildNode: {fileID: 1127312361010324100}
@@ -137,8 +137,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 413.39978
-    y: -169.0002
+    x: 474.99976
+    y: -117.800186
     width: 190
     height: 135
   IsDragging: 1
@@ -169,8 +169,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 721.5991
-    y: 26.799866
+    x: 783.1991
+    y: 77.99988
     width: 190
     height: 80
   IsDragging: 1
@@ -201,8 +201,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 415.00012
-    y: -309.80026
+    x: 476.6001
+    y: -258.60025
     width: 190
     height: 135
   IsDragging: 1
@@ -233,8 +233,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 69.39993
-    y: 471.80017
+    x: 130.99991
+    y: 523.0002
     width: 190
     height: 135
   IsDragging: 1
@@ -242,7 +242,7 @@ MonoBehaviour:
   _sentence:
     CharacterName: 
     Text: Un arbol te ha intimidado...
-    CharacterSprite: {fileID: 0}
+    CharacterSprite: {fileID: 21300000, guid: 01949879673663e4c8a338c1ad9b5d2d, type: 3}
   ParentNodes:
   - {fileID: 7001909700949823720}
   ChildNode: {fileID: -2324170253134866212}
@@ -265,8 +265,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -14.399963
-    y: 301.19998
+    x: 47.200012
+    y: 352.4
     width: 240
     height: 160
   IsDragging: 1
@@ -333,8 +333,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 591.8002
-    y: 368.5998
+    x: 653.40015
+    y: 419.7998
     width: 190
     height: 80
   IsDragging: 1
@@ -359,8 +359,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 337.60007
-    y: 102.80002
+    x: 399.20004
+    y: 154.00003
     width: 190
     height: 135
   IsDragging: 1
@@ -392,8 +392,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 59.999695
-    y: 5.19989
+    x: 121.59967
+    y: 56.399902
     width: 240
     height: 160
   IsDragging: 1
@@ -423,8 +423,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -799.2003
-    y: 218.79984
+    x: -737.60034
+    y: 269.99985
     width: 190
     height: 80
   IsDragging: 1
@@ -448,8 +448,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -187.40012
-    y: -49.000244
+    x: -125.80014
+    y: 2.199768
     width: 190
     height: 80
   IsDragging: 1
@@ -474,8 +474,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 90.99994
-    y: -191.40016
+    x: 152.59991
+    y: -140.20015
     width: 240
     height: 160
   IsDragging: 1
@@ -505,8 +505,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 267.2
-    y: 375.59998
+    x: 328.8
+    y: 426.8
     width: 190
     height: 135
   IsDragging: 1
@@ -514,7 +514,7 @@ MonoBehaviour:
   _sentence:
     CharacterName: 
     Text: "(Una pi\xF1a casi te cae en la cabeza...tiene pinta que ha sido a prop\xF3sito)"
-    CharacterSprite: {fileID: 0}
+    CharacterSprite: {fileID: 21300000, guid: 01949879673663e4c8a338c1ad9b5d2d, type: 3}
   ParentNodes:
   - {fileID: -1143254665683468856}
   ChildNode: {fileID: -2324170253134866212}
@@ -537,8 +537,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -477.80026
-    y: 2.9997864
+    x: -416.2003
+    y: 54.1998
     width: 190
     height: 175
   IsDragging: 1
@@ -575,8 +575,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -197.80014
-    y: 161.39978
+    x: -136.20016
+    y: 212.5998
     width: 190
     height: 80
   IsDragging: 1

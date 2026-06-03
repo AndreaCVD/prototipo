@@ -15,8 +15,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 208.79984
-    y: 388.39957
+    x: 343.19983
+    y: 354.7996
     width: 190
     height: 80
   IsDragging: 1
@@ -44,8 +44,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -646.3998
-    y: 211.6
+    x: -511.9995
+    y: 178
     width: 190
     height: 80
   IsDragging: 1
@@ -70,10 +70,10 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 520.80054
-    y: -141.20009
+    x: 655.2005
+    y: -193.20009
     width: 190
-    height: 175
+    height: 195
   IsDragging: 1
   IsSelected: 0
   Answers:
@@ -81,6 +81,7 @@ MonoBehaviour:
   - Primer Nivel
   - Segundo Nivel
   - Tercer Nivel
+  - "Quedarse aqu\xED"
   AnswerKeys: []
   ParentNodes:
   - {fileID: 5018439262714322912}
@@ -104,8 +105,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 836.7992
-    y: 138.00003
+    x: 971.1994
+    y: 104.40004
     width: 190
     height: 80
   IsDragging: 1
@@ -131,8 +132,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 827.1991
-    y: -49.19998
+    x: 961.5993
+    y: -82.79997
     width: 190
     height: 80
   IsDragging: 1
@@ -157,14 +158,15 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -99.20005
-    y: 274.00034
+    x: 35.200012
+    y: 240.40036
     width: 190
-    height: 115
+    height: 135
   IsDragging: 1
   IsSelected: 0
   Answers:
   - Campamento
+  - "Quedarse aqu\xED"
   AnswerKeys: []
   ParentNodes:
   - {fileID: 7722732253474417685}
@@ -185,8 +187,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 219.99982
-    y: 473.99954
+    x: 354.3998
+    y: 440.39954
     width: 190
     height: 80
   IsDragging: 1
@@ -226,6 +228,7 @@ MonoBehaviour:
   - {fileID: 308131441627324060}
   - {fileID: -1896232509494548426}
   - {fileID: 3542580953609265815}
+  - {fileID: 4522958931929700681}
   VariablesConfig: {fileID: 11400000, guid: fd3c0eeb49ef7a944b8628ab44b19a6e, type: 2}
   _localizationTableName: 
   _characterNamesLocalizationName: 
@@ -247,8 +250,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 909.599
-    y: 266.0001
+    x: 1043.999
+    y: 232.40012
     width: 190
     height: 80
   IsDragging: 1
@@ -273,8 +276,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 580.7993
-    y: 409.19998
+    x: 715.1995
+    y: 375.6
     width: 190
     height: 80
   IsDragging: 1
@@ -299,8 +302,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -862.40186
-    y: 214.80008
+    x: -728.0014
+    y: 181.20007
     width: 190
     height: 80
   IsDragging: 1
@@ -324,12 +327,12 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1053.5989
-    y: -43.599976
+    x: 1187.999
+    y: -77.19997
     width: 190
     height: 80
   IsDragging: 1
-  IsSelected: 1
+  IsSelected: 0
   _functionName: irNivel_3
   _description: 
   ParentNodes:
@@ -350,8 +353,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 559.19946
-    y: 305.20016
+    x: 693.5997
+    y: 271.6002
     width: 190
     height: 80
   IsDragging: 1
@@ -363,6 +366,31 @@ MonoBehaviour:
   - {fileID: 4760993107417321355}
   - {fileID: -2381589728315482750}
   ChildNode: {fileID: 2187321377584024926}
+--- !u!114 &4522958931929700681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f4b3c64aaf434ea0df52154c1c7680, type: 3}
+  m_Name: External Function Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 262.40002
+    y: 487.60004
+    width: 190
+    height: 135
+  IsDragging: 0
+  IsSelected: 0
+  _functionName: 
+  _description: 
+  ParentNodes: []
+  ChildNode: {fileID: 0}
 --- !u!114 &4760993107417321355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -378,16 +406,17 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 521.60034
-    y: 38.80002
+    x: 656.0004
+    y: 5.2000275
     width: 190
-    height: 155
+    height: 175
   IsDragging: 1
   IsSelected: 0
   Answers:
   - Campamento
   - Primer Nivel
   - Segundo Nivel
+  - "Quedarse aqu\xED"
   AnswerKeys: []
   ParentNodes:
   - {fileID: 5018439262714322912}
@@ -410,8 +439,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 140.80008
-    y: -57.200012
+    x: 275.20007
+    y: -90.8
     width: 240
     height: 160
   IsDragging: 1
@@ -441,8 +470,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -150.4
-    y: -5.199951
+    x: -15.999939
+    y: -38.799942
     width: 240
     height: 160
   IsDragging: 1
@@ -472,8 +501,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -412.79993
-    y: 143.6
+    x: -278.39984
+    y: 110.000015
     width: 240
     height: 160
   IsDragging: 1
@@ -503,15 +532,16 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 158.39993
-    y: 157.20004
+    x: 292.79993
+    y: 123.60005
     width: 190
-    height: 135
+    height: 155
   IsDragging: 1
   IsSelected: 0
   Answers:
   - Campamento
   - Primer Nivel
+  - "Quedarse aqu\xED"
   AnswerKeys: []
   ParentNodes:
   - {fileID: 6901883310320801876}

@@ -48,6 +48,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: personaje
       objectReference: {fileID: 0}
+    - target: {fileID: 688934149860756587, guid: 31817a986efa72f418ed20de88438f44, type: 3}
+      propertyPath: m_AABB.m_Center.y
+      value: 26.826485
+      objectReference: {fileID: 0}
+    - target: {fileID: 688934149860756587, guid: 31817a986efa72f418ed20de88438f44, type: 3}
+      propertyPath: m_AABB.m_Center.z
+      value: -21.160942
+      objectReference: {fileID: 0}
+    - target: {fileID: 688934149860756587, guid: 31817a986efa72f418ed20de88438f44, type: 3}
+      propertyPath: m_AABB.m_Extent.y
+      value: 92.45258
+      objectReference: {fileID: 0}
+    - target: {fileID: 688934149860756587, guid: 31817a986efa72f418ed20de88438f44, type: 3}
+      propertyPath: m_AABB.m_Extent.z
+      value: 45.112
+      objectReference: {fileID: 0}
     - target: {fileID: 6584073865269333082, guid: 31817a986efa72f418ed20de88438f44, type: 3}
       propertyPath: pivot_personaje
       value: 

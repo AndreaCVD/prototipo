@@ -6,6 +6,7 @@ using cherrydev;
 
 public class Dialog : MonoBehaviour
 {
+    LoadScene load;
     Dice dados;
     [Header("LISTA PUZZLE")]
     [SerializeField] Puzzle lista;
@@ -32,6 +33,9 @@ public class Dialog : MonoBehaviour
     public void Start()
     {
         dados = this.GetComponent<Dice>();
+
+        GameObject aux = GameObject.Find("--SceneManagement--");
+        load = aux.GetComponent<LoadScene>();
     }
     public void EmpezarDialogo(DialogNodeGraph dialogo, GameObject obj)
     {
@@ -100,6 +104,7 @@ public class Dialog : MonoBehaviour
     public void Combate()
     {
         Debug.Log("Inicia combate por dialogo");
+        load.Combat(obj);
     }
     public void SetBool(string nombreVal, bool val)
     {

@@ -9,7 +9,6 @@ public class TutorialFloorPuzzle : MonoBehaviour
     [SerializeField] Puzzle lista;
 
     private bool preload;
-    private int tutorial = 0;
 
     [Header("Obj a modificar al acabar puzzle")]
     [SerializeField] Animator puertaMazmorra;

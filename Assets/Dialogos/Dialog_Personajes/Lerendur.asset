@@ -15,8 +15,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 572.8006
-    y: -207.59991
+    x: 1249.6006
+    y: 6.7998657
     width: 190
     height: 135
   IsDragging: 1
@@ -31,8 +31,8 @@ MonoBehaviour:
   ChildNode: {fileID: -3437389708092351922}
   _isExternalFunc: 0
   _externalFunctionName: 
-  CharacterNameKey: 
-  SentenceTextKey: 
+  CharacterNameKey: SentenceName_e91b588c-28af-4660-b4d8-ce2eb7b186a4
+  SentenceTextKey: SentenceText_16323fc8-a24b-4ad0-980d-249a437a2345
 --- !u!114 &-8885344386241357504
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48,8 +48,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1004.0019
-    y: -207.59991
+    x: 1680.8022
+    y: 6.7998657
     width: 190
     height: 135
   IsDragging: 1
@@ -63,8 +63,8 @@ MonoBehaviour:
   ChildNode: {fileID: 3873199649692108160}
   _isExternalFunc: 0
   _externalFunctionName: 
-  CharacterNameKey: 
-  SentenceTextKey: 
+  CharacterNameKey: SentenceName_11671a8a-0876-4bfa-ac30-2197679ce6f8
+  SentenceTextKey: SentenceText_b3a7a6ae-b2de-434d-b533-e38d2935fcf1
 --- !u!114 &-8319330092286238503
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80,8 +80,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -1777.6001
-    y: 2.0002441
+    x: -1100.7988
+    y: 216.40002
     width: 190
     height: 155
   IsDragging: 1
@@ -115,8 +115,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -1317.5991
-    y: -96.39981
+    x: -640.79974
+    y: 117.99997
     width: 190
     height: 135
   IsDragging: 1
@@ -130,8 +130,8 @@ MonoBehaviour:
   ChildNode: {fileID: -2857790693838751020}
   _isExternalFunc: 0
   _externalFunctionName: 
-  CharacterNameKey: 
-  SentenceTextKey: 
+  CharacterNameKey: SentenceName_11671a8a-0876-4bfa-ac30-2197679ce6f8
+  SentenceTextKey: SentenceText_171d8715-71a9-4433-ace7-3cfecf500238
 --- !u!114 &-7190297252633427917
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -147,8 +147,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -55.999252
-    y: 159.59995
+    x: 620.80066
+    y: 373.99976
     width: 190
     height: 135
   IsDragging: 1
@@ -162,8 +162,8 @@ MonoBehaviour:
   ChildNode: {fileID: -5673074591732092608}
   _isExternalFunc: 0
   _externalFunctionName: 
-  CharacterNameKey: 
-  SentenceTextKey: 
+  CharacterNameKey: SentenceName_11671a8a-0876-4bfa-ac30-2197679ce6f8
+  SentenceTextKey: SentenceText_60bbdb1f-fd7e-4c6d-aa31-f5c2a8359494
 --- !u!114 &-7162342487949183980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -179,8 +179,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -82.399414
-    y: -216.39987
+    x: 594.40076
+    y: -2.0000916
     width: 190
     height: 135
   IsDragging: 1
@@ -195,8 +195,8 @@ MonoBehaviour:
   ChildNode: {fileID: -2224604349968105057}
   _isExternalFunc: 0
   _externalFunctionName: 
-  CharacterNameKey: 
-  SentenceTextKey: 
+  CharacterNameKey: SentenceName_11671a8a-0876-4bfa-ac30-2197679ce6f8
+  SentenceTextKey: SentenceText_798f5328-dc6d-49d0-9c43-13d91c657e60
 --- !u!114 &-6879804276207667640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -212,8 +212,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 341.60037
-    y: -210.7999
+    x: 1018.4007
+    y: 3.599884
     width: 190
     height: 135
   IsDragging: 1
@@ -227,8 +227,8 @@ MonoBehaviour:
   ChildNode: {fileID: -8901645500250158188}
   _isExternalFunc: 0
   _externalFunctionName: 
-  CharacterNameKey: 
-  SentenceTextKey: 
+  CharacterNameKey: SentenceName_a05dc08e-7e0e-477c-b778-0ef39d4d74fd
+  SentenceTextKey: SentenceText_7c61755b-e059-4ea6-8f45-52bc925aad3d
 --- !u!114 &-6669549297116552669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -244,8 +244,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -1331.9988
-    y: 180.40076
+    x: -655.19965
+    y: 394.80054
     width: 190
     height: 135
   IsDragging: 1
@@ -259,8 +259,8 @@ MonoBehaviour:
   ChildNode: {fileID: 3198627237943254086}
   _isExternalFunc: 0
   _externalFunctionName: 
-  CharacterNameKey: 
-  SentenceTextKey: 
+  CharacterNameKey: SentenceName_11671a8a-0876-4bfa-ac30-2197679ce6f8
+  SentenceTextKey: SentenceText_af729320-b6cc-4941-b6f2-1482177febc6
 --- !u!114 &-5673074591732092608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -276,8 +276,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 152.80078
-    y: 157.99997
+    x: 829.60114
+    y: 372.39978
     width: 190
     height: 135
   IsDragging: 1
@@ -291,8 +291,8 @@ MonoBehaviour:
   ChildNode: {fileID: 1950352595083872263}
   _isExternalFunc: 0
   _externalFunctionName: 
-  CharacterNameKey: 
-  SentenceTextKey: 
+  CharacterNameKey: SentenceName_e91b588c-28af-4660-b4d8-ce2eb7b186a4
+  SentenceTextKey: SentenceText_b123c346-40e0-4dc6-8256-9111e4082397
 --- !u!114 &-4346793766927675850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -308,8 +308,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 808.0009
-    y: 155.59998
+    x: 1484.801
+    y: 369.99976
     width: 190
     height: 135
   IsDragging: 1
@@ -323,8 +323,8 @@ MonoBehaviour:
   ChildNode: {fileID: 1013035935364489504}
   _isExternalFunc: 0
   _externalFunctionName: 
-  CharacterNameKey: 
-  SentenceTextKey: 
+  CharacterNameKey: SentenceName_e91b588c-28af-4660-b4d8-ce2eb7b186a4
+  SentenceTextKey: SentenceText_3f4744aa-3722-4898-8546-21c0650b4834
 --- !u!114 &-3437389708092351922
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -340,8 +340,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 785.6015
-    y: -209.99991
+    x: 1462.4016
+    y: 4.399872
     width: 190
     height: 135
   IsDragging: 1
@@ -356,8 +356,8 @@ MonoBehaviour:
   ChildNode: {fileID: -8885344386241357504}
   _isExternalFunc: 0
   _externalFunctionName: 
-  CharacterNameKey: 
-  SentenceTextKey: 
+  CharacterNameKey: SentenceName_a05dc08e-7e0e-477c-b778-0ef39d4d74fd
+  SentenceTextKey: SentenceText_37b22bcc-f7b8-4fac-bdd1-88d4281ff66e
 --- !u!114 &-2857790693838751020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -373,8 +373,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -1094.3999
-    y: -93.99982
+    x: -417.6004
+    y: 120.39996
     width: 190
     height: 135
   IsDragging: 1
@@ -388,8 +388,8 @@ MonoBehaviour:
   ChildNode: {fileID: 7013857938896785485}
   _isExternalFunc: 0
   _externalFunctionName: 
-  CharacterNameKey: 
-  SentenceTextKey: 
+  CharacterNameKey: SentenceName_be0c5202-4376-4438-9aa8-2ef31a1d201c
+  SentenceTextKey: SentenceText_433c7423-abc7-40d3-a7cb-9a4665a7c469
 --- !u!114 &-2224604349968105057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -405,8 +405,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 128.0011
-    y: -214.7999
+    x: 804.8012
+    y: -0.40011597
     width: 190
     height: 135
   IsDragging: 1
@@ -420,8 +420,8 @@ MonoBehaviour:
   ChildNode: {fileID: -6879804276207667640}
   _isExternalFunc: 0
   _externalFunctionName: 
-  CharacterNameKey: 
-  SentenceTextKey: 
+  CharacterNameKey: SentenceName_e91b588c-28af-4660-b4d8-ce2eb7b186a4
+  SentenceTextKey: SentenceText_ecf04d43-1c1b-45e3-829a-7144cf842516
 --- !u!114 &-2080036405186575416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -437,8 +437,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -666.40045
-    y: 34.8002
+    x: 10.398621
+    y: 249.19998
     width: 240
     height: 160
   IsDragging: 1
@@ -470,8 +470,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 591.2005
-    y: 154.79996
+    x: 1268.0005
+    y: 369.1997
     width: 190
     height: 135
   IsDragging: 1
@@ -486,8 +486,8 @@ MonoBehaviour:
   ChildNode: {fileID: -4346793766927675850}
   _isExternalFunc: 0
   _externalFunctionName: 
-  CharacterNameKey: 
-  SentenceTextKey: 
+  CharacterNameKey: SentenceName_11671a8a-0876-4bfa-ac30-2197679ce6f8
+  SentenceTextKey: SentenceText_1f12526a-b655-4292-bc04-c2961a878cd9
 --- !u!114 &-582430670484814380
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -503,8 +503,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -383.9998
-    y: -129.99982
+    x: 292.8
+    y: 84.39996
     width: 240
     height: 160
   IsDragging: 1
@@ -534,8 +534,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -364.79984
-    y: 198.0007
+    x: 311.99994
+    y: 412.4005
     width: 240
     height: 160
   IsDragging: 1
@@ -620,8 +620,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 576.8011
-    y: -37.99997
+    x: 1253.6011
+    y: 176.39981
     width: 190
     height: 135
   IsDragging: 1
@@ -635,8 +635,8 @@ MonoBehaviour:
   ChildNode: {fileID: 4046920362478223803}
   _isExternalFunc: 0
   _externalFunctionName: 
-  CharacterNameKey: 
-  SentenceTextKey: 
+  CharacterNameKey: SentenceName_11671a8a-0876-4bfa-ac30-2197679ce6f8
+  SentenceTextKey: SentenceText_0ca726fa-7327-4f00-9b46-ea54b3b61fcc
 --- !u!114 &570273466155666702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -652,8 +652,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -1545.5999
-    y: 35.60025
+    x: -868.7997
+    y: 250.00003
     width: 190
     height: 135
   IsDragging: 1
@@ -685,8 +685,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1032.8013
-    y: 159.59995
+    x: 1709.6011
+    y: 373.99976
     width: 190
     height: 135
   IsDragging: 1
@@ -700,8 +700,8 @@ MonoBehaviour:
   ChildNode: {fileID: 5325704371217879668}
   _isExternalFunc: 0
   _externalFunctionName: 
-  CharacterNameKey: 
-  SentenceTextKey: 
+  CharacterNameKey: SentenceName_11671a8a-0876-4bfa-ac30-2197679ce6f8
+  SentenceTextKey: SentenceText_e081a1a5-3de5-4017-8dbd-da9c0095e3dd
 --- !u!114 &1950352595083872263
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -717,8 +717,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 361.60086
-    y: 158
+    x: 1038.4006
+    y: 372.39978
     width: 190
     height: 135
   IsDragging: 1
@@ -733,8 +733,8 @@ MonoBehaviour:
   ChildNode: {fileID: -1910608811902521538}
   _isExternalFunc: 0
   _externalFunctionName: 
-  CharacterNameKey: 
-  SentenceTextKey: 
+  CharacterNameKey: SentenceName_11671a8a-0876-4bfa-ac30-2197679ce6f8
+  SentenceTextKey: SentenceText_1b0f442f-2ece-4445-b93e-8bdd39c92634
 --- !u!114 &2102689393997127125
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -750,8 +750,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -1550.3987
-    y: 168.4007
+    x: -873.59924
+    y: 382.80054
     width: 190
     height: 135
   IsDragging: 1
@@ -782,8 +782,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 172.80002
-    y: 347.6
+    x: 849.60016
+    y: 561.9999
     width: 190
     height: 135
   IsDragging: 1
@@ -791,14 +791,14 @@ MonoBehaviour:
   _sentence:
     CharacterName: Carlos
     Text: "\xBFRecuerdas algo?"
-    CharacterSprite: {fileID: 0}
+    CharacterSprite: {fileID: 21300000, guid: a188ce1c9b6fce644b5efac5bf9be647, type: 3}
   ParentNodes:
   - {fileID: 3594664587302120645}
-  ChildNode: {fileID: 0}
+  ChildNode: {fileID: 7502121543711064424}
   _isExternalFunc: 0
   _externalFunctionName: 
-  CharacterNameKey: 
-  SentenceTextKey: 
+  CharacterNameKey: SentenceName_be0c5202-4376-4438-9aa8-2ef31a1d201c
+  SentenceTextKey: SentenceText_7537a189-a053-4395-938c-4bfe21d2dc83
 --- !u!114 &2555358757919053778
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -814,8 +814,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 140.80115
-    y: -46.80002
+    x: 817.6014
+    y: 167.59976
     width: 190
     height: 135
   IsDragging: 1
@@ -830,8 +830,8 @@ MonoBehaviour:
   ChildNode: {fileID: 5862949933760002899}
   _isExternalFunc: 0
   _externalFunctionName: 
-  CharacterNameKey: 
-  SentenceTextKey: 
+  CharacterNameKey: SentenceName_11671a8a-0876-4bfa-ac30-2197679ce6f8
+  SentenceTextKey: SentenceText_4f45d624-1606-45c8-a47b-2b58d84e4fdb
 --- !u!114 &3198627237943254086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -847,8 +847,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -1111.2
-    y: 180.40063
+    x: -434.4002
+    y: 394.8004
     width: 190
     height: 135
   IsDragging: 1
@@ -862,8 +862,8 @@ MonoBehaviour:
   ChildNode: {fileID: -2080036405186575416}
   _isExternalFunc: 0
   _externalFunctionName: 
-  CharacterNameKey: 
-  SentenceTextKey: 
+  CharacterNameKey: SentenceName_be0c5202-4376-4438-9aa8-2ef31a1d201c
+  SentenceTextKey: SentenceText_32936995-50a3-4ff2-ae82-e97a1f3f5342
 --- !u!114 &3231145681667128611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -879,8 +879,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -2015.2017
-    y: 16.400238
+    x: -1338.4023
+    y: 230.80002
     width: 190
     height: 135
   IsDragging: 1
@@ -910,8 +910,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -46.398895
-    y: 347.60007
+    x: 630.401
+    y: 562
     width: 190
     height: 135
   IsDragging: 1
@@ -926,8 +926,8 @@ MonoBehaviour:
   ChildNode: {fileID: 2259948958093712881}
   _isExternalFunc: 0
   _externalFunctionName: 
-  CharacterNameKey: 
-  SentenceTextKey: 
+  CharacterNameKey: SentenceName_11671a8a-0876-4bfa-ac30-2197679ce6f8
+  SentenceTextKey: SentenceText_22f7c6fe-81cd-4df4-8ffa-4a1835a52e36
 --- !u!114 &3873199649692108160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -943,8 +943,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1219.2029
-    y: -210.7999
+    x: 1896.0037
+    y: 3.599884
     width: 190
     height: 135
   IsDragging: 1
@@ -959,8 +959,8 @@ MonoBehaviour:
   ChildNode: {fileID: 4046920362478223803}
   _isExternalFunc: 0
   _externalFunctionName: 
-  CharacterNameKey: 
-  SentenceTextKey: 
+  CharacterNameKey: SentenceName_be0c5202-4376-4438-9aa8-2ef31a1d201c
+  SentenceTextKey: SentenceText_c1598309-fa9b-4848-a26b-acfe18ae8ff5
 --- !u!114 &4046920362478223803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -976,8 +976,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1576.0005
-    y: -17.999939
+    x: 2252.801
+    y: 196.39984
     width: 190
     height: 80
   IsDragging: 0
@@ -988,6 +988,7 @@ MonoBehaviour:
   - {fileID: 3873199649692108160}
   - {fileID: 500053390698016018}
   - {fileID: 5325704371217879668}
+  - {fileID: 5033616589701010038}
   ChildNode: {fileID: 0}
 --- !u!114 &5033616589701010038
 MonoBehaviour:
@@ -1004,22 +1005,24 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 641.60004
-    y: 377.2
+    x: 1300.8
+    y: 558.80005
     width: 190
     height: 135
-  IsDragging: 0
+  IsDragging: 1
   IsSelected: 0
   _sentence:
-    CharacterName: 
-    Text: 
-    CharacterSprite: {fileID: 0}
-  ParentNodes: []
-  ChildNode: {fileID: 0}
+    CharacterName: Lerendur
+    Text: "Como siempre pasa eso no me preocup\xF3, pero a saber que les habr\xE1
+      pasado..."
+    CharacterSprite: {fileID: 21300000, guid: 37a69fe11299fbf4e86457d82e5e5dcf, type: 3}
+  ParentNodes:
+  - {fileID: 7502121543711064424}
+  ChildNode: {fileID: 4046920362478223803}
   _isExternalFunc: 0
   _externalFunctionName: 
-  CharacterNameKey: 
-  SentenceTextKey: 
+  CharacterNameKey: SentenceName_11671a8a-0876-4bfa-ac30-2197679ce6f8
+  SentenceTextKey: SentenceText_7968c21c-43fb-4661-af3c-7987e5e31a5e
 --- !u!114 &5325704371217879668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1035,8 +1038,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1232.8015
-    y: 157.19995
+    x: 1909.6023
+    y: 371.59973
     width: 190
     height: 135
   IsDragging: 1
@@ -1050,8 +1053,8 @@ MonoBehaviour:
   ChildNode: {fileID: 4046920362478223803}
   _isExternalFunc: 0
   _externalFunctionName: 
-  CharacterNameKey: 
-  SentenceTextKey: 
+  CharacterNameKey: SentenceName_11671a8a-0876-4bfa-ac30-2197679ce6f8
+  SentenceTextKey: SentenceText_99e87e9b-10b9-436d-913e-6fee5afba76e
 --- !u!114 &5862949933760002899
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1067,8 +1070,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 351.20096
-    y: -42
+    x: 1028.0012
+    y: 172.39978
     width: 190
     height: 135
   IsDragging: 1
@@ -1082,8 +1085,8 @@ MonoBehaviour:
   ChildNode: {fileID: 500053390698016018}
   _isExternalFunc: 0
   _externalFunctionName: 
-  CharacterNameKey: 
-  SentenceTextKey: 
+  CharacterNameKey: SentenceName_a05dc08e-7e0e-477c-b778-0ef39d4d74fd
+  SentenceTextKey: SentenceText_1f4e69c4-109a-4e30-9ea2-3ec29221e4af
 --- !u!114 &7013857938896785485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1099,8 +1102,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -891.2005
-    y: -97.19983
+    x: -214.4013
+    y: 117.19995
     width: 190
     height: 135
   IsDragging: 1
@@ -1114,8 +1117,8 @@ MonoBehaviour:
   ChildNode: {fileID: -2080036405186575416}
   _isExternalFunc: 0
   _externalFunctionName: 
-  CharacterNameKey: 
-  SentenceTextKey: 
+  CharacterNameKey: SentenceName_be0c5202-4376-4438-9aa8-2ef31a1d201c
+  SentenceTextKey: SentenceText_0f1725b2-8879-4d5a-84d1-6809b63bdfb7
 --- !u!114 &7113387209181820352
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1131,8 +1134,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -65.59912
-    y: -52.400024
+    x: 611.20105
+    y: 161.99976
     width: 190
     height: 135
   IsDragging: 1
@@ -1146,8 +1149,8 @@ MonoBehaviour:
   ChildNode: {fileID: 2555358757919053778}
   _isExternalFunc: 0
   _externalFunctionName: 
-  CharacterNameKey: 
-  SentenceTextKey: 
+  CharacterNameKey: SentenceName_11671a8a-0876-4bfa-ac30-2197679ce6f8
+  SentenceTextKey: SentenceText_b9c49692-d7eb-4f33-ab4b-17d253d1844b
 --- !u!114 &7502121543711064424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1163,23 +1166,24 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 392.80002
-    y: 338.80002
+    x: 1069.5999
+    y: 553.1998
     width: 190
     height: 135
   IsDragging: 1
-  IsSelected: 1
+  IsSelected: 0
   _sentence:
     CharacterName: Lerendur
     Text: "...No mucho, solo que al adentrarnos cada uno de mis compa\xF1eros se
       separ\xF3 del grupo."
-    CharacterSprite: {fileID: 0}
-  ParentNodes: []
-  ChildNode: {fileID: 0}
+    CharacterSprite: {fileID: 21300000, guid: 37a69fe11299fbf4e86457d82e5e5dcf, type: 3}
+  ParentNodes:
+  - {fileID: 2259948958093712881}
+  ChildNode: {fileID: 5033616589701010038}
   _isExternalFunc: 0
   _externalFunctionName: 
-  CharacterNameKey: 
-  SentenceTextKey: 
+  CharacterNameKey: SentenceName_11671a8a-0876-4bfa-ac30-2197679ce6f8
+  SentenceTextKey: SentenceText_3a3ff467-8464-4b26-8b7b-821e81ce4d98
 --- !u!114 &8578341496193681062
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1195,8 +1199,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -1546.3997
-    y: -95.59976
+    x: -869.5995
+    y: 118.80002
     width: 190
     height: 135
   IsDragging: 1

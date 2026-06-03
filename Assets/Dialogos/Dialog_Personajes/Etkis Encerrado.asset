@@ -15,8 +15,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 877.5959
-    y: 143.59988
+    x: 567.1953
+    y: -60.400208
     width: 210
     height: 155
   IsDragging: 1
@@ -45,8 +45,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -354.40088
-    y: 336.39957
+    x: -768.0015
+    y: 97.99954
     width: 190
     height: 80
   IsDragging: 1
@@ -70,16 +70,16 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1443.1997
-    y: 366.7996
+    x: 1132.8
+    y: 162.79965
     width: 210
     height: 155
   IsDragging: 1
   IsSelected: 0
   _variableName: etkisFirstTalk
-  _modifyType: 1
+  _modifyType: 0
   _boolValue: 0
-  _intValue: 1
+  _intValue: 0
   _floatValue: 0
   _stringValue: 
   ParentNodes:
@@ -100,8 +100,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 645.5997
-    y: 517.99945
+    x: 335.19934
+    y: 313.9998
     width: 190
     height: 135
   IsDragging: 1
@@ -132,8 +132,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 876.79535
-    y: -14.000153
+    x: 566.3948
+    y: -218.00027
     width: 210
     height: 155
   IsDragging: 1
@@ -162,8 +162,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 322.39996
-    y: 56.399933
+    x: 11.999634
+    y: -147.60013
     width: 240
     height: 160
   IsDragging: 1
@@ -193,8 +193,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 658.40045
-    y: 321.19962
+    x: 347.9997
+    y: 117.199524
     width: 190
     height: 135
   IsDragging: 1
@@ -225,8 +225,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1167.9937
-    y: 169.9997
+    x: 857.5944
+    y: -34.00038
     width: 190
     height: 80
   IsDragging: 1
@@ -254,13 +254,13 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 44.000244
-    y: 285.19962
+    x: -308.0005
+    y: 31.599564
     width: 240
     height: 160
   IsDragging: 1
   IsSelected: 0
-  _variableName: b
+  _variableName: etkis_libre_nivel1
   _conditionType: 1
   _boolTargetValue: 0
   _intTargetValue: 1
@@ -285,14 +285,14 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1189.5999
-    y: 519.5997
+    x: 788.0013
+    y: 293.1999
     width: 210
     height: 155
   IsDragging: 1
   IsSelected: 0
   _variableName: etkisFirstTalk
-  _modifyType: 2
+  _modifyType: 0
   _boolValue: 0
   _intValue: 1
   _floatValue: 0
@@ -329,7 +329,7 @@ MonoBehaviour:
   - {fileID: -637543577219836419}
   - {fileID: -7781373260608017088}
   - {fileID: 6560923034505512457}
-  VariablesConfig: {fileID: 11400000, guid: 9c2ab0fabf10d764fbff8462f9b9f886, type: 2}
+  VariablesConfig: {fileID: 11400000, guid: 18b09256f245a3742aa99b349e6e8cc1, type: 2}
   _localizationTableName: Etkis
   _characterNamesLocalizationName: 
   NodeToDrawLineFrom: {fileID: 0}
@@ -350,8 +350,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1055.1997
-    y: 333.19962
+    x: 744.7996
+    y: 129.19955
     width: 190
     height: 135
   IsDragging: 1
@@ -382,8 +382,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 648.79913
-    y: 151.59991
+    x: 338.39886
+    y: -52.400146
     width: 190
     height: 135
   IsDragging: 1
@@ -414,8 +414,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 646.3997
-    y: 6.7998657
+    x: 335.9994
+    y: -197.20023
     width: 190
     height: 135
   IsDragging: 1
@@ -446,8 +446,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -153.59985
-    y: 335.59964
+    x: -544.80023
+    y: 89.19963
     width: 190
     height: 80
   IsDragging: 1
@@ -472,8 +472,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 345.59973
-    y: 421.99936
+    x: 35.199463
+    y: 217.99945
     width: 240
     height: 160
   IsDragging: 1
@@ -503,12 +503,12 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 853.6005
-    y: 329.19992
+    x: 543.20026
+    y: 125.19986
     width: 190
     height: 135
   IsDragging: 1
-  IsSelected: 1
+  IsSelected: 0
   _sentence:
     CharacterName: Etkis
     Text: "Soy Etkis, uno de los tres aventureros que se perdi\xF3."

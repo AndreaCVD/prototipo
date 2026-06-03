@@ -2,6 +2,10 @@ using UnityEngine;
 
 public class EmpujarObjetos : MonoBehaviour
 {
+    [SerializeField] public int pesoNecesario = 5; // fuerza mínima para mover la caja
+
+    public Inventario inventario;
+
     public float distanciaCasilla = 1f;   // Tamaño de la casilla (1 unidad por defecto)
     public float velocidadMovimiento = 5f; // Velocidad de desplazamiento
     private bool enMovimiento = false;
@@ -14,6 +18,8 @@ public class EmpujarObjetos : MonoBehaviour
     {
         GameObject aux = GameObject.Find("-- SavePuzzle --");
         //savePuzzle = aux.GetComponent<SavePuzzle>();
+
+        inventario = GameObject.Find("Player Character").GetComponentInChildren<Inventario>();
 
         destino = transform.position; // Posición inicial
 
@@ -48,6 +54,15 @@ public class EmpujarObjetos : MonoBehaviour
     }
     void OnCollisionEnter(Collision col)
     {
+        int fuerzaJugador = inventario.prota.stats.Get(PersonajesStats.Fuerza);
+
+        if (fuerzaJugador < pesoNecesario)
+        {
+            Debug.Log("No tienes suficiente fuerza para mover esto");
+            return;
+        }
+
+
         // Si el jugador choca con este objeto y el puzzle no esta completado
         if (col.gameObject.CompareTag("Player") && !enMovimiento && !puzzleFinished)
         {
@@ -58,6 +73,10 @@ public class EmpujarObjetos : MonoBehaviour
 
             // Redondear dirección a ejes principales (para moverse en grid)
             direccion = new Vector3(Mathf.Round(direccion.x), 0f, Mathf.Round(direccion.z));
+
+            // Bloquear diagonal
+            if (direccion.x != 0 && direccion.z != 0) return;
+            if (direccion == Vector3.zero) return;
 
             // Calcular nueva posición
             Vector3 nuevaPos = transform.position + direccion * distanciaCasilla;

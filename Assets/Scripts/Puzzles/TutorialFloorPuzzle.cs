@@ -9,7 +9,6 @@ public class TutorialFloorPuzzle : MonoBehaviour
     [SerializeField] Puzzle lista;
 
     private bool preload;
-    private int tutorial = 0;
 
     [Header("Obj a modificar al acabar puzzle")]
     [SerializeField] Animator puertaMazmorra;
@@ -30,10 +29,8 @@ public class TutorialFloorPuzzle : MonoBehaviour
     {
         InstanciarPers();
         revisarPuzzle();
-        //Treure pq sino sempre es reinicien?
-        lista.Nivel_0[0].acabado = false;
+
         zona_1.finished = lista.Nivel_0[0].acabado;
-        lista.NivelDesbloqueado[0].acabado = false;
     }
 
     void Update()

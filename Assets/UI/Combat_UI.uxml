@@ -33,7 +33,7 @@
             </ui:VisualElement>
             <ui:VisualElement class="combat-divider" />
             <ui:VisualElement class="combat-row">
-                <ui:Button name="btn-item" text="Items" class="combat_btns items_btn_color" />
+                <ui:Button name="btn-item" text="Items" class="combat_btns items_btn_color" style="display: none;" />
                 <ui:Button name="btn-huir" text="Huir" class="combat_btns option_btn_color flee_btn_color" />
             </ui:VisualElement>
         </ui:VisualElement>

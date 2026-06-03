@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7491735092704431936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f4b3c64aaf434ea0df52154c1c7680, type: 3}
+  m_Name: External Function Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 751.20013
+    y: 285.99997
+    width: 190
+    height: 80
+  IsDragging: 0
+  IsSelected: 1
+  _functionName: ContinuarMov
+  _description: 
+  ParentNodes:
+  - {fileID: -6685595360915545557}
+  - {fileID: -3206520652390200242}
+  ChildNode: {fileID: 0}
 --- !u!114 &-6927550419059624890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,8 +42,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 254.40002
-    y: 223.6
+    x: 174.40009
+    y: 229.19998
     width: 190
     height: 135
   IsDragging: 1
@@ -27,7 +54,8 @@ MonoBehaviour:
   AnswerKeys:
   - Answer_ceffc39d-da20-482e-b374-1ad207f3398b
   - Answer_35cb5fc8-05a4-4da5-802d-46639819240c
-  ParentNodes: []
+  ParentNodes:
+  - {fileID: 1674005145279911684}
   ChildNodes:
   - {fileID: -6685595360915545557}
   - {fileID: -3206520652390200242}
@@ -46,8 +74,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 539.2001
-    y: 147.60002
+    x: 459.20026
+    y: 153.2
     width: 190
     height: 80
   IsDragging: 1
@@ -56,7 +84,7 @@ MonoBehaviour:
   _description: 
   ParentNodes:
   - {fileID: -6927550419059624890}
-  ChildNode: {fileID: 0}
+  ChildNode: {fileID: -7491735092704431936}
 --- !u!114 &-3206520652390200242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72,19 +100,19 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 540
-    y: 289.19998
+    x: 460.00018
+    y: 294.79996
     width: 190
     height: 135
   IsDragging: 1
   IsSelected: 0
   _sentence:
-    CharacterName: 
-    Text: 
-    CharacterSprite: {fileID: 0}
+    CharacterName: Carlos
+    Text: Ahora mejor no.
+    CharacterSprite: {fileID: 21300000, guid: a188ce1c9b6fce644b5efac5bf9be647, type: 3}
   ParentNodes:
   - {fileID: -6927550419059624890}
-  ChildNode: {fileID: 0}
+  ChildNode: {fileID: -7491735092704431936}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: SentenceName_d909bf06-342c-49a5-b533-a9c6c6ec0fe6
@@ -105,9 +133,36 @@ MonoBehaviour:
   - {fileID: -6927550419059624890}
   - {fileID: -6685595360915545557}
   - {fileID: -3206520652390200242}
+  - {fileID: 1674005145279911684}
+  - {fileID: -7491735092704431936}
   VariablesConfig: {fileID: 0}
   _localizationTableName: Tienda
   _characterNamesLocalizationName: 
   NodeToDrawLineFrom: {fileID: 0}
   LinePosition: {x: 0, y: 0}
   IsLocalizationSetUp: 1
+--- !u!114 &1674005145279911684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f4b3c64aaf434ea0df52154c1c7680, type: 3}
+  m_Name: External Function Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -37.599976
+    y: 256.39996
+    width: 190
+    height: 80
+  IsDragging: 1
+  IsSelected: 0
+  _functionName: PararMov
+  _description: 
+  ParentNodes: []
+  ChildNode: {fileID: -6927550419059624890}

@@ -15,15 +15,15 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1071.9949
-    y: 269.19943
+    x: -120.00537
+    y: 582.7996
     width: 190
-    height: 0
+    height: 135
   IsDragging: 1
   IsSelected: 0
   _sentence:
     CharacterName: Nim
-    Text: "Que bien se esta aqu\xED arriba"
+    Text: "Gracias por sacarme de aqu\xED, ehe"
     CharacterSprite: {fileID: 21300000, guid: 0bfc4632ce6eabc458a5675219b927d5, type: 3}
   ParentNodes:
   - {fileID: 2068089868072973428}
@@ -47,8 +47,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 293.59955
-    y: 151.59973
+    x: -898.4009
+    y: 465.99982
     width: 240
     height: 160
   IsDragging: 1
@@ -78,8 +78,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -124.8006
-    y: 189.99948
+    x: -1316.7996
+    y: 504.39966
     width: 190
     height: 80
   IsDragging: 1
@@ -103,8 +103,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1884.7991
-    y: -117.19992
+    x: 692.797
+    y: 197.20013
     width: 210
     height: 155
   IsDragging: 1
@@ -133,15 +133,15 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1342.3958
-    y: 623.5993
+    x: 150.39536
+    y: 938.0004
     width: 190
-    height: 0
+    height: 135
   IsDragging: 1
   IsSelected: 0
   _sentence:
     CharacterName: Nim
-    Text: "Ahora que haras? Yo estar\xE9 por aqu\xF1i si me necesitas"
+    Text: "\xBFAhora que haras? Yo ir\xE9 arriba, aqu\xED hace frio."
     CharacterSprite: {fileID: 21300000, guid: 0bfc4632ce6eabc458a5675219b927d5, type: 3}
   ParentNodes:
   - {fileID: 1460553935879053661}
@@ -165,8 +165,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 552.79877
-    y: 314.79962
+    x: -639.2013
+    y: 629.20026
     width: 210
     height: 155
   IsDragging: 1
@@ -195,14 +195,14 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1338.3953
-    y: 459.5988
+    x: 146.39487
+    y: 773.9997
     width: 190
-    height: 0
+    height: 135
   IsDragging: 1
   IsSelected: 0
   _sentence:
-    CharacterName: 
+    CharacterName: Nim
     Text: "Ojal\xE1 mi buho estuviera aqu\xED"
     CharacterSprite: {fileID: 21300000, guid: 0bfc4632ce6eabc458a5675219b927d5, type: 3}
   ParentNodes:
@@ -227,10 +227,10 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1240.7966
-    y: -110.7999
+    x: 48.796112
+    y: 203.60013
     width: 190
-    height: 0
+    height: 135
   IsDragging: 1
   IsSelected: 0
   _sentence:
@@ -260,8 +260,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1681.5967
-    y: 464.39893
+    x: 489.59515
+    y: 778.79974
     width: 190
     height: 80
   IsDragging: 0
@@ -331,8 +331,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1051.9949
-    y: 446.79868
+    x: -140.0054
+    y: 761.1995
     width: 240
     height: 160
   IsDragging: 1
@@ -362,8 +362,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1321.5942
-    y: 250.79953
+    x: 129.5936
+    y: 565.19965
     width: 210
     height: 155
   IsDragging: 1
@@ -393,8 +393,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 779.9995
-    y: 316.39948
+    x: -412.00043
+    y: 630.8001
     width: 240
     height: 160
   IsDragging: 1
@@ -424,10 +424,10 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 569.5992
-    y: 20.400024
+    x: -622.40063
+    y: 334.80008
     width: 190
-    height: 0
+    height: 135
   IsDragging: 1
   IsSelected: 0
   _sentence:
@@ -456,10 +456,10 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 578.39935
-    y: -185.19998
+    x: -613.60046
+    y: 129.20004
     width: 190
-    height: 0
+    height: 135
   IsDragging: 1
   IsSelected: 0
   _sentence:
@@ -488,8 +488,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1571.9988
-    y: 609.19916
+    x: 379.99777
+    y: 923.6005
     width: 210
     height: 155
   IsDragging: 1
@@ -518,15 +518,15 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1640.7988
-    y: -113.19992
+    x: 448.7973
+    y: 201.20013
     width: 190
-    height: 0
+    height: 135
   IsDragging: 1
-  IsSelected: 0
+  IsSelected: 1
   _sentence:
     CharacterName: Nim
-    Text: Y como no sabia que hacer, me hize una siesta
+    Text: Y como no sabia que hacer, me heche una siesta
     CharacterSprite: {fileID: 21300000, guid: 0bfc4632ce6eabc458a5675219b927d5, type: 3}
   ParentNodes:
   - {fileID: 4403890096492632132}
@@ -550,16 +550,16 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1440.7976
-    y: -110.79996
+    x: 248.7966
+    y: 203.60007
     width: 190
-    height: 0
+    height: 135
   IsDragging: 1
   IsSelected: 0
   _sentence:
     CharacterName: Nim
-    Text: "Etkis se quedo en el piso de arriba y no se donde esta Lerendur. Yo he
-      quedado aqu\xED atrapada sin poder salir."
+    Text: "Etkis se qued\xF3 en el piso de arriba y no se donde esta Lerendur. Yo
+      he quedado aqu\xED atrapada sin poder salir."
     CharacterSprite: {fileID: 21300000, guid: 0bfc4632ce6eabc458a5675219b927d5, type: 3}
   ParentNodes:
   - {fileID: -757927954411997888}
@@ -583,8 +583,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 301.60028
-    y: -26.799866
+    x: -890.4
+    y: 287.6002
     width: 240
     height: 160
   IsDragging: 1
@@ -614,8 +614,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 75.99945
-    y: 189.19919
+    x: -1116
+    y: 503.59937
     width: 190
     height: 80
   IsDragging: 1
@@ -640,10 +640,10 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1018.39465
-    y: 44.399963
+    x: -173.60587
+    y: 358.8
     width: 190
-    height: 0
+    height: 135
   IsDragging: 1
   IsSelected: 0
   _sentence:
@@ -672,10 +672,10 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1012.7947
-    y: -110.00003
+    x: -179.20572
+    y: 204.4
     width: 190
-    height: 0
+    height: 135
   IsDragging: 1
   IsSelected: 0
   _sentence:
@@ -704,10 +704,10 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 771.99963
-    y: 18.800049
+    x: -420.0003
+    y: 333.2001
     width: 190
-    height: 115
+    height: 135
   IsDragging: 1
   IsSelected: 0
   Answers:

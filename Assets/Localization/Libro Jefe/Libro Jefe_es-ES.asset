@@ -18,12 +18,77 @@ MonoBehaviour:
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 13162049536
+  - m_Id: 300236757331968
     m_Localized: Que lejos has llegado...
     m_Metadata:
       m_Items: []
-  - m_Id: 13162049537
+  - m_Id: 300236757331969
     m_Localized: ???
+    m_Metadata:
+      m_Items: []
+  - m_Id: 300236757331970
+    m_Localized: "Has conseguio liberar a ese mediano, y a la elfa esa...que quieres
+      exactamente, \xBFquiz\xE1s mi muerte?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 300236757331971
+    m_Localized: Luchar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 300236757331972
+    m_Localized: Irse
+    m_Metadata:
+      m_Items: []
+  - m_Id: 300236757331973
+    m_Localized: "Me sorpende que no hayas liberado a nadie, al final seremos m\xE1s
+      parecidos de lo que cre\xEDa..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 300236757331974
+    m_Localized: No me compares.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 300236757331975
+    m_Localized: Carlos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 300236757331976
+    m_Localized: "Es tu \xFAltima advertencia, da la vuelta, y no vuelvas."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 300236757331977
+    m_Localized: El Creador
+    m_Metadata:
+      m_Items: []
+  - m_Id: 300236757331978
+    m_Localized: "(No dices nada, la extra\xF1a persona tampoco se mueve)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 300236757331979
+    m_Localized: Tu lo has querido...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 300236757331980
+    m_Localized: "Respondeme, \xBFeres tu el tercer compa\xF1ero al que ten\xEDa
+      que rescatar? \xBFLerendur?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 300236757331981
+    m_Localized: "\xBFLerendur? No, no, yo soy el CREADOR."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 300236757331982
+    m_Localized: "Todo lo que ves, existe por m\xED, para m\xED. LLevo d\xE9cadas
+      perfeccionando esta mazmorra..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 300236757331983
+    m_Localized: Hasta que esos tres se metieron y empezaron a matar a mis creaciones,
+      tuve que paralos, seguro me entiendes.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 300236757331984
+    m_Localized: Pero cuando por fin estaba todo controlado, vino una cuarta persona...
     m_Metadata:
       m_Items: []
   references:

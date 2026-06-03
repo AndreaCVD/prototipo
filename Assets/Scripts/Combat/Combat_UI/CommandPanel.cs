@@ -17,10 +17,6 @@ public class CommandPanel : MonoBehaviour
     //fila secundaria
     private Button btnItem, btnRun;
 
-    public List<int> Armas = new List<int>();
-    int daga = 4;
-    int espada = 6;
-    int conjuro = 12;
 
     void Start()
     {

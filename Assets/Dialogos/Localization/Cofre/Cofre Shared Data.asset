@@ -15,11 +15,11 @@ MonoBehaviour:
   m_TableCollectionName: Cofre
   m_TableCollectionNameGuidString: d922aef77150fda4d9b79c911ee605ed
   m_Entries:
-  - m_Id: 2943043133304832
+  - m_Id: 5489130620645376
     m_Key: SentenceText_2730277e-ef12-44f1-aad9-fd4811b44c6f
     m_Metadata:
       m_Items: []
-  - m_Id: 2943043187830784
+  - m_Id: 5489130629033984
     m_Key: SentenceName_cc78de62-37bd-4fc3-9ca6-d2223973fd38
     m_Metadata:
       m_Items: []

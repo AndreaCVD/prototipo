@@ -100,6 +100,12 @@
                 </ui:VisualElement>
             </ui:VisualElement>
         </ui:VisualElement>
-        <ui:VisualElement name="camera_viewport" style="flex-grow: 1; width: 40%; height: 100%; background-image: url(&quot;project://database/Assets/UI/CamaraVista.renderTexture?fileID=8400000&amp;guid=afffa15d9cd371347b2e3a4364216206&amp;type=2#CamaraVista&quot;); -unity-background-image-tint-color: rgb(255, 255, 255);" />
+        <ui:VisualElement style="flex-grow: 1; width: 40%; height: 100%; align-self: auto; justify-content: center; flex-direction: column;">
+            <ui:VisualElement name="nivel_3" style="flex-grow: 1; position: absolute; background-image: url(&quot;project://database/Assets/Art/MainMenu/nivel_3_bloqueado.png?fileID=21300000&amp;guid=04ad243970a44374cbc9bec8bfc98eda&amp;type=3#nivel_3_bloqueado&quot;); width: 130%; height: 85%; align-self: center; left: auto; right: 70px;" />
+            <ui:VisualElement name="nivel_2" style="flex-grow: 1; position: absolute; background-image: url(&quot;project://database/Assets/Art/MainMenu/nivel_2_bloqueado.png?fileID=21300000&amp;guid=e65476de132fd994d9727ae0d50c5a72&amp;type=3#nivel_2_bloqueado&quot;); width: 130%; height: 85%; align-self: center; left: auto; right: 70px;" />
+            <ui:VisualElement name="nivel_1" style="flex-grow: 1; position: absolute; background-image: url(&quot;project://database/Assets/Art/MainMenu/nivel_1_bloqueado.png?fileID=21300000&amp;guid=a19ea47f76144fb48b02ffd66e890a68&amp;type=3#nivel_1_bloqueado&quot;); width: 130%; height: 85%; align-self: center; left: auto; right: 70px;" />
+            <ui:VisualElement name="tutorial" style="flex-grow: 1; position: absolute; background-image: url(&quot;project://database/Assets/Art/MainMenu/nivel_0.png?fileID=21300000&amp;guid=1c89498a0b60ee848930277b2205549f&amp;type=3#nivel_0&quot;); width: 130%; height: 85%; align-self: center; left: auto; right: 70px;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="camera_viewport" style="flex-grow: 1; width: 40%; height: 100%; background-image: url(&quot;project://database/Assets/UI/CamaraVista.renderTexture?fileID=8400000&amp;guid=afffa15d9cd371347b2e3a4364216206&amp;type=2#CamaraVista&quot;); -unity-background-image-tint-color: rgb(255, 255, 255); display: none;" />
     </ui:VisualElement>
 </ui:UXML>

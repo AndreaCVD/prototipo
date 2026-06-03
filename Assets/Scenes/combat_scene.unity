@@ -427,7 +427,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d59f62e3936f37042bb932934b34b69c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  menuCommand: {fileID: 0}
   turnRoundManager: {fileID: 88913839}
+  combatDebug: {fileID: 0}
   diceRoller: {fileID: 88913843}
 --- !u!114 &88913841
 MonoBehaviour:
@@ -3359,6 +3361,7 @@ MonoBehaviour:
   uiDocument: {fileID: 1278551825}
   prota: {fileID: 878334521}
   enemigo: {fileID: 336598088}
+  dice: {fileID: 686572649}
 --- !u!4 &1840981203
 Transform:
   m_ObjectHideFlags: 0

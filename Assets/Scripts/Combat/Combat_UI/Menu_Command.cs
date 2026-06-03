@@ -44,13 +44,15 @@ public class Menu_Command : MonoBehaviour
         //encontrar el script y las datas
         info_enemy = GetComponent<CombatDebug>();
         enemyData = info_enemy.ReturnPlayer();
+        enemyMaxHp = enemyData.stats.Get(PersonajesStats.Constitucion);
 
         info_prota = GetComponent<CombatDebug>();
         playerData = info_prota.ReturnPlayer();
+        playerMaxHp = playerData.stats.Get(PersonajesStats.Constitucion);
 
         // Inicializar barras al 100%
-        SetPlayerHp(playerData.stats.Get(PersonajesStats.Constitucion));
-        SetEnemyHp(enemyData.stats.Get(PersonajesStats.Constitucion));
+        SetPlayerHp(playerMaxHp);
+        SetEnemyHp(enemyMaxHp);
         Debug.Log("Prota: " + playerMaxHp + " Enemy: " + playerMaxHp);
 
     }
@@ -59,7 +61,10 @@ public class Menu_Command : MonoBehaviour
     public void SetPlayerHp(int hpActual)
     {
         float porcentaje = Mathf.Clamp01((float)hpActual / playerMaxHp);
-        playerHpFill.style.width = Length.Percent(porcentaje * 100f);
+
+        // Debug: forzar un valor fijo para ver si responde
+        Debug.Log($"SetPlayerHp: {hpActual}/{playerMaxHp} = {porcentaje * 100f}%");
+        playerHpFill.transform.scale = new Vector3(porcentaje, 1f, 1f);
     }
 
     // Llamar desde el sistema de combate cuando el enemigo recibe daño

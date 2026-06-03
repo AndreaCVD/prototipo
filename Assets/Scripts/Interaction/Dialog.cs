@@ -63,7 +63,8 @@ public class Dialog : MonoBehaviour
         //Personajes
         _dialogBehaviour.BindExternalFunction("EstadoEtkis", estadoEtkis);
         _dialogBehaviour.BindExternalFunction("EstadoNim", estadoNim);
-
+        //Dialogo
+        _dialogBehaviour.BindExternalFunction("Dialogo", Dialogo);
         //Prota
         _dialogBehaviour.BindExternalFunction("RecuperarVida", vidaParcial);
         _dialogBehaviour.BindExternalFunction("FullVida", fullVida);
@@ -71,6 +72,12 @@ public class Dialog : MonoBehaviour
         //Le enviamos el dialogo que tiene que hacer --> ESTE SIEMPRE ÚLTIMO
         _dialogBehaviour.StartDialog(dialogo);
 
+    }
+    //Dialogo
+    public void Dialogo()
+    {
+        Animator aux = obj.GetComponent<Animator>();
+        aux.SetTrigger("Dialog");
     }
     //Dados
     public void dadoFuerza()

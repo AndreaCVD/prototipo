@@ -15,8 +15,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 539.19543
-    y: -114.00003
+    x: 309.59543
+    y: -38.80008
     width: 210
     height: 155
   IsDragging: 1
@@ -45,8 +45,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -692.8009
-    y: 78.79967
+    x: -922.40094
+    y: 153.99962
     width: 190
     height: 80
   IsDragging: 1
@@ -70,8 +70,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 823.99963
-    y: 110.79973
+    x: 875.19965
+    y: 184.39967
     width: 210
     height: 155
   IsDragging: 1
@@ -100,8 +100,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 307.1996
-    y: 260.3997
+    x: 77.59958
+    y: 335.59964
     width: 190
     height: 135
   IsDragging: 1
@@ -132,8 +132,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 538.3949
-    y: -271.60007
+    x: 308.7949
+    y: -196.40012
     width: 210
     height: 155
   IsDragging: 1
@@ -162,8 +162,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -16.000061
-    y: -201.19998
+    x: -245.60007
+    y: -126.00003
     width: 240
     height: 160
   IsDragging: 1
@@ -193,8 +193,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 320.00037
-    y: 63.599716
+    x: 90.40036
+    y: 138.79967
     width: 190
     height: 135
   IsDragging: 1
@@ -205,7 +205,7 @@ MonoBehaviour:
     CharacterSprite: {fileID: 21300000, guid: daf2b0df47633724bb021d5e79f67ce0, type: 3}
   ParentNodes:
   - {fileID: 6499817178236791268}
-  ChildNode: {fileID: 2358140374074757382}
+  ChildNode: {fileID: 6560923034505512457}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: SentenceName_20de78f3-5c32-4182-91be-63fbae1fd0d4
@@ -225,8 +225,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 829.59314
-    y: -87.60021
+    x: 599.9931
+    y: -12.400261
     width: 190
     height: 80
   IsDragging: 1
@@ -254,8 +254,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -294.40002
-    y: 27.5997
+    x: -524.00006
+    y: 102.79965
     width: 240
     height: 160
   IsDragging: 1
@@ -285,8 +285,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 566.3992
-    y: 262.79984
+    x: 621.5992
+    y: 337.19977
     width: 210
     height: 155
   IsDragging: 1
@@ -350,8 +350,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 547.1996
-    y: 64.399704
+    x: 487.1996
+    y: 150.79965
     width: 190
     height: 135
   IsDragging: 1
@@ -361,7 +361,7 @@ MonoBehaviour:
     Text: "He perdido a mis compa\xF1eros, estan mas abajo, son dos elfos."
     CharacterSprite: {fileID: 21300000, guid: daf2b0df47633724bb021d5e79f67ce0, type: 3}
   ParentNodes:
-  - {fileID: -2469484456262454194}
+  - {fileID: 6560923034505512457}
   ChildNode: {fileID: -7781373260608017088}
   _isExternalFunc: 0
   _externalFunctionName: 
@@ -382,8 +382,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 310.39905
-    y: -106
+    x: 80.79904
+    y: -30.800049
     width: 190
     height: 135
   IsDragging: 1
@@ -414,8 +414,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 307.99963
-    y: -250.80005
+    x: 78.39963
+    y: -175.6001
     width: 190
     height: 135
   IsDragging: 1
@@ -446,8 +446,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -491.99985
-    y: 77.99974
+    x: -721.5999
+    y: 153.19969
     width: 190
     height: 80
   IsDragging: 1
@@ -472,8 +472,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 7.199951
-    y: 164.39963
+    x: -222.40005
+    y: 239.59958
     width: 240
     height: 160
   IsDragging: 1
@@ -503,19 +503,20 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 202.4
-    y: 405.2
+    x: 285.59998
+    y: 146.79996
     width: 190
     height: 135
-  IsDragging: 0
-  IsSelected: 0
+  IsDragging: 1
+  IsSelected: 1
   _sentence:
-    CharacterName: 
-    Text: 
-    CharacterSprite: {fileID: 0}
-  ParentNodes: []
-  ChildNode: {fileID: 0}
+    CharacterName: Etkis
+    Text: "Soy Etkis, uno de los tres aventureros que se perdi\xF3."
+    CharacterSprite: {fileID: 21300000, guid: daf2b0df47633724bb021d5e79f67ce0, type: 3}
+  ParentNodes:
+  - {fileID: -2469484456262454194}
+  ChildNode: {fileID: 2358140374074757382}
   _isExternalFunc: 0
   _externalFunctionName: 
-  CharacterNameKey: 
-  SentenceTextKey: 
+  CharacterNameKey: SentenceName_20de78f3-5c32-4182-91be-63fbae1fd0d4
+  SentenceTextKey: SentenceText_185110b3-1be2-4038-bb61-c81e3f773568

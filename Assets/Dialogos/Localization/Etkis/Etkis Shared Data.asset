@@ -15,32 +15,36 @@ MonoBehaviour:
   m_TableCollectionName: Etkis
   m_TableCollectionNameGuidString: ec42f3d6da1e0304d80c27ada008b92a
   m_Entries:
-  - m_Id: 2416239763058688
+  - m_Id: 2416452074532864
     m_Key: SentenceText_efa2a1e0-4655-49ea-8935-169ac3b42566
     m_Metadata:
       m_Items: []
-  - m_Id: 2416239779835904
+  - m_Id: 2416452074532865
     m_Key: SentenceName_8f16f028-df13-40f5-9a00-c92527f49ba5
     m_Metadata:
       m_Items: []
-  - m_Id: 2416239779835905
+  - m_Id: 2416452074532866
     m_Key: 
     m_Metadata:
       m_Items: []
-  - m_Id: 2416239779835906
+  - m_Id: 2416452074532867
     m_Key: SentenceName_20de78f3-5c32-4182-91be-63fbae1fd0d4
     m_Metadata:
       m_Items: []
-  - m_Id: 2416239779835907
+  - m_Id: 2416452074532868
     m_Key: SentenceText_b2056db8-f952-4078-b4a2-fe188bcdeb4d
     m_Metadata:
       m_Items: []
-  - m_Id: 2416239779835908
+  - m_Id: 2416452074532869
     m_Key: SentenceText_297fd028-85e2-4dcb-9132-56b0d4381bcf
     m_Metadata:
       m_Items: []
-  - m_Id: 2416239779835909
+  - m_Id: 2416452074532870
     m_Key: SentenceText_4a10b9b2-3a7e-48bc-af95-a3f7c0132122
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2416452074532871
+    m_Key: SentenceText_185110b3-1be2-4038-bb61-c81e3f773568
     m_Metadata:
       m_Items: []
   m_Metadata:

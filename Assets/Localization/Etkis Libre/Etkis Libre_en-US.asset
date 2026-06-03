@@ -18,12 +18,52 @@ MonoBehaviour:
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 9873715200
+  - m_Id: 575468051165184
     m_Localized: "\xA1Hola! Aqu\xED arriba se esta bien \xBFno? jajaja"
     m_Metadata:
       m_Items: []
-  - m_Id: 9873715201
+  - m_Id: 575468051165185
     m_Localized: Etkis
+    m_Metadata:
+      m_Items: []
+  - m_Id: 575468051165186
+    m_Localized: "\xA1Eh el chico de antes! \xA1Hola!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 575468051165187
+    m_Localized: Nim
+    m_Metadata:
+      m_Items: []
+  - m_Id: 575468051165188
+    m_Localized: "\xBFNo habr\xE1s visto una elfa por all\xE1 bajo?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 575468051165189
+    m_Localized: No, lo siento
+    m_Metadata:
+      m_Items: []
+  - m_Id: 575468051165190
+    m_Localized: "\xBFEra de pelo violeta?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 575468051165191
+    m_Localized: "\xBFVas a bajar si te digo que no?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 575468051165192
+    m_Localized: ...no hace falta mentir tampoco eh.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 575468055359488
+    m_Localized: De acuerdo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 575468055359489
+    m_Localized: 
+    m_Metadata:
+      m_Items: []
+  - m_Id: 575468055359490
+    m_Localized: 
     m_Metadata:
       m_Items: []
   references:

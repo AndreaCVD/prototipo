@@ -1,5 +1,70 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8901645500250158188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 572.8006
+    y: -207.59991
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Etkis
+    Text: "Esas cosas no existen, seguro te perdiste y no sab\xEDas como salir de
+      all\xE1"
+    CharacterSprite: {fileID: 21300000, guid: daf2b0df47633724bb021d5e79f67ce0, type: 3}
+  ParentNodes:
+  - {fileID: -6879804276207667640}
+  ChildNode: {fileID: -3437389708092351922}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+--- !u!114 &-8885344386241357504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 1004.0019
+    y: -207.59991
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Lerendur
+    Text: "...pero, cuanto tiempo ha pasado, \xBFno que hoy mismo hemos entrado?"
+    CharacterSprite: {fileID: 21300000, guid: 37a69fe11299fbf4e86457d82e5e5dcf, type: 3}
+  ParentNodes:
+  - {fileID: -3437389708092351922}
+  ChildNode: {fileID: 3873199649692108160}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
 --- !u!114 &-8319330092286238503
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,8 +80,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 367.1999
-    y: 151.60004
+    x: -1777.6001
+    y: 2.0002441
     width: 190
     height: 155
   IsDragging: 1
@@ -35,6 +100,456 @@ MonoBehaviour:
   - {fileID: 8578341496193681062}
   - {fileID: 570273466155666702}
   - {fileID: 2102689393997127125}
+--- !u!114 &-7740044776847803440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -1317.5991
+    y: -96.39981
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Lerendur
+    Text: "Realmente no recuerdo muy bien lo que paso, \xBFtu lo sabes?"
+    CharacterSprite: {fileID: 21300000, guid: 37a69fe11299fbf4e86457d82e5e5dcf, type: 3}
+  ParentNodes:
+  - {fileID: 8578341496193681062}
+  ChildNode: {fileID: -2857790693838751020}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+--- !u!114 &-7190297252633427917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -55.999252
+    y: 159.59995
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Lerendur
+    Text: Incluso has conseguido el mediano
+    CharacterSprite: {fileID: 21300000, guid: 37a69fe11299fbf4e86457d82e5e5dcf, type: 3}
+  ParentNodes:
+  - {fileID: -71499702612480058}
+  ChildNode: {fileID: -5673074591732092608}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+--- !u!114 &-7162342487949183980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -82.399414
+    y: -216.39987
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Lerendur
+    Text: "En fin, veo que no he sido el \xFAnico recatado de aqu\xED. \xBFD\xF3nde
+      estabais vosotros?"
+    CharacterSprite: {fileID: 21300000, guid: 37a69fe11299fbf4e86457d82e5e5dcf, type: 3}
+  ParentNodes:
+  - {fileID: -582430670484814380}
+  ChildNode: {fileID: -2224604349968105057}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+--- !u!114 &-6879804276207667640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 341.60037
+    y: -210.7999
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Nim
+    Text: "\xA1A mi me persigui\xF3 una armadura y me quede atrapada!"
+    CharacterSprite: {fileID: 21300000, guid: 0bfc4632ce6eabc458a5675219b927d5, type: 3}
+  ParentNodes:
+  - {fileID: -2224604349968105057}
+  ChildNode: {fileID: -8901645500250158188}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+--- !u!114 &-6669549297116552669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -1331.9988
+    y: 180.40076
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Lerendur
+    Text: Bueno....
+    CharacterSprite: {fileID: 0}
+  ParentNodes:
+  - {fileID: 2102689393997127125}
+  ChildNode: {fileID: 3198627237943254086}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+--- !u!114 &-5673074591732092608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 152.80078
+    y: 157.99997
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Etkis
+    Text: "Hola ati tambi\xE9n, \xBFd\xF3nde has estado?"
+    CharacterSprite: {fileID: 21300000, guid: daf2b0df47633724bb021d5e79f67ce0, type: 3}
+  ParentNodes:
+  - {fileID: -7190297252633427917}
+  ChildNode: {fileID: 1950352595083872263}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+--- !u!114 &-4346793766927675850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 808.0009
+    y: 155.59998
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Etkis
+    Text: "\xBFEst\xE1s bien?"
+    CharacterSprite: {fileID: 21300000, guid: daf2b0df47633724bb021d5e79f67ce0, type: 3}
+  ParentNodes:
+  - {fileID: -1910608811902521538}
+  ChildNode: {fileID: 1013035935364489504}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+--- !u!114 &-3437389708092351922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 785.6015
+    y: -209.99991
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Nim
+    Text: "\xBFY t\xFA? Seguro fuiste a por el Mimic solo porqu\xE9 se parecia a
+      un tesoro? \xA1Te fuiste tan rapido que no nos dimos cuenta de donde fuiste!"
+    CharacterSprite: {fileID: 21300000, guid: 0bfc4632ce6eabc458a5675219b927d5, type: 3}
+  ParentNodes:
+  - {fileID: -8901645500250158188}
+  ChildNode: {fileID: -8885344386241357504}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+--- !u!114 &-2857790693838751020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -1094.3999
+    y: -93.99982
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Carlos
+    Text: "(Recuerdas a esa extra\xF1a figura con un gran libro rode\xE1ndole)"
+    CharacterSprite: {fileID: 21300000, guid: cb49f1d4184a4b146bdfee8689056089, type: 3}
+  ParentNodes:
+  - {fileID: -7740044776847803440}
+  ChildNode: {fileID: 7013857938896785485}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+--- !u!114 &-2224604349968105057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 128.0011
+    y: -214.7999
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Etkis
+    Text: En una jaula con un mimic...
+    CharacterSprite: {fileID: 21300000, guid: daf2b0df47633724bb021d5e79f67ce0, type: 3}
+  ParentNodes:
+  - {fileID: -7162342487949183980}
+  ChildNode: {fileID: -6879804276207667640}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+--- !u!114 &-2080036405186575416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38789157e7795244280823d019530045, type: 3}
+  m_Name: Variable Condition Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -666.40045
+    y: 34.8002
+    width: 240
+    height: 160
+  IsDragging: 1
+  IsSelected: 0
+  _variableName: nim_libre_nivel2
+  _conditionType: 0
+  _boolTargetValue: 0
+  _intTargetValue: 0
+  _floatTargetValue: 0
+  _stringTargetValue: 
+  ParentNodes:
+  - {fileID: 7013857938896785485}
+  - {fileID: 3198627237943254086}
+  - {fileID: 570273466155666702}
+  TrueChildNode: {fileID: -582430670484814380}
+  FalseChildNode: {fileID: -71499702612480058}
+--- !u!114 &-1910608811902521538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 591.2005
+    y: 154.79996
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Lerendur
+    Text: "Intente seguirla pero me encontr\xE9 con un libro y...mmm, estaba abierto
+      en medio de la sala? \xBFCreo?"
+    CharacterSprite: {fileID: 21300000, guid: 37a69fe11299fbf4e86457d82e5e5dcf, type: 3}
+  ParentNodes:
+  - {fileID: 1950352595083872263}
+  ChildNode: {fileID: -4346793766927675850}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+--- !u!114 &-582430670484814380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38789157e7795244280823d019530045, type: 3}
+  m_Name: Variable Condition Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -383.9998
+    y: -129.99982
+    width: 240
+    height: 160
+  IsDragging: 1
+  IsSelected: 0
+  _variableName: etkis_libre_nivel1
+  _conditionType: 0
+  _boolTargetValue: 0
+  _intTargetValue: 0
+  _floatTargetValue: 0
+  _stringTargetValue: 
+  ParentNodes:
+  - {fileID: -2080036405186575416}
+  TrueChildNode: {fileID: -7162342487949183980}
+  FalseChildNode: {fileID: 7113387209181820352}
+--- !u!114 &-71499702612480058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38789157e7795244280823d019530045, type: 3}
+  m_Name: Variable Condition Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -364.79984
+    y: 198.0007
+    width: 240
+    height: 160
+  IsDragging: 1
+  IsSelected: 0
+  _variableName: etkis_libre_nivel1
+  _conditionType: 0
+  _boolTargetValue: 0
+  _intTargetValue: 0
+  _floatTargetValue: 0
+  _stringTargetValue: 
+  ParentNodes:
+  - {fileID: -2080036405186575416}
+  TrueChildNode: {fileID: -7190297252633427917}
+  FalseChildNode: {fileID: 3594664587302120645}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53,12 +568,75 @@ MonoBehaviour:
   - {fileID: 8578341496193681062}
   - {fileID: 570273466155666702}
   - {fileID: 2102689393997127125}
-  VariablesConfig: {fileID: 0}
+  - {fileID: -2080036405186575416}
+  - {fileID: -7740044776847803440}
+  - {fileID: -2857790693838751020}
+  - {fileID: 7013857938896785485}
+  - {fileID: -6669549297116552669}
+  - {fileID: 3198627237943254086}
+  - {fileID: -582430670484814380}
+  - {fileID: -71499702612480058}
+  - {fileID: -7162342487949183980}
+  - {fileID: -2224604349968105057}
+  - {fileID: -6879804276207667640}
+  - {fileID: -8901645500250158188}
+  - {fileID: -3437389708092351922}
+  - {fileID: -8885344386241357504}
+  - {fileID: 3873199649692108160}
+  - {fileID: 4046920362478223803}
+  - {fileID: 7113387209181820352}
+  - {fileID: 2555358757919053778}
+  - {fileID: 5862949933760002899}
+  - {fileID: 500053390698016018}
+  - {fileID: -7190297252633427917}
+  - {fileID: -5673074591732092608}
+  - {fileID: 1950352595083872263}
+  - {fileID: -1910608811902521538}
+  - {fileID: -4346793766927675850}
+  - {fileID: 1013035935364489504}
+  - {fileID: 5325704371217879668}
+  - {fileID: 3594664587302120645}
+  - {fileID: 2259948958093712881}
+  - {fileID: 7502121543711064424}
+  - {fileID: 5033616589701010038}
+  VariablesConfig: {fileID: 11400000, guid: 18b09256f245a3742aa99b349e6e8cc1, type: 2}
   _localizationTableName: Lerendur
   _characterNamesLocalizationName: 
   NodeToDrawLineFrom: {fileID: 0}
   LinePosition: {x: 0, y: 0}
   IsLocalizationSetUp: 1
+--- !u!114 &500053390698016018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 576.8011
+    y: -37.99997
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Lerendur
+    Text: "Por cierto, \xBFd\xF3nde estar\xE1?"
+    CharacterSprite: {fileID: 21300000, guid: 37a69fe11299fbf4e86457d82e5e5dcf, type: 3}
+  ParentNodes:
+  - {fileID: 5862949933760002899}
+  ChildNode: {fileID: 4046920362478223803}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
 --- !u!114 &570273466155666702
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74,8 +652,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 599.1999
-    y: 185.20004
+    x: -1545.5999
+    y: 35.60025
     width: 190
     height: 135
   IsDragging: 1
@@ -84,14 +662,79 @@ MonoBehaviour:
     CharacterName: Lerendur
     Text: "Si quieres hablar estar\xE9 aqu\xED, no creo que entre en una mazmorra
       en un tiempo"
-    CharacterSprite: {fileID: 0}
+    CharacterSprite: {fileID: 21300000, guid: 37a69fe11299fbf4e86457d82e5e5dcf, type: 3}
   ParentNodes:
   - {fileID: -8319330092286238503}
-  ChildNode: {fileID: 0}
+  ChildNode: {fileID: -2080036405186575416}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: SentenceName_11671a8a-0876-4bfa-ac30-2197679ce6f8
   SentenceTextKey: SentenceText_1643fbef-d672-48ae-b383-75c7e13182fc
+--- !u!114 &1013035935364489504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 1032.8013
+    y: 159.59995
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Lerendur
+    Text: No recuerdo muy bien lo que ha pasado...
+    CharacterSprite: {fileID: 21300000, guid: 37a69fe11299fbf4e86457d82e5e5dcf, type: 3}
+  ParentNodes:
+  - {fileID: -4346793766927675850}
+  ChildNode: {fileID: 5325704371217879668}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+--- !u!114 &1950352595083872263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 361.60086
+    y: 158
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Lerendur
+    Text: "Pues est\xE1bamos investigando un nivel lleno de agua, cuando de repente
+      grit\xF3 y sali\xF3 corriendo."
+    CharacterSprite: {fileID: 21300000, guid: 37a69fe11299fbf4e86457d82e5e5dcf, type: 3}
+  ParentNodes:
+  - {fileID: -5673074591732092608}
+  ChildNode: {fileID: -1910608811902521538}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
 --- !u!114 &2102689393997127125
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -107,23 +750,120 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 594.3999
-    y: 318.00003
+    x: -1550.3987
+    y: 168.4007
     width: 190
     height: 135
   IsDragging: 1
-  IsSelected: 1
+  IsSelected: 0
   _sentence:
     CharacterName: Lerendur
     Text: ...(Lerendur se ha incomodado)
-    CharacterSprite: {fileID: 0}
+    CharacterSprite: {fileID: 21300000, guid: 37a69fe11299fbf4e86457d82e5e5dcf, type: 3}
   ParentNodes:
   - {fileID: -8319330092286238503}
-  ChildNode: {fileID: 0}
+  ChildNode: {fileID: -6669549297116552669}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: SentenceName_11671a8a-0876-4bfa-ac30-2197679ce6f8
   SentenceTextKey: SentenceText_34e5c004-faef-4d57-a4c4-120922af9d13
+--- !u!114 &2259948958093712881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 172.80002
+    y: 347.6
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Carlos
+    Text: "\xBFRecuerdas algo?"
+    CharacterSprite: {fileID: 0}
+  ParentNodes:
+  - {fileID: 3594664587302120645}
+  ChildNode: {fileID: 0}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+--- !u!114 &2555358757919053778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 140.80115
+    y: -46.80002
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Lerendur
+    Text: "Dime, no habr\xE1s encontrado algo interesante no? \xBFC\xF3mo un libro
+      de magia, o algun tesoro?"
+    CharacterSprite: {fileID: 21300000, guid: 37a69fe11299fbf4e86457d82e5e5dcf, type: 3}
+  ParentNodes:
+  - {fileID: 7113387209181820352}
+  ChildNode: {fileID: 5862949933760002899}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+--- !u!114 &3198627237943254086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -1111.2
+    y: 180.40063
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Carlos
+    Text: "(Observar a\xFAn mas fijamente)"
+    CharacterSprite: {fileID: 0}
+  ParentNodes:
+  - {fileID: -6669549297116552669}
+  ChildNode: {fileID: -2080036405186575416}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
 --- !u!114 &3231145681667128611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,8 +879,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 129.59998
-    y: 166.00003
+    x: -2015.2017
+    y: 16.400238
     width: 190
     height: 135
   IsDragging: 1
@@ -148,13 +888,298 @@ MonoBehaviour:
   _sentence:
     CharacterName: Lerendur
     Text: "Hola, \xBFcomo est\xE1s?"
-    CharacterSprite: {fileID: 0}
+    CharacterSprite: {fileID: 21300000, guid: 37a69fe11299fbf4e86457d82e5e5dcf, type: 3}
   ParentNodes: []
   ChildNode: {fileID: -8319330092286238503}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: SentenceName_11671a8a-0876-4bfa-ac30-2197679ce6f8
   SentenceTextKey: SentenceText_42e5e143-e512-47fe-954e-15fdd7964092
+--- !u!114 &3594664587302120645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -46.398895
+    y: 347.60007
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Lerendur
+    Text: "Aqu\xED arriba se est\xE1 tan bien...se siente como si no saliera de all\xE1
+      por d\xEDas, \xBFraro no? jaja"
+    CharacterSprite: {fileID: 21300000, guid: 37a69fe11299fbf4e86457d82e5e5dcf, type: 3}
+  ParentNodes:
+  - {fileID: -71499702612480058}
+  ChildNode: {fileID: 2259948958093712881}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+--- !u!114 &3873199649692108160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 1219.2029
+    y: -210.7999
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Carlos
+    Text: "(Nim y Etkis parecen no querer decirle cuanto tiempo ha pasado, quizas
+      d\xEDas, quien sabe...)"
+    CharacterSprite: {fileID: 21300000, guid: a188ce1c9b6fce644b5efac5bf9be647, type: 3}
+  ParentNodes:
+  - {fileID: -8885344386241357504}
+  ChildNode: {fileID: 4046920362478223803}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+--- !u!114 &4046920362478223803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f4b3c64aaf434ea0df52154c1c7680, type: 3}
+  m_Name: External Function Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 1576.0005
+    y: -17.999939
+    width: 190
+    height: 80
+  IsDragging: 0
+  IsSelected: 0
+  _functionName: ContinuarMov
+  _description: 
+  ParentNodes:
+  - {fileID: 3873199649692108160}
+  - {fileID: 500053390698016018}
+  - {fileID: 5325704371217879668}
+  ChildNode: {fileID: 0}
+--- !u!114 &5033616589701010038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 641.60004
+    y: 377.2
+    width: 190
+    height: 135
+  IsDragging: 0
+  IsSelected: 0
+  _sentence:
+    CharacterName: 
+    Text: 
+    CharacterSprite: {fileID: 0}
+  ParentNodes: []
+  ChildNode: {fileID: 0}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+--- !u!114 &5325704371217879668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 1232.8015
+    y: 157.19995
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Lerendur
+    Text: "\xBFDeberiamos volver a por Nim?"
+    CharacterSprite: {fileID: 21300000, guid: 37a69fe11299fbf4e86457d82e5e5dcf, type: 3}
+  ParentNodes:
+  - {fileID: 1013035935364489504}
+  ChildNode: {fileID: 4046920362478223803}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+--- !u!114 &5862949933760002899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 351.20096
+    y: -42
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Nim
+    Text: Oh, el tesoro seguramente ya lo tenga Etkis
+    CharacterSprite: {fileID: 21300000, guid: 0bfc4632ce6eabc458a5675219b927d5, type: 3}
+  ParentNodes:
+  - {fileID: 2555358757919053778}
+  ChildNode: {fileID: 500053390698016018}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+--- !u!114 &7013857938896785485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -891.2005
+    y: -97.19983
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Carlos
+    Text: "No te preocupes, lo importante es que est\xE1s aqu\xED."
+    CharacterSprite: {fileID: 21300000, guid: a188ce1c9b6fce644b5efac5bf9be647, type: 3}
+  ParentNodes:
+  - {fileID: -2857790693838751020}
+  ChildNode: {fileID: -2080036405186575416}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+--- !u!114 &7113387209181820352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -65.59912
+    y: -52.400024
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Lerendur
+    Text: "Y tambi\xE9n esta Nim aqu\xED, si que has explorado la mazmorra eh."
+    CharacterSprite: {fileID: 21300000, guid: 37a69fe11299fbf4e86457d82e5e5dcf, type: 3}
+  ParentNodes:
+  - {fileID: -582430670484814380}
+  ChildNode: {fileID: 2555358757919053778}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
+--- !u!114 &7502121543711064424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 392.80002
+    y: 338.80002
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 1
+  _sentence:
+    CharacterName: Lerendur
+    Text: "...No mucho, solo que al adentrarnos cada uno de mis compa\xF1eros se
+      separ\xF3 del grupo."
+    CharacterSprite: {fileID: 0}
+  ParentNodes: []
+  ChildNode: {fileID: 0}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
 --- !u!114 &8578341496193681062
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -170,8 +1195,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 598.39984
-    y: 54.00003
+    x: -1546.3997
+    y: -95.59976
     width: 190
     height: 135
   IsDragging: 1
@@ -179,10 +1204,10 @@ MonoBehaviour:
   _sentence:
     CharacterName: Lerendur
     Text: jajaja
-    CharacterSprite: {fileID: 0}
+    CharacterSprite: {fileID: 21300000, guid: 37a69fe11299fbf4e86457d82e5e5dcf, type: 3}
   ParentNodes:
   - {fileID: -8319330092286238503}
-  ChildNode: {fileID: 0}
+  ChildNode: {fileID: -7740044776847803440}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: SentenceName_11671a8a-0876-4bfa-ac30-2197679ce6f8

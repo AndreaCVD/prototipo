@@ -1886,8 +1886,9 @@ MonoBehaviour:
   iconoLlave: {fileID: 21300000, guid: 764e82350a826cd438522e00383357e7, type: 3}
   iconoLlaveMaestra: {fileID: 21300000, guid: 6c588ff092212ef4ba0298e3524ab9e4, type: 3}
   iconoPocionVida: {fileID: 21300000, guid: 2c6521bebd725424cb6910175569f34c, type: 3}
-  iconoDaga: {fileID: 21300000, guid: 966a370916b06b940b0edfc209421ad2, type: 3}
+  iconoDaga: {fileID: 21300000, guid: dd10b42ca8b4b0e4880a096072aff5ad, type: 3}
   iconoEspada: {fileID: 21300000, guid: e9a57d8d864fc2443b5bdcfed074ea39, type: 3}
+  iconoPocionLava: {fileID: 21300000, guid: 966a370916b06b940b0edfc209421ad2, type: 3}
 --- !u!114 &495269048
 MonoBehaviour:
   m_ObjectHideFlags: 0

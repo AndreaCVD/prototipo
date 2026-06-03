@@ -1862,6 +1862,14 @@ PrefabInstance:
       propertyPath: _uiDocument
       value: 
       objectReference: {fileID: 495269048}
+    - target: {fileID: 3154048260877719689, guid: 3848a681804d73d4fb34add03acbdab0, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3154048260877719689, guid: 3848a681804d73d4fb34add03acbdab0, type: 3}
+      propertyPath: _uiDocument
+      value: 
+      objectReference: {fileID: 495269048}
     - target: {fileID: 3241330531271212881, guid: 3848a681804d73d4fb34add03acbdab0, type: 3}
       propertyPath: lista
       value: 
@@ -2629,11 +2637,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2576964640423784762, guid: e1e382eeb87f205439904cd395ba77a9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.844
+      value: -0.335
       objectReference: {fileID: 0}
     - target: {fileID: 2576964640423784762, guid: e1e382eeb87f205439904cd395ba77a9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.071
+      value: 0.191
       objectReference: {fileID: 0}
     - target: {fileID: 3849579663369272844, guid: e1e382eeb87f205439904cd395ba77a9, type: 3}
       propertyPath: m_Size.x

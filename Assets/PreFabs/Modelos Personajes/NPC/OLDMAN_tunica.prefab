@@ -68,6 +68,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: OLDMAN_tunica
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: fb7d8789053d61245bc0ce1243476752, type: 3}
+      propertyPath: m_TagString
+      value: Interact_Scene
+      objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: fb7d8789053d61245bc0ce1243476752, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: c3d5179e72d3fc84ea7ebcad2be5b2d8, type: 2}
     - target: {fileID: 6135069787504564420, guid: fb7d8789053d61245bc0ce1243476752, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 

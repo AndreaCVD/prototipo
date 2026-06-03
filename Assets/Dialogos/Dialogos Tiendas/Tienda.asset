@@ -15,15 +15,17 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 599.2
-    y: 267.6
+    x: 751.20013
+    y: 285.99997
     width: 190
-    height: 135
+    height: 80
   IsDragging: 0
-  IsSelected: 0
-  _functionName: 
+  IsSelected: 1
+  _functionName: ContinuarMov
   _description: 
-  ParentNodes: []
+  ParentNodes:
+  - {fileID: -6685595360915545557}
+  - {fileID: -3206520652390200242}
   ChildNode: {fileID: 0}
 --- !u!114 &-6927550419059624890
 MonoBehaviour:
@@ -40,8 +42,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 22.400024
-    y: 210.80002
+    x: 174.40009
+    y: 229.19998
     width: 190
     height: 135
   IsDragging: 1
@@ -72,8 +74,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 307.20016
-    y: 134.80003
+    x: 459.20026
+    y: 153.2
     width: 190
     height: 80
   IsDragging: 1
@@ -82,7 +84,7 @@ MonoBehaviour:
   _description: 
   ParentNodes:
   - {fileID: -6927550419059624890}
-  ChildNode: {fileID: 0}
+  ChildNode: {fileID: -7491735092704431936}
 --- !u!114 &-3206520652390200242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -98,8 +100,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 308.0001
-    y: 276.4
+    x: 460.00018
+    y: 294.79996
     width: 190
     height: 135
   IsDragging: 1
@@ -110,7 +112,7 @@ MonoBehaviour:
     CharacterSprite: {fileID: 21300000, guid: a188ce1c9b6fce644b5efac5bf9be647, type: 3}
   ParentNodes:
   - {fileID: -6927550419059624890}
-  ChildNode: {fileID: 0}
+  ChildNode: {fileID: -7491735092704431936}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: SentenceName_d909bf06-342c-49a5-b533-a9c6c6ec0fe6
@@ -154,12 +156,12 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -189.60004
-    y: 238
+    x: -37.599976
+    y: 256.39996
     width: 190
     height: 80
   IsDragging: 1
-  IsSelected: 1
+  IsSelected: 0
   _functionName: PararMov
   _description: 
   ParentNodes: []

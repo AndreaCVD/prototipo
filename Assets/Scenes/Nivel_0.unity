@@ -734,6 +734,7 @@ MonoBehaviour:
   iconoPocionVida: {fileID: 21300000, guid: b65d9610dbda6ba46a32505c0e82604c, type: 3}
   iconoDaga: {fileID: 21300000, guid: dd10b42ca8b4b0e4880a096072aff5ad, type: 3}
   iconoEspada: {fileID: 21300000, guid: e9a57d8d864fc2443b5bdcfed074ea39, type: 3}
+  iconoPocionLava: {fileID: 0}
 --- !u!114 &495269048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1953,6 +1954,63 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1430939758}
   m_SourcePrefab: {fileID: 100100000, guid: 3848a681804d73d4fb34add03acbdab0, type: 3}
+--- !u!1001 &1378653079
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7325924228481070404, guid: 0db3851e6d321ab44a36fac2cf12b966, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.3341303
+      objectReference: {fileID: 0}
+    - target: {fileID: 7325924228481070404, guid: 0db3851e6d321ab44a36fac2cf12b966, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.078611
+      objectReference: {fileID: 0}
+    - target: {fileID: 7325924228481070404, guid: 0db3851e6d321ab44a36fac2cf12b966, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.0198863
+      objectReference: {fileID: 0}
+    - target: {fileID: 7325924228481070404, guid: 0db3851e6d321ab44a36fac2cf12b966, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7325924228481070404, guid: 0db3851e6d321ab44a36fac2cf12b966, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7325924228481070404, guid: 0db3851e6d321ab44a36fac2cf12b966, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7325924228481070404, guid: 0db3851e6d321ab44a36fac2cf12b966, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7325924228481070404, guid: 0db3851e6d321ab44a36fac2cf12b966, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7325924228481070404, guid: 0db3851e6d321ab44a36fac2cf12b966, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7325924228481070404, guid: 0db3851e6d321ab44a36fac2cf12b966, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9088144854548822217, guid: 0db3851e6d321ab44a36fac2cf12b966, type: 3}
+      propertyPath: m_Name
+      value: sound manager base
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0db3851e6d321ab44a36fac2cf12b966, type: 3}
 --- !u!1001 &1414306507
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3586,6 +3644,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 0f167eb8b3be7fb46a05d4a69cbd3be1, type: 2}
+    - target: {fileID: 8666838449955651109, guid: e5229923ae0643d4391e988c8ec51f14, type: 3}
+      propertyPath: dialogo_obj
+      value: 
+      objectReference: {fileID: 11400000, guid: 10b25ac636882024cbc6bcd6b7a8bed5, type: 2}
     - target: {fileID: 8754678865317439754, guid: e5229923ae0643d4391e988c8ec51f14, type: 3}
       propertyPath: m_Name
       value: Tienda Lerendur
@@ -4092,3 +4154,4 @@ SceneRoots:
   - {fileID: 355832483}
   - {fileID: 7135039476561121572}
   - {fileID: 1130793614}
+  - {fileID: 1378653079}

@@ -13,6 +13,7 @@ public class ThirdFloorPuzzle : MonoBehaviour
     [Header("Obj a modificar al acabar puzzle")]
     [SerializeField] Animator puertaMaestra;
     private bool puertaAbierta;
+    [SerializeField] Animator candado;
 
 
     [Header("Personajes a instanciar")]
@@ -30,6 +31,7 @@ public class ThirdFloorPuzzle : MonoBehaviour
         if (lista.NivelDesbloqueado[3].acabado && !puertaAbierta)
         {
             puertaAbierta = true;
+            candado.SetBool("candadoOpen", true);
             puertaMaestra.SetBool("doorOpen", true);
         }
     }
@@ -61,7 +63,7 @@ public class ThirdFloorPuzzle : MonoBehaviour
     void InstanciarPers()
     {
         //Instanciar Llibre + Lerendur
-        if (!lista.NivelDesbloqueado[3].acabado)
+        if (!lista.NivelDesbloqueado[4].acabado)
         {
             //Si nunca se ha hecho el puzzle B2 etkis no es libre
             Instantiate(JefeFinal[0], JefeFinal[1].transform.position, JefeFinal[1].transform.rotation);

@@ -437,12 +437,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fdaf9d0f18373241b12a41f84398fe8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lista: {fileID: 0}
+  prota: {fileID: 0}
+  escenaState: {fileID: 0}
   _dialogBehaviour: {fileID: 337099933847317424}
-  Viejo: []
-  Nim: []
-  Etkis: []
-  Lerendur: []
-  Libro: []
+  vidaMax: 40
+  objMax: 3
 --- !u!1 &6336766162337916526
 GameObject:
   m_ObjectHideFlags: 0

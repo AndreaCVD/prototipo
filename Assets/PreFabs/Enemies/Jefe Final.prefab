@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7150246651518417920}
   m_Layer: 0
   m_Name: Jefe Final
-  m_TagString: Enemy
+  m_TagString: Interact_Scene
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -152,8 +152,38 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7032205408129146582, guid: 1bfa561c716667a4e914cf677f69108e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4648483284179951146}
   m_SourcePrefab: {fileID: 100100000, guid: 1bfa561c716667a4e914cf677f69108e, type: 3}
+--- !u!1 &2455512394899394831 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7032205408129146582, guid: 1bfa561c716667a4e914cf677f69108e, type: 3}
+  m_PrefabInstance: {fileID: 4865244446927769561}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &4648483284179951146
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2455512394899394831}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b4c95cd1163d9724493b8fe965e10c89, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!4 &5947965727324628202 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1229405030867774259, guid: 1bfa561c716667a4e914cf677f69108e, type: 3}

@@ -112,12 +112,12 @@ public class Dialog : MonoBehaviour
         if (lista.Nivel_1[1].acabado)
         {
             Debug.Log("Etkis es libre");
-            _dialogBehaviour.SetVariableValue("b", 1);
+            _dialogBehaviour.SetVariableValue("etkis_libre_nivel1", 1);
         }
         else
         {
             Debug.Log("Etkis no es libre");
-            _dialogBehaviour.SetVariableValue("b", 0);
+            _dialogBehaviour.SetVariableValue("etkis_libre_nivel1", 0);
         }
     }
     public void estadoNim()

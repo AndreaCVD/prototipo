@@ -1,0 +1,364 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7755772639233867758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 1.3999634
+    y: 183.79993
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 1
+  _sentence:
+    CharacterName: Prota
+    Text: Deberia practicar
+    CharacterSprite: {fileID: 0}
+  ParentNodes: []
+  ChildNode: {fileID: 7001909700949823720}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: SentenceName_500b0ae1-3809-464f-ab3b-715e19b4b52d
+  SentenceTextKey: SentenceText_84659038-5208-4f05-9627-fa7e5d81d5db
+--- !u!114 &-5152657712076503061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f4b3c64aaf434ea0df52154c1c7680, type: 3}
+  m_Name: External Function Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 540.6001
+    y: 209.39993
+    width: 190
+    height: 80
+  IsDragging: 1
+  IsSelected: 0
+  _functionName: AtaqueIntel
+  _description: 
+  ParentNodes:
+  - {fileID: 7001909700949823720}
+  ChildNode: {fileID: 0}
+--- !u!114 &-4336360673341093164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 1147.7996
+    y: -8.200058
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Arbol
+    Text: "\xA1EY! Cuidado"
+    CharacterSprite: {fileID: 0}
+  ParentNodes:
+  - {fileID: 5964231602897579766}
+  ChildNode: {fileID: 0}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: SentenceName_8beae72b-b5d9-4d62-b3d3-03569c8873fe
+  SentenceTextKey: SentenceText_65ad6e38-07d4-4009-8fcf-c6e80ee16688
+--- !u!114 &-2240999108483308317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 1149.3999
+    y: -149.00009
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: 
+    Text: El ataque no ha hecho nada...
+    CharacterSprite: {fileID: 0}
+  ParentNodes:
+  - {fileID: 5964231602897579766}
+  ChildNode: {fileID: 0}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: SentenceName_d11fb0ec-ec7f-4ad3-976d-b3631e311e31
+  SentenceTextKey: SentenceText_7554a099-3564-413e-8913-5b47ca6484ee
+--- !u!114 &-1802716385812245260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 539.8002
+    y: 437.40002
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: 
+    Text: Un arbol te ha intimidado...
+    CharacterSprite: {fileID: 0}
+  ParentNodes:
+  - {fileID: 7001909700949823720}
+  ChildNode: {fileID: 0}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: SentenceName_d11fb0ec-ec7f-4ad3-976d-b3631e311e31
+  SentenceTextKey: 
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33f741ea10ebcf842a91c9b871dd032a, type: 3}
+  m_Name: Arbol
+  m_EditorClassIdentifier: 
+  NodesList:
+  - {fileID: -7755772639233867758}
+  - {fileID: 7001909700949823720}
+  - {fileID: 5964231602897579766}
+  - {fileID: 4352856160216867852}
+  - {fileID: -2240999108483308317}
+  - {fileID: -4336360673341093164}
+  - {fileID: -5152657712076503061}
+  - {fileID: 8985266737682110409}
+  - {fileID: -1802716385812245260}
+  - {fileID: 3164586859507259942}
+  - {fileID: 1127312361010324100}
+  VariablesConfig: {fileID: 11400000, guid: c69fb94eaec09514191e1eeb90bd4e02, type: 2}
+  _localizationTableName: Arbol
+  _characterNamesLocalizationName: 
+  NodeToDrawLineFrom: {fileID: 0}
+  LinePosition: {x: 0, y: 0}
+  IsLocalizationSetUp: 1
+--- !u!114 &1127312361010324100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f4b3c64aaf434ea0df52154c1c7680, type: 3}
+  m_Name: External Function Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 1039
+    y: 322.99997
+    width: 190
+    height: 80
+  IsDragging: 1
+  IsSelected: 0
+  _functionName: randLoot
+  _description: 
+  ParentNodes:
+  - {fileID: 3164586859507259942}
+  ChildNode: {fileID: 0}
+--- !u!114 &3164586859507259942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 811.0001
+    y: 298.99994
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: 
+    Text: El arbol muestra interes en ti
+    CharacterSprite: {fileID: 21300000, guid: d1a6ce6e8d4da514e8a1e914f4ca408c, type: 3}
+  ParentNodes:
+  - {fileID: 8985266737682110409}
+  ChildNode: {fileID: 1127312361010324100}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: SentenceName_d11fb0ec-ec7f-4ad3-976d-b3631e311e31
+  SentenceTextKey: SentenceText_ca37c217-024c-4dc0-9bb5-8e85036ee872
+--- !u!114 &4352856160216867852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f4b3c64aaf434ea0df52154c1c7680, type: 3}
+  m_Name: External Function Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 547.0001
+    y: 111.7999
+    width: 190
+    height: 80
+  IsDragging: 1
+  IsSelected: 0
+  _functionName: AtaqueFuerza
+  _description: 
+  ParentNodes:
+  - {fileID: 7001909700949823720}
+  ChildNode: {fileID: 5964231602897579766}
+--- !u!114 &5964231602897579766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38789157e7795244280823d019530045, type: 3}
+  m_Name: Variable Condition Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 825.4001
+    y: -30.600021
+    width: 240
+    height: 160
+  IsDragging: 1
+  IsSelected: 0
+  _variableName: ataque
+  _conditionType: 5
+  _boolTargetValue: 0
+  _intTargetValue: 0
+  _floatTargetValue: 0
+  _stringTargetValue: 
+  ParentNodes:
+  - {fileID: 4352856160216867852}
+  TrueChildNode: {fileID: -2240999108483308317}
+  FalseChildNode: {fileID: -4336360673341093164}
+--- !u!114 &7001909700949823720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1717f3c6dba9fa40844ddacac301510, type: 3}
+  m_Name: Answer Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 256.60004
+    y: 163.79993
+    width: 190
+    height: 175
+  IsDragging: 1
+  IsSelected: 0
+  Answers:
+  - Fuerza
+  - Inteligencia
+  - Carisma
+  - Huir
+  AnswerKeys:
+  - Answer_00831d57-9b71-45e8-862e-faf45ee27c4d
+  - Answer_13e680a5-3af8-4672-9975-36dc121849f9
+  - Answer_75bfd1b6-e4da-4fed-988b-201a3471bd4f
+  - Answer_846fbebf-36a3-4ea2-86a6-2b824d035672
+  ParentNodes:
+  - {fileID: -7755772639233867758}
+  ChildNodes:
+  - {fileID: 4352856160216867852}
+  - {fileID: -5152657712076503061}
+  - {fileID: 8985266737682110409}
+  - {fileID: -1802716385812245260}
+--- !u!114 &8985266737682110409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f4b3c64aaf434ea0df52154c1c7680, type: 3}
+  m_Name: External Function Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 536.6001
+    y: 322.19992
+    width: 190
+    height: 80
+  IsDragging: 1
+  IsSelected: 0
+  _functionName: AtaqueCarisma
+  _description: 
+  ParentNodes:
+  - {fileID: 7001909700949823720}
+  ChildNode: {fileID: 3164586859507259942}

@@ -12,14 +12,29 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: Puzzles
   m_EditorClassIdentifier: Assembly-CSharp::Puzzle
-  Second_Floor:
-  - name: Puzzle_1
-    acabado: 1
-  - name: Puzzle_2
+  Nivel_0:
+  - name: Puzzle_A1
     acabado: 0
-  Puzzle_b3:
-  - name: b3_1
+  Nivel_1:
+  - name: Puzzle_B1
     acabado: 0
-  - name: b3_2
+  - name: Puzzle_B2
     acabado: 0
-  Puzzle_b2: []
+  Nivel_2:
+  - name: Puzzle_C3
+    acabado: 0
+  - name: Puzzle_C6_a
+    acabado: 0
+  - name: Puzzle_C6_b
+    acabado: 0
+  NivelDesbloqueado:
+  - name: Nivel_0
+    acabado: 0
+  - name: Nivel_1
+    acabado: 0
+  - name: Nivel_2
+    acabado: 0
+  - name: Nivel_3
+    acabado: 0
+  - name: Jefe_Final
+    acabado: 0

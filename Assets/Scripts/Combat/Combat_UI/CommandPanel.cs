@@ -1,22 +1,26 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
 public class CommandPanel : MonoBehaviour
 {
+    [SerializeField] CommandManager commandManager;
+
     private GameObject load_script;
     private LoadScene loadScene;
-    //[SerializeField] Preload preload;
-    [SerializeField] CommandManager commandManager;
+
+    private VisualElement root;
+
+    //fila principal
+    private Button btnFUE, btnCAR, btnINT;
+
+    //fila secundaria
+    private Button btnItem, btnRun;
 
     public List<int> Armas = new List<int>();
     int daga = 4;
     int espada = 6;
     int conjuro = 12;
-
-    [SerializeField] UIDocument uIDocument;
-    private VisualElement root;
-    List<VisualElement> allButtons;
 
     void Start()
     {
@@ -26,51 +30,40 @@ public class CommandPanel : MonoBehaviour
             loadScene = load_script.GetComponent<LoadScene>();
 
         }
-        uIDocument = GetComponent<UIDocument>();
+
+        var uIDocument = GetComponent<UIDocument>();
         root = uIDocument.rootVisualElement;
-        allButtons = root.Query<VisualElement>(className: "combat_btns").ToList();
 
-        foreach (VisualElement btn in allButtons)
-        {
+        btnFUE = root.Q<Button>("btn-FUE");
+        btnCAR = root.Q<Button>("btn-CAR");
+        btnINT = root.Q<Button>("btn-INT");
+        btnItem = root.Q<Button>("btn-item");
+        btnRun = root.Q<Button>("btn-huir");
 
-            btn.RegisterCallback<ClickEvent>(evt => {
-                if (btn.name == "opt_fue")
-                {
-                    Debug.Log("Llega aqui?");
-                    Fuerza();
-                }
-                else if (btn.name == "opt_int")
-                {
-                    Intel();
-                }
-                else if (btn.name == "opt_car")
-                {
-                    Carisma();
-                }
-                else if (btn.name == "opt_run")
-                {
-                    Debug.Log("Llega aqui?");
-                    Huir();
-                }
-                else if (btn.name == "opt_attack")
-                {
+        // eventos
+        btnFUE.clicked += Fuerza;
+        btnINT.clicked += Intel;
+        btnCAR.clicked += Carisma;
+        btnItem.clicked += UsarItem;
+        btnRun.clicked += Huir;
 
-                    changeMenu("Attack");
-                }
-                else if (btn.name == "opt_goBack")
-                {
-                    Debug.Log("Llega aqui?");
-                    changeMenu("Initial");
-                }
-            });
-        }
+    }
+
+    void OnDisable()
+    {
+        btnFUE.clicked -= Fuerza;
+        btnINT.clicked -= Intel; //que es intel
+        btnCAR.clicked -= Carisma;
+        btnItem.clicked -= UsarItem;
+        btnRun.clicked -= Huir;
     }
 
     //Boton Fuerza, se dice a command manager
     public void Fuerza()
     {
         commandManager.Fuerza();
-        Debug.Log("El ataque de fuerza ha acabo");
+        Debug.Log("Ataque de fuerza");
+
     }
     //Boton Inteligencia
     public void Intel()
@@ -84,6 +77,8 @@ public class CommandPanel : MonoBehaviour
         commandManager.Carisma();
         Debug.Log("Ha usado carisma");
     }
+
+    // SECUNDARIAS
     //Boton Huir
     public void Huir()
     {
@@ -91,28 +86,9 @@ public class CommandPanel : MonoBehaviour
         loadScene.SalirCombate();
         //preload.cambiarEscena("pruevas_prototipo");
     }
-    public void changeMenu(string menuType)
+    public void UsarItem()
     {
-        foreach (VisualElement btn in allButtons)
-        {
-            switch (menuType)
-            {
-                case "Initial":
-                    // En el men� inicial solo vemos Ataque y Huir
-                    if (btn.name == "opt_attack" || btn.name == "opt_run")
-                        btn.style.display = DisplayStyle.Flex;
-                    else
-                        btn.style.display = DisplayStyle.None;
-                    break;
-
-                case "Attack":
-                    // En el men� de ataque vemos los ataques
-                    if (btn.name == "opt_attack" || btn.name == "opt_run")
-                        btn.style.display = DisplayStyle.None;
-                    else
-                        btn.style.display = DisplayStyle.Flex;
-                    break;
-            }
-        }
+        Debug.Log("Usar ítem");
+        // pendiente: abrir submenú de ítems
     }
 }

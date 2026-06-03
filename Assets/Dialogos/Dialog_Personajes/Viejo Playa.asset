@@ -1,0 +1,657 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8242323733377571609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 959.9996
+    y: -46.00003
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Carlos
+    Text: "(No tiene mucho interes en ayudar..\xBFllevaba el ba\xF1ador por debajo
+      la t\xFAnica?)"
+    CharacterSprite: {fileID: 21300000, guid: a188ce1c9b6fce644b5efac5bf9be647, type: 3}
+  ParentNodes:
+  - {fileID: -8085540885215079957}
+  ChildNode: {fileID: 3780989768356340851}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: SentenceName_bd7f19d8-a3de-4fff-9a6c-b84386cf992b
+  SentenceTextKey: SentenceText_8b3b36d9-8dcf-4dc9-871a-4074048e3dbf
+--- !u!114 &-8085540885215079957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38789157e7795244280823d019530045, type: 3}
+  m_Name: Variable Condition Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 668.0002
+    y: 28.399963
+    width: 240
+    height: 160
+  IsDragging: 1
+  IsSelected: 0
+  _variableName: tiradaIntel
+  _conditionType: 3
+  _boolTargetValue: 0
+  _intTargetValue: 17
+  _floatTargetValue: 0
+  _stringTargetValue: 
+  ParentNodes:
+  - {fileID: -3100237991549342030}
+  TrueChildNode: {fileID: -8242323733377571609}
+  FalseChildNode: {fileID: 5025879490006120289}
+--- !u!114 &-7817971070914816982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 474.40048
+    y: -116.400055
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Yusseif
+    Text: "Tonter\xEDas, te falta entreno."
+    CharacterSprite: {fileID: 21300000, guid: 0f39758af95060149ad9e71f80df61d3, type: 3}
+  ParentNodes:
+  - {fileID: -8505265673351702}
+  ChildNode: {fileID: 2971289849116162702}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: SentenceName_2296ed98-516f-41a5-9e1c-048605448b3c
+  SentenceTextKey: SentenceText_98c067a4-f765-49c0-a91e-b5269d9ad72f
+--- !u!114 &-4274224383607147487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f4b3c64aaf434ea0df52154c1c7680, type: 3}
+  m_Name: External Function Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 972.8006
+    y: 323.5999
+    width: 190
+    height: 80
+  IsDragging: 0
+  IsSelected: 0
+  _functionName: ContinuarMov
+  _description: 
+  ParentNodes:
+  - {fileID: 1671505132572916925}
+  ChildNode: {fileID: 0}
+--- !u!114 &-3926929140941135652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1717f3c6dba9fa40844ddacac301510, type: 3}
+  m_Name: Answer Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 234.4
+    y: 250.00012
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  Answers:
+  - ...No, no he encontrado a nadie
+  - Si vinieras seguro los encontramos
+  AnswerKeys:
+  - Answer_2d5fe3fe-bceb-429e-8588-178dd4a97b63
+  - Answer_e40b7280-3758-4195-8d67-09a4d042f60a
+  ParentNodes:
+  - {fileID: 3254360352695638526}
+  ChildNodes:
+  - {fileID: -203913911935700956}
+  - {fileID: -1194948247497644582}
+--- !u!114 &-3100237991549342030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f4b3c64aaf434ea0df52154c1c7680, type: 3}
+  m_Name: External Function Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 444.8004
+    y: 41.19995
+    width: 190
+    height: 80
+  IsDragging: 1
+  IsSelected: 0
+  _functionName: dadoIntel
+  _description: 
+  ParentNodes:
+  - {fileID: -8505265673351702}
+  ChildNode: {fileID: -8085540885215079957}
+--- !u!114 &-2987825089355661134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 676.8005
+    y: -249.20007
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Carlos
+    Text: OK viejo
+    CharacterSprite: {fileID: 21300000, guid: 0f39758af95060149ad9e71f80df61d3, type: 3}
+  ParentNodes: []
+  ChildNode: {fileID: 3780989768356340851}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: SentenceName_bd7f19d8-a3de-4fff-9a6c-b84386cf992b
+  SentenceTextKey: SentenceText_a91581a3-fded-431b-b0ce-2d870b0cc68b
+--- !u!114 &-2440613239502911450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -56.80066
+    y: -86.80002
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Yusseif
+    Text: "\xA1Hey muchacho! \xBFC\xF3mo va todo all\xE1 dentro?"
+    CharacterSprite: {fileID: 21300000, guid: 0f39758af95060149ad9e71f80df61d3, type: 3}
+  ParentNodes:
+  - {fileID: 8951910051020646821}
+  ChildNode: {fileID: -8505265673351702}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: SentenceName_2296ed98-516f-41a5-9e1c-048605448b3c
+  SentenceTextKey: SentenceText_97fa757e-2e95-4150-9d9a-47651640b597
+--- !u!114 &-1194948247497644582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 505.60043
+    y: 347.60016
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Yusseif
+    Text: "De acuerdo, ir\xE9 contigo, ve bajando y ahora voy."
+    CharacterSprite: {fileID: 21300000, guid: 0f39758af95060149ad9e71f80df61d3, type: 3}
+  ParentNodes:
+  - {fileID: -3926929140941135652}
+  ChildNode: {fileID: 1671505132572916925}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: SentenceName_2296ed98-516f-41a5-9e1c-048605448b3c
+  SentenceTextKey: SentenceText_8a625a8e-f10c-4a19-816b-632df37d94de
+--- !u!114 &-203913911935700956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 499.20053
+    y: 211.60007
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Yusseif
+    Text: "Uf, venga que no es tan dificl, \xBFvas a hacer que me levante?"
+    CharacterSprite: {fileID: 21300000, guid: 0f39758af95060149ad9e71f80df61d3, type: 3}
+  ParentNodes:
+  - {fileID: -3926929140941135652}
+  ChildNode: {fileID: 1671505132572916925}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: SentenceName_2296ed98-516f-41a5-9e1c-048605448b3c
+  SentenceTextKey: SentenceText_1632c4df-dc04-45cd-acda-625b353a8c78
+--- !u!114 &-8505265673351702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1717f3c6dba9fa40844ddacac301510, type: 3}
+  m_Name: Answer Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 222.39978
+    y: -169.20007
+    width: 190
+    height: 155
+  IsDragging: 1
+  IsSelected: 0
+  Answers:
+  - "Va incre\xEDble viejo."
+  - "Fatal, podr\xEDas venir a ayudar en verdad."
+  - (Observar)
+  AnswerKeys:
+  - Answer_ea5bd1a3-d673-4d14-94b5-fc90536f3ee9
+  - Answer_e69e8feb-7c69-4b1b-b849-36e4caaca6b0
+  - Answer_d1050f7f-e750-49c0-b9cd-356118dcf6e6
+  ParentNodes:
+  - {fileID: -2440613239502911450}
+  ChildNodes:
+  - {fileID: 8705215247013136315}
+  - {fileID: -7817971070914816982}
+  - {fileID: -3100237991549342030}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33f741ea10ebcf842a91c9b871dd032a, type: 3}
+  m_Name: Viejo Playa
+  m_EditorClassIdentifier: 
+  NodesList:
+  - {fileID: -2440613239502911450}
+  - {fileID: 3323830820876046993}
+  - {fileID: 8951910051020646821}
+  - {fileID: -8505265673351702}
+  - {fileID: 8705215247013136315}
+  - {fileID: -7817971070914816982}
+  - {fileID: 2971289849116162702}
+  - {fileID: -2987825089355661134}
+  - {fileID: -3100237991549342030}
+  - {fileID: -8085540885215079957}
+  - {fileID: -8242323733377571609}
+  - {fileID: 5025879490006120289}
+  - {fileID: 3780989768356340851}
+  - {fileID: 7049286403710084599}
+  - {fileID: 3254360352695638526}
+  - {fileID: -3926929140941135652}
+  - {fileID: -203913911935700956}
+  - {fileID: -1194948247497644582}
+  - {fileID: 1671505132572916925}
+  - {fileID: -4274224383607147487}
+  VariablesConfig: {fileID: 11400000, guid: 61133ed5c4a3f7d488a61fd3977e33ab, type: 2}
+  _localizationTableName: Viejo Playa
+  _characterNamesLocalizationName: 
+  NodeToDrawLineFrom: {fileID: 0}
+  LinePosition: {x: 0, y: 0}
+  IsLocalizationSetUp: 1
+--- !u!114 &1671505132572916925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30402c10d300488491eb82eed1db9a20, type: 3}
+  m_Name: Modify Variable Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 728.0002
+    y: 270.80005
+    width: 210
+    height: 155
+  IsDragging: 1
+  IsSelected: 0
+  _variableName: dialogViejo
+  _modifyType: 0
+  _boolValue: 0
+  _intValue: 0
+  _floatValue: 0
+  _stringValue: 
+  ParentNodes:
+  - {fileID: -203913911935700956}
+  - {fileID: -1194948247497644582}
+  ChildNode: {fileID: -4274224383607147487}
+--- !u!114 &2971289849116162702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 672.8
+    y: -116.400055
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Yusseif
+    Text: "\xBFVes ese arbol redondo? Ve a practicar all\xE0 venga,lo necesitas."
+    CharacterSprite: {fileID: 21300000, guid: 0f39758af95060149ad9e71f80df61d3, type: 3}
+  ParentNodes:
+  - {fileID: -7817971070914816982}
+  ChildNode: {fileID: 3780989768356340851}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: SentenceName_2296ed98-516f-41a5-9e1c-048605448b3c
+  SentenceTextKey: SentenceText_aacfdf8b-0e10-4330-b834-033073826f5c
+--- !u!114 &3254360352695638526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -15.200073
+    y: 270.80017
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Yusseif
+    Text: "Si que has tardado en voler, \xBFhas visto a alguien all\xE1 bajo?"
+    CharacterSprite: {fileID: 21300000, guid: 0f39758af95060149ad9e71f80df61d3, type: 3}
+  ParentNodes:
+  - {fileID: 8951910051020646821}
+  ChildNode: {fileID: -3926929140941135652}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: SentenceName_2296ed98-516f-41a5-9e1c-048605448b3c
+  SentenceTextKey: SentenceText_c1b1406f-1b3c-46f9-ad59-4606c188e0e1
+--- !u!114 &3323830820876046993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f4b3c64aaf434ea0df52154c1c7680, type: 3}
+  m_Name: External Function Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -528.0008
+    y: 181.99988
+    width: 190
+    height: 80
+  IsDragging: 1
+  IsSelected: 0
+  _functionName: PararMov
+  _description: 
+  ParentNodes: []
+  ChildNode: {fileID: 8951910051020646821}
+--- !u!114 &3780989768356340851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30402c10d300488491eb82eed1db9a20, type: 3}
+  m_Name: Modify Variable Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 1215.1992
+    y: -199.59995
+    width: 210
+    height: 155
+  IsDragging: 1
+  IsSelected: 0
+  _variableName: dialogViejo
+  _modifyType: 0
+  _boolValue: 0
+  _intValue: 1
+  _floatValue: 0
+  _stringValue: 
+  ParentNodes:
+  - {fileID: -2987825089355661134}
+  - {fileID: 2971289849116162702}
+  - {fileID: -8242323733377571609}
+  - {fileID: 5025879490006120289}
+  ChildNode: {fileID: 7049286403710084599}
+--- !u!114 &5025879490006120289
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 953.5994
+    y: 94.79996
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Carlos
+    Text: (Se esta a punto de dormir...)
+    CharacterSprite: {fileID: 21300000, guid: a188ce1c9b6fce644b5efac5bf9be647, type: 3}
+  ParentNodes:
+  - {fileID: -8085540885215079957}
+  ChildNode: {fileID: 3780989768356340851}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: SentenceName_bd7f19d8-a3de-4fff-9a6c-b84386cf992b
+  SentenceTextKey: SentenceText_708d9263-47e0-46aa-8a05-f675566a0350
+--- !u!114 &7049286403710084599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f4b3c64aaf434ea0df52154c1c7680, type: 3}
+  m_Name: External Function Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 1502.3987
+    y: -168.39993
+    width: 190
+    height: 80
+  IsDragging: 1
+  IsSelected: 0
+  _functionName: ContinuarMov
+  _description: 
+  ParentNodes:
+  - {fileID: 3780989768356340851}
+  ChildNode: {fileID: 0}
+--- !u!114 &8705215247013136315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 474.40048
+    y: -250.80005
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Yusseif
+    Text: "...no me hables as\xED ni\xF1o, yo soy un expero aventurero. Tenme respeto."
+    CharacterSprite: {fileID: 21300000, guid: 0f39758af95060149ad9e71f80df61d3, type: 3}
+  ParentNodes:
+  - {fileID: -8505265673351702}
+  ChildNode: {fileID: 0}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: SentenceName_2296ed98-516f-41a5-9e1c-048605448b3c
+  SentenceTextKey: SentenceText_fdcfa78b-1f32-41ca-808c-29efc5acdf80
+--- !u!114 &8951910051020646821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38789157e7795244280823d019530045, type: 3}
+  m_Name: Variable Condition Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -306.4002
+    y: 103.599945
+    width: 240
+    height: 160
+  IsDragging: 1
+  IsSelected: 0
+  _variableName: firstTalkViejo
+  _conditionType: 0
+  _boolTargetValue: 0
+  _intTargetValue: 0
+  _floatTargetValue: 0
+  _stringTargetValue: 
+  ParentNodes:
+  - {fileID: 3323830820876046993}
+  TrueChildNode: {fileID: -2440613239502911450}
+  FalseChildNode: {fileID: 3254360352695638526}

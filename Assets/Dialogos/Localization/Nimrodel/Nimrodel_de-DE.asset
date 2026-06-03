@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Nimrodel_de-DE
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: de-DE
+  m_SharedData: {fileID: 11400000, guid: 0e2128e9652d23a4d93569f4522f9c2f, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 869872754290688
+    m_Localized: zzzzzzzz
+    m_Metadata:
+      m_Items: []
+  - m_Id: 869872754290689
+    m_Localized: ???
+    m_Metadata:
+      m_Items: []
+  - m_Id: 869872754290690
+    m_Localized: Nim
+    m_Metadata:
+      m_Items: []
+  - m_Id: 869872754290691
+    m_Localized: 
+    m_Metadata:
+      m_Items: []
+  - m_Id: 869872754290692
+    m_Localized: Despertar
+    m_Metadata:
+      m_Items: []
+  - m_Id: 869872754290693
+    m_Localized: Dejarle dormir
+    m_Metadata:
+      m_Items: []
+  - m_Id: 869872754290694
+    m_Localized: Prota
+    m_Metadata:
+      m_Items: []
+  - m_Id: 869872754290695
+    m_Localized: Quiero volver arriba...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 869872754290696
+    m_Localized: "Yo soy Nim, estaba explorando la mazmorra con mis compa\xF1eros
+      pero los he perdido."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 869872754290697
+    m_Localized: "Etkis se quedo en el piso de arriba y no se donde esta Lerendur.
+      Yo he quedado aqu\xED atrapada sin poder salir."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 869872754290698
+    m_Localized: Y como no sabia que hacer, me hize una siesta
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

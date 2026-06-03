@@ -2,26 +2,21 @@ using UnityEngine;
 
 public class SonidoPasos : MonoBehaviour
 {
-    public AudioSource pie;
+    public AudioSource audioSource;
 
-    public float velocidadMinima = 0.1f;
-    private Rigidbody rb;
+    public float cooldown = 0.4f;
 
-    private float cooldown = 0.4f;
     private float tiempo;
-
-    void Start()
-    {
-        rb = GetComponentInParent<Rigidbody>();
-    }
 
     void Update()
     {
         tiempo += Time.deltaTime;
 
-        if (rb.linearVelocity.magnitude > velocidadMinima && tiempo > cooldown)
+        Vector3 movimiento = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+
+        if (movimiento.magnitude > 0.1f && tiempo > cooldown)
         {
-            pie.Play();
+            audioSource.PlayOneShot(audioSource.clip);
             tiempo = 0f;
         }
     }

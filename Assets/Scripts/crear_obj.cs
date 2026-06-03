@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class crear_obj : MonoBehaviour
 {
-    [SerializeField] GameObject world;
+    //[SerializeField] GameObject world;
     [SerializeField] GameObject player;
     [SerializeField] GameObject preloadScript;
     [SerializeField] GameObject screenTint;
@@ -16,25 +16,28 @@ public class crear_obj : MonoBehaviour
     void Awake()
     {
         //Busco el objeto GameManager en la escena y lo asocio a la variable
-        gameManager = GameObject.Find("--SceneManagement--");
-        //Le indico que no se destruya entre escenas
-        DontDestroyOnLoad(gameManager);
-
-        if (!GameObject.Find("--WorldManagement--") && !GameObject.Find("--WorldManagement--(Clone)"))
+        if (gameManager = GameObject.Find("--SceneManagement--"))
         {
-            GameObject nuevoObj = Instantiate(world);
-            nuevoObj.name = "--WorldManagement--";
-            DontDestroyOnLoad(nuevoObj);
+            //Le indico que no se destruya entre escenas
+            DontDestroyOnLoad(gameManager);
         }
-        else
-        {
-            GameObject x = GameObject.Find("--WorldManagement--");
-            x.name = "--WorldManagement--";
-            DontDestroyOnLoad(x);
-        }
+        //if (!GameObject.Find("--WorldManagement--") && !GameObject.Find("--WorldManagement--(Clone)"))
+        //{
+        //    Debug.Log("a");
+        //    GameObject nuevoObj = Instantiate(world);
+        //    nuevoObj.name = "--WorldManagement--";
+        //    DontDestroyOnLoad(nuevoObj);
+        //}
+        //else
+        //{
+        //    GameObject x = GameObject.Find("--WorldManagement--");
+        //    x.name = "--WorldManagement--";
+        //    DontDestroyOnLoad(x);
+        //}
 
         if (!GameObject.Find("ScreenTint") && !GameObject.Find("ScreenTint(Clone)"))
         {
+            Debug.Log("a");
             GameObject nuevoObj = Instantiate(screenTint);
             nuevoObj.name = "ScreenTint";
             DontDestroyOnLoad(nuevoObj);
@@ -52,20 +55,19 @@ public class crear_obj : MonoBehaviour
         //    DontDestroyOnLoad(nuevoObj);
         //}
         //else
-        
-            GameObject dialog = GameObject.Find("--DialogManager--");
+        if ( GameObject.Find("--DialogManager--"))
+        {
             dialog.name = "--DialogManager--";
             DontDestroyOnLoad(dialog);
-        Debug.Log("what");
+        }
+            
+            
     }
 
     public void destroyAll()
     {
         //GameObject preloadObj = GameObject.Find("--Preload--");
         //Destroy(preloadObj);
-
-        //GameObject playerObj = GameObject.Find("Player Character");
-        //Destroy(playerObj);
 
         GameObject sceneMObj = GameObject.Find("--SceneManagement--");
         Destroy(sceneMObj);

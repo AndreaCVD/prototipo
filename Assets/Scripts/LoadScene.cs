@@ -34,7 +34,7 @@ public class LoadScene : MonoBehaviour
 
     void Update()
     {
-        uiHub = GameObject.Find("UI_HUB");
+
         //encontrar el personaje prefab 
         if (protagonista == null)
         {
@@ -49,7 +49,7 @@ public class LoadScene : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            destroyObjs.destroyAll();
+            //destroyObjs.destroyAll();
             ChangeScene("Start_MainMenu");
         }
     }
@@ -104,7 +104,10 @@ public class LoadScene : MonoBehaviour
         //si estamos en combate eliminar esta escena
         //Sacamos la pausa del juego principal
         escenaState.ScenePause(false); //false, se mueve
-        uiHub.SetActive(true); //volvemos a ver la ui
+        
+        //recibir loot
+
+        //uiHub.SetActive(true); //volvemos a ver la ui
 
         // Unload Scene
         SceneManager.UnloadSceneAsync("combat_scene");
@@ -120,7 +123,7 @@ public class LoadScene : MonoBehaviour
             escenaState.ScenePause(true); //true, se para
             pantalla.UnTint();
 
-            uiHub.SetActive(false);
+            //uiHub.SetActive(false);
 
             preload.CombatOpponent(enemyName); //Pasem el nom
 

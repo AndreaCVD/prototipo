@@ -17,9 +17,24 @@
                 <ui:Button name="btn-inventory" class="inventory-btn" style="background-image: url(&quot;project://database/Assets/Art/Interface/inventory.png?fileID=2800000&amp;guid=b787edb1344ca4745ba4a6dcce51a01b&amp;type=3#inventory&quot;); flex-direction: column; justify-content: space-between; align-content: flex-start;">
                     <ui:Label name="char-badge" text="I" class="char-badge" />
                 </ui:Button>
+                <ui:VisualElement name="item-notification" class="item-notification" style="display: none; background-color: rgba(68, 28, 4, 0.61);">
+                    <ui:VisualElement name="notif-icon" class="notif-icon" />
+                    <ui:Label name="notif-label" text="NEW" class="notif-label" />
+                </ui:VisualElement>
             </ui:VisualElement>
         </ui:VisualElement>
-        <ui:VisualElement name="play-area" style="flex-grow: 1;" />
+        <ui:VisualElement name="play-area" style="flex-grow: 1; flex-direction: column-reverse;">
+            <ui:VisualElement name="dialog-box" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); width: auto; height: 230px; display: flex;">
+                <ui:VisualElement name="sentence-panel" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); display: flex; flex-direction: row; align-content: center; align-items: center; justify-content: space-evenly;">
+                    <ui:Label text="name" name="character-name" style="left: auto; top: -28%; right: -7%; bottom: auto; position: relative; margin-left: 4px; justify-content: flex-start; align-self: center;" />
+                    <ui:Label text="Label" name="dialogue-text" style="width: 50%; align-self: center; justify-content: center; align-content: auto; background-color: rgba(0, 0, 0, 0); font-size: 30px; background-image: url(&quot;project://database/Assets/Art/Interface/dialog_frame.png?fileID=2800000&amp;guid=00262703ff4e66f428faa4adefd695b2&amp;type=3#dialog_frame&quot;); background-size: 100% 100%; -unity-background-scale-mode: stretch-to-fill; height: 230px; padding-top: 58px; padding-bottom: 82px; padding-left: 67px; padding-right: 97px; flex-wrap: nowrap; align-items: center;" />
+                    <ui:VisualElement name="character-image" style="flex-grow: 0; background-image: url(&quot;project://database/Assets/PreFabs/UI/png%20vacio.png?fileID=21300000&amp;guid=d4d3a38f353de664aa8174df9aee9edc&amp;type=3#png vacio&quot;); background-color: rgba(0, 0, 0, 0); top: auto; left: auto; right: 0; bottom: auto; width: 240px; height: 240px; background-size: cover; align-self: center; position: relative;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="answer-panel" style="flex-grow: 1; display: none;">
+                    <ui:VisualElement name="buttons-container" style="flex-grow: 1;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
         <ui:VisualElement name="hud-bottom" class="hud-bottom">
             <ui:VisualElement name="health-container" class="health-container">
                 <ui:VisualElement name="heart-icon" class="heart">
@@ -54,7 +69,7 @@
                     <ui:Label name="slot-5-badge" text="0" class="inv-slot__badge" />
                 </ui:VisualElement>
             </ui:VisualElement>
-            <ui:VisualElement name="hud-bottom-right" class="hud-bottom-right" />
+            <ui:VisualElement name="hud-bottom-right" class="hud-bottom-right" style="flex-direction: row-reverse;" />
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

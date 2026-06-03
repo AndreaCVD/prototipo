@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5be51871efa6c3e4eae1703925c8f5ac, type: 3}
+  m_Name: Nimrodel
+  m_EditorClassIdentifier: 
+  m_SharedTableData: {fileID: 11400000, guid: 0e2128e9652d23a4d93569f4522f9c2f, type: 2}
+  m_Tables:
+  - {fileID: 11400000, guid: c73489b5fdb94654799d1c9e041101a1, type: 2}
+  - {fileID: 11400000, guid: ad0c7b89e5f1d034693b74aa91bb8729, type: 2}
+  - {fileID: 11400000, guid: 244197ddfceff8548a5f6446bf38be53, type: 2}
+  - {fileID: 11400000, guid: 8bd1e972effffad4087491c75bb66d60, type: 2}
+  - {fileID: 11400000, guid: fce0488a35f589543a7cf10b2a125bf2, type: 2}
+  m_Extensions: []
+  m_Group: String Table
+  references:
+    version: 2
+    RefIds: []

@@ -20,8 +20,10 @@ public class CombatDebug : MonoBehaviour
     [Header("Possibles enemigos a combatir")]
     //[SerializeField] List<Parameters> Enemigos = new List<Parameters>();
 
-    [SerializeField] Parameters cubo;
+    [SerializeField] Parameters slime;
     [SerializeField] Parameters caballero;
+    [SerializeField] Parameters mimic;
+    [SerializeField] Parameters libro;
 
     CombatManager manager;
 
@@ -46,36 +48,30 @@ public class CombatDebug : MonoBehaviour
     }
     private void ElegirEnemigo()
     {
-
         string nameEnemy = preload.nameOpponent();
 
         //Aqui se tiene que elegir enemigo y enviar los parameters para que el
-        //combate se realize con el oponente correcto
-
-        
+            //combate se realize con el oponente correcto        
         Debug.Log("NAME ENEMY="+ nameEnemy);
 
         switch (nameEnemy)
         {
-            case "Slime":
-                enemyData = cubo;
+            case string b when b.Contains("Slime"):
+                enemyData = slime;
                 break;
-            case "Caballero":
+            case string b when b.Contains("Caballero"):
                 enemyData = caballero;
+                break;
+            case string b when b.Contains("Mimic"):
+                enemyData = mimic;
+                break;
+            case string b when b.Contains("Libro"):
+                enemyData = libro;
                 break;
             default:
                 Debug.Log("No se ha identificado al enemigo");
                 break;
         }
-        //if (NameEnemy == "Cubo")
-        //{
-            
-        //    Debug.Log(enemyData);
-        //}
-        //else
-        //{
-        //    Debug.Log("¿Quien es este enemigo?");
-        //}
     }
     public Parameters ReturnEnemy()
     {

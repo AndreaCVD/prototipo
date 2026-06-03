@@ -15,8 +15,56 @@ MonoBehaviour:
   m_GroupName: Localization-String-Tables-Ukrainian (Ukraine) (uk-UA)
   m_GUID: 3c2e50b38bf116d4eb26b2e0956cbbd5
   m_SerializeEntries:
+  - m_GUID: 02fdcb37cbb4e5f44bea478226cba5e7
+    m_Address: Libro Jefe_uk-UA
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-uk-UA
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 05f4f9e20ac2ad34da6248c9773a8471
+    m_Address: Tienda_uk-UA
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-uk-UA
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 060b2513f9e43ff4cbc82762b60e83b1
+    m_Address: Fogata_uk-UA
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-uk-UA
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 08775f534b4364145a9460a9fb1b380e
+    m_Address: Arbol_uk-UA
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-uk-UA
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 0edd5ef656b18d24d8ccae0d6ff85baf
     m_Address: DemoNodeGraph_uk-UA
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-uk-UA
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3ea728ea1d3512240a8a293e0b825050
+    m_Address: Puerta_uk-UA
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-uk-UA
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 426e13b74b0121e47a982d5ba6bd0cbe
+    m_Address: Lerendur Libre_uk-UA
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-uk-UA
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 45f72722f87ccfc4ebdd26bb124d1b36
+    m_Address: PuertaMaestra_uk-UA
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-uk-UA
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5117ca583d5e368469147797b6e1dcea
+    m_Address: Etkis_uk-UA
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-uk-UA
@@ -29,6 +77,36 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 80119c925851dc541bc15ecac614c3d0
     m_Address: Cofre_uk-UA
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-uk-UA
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9a242cf143048504f9778dda87567106
+    m_Address: Nim_uk-UA
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-uk-UA
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dd6900f450260424cb179122198b7c24
+    m_Address: Nimrodel Libre_uk-UA
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-uk-UA
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: df489edfbcd38de48ae50fdd200db61f
+    m_Address: CofreVacio_uk-UA
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-uk-UA
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f9e90169dd45e37449f8713b620462f7
+    m_Address: Etkis Libre_uk-UA
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-uk-UA
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fce0488a35f589543a7cf10b2a125bf2
+    m_Address: Nimrodel_uk-UA
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-uk-UA

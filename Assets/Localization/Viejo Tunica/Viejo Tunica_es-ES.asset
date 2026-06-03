@@ -1,0 +1,95 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Viejo Tunica_es-ES
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: es-ES
+  m_SharedData: {fileID: 11400000, guid: 815d8418464589a4cbd0763fcc0c6dec, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 470603593478144
+    m_Localized: "Ah, tu eres el del rescate, \xBFno es as\xED?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 470603601866752
+    m_Localized: ???
+    m_Metadata:
+      m_Items: []
+  - m_Id: 470603601866753
+    m_Localized: "\xBFQue pasa? \xBFTienes miedo?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 470603601866754
+    m_Localized: Yusseif
+    m_Metadata:
+      m_Items: []
+  - m_Id: 470603601866755
+    m_Localized: "Este es el grupo de tres aventureros que se qued\xF3 atrapado buscando
+      algo. Una banda de in\xFAtiles, vaya. "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 470603601866756
+    m_Localized: ???
+    m_Metadata:
+      m_Items: []
+  - m_Id: 470603601866757
+    m_Localized: "Y tu... Porfin te has decidido a venir, eh, que ya tardabas. F\xEDjate
+      que hasta me iba a poner yo y todo. "
+    m_Metadata:
+      m_Items: []
+  - m_Id: 470603601866758
+    m_Localized: "Pero como ves, yo estoy muy mayor como para rescatar a nadie, as\xED
+      que tendr\xE1s que hacerlo tu."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 470603601866759
+    m_Localized: (Observar detenidamente)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 470603601866760
+    m_Localized: "\xBFSeria tan amable de obsequiarme con su ayuda?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 470603601866761
+    m_Localized: (Quedarse callado)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 470603601866762
+    m_Localized: "\xBF...qu\xE9 le pasa?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 470603601866763
+    m_Localized: Prota
+    m_Metadata:
+      m_Items: []
+  - m_Id: 470603601866764
+    m_Localized: superas intel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 470603601866765
+    m_Localized: 
+    m_Metadata:
+      m_Items: []
+  - m_Id: 470603601866766
+    m_Localized: no superas intel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 470603601866767
+    m_Localized: "\xBFA qu\xE9 esperas? Va, a trabajar. Yo me quedar\xE9 aqu\xED
+      sentado, que me duelen los pies."
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

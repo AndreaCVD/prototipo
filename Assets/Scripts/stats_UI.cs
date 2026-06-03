@@ -1,9 +1,8 @@
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
-using UI = UnityEngine.UI;
 using UnityEngine.UIElements; // Imprescindible para UI Toolkit
-using System.Linq; //Comparacion de Listas
+using System.Linq;
+using System.Collections; //Comparacion de Listas
 
 public class stats_UI : MonoBehaviour
 {
@@ -26,6 +25,9 @@ public class stats_UI : MonoBehaviour
     //inv en el UI
     private VisualElement inventoryGrid;
     private Button btnInventory;
+    private VisualElement itemNotification;
+    private VisualElement notifIcon;
+    private Coroutine notifCoroutine;
 
     //contadores inventory
     private int llaves;
@@ -33,16 +35,6 @@ public class stats_UI : MonoBehaviour
     private int daga;
     private int espada;
     private int pocionVida;
-
-    //lo del canva para quitar en el futuro
-    [Header("Inventario")]
-    [SerializeField] TMP_Text llave_text;
-    [SerializeField] TMP_Text llaveMaestra_text;
-    [SerializeField] TMP_Text daga_text;
-    [SerializeField] TMP_Text espada_text;
-    [SerializeField] TMP_Text pocionVida_text;
-    public bool canvas_open;
-    public CanvasGroup canvas_inventario;
 
     private void OnEnable()
     {
@@ -62,6 +54,9 @@ public class stats_UI : MonoBehaviour
         btnInventory.clicked += ToggleInventary;
 
         inventoryGrid.style.display = DisplayStyle.None;
+
+        itemNotification = root.Q<VisualElement>("item-notification");
+        notifIcon = root.Q<VisualElement>("notif-icon");
     }
     private void OnDisable()
     {
@@ -76,8 +71,6 @@ public class stats_UI : MonoBehaviour
         daga = 0;
         pocionVida = 0;
 
-        canvas_open = false;
-
         //Seteamos valores, int -> string
         int f = protagonista.stats.Get(PersonajesStats.Fuerza);
         int i = protagonista.stats.Get(PersonajesStats.Inteligencia);
@@ -91,7 +84,6 @@ public class stats_UI : MonoBehaviour
         SetIntel(i);
         SetCarisma(c);
         SetInventario();
-
     }
 
     void Update()
@@ -125,7 +117,16 @@ public class stats_UI : MonoBehaviour
 
     bool areListEqual()
     {
-        //Si  no son iguales de largo entonces estaran mal 100%
+        // Null check del inventario completo
+        if (protagonista == null || protagonista.Inventario == null) return false;
+
+        // Null check de cada lista antes de llamar .Count()
+        if (protagonista.Inventario.Llave == null) return false;
+        if (protagonista.Inventario.LlaveMaestra == null) return false;
+        if (protagonista.Inventario.PocionVida == null) return false;
+        if (protagonista.Inventario.Daga == null) return false;
+        if (protagonista.Inventario.Espada == null) return false;
+
         if (protagonista.Inventario.Llave.Count() != llaves) return false;
         if (protagonista.Inventario.LlaveMaestra.Count() != llaveMaestra) return false;
         if (protagonista.Inventario.PocionVida.Count() != pocionVida) return false;
@@ -134,6 +135,7 @@ public class stats_UI : MonoBehaviour
 
         return true;
     }
+
     void SetFuerza(int num)
     {
         fieldFUE.value = num;
@@ -158,28 +160,49 @@ public class stats_UI : MonoBehaviour
             new Length(porcentaje * 100f, LengthUnit.Percent)
         );
     }
+
+    public void MostrarNotificacion(Sprite icono)
+    {
+        if (notifCoroutine != null)
+        {
+            StopCoroutine(notifCoroutine);
+        }
+
+        notifIcon.style.backgroundImage = new StyleBackground(icono);
+        itemNotification.style.display = DisplayStyle.Flex;
+
+        notifCoroutine = StartCoroutine(OcultarNotificacion(2.5f));
+    }
+
+    IEnumerator OcultarNotificacion(float segundos)
+    {
+        yield return new WaitForSeconds(segundos);
+        itemNotification.style.display = DisplayStyle.None;
+        notifCoroutine = null;
+    }
+
     void SetInventario()
     {
+        // Null check antes de acceder a las listas
+        if (protagonista == null || protagonista.Inventario == null) return;
+        if (protagonista.Inventario.Llave == null) return;
+        if (protagonista.Inventario.LlaveMaestra == null) return;
+        if (protagonista.Inventario.PocionVida == null) return;
+        if (protagonista.Inventario.Daga == null) return;
+        if (protagonista.Inventario.Espada == null) return;
+
         llaves = protagonista.Inventario.Llave.Count();
         llaveMaestra = protagonista.Inventario.LlaveMaestra.Count();
         pocionVida = protagonista.Inventario.PocionVida.Count();
         daga = protagonista.Inventario.Daga.Count();
         espada = protagonista.Inventario.Espada.Count();
 
-        SetSlot(0, iconoLlave, llaves);
-        SetSlot(1, iconoLlaveMaestra, llaveMaestra);
-        SetSlot(2, iconoPocionVida, pocionVida);
-        SetSlot(3, iconoDaga, daga);
-        SetSlot(4, iconoEspada, espada);
+        SetSlot(0, llaves > 0 ? iconoLlave : null, llaves);
+        SetSlot(1, llaveMaestra > 0 ? iconoLlaveMaestra : null, llaveMaestra);
+        SetSlot(2, pocionVida > 0 ? iconoPocionVida : null, pocionVida);
+        SetSlot(3, daga > 0 ? iconoDaga : null, daga);
+        SetSlot(4, espada > 0 ? iconoEspada : null, espada);
         SetSlot(5, null, 0);
-
-        /*para eliminar
-        llave_text.text = "Llaves = " + llaves.ToString();
-        llaveMaestra_text.text = "Llave Maestra = " + llaveMaestra.ToString();
-        pocionVida_text.text = "Pocion = " + pocionVida.ToString();
-        daga_text.text = "Daga = " + daga.ToString();
-        espada_text.text = "Espada = " + espada.ToString();
-        */
     }
 
     void SetSlot(int index, Sprite icono, int cantidad)
@@ -190,8 +213,13 @@ public class stats_UI : MonoBehaviour
 
         if (icono != null)
         {
+            //si antes estaba vacio
+            bool esNuevo = !slot.ClassListContains("inv-slot-active");
             slotIcon.style.backgroundImage = new StyleBackground(icono);
             slot.AddToClassList("inv-slot--active");
+
+            if (esNuevo) MostrarNotificacion(icono); 
+
         }
         else
         {

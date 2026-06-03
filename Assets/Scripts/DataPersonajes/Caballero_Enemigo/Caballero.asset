@@ -15,15 +15,16 @@ MonoBehaviour:
   namePers: Caballero
   stats:
     values:
-    - value: 3
-      stats: 0
-    - value: 3
-      stats: 1
-    - value: 3
-      stats: 2
-    - value: 60
-      stats: 3
     - value: 2
+      stats: 0
+    - value: 0
+      stats: 1
+    - value: 0
+      stats: 2
+    - value: 16
+      stats: 3
+    - value: 17
       stats: 4
-  modelPrefab: {fileID: 8023408201208121070, guid: c946b909ab67d274089332839512dcd7, type: 3}
+  Inventario: {fileID: 0}
+  modelPrefab: {fileID: 5305385646599809368, guid: 18956a4a129394a42aeebd1263fb6080, type: 3}
   art: {fileID: 21300000, guid: 282c6090ceaf83e40b737abf15268cee, type: 3}

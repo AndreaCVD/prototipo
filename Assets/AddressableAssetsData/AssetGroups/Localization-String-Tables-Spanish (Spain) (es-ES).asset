@@ -15,8 +15,38 @@ MonoBehaviour:
   m_GroupName: Localization-String-Tables-Spanish (Spain) (es-ES)
   m_GUID: 85be4569b1ec24045a3b89994da212a3
   m_SerializeEntries:
+  - m_GUID: 18eeef6a57bbc3c4492f5f4888da81f2
+    m_Address: Fogata_es-ES
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es-ES
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 1f425eeeeaba4d544965080314f07bec
     m_Address: Cofre_es-ES
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es-ES
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 202ec8262b2a99245950bfb93c176a78
+    m_Address: Tienda_es-ES
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es-ES
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 276b1de77ed49d0448ca62d1970a2565
+    m_Address: Lerendur Libre_es-ES
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es-ES
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2cdbf478573988841bcd2e991a40b632
+    m_Address: Lerendur_es-ES
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es-ES
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 392235e076f41074bb69169ff699dbf1
+    m_Address: Nim_es-ES
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-es-ES
@@ -27,8 +57,26 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-es-ES
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 47f73c4a26d56ac49aee43f9bb4cfebf
+    m_Address: Viejo Tunica_es-ES
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es-ES
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4891109a4b7150f4e8471e9eb2dad0a7
     m_Address: Dialogo Prueva_es-ES
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es-ES
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 60d82fd0cbcf1694780b3ee53f1b454c
+    m_Address: Puzzle Tutorial_es-ES
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es-ES
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 67b09ef5812a018418e243904457359b
+    m_Address: Arbol_es-ES
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-es-ES
@@ -41,6 +89,60 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 96f1792a72e638a41adca25c10de6381
     m_Address: test_es-ES
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es-ES
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ae3d46905fb64db45b87df4a01d6d84d
+    m_Address: CofreVacio_es-ES
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es-ES
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: afc59f4a4dd87fc4e9e622b02250bb19
+    m_Address: Viejo Playa_es-ES
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es-ES
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b2aa64ff85904294face96289f9d0c20
+    m_Address: Etkis Libre_es-ES
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es-ES
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c73489b5fdb94654799d1c9e041101a1
+    m_Address: Nimrodel_es-ES
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es-ES
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cc81fec3d54ac004cbb1dabf197d07eb
+    m_Address: Libro Jefe_es-ES
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es-ES
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: daf0e0ed2001d404da7207f5b4078afc
+    m_Address: Etkis_es-ES
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es-ES
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e8711e4ea718f9349b0f669466f6a057
+    m_Address: Puerta_es-ES
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es-ES
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ee2c12b3f6326084486570ac58517f91
+    m_Address: Nimrodel Libre_es-ES
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es-ES
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f27573134cfe8c448ae4e87ffb483478
+    m_Address: PuertaMaestra_es-ES
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-es-ES

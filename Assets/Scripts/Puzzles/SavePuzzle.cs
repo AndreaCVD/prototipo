@@ -22,19 +22,19 @@ public class Puzzles
 public class SavePuzzle : MonoBehaviour
 {
 
-    public Parameters prota;
+   // public Parameters prota;
     public Puzzle lista;
 
 
-    void Awake()
-    {
-        for (int i = 0; i < lista.Nivel_1.Count; i++)
-        {
-            //Debug.Log("Puzzles todos false");
-            lista.Nivel_1[i].acabado = false;
+    //void Awake()
+    //{
+    //    for (int i = 0; i < lista.Nivel_1.Count; i++)
+    //    {
+    //        //Debug.Log("Puzzles todos false");
+    //        lista.Nivel_1[i].acabado = false;
 
-        }
-    }
+    //    }
+    //}
 
 }
     //La recompensa si es fa el puzzle

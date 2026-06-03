@@ -196,6 +196,7 @@ GameObject:
   - component: {fileID: 2870176926199578601}
   - component: {fileID: 337099933847317424}
   - component: {fileID: 1317085323482809609}
+  - component: {fileID: 3154048260877719689}
   m_Layer: 0
   m_Name: Dialog Prefab
   m_TagString: Untagged
@@ -256,6 +257,20 @@ MonoBehaviour:
   _dialogBehaviour: {fileID: 337099933847317424}
   _dialogSentencePanel: {fileID: 1405227878057332769}
   _dialogAnswerPanel: {fileID: 215802996690606516}
+--- !u!114 &3154048260877719689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2981868588886401191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19dc4f943ab0bd84c8e26d80f428995a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _dialogBehaviour: {fileID: 337099933847317424}
+  _uiDocument: {fileID: 0}
 --- !u!1 &3477583312549291756
 GameObject:
   m_ObjectHideFlags: 0
@@ -769,7 +784,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8908525638589138990
 RectTransform:
   m_ObjectHideFlags: 0

@@ -30,7 +30,7 @@
                     <ui:Label text="Label" name="dialogue-text" style="width: 50%; align-self: center; justify-content: center; align-content: auto; background-color: rgba(0, 0, 0, 0); font-size: 30px; background-image: url(&quot;project://database/Assets/Art/Interface/dialog_frame.png?fileID=2800000&amp;guid=00262703ff4e66f428faa4adefd695b2&amp;type=3#dialog_frame&quot;); background-size: 100% 100%; -unity-background-scale-mode: stretch-to-fill; height: 230px; padding-top: 58px; padding-bottom: 82px; padding-left: 67px; padding-right: 97px; flex-wrap: nowrap; align-items: center;" />
                     <ui:VisualElement name="character-image" style="flex-grow: 0; background-image: url(&quot;project://database/Assets/PreFabs/UI/png%20vacio.png?fileID=21300000&amp;guid=d4d3a38f353de664aa8174df9aee9edc&amp;type=3#png vacio&quot;); background-color: rgba(0, 0, 0, 0); top: auto; left: auto; right: 0; bottom: auto; width: 240px; height: 240px; background-size: cover; align-self: center; position: relative;" />
                 </ui:VisualElement>
-                <ui:VisualElement name="answer-panel" style="flex-grow: 1; display: none;">
+                <ui:VisualElement name="answer-panel" style="flex-grow: 1; display: flex;">
                     <ui:VisualElement name="buttons-container" style="flex-grow: 1;" />
                 </ui:VisualElement>
             </ui:VisualElement>

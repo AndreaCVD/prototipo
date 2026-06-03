@@ -17,7 +17,7 @@ MonoBehaviour:
     acabado: 0
   Nivel_1:
   - name: Puzzle_B1
-    acabado: 0
+    acabado: 1
   - name: Puzzle_B2
     acabado: 1
   Nivel_2:

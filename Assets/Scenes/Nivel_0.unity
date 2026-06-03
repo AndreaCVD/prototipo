@@ -3170,6 +3170,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8594706371970331367, guid: c7ce5ebe7cf41584990012085244959d, type: 3}
+      propertyPath: m_CastShadows
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8594706371970331367, guid: c7ce5ebe7cf41584990012085244959d, type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8594706371970331367, guid: c7ce5ebe7cf41584990012085244959d, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 864ea5e724ad70d4485e3317945f18a7, type: 2}
     - target: {fileID: 8864122472131702220, guid: c7ce5ebe7cf41584990012085244959d, type: 3}
       propertyPath: m_Name
       value: level_0

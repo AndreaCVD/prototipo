@@ -45,7 +45,6 @@ public class PuzzleZone : MonoBehaviour
         var root = GameObject.Find("UI_HUB").GetComponent<UIDocument>().rootVisualElement;
         btnReset = root.Q<Button>("btn-reset");
         btnReset.style.display = DisplayStyle.None;
-        btnReset.clicked += RestartPuzzle; // acción al pulsar
 
         player = GameObject.Find("personaje");
 
@@ -162,6 +161,7 @@ public class PuzzleZone : MonoBehaviour
             {
                 playerInside = true;
                 btnReset.style.display = DisplayStyle.Flex; // mostrar botón
+                btnReset.clicked += RestartPuzzle;
                 if (dialogOnEnter && !finished)
                 {
                     dialog.EmpezarDialogo(dialogo_obj, this.gameObject);
@@ -171,6 +171,7 @@ public class PuzzleZone : MonoBehaviour
             {
                 playerInside = false;
                 btnReset.style.display = DisplayStyle.None; // ocultar botón
+                btnReset.clicked -= RestartPuzzle;
             }
         }
 

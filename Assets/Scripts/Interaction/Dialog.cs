@@ -54,6 +54,8 @@ public class Dialog : MonoBehaviour
         _dialogBehaviour.BindExternalFunction("PararMov", pararMov);
         _dialogBehaviour.BindExternalFunction("Destroy", DestroyObj);
         _dialogBehaviour.BindExternalFunction("Combat", Combate);
+        _dialogBehaviour.BindExternalFunction("irCampamento", irCampamento);
+        _dialogBehaviour.BindExternalFunction("PisosDesbloqueados", pisosDesbloqueados);
 
         //Personajes
         _dialogBehaviour.BindExternalFunction("EstadoEtkis", estadoEtkis);
@@ -111,17 +113,62 @@ public class Dialog : MonoBehaviour
         Debug.Log(val);
         _dialogBehaviour.SetVariableValue(nombreVal, val);
     }
-
+    public void irCampamento()
+    {
+        load.ChangeScene("Nivel_0");
+    }
+    public void irNivel_1()
+    {
+        load.ChangeScene("Nivel_1");
+    }
+    public void irNivel_2()
+    {
+        load.ChangeScene("Nivel_2");
+    }
+    public void irNivel_3()
+    {
+        load.ChangeScene("Nivel_3");
+    }
+    public void pisosDesbloqueados()
+    {
+        //Nivel 1
+        if (lista.NivelDesbloqueado[1].acabado)
+        {
+            _dialogBehaviour.SetVariableValue("nivel_1", 1);
+        }
+        else
+        {
+            _dialogBehaviour.SetVariableValue("nivel_1", 0);
+        }
+        //Nivel 2
+        if (lista.NivelDesbloqueado[2].acabado)
+        {
+            _dialogBehaviour.SetVariableValue("nivel_2", 1);
+        }
+        else
+        {
+            _dialogBehaviour.SetVariableValue("nivel_2", 0);
+        }
+        //Nivel 3
+        if (lista.NivelDesbloqueado[3].acabado)
+        {
+            _dialogBehaviour.SetVariableValue("nivel_3", 1);
+        }
+        else
+        {
+            _dialogBehaviour.SetVariableValue("nivel_3", 0);
+        }
+    }
     public void estadoEtkis()
     {
         if (lista.Nivel_1[1].acabado)
         {
-            Debug.Log("Etkis es libre");
+            //Debug.Log("Etkis es libre");
             _dialogBehaviour.SetVariableValue("etkis_libre_nivel1", 1);
         }
         else
         {
-            Debug.Log("Etkis no es libre");
+            //Debug.Log("Etkis no es libre");
             _dialogBehaviour.SetVariableValue("etkis_libre_nivel1", 0);
         }
     }

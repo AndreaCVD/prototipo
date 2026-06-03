@@ -15,11 +15,11 @@ MonoBehaviour:
   m_TableCollectionName: PuertaMaestra
   m_TableCollectionNameGuidString: f30f0fc7543156d42932b581e60f3b90
   m_Entries:
-  - m_Id: 15179509760
+  - m_Id: 2090944208105472
     m_Key: SentenceText_bde71f92-65f7-4f66-b98c-95e0e334de74
     m_Metadata:
       m_Items: []
-  - m_Id: 15179509761
+  - m_Id: 2090944220688384
     m_Key: SentenceName_93af2d7e-aaa2-4806-8ace-d1a1e7919f3b
     m_Metadata:
       m_Items: []

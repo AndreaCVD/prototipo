@@ -1,11 +1,11 @@
-using System.Collections;
 using System;
-
+using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
-using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
+using UnityEngine;
+//using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 public class PuzzleZone : MonoBehaviour
 {
@@ -15,7 +15,8 @@ public class PuzzleZone : MonoBehaviour
     public bool finished;
 
     //Canvas
-    [SerializeField] CanvasGroup grup;
+    //[SerializeField] CanvasGroup grup;
+    private Button btnReset;
 
     private List<GameObject> Children = new List<GameObject>();
     [Header("Listas")]
@@ -41,6 +42,11 @@ public class PuzzleZone : MonoBehaviour
     void Start()
     {
 
+        var root = GameObject.Find("UI_HUB").GetComponent<UIDocument>().rootVisualElement;
+        btnReset = root.Q<Button>("btn-reset");
+        btnReset.style.display = DisplayStyle.None;
+        btnReset.clicked += RestartPuzzle; // acción al pulsar
+
         player = GameObject.Find("personaje");
 
         playerInside = false;
@@ -51,7 +57,8 @@ public class PuzzleZone : MonoBehaviour
             dialog = script_dialog.GetComponent<Dialog>();
         }
 
-        opacidad(0f);
+        //opacidad(0f);
+
         //Localizar los primeros hijos
         foreach (Transform child in transform)
         {
@@ -90,9 +97,7 @@ public class PuzzleZone : MonoBehaviour
         if (playerInside)
         {
             // BOTON REINICIO 
-            restart = Input.GetKeyDown(KeyCode.R);
-            //Mirar si barra espaciadora esta activada
-            if (restart)
+            if (Input.GetKeyDown(KeyCode.R))
             {
                 Debug.Log("Reinicio");
                 RestartPuzzle();
@@ -150,25 +155,22 @@ public class PuzzleZone : MonoBehaviour
     }
     void OnTriggerEnter(Collider other)
     {
+
         if (other.tag == "Player")
         {
-             //Enseñar canvas
-           
             if (!playerInside)
             {
                 playerInside = true;
-                opacidad(1f);
-                if ( dialogOnEnter && !finished)
+                btnReset.style.display = DisplayStyle.Flex; // mostrar botón
+                if (dialogOnEnter && !finished)
                 {
-
                     dialog.EmpezarDialogo(dialogo_obj, this.gameObject);
                 }
             }
             else
             {
                 playerInside = false;
-                opacidad(0f);
-
+                btnReset.style.display = DisplayStyle.None; // ocultar botón
             }
         }
 
@@ -197,8 +199,9 @@ public class PuzzleZone : MonoBehaviour
         PositionPlayer();
     }
     //Aqui se reciben las nuevas opacidades
-    public void opacidad(float nueva_opacidad)
-    {
-        grup.alpha = Mathf.Lerp(0f, nueva_opacidad, 5f);
-    }
+    //public void opacidad(float nueva_opacidad)
+    //{
+    //    grup.alpha = Mathf.Lerp(0f, nueva_opacidad, 5f);
+    //}
+
 }

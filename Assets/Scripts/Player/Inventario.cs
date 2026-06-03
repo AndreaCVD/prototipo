@@ -163,7 +163,7 @@ public class Inventario : MonoBehaviour
                 prota.Inventario.Espada.Add("espada_cofre");
                 break;
             case string b when b.Contains("c5"):
-                prota.Inventario.PocionVida.Add("pocion_cofre");
+                prota.Inventario.PocionLava.Add("pocion_cofre");
                 break;
             case string b when b.Contains("c6"):
                 prota.Inventario.LlaveMaestra.Add("llave_cofre");
@@ -261,5 +261,18 @@ public class Inventario : MonoBehaviour
                 Debug.Log("Error en inventario");
                 break;
         }
+    }
+
+    public bool pocionLava()
+    {
+        if (prota.Inventario.PocionLava.Count > 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+
     }
 }

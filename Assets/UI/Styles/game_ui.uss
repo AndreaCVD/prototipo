@@ -331,7 +331,7 @@
 }
 
 #dialogue-text {
-    color: var(--color-antique-white);
+    color: var(--color-deep-earth);
     font-size: var(--font-size-label);
     -unity-font-definition: var(--font-regular);
     white-space: normal;

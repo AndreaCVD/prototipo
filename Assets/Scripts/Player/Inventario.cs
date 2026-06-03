@@ -19,6 +19,13 @@ public class Inventario : MonoBehaviour
 
     private void Start()
     {
+        // Inicializa listas si son null (por cambio de escena)
+        if (prota.Inventario.Llave == null) prota.Inventario.Llave = new List<string>();
+        if (prota.Inventario.LlaveMaestra == null) prota.Inventario.LlaveMaestra = new List<string>();
+        if (prota.Inventario.PocionVida == null) prota.Inventario.PocionVida = new List<string>();
+        if (prota.Inventario.Daga == null) prota.Inventario.Daga = new List<string>();
+        if (prota.Inventario.Espada == null) prota.Inventario.Espada = new List<string>();
+
         //prota.Inventario.Clear();
         if (script_dialog == null)
         {
@@ -42,22 +49,22 @@ public class Inventario : MonoBehaviour
         }
         else if (other.gameObject.tag == "LlaveMaestra")
         {
-            prota.Inventario.Llave.Add(other.gameObject.name);
+            prota.Inventario.LlaveMaestra.Add(other.gameObject.name);
             Destroy(other.gameObject);
         }
         else if (other.gameObject.tag == "PocionVida")
         {
-            prota.Inventario.Llave.Add(other.gameObject.name);
+            prota.Inventario.PocionVida.Add(other.gameObject.name);
             Destroy(other.gameObject);
         }
         else if (other.gameObject.tag == "Daga")
         {
-            prota.Inventario.Llave.Add(other.gameObject.name);
+            prota.Inventario.Daga.Add(other.gameObject.name);
             Destroy(other.gameObject);
         }
         else if (other.gameObject.tag == "Espada")
         {
-            prota.Inventario.Llave.Add(other.gameObject.name);
+            prota.Inventario.Espada.Add(other.gameObject.name);
             Destroy(other.gameObject);
         }
 

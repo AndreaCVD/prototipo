@@ -117,7 +117,16 @@ public class stats_UI : MonoBehaviour
 
     bool areListEqual()
     {
-        //Si  no son iguales de largo entonces estaran mal 100%
+        // Null check del inventario completo
+        if (protagonista == null || protagonista.Inventario == null) return false;
+
+        // Null check de cada lista antes de llamar .Count()
+        if (protagonista.Inventario.Llave == null) return false;
+        if (protagonista.Inventario.LlaveMaestra == null) return false;
+        if (protagonista.Inventario.PocionVida == null) return false;
+        if (protagonista.Inventario.Daga == null) return false;
+        if (protagonista.Inventario.Espada == null) return false;
+
         if (protagonista.Inventario.Llave.Count() != llaves) return false;
         if (protagonista.Inventario.LlaveMaestra.Count() != llaveMaestra) return false;
         if (protagonista.Inventario.PocionVida.Count() != pocionVida) return false;
@@ -126,6 +135,7 @@ public class stats_UI : MonoBehaviour
 
         return true;
     }
+
     void SetFuerza(int num)
     {
         fieldFUE.value = num;
@@ -173,6 +183,14 @@ public class stats_UI : MonoBehaviour
 
     void SetInventario()
     {
+        // Null check antes de acceder a las listas
+        if (protagonista == null || protagonista.Inventario == null) return;
+        if (protagonista.Inventario.Llave == null) return;
+        if (protagonista.Inventario.LlaveMaestra == null) return;
+        if (protagonista.Inventario.PocionVida == null) return;
+        if (protagonista.Inventario.Daga == null) return;
+        if (protagonista.Inventario.Espada == null) return;
+
         llaves = protagonista.Inventario.Llave.Count();
         llaveMaestra = protagonista.Inventario.LlaveMaestra.Count();
         pocionVida = protagonista.Inventario.PocionVida.Count();

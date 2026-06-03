@@ -49,7 +49,7 @@ public class LoadScene : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            destroyObjs.destroyAll();
+            //destroyObjs.destroyAll();
             ChangeScene("Start_MainMenu");
         }
     }

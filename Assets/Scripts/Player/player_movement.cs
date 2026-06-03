@@ -8,82 +8,69 @@ public class player_movement : MonoBehaviour
 {
     Vector3 moveVectorInput;
     Vector3 moveDirection;
+
     [Header("Variables")]
-    [SerializeField] float speed = 10f;
+    [SerializeField] float walkSpeed = 3f;
     public float rotationSpeed;
-    public float jumpForce; //Cambiar este en mov
+    public float jumpForce;
     private float x, y;
 
     [Header("Anim y Mov")]
     public LayerMask groundLayer;
     private InputHandler _inputHandler;
+    private Animator _animator;
+    [SerializeField] private Transform modelTransform;
     Rigidbody rb;
     private bool isGrounded;
 
     public void AddMoveVectorInput(Vector3 moveVector)
     {
         moveVectorInput = moveVector;
-
     }
+
     void Start()
     {
-        // Obtener la referencia del InputHandler
+        _animator = GetComponentInChildren<Animator>();
         _inputHandler = GetComponent<InputHandler>();
         rb = GetComponent<Rigidbody>();
         rb.isKinematic = false;
         jumpForce = 4f;
-        //runSpeed = 5f;
         rotationSpeed = 220f;
     }
 
-    //movemos al personaje
     void Update()
     {
-        //HandleMovement();
-        // Obtener los valores de movimiento desde InputHandler
-        x = _inputHandler.moveVector.x;  // Horizontal (movimiento de izquierda/derecha)
-        y = _inputHandler.moveVector.y;  // Vertical (movimiento hacia adelante/atr�s)
+        x = _inputHandler.moveVector.x;
+        y = _inputHandler.moveVector.y;
+
+        // Animator speed — max 1.25, 0 exacto sin input
+        float rawSpeed = new Vector2(x, y).magnitude;
+        rawSpeed = rawSpeed < 0.1f ? 0f : Mathf.Clamp(rawSpeed, 0f, 1.25f);
+        _animator.SetFloat("Speed", rawSpeed, 0.1f, Time.deltaTime);
 
         isGrounded = CheckGrounded();
 
         if (isGrounded && _inputHandler.Jump)
-        {
             Jump();
-        }
 
-        // Detectar si el jugador está en el suelo y aplicar la gravedad adicional si no lo está
-        if (!isGrounded && rb.linearVelocity.y < 0)  // Si el jugador está cayendo
-        {
+        if (!isGrounded && rb.linearVelocity.y < 0)
             rb.AddForce(Vector3.down * (jumpForce + 9.81f), ForceMode.Acceleration);
-        }
 
-        if (x == 0 && y != 0)
-        {
-            //RotateCharacter(x);
-            //RotateCharacter(y);
-            MoveCharacter(y);
-
-        }
-
-        if (x != 0 && y == 0)
-        {
-            MoveCharacter2(x);
-            //RotateCharacter(x);
-            //MoveCharacter(y);
-        }
+        if (x != 0 || y != 0)
+            MoveCharacter(x, y);
     }
 
-    private void HandleMovement()
+    private void MoveCharacter(float horizontalInput, float verticalInput)
     {
-        //Calcular direccion dnd se mueve el personaje
-        moveDirection = moveVectorInput;
+        Vector3 moveDirection = new Vector3(horizontalInput, 0f, verticalInput).normalized;
+        rb.MovePosition(rb.position + moveDirection * walkSpeed * Time.deltaTime);
 
-        Vector3 moveVelocity = moveDirection * speed;
-        moveVelocity += Physics.gravity;
-
-        rb.linearVelocity = moveVelocity;
+        if (moveDirection != Vector3.zero)
+        {
+            Quaternion targetRotation = Quaternion.LookRotation(moveDirection);
+            rb.rotation = Quaternion.Slerp(rb.rotation, targetRotation, rotationSpeed * Time.deltaTime);
+        }
     }
-
 
     private void Jump()
     {
@@ -92,16 +79,14 @@ public class player_movement : MonoBehaviour
 
     private bool CheckGrounded()
     {
-
         Collider _collider = GetComponent<Collider>();
-
         Vector3 rayOrigin = _collider.bounds.center - Vector3.up * 0.5f;
-
         bool grounded = Physics.Raycast(rayOrigin, Vector3.down, 1f, groundLayer);
-
         Debug.DrawRay(rayOrigin, Vector3.down * 1f, grounded ? Color.green : Color.red);
         return grounded;
     }
+
+    /*
 
     private void RotateCharacter(float y)
     {
@@ -111,7 +96,9 @@ public class player_movement : MonoBehaviour
         rb.rotation = Quaternion.Euler(0, y, 0);
         //rb.MoveRotation(deltaRotation);
     }
+    */
 
+    /*
     private void MoveCharacter(float verticalInput)
     {
    
@@ -151,4 +138,6 @@ public class player_movement : MonoBehaviour
         }
         // RotateCharacter(horizontalInput);
     }
+
+    */
 }

@@ -177,3 +177,26 @@
     top: 0;
     left: 0;
 }
+
+.flee_btn_color {
+    background-image: url("project://database/Assets/Art/Interface/Buttons/buttons_huir/huir_normal.png?fileID=21300000&guid=7ee5b5683fbc5224b90e1b5ce81d6f19&type=3#huir_normal");
+    border-width: 0;
+    scale: 1;
+    transition-property: scale;
+    transition-duration: 0.12s;
+    transition-timing-function: ease-out;
+}
+
+.flee_btn_color:hover {
+    background-image: url("project://database/Assets/Art/Interface/Buttons/buttons_huir/huir_hover.png?fileID=21300000&guid=b98c8f9b9b354014f872c4376e24c738&type=3#huir_hover");
+    scale: 1.05;
+    top: 0;
+    left: 0;
+}
+
+.flee_btn_color:active {
+    background-image: url("project://database/Assets/Art/Interface/Buttons/buttons_huir/huir_pressed.png?fileID=21300000&guid=14e53bed133f1c743b119b35675f29b8&type=3#huir_pressed");
+    scale: 0.96;
+    top: 0;
+    left: 0;
+}

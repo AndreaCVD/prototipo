@@ -104,10 +104,14 @@ public class LoadScene : MonoBehaviour
         //si estamos en combate eliminar esta escena
         //Sacamos la pausa del juego principal
         escenaState.ScenePause(false); //false, se mueve
-        
+
         //recibir loot
 
-        //uiHub.SetActive(true); //volvemos a ver la ui
+        // reactiva el HUD al salir del combate
+        if (uiHub != null)
+            uiHub.SetActive(true);
+        else
+            Debug.LogWarning("uiHub es null al salir — no se pudo reactivar");
 
         // Unload Scene
         SceneManager.UnloadSceneAsync("combat_scene");
@@ -123,7 +127,13 @@ public class LoadScene : MonoBehaviour
             escenaState.ScenePause(true); //true, se para
             pantalla.UnTint();
 
-            //uiHub.SetActive(false);
+            // busca y oculta el HUD ANTES de cargar el combate
+            uiHub = GameObject.Find("UI_HUB");
+            if (uiHub != null)
+                uiHub.SetActive(false);
+            else
+                Debug.LogWarning("UI_HUB no encontrado — comprueba el nombre del GameObject");
+
 
             preload.CombatOpponent(enemyName); //Pasem el nom
 

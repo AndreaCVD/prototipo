@@ -5,7 +5,7 @@ using Random = UnityEngine.Random;
 
 public class Inventario : MonoBehaviour
 {
-    [SerializeField] Parameters prota;
+    public Parameters prota;
     [SerializeField] Puzzle lista;
     //Para encontrar los scripts de DialogManager
     private Dialog dialog;

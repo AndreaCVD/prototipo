@@ -26,6 +26,7 @@ public class SecondFloorPuzzle : MonoBehaviour
     [Header("Puzzle_2a")]
     [SerializeField] PuzzleZone zona_2a;
     [SerializeField] List<GameObject> p2a_eliminarObj = new List<GameObject>();
+    [SerializeField] Animator agua;
     private bool nivelAgua;
 
     [Header("Puzzle_2b")]
@@ -34,6 +35,7 @@ public class SecondFloorPuzzle : MonoBehaviour
     private bool puerta_c6b;
     [Header("Personajes a instanciar")]
     [SerializeField] List<GameObject> Nim = new List<GameObject>();
+    [SerializeField] List<GameObject> ListaEliminar = new List<GameObject>();
 
     void Start()
     {
@@ -43,7 +45,6 @@ public class SecondFloorPuzzle : MonoBehaviour
         zona_1.finished = lista.Nivel_2[0].acabado; //Puzzle C3
         zona_2a.finished = lista.Nivel_2[1].acabado; //Puzzle C6_1
         zona_2b.finished = lista.Nivel_2[2].acabado; //Puzzle C6_2
-        lista.NivelDesbloqueado[2].acabado = false; //
     }
 
     void Update()
@@ -66,8 +67,7 @@ public class SecondFloorPuzzle : MonoBehaviour
         else if (!nivelAgua)
         {
             nivelAgua = true;
-            Debug.Log("El nivel de agua baja");
-            //anim_puertaC3.SetBool("doorOpen", true);
+            agua.SetBool("nivelAgua", true);
         }
         //Puzzle C6_2 --> llave maestra
         if (!lista.Nivel_2[2].acabado && nivelAgua)
@@ -82,6 +82,7 @@ public class SecondFloorPuzzle : MonoBehaviour
         //Puerta Maestra
         if (lista.NivelDesbloqueado[2].acabado && !puertaMaestraAbierta)
         {
+            //Destruir lista
             puertaMaestraAbierta = true;
             candado_1.SetBool("candadoOpen", true); 
             puertaMaestra.SetBool("doorOpen", true);
@@ -100,21 +101,31 @@ public class SecondFloorPuzzle : MonoBehaviour
                 switch (lista.Nivel_1[i].name)
                 {
                     case "Puzzle_B1":
-                        eliminarLista_1("puzz_1");
+                        eliminarLista_1();
                         lastPos_1();
                         break;
                     case "Puzzle_B2":
-                        eliminarLista_2("puzz_2");
+                        eliminarLista_2();
                         break;
                     default:
                         break;
                 }
             }
         }
-
+        if (lista.Nivel_2[2].acabado)
+        {
+            eliminarLista_3();
+        }
     }
+    void eliminarLista_3()
+    {
+        foreach (var a in ListaEliminar)
+        {
 
-    void eliminarLista_1(string name)
+            Destroy(a);
+        }
+    }
+    void eliminarLista_1( )
     {
         foreach (var a in p1_eliminarObj)
         {
@@ -122,7 +133,7 @@ public class SecondFloorPuzzle : MonoBehaviour
             Destroy(a);
         }
     }
-    void eliminarLista_2(string name)
+    void eliminarLista_2( )
     {
         foreach (var a in p2a_eliminarObj)
         {

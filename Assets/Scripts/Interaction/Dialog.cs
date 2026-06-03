@@ -17,8 +17,8 @@ public class Dialog : MonoBehaviour
     [SerializeField] private cherrydev.DialogBehaviour _dialogBehaviour;
     
     private GameObject obj;
-    public int vidaMax = 40;
-    public int objMax = 3;
+    private int vidaMax = 40;
+    private int objMax = 3;
 
     ////La conversa, podemos tener todas las conversas guardadas y enviar la que se necesite
     //[SerializeField] private DialogNodeGraph dialogGraph;
@@ -137,7 +137,7 @@ public class Dialog : MonoBehaviour
     {
         //Tint screen, fer una transició
         //Consitucion --> 3
-        if (prota.stats.values[3].value >= (vidaMax-10))
+        if (prota.stats.values[3].value <= (vidaMax-10))
         {
             prota.stats.values[3].value += 10;
         }

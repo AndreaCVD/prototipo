@@ -18,52 +18,94 @@ MonoBehaviour:
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 575468051165184
+  - m_Id: 579849425317888
     m_Localized: "\xA1Hola! Aqu\xED arriba se esta bien \xBFno? jajaja"
     m_Metadata:
       m_Items: []
-  - m_Id: 575468051165185
+  - m_Id: 579849425317889
     m_Localized: Etkis
     m_Metadata:
       m_Items: []
-  - m_Id: 575468051165186
+  - m_Id: 579849425317890
     m_Localized: "\xA1Eh el chico de antes! \xA1Hola!"
     m_Metadata:
       m_Items: []
-  - m_Id: 575468051165187
+  - m_Id: 579849425317891
     m_Localized: Nim
     m_Metadata:
       m_Items: []
-  - m_Id: 575468051165188
+  - m_Id: 579849429512192
     m_Localized: "\xBFNo habr\xE1s visto una elfa por all\xE1 bajo?"
     m_Metadata:
       m_Items: []
-  - m_Id: 575468051165189
+  - m_Id: 579849429512193
     m_Localized: No, lo siento
     m_Metadata:
       m_Items: []
-  - m_Id: 575468051165190
+  - m_Id: 579849429512194
     m_Localized: "\xBFEra de pelo violeta?"
     m_Metadata:
       m_Items: []
-  - m_Id: 575468051165191
+  - m_Id: 579849429512195
     m_Localized: "\xBFVas a bajar si te digo que no?"
     m_Metadata:
       m_Items: []
-  - m_Id: 575468051165192
+  - m_Id: 579849429512196
     m_Localized: ...no hace falta mentir tampoco eh.
     m_Metadata:
       m_Items: []
-  - m_Id: 575468055359488
+  - m_Id: 579849429512197
     m_Localized: De acuerdo
     m_Metadata:
       m_Items: []
-  - m_Id: 575468055359489
-    m_Localized: 
+  - m_Id: 579849429512198
+    m_Localized: "\xBFMe vas a decir que si?"
     m_Metadata:
       m_Items: []
-  - m_Id: 575468055359490
-    m_Localized: 
+  - m_Id: 579849429512199
+    m_Localized: Etkis
+    m_Metadata:
+      m_Items: []
+  - m_Id: 579849429512200
+    m_Localized: "\xA1R\xE1pido Etkis, dale una recompensa!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 579849429512201
+    m_Localized: "\xA1Qu\xE9 dices! N-no no, somos pobres..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 579849429512202
+    m_Localized: "\xBFTambi\xE9n vienes a descansar?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 579849429512203
+    m_Localized: "\xBFViste a un elfo vestido de rojo?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 579849429512204
+    m_Localized: "La \xFAltima vez que lo vimos es cuando encontramos un libro raro..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 579849429512205
+    m_Localized: Se llama Lerendur. Venimos a explorar pero al final nada mas entrar
+      nos perdimos todos...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 579849429512206
+    m_Localized: Ya..fue muy raro.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 579849429512207
+    m_Localized: "Lerendur parece haberse dado un golpe en la cabeza...\xBFse habr\xE1
+      caido?...\xBFFuiste t\xFA?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 579849429512208
+    m_Localized: "Quiz\xE1s solo este cansado, \xBFno?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 579849429512209
+    m_Localized: "Bueno, no te preocupes, al menos estar\xE1 quieto y no se perder\xE1."
     m_Metadata:
       m_Items: []
   references:

@@ -15,12 +15,12 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -158.60004
-    y: 267.79993
+    x: 1.3999634
+    y: 183.79993
     width: 190
     height: 135
   IsDragging: 1
-  IsSelected: 0
+  IsSelected: 1
   _sentence:
     CharacterName: Prota
     Text: Deberia practicar
@@ -46,8 +46,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 380.6001
-    y: 293.39993
+    x: 540.6001
+    y: 209.39993
     width: 190
     height: 80
   IsDragging: 1
@@ -72,8 +72,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 987.7996
-    y: 75.79994
+    x: 1147.7996
+    y: -8.200058
     width: 190
     height: 135
   IsDragging: 1
@@ -104,8 +104,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 989.3999
-    y: -65.00009
+    x: 1149.3999
+    y: -149.00009
     width: 190
     height: 135
   IsDragging: 1
@@ -136,8 +136,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 379.80014
-    y: 521.4
+    x: 539.8002
+    y: 437.40002
     width: 190
     height: 135
   IsDragging: 1
@@ -198,8 +198,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 879.00006
-    y: 406.99997
+    x: 1039
+    y: 322.99997
     width: 190
     height: 80
   IsDragging: 1
@@ -224,12 +224,12 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 651.0001
-    y: 382.99994
+    x: 811.0001
+    y: 298.99994
     width: 190
     height: 135
   IsDragging: 1
-  IsSelected: 1
+  IsSelected: 0
   _sentence:
     CharacterName: 
     Text: El arbol muestra interes en ti
@@ -256,8 +256,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 387.00012
-    y: 195.7999
+    x: 547.0001
+    y: 111.7999
     width: 190
     height: 80
   IsDragging: 1
@@ -282,8 +282,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 665.4001
-    y: 53.39998
+    x: 825.4001
+    y: -30.600021
     width: 240
     height: 160
   IsDragging: 1
@@ -313,8 +313,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 96.60004
-    y: 247.79993
+    x: 256.60004
+    y: 163.79993
     width: 190
     height: 175
   IsDragging: 1
@@ -351,8 +351,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 376.60007
-    y: 406.19992
+    x: 536.6001
+    y: 322.19992
     width: 190
     height: 80
   IsDragging: 1

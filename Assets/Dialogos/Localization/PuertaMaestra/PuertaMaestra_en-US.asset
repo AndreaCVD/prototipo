@@ -18,12 +18,12 @@ MonoBehaviour:
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 15179509760
+  - m_Id: 2090944208105472
     m_Localized: Necesito una llave especial...
     m_Metadata:
       m_Items: []
-  - m_Id: 15179509761
-    m_Localized: Prota
+  - m_Id: 2090944220688384
+    m_Localized: Carlos
     m_Metadata:
       m_Items: []
   references:

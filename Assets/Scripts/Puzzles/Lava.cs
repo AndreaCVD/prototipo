@@ -8,10 +8,12 @@ public class Lava : MonoBehaviour
             Debug.Log("enter");
         if (other.tag == "Player")
         {
-            Debug.Log("player");
+            Inventario a = other.GetComponent<Inventario>();
+            if (!a.pocionLava())
+            {
+                a.restarVida();
+            }
 
-            a = other.GetComponent<Inventario>();
-            a.restarVida();
         }
     }
 }

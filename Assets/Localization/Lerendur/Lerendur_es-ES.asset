@@ -18,37 +18,168 @@ MonoBehaviour:
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 432908548763648
+  - m_Id: 723941727727616
     m_Localized: "Hola, \xBFcomo est\xE1s?"
     m_Metadata:
       m_Items: []
-  - m_Id: 432908561346560
+  - m_Id: 723941736116224
     m_Localized: Lerendur
     m_Metadata:
       m_Items: []
-  - m_Id: 432908561346561
+  - m_Id: 723941740310528
     m_Localized: "Bien ahora que est\xE1s aqu\xED"
     m_Metadata:
       m_Items: []
-  - m_Id: 432908561346562
+  - m_Id: 723941740310529
     m_Localized: Normal
     m_Metadata:
       m_Items: []
-  - m_Id: 432908561346563
+  - m_Id: 723941740310530
     m_Localized: (Quedarse quieto)
     m_Metadata:
       m_Items: []
-  - m_Id: 432908561346564
+  - m_Id: 723941740310531
     m_Localized: jajaja
     m_Metadata:
       m_Items: []
-  - m_Id: 432908561346565
+  - m_Id: 723941740310532
     m_Localized: "Si quieres hablar estar\xE9 aqu\xED, no creo que entre en una mazmorra
       en un tiempo"
     m_Metadata:
       m_Items: []
-  - m_Id: 432908561346566
+  - m_Id: 723941740310533
     m_Localized: ...(Lerendur se ha incomodado)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 723941740310534
+    m_Localized: "Realmente no recuerdo muy bien lo que paso, \xBFtu lo sabes?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 723941740310535
+    m_Localized: "(Recuerdas a esa extra\xF1a figura con un gran libro rode\xE1ndole)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 723941740310536
+    m_Localized: Carlos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 723941740310537
+    m_Localized: "No te preocupes, lo importante es que est\xE1s aqu\xED."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 723941740310538
+    m_Localized: Bueno....
+    m_Metadata:
+      m_Items: []
+  - m_Id: 723941740310539
+    m_Localized: "(Observar a\xFAn mas fijamente)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 723941740310540
+    m_Localized: "En fin, veo que no he sido el \xFAnico recatado de aqu\xED. \xBFD\xF3nde
+      estabais vosotros?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 723941740310541
+    m_Localized: En una jaula con un mimic...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 723941740310542
+    m_Localized: Etkis
+    m_Metadata:
+      m_Items: []
+  - m_Id: 723941740310543
+    m_Localized: "\xA1A mi me persigui\xF3 una armadura y me quede atrapada!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 723941740310544
+    m_Localized: Nim
+    m_Metadata:
+      m_Items: []
+  - m_Id: 723941740310545
+    m_Localized: "Esas cosas no existen, seguro te perdiste y no sab\xEDas como salir
+      de all\xE1"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 723941740310546
+    m_Localized: "\xBFY t\xFA? Seguro fuiste a por el Mimic solo porqu\xE9 se parecia
+      a un tesoro? \xA1Te fuiste tan rapido que no nos dimos cuenta de donde fuiste!"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 723941740310547
+    m_Localized: "...pero, cuanto tiempo ha pasado, \xBFno que hoy mismo hemos entrado?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 723941740310548
+    m_Localized: "(Nim y Etkis parecen no querer decirle cuanto tiempo ha pasado,
+      quizas d\xEDas, quien sabe...)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 723941740310549
+    m_Localized: "Y tambi\xE9n esta Nim aqu\xED, si que has explorado la mazmorra
+      eh."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 723941740310550
+    m_Localized: "Dime, no habr\xE1s encontrado algo interesante no? \xBFC\xF3mo
+      un libro de magia, o algun tesoro?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 723941740310551
+    m_Localized: Oh, el tesoro seguramente ya lo tenga Etkis
+    m_Metadata:
+      m_Items: []
+  - m_Id: 723941740310552
+    m_Localized: "Por cierto, \xBFd\xF3nde estar\xE1?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 723941740310553
+    m_Localized: Incluso has conseguido el mediano
+    m_Metadata:
+      m_Items: []
+  - m_Id: 723941740310554
+    m_Localized: "Hola ati tambi\xE9n, \xBFd\xF3nde has estado?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 723941740310555
+    m_Localized: "Pues est\xE1bamos investigando un nivel lleno de agua, cuando de
+      repente grit\xF3 y sali\xF3 corriendo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 723941740310556
+    m_Localized: "Intente seguirla pero me encontr\xE9 con un libro y...mmm, estaba
+      abierto en medio de la sala? \xBFCreo?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 723941740310557
+    m_Localized: "\xBFEst\xE1s bien?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 723941740310558
+    m_Localized: No recuerdo muy bien lo que ha pasado...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 723941740310559
+    m_Localized: "\xBFDeberiamos volver a por Nim?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 723941740310560
+    m_Localized: "Aqu\xED arriba se est\xE1 tan bien...se siente como si no saliera
+      de all\xE1 por d\xEDas, \xBFraro no? jaja"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 723941740310561
+    m_Localized: "\xBFRecuerdas algo?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 723941740310562
+    m_Localized: "...No mucho, solo que al adentrarnos cada uno de mis compa\xF1eros
+      se separ\xF3 del grupo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 723941740310563
+    m_Localized: "Como siempre pasa eso no me preocup\xF3, pero a saber que les habr\xE1
+      pasado..."
     m_Metadata:
       m_Items: []
   references:

@@ -6,6 +6,7 @@ using cherrydev;
 
 public class Dialog : MonoBehaviour
 {
+    LoadScene load;
     Dice dados;
     [Header("LISTA PUZZLE")]
     [SerializeField] Puzzle lista;
@@ -17,8 +18,8 @@ public class Dialog : MonoBehaviour
     [SerializeField] private cherrydev.DialogBehaviour _dialogBehaviour;
     
     private GameObject obj;
-    public int vidaMax = 40;
-    public int objMax = 3;
+    private int vidaMax = 40;
+    private int objMax = 3;
 
     ////La conversa, podemos tener todas las conversas guardadas y enviar la que se necesite
     //[SerializeField] private DialogNodeGraph dialogGraph;
@@ -32,6 +33,9 @@ public class Dialog : MonoBehaviour
     public void Start()
     {
         dados = this.GetComponent<Dice>();
+
+        GameObject aux = GameObject.Find("--SceneManagement--");
+        load = aux.GetComponent<LoadScene>();
     }
     public void EmpezarDialogo(DialogNodeGraph dialogo, GameObject obj)
     {
@@ -50,6 +54,8 @@ public class Dialog : MonoBehaviour
         _dialogBehaviour.BindExternalFunction("PararMov", pararMov);
         _dialogBehaviour.BindExternalFunction("Destroy", DestroyObj);
         _dialogBehaviour.BindExternalFunction("Combat", Combate);
+        _dialogBehaviour.BindExternalFunction("irCampamento", irCampamento);
+        _dialogBehaviour.BindExternalFunction("PisosDesbloqueados", pisosDesbloqueados);
 
         //Personajes
         _dialogBehaviour.BindExternalFunction("EstadoEtkis", estadoEtkis);
@@ -100,24 +106,70 @@ public class Dialog : MonoBehaviour
     public void Combate()
     {
         Debug.Log("Inicia combate por dialogo");
+        load.Combat(obj);
     }
     public void SetBool(string nombreVal, bool val)
     {
         Debug.Log(val);
         _dialogBehaviour.SetVariableValue(nombreVal, val);
     }
-
+    public void irCampamento()
+    {
+        load.ChangeScene("Nivel_0");
+    }
+    public void irNivel_1()
+    {
+        load.ChangeScene("Nivel_1");
+    }
+    public void irNivel_2()
+    {
+        load.ChangeScene("Nivel_2");
+    }
+    public void irNivel_3()
+    {
+        load.ChangeScene("Nivel_3");
+    }
+    public void pisosDesbloqueados()
+    {
+        //Nivel 1
+        if (lista.NivelDesbloqueado[1].acabado)
+        {
+            _dialogBehaviour.SetVariableValue("nivel_1", 1);
+        }
+        else
+        {
+            _dialogBehaviour.SetVariableValue("nivel_1", 0);
+        }
+        //Nivel 2
+        if (lista.NivelDesbloqueado[2].acabado)
+        {
+            _dialogBehaviour.SetVariableValue("nivel_2", 1);
+        }
+        else
+        {
+            _dialogBehaviour.SetVariableValue("nivel_2", 0);
+        }
+        //Nivel 3
+        if (lista.NivelDesbloqueado[3].acabado)
+        {
+            _dialogBehaviour.SetVariableValue("nivel_3", 1);
+        }
+        else
+        {
+            _dialogBehaviour.SetVariableValue("nivel_3", 0);
+        }
+    }
     public void estadoEtkis()
     {
         if (lista.Nivel_1[1].acabado)
         {
-            Debug.Log("Etkis es libre");
-            _dialogBehaviour.SetVariableValue("b", 1);
+            //Debug.Log("Etkis es libre");
+            _dialogBehaviour.SetVariableValue("etkis_libre_nivel1", 1);
         }
         else
         {
-            Debug.Log("Etkis no es libre");
-            _dialogBehaviour.SetVariableValue("b", 0);
+            //Debug.Log("Etkis no es libre");
+            _dialogBehaviour.SetVariableValue("etkis_libre_nivel1", 0);
         }
     }
     public void estadoNim()
@@ -137,7 +189,7 @@ public class Dialog : MonoBehaviour
     {
         //Tint screen, fer una transició
         //Consitucion --> 3
-        if (prota.stats.values[3].value >= (vidaMax-10))
+        if (prota.stats.values[3].value <= (vidaMax-10))
         {
             prota.stats.values[3].value += 10;
         }

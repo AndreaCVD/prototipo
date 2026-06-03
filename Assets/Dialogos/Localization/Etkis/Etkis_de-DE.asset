@@ -18,32 +18,36 @@ MonoBehaviour:
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 2149204118269952
+  - m_Id: 2435591023423488
     m_Localized: "\xA1\xA1HEY TU!! AYUDAME A SALIR DE AQUI R\xC1PIDO"
     m_Metadata:
       m_Items: []
-  - m_Id: 2149204168601600
+  - m_Id: 2435591040200704
     m_Localized: ???
     m_Metadata:
       m_Items: []
-  - m_Id: 2149204176990208
+  - m_Id: 2435591040200705
     m_Localized: Gracias...
     m_Metadata:
       m_Items: []
-  - m_Id: 2149204176990209
+  - m_Id: 2435591040200706
     m_Localized: Etkis
     m_Metadata:
       m_Items: []
-  - m_Id: 2149204176990210
+  - m_Id: 2435591040200707
     m_Localized: "\xA1\xA1No me dejes aqu\xED por favor!!"
     m_Metadata:
       m_Items: []
-  - m_Id: 2149204176990211
+  - m_Id: 2435591040200708
     m_Localized: "He perdido a mis compa\xF1eros, estan mas abajo, son dos elfos."
     m_Metadata:
       m_Items: []
-  - m_Id: 2149204176990212
+  - m_Id: 2435591040200709
     m_Localized: Me voy arriba, espero que ese viejo no me haya robado nada.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2435591040200710
+    m_Localized: "Soy Etkis, uno de los tres aventureros que se perdi\xF3."
     m_Metadata:
       m_Items: []
   references:

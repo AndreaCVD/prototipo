@@ -18,12 +18,79 @@ MonoBehaviour:
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 386090175623168
-    m_Localized: Han salido X gente
+  - m_Id: 689371724705792
+    m_Localized: "\xA1Hey muchacho! \xBFC\xF3mo va todo all\xE1 dentro?"
     m_Metadata:
       m_Items: []
-  - m_Id: 386090184011776
+  - m_Id: 689371728900096
     m_Localized: Yusseif
+    m_Metadata:
+      m_Items: []
+  - m_Id: 689371728900097
+    m_Localized: "Va incre\xEDble viejo."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 689371728900098
+    m_Localized: "Fatal, podr\xEDas venir a ayudar en verdad."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 689371728900099
+    m_Localized: (Observar)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 689371728900100
+    m_Localized: "...no me hables as\xED ni\xF1o, yo soy un expero aventurero. Tenme
+      respeto."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 689371728900101
+    m_Localized: "Tonter\xEDas, te falta entreno."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 689371728900102
+    m_Localized: "\xBFVes ese arbol redondo? Ve a practicar all\xE0 venga,lo necesitas."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 689371728900103
+    m_Localized: OK viejo
+    m_Metadata:
+      m_Items: []
+  - m_Id: 689371728900104
+    m_Localized: Carlos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 689371728900105
+    m_Localized: "(No tiene mucho interes en ayudar..\xBFllevaba el ba\xF1ador por
+      debajo la t\xFAnica?)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 689371728900106
+    m_Localized: (Se esta a punto de dormir...)
+    m_Metadata:
+      m_Items: []
+  - m_Id: 689371728900107
+    m_Localized: "Si que has tardado en voler, \xBFhas visto a alguien all\xE1 bajo?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 689371728900108
+    m_Localized: ...No, no he encontrado a nadie
+    m_Metadata:
+      m_Items: []
+  - m_Id: 689371728900109
+    m_Localized: Si vinieras seguro los encontramos
+    m_Metadata:
+      m_Items: []
+  - m_Id: 689371728900110
+    m_Localized: "Uf, venga que no es tan dificl, \xBFvas a hacer que me levante?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 689371728900111
+    m_Localized: "De acuerdo, ir\xE9 contigo, ve bajando y ahora voy."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 689371728900112
+    m_Localized: Si quieres recuperarte de tus heridas no dudes en descansar en la
+      hoguera
     m_Metadata:
       m_Items: []
   references:

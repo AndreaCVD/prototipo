@@ -31,7 +31,7 @@ MonoBehaviour:
     _type: 1
     _saveToPrefs: 0
     _boolValue: 0
-    _intValue: 0
+    _intValue: 19
     _floatValue: 0
     _stringValue: 
   - _name: tiradaIntel
@@ -42,6 +42,13 @@ MonoBehaviour:
     _floatValue: 0
     _stringValue: 
   - _name: persLibres
+    _type: 1
+    _saveToPrefs: 0
+    _boolValue: 0
+    _intValue: 0
+    _floatValue: 0
+    _stringValue: 
+  - _name: dialogViejo
     _type: 1
     _saveToPrefs: 0
     _boolValue: 0

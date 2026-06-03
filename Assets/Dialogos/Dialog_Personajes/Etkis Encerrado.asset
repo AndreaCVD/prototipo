@@ -1,0 +1,522 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8540350519875252422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30402c10d300488491eb82eed1db9a20, type: 3}
+  m_Name: Modify Variable Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 567.1953
+    y: -60.400208
+    width: 210
+    height: 155
+  IsDragging: 1
+  IsSelected: 0
+  _variableName: dialogo_jaula
+  _modifyType: 0
+  _boolValue: 0
+  _intValue: 0
+  _floatValue: 0
+  _stringValue: 
+  ParentNodes:
+  - {fileID: 2849589255257469543}
+  ChildNode: {fileID: -2164909623706080416}
+--- !u!114 &-7792155415567131863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f4b3c64aaf434ea0df52154c1c7680, type: 3}
+  m_Name: External Function Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -768.0015
+    y: 97.99954
+    width: 190
+    height: 80
+  IsDragging: 1
+  IsSelected: 0
+  _functionName: PararMov
+  _description: 
+  ParentNodes: []
+  ChildNode: {fileID: 5732629150119791949}
+--- !u!114 &-7781373260608017088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30402c10d300488491eb82eed1db9a20, type: 3}
+  m_Name: Modify Variable Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 1132.8
+    y: 162.79965
+    width: 210
+    height: 155
+  IsDragging: 1
+  IsSelected: 0
+  _variableName: etkisFirstTalk
+  _modifyType: 0
+  _boolValue: 0
+  _intValue: 0
+  _floatValue: 0
+  _stringValue: 
+  ParentNodes:
+  - {fileID: 2358140374074757382}
+  ChildNode: {fileID: -2164909623706080416}
+--- !u!114 &-4778476200547826698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 335.19934
+    y: 313.9998
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Etkis
+    Text: Me voy arriba, espero que ese viejo no me haya robado nada.
+    CharacterSprite: {fileID: 21300000, guid: daf2b0df47633724bb021d5e79f67ce0, type: 3}
+  ParentNodes:
+  - {fileID: 6499817178236791268}
+  ChildNode: {fileID: -637543577219836419}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: SentenceName_20de78f3-5c32-4182-91be-63fbae1fd0d4
+  SentenceTextKey: SentenceText_4a10b9b2-3a7e-48bc-af95-a3f7c0132122
+--- !u!114 &-4546857607134023867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30402c10d300488491eb82eed1db9a20, type: 3}
+  m_Name: Modify Variable Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 566.3948
+    y: -218.00027
+    width: 210
+    height: 155
+  IsDragging: 1
+  IsSelected: 0
+  _variableName: dialogo_jaula
+  _modifyType: 0
+  _boolValue: 0
+  _intValue: 1
+  _floatValue: 0
+  _stringValue: 
+  ParentNodes:
+  - {fileID: 3313434976028799794}
+  ChildNode: {fileID: -2164909623706080416}
+--- !u!114 &-2633657587399954946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38789157e7795244280823d019530045, type: 3}
+  m_Name: Variable Condition Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 11.999634
+    y: -147.60013
+    width: 240
+    height: 160
+  IsDragging: 1
+  IsSelected: 0
+  _variableName: dialogo_jaula
+  _conditionType: 0
+  _boolTargetValue: 0
+  _intTargetValue: 0
+  _floatTargetValue: 0
+  _stringTargetValue: 
+  ParentNodes:
+  - {fileID: -941718847844076716}
+  TrueChildNode: {fileID: 3313434976028799794}
+  FalseChildNode: {fileID: 2849589255257469543}
+--- !u!114 &-2469484456262454194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 347.9997
+    y: 117.199524
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Etkis
+    Text: Gracias...
+    CharacterSprite: {fileID: 21300000, guid: daf2b0df47633724bb021d5e79f67ce0, type: 3}
+  ParentNodes:
+  - {fileID: 6499817178236791268}
+  ChildNode: {fileID: 6560923034505512457}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: SentenceName_20de78f3-5c32-4182-91be-63fbae1fd0d4
+  SentenceTextKey: 
+--- !u!114 &-2164909623706080416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f4b3c64aaf434ea0df52154c1c7680, type: 3}
+  m_Name: External Function Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 857.5944
+    y: -34.00038
+    width: 190
+    height: 80
+  IsDragging: 1
+  IsSelected: 0
+  _functionName: ContinuarMov
+  _description: 
+  ParentNodes:
+  - {fileID: -4546857607134023867}
+  - {fileID: -8540350519875252422}
+  - {fileID: -637543577219836419}
+  - {fileID: -7781373260608017088}
+  ChildNode: {fileID: 0}
+--- !u!114 &-941718847844076716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38789157e7795244280823d019530045, type: 3}
+  m_Name: Variable Condition Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -308.0005
+    y: 31.599564
+    width: 240
+    height: 160
+  IsDragging: 1
+  IsSelected: 0
+  _variableName: etkis_libre_nivel1
+  _conditionType: 1
+  _boolTargetValue: 0
+  _intTargetValue: 1
+  _floatTargetValue: 0
+  _stringTargetValue: 
+  ParentNodes:
+  - {fileID: 5732629150119791949}
+  TrueChildNode: {fileID: -2633657587399954946}
+  FalseChildNode: {fileID: 6499817178236791268}
+--- !u!114 &-637543577219836419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30402c10d300488491eb82eed1db9a20, type: 3}
+  m_Name: Modify Variable Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 788.0013
+    y: 293.1999
+    width: 210
+    height: 155
+  IsDragging: 1
+  IsSelected: 0
+  _variableName: etkisFirstTalk
+  _modifyType: 0
+  _boolValue: 0
+  _intValue: 1
+  _floatValue: 0
+  _stringValue: 
+  ParentNodes:
+  - {fileID: -4778476200547826698}
+  ChildNode: {fileID: -2164909623706080416}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33f741ea10ebcf842a91c9b871dd032a, type: 3}
+  m_Name: Etkis Encerrado
+  m_EditorClassIdentifier: 
+  NodesList:
+  - {fileID: 3313434976028799794}
+  - {fileID: -941718847844076716}
+  - {fileID: -2469484456262454194}
+  - {fileID: 5732629150119791949}
+  - {fileID: -2633657587399954946}
+  - {fileID: 2849589255257469543}
+  - {fileID: -4546857607134023867}
+  - {fileID: -8540350519875252422}
+  - {fileID: -7792155415567131863}
+  - {fileID: -2164909623706080416}
+  - {fileID: 6499817178236791268}
+  - {fileID: 2358140374074757382}
+  - {fileID: -4778476200547826698}
+  - {fileID: -637543577219836419}
+  - {fileID: -7781373260608017088}
+  - {fileID: 6560923034505512457}
+  VariablesConfig: {fileID: 11400000, guid: 18b09256f245a3742aa99b349e6e8cc1, type: 2}
+  _localizationTableName: Etkis
+  _characterNamesLocalizationName: 
+  NodeToDrawLineFrom: {fileID: 0}
+  LinePosition: {x: 0, y: 0}
+  IsLocalizationSetUp: 1
+--- !u!114 &2358140374074757382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 744.7996
+    y: 129.19955
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Etkis
+    Text: "He perdido a mis compa\xF1eros, estan mas abajo, son dos elfos."
+    CharacterSprite: {fileID: 21300000, guid: daf2b0df47633724bb021d5e79f67ce0, type: 3}
+  ParentNodes:
+  - {fileID: 6560923034505512457}
+  ChildNode: {fileID: -7781373260608017088}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: SentenceName_20de78f3-5c32-4182-91be-63fbae1fd0d4
+  SentenceTextKey: SentenceText_297fd028-85e2-4dcb-9132-56b0d4381bcf
+--- !u!114 &2849589255257469543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 338.39886
+    y: -52.400146
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: ???
+    Text: "\xA1\xA1No me dejes aqu\xED por favor!!"
+    CharacterSprite: {fileID: 21300000, guid: 188c9c70c95021041b246ae393708be3, type: 3}
+  ParentNodes:
+  - {fileID: -2633657587399954946}
+  ChildNode: {fileID: -8540350519875252422}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: SentenceName_8f16f028-df13-40f5-9a00-c92527f49ba5
+  SentenceTextKey: SentenceText_b2056db8-f952-4078-b4a2-fe188bcdeb4d
+--- !u!114 &3313434976028799794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 335.9994
+    y: -197.20023
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: ???
+    Text: "\xA1\xA1HEY TU!! AYUDAME A SALIR DE AQUI R\xC1PIDO"
+    CharacterSprite: {fileID: 21300000, guid: 188c9c70c95021041b246ae393708be3, type: 3}
+  ParentNodes:
+  - {fileID: -2633657587399954946}
+  ChildNode: {fileID: -4546857607134023867}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: SentenceName_8f16f028-df13-40f5-9a00-c92527f49ba5
+  SentenceTextKey: SentenceText_efa2a1e0-4655-49ea-8935-169ac3b42566
+--- !u!114 &5732629150119791949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f4b3c64aaf434ea0df52154c1c7680, type: 3}
+  m_Name: External Function Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -544.80023
+    y: 89.19963
+    width: 190
+    height: 80
+  IsDragging: 1
+  IsSelected: 0
+  _functionName: EstadoEtkis
+  _description: 
+  ParentNodes:
+  - {fileID: -7792155415567131863}
+  ChildNode: {fileID: -941718847844076716}
+--- !u!114 &6499817178236791268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38789157e7795244280823d019530045, type: 3}
+  m_Name: Variable Condition Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 35.199463
+    y: 217.99945
+    width: 240
+    height: 160
+  IsDragging: 1
+  IsSelected: 0
+  _variableName: etkisFirstTalk
+  _conditionType: 0
+  _boolTargetValue: 0
+  _intTargetValue: 0
+  _floatTargetValue: 0
+  _stringTargetValue: 
+  ParentNodes:
+  - {fileID: -941718847844076716}
+  TrueChildNode: {fileID: -2469484456262454194}
+  FalseChildNode: {fileID: -4778476200547826698}
+--- !u!114 &6560923034505512457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 543.20026
+    y: 125.19986
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Etkis
+    Text: "Soy Etkis, uno de los tres aventureros que se perdi\xF3."
+    CharacterSprite: {fileID: 21300000, guid: daf2b0df47633724bb021d5e79f67ce0, type: 3}
+  ParentNodes:
+  - {fileID: -2469484456262454194}
+  ChildNode: {fileID: 2358140374074757382}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: SentenceName_20de78f3-5c32-4182-91be-63fbae1fd0d4
+  SentenceTextKey: SentenceText_185110b3-1be2-4038-bb61-c81e3f773568

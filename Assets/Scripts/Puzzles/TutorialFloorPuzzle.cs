@@ -9,7 +9,6 @@ public class TutorialFloorPuzzle : MonoBehaviour
     [SerializeField] Puzzle lista;
 
     private bool preload;
-    private int tutorial = 0;
 
     [Header("Obj a modificar al acabar puzzle")]
     [SerializeField] Animator puertaMazmorra;
@@ -105,7 +104,7 @@ public class TutorialFloorPuzzle : MonoBehaviour
             Instantiate(Etkis[0], Etkis[1].transform.position, Etkis[1].transform.rotation);
         }
         //Nim --> Mirar Puzzle C6_2
-        if (lista.Nivel_2[2].acabado)
+        if (lista.Nivel_2[2].acabado) //Nivel Desbloqueado [3]
         {
             //Se instancia Nim
             Instantiate(Nim[0], Nim[1].transform.position, Nim[1].transform.rotation);

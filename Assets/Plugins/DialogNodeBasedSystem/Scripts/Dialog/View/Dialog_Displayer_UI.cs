@@ -19,6 +19,12 @@ namespace cherrydev
         private Button[] _answerButtons = new Button[0];
         private string _fullText;
 
+        private void Awake()
+        {
+            _uiDocument = GameObject.Find("UI_HUB").GetComponent<UIDocument>();
+            if (_uiDocument == null) Debug.LogError("No se encontró UIDocument en UI_HUB");
+        }
+
         private void OnEnable()
         {
             var root = _uiDocument.rootVisualElement;

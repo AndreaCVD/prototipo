@@ -3,7 +3,7 @@
     <Style src="project://database/Assets/UI/Styles/opt_styles.uss?fileID=7433441132597879392&amp;guid=d6e248ec91fc6ed4697f1ebf65dd6d4c&amp;type=3#opt_styles" />
     <ui:VisualElement name="VisualElement" style="flex-grow: 1; background-color: rgb(255, 237, 200); width: 100%; height: 100%; flex-direction: row; flex-wrap: wrap; align-self: center; justify-content: center; align-content: stretch;">
         <ui:VisualElement style="flex-grow: 1; width: 60%; height: 100%; flex-wrap: wrap; justify-content: center; align-self: center; align-content: stretch;">
-            <ui:VisualElement name="Main_menu" style="flex-grow: 1;">
+            <ui:VisualElement name="Main_menu" style="flex-grow: 1; display: flex;">
                 <ui:VisualElement style="flex-grow: 1; height: 70%; align-items: center; justify-content: center; padding-bottom: 0;">
                     <ui:Label text="Deep In Rescue" style="-unity-font-definition: url(&quot;project://database/Assets/UI/Fonts/Macondo_Swash_Caps/MacondoSwashCaps-Regular.ttf?fileID=12800000&amp;guid=5546ed486a9069048a9db0b71fda3440&amp;type=3#MacondoSwashCaps-Regular&quot;); font-size: 128px; margin-bottom: 40px; margin-top: 40px;" />
                     <ui:VisualElement name="btns" class="btns" style="flex-grow: 1; align-items: center; justify-content: center; width: 100%;">
@@ -29,14 +29,14 @@
                     </ui:VisualElement>
                     <ui:VisualElement name="tab-bar" class="opt-tab-bar">
                         <ui:Button name="tab-audio" text="Audio" class="opt-tab opt-tab-active" />
-                        <ui:Button name="tab-graphics" text="Gráficos" class="opt-tab" />
-                        <ui:Button name="tab-controls" text="Controles" class="opt-tab" />
+                        <ui:Button name="tab-controls" text="Controles" tabindex="1" class="opt-tab" />
+                        <ui:Button name="tab-credits" text="Creditos" tabindex="2" class="opt-tab" />
                     </ui:VisualElement>
-                    <ui:VisualElement name="section-audio" class="opt-section">
+                    <ui:VisualElement name="section-audio" class="opt-section" style="display: flex;">
                         <ui:VisualElement class="opt-row">
                             <ui:Label text="Música" class="opt-label" />
-                            <ui:Slider name="slider-music" low-value="0" high-value="100" value="80" class="opt-slider" />
-                            <ui:Label name="val-music" text="80" class="opt-value" />
+                            <ui:Slider name="slider-music" low-value="0" high-value="100" value="100" class="opt-slider" />
+                            <ui:Label name="val-music" text="100" class="opt-value" />
                         </ui:VisualElement>
                         <ui:VisualElement class="opt-row">
                             <ui:Label text="Efectos" class="opt-label" />
@@ -45,29 +45,11 @@
                         </ui:VisualElement>
                         <ui:VisualElement class="opt-row">
                             <ui:Label text="Ambiente" class="opt-label" />
-                            <ui:Slider name="slider-ambient" low-value="0" high-value="100" value="60" class="opt-slider" />
-                            <ui:Label name="val-ambient" text="60" class="opt-value" />
+                            <ui:Slider name="slider-ambient" low-value="0" high-value="100" value="100" class="opt-slider" />
+                            <ui:Label name="val-ambient" text="100" class="opt-value" />
                         </ui:VisualElement>
                     </ui:VisualElement>
-                    <ui:VisualElement name="section-graphics" class="opt-section opt-hidden">
-                        <ui:VisualElement class="opt-row">
-                            <ui:Label text="Pantalla completa" class="opt-label" />
-                            <ui:Toggle name="toggle-fullscreen" value="true" class="opt-toggle" />
-                        </ui:VisualElement>
-                        <ui:VisualElement class="opt-row">
-                            <ui:Label text="VSync" class="opt-label" />
-                            <ui:Toggle name="toggle-vsync" value="false" class="opt-toggle" />
-                        </ui:VisualElement>
-                        <ui:VisualElement class="opt-row">
-                            <ui:Label text="Calidad" class="opt-label" />
-                            <ui:DropdownField name="dropdown-quality" choices="Baja,Media,Alta,Ultra" index="2" class="opt-dropdown" />
-                        </ui:VisualElement>
-                        <ui:VisualElement class="opt-row">
-                            <ui:Label text="Post-proceso" class="opt-label" />
-                            <ui:Toggle name="toggle-postfx" value="true" class="opt-toggle" />
-                        </ui:VisualElement>
-                    </ui:VisualElement>
-                    <ui:VisualElement name="section-controls" class="opt-section opt-hidden">
+                    <ui:VisualElement name="section-controls" tabindex="1" class="opt-section opt-hidden" style="display: none;">
                         <ui:VisualElement class="opt-row">
                             <ui:Label text="Arriba" class="opt-label" />
                             <ui:Button name="key-up" text="W" class="opt-key" />
@@ -89,8 +71,30 @@
                             <ui:Button name="key-jump" text="Space" class="opt-key" />
                         </ui:VisualElement>
                         <ui:VisualElement class="opt-row">
-                            <ui:Label text="Interactuar" class="opt-label" />
-                            <ui:Button name="key-interact" text="E" class="opt-key" />
+                            <ui:Label text="Inventario" class="opt-label" />
+                            <ui:Button name="key-interact" text="I" class="opt-key" />
+                        </ui:VisualElement>
+                        <ui:VisualElement class="opt-row">
+                            <ui:Label text="Reset Puzzle" class="opt-label" />
+                            <ui:Button name="key-interact" text="R" class="opt-key" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="section-credits" tabindex="2" class="opt-section opt-hidden" style="display: none;">
+                        <ui:VisualElement class="opt-row">
+                            <ui:Label text="Productor" class="opt-label" />
+                            <ui:Label text="Riu Lloreda" class="opt-label" />
+                        </ui:VisualElement>
+                        <ui:VisualElement class="opt-row">
+                            <ui:Label text="Artista 3D" class="opt-label" />
+                            <ui:Label text="Andrea Vargas" class="opt-label" />
+                        </ui:VisualElement>
+                        <ui:VisualElement class="opt-row">
+                            <ui:Label text="Diseño de niveles" class="opt-label" />
+                            <ui:Label text="Riu Lloreda &amp; Aina Mestres" class="opt-label" style="width: 246px;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement class="opt-row">
+                            <ui:Label text="Sonido" class="opt-label" />
+                            <ui:Label text="Arnau Moreno" class="opt-label" style="width: 246px;" />
                         </ui:VisualElement>
                     </ui:VisualElement>
                     <ui:VisualElement class="opt-footer">

@@ -2230,6 +2230,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas Puzzle
       objectReference: {fileID: 0}
+    - target: {fileID: 8970149887093246708, guid: dfde021bd3e93984490b17c715c82b27, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2853,6 +2857,10 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: c64a9566a4ce81e41be144229a99cffd, type: 3}
+    - target: {fileID: 6461440236416285782, guid: e1e382eeb87f205439904cd395ba77a9, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 2022978173748805317, guid: 3805aa405e5df0344a65c712a55c36b2, type: 2}
     - target: {fileID: 7081842167822430468, guid: e1e382eeb87f205439904cd395ba77a9, type: 3}
       propertyPath: m_Name
       value: Player Character
@@ -3636,6 +3644,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1329025286}
     m_Modifications:
+    - target: {fileID: -4569399267228559704, guid: b9c1fc3967d8c8a41b64db320ce79990, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 2022978173748805317, guid: 3805aa405e5df0344a65c712a55c36b2, type: 2}
     - target: {fileID: 2635031189211138250, guid: b9c1fc3967d8c8a41b64db320ce79990, type: 3}
       propertyPath: maxIntensity
       value: 30

@@ -23,6 +23,12 @@ public class btn_events : MonoBehaviour
         _mainPanel = root.Q<VisualElement>("Main_menu");
         _optionsPanel = root.Q<VisualElement>("Options");
 
+        // Cargar valores guardados
+        root.Q<Slider>("slider-music").value = PlayerPrefs.GetFloat("MusicVol", 80f);
+        root.Q<Slider>("slider-sfx").value = PlayerPrefs.GetFloat("SFXVol", 100f);
+        root.Q<Slider>("slider-ambient").value = PlayerPrefs.GetFloat("AmbientVol", 60f);
+
+
         root.Q<Button>("start_btn").clicked += () => ChangeSceneUI("Nivel_0");
         root.Q<Button>("options_btn").clicked += ShowOptions;
         root.Q<Button>("exit_btn").clicked += () =>

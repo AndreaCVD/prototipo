@@ -15,8 +15,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 801.60004
-    y: 304.39987
+    x: 605.6002
+    y: 343.59995
     width: 190
     height: 80
   IsDragging: 0
@@ -42,8 +42,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 224.80008
-    y: 247.59988
+    x: 28.800049
+    y: 286.79996
     width: 190
     height: 135
   IsDragging: 1
@@ -74,8 +74,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 509.6004
-    y: 171.5999
+    x: 313.60037
+    y: 210.79997
     width: 190
     height: 80
   IsDragging: 1
@@ -85,6 +85,37 @@ MonoBehaviour:
   ParentNodes:
   - {fileID: -6927550419059624890}
   ChildNode: {fileID: -7491735092704431936}
+--- !u!114 &-4427897268622661681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 586.4
+    y: 258
+    width: 190
+    height: 135
+  IsDragging: 0
+  IsSelected: 0
+  _sentence:
+    CharacterName: 
+    Text: 
+    CharacterSprite: {fileID: 0}
+  ParentNodes: []
+  ChildNode: {fileID: 0}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
 --- !u!114 &-3206520652390200242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -100,8 +131,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 510.40033
-    y: 313.19986
+    x: 314.4003
+    y: 352.39993
     width: 190
     height: 135
   IsDragging: 1
@@ -135,6 +166,7 @@ MonoBehaviour:
   - {fileID: -3206520652390200242}
   - {fileID: 1674005145279911684}
   - {fileID: -7491735092704431936}
+  - {fileID: -4427897268622661681}
   VariablesConfig: {fileID: 0}
   _localizationTableName: Tienda
   _characterNamesLocalizationName: 
@@ -156,8 +188,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 12.799988
-    y: 274.79987
+    x: -183.20001
+    y: 313.99994
     width: 190
     height: 80
   IsDragging: 1

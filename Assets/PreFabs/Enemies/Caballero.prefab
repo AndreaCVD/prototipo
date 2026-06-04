@@ -41,12 +41,12 @@ GameObject:
   m_Component:
   - component: {fileID: 6691557478830491062}
   - component: {fileID: 2419380867493332381}
-  - component: {fileID: 6043108632883557339}
   - component: {fileID: 1280846873701968186}
   - component: {fileID: 4518062091741879726}
   - component: {fileID: 187757177909724730}
   - component: {fileID: 215368918635450624}
   - component: {fileID: 6381315274930889123}
+  - component: {fileID: 2080707521238228692}
   m_Layer: 0
   m_Name: Caballero
   m_TagString: Enemy
@@ -96,29 +96,6 @@ MonoBehaviour:
   rango: 3.5
   distancia: 0
   objetivo: {fileID: 0}
---- !u!136 &6043108632883557339
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5305385646599809368}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5357475
-  m_Height: 1.9261922
-  m_Direction: 1
-  m_Center: {x: 0, y: 0.4480825, z: 0.035747528}
 --- !u!111 &1280846873701968186
 Animation:
   m_ObjectHideFlags: 0
@@ -297,6 +274,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!65 &2080707521238228692
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5305385646599809368}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1.7880216, z: 1}
+  m_Center: {x: 0, y: 0.39401078, z: 0}
 --- !u!1 &6411518230228854747
 GameObject:
   m_ObjectHideFlags: 0
@@ -413,6 +411,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6691557478830491062}
     m_Modifications:
+    - target: {fileID: 1134835974893150206, guid: aabfafd8d3ac42e4a9456df3eda3cdd0, type: 3}
+      propertyPath: m_Size.z
+      value: 0.8724501
+      objectReference: {fileID: 0}
+    - target: {fileID: 1134835974893150206, guid: aabfafd8d3ac42e4a9456df3eda3cdd0, type: 3}
+      propertyPath: m_Center.x
+      value: 0.00000001347962
+      objectReference: {fileID: 0}
+    - target: {fileID: 1134835974893150206, guid: aabfafd8d3ac42e4a9456df3eda3cdd0, type: 3}
+      propertyPath: m_Center.z
+      value: 0.07658146
+      objectReference: {fileID: 0}
     - target: {fileID: 2870520745328942539, guid: aabfafd8d3ac42e4a9456df3eda3cdd0, type: 3}
       propertyPath: m_Enabled
       value: 0

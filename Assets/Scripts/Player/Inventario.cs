@@ -7,7 +7,7 @@ public class Inventario : MonoBehaviour
 {
     LoadScene load;
     public Parameters prota;
-    [SerializeField] Puzzle lista;
+    public Puzzle lista;
     //Para encontrar los scripts de DialogManager
     private Dialog dialog;
     private GameObject script_dialog;
@@ -38,6 +38,11 @@ public class Inventario : MonoBehaviour
             GameObject aux = GameObject.Find("--SceneManagement--");
             load = aux.GetComponent<LoadScene>();
         }
+    }
+
+    public Puzzle returnPuzzle()
+    {
+        return lista;
     }
     public void InsertKey(GameObject x)
     {

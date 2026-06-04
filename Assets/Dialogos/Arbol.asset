@@ -15,17 +15,18 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1.3999634
-    y: 183.79993
+    x: -746.6002
+    y: 212.59967
     width: 190
     height: 135
   IsDragging: 1
-  IsSelected: 1
+  IsSelected: 0
   _sentence:
     CharacterName: Prota
     Text: Deberia practicar
-    CharacterSprite: {fileID: 0}
-  ParentNodes: []
+    CharacterSprite: {fileID: 21300000, guid: a188ce1c9b6fce644b5efac5bf9be647, type: 3}
+  ParentNodes:
+  - {fileID: 2929942945260399450}
   ChildNode: {fileID: 7001909700949823720}
   _isExternalFunc: 0
   _externalFunctionName: 
@@ -46,8 +47,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 540.6001
-    y: 209.39993
+    x: -207.4
+    y: 238.1997
     width: 190
     height: 80
   IsDragging: 1
@@ -56,7 +57,71 @@ MonoBehaviour:
   _description: 
   ParentNodes:
   - {fileID: 7001909700949823720}
-  ChildNode: {fileID: 0}
+  ChildNode: {fileID: 2336414799817718067}
+--- !u!114 &-4947541561017908050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 326.4
+    y: 151.59988
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: 
+    Text: "(A lo alto del \xE1rbol ves un nido de pajaros, seria una pena que cayesen...\xBFverdad?)"
+    CharacterSprite: {fileID: 21300000, guid: 3506c491a5449064d9e935b03d172a0e, type: 3}
+  ParentNodes:
+  - {fileID: 2336414799817718067}
+  ChildNode: {fileID: -2324170253134866212}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: SentenceName_d11fb0ec-ec7f-4ad3-976d-b3631e311e31
+  SentenceTextKey: SentenceText_8ae4abc9-3a0d-427f-b6d7-817b5c321818
+--- !u!114 &-4768211273777018403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 250.4
+    y: 433.99985
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: 
+    Text: "El \xE1rbol se ha sonrojado. \xA1Te da dado un regalo!)"
+    CharacterSprite: {fileID: 21300000, guid: dc5ad7b82e85ff94aa54a956020ec301, type: 3}
+  ParentNodes:
+  - {fileID: -1143254665683468856}
+  ChildNode: {fileID: 1127312361010324100}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: SentenceName_d11fb0ec-ec7f-4ad3-976d-b3631e311e31
+  SentenceTextKey: SentenceText_441aa20c-69e6-4e8d-8b93-d11bc6473ab7
 --- !u!114 &-4336360673341093164
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72,8 +137,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1147.7996
-    y: -8.200058
+    x: 399.79977
+    y: 20.599731
     width: 190
     height: 135
   IsDragging: 1
@@ -81,14 +146,78 @@ MonoBehaviour:
   _sentence:
     CharacterName: Arbol
     Text: "\xA1EY! Cuidado"
-    CharacterSprite: {fileID: 0}
+    CharacterSprite: {fileID: 21300000, guid: 3506c491a5449064d9e935b03d172a0e, type: 3}
   ParentNodes:
   - {fileID: 5964231602897579766}
-  ChildNode: {fileID: 0}
+  ChildNode: {fileID: -2324170253134866212}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: SentenceName_8beae72b-b5d9-4d62-b3d3-03569c8873fe
   SentenceTextKey: SentenceText_65ad6e38-07d4-4009-8fcf-c6e80ee16688
+--- !u!114 &-3701637967286060941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 594.40027
+    y: 360.39996
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Carlos
+    Text: "(Te enfada que te de tanta rabia el \xE1rbol)"
+    CharacterSprite: {fileID: 21300000, guid: dc5ad7b82e85ff94aa54a956020ec301, type: 3}
+  ParentNodes:
+  - {fileID: 2183175199974441603}
+  ChildNode: {fileID: -2324170253134866212}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: SentenceName_1b8e0125-0b38-4f61-9272-fd163966ab40
+  SentenceTextKey: SentenceText_1e16ea5c-94ac-4607-90dd-fb6b4d432f1b
+--- !u!114 &-2324170253134866212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f4b3c64aaf434ea0df52154c1c7680, type: 3}
+  m_Name: External Function Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 707.9989
+    y: 216.39978
+    width: 190
+    height: 80
+  IsDragging: 1
+  IsSelected: 0
+  _functionName: ContinuarMov
+  _description: 
+  ParentNodes:
+  - {fileID: 1127312361010324100}
+  - {fileID: -4336360673341093164}
+  - {fileID: -2240999108483308317}
+  - {fileID: -1802716385812245260}
+  - {fileID: -4947541561017908050}
+  - {fileID: 6318251949668127528}
+  - {fileID: -3701637967286060941}
+  ChildNode: {fileID: 0}
 --- !u!114 &-2240999108483308317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -104,8 +233,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1149.3999
-    y: -149.00009
+    x: 401.40012
+    y: -120.20032
     width: 190
     height: 135
   IsDragging: 1
@@ -113,10 +242,10 @@ MonoBehaviour:
   _sentence:
     CharacterName: 
     Text: El ataque no ha hecho nada...
-    CharacterSprite: {fileID: 0}
+    CharacterSprite: {fileID: 21300000, guid: 3506c491a5449064d9e935b03d172a0e, type: 3}
   ParentNodes:
   - {fileID: 5964231602897579766}
-  ChildNode: {fileID: 0}
+  ChildNode: {fileID: -2324170253134866212}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: SentenceName_d11fb0ec-ec7f-4ad3-976d-b3631e311e31
@@ -136,8 +265,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 539.8002
-    y: 437.40002
+    x: 55.800262
+    y: 661.4001
     width: 190
     height: 135
   IsDragging: 1
@@ -145,14 +274,45 @@ MonoBehaviour:
   _sentence:
     CharacterName: 
     Text: Un arbol te ha intimidado...
-    CharacterSprite: {fileID: 0}
+    CharacterSprite: {fileID: 21300000, guid: 01949879673663e4c8a338c1ad9b5d2d, type: 3}
   ParentNodes:
   - {fileID: 7001909700949823720}
-  ChildNode: {fileID: 0}
+  ChildNode: {fileID: -2324170253134866212}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: SentenceName_d11fb0ec-ec7f-4ad3-976d-b3631e311e31
   SentenceTextKey: 
+--- !u!114 &-1143254665683468856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38789157e7795244280823d019530045, type: 3}
+  m_Name: Variable Condition Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -27.999542
+    y: 490.80002
+    width: 240
+    height: 160
+  IsDragging: 1
+  IsSelected: 0
+  _variableName: tiradaCarisma
+  _conditionType: 3
+  _boolTargetValue: 0
+  _intTargetValue: 10
+  _floatTargetValue: 0
+  _stringTargetValue: 
+  ParentNodes:
+  - {fileID: 8985266737682110409}
+  TrueChildNode: {fileID: -4768211273777018403}
+  FalseChildNode: {fileID: 6318251949668127528}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,9 +335,17 @@ MonoBehaviour:
   - {fileID: -5152657712076503061}
   - {fileID: 8985266737682110409}
   - {fileID: -1802716385812245260}
-  - {fileID: 3164586859507259942}
   - {fileID: 1127312361010324100}
-  VariablesConfig: {fileID: 11400000, guid: c69fb94eaec09514191e1eeb90bd4e02, type: 2}
+  - {fileID: 2929942945260399450}
+  - {fileID: -2324170253134866212}
+  - {fileID: 2336414799817718067}
+  - {fileID: -4947541561017908050}
+  - {fileID: -1143254665683468856}
+  - {fileID: 2183175199974441603}
+  - {fileID: -4768211273777018403}
+  - {fileID: 6318251949668127528}
+  - {fileID: -3701637967286060941}
+  VariablesConfig: {fileID: 11400000, guid: 61133ed5c4a3f7d488a61fd3977e33ab, type: 2}
   _localizationTableName: Arbol
   _characterNamesLocalizationName: 
   NodeToDrawLineFrom: {fileID: 0}
@@ -198,8 +366,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1039
-    y: 322.99997
+    x: 578.2001
+    y: 558.19965
     width: 190
     height: 80
   IsDragging: 1
@@ -207,9 +375,9 @@ MonoBehaviour:
   _functionName: randLoot
   _description: 
   ParentNodes:
-  - {fileID: 3164586859507259942}
-  ChildNode: {fileID: 0}
---- !u!114 &3164586859507259942
+  - {fileID: -4768211273777018403}
+  ChildNode: {fileID: -2324170253134866212}
+--- !u!114 &2183175199974441603
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -224,23 +392,80 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 811.0001
-    y: 298.99994
+    x: 324.0001
+    y: 292.39993
     width: 190
     height: 135
   IsDragging: 1
   IsSelected: 0
   _sentence:
     CharacterName: 
-    Text: El arbol muestra interes en ti
-    CharacterSprite: {fileID: 21300000, guid: d1a6ce6e8d4da514e8a1e914f4ca408c, type: 3}
+    Text: "(Es s\xF3lo un \xE1rbol...la raz\xF3n por la que puedes escucharlo es
+      un misterio, quiz\xE1s la magia de la mazmorra le llega las ra\xEDzes)"
+    CharacterSprite: {fileID: 21300000, guid: 3506c491a5449064d9e935b03d172a0e, type: 3}
   ParentNodes:
-  - {fileID: 8985266737682110409}
-  ChildNode: {fileID: 1127312361010324100}
+  - {fileID: 2336414799817718067}
+  ChildNode: {fileID: -3701637967286060941}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: SentenceName_d11fb0ec-ec7f-4ad3-976d-b3631e311e31
-  SentenceTextKey: SentenceText_ca37c217-024c-4dc0-9bb5-8e85036ee872
+  SentenceTextKey: SentenceText_e7c6f22c-ad7c-4b69-9903-369b4ff7e5f2
+--- !u!114 &2336414799817718067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38789157e7795244280823d019530045, type: 3}
+  m_Name: Variable Condition Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 46.400116
+    y: 194.79984
+    width: 240
+    height: 160
+  IsDragging: 1
+  IsSelected: 0
+  _variableName: tiradaIntel
+  _conditionType: 3
+  _boolTargetValue: 0
+  _intTargetValue: 10
+  _floatTargetValue: 0
+  _stringTargetValue: 
+  ParentNodes:
+  - {fileID: -5152657712076503061}
+  TrueChildNode: {fileID: -4947541561017908050}
+  FalseChildNode: {fileID: 2183175199974441603}
+--- !u!114 &2929942945260399450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f4b3c64aaf434ea0df52154c1c7680, type: 3}
+  m_Name: External Function Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -812.8004
+    y: 408.3997
+    width: 190
+    height: 80
+  IsDragging: 1
+  IsSelected: 0
+  _functionName: PararMov
+  _description: 
+  ParentNodes: []
+  ChildNode: {fileID: -7755772639233867758}
 --- !u!114 &4352856160216867852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -256,8 +481,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 547.0001
-    y: 111.7999
+    x: -201.00009
+    y: 140.5997
     width: 190
     height: 80
   IsDragging: 1
@@ -282,22 +507,54 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 825.4001
-    y: -30.600021
+    x: 77.40036
+    y: -1.8002014
     width: 240
     height: 160
   IsDragging: 1
   IsSelected: 0
-  _variableName: ataque
-  _conditionType: 5
+  _variableName: tiradaFuerza
+  _conditionType: 2
   _boolTargetValue: 0
-  _intTargetValue: 0
+  _intTargetValue: 10
   _floatTargetValue: 0
   _stringTargetValue: 
   ParentNodes:
   - {fileID: 4352856160216867852}
   TrueChildNode: {fileID: -2240999108483308317}
   FalseChildNode: {fileID: -4336360673341093164}
+--- !u!114 &6318251949668127528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 253.59995
+    y: 565.19977
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: 
+    Text: "(Una pi\xF1a casi te cae en la cabeza...tiene pinta que ha sido a prop\xF3sito)"
+    CharacterSprite: {fileID: 21300000, guid: 01949879673663e4c8a338c1ad9b5d2d, type: 3}
+  ParentNodes:
+  - {fileID: -1143254665683468856}
+  ChildNode: {fileID: -2324170253134866212}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: SentenceName_d11fb0ec-ec7f-4ad3-976d-b3631e311e31
+  SentenceTextKey: SentenceText_6faff575-aab3-4fd4-8271-48c940bfb138
 --- !u!114 &7001909700949823720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -313,8 +570,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 256.60004
-    y: 163.79993
+    x: -491.40024
+    y: 192.5997
     width: 190
     height: 175
   IsDragging: 1
@@ -351,8 +608,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 536.6001
-    y: 322.19992
+    x: -211.4
+    y: 350.9997
     width: 190
     height: 80
   IsDragging: 1
@@ -361,4 +618,4 @@ MonoBehaviour:
   _description: 
   ParentNodes:
   - {fileID: 7001909700949823720}
-  ChildNode: {fileID: 3164586859507259942}
+  ChildNode: {fileID: -1143254665683468856}

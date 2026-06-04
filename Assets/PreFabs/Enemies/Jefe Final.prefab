@@ -206,6 +206,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Low_Lerendur
       objectReference: {fileID: 0}
+    - target: {fileID: 6216235725652669195, guid: 79ee0dd65e362fe498e3a4a50acb261d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6705668364795046321, guid: 79ee0dd65e362fe498e3a4a50acb261d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

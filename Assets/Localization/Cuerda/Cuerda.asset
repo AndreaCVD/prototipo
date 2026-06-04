@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5be51871efa6c3e4eae1703925c8f5ac, type: 3}
+  m_Name: Cuerda
+  m_EditorClassIdentifier: 
+  m_SharedTableData: {fileID: 11400000, guid: 65dcc941014bb624499ac8a437dc05aa, type: 2}
+  m_Tables:
+  - {fileID: 11400000, guid: 48463bf34f2f7af47aa208cec2d76cd1, type: 2}
+  - {fileID: 11400000, guid: ccc9faa2438f38b4090d967d4d496462, type: 2}
+  - {fileID: 11400000, guid: cac9cceef241c6e4cabacab6fddfdba3, type: 2}
+  - {fileID: 11400000, guid: a84946a8add149048bbc3da42e7e5b35, type: 2}
+  - {fileID: 11400000, guid: 99d97502eabd4eb488378ec5f5ee1367, type: 2}
+  m_Extensions: []
+  m_Group: String Table
+  references:
+    version: 2
+    RefIds: []

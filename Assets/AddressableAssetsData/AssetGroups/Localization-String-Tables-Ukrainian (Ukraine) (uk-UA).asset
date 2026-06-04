@@ -81,6 +81,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-uk-UA
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 99d97502eabd4eb488378ec5f5ee1367
+    m_Address: Cuerda_uk-UA
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-uk-UA
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 9a242cf143048504f9778dda87567106
     m_Address: Nim_uk-UA
     m_ReadOnly: 1

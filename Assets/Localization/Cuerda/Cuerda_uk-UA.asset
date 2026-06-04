@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Cuerda_uk-UA
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: uk-UA
+  m_SharedData: {fileID: 11400000, guid: 65dcc941014bb624499ac8a437dc05aa, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 148323495936
+    m_Localized: Campamento
+    m_Metadata:
+      m_Items: []
+  - m_Id: 148323495937
+    m_Localized: Primer Nivel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 148323495938
+    m_Localized: Segundo Nivel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 148323495939
+    m_Localized: Tercer Nivel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 148323495940
+    m_Localized: "Quedarse aqu\xED"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 148323495941
+    m_Localized: Campamento
+    m_Metadata:
+      m_Items: []
+  - m_Id: 148323495942
+    m_Localized: Primer Nivel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 148323495943
+    m_Localized: Segundo Nivel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 148323495944
+    m_Localized: "Quedarse aqu\xED"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 148323495945
+    m_Localized: Campamento
+    m_Metadata:
+      m_Items: []
+  - m_Id: 148323495946
+    m_Localized: Primer Nivel
+    m_Metadata:
+      m_Items: []
+  - m_Id: 148323495947
+    m_Localized: "Quedarse aqu\xED"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 148323495948
+    m_Localized: Campamento
+    m_Metadata:
+      m_Items: []
+  - m_Id: 148323495949
+    m_Localized: "Quedarse aqu\xED"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

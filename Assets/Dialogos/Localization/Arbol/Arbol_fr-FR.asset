@@ -18,52 +18,75 @@ MonoBehaviour:
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 945060387188736
+  - m_Id: 1992631844663296
     m_Localized: Deberia practicar
     m_Metadata:
       m_Items: []
-  - m_Id: 945060466880512
+  - m_Id: 1992631844663297
     m_Localized: Prota
     m_Metadata:
       m_Items: []
-  - m_Id: 945060471074816
+  - m_Id: 1992631844663298
     m_Localized: Fuerza
     m_Metadata:
       m_Items: []
-  - m_Id: 945060471074817
+  - m_Id: 1992631844663299
     m_Localized: Inteligencia
     m_Metadata:
       m_Items: []
-  - m_Id: 945060471074818
+  - m_Id: 1992631844663300
     m_Localized: Carisma
     m_Metadata:
       m_Items: []
-  - m_Id: 945060471074819
+  - m_Id: 1992631844663301
     m_Localized: Huir
     m_Metadata:
       m_Items: []
-  - m_Id: 945060471074820
+  - m_Id: 1992631844663302
     m_Localized: El ataque no ha hecho nada...
     m_Metadata:
       m_Items: []
-  - m_Id: 945060471074821
+  - m_Id: 1992631844663303
     m_Localized: 
     m_Metadata:
       m_Items: []
-  - m_Id: 945060471074822
+  - m_Id: 1992631844663304
     m_Localized: "\xA1EY! Cuidado"
     m_Metadata:
       m_Items: []
-  - m_Id: 945060471074823
+  - m_Id: 1992631844663305
     m_Localized: Arbol
     m_Metadata:
       m_Items: []
-  - m_Id: 945060471074824
+  - m_Id: 1992631844663306
     m_Localized: Un arbol te ha intimidado...
     m_Metadata:
       m_Items: []
-  - m_Id: 945060471074825
-    m_Localized: El arbol muestra interes en ti
+  - m_Id: 1992631844663307
+    m_Localized: "(A lo alto del \xE1rbol ves un nido de pajaros, seria una pena
+      que cayesen...\xBFverdad?)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1992631844663308
+    m_Localized: "(Es s\xF3lo un \xE1rbol...la raz\xF3n por la que puedes escucharlo
+      es un misterio, quiz\xE1s la magia de la mazmorra le llega las ra\xEDzes)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1992631844663309
+    m_Localized: "El \xE1rbol se ha sonrojado. \xA1Te da dado un regalo!)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1992631844663310
+    m_Localized: "(Una pi\xF1a casi te cae en la cabeza...tiene pinta que ha sido
+      a prop\xF3sito)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1992631915966464
+    m_Localized: "(Te enfada que te de tanta rabia el \xE1rbol)"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1992631915966465
+    m_Localized: Carlos
     m_Metadata:
       m_Items: []
   references:

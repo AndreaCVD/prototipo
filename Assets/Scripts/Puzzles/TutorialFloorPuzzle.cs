@@ -44,12 +44,13 @@ public class TutorialFloorPuzzle : MonoBehaviour
         {
             puertaAbierta = true;
             lista.NivelDesbloqueado[0].acabado = true;
-
-            if (candado_1 != null)
-                candado_1.SetBool("candadoOpen", true);
-
+            //Animacion Candado y eliminarlo
             if (puertaMazmorra != null)
+            {
+                candado_1.SetBool("candadoOpen", true);
                 puertaMazmorra.SetBool("doorOpen", true);
+            }
+
         }
 
     }

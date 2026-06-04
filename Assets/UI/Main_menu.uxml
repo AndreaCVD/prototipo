@@ -35,8 +35,8 @@
                     <ui:VisualElement name="section-audio" class="opt-section" style="display: flex;">
                         <ui:VisualElement class="opt-row">
                             <ui:Label text="Música" class="opt-label" />
-                            <ui:Slider name="slider-music" low-value="0" high-value="100" value="80" class="opt-slider" />
-                            <ui:Label name="val-music" text="80" class="opt-value" />
+                            <ui:Slider name="slider-music" low-value="0" high-value="100" value="100" class="opt-slider" />
+                            <ui:Label name="val-music" text="100" class="opt-value" />
                         </ui:VisualElement>
                         <ui:VisualElement class="opt-row">
                             <ui:Label text="Efectos" class="opt-label" />
@@ -45,8 +45,8 @@
                         </ui:VisualElement>
                         <ui:VisualElement class="opt-row">
                             <ui:Label text="Ambiente" class="opt-label" />
-                            <ui:Slider name="slider-ambient" low-value="0" high-value="100" value="60" class="opt-slider" />
-                            <ui:Label name="val-ambient" text="60" class="opt-value" />
+                            <ui:Slider name="slider-ambient" low-value="0" high-value="100" value="100" class="opt-slider" />
+                            <ui:Label name="val-ambient" text="100" class="opt-value" />
                         </ui:VisualElement>
                     </ui:VisualElement>
                     <ui:VisualElement name="section-controls" tabindex="1" class="opt-section opt-hidden" style="display: none;">

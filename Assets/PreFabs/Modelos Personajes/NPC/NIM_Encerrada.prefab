@@ -92,6 +92,16 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 4088d02a54cd325489667d8a8c38bbbd, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 4187bbb44e6bf454391d59723ac5ef68, type: 3}
+      propertyPath: m_WarningMessage
+      value: "\nBinding warning: Some generic clip(s) animate transforms that are
+        already bound by a Humanoid avatar. These transforms can only be changed
+        by Humanoid clips.\n\tTransform 'mixamorig:Hips'\n\tTransform 'mixamorig:LeftFoot'\n\tTransform
+        'mixamorig:LeftHandIndex1'\n\tTransform 'mixamorig:Spine1'\n\tTransform 'mixamorig:LeftToeBase'\n\tTransform
+        'mixamorig:RightArm'\n\tTransform 'mixamorig:LeftLeg'\n\tTransform 'mixamorig:LeftShoulder'\n\tTransform
+        'mixamorig:RightHandIndex3'\n\tTransform 'mixamorig:RightFoot'\n\tand more
+        ...\n\tFrom animation clip 'mixamo.com'"
+      objectReference: {fileID: 0}
     - target: {fileID: 7938681912113578461, guid: 4187bbb44e6bf454391d59723ac5ef68, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -159,8 +169,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 4.688958, y: 9.395562, z: 4.0317297}
-  m_Center: {x: -0.08480451, y: -2.7349179, z: -0.01059984}
+  m_Size: {x: 7.6, y: 9.395562, z: 10.71}
+  m_Center: {x: -0.36, y: 0.91, z: -3.609429}
 --- !u!54 &1518418586300682196
 Rigidbody:
   m_ObjectHideFlags: 0

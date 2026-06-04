@@ -78,7 +78,7 @@ public class Inventario : MonoBehaviour
     public void restarVida()
     {
 
-         Debug.Log("lava");
+        //Debug.Log("lava");
         if (prota.stats.values[3].value > 0)
         {
             prota.stats.values[3].value--;
@@ -155,7 +155,7 @@ public class Inventario : MonoBehaviour
     }
     private void AbrirCofre(GameObject cofre)
     {
-        Debug.Log("El cofre se abre");
+        //Debug.Log("El cofre se abre");
         //Activar animacion
         //Activar UI del loot que ha salido --> brillo bolsa UI
 
@@ -171,6 +171,7 @@ public class Inventario : MonoBehaviour
                 break;
             case string b when b.Contains("c2"):
                 prota.Inventario.Espada.Add("espada_cofre");
+                prota.stats.values[0].value += 3;
                 break;
             case string b when b.Contains("c5"):
                 prota.Inventario.PocionLava.Add("pocion_cofre");
@@ -201,12 +202,15 @@ public class Inventario : MonoBehaviour
         {
             case 1:
                 prota.Inventario.Espada.Add("Espada_Loot");
+                prota.stats.values[0].value += 3;
                 break;
             case 2:
                 prota.Inventario.Daga.Add("Daga_Loot");
+                prota.stats.values[0].value += 1;
                 break;
             case 3:
                 prota.Inventario.PocionVida.Add("PocionVida_Loot");
+                prota.stats.values[0].value += 5;
                 break;
             default:
                 break;

@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
+  m_Script: {fileID: 11500000, guid: dea1f476e0dcf364fbeb19b24ac8ad40, type: 3}
   m_Name: Puzzles
-  m_EditorClassIdentifier: Assembly-CSharp::Puzzle
+  m_EditorClassIdentifier: 
   Nivel_0:
   - name: Puzzle_A1
     acabado: 0
@@ -35,6 +35,6 @@ MonoBehaviour:
   - name: Nivel_2
     acabado: 0
   - name: Nivel_3
-    acabado: 0
-  - name: Jefe_Final
     acabado: 1
+  - name: Jefe_Final
+    acabado: 0

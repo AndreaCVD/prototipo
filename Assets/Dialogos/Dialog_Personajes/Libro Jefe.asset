@@ -15,8 +15,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1680.7959
-    y: 162.80023
+    x: 1268.7959
+    y: 248.40027
     width: 190
     height: 80
   IsDragging: 1
@@ -41,8 +41,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1367.198
-    y: -39.59993
+    x: 955.198
+    y: 46.000107
     width: 190
     height: 135
   IsDragging: 1
@@ -73,8 +73,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1483.197
-    y: 297.20026
+    x: 1071.197
+    y: 382.8003
     width: 190
     height: 135
   IsDragging: 1
@@ -105,16 +105,15 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 497.60065
-    y: 9.200027
+    x: 42.400635
+    y: 98.00006
     width: 190
     height: 135
   IsDragging: 1
-  IsSelected: 0
+  IsSelected: 1
   _sentence:
     CharacterName: Carlos
-    Text: "Respondeme, \xBFeres tu el tercer compa\xF1ero al que ten\xEDa que rescatar?
-      \xBFLerendur?"
+    Text: "\xBFEres tu el tercer compa\xF1ero al que ten\xEDa que rescatar? \xBFLerendur?"
     CharacterSprite: {fileID: 21300000, guid: a188ce1c9b6fce644b5efac5bf9be647, type: 3}
   ParentNodes:
   - {fileID: -2391783938624123818}
@@ -141,8 +140,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1760.7961
-    y: 322.80078
+    x: 1348.7961
+    y: 408.40082
     width: 190
     height: 80
   IsDragging: 1
@@ -167,8 +166,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -30.399986
-    y: 102.80023
+    x: -442.40002
+    y: 188.40027
     width: 240
     height: 160
   IsDragging: 1
@@ -198,8 +197,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 476.00006
-    y: -211.59982
+    x: 64.000046
+    y: -125.99979
     width: 190
     height: 135
   IsDragging: 1
@@ -231,8 +230,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 563.9999
-    y: 315.60095
+    x: 151.9999
+    y: 401.201
     width: 190
     height: 135
   IsDragging: 1
@@ -264,8 +263,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -646.40125
-    y: 363.6003
+    x: -1058.4011
+    y: 449.20035
     width: 190
     height: 80
   IsDragging: 1
@@ -289,8 +288,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1251.9968
-    y: 132.4002
+    x: 839.99677
+    y: 218.00024
     width: 190
     height: 135
   IsDragging: 1
@@ -321,8 +320,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1143.9988
-    y: -33.199966
+    x: 731.9987
+    y: 52.40007
     width: 190
     height: 135
   IsDragging: 1
@@ -395,12 +394,12 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 708.0001
-    y: 4.399994
+    x: 296.00018
+    y: 90.00003
     width: 190
     height: 135
   IsDragging: 1
-  IsSelected: 1
+  IsSelected: 0
   _sentence:
     CharacterName: Creador
     Text: "\xBFLerendur? No, no, yo soy el CREADOR."
@@ -427,8 +426,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 269.60016
-    y: 230.80066
+    x: -142.39986
+    y: 316.4007
     width: 240
     height: 160
   IsDragging: 1
@@ -458,8 +457,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 777.60095
-    y: 314.80115
+    x: 365.601
+    y: 400.40118
     width: 190
     height: 135
   IsDragging: 1
@@ -490,8 +489,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1888.7952
-    y: 162.80023
+    x: 1476.7952
+    y: 248.40027
     width: 190
     height: 80
   IsDragging: 1
@@ -516,8 +515,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -239.99951
-    y: 98.00012
+    x: -651.9996
+    y: 183.60016
     width: 190
     height: 135
   IsDragging: 1
@@ -548,8 +547,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 172.00008
-    y: -104.39975
+    x: -239.99994
+    y: -18.799713
     width: 240
     height: 160
   IsDragging: 1
@@ -579,8 +578,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1472.7966
-    y: 120.400085
+    x: 1060.7966
+    y: 206.00012
     width: 190
     height: 135
   IsDragging: 1
@@ -611,8 +610,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 927.199
-    y: -28.399918
+    x: 515.19904
+    y: 57.20012
     width: 190
     height: 135
   IsDragging: 1
@@ -644,8 +643,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -493.60022
-    y: 122.80005
+    x: -905.60016
+    y: 208.40009
     width: 210
     height: 155
   IsDragging: 1
@@ -674,8 +673,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -372.79968
-    y: 326.00012
+    x: -784.79974
+    y: 411.60016
     width: 240
     height: 160
   IsDragging: 1
@@ -705,8 +704,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 984.7992
-    y: 157.20007
+    x: 572.79926
+    y: 242.80011
     width: 190
     height: 135
   IsDragging: 1

@@ -9,12 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 0}
-  m_Name: Inventario_Prota
-  m_EditorClassIdentifier: Assembly-CSharp::Bolsa
-  nombreObj: Inventario Prota
+  m_Script: {fileID: 11500000, guid: 3b21408729e926449b246a6b5cb412cf, type: 3}
+  m_Name: Inventario Prota
+  m_EditorClassIdentifier: 
+  nombreObj: 
   Llave: []
   LlaveMaestra: []
   PocionVida: []
   Daga: []
   Espada: []
+  PocionLava: []

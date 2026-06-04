@@ -5,7 +5,9 @@ using UnityEngine.UI;
 
 public class CombatMonster : MonoBehaviour
 {
-
+    //Todos los comentarios son:
+        // 1 - Explicaciones
+        // 2 - Mecanica cambiada/obsoleta no quitada por falta de tiempo
     Parameters player; //El que tiene el script (todos)
     Save_Stats guardado; //Enviar las estats
     [SerializeField] Image imagenPers; 
@@ -16,20 +18,20 @@ public class CombatMonster : MonoBehaviour
     private Preload preload;
 
     //Si cambiamos las stats de Fuerza
-    private bool stat_change; //si se cambia un stat volver al anterior despues de turno
-    private int fuerzaChanged;
-    private int intelChanged;
-    private int carismaChanged;
+    //private bool stat_change; //si se cambia un stat volver al anterior despues de turno
+    //private int fuerzaChanged;
+    //private int intelChanged;
+    //private int carismaChanged;
 
     private void Start()
     {
         //GameObject a = GameObject.Find("--WorldManagement--");
         //guardado = a.GetComponent<Save_Stats>();
 
-        stat_change = false;
-        fuerzaChanged = 0;
-        intelChanged = 0;
-        carismaChanged = 0;
+        //stat_change = false;
+        //fuerzaChanged = 0;
+        //intelChanged = 0;
+        //carismaChanged = 0;
 
         if (objLoadScene == null)
         {
@@ -65,10 +67,10 @@ public class CombatMonster : MonoBehaviour
         //Si Dice + Fuerza no supera AC del enemigo, no se hace el ataque
         if ( (stat_enemigo+ dice) >= armadura)
         {
-            if (stat_change)
-            {
-                restaurarStat(0); //Restauramos Fuerza
-            }
+            //if (stat_change)
+            //{
+            //    restaurarStat(0); //Restauramos Fuerza
+            //}
             //Escibimos Debug.Log
             Commando(stat_enemigo, armadura, dice);
             //Target recibe daño de la fuerza
@@ -121,8 +123,8 @@ public class CombatMonster : MonoBehaviour
     }
     private void Commando(int stat_enemigo, int armadura, int dice)
     {
-        Debug.Log("AC enemigo = " + armadura);
-        Debug.Log("Stat = " + stat_enemigo + "| Dice = " + dice + "| Ataque total  = " + (stat_enemigo + dice));
+        //Debug.Log("AC enemigo = " + armadura);
+        //Debug.Log("Stat = " + stat_enemigo + "| Dice = " + dice + "| Ataque total  = " + (stat_enemigo + dice));
     }
     public int FuerzaCurrent()
     {
@@ -144,8 +146,8 @@ public class CombatMonster : MonoBehaviour
         if (HP.current <= 0)
         {
             HP.current = 0;
-            player.stats.values[3].value = 0;
-            Debug.Log("Derrotado : " + player.namePers);
+            player.stats.values[3].value = HP.max;
+
             //Si es el prota es GAMEOVER
             if (player.namePers == "Prota")
             {
@@ -156,9 +158,11 @@ public class CombatMonster : MonoBehaviour
             }
             else //Si pierde el enemigo:
             {
-                Debug.Log("HAS GANADO AL ENEMIGO");
+                //Player == enemigo
                 //Restaurar constitucino ficha enemigo
-                restaurarStat(10); //Restaurar todos los stats prota si han sido cambiados
+                player.stats.values[3].value = 0;
+
+                //restaurarStat(10); //Restaurar todos los stats prota si han sido cambiados
                 //destruir el obj del enemigo
                 preload.DestroyEnemy();
                 //Hablar con SceneManager -> LoadScene volver a la pantalla anterior
@@ -176,37 +180,37 @@ public class CombatMonster : MonoBehaviour
     public void cambiarFuerza(int damage)
     {
         //Subir Fuerza
-        stat_change = true;
-        fuerzaChanged = damage;
-        player.stats.values[0].value += damage; //Le cambiamos la fuerza
+        //stat_change = true;
+        //fuerzaChanged = damage;
+        //player.stats.values[0].value += damage; //Le cambiamos la fuerza
     }
     public void cambiarVida(int vida)
     {
-        player.stats.values[3].value += vida; //Le sumamos la vida
+        //player.stats.values[3].value += vida; //Le sumamos la vida
     }
-    void restaurarStat(int stat)
-    {
-        stat_change = false;
-        switch(stat)
-        { 
-            case 0:
-                player.stats.values[stat].value -= fuerzaChanged; //Le cambiamos la fuerza
-                break;
-            case 1:
-                player.stats.values[stat].value -= intelChanged; //Le cambiamos la fuerza
-                break;
-            case 2:
-                player.stats.values[stat].value -= carismaChanged; //Le cambiamos la fuerza
-                break;
-            case 10: //CAMBIAR TODOS LOS STATS
-                player.stats.values[0].value -= fuerzaChanged;
-                player.stats.values[1].value -= intelChanged;
-                player.stats.values[2].value -= carismaChanged; 
-                break;
-            default:
-                Debug.Log("No se ha restaurado bien el stat");
-                break;
-        }
-    }
+    //void restaurarStat(int stat)
+    //{
+    //    stat_change = false;
+    //    switch(stat)
+    //    { 
+    //        case 0:
+    //            player.stats.values[stat].value -= fuerzaChanged; //Le cambiamos la fuerza
+    //            break;
+    //        case 1:
+    //            player.stats.values[stat].value -= intelChanged; //Le cambiamos la fuerza
+    //            break;
+    //        case 2:
+    //            player.stats.values[stat].value -= carismaChanged; //Le cambiamos la fuerza
+    //            break;
+    //        case 10: //CAMBIAR TODOS LOS STATS
+    //            player.stats.values[0].value -= fuerzaChanged;
+    //            player.stats.values[1].value -= intelChanged;
+    //            player.stats.values[2].value -= carismaChanged; 
+    //            break;
+    //        default:
+    //            Debug.Log("No se ha restaurado bien el stat");
+    //            break;
+    //    }
+    //}
 
 }

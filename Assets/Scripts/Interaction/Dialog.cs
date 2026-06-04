@@ -53,7 +53,7 @@ public class Dialog : MonoBehaviour
         _dialogBehaviour.BindExternalFunction("ContinuarMov", continuarMov);
         _dialogBehaviour.BindExternalFunction("PararMov", pararMov);
         _dialogBehaviour.BindExternalFunction("Destroy", DestroyObj);
-        _dialogBehaviour.BindExternalFunction("Combat", Combate);
+        _dialogBehaviour.BindExternalFunction("Combate", Combate);
         _dialogBehaviour.BindExternalFunction("PisosDesbloqueados", pisosDesbloqueados);
         //Cambio escena
         _dialogBehaviour.BindExternalFunction("irCampamento", irCampamento);
@@ -82,20 +82,20 @@ public class Dialog : MonoBehaviour
     //Dados
     public void dadoFuerza()
     {
-        int aux = dados.RollDice(20);
+        int aux = Random.Range(1, 20);
         int tirada = prota.stats.Get(PersonajesStats.Fuerza) + aux;
         _dialogBehaviour.SetVariableValue("tiradaFuerza", tirada);
     }
     public void dadoIntel()
     {
-        int aux = dados.RollDice(20);
+        int aux = Random.Range(1, 20);
         int tirada = prota.stats.Get(PersonajesStats.Inteligencia) + aux;
         _dialogBehaviour.SetVariableValue("tiradaIntel", tirada);
 
     }
     public void dadoCarisma()
     {
-        int aux = dados.RollDice(20);
+        int aux = Random.Range(1, 20);
         int tirada = prota.stats.Get(PersonajesStats.Carisma) + aux;
         _dialogBehaviour.SetVariableValue("tiradaCarisma", tirada);
 

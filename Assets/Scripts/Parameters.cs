@@ -69,26 +69,14 @@ public class Parameters : ScriptableObject
     }
 
 }
-[CreateAssetMenu(fileName = "Nuevo Inventario", menuName = "Bolsa/Bag")]
-public class Bolsa : ScriptableObject
-{
-    public string nombreObj;
-    public List<string> Llave;
-    public List<string> LlaveMaestra;
-    public List<string> PocionVida;
-    public List<string> Daga;
-    public List<string> Espada;
-    public List<string> PocionLava;
 
-}
-[CreateAssetMenu(fileName = "Puzzles", menuName = "Puzzle/ListPuzzle")]
-public class Puzzle : ScriptableObject
-{
+//[CreateAssetMenu(fileName = "Puzzles", menuName = "Puzzle/ListPuzzle")]
+//public class Puzzle : ScriptableObject
+//{
 
-    public List<Bools> Nivel_0 = new List<Bools>();
-    public List<Bools> Nivel_1 = new List<Bools>();
-    public List<Bools> Nivel_2 = new List<Bools>();
-    public List<Bools> NivelDesbloqueado = new List<Bools>();
+//    public List<Bools> Nivel_0 = new List<Bools>();
+//    public List<Bools> Nivel_1 = new List<Bools>();
+//    public List<Bools> Nivel_2 = new List<Bools>();
+//    public List<Bools> NivelDesbloqueado = new List<Bools>();
 
-}
-
+//}

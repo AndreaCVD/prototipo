@@ -1458,6 +1458,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4161711505757076601, guid: ca25f92c7d3a9ee4aa6f774f0c996115, type: 3}
+      propertyPath: m_Volume
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4161711505757076601, guid: ca25f92c7d3a9ee4aa6f774f0c996115, type: 3}
       propertyPath: OutputAudioMixerGroup
       value: 
       objectReference: {fileID: 2259271644845032887, guid: 3805aa405e5df0344a65c712a55c36b2, type: 2}
@@ -1500,6 +1504,10 @@ PrefabInstance:
     - target: {fileID: 7325924228481070404, guid: ca25f92c7d3a9ee4aa6f774f0c996115, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8650124944624283254, guid: ca25f92c7d3a9ee4aa6f774f0c996115, type: 3}
+      propertyPath: m_Volume
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 8650124944624283254, guid: ca25f92c7d3a9ee4aa6f774f0c996115, type: 3}
       propertyPath: OutputAudioMixerGroup
@@ -1675,6 +1683,10 @@ PrefabInstance:
     - target: {fileID: 5305385646599809368, guid: 18956a4a129394a42aeebd1263fb6080, type: 3}
       propertyPath: m_Name
       value: Caballero
+      objectReference: {fileID: 0}
+    - target: {fileID: 6381315274930889123, guid: 18956a4a129394a42aeebd1263fb6080, type: 3}
+      propertyPath: m_Volume
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 6691557478830491062, guid: 18956a4a129394a42aeebd1263fb6080, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2226,6 +2238,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Candado_v2
       objectReference: {fileID: 0}
+    - target: {fileID: 4726149167324036764, guid: 43e0ed55eaf8a3e43869e00d269a663b, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 56ef7ceda27b0084480e9c9a823d2ba6, type: 2}
     - target: {fileID: 6666002300389139287, guid: 43e0ed55eaf8a3e43869e00d269a663b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.00001129546

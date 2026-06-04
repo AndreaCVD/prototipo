@@ -39,7 +39,7 @@ public class Dialog : MonoBehaviour
     }
     public void EmpezarDialogo(DialogNodeGraph dialogo, GameObject obj)
     {
-        //this.obj = obj;
+        this.obj = obj;
         //Debug.Log(this.obj);
         //Llamar a funcion
         //BindExternalFunction(string funcName, Action function);

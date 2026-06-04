@@ -85,6 +85,10 @@
                             <ui:Label text="Riu Lloreda" class="opt-label" />
                         </ui:VisualElement>
                         <ui:VisualElement class="opt-row">
+                            <ui:Label text="Programadora" class="opt-label" />
+                            <ui:Label text="Aina Mestres" enable-rich-text="true" class="opt-label" />
+                        </ui:VisualElement>
+                        <ui:VisualElement class="opt-row">
                             <ui:Label text="Artista 3D" class="opt-label" />
                             <ui:Label text="Andrea Vargas" class="opt-label" />
                         </ui:VisualElement>

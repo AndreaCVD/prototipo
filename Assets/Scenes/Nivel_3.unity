@@ -1440,6 +1440,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas Puzzle
       objectReference: {fileID: 0}
+    - target: {fileID: 8970149887093246708, guid: dfde021bd3e93984490b17c715c82b27, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1453,6 +1457,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4161711505757076601, guid: ca25f92c7d3a9ee4aa6f774f0c996115, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 2259271644845032887, guid: 3805aa405e5df0344a65c712a55c36b2, type: 2}
     - target: {fileID: 7325924228481070404, guid: ca25f92c7d3a9ee4aa6f774f0c996115, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.3341303
@@ -1493,6 +1501,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8650124944624283254, guid: ca25f92c7d3a9ee4aa6f774f0c996115, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -5641426505610333550, guid: 3805aa405e5df0344a65c712a55c36b2, type: 2}
     - target: {fileID: 9088144854548822217, guid: ca25f92c7d3a9ee4aa6f774f0c996115, type: 3}
       propertyPath: m_Name
       value: sound manager lava cave

@@ -55,10 +55,10 @@ public class Dice : MonoBehaviour
         int a = Random.Range(1, maxValue);
         Debug.Log("Dice=" + a);
         //StartCoroutine(ChangeText(a));
-        animDice(a);
+        //animDice(a);
         //MoveDice(a);
         return a;
-        diceText.text = a.ToString();
+        //diceText.text = a.ToString();
 
     }
     //IEnumerator ChangeText(int a)

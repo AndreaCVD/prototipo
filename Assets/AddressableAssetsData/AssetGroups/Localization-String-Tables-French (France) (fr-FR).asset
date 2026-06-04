@@ -63,12 +63,6 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-fr-FR
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 9b69939639db29b4bb4bb36d2a39d2d7
-    m_Address: test_fr-FR
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-fr-FR
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 9c0d6903ea208bd4885479546b0128e8
     m_Address: Nimrodel Libre_fr-FR
     m_ReadOnly: 1
@@ -101,6 +95,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: cfa3c2dff72d12d4ba4f0b5a7f1f3c1f
     m_Address: Cofre_fr-FR
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-fr-FR
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d23bf82346068a345a4f6c5d9db872c1
+    m_Address: DebugCombat_fr-FR
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-fr-FR

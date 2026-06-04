@@ -21,7 +21,7 @@ public class LoadScene : MonoBehaviour
 
     //[SerializeField] Preload preload;
     string name_anterior;
-    bool onCombat;
+    public bool onCombat;
 
     private void Start()
     {
@@ -105,16 +105,22 @@ public class LoadScene : MonoBehaviour
         //Sacamos la pausa del juego principal
         escenaState.ScenePause(false); //false, se mueve
 
-        //recibir loot
+      // Unload Scene
+        //SceneManager.UnloadSceneAsync("combat_scene");
+        AsyncOperation unloadOp = SceneManager.UnloadSceneAsync("combat_scene");
 
         // reactiva el HUD al salir del combate
         if (uiHub != null)
-            uiHub.SetActive(true);
-        else
-            Debug.LogWarning("uiHub es null al salir — no se pudo reactivar");
+        {
 
-        // Unload Scene
-        SceneManager.UnloadSceneAsync("combat_scene");
+            //uiHub.SetActive(false);
+
+        }
+        else
+        {
+            Debug.LogWarning("uiHub es null al salir — no se pudo reactivar");
+        }
+        //uiHub.SetActive(true);
     }
     public void Combat(GameObject enemyName)
     {
@@ -128,11 +134,11 @@ public class LoadScene : MonoBehaviour
             pantalla.UnTint();
 
             // busca y oculta el HUD ANTES de cargar el combate
-            uiHub = GameObject.Find("UI_HUB");
-            if (uiHub != null)
-                uiHub.SetActive(false);
-            else
-                Debug.LogWarning("UI_HUB no encontrado — comprueba el nombre del GameObject");
+            //uiHub = GameObject.Find("UI_HUB");
+            //if (uiHub != null)
+               // uiHub.SetActive(false);
+          //  else
+            //    Debug.LogWarning("UI_HUB no encontrado — comprueba el nombre del GameObject");
 
 
             preload.CombatOpponent(enemyName); //Pasem el nom

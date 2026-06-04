@@ -57,6 +57,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-en-US
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 57100b4594e90a243a0c51ba6033fadc
+    m_Address: DebugCombat_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 596b545dafb1d1f40a3c2cec49904d7f
     m_Address: Puzzle Tutorial_en-US
     m_ReadOnly: 1
@@ -81,12 +87,6 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-en-US
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 7298f0fc752a0784f9ff61aadaa33ad1
-    m_Address: Dialogo Prueva_en-US
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-en-US
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7f6917ab81034614784c5fbc0575e3db
     m_Address: Etkis Libre_en-US
     m_ReadOnly: 1
@@ -95,12 +95,6 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 8247c8460da51184abe93ef0b4fac7c0
     m_Address: Cofre_en-US
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-en-US
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 831370fa8b135e14fa6bcde5aaed427c
-    m_Address: Cube_Prueva_en-US
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en-US
@@ -143,12 +137,6 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d9aee3cd41fa2ea4ebfdc3b9a77f47c3
     m_Address: CofreVacio_en-US
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-en-US
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: fe37854bce8887f43b293d741ec9aec0
-    m_Address: test_en-US
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en-US

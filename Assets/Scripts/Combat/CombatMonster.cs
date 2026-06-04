@@ -23,8 +23,8 @@ public class CombatMonster : MonoBehaviour
 
     private void Start()
     {
-        GameObject a = GameObject.Find("--WorldManagement--");
-        guardado = a.GetComponent<Save_Stats>();
+        //GameObject a = GameObject.Find("--WorldManagement--");
+        //guardado = a.GetComponent<Save_Stats>();
 
         stat_change = false;
         fuerzaChanged = 0;
@@ -158,7 +158,6 @@ public class CombatMonster : MonoBehaviour
             {
                 Debug.Log("HAS GANADO AL ENEMIGO");
                 //Restaurar constitucino ficha enemigo
-                guardado.restaurarVidaEnemigo();
                 restaurarStat(10); //Restaurar todos los stats prota si han sido cambiados
                 //destruir el obj del enemigo
                 preload.DestroyEnemy();

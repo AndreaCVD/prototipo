@@ -87,6 +87,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-fr-FR
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cac9cceef241c6e4cabacab6fddfdba3
+    m_Address: Cuerda_fr-FR
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-fr-FR
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: cf0c52b9b690c3848b5d57c0cfefb3f7
     m_Address: Fogata_fr-FR
     m_ReadOnly: 1

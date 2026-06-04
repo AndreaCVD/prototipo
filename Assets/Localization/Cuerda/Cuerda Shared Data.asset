@@ -13,8 +13,64 @@ MonoBehaviour:
   m_Name: Cuerda Shared Data
   m_EditorClassIdentifier: 
   m_TableCollectionName: Cuerda
-  m_TableCollectionNameGuidString: 00000000000000000000000000000000
-  m_Entries: []
+  m_TableCollectionNameGuidString: 65dcc941014bb624499ac8a437dc05aa
+  m_Entries:
+  - m_Id: 148323495936
+    m_Key: Answer_6b590e94-f24a-4e0a-9d78-e92f64efb8c4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 148323495937
+    m_Key: Answer_d49a6a18-4c4f-46cb-935c-c41b938109fb
+    m_Metadata:
+      m_Items: []
+  - m_Id: 148323495938
+    m_Key: Answer_b25c37a4-8e3e-4d5b-9db5-151b6be2ad4f
+    m_Metadata:
+      m_Items: []
+  - m_Id: 148323495939
+    m_Key: Answer_075ab4fb-cb78-495d-9f96-09f64b37b20f
+    m_Metadata:
+      m_Items: []
+  - m_Id: 148323495940
+    m_Key: Answer_776aa608-7007-4ae0-ac0e-dddb57473a84
+    m_Metadata:
+      m_Items: []
+  - m_Id: 148323495941
+    m_Key: Answer_337bba92-614a-47d8-90fe-57df1bd845de
+    m_Metadata:
+      m_Items: []
+  - m_Id: 148323495942
+    m_Key: Answer_36f00090-0af4-4967-baa8-cbaa5707f754
+    m_Metadata:
+      m_Items: []
+  - m_Id: 148323495943
+    m_Key: Answer_d3cf9db6-003d-499a-85f1-9e73a47170ba
+    m_Metadata:
+      m_Items: []
+  - m_Id: 148323495944
+    m_Key: Answer_1d75b3cc-3036-489f-97fb-a4392725d809
+    m_Metadata:
+      m_Items: []
+  - m_Id: 148323495945
+    m_Key: Answer_b4891dbc-a395-4e14-9df2-e530e0c0dbc5
+    m_Metadata:
+      m_Items: []
+  - m_Id: 148323495946
+    m_Key: Answer_efa7192a-2d9c-407e-8d03-b358f035088a
+    m_Metadata:
+      m_Items: []
+  - m_Id: 148323495947
+    m_Key: Answer_99c35b09-acef-47a6-9f6b-22ef26432165
+    m_Metadata:
+      m_Items: []
+  - m_Id: 148323495948
+    m_Key: Answer_b288b45e-02ff-429f-8a33-4b11bc5c89ab
+    m_Metadata:
+      m_Items: []
+  - m_Id: 148323495949
+    m_Key: Answer_97fd6405-2cc4-4899-ab08-dcb3512c67d1
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

@@ -135,6 +135,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-en-US
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ccc9faa2438f38b4090d967d4d496462
+    m_Address: Cuerda_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d9aee3cd41fa2ea4ebfdc3b9a77f47c3
     m_Address: CofreVacio_en-US
     m_ReadOnly: 1

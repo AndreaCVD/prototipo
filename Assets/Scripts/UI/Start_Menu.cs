@@ -35,7 +35,7 @@ public class Start_Menu : MonoBehaviour
         root.Q<VisualElement>("tutorial").style.backgroundImage = new StyleBackground(tutorial_spr);
 
         root.Q<VisualElement>("nivel_1").style.backgroundImage = new StyleBackground(
-            lista.NivelDesbloqueado[0].acabado ? nivel_1_spr : bloqueado_spr_1);
+            lista.Nivel_0[0].acabado ? nivel_1_spr : bloqueado_spr_1);
 
         root.Q<VisualElement>("nivel_2").style.backgroundImage = new StyleBackground(
             lista.NivelDesbloqueado[1].acabado ? nivel_2_spr : bloqueado_spr_2);

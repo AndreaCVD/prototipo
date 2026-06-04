@@ -29,10 +29,8 @@ public class TutorialFloorPuzzle : MonoBehaviour
     {
         InstanciarPers();
         revisarPuzzle();
-        //Treure pq sino sempre es reinicien?
-        lista.Nivel_0[0].acabado = false;
+
         zona_1.finished = lista.Nivel_0[0].acabado;
-        lista.NivelDesbloqueado[0].acabado = false;
     }
 
     void Update()
@@ -47,8 +45,12 @@ public class TutorialFloorPuzzle : MonoBehaviour
             puertaAbierta = true;
             lista.NivelDesbloqueado[0].acabado = true;
             //Animacion Candado y eliminarlo
-            candado_1.SetBool("candadoOpen", true);
-            puertaMazmorra.SetBool("doorOpen", true);
+            if (puertaMazmorra != null)
+            {
+                candado_1.SetBool("candadoOpen", true);
+                puertaMazmorra.SetBool("doorOpen", true);
+            }
+
         }
 
     }

@@ -63,6 +63,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-es-ES
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 48463bf34f2f7af47aa208cec2d76cd1
+    m_Address: Cuerda_es-ES
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es-ES
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4891109a4b7150f4e8471e9eb2dad0a7
     m_Address: Dialogo Prueva_es-ES
     m_ReadOnly: 1

@@ -17,17 +17,13 @@
                 <ui:Button name="btn-inventory" class="inventory-btn" style="background-image: url(&quot;project://database/Assets/Art/Interface/inventory.png?fileID=2800000&amp;guid=b787edb1344ca4745ba4a6dcce51a01b&amp;type=3#inventory&quot;); flex-direction: column; justify-content: space-between; align-content: flex-start;">
                     <ui:Label name="char-badge" text="I" class="char-badge" />
                 </ui:Button>
-                <ui:VisualElement name="item-notification" class="item-notification" style="display: none; background-color: rgba(68, 28, 4, 0.61);">
-                    <ui:VisualElement name="notif-icon" class="notif-icon" />
-                    <ui:Label name="notif-label" text="NEW" class="notif-label" />
-                </ui:VisualElement>
             </ui:VisualElement>
         </ui:VisualElement>
         <ui:VisualElement name="play-area" style="flex-grow: 1; flex-direction: column-reverse;">
             <ui:VisualElement name="dialog-box" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); width: auto; height: 230px; display: flex; align-items: center;">
                 <ui:VisualElement name="sentence-panel" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); display: flex; flex-direction: row; align-content: center; align-items: center; justify-content: space-evenly; background-image: url(&quot;project://database/Assets/Art/Interface/dialog_box.png?fileID=2800000&amp;guid=5512dc02dc7f5fd45a5d8d2282890e2f&amp;type=3#dialog_box&quot;); width: 60%;">
                     <ui:Label text="name" name="character-name" style="left: 192px; top: auto; right: auto; bottom: 85px; position: relative; margin-left: 0; justify-content: flex-start; align-self: center; border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; border-top-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 0; border-bottom-left-radius: 0; background-color: rgba(255, 255, 255, 0); height: 35px; width: 228px; flex-shrink: 0; flex-direction: column; align-items: auto; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin-top: 0; margin-right: 0; margin-bottom: 0; white-space: normal;" />
-                    <ui:Label text="Label" name="dialogue-text" style="width: 100%; align-self: center; justify-content: center; align-content: auto; background-color: rgba(0, 0, 0, 0); font-size: 28px; background-image: none; background-size: 100% 100%; -unity-background-scale-mode: stretch-to-fill; height: 100%; padding-top: 67px; padding-bottom: 33px; padding-left: 52px; padding-right: 41px; flex-wrap: nowrap; align-items: center; flex-shrink: 0; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; -unity-font-definition: url(&quot;project://database/Assets/UI/Fonts/Alegreya_Sans_SC/AlegreyaSansSC-Medium.ttf?fileID=12800000&amp;guid=096bf93933eb8ff4f99413b0e96b7efd&amp;type=3#AlegreyaSansSC-Medium&quot;);" />
+                    <ui:Label text="Label" name="dialogue-text" style="width: 100%; align-self: center; justify-content: center; align-content: auto; background-color: rgba(0, 0, 0, 0); font-size: 28px; background-image: none; background-size: 100% 100%; -unity-background-scale-mode: stretch-to-fill; height: 100%; padding-top: 67px; padding-bottom: 33px; padding-left: 65px; padding-right: 160px; flex-wrap: nowrap; align-items: center; flex-shrink: 0; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; -unity-font-definition: url(&quot;project://database/Assets/UI/Fonts/Alegreya_Sans_SC/AlegreyaSansSC-Medium.ttf?fileID=12800000&amp;guid=096bf93933eb8ff4f99413b0e96b7efd&amp;type=3#AlegreyaSansSC-Medium&quot;);" />
                     <ui:VisualElement name="character-image" style="flex-grow: 0; background-image: url(&quot;project://database/Assets/PreFabs/UI/png%20vacio.png?fileID=21300000&amp;guid=d4d3a38f353de664aa8174df9aee9edc&amp;type=3#png vacio&quot;); background-color: rgba(0, 0, 0, 0); top: auto; left: auto; right: 8px; bottom: 11px; width: 240px; height: 240px; background-size: cover; align-self: center; position: relative; flex-shrink: 0;" />
                 </ui:VisualElement>
                 <ui:VisualElement name="answer-panel" style="flex-grow: 1; display: none;">
@@ -43,7 +39,7 @@
                     <ui:IntegerField name="int_life" value="60" focusable="false" class="fuente-personalizada card__value" />
                 </ui:VisualElement>
             </ui:VisualElement>
-            <ui:VisualElement name="inventory-grid" class="inventory-grid" style="justify-content: space-evenly; display: none;">
+            <ui:VisualElement name="inventory-grid" class="inventory-grid" style="justify-content: space-evenly; display: flex;">
                 <ui:VisualElement name="slot-0" class="inv-slot">
                     <ui:VisualElement name="slot-0-icon" class="inv-slot__icon" />
                     <ui:Label name="slot-0-badge" text="0" class="inv-slot__badge" />
@@ -69,7 +65,11 @@
                     <ui:Label name="slot-5-badge" text="0" class="inv-slot__badge" />
                 </ui:VisualElement>
             </ui:VisualElement>
-            <ui:VisualElement name="hud-bottom-right" class="hud-bottom-right" style="flex-direction: row-reverse;" />
+            <ui:VisualElement name="hud-bottom-right" class="hud-bottom-right" style="flex-direction: row-reverse;">
+                <ui:Button name="btn-reset" class="inventory-btn" style="background-image: url(&quot;project://database/Assets/Art/Img_Dialogos/viejo_playa.png?fileID=2800000&amp;guid=0f39758af95060149ad9e71f80df61d3&amp;type=3#viejo_playa&quot;); flex-direction: column; justify-content: space-between; align-content: flex-start; display: none;">
+                    <ui:Label name="char-badge" text="R" class="char-badge" />
+                </ui:Button>
+            </ui:VisualElement>
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

@@ -2674,6 +2674,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas Puzzle
       objectReference: {fileID: 0}
+    - target: {fileID: 8970149887093246708, guid: dfde021bd3e93984490b17c715c82b27, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2856,6 +2860,71 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1024842785}
   m_SourcePrefab: {fileID: 100100000, guid: 96ae6b2309cd7c54c9cec56069f50c80, type: 3}
+--- !u!1001 &655178069
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4161711505757076601, guid: cb9a404b50ec9bd4dac36d546f43c1c4, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 2259271644845032887, guid: 3805aa405e5df0344a65c712a55c36b2, type: 2}
+    - target: {fileID: 7325924228481070404, guid: cb9a404b50ec9bd4dac36d546f43c1c4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.3341303
+      objectReference: {fileID: 0}
+    - target: {fileID: 7325924228481070404, guid: cb9a404b50ec9bd4dac36d546f43c1c4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.078611
+      objectReference: {fileID: 0}
+    - target: {fileID: 7325924228481070404, guid: cb9a404b50ec9bd4dac36d546f43c1c4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.0198863
+      objectReference: {fileID: 0}
+    - target: {fileID: 7325924228481070404, guid: cb9a404b50ec9bd4dac36d546f43c1c4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7325924228481070404, guid: cb9a404b50ec9bd4dac36d546f43c1c4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7325924228481070404, guid: cb9a404b50ec9bd4dac36d546f43c1c4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7325924228481070404, guid: cb9a404b50ec9bd4dac36d546f43c1c4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7325924228481070404, guid: cb9a404b50ec9bd4dac36d546f43c1c4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7325924228481070404, guid: cb9a404b50ec9bd4dac36d546f43c1c4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7325924228481070404, guid: cb9a404b50ec9bd4dac36d546f43c1c4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8650124944624283254, guid: cb9a404b50ec9bd4dac36d546f43c1c4, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -5641426505610333550, guid: 3805aa405e5df0344a65c712a55c36b2, type: 2}
+    - target: {fileID: 9088144854548822217, guid: cb9a404b50ec9bd4dac36d546f43c1c4, type: 3}
+      propertyPath: m_Name
+      value: sound manager water cave
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cb9a404b50ec9bd4dac36d546f43c1c4, type: 3}
 --- !u!1 &665792828
 GameObject:
   m_ObjectHideFlags: 0
@@ -3035,7 +3104,6 @@ MonoBehaviour:
   playerInside: 0
   restart: 0
   finished: 0
-  grup: {fileID: 1926101353}
   PiezasPuzzles: []
   SitioReinicio: []
   pos_player: {fileID: 0}
@@ -3321,7 +3389,6 @@ MonoBehaviour:
   playerInside: 0
   restart: 0
   finished: 0
-  grup: {fileID: 1926101353}
   PiezasPuzzles: []
   SitioReinicio: []
   pos_player: {fileID: 0}
@@ -3382,6 +3449,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Caballero
       objectReference: {fileID: 0}
+    - target: {fileID: 6043108632883557339, guid: 18956a4a129394a42aeebd1263fb6080, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6691557478830491062, guid: 18956a4a129394a42aeebd1263fb6080, type: 3}
       propertyPath: m_LocalPosition.x
       value: 14.97
@@ -3422,7 +3493,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3061432036549576514, guid: 18956a4a129394a42aeebd1263fb6080, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -7111,6 +7183,7 @@ MonoBehaviour:
   iconoPocionVida: {fileID: 21300000, guid: b65d9610dbda6ba46a32505c0e82604c, type: 3}
   iconoDaga: {fileID: 21300000, guid: dd10b42ca8b4b0e4880a096072aff5ad, type: 3}
   iconoEspada: {fileID: 21300000, guid: e9a57d8d864fc2443b5bdcfed074ea39, type: 3}
+  iconoPocionLava: {fileID: 0}
 --- !u!114 &1753848651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8517,6 +8590,9 @@ PrefabInstance:
     - {fileID: 6085245211131076399, guid: f3c8c08f1df45eb4d95f4c65aa86e954, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6338566132306605374, guid: f3c8c08f1df45eb4d95f4c65aa86e954, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2137292242}
     - targetCorrespondingSourceObject: {fileID: 3471499848450924075, guid: f3c8c08f1df45eb4d95f4c65aa86e954, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2137292240}
@@ -8557,6 +8633,43 @@ MonoBehaviour:
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: da7288751a1bc5344a64733936aff15f, type: 2}
+  m_BuildHeightMesh: 0
+--- !u!1 &2137292241 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6338566132306605374, guid: f3c8c08f1df45eb4d95f4c65aa86e954, type: 3}
+  m_PrefabInstance: {fileID: 2137292238}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2137292242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2137292241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: 5773373511d16004d826e2bdc3e5602b, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1001 &2139073638
 PrefabInstance:
@@ -9267,3 +9380,4 @@ SceneRoots:
   - {fileID: 717158619}
   - {fileID: 903920794}
   - {fileID: 1856689453}
+  - {fileID: 655178069}

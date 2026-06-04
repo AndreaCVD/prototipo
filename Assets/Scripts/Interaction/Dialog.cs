@@ -18,7 +18,7 @@ public class Dialog : MonoBehaviour
     [SerializeField] private cherrydev.DialogBehaviour _dialogBehaviour;
     
     private GameObject obj;
-    private int vidaMax = 40;
+    private int vidaMax = 50;
     private int objMax = 3;
 
     ////La conversa, podemos tener todas las conversas guardadas y enviar la que se necesite
@@ -54,13 +54,17 @@ public class Dialog : MonoBehaviour
         _dialogBehaviour.BindExternalFunction("PararMov", pararMov);
         _dialogBehaviour.BindExternalFunction("Destroy", DestroyObj);
         _dialogBehaviour.BindExternalFunction("Combat", Combate);
-        _dialogBehaviour.BindExternalFunction("irCampamento", irCampamento);
         _dialogBehaviour.BindExternalFunction("PisosDesbloqueados", pisosDesbloqueados);
-
+        //Cambio escena
+        _dialogBehaviour.BindExternalFunction("irCampamento", irCampamento);
+        _dialogBehaviour.BindExternalFunction("irNivel_1", irNivel_1);
+        _dialogBehaviour.BindExternalFunction("irNivel_2", irNivel_2);
+        _dialogBehaviour.BindExternalFunction("irNivel_3", irNivel_3);
         //Personajes
         _dialogBehaviour.BindExternalFunction("EstadoEtkis", estadoEtkis);
         _dialogBehaviour.BindExternalFunction("EstadoNim", estadoNim);
-
+        //Dialogo
+        _dialogBehaviour.BindExternalFunction("Dialogo", Dialogo);
         //Prota
         _dialogBehaviour.BindExternalFunction("RecuperarVida", vidaParcial);
         _dialogBehaviour.BindExternalFunction("FullVida", fullVida);
@@ -68,6 +72,12 @@ public class Dialog : MonoBehaviour
         //Le enviamos el dialogo que tiene que hacer --> ESTE SIEMPRE ÚLTIMO
         _dialogBehaviour.StartDialog(dialogo);
 
+    }
+    //Dialogo
+    public void Dialogo()
+    {
+        Animator aux = obj.GetComponent<Animator>();
+        aux.SetTrigger("Dialog");
     }
     //Dados
     public void dadoFuerza()

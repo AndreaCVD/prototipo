@@ -82,20 +82,20 @@ public class Dialog : MonoBehaviour
     //Dados
     public void dadoFuerza()
     {
-        int aux = Random.Range(1, maxValue);
+        int aux = Random.Range(1, 20);
         int tirada = prota.stats.Get(PersonajesStats.Fuerza) + aux;
         _dialogBehaviour.SetVariableValue("tiradaFuerza", tirada);
     }
     public void dadoIntel()
     {
-        int aux = Random.Range(1, maxValue);
+        int aux = Random.Range(1, 20);
         int tirada = prota.stats.Get(PersonajesStats.Inteligencia) + aux;
         _dialogBehaviour.SetVariableValue("tiradaIntel", tirada);
 
     }
     public void dadoCarisma()
     {
-        int aux = Random.Range(1, maxValue);
+        int aux = Random.Range(1, 20);
         int tirada = prota.stats.Get(PersonajesStats.Carisma) + aux;
         _dialogBehaviour.SetVariableValue("tiradaCarisma", tirada);
 

@@ -466,7 +466,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f7b92cbb89cdb34d972749b82ca5421, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lista: {fileID: 11400000, guid: 92b50351187af094c96f6e51da1599fa, type: 2}
+  lista: {fileID: 0}
   tutorial_spr: {fileID: 0}
   nivel_1_spr: {fileID: 0}
   nivel_2_spr: {fileID: 0}
@@ -1492,6 +1492,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3635282713806113210, guid: 711cebeb2efe67b48a692915a97acfa1, type: 3}
+      propertyPath: lista
+      value: 
+      objectReference: {fileID: 11400000, guid: 92b50351187af094c96f6e51da1599fa, type: 2}
     - target: {fileID: 8883334123030750440, guid: 711cebeb2efe67b48a692915a97acfa1, type: 3}
       propertyPath: pantalla
       value: 

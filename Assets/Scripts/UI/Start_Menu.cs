@@ -16,60 +16,20 @@ public class Start_Menu : MonoBehaviour
     [SerializeField] Sprite bloqueado_spr_3;
 
 
-    //[Header("Obj escena")]
-    //[SerializeField] GameObject tutorial_obj;
-    //[SerializeField] GameObject nivel_1_obj;
-    //[SerializeField] GameObject nivel_2_obj;
-    //[SerializeField] GameObject nivel_3_obj;
-    //[Header("Materiales")]
-    //[SerializeField] Material tutorial_m;
-    //[SerializeField] Material nivel_1_m;
-    //[SerializeField] Material nivel_2_m;
-    //[SerializeField] Material nivel_3_m;
-    //[SerializeField] Material bloqueado_m;
-
-    void Start ()
+    void Start()
     {
         var root = GetComponent<UIDocument>().rootVisualElement;
-
         root.Q<VisualElement>("tutorial").style.backgroundImage = new StyleBackground(tutorial_spr);
+
+        if (lista == null) { Debug.LogError("lista es null en Start_Menu"); return; }
+        if (lista.Nivel_0.Count == 0) { Debug.LogError("Nivel_0 está vacío"); return; }
+        if (lista.NivelDesbloqueado.Count < 3) { Debug.LogError("NivelDesbloqueado tiene menos de 3 elementos"); return; }
 
         root.Q<VisualElement>("nivel_1").style.backgroundImage = new StyleBackground(
             lista.Nivel_0[0].acabado ? nivel_1_spr : bloqueado_spr_1);
-
         root.Q<VisualElement>("nivel_2").style.backgroundImage = new StyleBackground(
             lista.NivelDesbloqueado[1].acabado ? nivel_2_spr : bloqueado_spr_2);
-
         root.Q<VisualElement>("nivel_3").style.backgroundImage = new StyleBackground(
             lista.NivelDesbloqueado[2].acabado ? nivel_3_spr : bloqueado_spr_3);
-
-
-    //tutorial_obj.GetComponent<Renderer>().material = tutorial_m;
-    //if (lista.NivelDesbloqueado[0].acabado)
-    //{
-    //    nivel_1_obj.GetComponent<Renderer>().material = nivel_1_m;
-    //}
-    //else
-    //{
-    //    nivel_1_obj.GetComponent<Renderer>().material = bloqueado_m;
-    //}
-
-    //if (lista.NivelDesbloqueado[1].acabado)
-    //{
-    //    nivel_2_obj.GetComponent<Renderer>().material = nivel_2_m;
-    //}
-    //else
-    //{
-    //    nivel_2_obj.GetComponent<Renderer>().material = bloqueado_m;
-    //}
-
-    //if (lista.NivelDesbloqueado[2].acabado)
-    //{
-    //    nivel_3_obj.GetComponent<Renderer>().material = nivel_3_m;
-    //}
-    //else
-    //{
-    //    nivel_3_obj.GetComponent<Renderer>().material = bloqueado_m;
-    //}
     }
 }

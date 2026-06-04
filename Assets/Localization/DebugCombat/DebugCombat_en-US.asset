@@ -10,20 +10,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
-  m_Name: test_de-DE
+  m_Name: DebugCombat_en-US
   m_EditorClassIdentifier: 
   m_LocaleId:
-    m_Code: de-DE
-  m_SharedData: {fileID: 11400000, guid: a71f8ed6b3a3fb84fbd035b0efa114fa, type: 2}
+    m_Code: en-US
+  m_SharedData: {fileID: 11400000, guid: 06b883403fac90249a6b8d1df4f60cbc, type: 2}
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 15757082624
-    m_Localized: aaa
+  - m_Id: 12990083072
+    m_Localized: Has ganado este combate...
     m_Metadata:
       m_Items: []
-  - m_Id: 15757082625
-    m_Localized: test
+  - m_Id: 12990083073
+    m_Localized: 
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12990083074
+    m_Localized: Detente, y da media vuelta.
     m_Metadata:
       m_Items: []
   references:

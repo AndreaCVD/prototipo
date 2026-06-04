@@ -10,27 +10,31 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
-  m_Name: test Shared Data
+  m_Name: DebugCombat Shared Data
   m_EditorClassIdentifier: 
-  m_TableCollectionName: test
-  m_TableCollectionNameGuidString: a71f8ed6b3a3fb84fbd035b0efa114fa
+  m_TableCollectionName: DebugCombat
+  m_TableCollectionNameGuidString: 06b883403fac90249a6b8d1df4f60cbc
   m_Entries:
-  - m_Id: 15757082624
-    m_Key: SentenceText_c4e10d82-c770-4dfa-a378-fd047bc65c16
+  - m_Id: 12990083072
+    m_Key: 
     m_Metadata:
       m_Items: []
-  - m_Id: 15757082625
-    m_Key: SentenceName_fdefd8c0-c43b-4b1d-b958-c80c7f345ed9
+  - m_Id: 12990083073
+    m_Key: SentenceName_8a359bea-918f-4171-b14d-bf4b7a641fe9
+    m_Metadata:
+      m_Items: []
+  - m_Id: 12990083074
+    m_Key: SentenceText_f2c433bf-f27a-4c7c-8d51-843e5de6d2f4
     m_Metadata:
       m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
-    rid: 6243379514476855363
+    rid: 9006459364427170652
   references:
     version: 2
     RefIds:
-    - rid: 6243379514476855363
+    - rid: 9006459364427170652
       type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
       data:
-        m_CustomEpoch: 1777389426212
+        m_CustomEpoch: 1780550010165

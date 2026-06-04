@@ -1500,6 +1500,10 @@ PrefabInstance:
       propertyPath: pantalla
       value: 
       objectReference: {fileID: 1759023609}
+    - target: {fileID: 8883334123030750440, guid: 711cebeb2efe67b48a692915a97acfa1, type: 3}
+      propertyPath: audioMixer
+      value: 
+      objectReference: {fileID: 24100000, guid: 3805aa405e5df0344a65c712a55c36b2, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

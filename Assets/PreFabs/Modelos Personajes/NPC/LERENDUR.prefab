@@ -60,6 +60,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Interact_Scene
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 0bca216caa503d5409568bfecb94a1f2, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 2e80ab3c8fc211f4f97fa17816fabf6d, type: 2}
     - target: {fileID: 6354225421961448564, guid: 0bca216caa503d5409568bfecb94a1f2, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -142,8 +146,8 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0

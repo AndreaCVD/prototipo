@@ -15,119 +15,119 @@ MonoBehaviour:
   m_TableCollectionName: Nimrodel Libre
   m_TableCollectionNameGuidString: f33ec81ece197714f8835bb327ce54bf
   m_Entries:
-  - m_Id: 734223019601920
+  - m_Id: 776025164541952
     m_Key: SentenceText_a729d805-2d53-4f35-9dae-ff31071ada81
     m_Metadata:
       m_Items: []
-  - m_Id: 734223048962048
+  - m_Id: 776025198096384
     m_Key: SentenceName_83c2a752-a9b8-4060-b72d-3e8aafc9bb7a
     m_Metadata:
       m_Items: []
-  - m_Id: 734223048962049
+  - m_Id: 776025206484992
     m_Key: Answer_21fef8fa-01fa-4eee-afde-ddf440835cf3
     m_Metadata:
       m_Items: []
-  - m_Id: 734223048962050
+  - m_Id: 776025206484993
     m_Key: Answer_f264029f-59c1-4a56-85b9-c9eb8de644b4
     m_Metadata:
       m_Items: []
-  - m_Id: 734223048962051
+  - m_Id: 776025206484994
     m_Key: 
     m_Metadata:
       m_Items: []
-  - m_Id: 734223048962052
+  - m_Id: 776025206484995
     m_Key: SentenceText_cb24bac3-4ae3-4d4d-b0d7-bf226d8c2e12
     m_Metadata:
       m_Items: []
-  - m_Id: 734223048962053
+  - m_Id: 776025206484996
     m_Key: SentenceText_054ec834-f917-474e-b71c-24677c8c9af9
     m_Metadata:
       m_Items: []
-  - m_Id: 734223048962054
+  - m_Id: 776025206484997
     m_Key: SentenceName_e3b3c44c-0d0a-4d97-98cd-738c1c161a5d
     m_Metadata:
       m_Items: []
-  - m_Id: 734223048962055
+  - m_Id: 776025206484998
     m_Key: SentenceText_8552c59b-0454-4e1d-a71f-7bbc9b7d199f
     m_Metadata:
       m_Items: []
-  - m_Id: 734223048962056
+  - m_Id: 776025206484999
     m_Key: SentenceName_70c36bd2-b2ac-4d9c-80fa-922087f0f0d0
     m_Metadata:
       m_Items: []
-  - m_Id: 734223048962057
+  - m_Id: 776025206485000
     m_Key: SentenceText_7be1b722-19a0-471c-83b3-07b7b2e416d3
     m_Metadata:
       m_Items: []
-  - m_Id: 734223048962058
+  - m_Id: 776025206485001
     m_Key: SentenceName_2ad40eba-e390-4559-b371-ff94373d0b30
     m_Metadata:
       m_Items: []
-  - m_Id: 734223048962059
+  - m_Id: 776025206485002
     m_Key: SentenceText_b4ae7b67-11da-4405-8395-60cfb85672b5
     m_Metadata:
       m_Items: []
-  - m_Id: 734223048962060
+  - m_Id: 776025206485003
     m_Key: SentenceName_f8f14e88-2597-46b6-a0e0-63e093af19d8
     m_Metadata:
       m_Items: []
-  - m_Id: 734223048962061
+  - m_Id: 776025206485004
     m_Key: SentenceText_e288a045-7ad5-4891-bbc0-7dcd2acd4da4
     m_Metadata:
       m_Items: []
-  - m_Id: 734223048962062
+  - m_Id: 776025206485005
     m_Key: SentenceText_996d6936-3ba2-480d-a796-fd2fd9349477
     m_Metadata:
       m_Items: []
-  - m_Id: 734223048962063
+  - m_Id: 776025206485006
     m_Key: SentenceText_175d53ab-5eb5-49ed-884f-05a67266b131
     m_Metadata:
       m_Items: []
-  - m_Id: 734223048962064
+  - m_Id: 776025206485007
     m_Key: SentenceText_a2b30668-e2cd-4ea5-b79a-6b59ac4fad3d
     m_Metadata:
       m_Items: []
-  - m_Id: 734223048962065
+  - m_Id: 776025206485008
     m_Key: SentenceText_a4e9b798-6e8b-44fe-837c-e9a2aee89eda
     m_Metadata:
       m_Items: []
-  - m_Id: 734223048962066
+  - m_Id: 776025206485009
     m_Key: SentenceText_43606202-4f60-42c9-a504-d588270b2f1a
     m_Metadata:
       m_Items: []
-  - m_Id: 734223048962067
+  - m_Id: 776025206485010
     m_Key: SentenceName_1c836f1b-70ad-4f8d-b3c5-891a539d5f79
     m_Metadata:
       m_Items: []
-  - m_Id: 734223048962068
+  - m_Id: 776025206485011
     m_Key: SentenceText_88dbf3ac-eeeb-464a-a923-775b37505675
     m_Metadata:
       m_Items: []
-  - m_Id: 734223048962069
+  - m_Id: 776025206485012
     m_Key: SentenceText_1d13be19-cc39-46c3-a1c9-53dcd2c89a6c
     m_Metadata:
       m_Items: []
-  - m_Id: 734223048962070
+  - m_Id: 776025206485013
     m_Key: SentenceText_08ef6720-94f3-423c-a218-c3f327a0ac30
     m_Metadata:
       m_Items: []
-  - m_Id: 734223048962071
+  - m_Id: 776025206485014
     m_Key: SentenceText_f50dacfd-0199-4dee-9065-429c301987f5
     m_Metadata:
       m_Items: []
-  - m_Id: 734223048962072
+  - m_Id: 776025206485015
     m_Key: SentenceText_729b7e5f-a830-4161-b361-f9c846e37cb8
     m_Metadata:
       m_Items: []
-  - m_Id: 734223048962073
+  - m_Id: 776025206485016
     m_Key: SentenceText_e6e90866-5b92-4d09-a7b1-5e54c40ff062
     m_Metadata:
       m_Items: []
-  - m_Id: 734223048962074
+  - m_Id: 776025206485017
     m_Key: SentenceText_4b5f4c91-2082-43c5-9773-682662894ae0
     m_Metadata:
       m_Items: []
-  - m_Id: 734223048962075
+  - m_Id: 776025206485018
     m_Key: SentenceText_20895c70-bf74-4dda-aa76-9292049b60a7
     m_Metadata:
       m_Items: []

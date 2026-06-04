@@ -27,12 +27,6 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-de-DE
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 207fd56f492ee0747bd1faf66395c474
-    m_Address: test_de-DE
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-de-DE
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 34f75d529f315fe4bb3c0713980cdf64
     m_Address: Nimrodel Libre_de-DE
     m_ReadOnly: 1
@@ -95,6 +89,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a84946a8add149048bbc3da42e7e5b35
     m_Address: Cuerda_de-DE
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de-DE
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cc6ff777dc6267b44a0223c623176d6c
+    m_Address: DebugCombat_de-DE
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-de-DE

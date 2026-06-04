@@ -65,7 +65,7 @@ public class CombatDebug : MonoBehaviour
             case string b when b.Contains("Mimic"):
                 enemyData = mimic;
                 break;
-            case string b when b.Contains("Libro"):
+            case string b when b.Contains("Jefe"):
                 enemyData = libro;
                 break;
             default:

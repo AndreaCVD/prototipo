@@ -15,6 +15,12 @@ MonoBehaviour:
   m_GroupName: Localization-String-Tables-Spanish (Spain) (es-ES)
   m_GUID: 85be4569b1ec24045a3b89994da212a3
   m_SerializeEntries:
+  - m_GUID: 0954efbd4fdc11045916481322a46fb3
+    m_Address: DebugCombat_es-ES
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es-ES
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 18eeef6a57bbc3c4492f5f4888da81f2
     m_Address: Fogata_es-ES
     m_ReadOnly: 1
@@ -69,12 +75,6 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-es-ES
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 4891109a4b7150f4e8471e9eb2dad0a7
-    m_Address: Dialogo Prueva_es-ES
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-es-ES
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 60d82fd0cbcf1694780b3ee53f1b454c
     m_Address: Puzzle Tutorial_es-ES
     m_ReadOnly: 1
@@ -83,18 +83,6 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 67b09ef5812a018418e243904457359b
     m_Address: Arbol_es-ES
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-es-ES
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 93850dee6b234624b98bae256ad367b8
-    m_Address: Cube_Prueva_es-ES
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-es-ES
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 96f1792a72e638a41adca25c10de6381
-    m_Address: test_es-ES
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-es-ES

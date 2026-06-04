@@ -6,9 +6,11 @@ using UnityEngine.SceneManagement;
 
 public class ThirdFloorPuzzle : MonoBehaviour
 {
-    [SerializeField] Puzzle lista;
 
-    private bool preload;
+    [SerializeField] LoadScene load;
+    [SerializeField] Puzzle lista;
+    public bool jefeFinal;
+
 
     [Header("Obj a modificar al acabar puzzle")]
     [SerializeField] Animator puertaMaestra;
@@ -21,7 +23,9 @@ public class ThirdFloorPuzzle : MonoBehaviour
 
     void Start()
     {
+        jefeFinal = false;
         InstanciarPers();
+        //finalBoss();
     }
 
     void Update()
@@ -32,6 +36,13 @@ public class ThirdFloorPuzzle : MonoBehaviour
             puertaAbierta = true;
             candado.SetBool("candadoOpen", true);
             puertaMaestra.SetBool("doorOpen", true);
+        }
+        //mirar pelea
+        bool aux = load.boss();
+        if (aux && !jefeFinal)
+        {
+            jefeFinal = true;
+            lista.NivelDesbloqueado[4].acabado = true;
         }
     }
 
@@ -62,9 +73,8 @@ public class ThirdFloorPuzzle : MonoBehaviour
     void InstanciarPers()
     {
         //Instanciar Llibre + Lerendur
-        if (!lista.NivelDesbloqueado[4].acabado)
+        if (!load.boss() && !lista.NivelDesbloqueado[4].acabado)
         {
-            //Si nunca se ha hecho el puzzle B2 etkis no es libre
             Instantiate(JefeFinal[0], JefeFinal[1].transform.position, JefeFinal[1].transform.rotation);
         }
         //Quan guanyem, nomes al Llibre

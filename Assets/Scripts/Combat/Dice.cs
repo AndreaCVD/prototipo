@@ -54,82 +54,82 @@ public class Dice : MonoBehaviour
     {
         int a = Random.Range(1, maxValue);
         Debug.Log("Dice=" + a);
-        //StartCoroutine(ChangeText(a));
-        animDice(a);
+        StartCoroutine(ChangeText(a));
+        //animDice(a);
         //MoveDice(a);
         return a;
         diceText.text = a.ToString();
 
     }
-    //IEnumerator ChangeText(int a)
-    //{
-    //    diceText.text = a.ToString();
-    //    //yield return new WaitForSeconds(time);
-    //    //diceText.text = "?";
-
-    //}
-
-    private void animDice(int a)
+    IEnumerator ChangeText(int a)
     {
-        switch (a)
-        {
-            case 1:
-                dado.SetInteger("dado", 1); break;
-            case 2:
-                dado.SetInteger("dado", 2); break;
-            case 3:
-                dado.SetInteger("dado", 3); break;
-            case 4:
-                dado.SetInteger("dado", 4); break;
-            case 5:
-                dado.SetInteger("dado", 5); break;
-            case 6:
-                dado.SetInteger("dado", 6); break;
-            case 7:
-                dado.SetInteger("dado", 7); break;
+        diceText.text = a.ToString();
+        yield return new WaitForSeconds(time);
+        diceText.text = "?";
 
-            case 8:
-                dado.SetInteger("dado", 8); break;
+    }
 
-            case 9:
-                dado.SetInteger("dado", 9); break;
+    //private void animDice(int a)
+    //{
+    //    switch (a)
+    //    {
+    //        case 1:
+    //            dado.SetInteger("dado", 1); break;
+    //        case 2:
+    //            dado.SetInteger("dado", 2); break;
+    //        case 3:
+    //            dado.SetInteger("dado", 3); break;
+    //        case 4:
+    //            dado.SetInteger("dado", 4); break;
+    //        case 5:
+    //            dado.SetInteger("dado", 5); break;
+    //        case 6:
+    //            dado.SetInteger("dado", 6); break;
+    //        case 7:
+    //            dado.SetInteger("dado", 7); break;
 
-            case 10:
-                dado.SetInteger("dado", 10); break;
+    //        case 8:
+    //            dado.SetInteger("dado", 8); break;
 
-            case 11:
-                dado.SetInteger("dado", 11); break;
+    //        case 9:
+    //            dado.SetInteger("dado", 9); break;
 
-            case 12:
-                dado.SetInteger("dado", 12); break;
+    //        case 10:
+    //            dado.SetInteger("dado", 10); break;
 
-            case 13:
-                dado.SetInteger("dado", 13); break;
+    //        case 11:
+    //            dado.SetInteger("dado", 11); break;
 
-            case 14:
-                dado.SetInteger("dado", 14); break;
+    //        case 12:
+    //            dado.SetInteger("dado", 12); break;
 
-            case 15:
-                dado.SetInteger("dado", 15); break;
+    //        case 13:
+    //            dado.SetInteger("dado", 13); break;
 
-            case 16:
-                dado.SetInteger("dado", 16); break;
+    //        case 14:
+    //            dado.SetInteger("dado", 14); break;
 
-            case 17:
-                dado.SetInteger("dado", 17); break;
+    //        case 15:
+    //            dado.SetInteger("dado", 15); break;
 
-            case 18:
-                dado.SetInteger("dado", 18); break;
+    //        case 16:
+    //            dado.SetInteger("dado", 16); break;
 
-            case 19:
-                dado.SetInteger("dado", 19); break;
+    //        case 17:
+    //            dado.SetInteger("dado", 17); break;
 
-            case 20:
-                dado.SetInteger("dado", 20); break;
-            default:
-                break;
-        }
-        }
+    //        case 18:
+    //            dado.SetInteger("dado", 18); break;
+
+    //        case 19:
+    //            dado.SetInteger("dado", 19); break;
+
+    //        case 20:
+    //            dado.SetInteger("dado", 20); break;
+    //        default:
+    //            break;
+    //    }
+    //    }
     //private void MoveDice(int num)
     //{
     //    switch(num)

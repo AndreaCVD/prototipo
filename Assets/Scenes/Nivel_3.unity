@@ -973,7 +973,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3637282513239384025, guid: c897a4dddd7061f4292b1cb900937df4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.3900001
+      value: -0.054
       objectReference: {fileID: 0}
     - target: {fileID: 3637282513239384025, guid: c897a4dddd7061f4292b1cb900937df4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1800,6 +1800,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 3241330531271212881, guid: 3848a681804d73d4fb34add03acbdab0, type: 3}
+      propertyPath: A
+      value: 
+      objectReference: {fileID: 579753158}
+    - target: {fileID: 3241330531271212881, guid: 3848a681804d73d4fb34add03acbdab0, type: 3}
       propertyPath: lista
       value: 
       objectReference: {fileID: 11400000, guid: 92b50351187af094c96f6e51da1599fa, type: 2}
@@ -1807,6 +1811,10 @@ PrefabInstance:
       propertyPath: prota
       value: 
       objectReference: {fileID: 11400000, guid: f0233a249cd1f2b43a3d8f04e1ad2bf2, type: 2}
+    - target: {fileID: 3241330531271212881, guid: 3848a681804d73d4fb34add03acbdab0, type: 3}
+      propertyPath: dialogo_obj
+      value: 
+      objectReference: {fileID: 11400000, guid: 796a36c571edc744bb11af5a1990db37, type: 2}
     - target: {fileID: 3241330531271212881, guid: 3848a681804d73d4fb34add03acbdab0, type: 3}
       propertyPath: escenaState
       value: 
@@ -2485,6 +2493,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3066433364059583657, guid: 6945b0a65f346b44b8081491ca185ca2, type: 3}
   m_PrefabInstance: {fileID: 1225267805}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1363474686 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1942295723155004613, guid: ca28d6627cc19d84893b1c16657bf7d9, type: 3}
+  m_PrefabInstance: {fileID: 1399269160}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af38a4fe4a18a3a4482a4e4286d39c8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1399269160
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2737,7 +2756,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee0a8bb0f1406764bb88512252524f84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  load: {fileID: 1363474686}
   lista: {fileID: 11400000, guid: 92b50351187af094c96f6e51da1599fa, type: 2}
+  jefeFinal: 0
   puertaMaestra: {fileID: 3846526417761077098}
   candado: {fileID: 1114307510}
   JefeFinal:
@@ -2779,7 +2800,7 @@ MonoBehaviour:
   iconoPocionVida: {fileID: 21300000, guid: b65d9610dbda6ba46a32505c0e82604c, type: 3}
   iconoDaga: {fileID: 21300000, guid: dd10b42ca8b4b0e4880a096072aff5ad, type: 3}
   iconoEspada: {fileID: 21300000, guid: e9a57d8d864fc2443b5bdcfed074ea39, type: 3}
-  iconoPocionLava: {fileID: 0}
+  iconoPocionLava: {fileID: 21300000, guid: 966a370916b06b940b0edfc209421ad2, type: 3}
 --- !u!114 &1753848651
 MonoBehaviour:
   m_ObjectHideFlags: 0

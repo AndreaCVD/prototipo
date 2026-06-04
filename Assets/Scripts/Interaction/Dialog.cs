@@ -6,6 +6,7 @@ using cherrydev;
 
 public class Dialog : MonoBehaviour
 {
+
     LoadScene load;
     Dice dados;
     [Header("LISTA PUZZLE")]
@@ -16,7 +17,7 @@ public class Dialog : MonoBehaviour
     [SerializeField] InputHandler escenaState;
     [Header("EL PREFAB")]
     [SerializeField] private cherrydev.DialogBehaviour _dialogBehaviour;
-    
+    bool lastEstate;
     private GameObject obj;
     private int vidaMax = 50;
     private int objMax = 3;
@@ -32,11 +33,27 @@ public class Dialog : MonoBehaviour
     }
     public void Start()
     {
+
         dados = this.GetComponent<Dice>();
 
         GameObject aux = GameObject.Find("--SceneManagement--");
         load = aux.GetComponent<LoadScene>();
+
+        //lastEstate = load.onCombat;
     }
+    //void Update()
+    //{
+    //    if (lastEstate != load.onCombat)
+    //    {
+    //        lastEstate = load.onCombat;
+    //        if (lastEstate == false)
+    //        {
+    //            EmpezarDialogo(dialogo_obj, A);
+    //            Debug.Log("Ha sortit del combat");
+    //        }
+
+    //    }
+    //}
     public void EmpezarDialogo(DialogNodeGraph dialogo, GameObject obj)
     {
         this.obj = obj;
@@ -74,6 +91,7 @@ public class Dialog : MonoBehaviour
         _dialogBehaviour.StartDialog(dialogo);
 
     }
+
     //Dialogo
     public void Dialogo()
     {

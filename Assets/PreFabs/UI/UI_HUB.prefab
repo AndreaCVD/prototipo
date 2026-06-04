@@ -67,6 +67,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uIDocument: {fileID: 1050064535435654908}
   pantalla: {fileID: 0}
+  audioMixer: {fileID: 0}
 --- !u!114 &3635282713806113210
 MonoBehaviour:
   m_ObjectHideFlags: 0

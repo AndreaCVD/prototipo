@@ -10,7 +10,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2851141393439377359, guid: 7bd55e637a373424f9318c984b00c3ea, type: 3}
       propertyPath: m_Name
-      value: Caballero_Estatua
+      value: Caballero_Estatua Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 2851141393439377359, guid: 7bd55e637a373424f9318c984b00c3ea, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 8702075682446963077, guid: 7bd55e637a373424f9318c984b00c3ea, type: 3}
       propertyPath: m_LocalPosition.x
@@ -52,7 +56,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2891147592756947765, guid: 7bd55e637a373424f9318c984b00c3ea, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

@@ -51,11 +51,11 @@ PrefabInstance:
     - target: {fileID: -4570623713880467588, guid: fbffec58356a5a947869d4c5295ae91a, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 8072f5a358d810847a82549c641fded5, type: 2}
+      objectReference: {fileID: 2100000, guid: 9430940b081a5214aab1063b884730be, type: 2}
     - target: {fileID: -2908574008629734309, guid: fbffec58356a5a947869d4c5295ae91a, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: d49aca012b16676458a659e946184c05, type: 2}
+      objectReference: {fileID: 2100000, guid: 56ef7ceda27b0084480e9c9a823d2ba6, type: 2}
     - target: {fileID: 919132149155446097, guid: fbffec58356a5a947869d4c5295ae91a, type: 3}
       propertyPath: m_Name
       value: Candado_v2

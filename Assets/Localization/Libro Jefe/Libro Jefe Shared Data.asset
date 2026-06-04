@@ -15,71 +15,71 @@ MonoBehaviour:
   m_TableCollectionName: Libro Jefe
   m_TableCollectionNameGuidString: 900f512c17324f54fae6655aaa49cf62
   m_Entries:
-  - m_Id: 347181697789952
+  - m_Id: 431193338474496
     m_Key: SentenceText_2bfc4fbe-c961-4532-a94d-09bee40885f4
     m_Metadata:
       m_Items: []
-  - m_Id: 347181710372864
+  - m_Id: 431193346863104
     m_Key: SentenceName_1dcec883-d328-4f13-b704-2a0ca3787930
     m_Metadata:
       m_Items: []
-  - m_Id: 347181710372865
+  - m_Id: 431193346863105
     m_Key: 
     m_Metadata:
       m_Items: []
-  - m_Id: 347181710372866
+  - m_Id: 431193346863106
     m_Key: Answer_68e16f26-103f-4183-bbc4-20c03f3fec57
     m_Metadata:
       m_Items: []
-  - m_Id: 347181710372867
+  - m_Id: 431193346863107
     m_Key: Answer_6b3c6c65-a4f5-48ec-b3b7-b5aeebc28496
     m_Metadata:
       m_Items: []
-  - m_Id: 347181710372868
+  - m_Id: 431193346863108
     m_Key: SentenceText_a520664b-3e45-4524-9fa8-a4875ea4151d
     m_Metadata:
       m_Items: []
-  - m_Id: 347181710372869
+  - m_Id: 431193346863109
     m_Key: SentenceText_d6e72ed7-594e-4262-bff7-4c5d3f23da11
     m_Metadata:
       m_Items: []
-  - m_Id: 347181710372870
+  - m_Id: 431193346863110
     m_Key: SentenceName_be54fb28-ff78-47e4-9675-d65212408a20
     m_Metadata:
       m_Items: []
-  - m_Id: 347181710372871
+  - m_Id: 431193346863111
     m_Key: SentenceText_b7db5936-ace9-4014-8881-ee31b4dccee9
     m_Metadata:
       m_Items: []
-  - m_Id: 347181710372872
+  - m_Id: 431193346863112
     m_Key: SentenceName_538b82ab-a307-4ca9-bde0-fc7b0f9ab11f
     m_Metadata:
       m_Items: []
-  - m_Id: 347181710372873
+  - m_Id: 431193346863113
     m_Key: SentenceText_a26842ec-92c7-49c0-b40b-597694acdd00
     m_Metadata:
       m_Items: []
-  - m_Id: 347181710372874
+  - m_Id: 431193346863114
     m_Key: SentenceText_c6ff0818-b78f-455f-83e6-f780f872852d
     m_Metadata:
       m_Items: []
-  - m_Id: 347181710372875
+  - m_Id: 431193346863115
     m_Key: SentenceText_0197581e-5852-4ba2-a0d8-1253f1c423b4
     m_Metadata:
       m_Items: []
-  - m_Id: 347181710372876
+  - m_Id: 431193346863116
     m_Key: SentenceText_59beecf8-61ba-42e2-a61c-bc25e2b3d2dc
     m_Metadata:
       m_Items: []
-  - m_Id: 347181710372877
+  - m_Id: 431193346863117
     m_Key: SentenceText_1bc18a99-348b-4099-9ddd-5d49def71004
     m_Metadata:
       m_Items: []
-  - m_Id: 347181710372878
+  - m_Id: 431193346863118
     m_Key: SentenceText_2b4b5071-1e0f-4188-9c8d-937638f1fbbe
     m_Metadata:
       m_Items: []
-  - m_Id: 347181710372879
+  - m_Id: 431193346863119
     m_Key: SentenceText_aa1535bf-4dba-4d0a-afc0-144ca0635d12
     m_Metadata:
       m_Items: []

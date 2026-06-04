@@ -53,7 +53,7 @@ public class Dialog : MonoBehaviour
         _dialogBehaviour.BindExternalFunction("ContinuarMov", continuarMov);
         _dialogBehaviour.BindExternalFunction("PararMov", pararMov);
         _dialogBehaviour.BindExternalFunction("Destroy", DestroyObj);
-        _dialogBehaviour.BindExternalFunction("Combat", Combate);
+        _dialogBehaviour.BindExternalFunction("Combate", Combate);
         _dialogBehaviour.BindExternalFunction("PisosDesbloqueados", pisosDesbloqueados);
         //Cambio escena
         _dialogBehaviour.BindExternalFunction("irCampamento", irCampamento);

@@ -36,6 +36,7 @@ public class Preload : MonoBehaviour
 
     void Awake()
     {
+        NameOpponent = "";
         //vectorPosicion = GetComponent<personaje>();
         //protagonista = GameObject.Find("Player Character");
 

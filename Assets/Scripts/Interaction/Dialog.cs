@@ -6,8 +6,7 @@ using cherrydev;
 
 public class Dialog : MonoBehaviour
 {
-    [SerializeField] DialogNodeGraph dialogo_obj;
-    public GameObject A;
+
     LoadScene load;
     Dice dados;
     [Header("LISTA PUZZLE")]
@@ -40,21 +39,21 @@ public class Dialog : MonoBehaviour
         GameObject aux = GameObject.Find("--SceneManagement--");
         load = aux.GetComponent<LoadScene>();
 
-        lastEstate = load.onCombat;
+        //lastEstate = load.onCombat;
     }
-    void Update()
-    {
-        if (lastEstate != load.onCombat)
-        {
-            lastEstate = load.onCombat;
-            if (lastEstate == false)
-            {
-                EmpezarDialogo(dialogo_obj, A);
-                Debug.Log("Ha sortit del combat");
-            }
+    //void Update()
+    //{
+    //    if (lastEstate != load.onCombat)
+    //    {
+    //        lastEstate = load.onCombat;
+    //        if (lastEstate == false)
+    //        {
+    //            EmpezarDialogo(dialogo_obj, A);
+    //            Debug.Log("Ha sortit del combat");
+    //        }
 
-        }
-    }
+    //    }
+    //}
     public void EmpezarDialogo(DialogNodeGraph dialogo, GameObject obj)
     {
         this.obj = obj;

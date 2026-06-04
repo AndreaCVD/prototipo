@@ -21,10 +21,12 @@ public class LoadScene : MonoBehaviour
 
     //[SerializeField] Preload preload;
     string name_anterior;
-    public bool onCombat;
+    private bool onCombat;
+    private bool jefeFin;
 
     private void Start()
     {
+        jefeFin = false;
         onCombat = false;
 
         destroyObjs = this.GetComponent<crear_obj>();
@@ -97,6 +99,10 @@ public class LoadScene : MonoBehaviour
             SceneManager.LoadScene(name_anterior);
         }
     }
+    public bool boss()
+    {
+        return jefeFin;
+    }
     public void SalirCombate()//Salimos del combate
     {
         Debug.Log("Salimos de combate");
@@ -104,7 +110,12 @@ public class LoadScene : MonoBehaviour
         //si estamos en combate eliminar esta escena
         //Sacamos la pausa del juego principal
         escenaState.ScenePause(false); //false, se mueve
+        if (preload.nameOpponent() == "Jefe Final(Clone)")
+        {
+            jefeFin = true;
+            //Debug.Log("el jefe s'ha guanyat");
 
+        }
       // Unload Scene
         //SceneManager.UnloadSceneAsync("combat_scene");
         AsyncOperation unloadOp = SceneManager.UnloadSceneAsync("combat_scene");

@@ -18,122 +18,122 @@ MonoBehaviour:
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 734223019601920
+  - m_Id: 776025164541952
     m_Localized: "Hola, hola, socorrista, \xBFc\xF3mo te va todo?"
     m_Metadata:
       m_Items: []
-  - m_Id: 734223048962048
+  - m_Id: 776025198096384
     m_Localized: Nim
     m_Metadata:
       m_Items: []
-  - m_Id: 734223048962049
+  - m_Id: 776025206484992
     m_Localized: No soy socorrista
     m_Metadata:
       m_Items: []
-  - m_Id: 734223048962050
+  - m_Id: 776025206484993
     m_Localized: "S\xFAper bien, y a ti?"
     m_Metadata:
       m_Items: []
-  - m_Id: 734223048962051
+  - m_Id: 776025206484994
     m_Localized: "Bueno, pero me sacaste de all\xE1 sin questinartelo dos veces,
       ser\xE1 un don tuyo."
     m_Metadata:
       m_Items: []
-  - m_Id: 734223048962052
+  - m_Id: 776025206484995
     m_Localized: "\xA1Genial!"
     m_Metadata:
       m_Items: []
-  - m_Id: 734223048962053
+  - m_Id: 776025206484996
     m_Localized: "\xA1Rescataste a todo el mundo! Much\xEDssimas gracias"
     m_Metadata:
       m_Items: []
-  - m_Id: 734223048962054
+  - m_Id: 776025206484997
     m_Localized: Nim
     m_Metadata:
       m_Items: []
-  - m_Id: 734223048962055
+  - m_Id: 776025206484998
     m_Localized: Muchas gracias
     m_Metadata:
       m_Items: []
-  - m_Id: 734223048962056
+  - m_Id: 776025206484999
     m_Localized: Etkis
     m_Metadata:
       m_Items: []
-  - m_Id: 734223048962057
+  - m_Id: 776025206485000
     m_Localized: "No se que habr\xEDas hecho sino jaja"
     m_Metadata:
       m_Items: []
-  - m_Id: 734223048962058
+  - m_Id: 776025206485001
     m_Localized: Lerendur
     m_Metadata:
       m_Items: []
-  - m_Id: 734223048962059
+  - m_Id: 776025206485002
     m_Localized: "No hay de qu\xE9."
     m_Metadata:
       m_Items: []
-  - m_Id: 734223048962060
+  - m_Id: 776025206485003
     m_Localized: Carlos
     m_Metadata:
       m_Items: []
-  - m_Id: 734223048962061
+  - m_Id: 776025206485004
     m_Localized: "Gracias a ti Etkis lleg\xF3 bien aqu\xED."
     m_Metadata:
       m_Items: []
-  - m_Id: 734223048962062
+  - m_Id: 776025206485005
     m_Localized: "Podr\xEDas haberme venido a yudar tu tambi\xE9n..."
     m_Metadata:
       m_Items: []
-  - m_Id: 734223048962063
+  - m_Id: 776025206485006
     m_Localized: "\xA1Hab\xEDa una armadura periguiendome!"
     m_Metadata:
       m_Items: []
-  - m_Id: 734223048962064
+  - m_Id: 776025206485007
     m_Localized: "Seguro...Por cierto, \xBFhas visto a otro elfo?"
     m_Metadata:
       m_Items: []
-  - m_Id: 734223048962065
+  - m_Id: 776025206485008
     m_Localized: "Se llama Lerendur, \xBFqu\xE9 le habr\xE1 pasado?"
     m_Metadata:
       m_Items: []
-  - m_Id: 734223048962066
+  - m_Id: 776025206485009
     m_Localized: Gracias a ti Lerendur ha podido volver.
     m_Metadata:
       m_Items: []
-  - m_Id: 734223048962067
+  - m_Id: 776025206485010
     m_Localized: Nim
     m_Metadata:
       m_Items: []
-  - m_Id: 734223048962068
+  - m_Id: 776025206485011
     m_Localized: "Aunque aqu\xED arriba estoy un poco sola, y ese viejo es un poco
       raro..."
     m_Metadata:
       m_Items: []
-  - m_Id: 734223048962069
+  - m_Id: 776025206485012
     m_Localized: Cuando quisimos bajar nos miro de lejos, sin decir nada...
     m_Metadata:
       m_Items: []
-  - m_Id: 734223048962070
+  - m_Id: 776025206485013
     m_Localized: "Espera... \xA1\xBFsigue con ese ba\xF1ador?!"
     m_Metadata:
       m_Items: []
-  - m_Id: 734223048962071
+  - m_Id: 776025206485014
     m_Localized: "Aunque no recuerdo mucho lo que paso...pero hab\xEDa un libro que
       nohe acabo de leer."
     m_Metadata:
       m_Items: []
-  - m_Id: 734223048962072
+  - m_Id: 776025206485015
     m_Localized: "Por cierto, \xBFhas visto un mediano por all\xE0?"
     m_Metadata:
       m_Items: []
-  - m_Id: 734223048962073
+  - m_Id: 776025206485016
     m_Localized: "Que triste, tenia muchos conjuros de magia. \xBFY si volvemos?"
     m_Metadata:
       m_Items: []
-  - m_Id: 734223048962074
+  - m_Id: 776025206485017
     m_Localized: No.
     m_Metadata:
       m_Items: []
-  - m_Id: 734223048962075
+  - m_Id: 776025206485018
     m_Localized: "Seguro esta robando cofres por all\xED..."
     m_Metadata:
       m_Items: []

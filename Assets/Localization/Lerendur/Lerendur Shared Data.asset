@@ -15,155 +15,155 @@ MonoBehaviour:
   m_TableCollectionName: Lerendur
   m_TableCollectionNameGuidString: 13e892fd12643e14c8c6f8a790ceda91
   m_Entries:
-  - m_Id: 723941727727616
+  - m_Id: 917038193504256
     m_Key: SentenceText_42e5e143-e512-47fe-954e-15fdd7964092
     m_Metadata:
       m_Items: []
-  - m_Id: 723941736116224
+  - m_Id: 917038256418816
     m_Key: SentenceName_11671a8a-0876-4bfa-ac30-2197679ce6f8
     m_Metadata:
       m_Items: []
-  - m_Id: 723941740310528
+  - m_Id: 917038260613120
     m_Key: Answer_83bf95a4-446d-4f04-a22f-53a99714f377
     m_Metadata:
       m_Items: []
-  - m_Id: 723941740310529
+  - m_Id: 917038260613121
     m_Key: Answer_4258a36f-0a4e-4b70-a21a-13e83a59eba9
     m_Metadata:
       m_Items: []
-  - m_Id: 723941740310530
+  - m_Id: 917038260613122
     m_Key: Answer_7596a4ad-6f20-4147-8a59-397621e79354
     m_Metadata:
       m_Items: []
-  - m_Id: 723941740310531
+  - m_Id: 917038260613123
     m_Key: SentenceText_e9fe430f-d056-4259-963c-16a2dce80595
     m_Metadata:
       m_Items: []
-  - m_Id: 723941740310532
+  - m_Id: 917038260613124
     m_Key: SentenceText_1643fbef-d672-48ae-b383-75c7e13182fc
     m_Metadata:
       m_Items: []
-  - m_Id: 723941740310533
+  - m_Id: 917038260613125
     m_Key: SentenceText_34e5c004-faef-4d57-a4c4-120922af9d13
     m_Metadata:
       m_Items: []
-  - m_Id: 723941740310534
+  - m_Id: 917038260613126
     m_Key: SentenceText_171d8715-71a9-4433-ace7-3cfecf500238
     m_Metadata:
       m_Items: []
-  - m_Id: 723941740310535
+  - m_Id: 917038260613127
     m_Key: SentenceText_433c7423-abc7-40d3-a7cb-9a4665a7c469
     m_Metadata:
       m_Items: []
-  - m_Id: 723941740310536
+  - m_Id: 917038260613128
     m_Key: SentenceName_be0c5202-4376-4438-9aa8-2ef31a1d201c
     m_Metadata:
       m_Items: []
-  - m_Id: 723941740310537
+  - m_Id: 917038260613129
     m_Key: SentenceText_0f1725b2-8879-4d5a-84d1-6809b63bdfb7
     m_Metadata:
       m_Items: []
-  - m_Id: 723941740310538
+  - m_Id: 917038260613130
     m_Key: SentenceText_af729320-b6cc-4941-b6f2-1482177febc6
     m_Metadata:
       m_Items: []
-  - m_Id: 723941740310539
+  - m_Id: 917038260613131
     m_Key: SentenceText_32936995-50a3-4ff2-ae82-e97a1f3f5342
     m_Metadata:
       m_Items: []
-  - m_Id: 723941740310540
+  - m_Id: 917038260613132
     m_Key: SentenceText_798f5328-dc6d-49d0-9c43-13d91c657e60
     m_Metadata:
       m_Items: []
-  - m_Id: 723941740310541
+  - m_Id: 917038260613133
     m_Key: SentenceText_ecf04d43-1c1b-45e3-829a-7144cf842516
     m_Metadata:
       m_Items: []
-  - m_Id: 723941740310542
+  - m_Id: 917038260613134
     m_Key: SentenceName_e91b588c-28af-4660-b4d8-ce2eb7b186a4
     m_Metadata:
       m_Items: []
-  - m_Id: 723941740310543
+  - m_Id: 917038260613135
     m_Key: SentenceText_7c61755b-e059-4ea6-8f45-52bc925aad3d
     m_Metadata:
       m_Items: []
-  - m_Id: 723941740310544
+  - m_Id: 917038260613136
     m_Key: SentenceName_a05dc08e-7e0e-477c-b778-0ef39d4d74fd
     m_Metadata:
       m_Items: []
-  - m_Id: 723941740310545
+  - m_Id: 917038260613137
     m_Key: SentenceText_16323fc8-a24b-4ad0-980d-249a437a2345
     m_Metadata:
       m_Items: []
-  - m_Id: 723941740310546
+  - m_Id: 917038260613138
     m_Key: SentenceText_37b22bcc-f7b8-4fac-bdd1-88d4281ff66e
     m_Metadata:
       m_Items: []
-  - m_Id: 723941740310547
+  - m_Id: 917038260613139
     m_Key: SentenceText_b3a7a6ae-b2de-434d-b533-e38d2935fcf1
     m_Metadata:
       m_Items: []
-  - m_Id: 723941740310548
+  - m_Id: 917038260613140
     m_Key: SentenceText_c1598309-fa9b-4848-a26b-acfe18ae8ff5
     m_Metadata:
       m_Items: []
-  - m_Id: 723941740310549
+  - m_Id: 917038260613141
     m_Key: SentenceText_b9c49692-d7eb-4f33-ab4b-17d253d1844b
     m_Metadata:
       m_Items: []
-  - m_Id: 723941740310550
+  - m_Id: 917038260613142
     m_Key: SentenceText_4f45d624-1606-45c8-a47b-2b58d84e4fdb
     m_Metadata:
       m_Items: []
-  - m_Id: 723941740310551
+  - m_Id: 917038260613143
     m_Key: SentenceText_1f4e69c4-109a-4e30-9ea2-3ec29221e4af
     m_Metadata:
       m_Items: []
-  - m_Id: 723941740310552
+  - m_Id: 917038260613144
     m_Key: SentenceText_0ca726fa-7327-4f00-9b46-ea54b3b61fcc
     m_Metadata:
       m_Items: []
-  - m_Id: 723941740310553
+  - m_Id: 917038260613145
     m_Key: SentenceText_60bbdb1f-fd7e-4c6d-aa31-f5c2a8359494
     m_Metadata:
       m_Items: []
-  - m_Id: 723941740310554
+  - m_Id: 917038260613146
     m_Key: SentenceText_b123c346-40e0-4dc6-8256-9111e4082397
     m_Metadata:
       m_Items: []
-  - m_Id: 723941740310555
+  - m_Id: 917038260613147
     m_Key: SentenceText_1b0f442f-2ece-4445-b93e-8bdd39c92634
     m_Metadata:
       m_Items: []
-  - m_Id: 723941740310556
+  - m_Id: 917038260613148
     m_Key: SentenceText_1f12526a-b655-4292-bc04-c2961a878cd9
     m_Metadata:
       m_Items: []
-  - m_Id: 723941740310557
+  - m_Id: 917038260613149
     m_Key: SentenceText_3f4744aa-3722-4898-8546-21c0650b4834
     m_Metadata:
       m_Items: []
-  - m_Id: 723941740310558
+  - m_Id: 917038260613150
     m_Key: SentenceText_e081a1a5-3de5-4017-8dbd-da9c0095e3dd
     m_Metadata:
       m_Items: []
-  - m_Id: 723941740310559
+  - m_Id: 917038260613151
     m_Key: SentenceText_99e87e9b-10b9-436d-913e-6fee5afba76e
     m_Metadata:
       m_Items: []
-  - m_Id: 723941740310560
+  - m_Id: 917038260613152
     m_Key: SentenceText_22f7c6fe-81cd-4df4-8ffa-4a1835a52e36
     m_Metadata:
       m_Items: []
-  - m_Id: 723941740310561
+  - m_Id: 917038260613153
     m_Key: SentenceText_7537a189-a053-4395-938c-4bfe21d2dc83
     m_Metadata:
       m_Items: []
-  - m_Id: 723941740310562
+  - m_Id: 917038260613154
     m_Key: SentenceText_3a3ff467-8464-4b26-8b7b-821e81ce4d98
     m_Metadata:
       m_Items: []
-  - m_Id: 723941740310563
+  - m_Id: 917038260613155
     m_Key: SentenceText_7968c21c-43fb-4661-af3c-7987e5e31a5e
     m_Metadata:
       m_Items: []

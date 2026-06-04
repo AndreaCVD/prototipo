@@ -25,11 +25,11 @@ public class Save_Stats : MonoBehaviour
         playerPersonaje.stats.values[3].value = 50; //Vida
         playerPersonaje.stats.values[4].value = 14; //Armadura
         //Player Stats
-        playerPersonaje.Inventario.Llave.Clear();
-        playerPersonaje.Inventario.LlaveMaestra.Clear();
-        playerPersonaje.Inventario.Daga.Clear();
-        playerPersonaje.Inventario.Espada.Clear();
-        playerPersonaje.Inventario.PocionVida.Clear();
+        //playerPersonaje.Inventario.Llave.Clear();
+        //playerPersonaje.Inventario.LlaveMaestra.Clear();
+        //playerPersonaje.Inventario.Daga.Clear();
+        //playerPersonaje.Inventario.Espada.Clear();
+        //playerPersonaje.Inventario.PocionVida.Clear();
 
         //Los enemigos tienen que hacerse en cada cambio de escena
         ////Slime

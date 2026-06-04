@@ -15,19 +15,19 @@ MonoBehaviour:
   m_TableCollectionName: Tienda
   m_TableCollectionNameGuidString: f9f0ff4644c1d2c4aa02c95e61211e9a
   m_Entries:
-  - m_Id: 1873830402650112
+  - m_Id: 1908892078764032
     m_Key: Answer_ceffc39d-da20-482e-b374-1ad207f3398b
     m_Metadata:
       m_Items: []
-  - m_Id: 1873830478147584
+  - m_Id: 1908892124901376
     m_Key: Answer_35cb5fc8-05a4-4da5-802d-46639819240c
     m_Metadata:
       m_Items: []
-  - m_Id: 1873830482341888
+  - m_Id: 1908892129095680
     m_Key: SentenceText_8e0daee3-6e01-419c-9c72-480c7fbdfbaa
     m_Metadata:
       m_Items: []
-  - m_Id: 1873830482341889
+  - m_Id: 1908892129095681
     m_Key: SentenceName_d909bf06-342c-49a5-b533-a9c6c6ec0fe6
     m_Metadata:
       m_Items: []

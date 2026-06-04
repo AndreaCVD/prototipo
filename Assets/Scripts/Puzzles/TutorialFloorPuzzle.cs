@@ -30,11 +30,18 @@ public class TutorialFloorPuzzle : MonoBehaviour
         InstanciarPers();
         revisarPuzzle();
 
+        if (lista == null)
+        {
+            GameObject aux = GameObject.Find("personaje");
+            lista = aux.GetComponent<Inventario>().returnPuzzle();
+        }
+
         zona_1.finished = lista.Nivel_0[0].acabado;
     }
 
     void Update()
     {
+
         if (!lista.Nivel_0[0].acabado)
         {
             lista.Nivel_0[0].acabado = zona_1.finished;
@@ -88,6 +95,8 @@ public class TutorialFloorPuzzle : MonoBehaviour
     
     void InstanciarPers()
     {
+        Debug.Log(lista.NivelDesbloqueado[0].acabado);
+        Debug.Log(lista.NivelDesbloqueado[3].acabado);
         //Viejo
         if (lista.NivelDesbloqueado[0].acabado)
         {
@@ -97,7 +106,7 @@ public class TutorialFloorPuzzle : MonoBehaviour
         else
         {
             Instantiate(Viejo[0], Viejo[1].transform.position, Viejo[1].transform.rotation);
-
+            
         }
         //Etkis --> Mirar Puzzle B2
         if (lista.Nivel_1[1].acabado)
@@ -112,9 +121,9 @@ public class TutorialFloorPuzzle : MonoBehaviour
             Instantiate(Nim[0], Nim[1].transform.position, Nim[1].transform.rotation);
         }
         //Lerendur --> Ganar pelea final
-        if (lista.NivelDesbloqueado[3].acabado)
+        if (lista.NivelDesbloqueado[4].acabado)
         {
-            Instantiate(Lerendur[2], Lerendur[3].transform.position, Lerendur[3].transform.rotation);
+            Instantiate(Lerendur[0], Lerendur[1].transform.position, Lerendur[1].transform.rotation);
         }
     }
 }

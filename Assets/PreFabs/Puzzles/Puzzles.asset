@@ -35,4 +35,6 @@ MonoBehaviour:
   - name: Nivel_2
     acabado: 0
   - name: Nivel_3
+    acabado: 1
+  - name: Jefe_Final
     acabado: 0

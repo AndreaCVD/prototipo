@@ -1401,6 +1401,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4161711505757076601, guid: ca25f92c7d3a9ee4aa6f774f0c996115, type: 3}
+      propertyPath: m_Volume
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4161711505757076601, guid: ca25f92c7d3a9ee4aa6f774f0c996115, type: 3}
       propertyPath: OutputAudioMixerGroup
       value: 
       objectReference: {fileID: 2259271644845032887, guid: 3805aa405e5df0344a65c712a55c36b2, type: 2}
@@ -1443,6 +1447,10 @@ PrefabInstance:
     - target: {fileID: 7325924228481070404, guid: ca25f92c7d3a9ee4aa6f774f0c996115, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8650124944624283254, guid: ca25f92c7d3a9ee4aa6f774f0c996115, type: 3}
+      propertyPath: m_Volume
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 8650124944624283254, guid: ca25f92c7d3a9ee4aa6f774f0c996115, type: 3}
       propertyPath: OutputAudioMixerGroup
@@ -1618,6 +1626,10 @@ PrefabInstance:
     - target: {fileID: 5305385646599809368, guid: 18956a4a129394a42aeebd1263fb6080, type: 3}
       propertyPath: m_Name
       value: Caballero
+      objectReference: {fileID: 0}
+    - target: {fileID: 6381315274930889123, guid: 18956a4a129394a42aeebd1263fb6080, type: 3}
+      propertyPath: m_Volume
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 6691557478830491062, guid: 18956a4a129394a42aeebd1263fb6080, type: 3}
       propertyPath: m_LocalPosition.x

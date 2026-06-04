@@ -63,6 +63,7 @@ public class Dialog : MonoBehaviour
         //Personajes
         _dialogBehaviour.BindExternalFunction("EstadoEtkis", estadoEtkis);
         _dialogBehaviour.BindExternalFunction("EstadoNim", estadoNim);
+        _dialogBehaviour.BindExternalFunction("EstadoNim", estadoLere);
         //Dialogo
         _dialogBehaviour.BindExternalFunction("Dialogo", Dialogo);
         //Prota
@@ -183,6 +184,19 @@ public class Dialog : MonoBehaviour
         }
     }
     public void estadoNim()
+    {
+        if (lista.Nivel_2[2].acabado)
+        {
+            Debug.Log("Nim es libre");
+            _dialogBehaviour.SetVariableValue("nim_libre_nivel2", 1);
+        }
+        else
+        {
+            Debug.Log("Nim no es libre");
+            _dialogBehaviour.SetVariableValue("nim_libre_nivel2", 0);
+        }
+    }
+    public void estadoLere()
     {
         if (lista.Nivel_2[2].acabado)
         {

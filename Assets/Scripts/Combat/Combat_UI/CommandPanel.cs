@@ -58,27 +58,27 @@ public class CommandPanel : MonoBehaviour
     public void Fuerza()
     {
         commandManager.Fuerza();
-        Debug.Log("Ataque de fuerza");
+        //Debug.Log("Ataque de fuerza");
 
     }
     //Boton Inteligencia
     public void Intel()
     {
         commandManager.Inteligencia();
-        Debug.Log("Ha usado inteligencia");
+        //Debug.Log("Ha usado inteligencia");
     }
     //Boton Carisma
     public void Carisma()
     {
         commandManager.Carisma();
-        Debug.Log("Ha usado carisma");
+        //Debug.Log("Ha usado carisma");
     }
 
     // SECUNDARIAS
     //Boton Huir
     public void Huir()
     {
-        Debug.Log("Huir");
+        //Debug.Log("Huir");
         loadScene.SalirCombate();
         //preload.cambiarEscena("pruevas_prototipo");
     }

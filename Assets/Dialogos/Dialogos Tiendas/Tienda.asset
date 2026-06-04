@@ -15,17 +15,17 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 605.6002
-    y: 343.59995
+    x: 835.20026
+    y: 217.19992
     width: 190
     height: 80
   IsDragging: 0
-  IsSelected: 1
+  IsSelected: 0
   _functionName: ContinuarMov
   _description: 
   ParentNodes:
-  - {fileID: -6685595360915545557}
   - {fileID: -3206520652390200242}
+  - {fileID: -4427897268622661681}
   ChildNode: {fileID: 0}
 --- !u!114 &-6927550419059624890
 MonoBehaviour:
@@ -42,8 +42,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 28.800049
-    y: 286.79996
+    x: 258.4001
+    y: 160.39993
     width: 190
     height: 135
   IsDragging: 1
@@ -74,8 +74,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 313.60037
-    y: 210.79997
+    x: 543.20044
+    y: 84.39995
     width: 190
     height: 80
   IsDragging: 1
@@ -84,7 +84,7 @@ MonoBehaviour:
   _description: 
   ParentNodes:
   - {fileID: -6927550419059624890}
-  ChildNode: {fileID: -7491735092704431936}
+  ChildNode: {fileID: -4427897268622661681}
 --- !u!114 &-4427897268622661681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -100,22 +100,23 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 586.4
-    y: 258
+    x: 796.00006
+    y: 29.999985
     width: 190
     height: 135
-  IsDragging: 0
+  IsDragging: 1
   IsSelected: 0
   _sentence:
-    CharacterName: 
-    Text: 
-    CharacterSprite: {fileID: 0}
-  ParentNodes: []
-  ChildNode: {fileID: 0}
+    CharacterName: Carlos
+    Text: Me siento super descansado.
+    CharacterSprite: {fileID: 21300000, guid: a188ce1c9b6fce644b5efac5bf9be647, type: 3}
+  ParentNodes:
+  - {fileID: -6685595360915545557}
+  ChildNode: {fileID: -7491735092704431936}
   _isExternalFunc: 0
   _externalFunctionName: 
-  CharacterNameKey: 
-  SentenceTextKey: 
+  CharacterNameKey: SentenceName_d909bf06-342c-49a5-b533-a9c6c6ec0fe6
+  SentenceTextKey: SentenceText_763dff6d-3ed9-4bb0-b468-fab6936e894c
 --- !u!114 &-3206520652390200242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -131,12 +132,12 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 314.4003
-    y: 352.39993
+    x: 544.00037
+    y: 225.99991
     width: 190
     height: 135
   IsDragging: 1
-  IsSelected: 0
+  IsSelected: 1
   _sentence:
     CharacterName: Carlos
     Text: Ahora mejor no.
@@ -188,8 +189,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -183.20001
-    y: 313.99994
+    x: 46.400024
+    y: 187.59991
     width: 190
     height: 80
   IsDragging: 1

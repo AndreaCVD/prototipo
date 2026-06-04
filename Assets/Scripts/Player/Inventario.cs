@@ -86,7 +86,7 @@ public class Inventario : MonoBehaviour
         //Debug.Log("lava");
         if (prota.stats.values[3].value > 0)
         {
-            prota.stats.values[3].value--;
+            prota.stats.values[3].value -= 1;
         }
         if (prota.stats.values[3].value <= 0)
         {

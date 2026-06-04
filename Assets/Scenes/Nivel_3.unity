@@ -2181,6 +2181,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Candado_v2
       objectReference: {fileID: 0}
+    - target: {fileID: 4726149167324036764, guid: 43e0ed55eaf8a3e43869e00d269a663b, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 56ef7ceda27b0084480e9c9a823d2ba6, type: 2}
     - target: {fileID: 6666002300389139287, guid: 43e0ed55eaf8a3e43869e00d269a663b, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.00001129546

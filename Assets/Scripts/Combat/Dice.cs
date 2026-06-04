@@ -11,7 +11,7 @@ public class Dice : MonoBehaviour
     //[SerializeField] CanvasGroup canvas_dice;
     //[SerializeField] Transform dice_obj;
     private float time = 1.5f;
-    [SerializeField] Animator dado;
+   // [SerializeField] Animator dado;
     [Header("Textos dado")]
     [SerializeField] TMP_Text diceText;
 
@@ -58,7 +58,7 @@ public class Dice : MonoBehaviour
         //animDice(a);
         //MoveDice(a);
         return a;
-        diceText.text = a.ToString();
+        //diceText.text = a.ToString();
 
     }
     IEnumerator ChangeText(int a)

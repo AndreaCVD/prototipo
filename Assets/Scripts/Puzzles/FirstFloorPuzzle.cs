@@ -55,6 +55,7 @@ public class FirstFloorPuzzle : MonoBehaviour
         }
         if (lista.Nivel_1[1].acabado && !jaulaAbierta) //Completar puzzle B2
         {
+            zona_2.finished = true;
             jaulaAbierta = true;
             jaulaEtkis.SetBool("barrotesOpen", true);
         }

@@ -6610,7 +6610,7 @@ MonoBehaviour:
   - {fileID: 1672703037}
   - {fileID: 1449227739}
   Nim:
-  - {fileID: 411709891476306974, guid: 6a6b56223c94b7b49bb95b48cf27e5b9, type: 3}
+  - {fileID: 5129983443918336922, guid: 846de5405ae64664985ac89f13917da7, type: 3}
   - {fileID: 314591737}
   ListaEliminar: []
 --- !u!1 &1613306029

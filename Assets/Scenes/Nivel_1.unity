@@ -3413,6 +3413,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4161711505757076601, guid: fea0b1f6d4434964abc1a67e554d61f9, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 2259271644845032887, guid: 3805aa405e5df0344a65c712a55c36b2, type: 2}
     - target: {fileID: 7325924228481070404, guid: fea0b1f6d4434964abc1a67e554d61f9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.3341303
@@ -3453,6 +3457,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8650124944624283254, guid: fea0b1f6d4434964abc1a67e554d61f9, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: -5641426505610333550, guid: 3805aa405e5df0344a65c712a55c36b2, type: 2}
     - target: {fileID: 9088144854548822217, guid: fea0b1f6d4434964abc1a67e554d61f9, type: 3}
       propertyPath: m_Name
       value: sound manager dry cave

@@ -2256,7 +2256,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1f4d6f34d4805c4184238335ec09872, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dado: {fileID: 0}
   diceText: {fileID: 0}
   imagenesDados: []
 --- !u!1001 &1521476942
@@ -3371,6 +3370,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5820612472941107583, guid: c7ce5ebe7cf41584990012085244959d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6536941391562920860, guid: c7ce5ebe7cf41584990012085244959d, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}

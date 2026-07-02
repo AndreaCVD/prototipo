@@ -10,6 +10,7 @@ public class CharacterInteract : MonoBehaviour
     Ray ray;
     [Header("Bools")]
     public bool interaction;
+    public bool a;  // ver si presiona para interaccion
     void Start()
     {
         interaction = false;
@@ -33,15 +34,24 @@ public class CharacterInteract : MonoBehaviour
             //Si no es null -> ha encontrado algo que tiene Interactable
             if (hitInfo.transform.gameObject.GetComponent<Interactable>() != null && !interaction)
             {
-                //Bool true asi no se sobreponen otras interacciones
-                interaction = true;    
-                
-                //Devuelve Obj que tiene Interactable
-                //Debug.Log(hitInfo.transform.gameObject.GetComponent<Interactable>());
-                interactable = hitInfo.transform.gameObject.GetComponent<Interactable>();
+                //clicar boton para interaccionar
+                //Salto
+                a = Input.GetKeyDown(KeyCode.P);
+                Debug.Log("Presione P para interacion");
+                //Mirar si barra espaciadora esta activada
+                if (a)
+                {
+                    Debug.Log("Activar dialogo");
 
-                interactable.DetectObj(hitInfo.transform.gameObject);
-                    
+                    //Bool true asi no se sobreponen otras interacciones
+                    interaction = true;
+
+                    //Devuelve Obj que tiene Interactable
+                    //Debug.Log(hitInfo.transform.gameObject.GetComponent<Interactable>());
+                    interactable = hitInfo.transform.gameObject.GetComponent<Interactable>();
+
+                    interactable.DetectObj(hitInfo.transform.gameObject);
+                }  
 
             }
                        

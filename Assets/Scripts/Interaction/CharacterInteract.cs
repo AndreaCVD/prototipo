@@ -1,9 +1,13 @@
+using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CharacterInteract : MonoBehaviour
 {
     [Header("Canvas")] //Passar a UI
     public CanvasGroup grup;
+    [SerializeField] TMP_Text text_interaccion;
 
     [Header("Pivot personaje")]
     [SerializeField] Transform pivot_personaje;
@@ -13,11 +17,14 @@ public class CharacterInteract : MonoBehaviour
     Ray ray;
     [Header("Bools")]
     public bool interaction;
-    public bool a;  // ver si presiona para interaccion
+    public bool text_canvas;
+    public bool canvas_visible;  // ver si presiona para interaccion
     void Start()
     {
         opacidad(0f);
         interaction = false;
+        text_canvas = false;
+        canvas_visible = false;
     }
     void Update()
     {
@@ -38,13 +45,17 @@ public class CharacterInteract : MonoBehaviour
             //Si no es null -> ha encontrado algo que tiene Interactable
             if (hitInfo.transform.gameObject.GetComponent<Interactable>() != null && !interaction)
             {
+                if (!text_canvas)
+                {
+                    text_canvas=true;
+                    textCanva(hitInfo.transform.gameObject);
+                }
                 //clicar boton para interaccionar
                 //Salto
-                a = Input.GetKeyDown(KeyCode.P);
-                Debug.Log("Presione P para interacion");
+                canvas_visible = Input.GetKeyDown(KeyCode.P);
+ 
                 opacidad(1f);
-                //Mirar si barra espaciadora esta activada
-                if (a)
+                if (canvas_visible)
                 {
 
                     Debug.Log("Activar dialogo");
@@ -53,7 +64,6 @@ public class CharacterInteract : MonoBehaviour
                     interaction = true;
 
                     //Devuelve Obj que tiene Interactable
-                    //Debug.Log(hitInfo.transform.gameObject.GetComponent<Interactable>());
                     interactable = hitInfo.transform.gameObject.GetComponent<Interactable>();
 
                     interactable.DetectObj(hitInfo.transform.gameObject);
@@ -62,6 +72,7 @@ public class CharacterInteract : MonoBehaviour
             }
             else
             {
+                text_canvas = false;
                 opacidad(0f);
             }           
                 //Debug.Log("No tiene Ineteractable");
@@ -69,6 +80,7 @@ public class CharacterInteract : MonoBehaviour
         }
         else  //Cuando el Raycast no detecte nada
         {
+            text_canvas = false;
             opacidad(0f);
             if (interaction)
                 interaction = false; //Volvemos a poner bool falso
@@ -89,5 +101,32 @@ public class CharacterInteract : MonoBehaviour
     void opacidad(float nueva_opacidad)
     {
         grup.alpha = Mathf.Lerp(0f, nueva_opacidad, 5f);
+    }
+    void textCanva(GameObject obj)
+    {
+        switch (obj.tag)
+        {
+            case "Enemy":
+                text_interaccion.text = "P - Iniciar Pelea";
+                break;
+            case "Interact_Scene":
+                text_interaccion.text = "P - Inspeccionar";
+                break;
+            case "NPC":
+                text_interaccion.text = "P - para hablar";
+                break;
+            case "Cofre":
+                text_interaccion.text = "P - Abrir Cofre ";
+                break;
+            case "Puerta":
+                text_interaccion.text = "P - Abrir Puerta";
+                break;
+            case "PuertaMaestra":
+                text_interaccion.text = "P - Abrir Puerta Maestra";
+                break;
+            default:
+                //Debug.Log("No hay nada");
+                break;
+        }
     }
 }

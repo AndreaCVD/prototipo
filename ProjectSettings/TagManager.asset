@@ -18,6 +18,7 @@ TagManager:
   - PocionVida
   - PuertaMaestra
   - Puerta
+  - NPC
   layers:
   - Default
   - TransparentFX

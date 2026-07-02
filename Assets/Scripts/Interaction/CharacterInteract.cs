@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class CharacterInteract : MonoBehaviour
 {
+    [Header("Canvas")] //Passar a UI
+    public CanvasGroup grup;
+
     [Header("Pivot personaje")]
     [SerializeField] Transform pivot_personaje;
     //[SerializeField] Vector3 interactAreaSize = Vector3.one;
@@ -13,6 +16,7 @@ public class CharacterInteract : MonoBehaviour
     public bool a;  // ver si presiona para interaccion
     void Start()
     {
+        opacidad(0f);
         interaction = false;
     }
     void Update()
@@ -38,9 +42,11 @@ public class CharacterInteract : MonoBehaviour
                 //Salto
                 a = Input.GetKeyDown(KeyCode.P);
                 Debug.Log("Presione P para interacion");
+                opacidad(1f);
                 //Mirar si barra espaciadora esta activada
                 if (a)
                 {
+
                     Debug.Log("Activar dialogo");
 
                     //Bool true asi no se sobreponen otras interacciones
@@ -54,13 +60,18 @@ public class CharacterInteract : MonoBehaviour
                 }  
 
             }
-                       
+            else
+            {
+                opacidad(0f);
+            }           
                 //Debug.Log("No tiene Ineteractable");
             
         }
-        else if(interaction) //Cuando el Raycast no detecte nada
+        else  //Cuando el Raycast no detecte nada
         {
-            interaction = false; //Volvemos a poner bool falso
+            opacidad(0f);
+            if (interaction)
+                interaction = false; //Volvemos a poner bool falso
         }
             //foreach (Collider c in colliders)
             //{
@@ -74,5 +85,9 @@ public class CharacterInteract : MonoBehaviour
             //    }
             //} 
         
+    }
+    void opacidad(float nueva_opacidad)
+    {
+        grup.alpha = Mathf.Lerp(0f, nueva_opacidad, 5f);
     }
 }

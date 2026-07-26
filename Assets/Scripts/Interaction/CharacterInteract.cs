@@ -51,13 +51,13 @@ public class CharacterInteract : MonoBehaviour
                     textCanva(hitInfo.transform.gameObject);
                 }
                 //clicar boton para interaccionar
-                //Salto
+                //Interaccion
                 canvas_visible = Input.GetKeyDown(KeyCode.P);
  
                 opacidad(1f);
-                if (canvas_visible)
+                if (canvas_visible) //Si se clica el boton
                 {
-
+                    Cursor.visible = true;
                     Debug.Log("Activar dialogo");
 
                     //Bool true asi no se sobreponen otras interacciones
@@ -70,17 +70,18 @@ public class CharacterInteract : MonoBehaviour
                 }  
 
             }
-            else
-            {
-                text_canvas = false;
-                opacidad(0f);
-            }           
+        
                 //Debug.Log("No tiene Ineteractable");
             
         }
         else  //Cuando el Raycast no detecte nada
         {
-            text_canvas = false;
+            if (text_canvas)
+                text_canvas = false;
+
+            if (Cursor.visible)
+                Cursor.visible = false;
+
             opacidad(0f);
             if (interaction)
                 interaction = false; //Volvemos a poner bool falso

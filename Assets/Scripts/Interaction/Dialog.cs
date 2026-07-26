@@ -66,6 +66,10 @@ public class Dialog : MonoBehaviour
         _dialogBehaviour.BindExternalFunction("dadoIntel", dadoIntel);
         _dialogBehaviour.BindExternalFunction("dadoCarisma", dadoCarisma);
 
+        //Tienda viejo
+        _dialogBehaviour.BindExternalFunction("PocionVida", pocVida);
+        _dialogBehaviour.BindExternalFunction("Proteccion", pocProtect);
+
         //Funciones pa todos
         _dialogBehaviour.BindExternalFunction("ContinuarMov", continuarMov);
         _dialogBehaviour.BindExternalFunction("PararMov", pararMov);
@@ -142,6 +146,7 @@ public class Dialog : MonoBehaviour
         Debug.Log(val);
         _dialogBehaviour.SetVariableValue(nombreVal, val);
     }
+    //Cambio escena
     public void irCampamento()
     {
         load.ChangeScene("Nivel_0");
@@ -158,6 +163,7 @@ public class Dialog : MonoBehaviour
     {
         load.ChangeScene("Nivel_3");
     }
+    
     public void pisosDesbloqueados()
     {
         //Nivel 1
@@ -188,6 +194,17 @@ public class Dialog : MonoBehaviour
             _dialogBehaviour.SetVariableValue("nivel_3", 0);
         }
     }
+    //Tienda Viejo
+    public void pocVida()
+    {
+        prota.Inventario.PocionVida.Add("PocionVida_Loot");
+    }
+    public void pocProtect()
+    {
+        Debug.Log("Tienes una pocion de proteccion");
+        //prota.Inventario.PocionVida.Add("PocionVida_Loot");
+    }
+    //Personajes
     public void estadoEtkis()
     {
         if (lista.Nivel_1[1].acabado)
@@ -227,6 +244,7 @@ public class Dialog : MonoBehaviour
             _dialogBehaviour.SetVariableValue("nim_libre_nivel2", 0);
         }
     }
+    //Prota
     public void vidaParcial()
     {
         //Tint screen, fer una transició

@@ -69,6 +69,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-uk-UA
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 69244b1715d64c34ebaddb0a0fe53474
+    m_Address: Tienda Viejo_uk-UA
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-uk-UA
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 80119c925851dc541bc15ecac614c3d0
     m_Address: Cofre_uk-UA
     m_ReadOnly: 1

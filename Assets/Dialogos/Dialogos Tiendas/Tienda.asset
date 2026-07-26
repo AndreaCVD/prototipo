@@ -15,8 +15,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 835.20026
-    y: 217.19992
+    x: 844.0002
+    y: 306.79993
     width: 190
     height: 80
   IsDragging: 0
@@ -42,10 +42,10 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 258.4001
-    y: 160.39993
+    x: 267.2
+    y: 249.99994
     width: 190
-    height: 135
+    height: 115
   IsDragging: 1
   IsSelected: 0
   Answers:
@@ -74,8 +74,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 543.20044
-    y: 84.39995
+    x: 552.00037
+    y: 173.99995
     width: 190
     height: 80
   IsDragging: 1
@@ -100,10 +100,10 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 796.00006
-    y: 29.999985
+    x: 804.7999
+    y: 119.59999
     width: 190
-    height: 135
+    height: 0
   IsDragging: 1
   IsSelected: 0
   _sentence:
@@ -132,10 +132,10 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 544.00037
-    y: 225.99991
+    x: 552.8003
+    y: 315.5999
     width: 190
-    height: 135
+    height: 0
   IsDragging: 1
   IsSelected: 1
   _sentence:
@@ -189,8 +189,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 46.400024
-    y: 187.59991
+    x: 55.19995
+    y: 277.19992
     width: 190
     height: 80
   IsDragging: 1

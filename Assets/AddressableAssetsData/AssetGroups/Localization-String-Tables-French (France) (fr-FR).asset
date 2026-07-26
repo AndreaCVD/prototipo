@@ -105,6 +105,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-fr-FR
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d5025e491175b6648aa8cebe57c51404
+    m_Address: Tienda Viejo_fr-FR
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-fr-FR
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e4db610beb5dc8b4d8c02990f6f30216
     m_Address: CofreVacio_fr-FR
     m_ReadOnly: 1

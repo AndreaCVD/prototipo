@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
+using Cursor = UnityEngine.Cursor;
+
 public class LoadScene : MonoBehaviour
 {
     private GameObject uiHub;
@@ -28,6 +30,11 @@ public class LoadScene : MonoBehaviour
     {
         jefeFin = false;
         onCombat = false;
+        if (SceneManager.GetActiveScene().name != "Start_MainMenu" || SceneManager.GetActiveScene().name != "combat_scene")
+        {
+            Cursor.visible = false;
+        }
+
 
         destroyObjs = this.GetComponent<crear_obj>();
         preload = this.GetComponent<Preload>();
@@ -107,6 +114,8 @@ public class LoadScene : MonoBehaviour
     {
         Debug.Log("Salimos de combate");
         onCombat = false;
+        //sacamos el cursor
+        Cursor.visible = false;
         //si estamos en combate eliminar esta escena
         //Sacamos la pausa del juego principal
         escenaState.ScenePause(false); //false, se mueve
@@ -138,6 +147,9 @@ public class LoadScene : MonoBehaviour
         if (!onCombat)
         {
             onCombat = true;
+
+            //mostramos el cursor
+            Cursor.visible = true;
 
             name_anterior = SceneManager.GetActiveScene().name;
 

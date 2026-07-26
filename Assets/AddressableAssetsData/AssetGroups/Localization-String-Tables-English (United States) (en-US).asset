@@ -57,6 +57,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-en-US
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4ebe402bd33db544d8431b7994f1af91
+    m_Address: Tienda Viejo_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 57100b4594e90a243a0c51ba6033fadc
     m_Address: DebugCombat_en-US
     m_ReadOnly: 1

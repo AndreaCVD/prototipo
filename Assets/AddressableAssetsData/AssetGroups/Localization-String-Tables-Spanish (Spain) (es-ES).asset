@@ -123,6 +123,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-es-ES
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e66b3d1006c76f541ad47d0f9156bd35
+    m_Address: Tienda Viejo_es-ES
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es-ES
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e8711e4ea718f9349b0f669466f6a057
     m_Address: Puerta_es-ES
     m_ReadOnly: 1

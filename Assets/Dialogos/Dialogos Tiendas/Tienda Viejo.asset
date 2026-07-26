@@ -1,5 +1,69 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8344311007969833209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 588.80005
+    y: 356.40024
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 1
+  _sentence:
+    CharacterName: Yuissef
+    Text: "\xBFNo he has entendido? Haber escuchado mejor. Ve ya a la mazmorra."
+    CharacterSprite: {fileID: 0}
+  ParentNodes:
+  - {fileID: 4854700544867143032}
+  ChildNode: {fileID: 4890293972534209891}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: SentenceName_151a1352-eeda-4d03-8391-efecab70a65f
+  SentenceTextKey: SentenceText_be33a960-d380-4660-a0af-4f46b299dd28
+--- !u!114 &-1504767964372334677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -114.39993
+    y: 137.19989
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Tienda Viejo
+    Text: Venda de pociones
+    CharacterSprite: {fileID: 0}
+  ParentNodes:
+  - {fileID: 7079212946126893081}
+  ChildNode: {fileID: 7865387369358134948}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: SentenceName_2a33a30d-016b-4355-8984-36e6f3097638
+  SentenceTextKey: SentenceText_8c0b8bb1-6349-471e-ac98-73464072f3ae
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12,10 +76,237 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33f741ea10ebcf842a91c9b871dd032a, type: 3}
   m_Name: Tienda Viejo
   m_EditorClassIdentifier: 
-  NodesList: []
+  NodesList:
+  - {fileID: -1504767964372334677}
+  - {fileID: 7865387369358134948}
+  - {fileID: 8492657984572534271}
+  - {fileID: 7079212946126893081}
+  - {fileID: 4890293972534209891}
+  - {fileID: 2102934973625957718}
+  - {fileID: 1878778888640837685}
+  - {fileID: 4854700544867143032}
+  - {fileID: -8344311007969833209}
   VariablesConfig: {fileID: 0}
-  _localizationTableName: 
+  _localizationTableName: Tienda Viejo
   _characterNamesLocalizationName: 
   NodeToDrawLineFrom: {fileID: 0}
   LinePosition: {x: 0, y: 0}
-  IsLocalizationSetUp: 0
+  IsLocalizationSetUp: 1
+--- !u!114 &1878778888640837685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f4b3c64aaf434ea0df52154c1c7680, type: 3}
+  m_Name: External Function Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 427.20013
+    y: 135.59987
+    width: 190
+    height: 80
+  IsDragging: 1
+  IsSelected: 0
+  _functionName: Proteccion
+  _description: 
+  ParentNodes:
+  - {fileID: 7865387369358134948}
+  - {fileID: 4854700544867143032}
+  ChildNode: {fileID: 4890293972534209891}
+--- !u!114 &2102934973625957718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f4b3c64aaf434ea0df52154c1c7680, type: 3}
+  m_Name: External Function Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 425.60016
+    y: 45.999847
+    width: 190
+    height: 80
+  IsDragging: 1
+  IsSelected: 0
+  _functionName: PocionVida
+  _description: 
+  ParentNodes:
+  - {fileID: 7865387369358134948}
+  - {fileID: 4854700544867143032}
+  ChildNode: {fileID: 4890293972534209891}
+--- !u!114 &4854700544867143032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1717f3c6dba9fa40844ddacac301510, type: 3}
+  m_Name: Answer Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 751.20135
+    y: 73.200165
+    width: 190
+    height: 175
+  IsDragging: 1
+  IsSelected: 0
+  Answers:
+  - "Poci\xF3n Vida - 10 po"
+  - "Protecci\xF3n - 20 po"
+  - "Irse de aqu\xED "
+  - Volver a preguntar
+  AnswerKeys:
+  - Answer_f607d445-0d6f-43ff-a3db-db56f89314ca
+  - Answer_a853e2d4-4ea7-4f27-b9ce-b70be0083ada
+  - Answer_4863c3df-5229-45ab-8867-3fd58288dc8a
+  - Answer_11fb37de-df17-4687-b827-89258b066a5d
+  ParentNodes:
+  - {fileID: 8492657984572534271}
+  ChildNodes:
+  - {fileID: 2102934973625957718}
+  - {fileID: 1878778888640837685}
+  - {fileID: 4890293972534209891}
+  - {fileID: -8344311007969833209}
+--- !u!114 &4890293972534209891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f4b3c64aaf434ea0df52154c1c7680, type: 3}
+  m_Name: External Function Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 422.4004
+    y: 216.39987
+    width: 190
+    height: 80
+  IsDragging: 1
+  IsSelected: 0
+  _functionName: ContinuarMov
+  _description: 
+  ParentNodes:
+  - {fileID: 7865387369358134948}
+  - {fileID: 2102934973625957718}
+  - {fileID: 1878778888640837685}
+  - {fileID: 4854700544867143032}
+  - {fileID: -8344311007969833209}
+  ChildNode: {fileID: 0}
+--- !u!114 &7079212946126893081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f4b3c64aaf434ea0df52154c1c7680, type: 3}
+  m_Name: External Function Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -384.79993
+    y: 170.79987
+    width: 190
+    height: 80
+  IsDragging: 1
+  IsSelected: 0
+  _functionName: PararMov
+  _description: 
+  ParentNodes: []
+  ChildNode: {fileID: -1504767964372334677}
+--- !u!114 &7865387369358134948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1717f3c6dba9fa40844ddacac301510, type: 3}
+  m_Name: Answer Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 134.40027
+    y: 120.39984
+    width: 190
+    height: 175
+  IsDragging: 1
+  IsSelected: 0
+  Answers:
+  - "Poci\xF3n Vida - 10 po"
+  - "Protecci\xF3n - 20 po"
+  - "Irse de aqu\xED"
+  - "Preguntar al se\xF1or"
+  AnswerKeys:
+  - Answer_55900ace-7f8d-498e-b82a-a2adbc28324a
+  - Answer_a10e3a07-b4f7-4879-9178-5da98062cbc6
+  - Answer_f55368b3-8ee3-4bd4-a077-111983eb344b
+  - Answer_26c952dc-3741-45fa-9f91-5873b32c64ff
+  ParentNodes:
+  - {fileID: -1504767964372334677}
+  ChildNodes:
+  - {fileID: 2102934973625957718}
+  - {fileID: 1878778888640837685}
+  - {fileID: 4890293972534209891}
+  - {fileID: 8492657984572534271}
+--- !u!114 &8492657984572534271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 288.80035
+    y: 350.7999
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Yuissef
+    Text: Estas pociones te pueden ayudar en la mazmorra. Miratelas bien, si quieres
+      alguna, ya sabes el precio.
+    CharacterSprite: {fileID: 21300000, guid: ba9938e5f4d041b40ac8c5f6316c4210, type: 3}
+  ParentNodes:
+  - {fileID: 7865387369358134948}
+  ChildNode: {fileID: 4854700544867143032}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: SentenceName_151a1352-eeda-4d03-8391-efecab70a65f
+  SentenceTextKey: SentenceText_fb2586da-4f03-4c74-9261-55a2b4963daf

@@ -69,6 +69,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-de-DE
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7f595b049195764499402764f9aba155
+    m_Address: Tienda Viejo_de-DE
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de-DE
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 8bd1e972effffad4087491c75bb66d60
     m_Address: Nimrodel_de-DE
     m_ReadOnly: 1

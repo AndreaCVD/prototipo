@@ -30,7 +30,7 @@ public class LoadScene : MonoBehaviour
     {
         jefeFin = false;
         onCombat = false;
-        if (SceneManager.GetActiveScene().name != "Start_MainMenu" || SceneManager.GetActiveScene().name != "combat_scene")
+        if (SceneManager.GetActiveScene().name != "Pause_Menu" || SceneManager.GetActiveScene().name != "Start_MainMenu" || SceneManager.GetActiveScene().name != "combat_scene")
         {
             Cursor.visible = false;
         }
@@ -58,8 +58,17 @@ public class LoadScene : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            //destroyObjs.destroyAll();
-            ChangeScene("Start_MainMenu");
+            string name = SceneManager.GetActiveScene().name;
+             if (name != "Pause_Menu" || name != "Start_Menu")
+             { 
+                //destroyObjs.destroyAll();
+                Cursor.visible = true;
+                escenaState.ScenePause(true);
+                SceneManager.LoadScene("Pause_Menu", LoadSceneMode.Additive);
+                //ChangeScene("Pause_Menu");
+
+             }
+           
         }
     }
 

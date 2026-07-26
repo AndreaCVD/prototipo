@@ -24,18 +24,17 @@ public class LoadScene : MonoBehaviour
     //[SerializeField] Preload preload;
     string name_anterior;
     private bool onCombat;
+    public bool onPause;
     private bool jefeFin;
 
     private void Start()
     {
         jefeFin = false;
         onCombat = false;
-        if (SceneManager.GetActiveScene().name != "Pause_Menu" || SceneManager.GetActiveScene().name != "Start_MainMenu" || SceneManager.GetActiveScene().name != "combat_scene")
-        {
-            Cursor.visible = false;
-        }
-
-
+        onPause = false;
+        Cursor.visible = false;
+        //if (SceneManager.GetActiveScene().name != "Pause_Menu" || SceneManager.GetActiveScene().name != "Start_MainMenu" || SceneManager.GetActiveScene().name != "combat_scene")
+        
         destroyObjs = this.GetComponent<crear_obj>();
         preload = this.GetComponent<Preload>();
         pantalla = this.GetComponent<TintScreen>();
@@ -56,19 +55,15 @@ public class LoadScene : MonoBehaviour
             //save_posicion = GetComponent<personaje>();
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && !onPause)
         {
-            string name = SceneManager.GetActiveScene().name;
-             if (name != "Pause_Menu" || name != "Start_Menu")
-             { 
-                //destroyObjs.destroyAll();
-                Cursor.visible = true;
-                escenaState.ScenePause(true);
-                SceneManager.LoadScene("Pause_Menu", LoadSceneMode.Additive);
-                //ChangeScene("Pause_Menu");
-
-             }
-           
+            onPause = true;
+            ChangeScene("Pause_Menu");
+        }
+        if (SceneManager.sceneCount  == 1 && onPause)
+        {
+            //ya no estamos en pausa
+            onPause = false;
         }
     }
 
@@ -83,6 +78,14 @@ public class LoadScene : MonoBehaviour
             // Unload Scene
             SceneManager.UnloadSceneAsync(escenaActual);
             onCombat = false;
+        }
+        else if (sceneName == "Pause_Menu" && escenaActual.name != "Pause_Menu")
+        {
+            onPause = true;
+            Cursor.visible = true;
+            escenaState.ScenePause(false);
+            SceneManager.LoadScene("Pause_Menu", LoadSceneMode.Additive);
+            //SceneManager.SetActiveScene(sceneName);
         }
         else
         {
@@ -119,6 +122,7 @@ public class LoadScene : MonoBehaviour
     {
         return jefeFin;
     }
+
     public void SalirCombate()//Salimos del combate
     {
         Debug.Log("Salimos de combate");

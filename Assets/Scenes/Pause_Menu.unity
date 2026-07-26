@@ -726,7 +726,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1690656260
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -806,7 +806,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1696853610
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -999,7 +999,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1828804585}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!20 &1828804587
 Camera:
   m_ObjectHideFlags: 0
@@ -1452,6 +1452,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI_HUB
       objectReference: {fileID: 0}
+    - target: {fileID: 1050064535435654908, guid: 711cebeb2efe67b48a692915a97acfa1, type: 3}
+      propertyPath: sourceAsset
+      value: 
+      objectReference: {fileID: 9197481963319205126, guid: 971c1b92995bc3a4a9111ece2e223d48, type: 3}
     - target: {fileID: 1641728875172772933, guid: 711cebeb2efe67b48a692915a97acfa1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1496,6 +1500,10 @@ PrefabInstance:
       propertyPath: lista
       value: 
       objectReference: {fileID: 11400000, guid: 92b50351187af094c96f6e51da1599fa, type: 2}
+    - target: {fileID: 8883334123030750440, guid: 711cebeb2efe67b48a692915a97acfa1, type: 3}
+      propertyPath: load
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8883334123030750440, guid: 711cebeb2efe67b48a692915a97acfa1, type: 3}
       propertyPath: pantalla
       value: 

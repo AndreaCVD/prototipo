@@ -101,7 +101,7 @@ public class btn_events : MonoBehaviour
         if (pantalla != null) pantalla.UnTint();
         if (sceneName == "resumeGame")
         {
-            SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene());
+            AsyncOperation unloadOp = SceneManager.UnloadSceneAsync("Pause_Menu");
         }
         else
         {

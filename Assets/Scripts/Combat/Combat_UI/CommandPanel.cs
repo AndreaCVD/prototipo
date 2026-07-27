@@ -12,13 +12,15 @@ public class CommandPanel : MonoBehaviour
 
     private VisualElement root;
     VisualElement options_menu;
-    VisualElement fuerza_options;
+    VisualElement fuerza_options, intel_options;
 
     //fila principal
     private Button btnFUE, btnCAR, btnINT, btnITEM;
     
     //fila ataque fuerza
     private Button btnDAGA, btnESPADA, btnBACK;
+    //fila ataque fuerza
+    private Button btnINMOV, btnESCUDO, btnBACK_intel;
 
     //fila secundaria
     private Button btnItem, btnRun;
@@ -42,12 +44,16 @@ public class CommandPanel : MonoBehaviour
             btnBACK = root.Q<Button>("btn-BACK");
         btnCAR = root.Q<Button>("btn-CAR");
         btnINT = root.Q<Button>("btn-INT");
+            btnINMOV = root.Q<Button>("btn-INMOV");
+            btnESCUDO = root.Q<Button>("btn-ESCUDO");
+            btnBACK_intel = root.Q<Button>("intel-BACK");
         btnITEM = root.Q<Button>("btn-ITEM");
         btnItem = root.Q<Button>("btn-item");
         btnRun = root.Q<Button>("btn-huir");
 
         options_menu = root.Q<VisualElement>("option_menu");
         fuerza_options = root.Q<VisualElement>("atq-FUE");
+        intel_options = root.Q<VisualElement>("atq-INTEL");
 
         // eventos
         btnFUE.clicked += Fuerza;
@@ -56,6 +62,10 @@ public class CommandPanel : MonoBehaviour
             btnBACK.clicked += Back;
 
         btnINT.clicked += Intel;
+            btnINMOV.clicked += Inmovilizar;
+            btnESCUDO.clicked += Escudo;
+            btnBACK_intel.clicked += Back_intel;
+
         btnCAR.clicked += Carisma;
         btnItem.clicked += UsarItem;
         btnRun.clicked += Huir;
@@ -103,13 +113,35 @@ public class CommandPanel : MonoBehaviour
     //Boton Inteligencia
     public void Intel()
     {
-        commandManager.Inteligencia();
+        options_menu.style.display = DisplayStyle.None;
+        intel_options.style.display = DisplayStyle.Flex;
+        //commandManager.Inteligencia();
         //Debug.Log("Ha usado inteligencia");
     }
+    public void Inmovilizar()
+    {
+        commandManager.Inteligencia(12);
+        //Debug.Log("Ataque de fuerza");
+
+    }
+    public void Escudo()
+    {
+        commandManager.Inteligencia(4);
+        //Debug.Log("Ataque de fuerza");
+
+    }
+    public void Back_intel()
+    {
+        options_menu.style.display = DisplayStyle.Flex;
+        intel_options.style.display = DisplayStyle.None;
+        //commandManager.Inteligencia();
+        //Debug.Log("Ha usado inteligencia");
+    }
+
     //Boton Carisma
     public void Carisma()
     {
-        commandManager.Carisma();
+        commandManager.Carisma(20);
         //Debug.Log("Ha usado carisma");
     }
 

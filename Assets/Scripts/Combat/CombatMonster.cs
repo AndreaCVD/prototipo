@@ -65,7 +65,7 @@ public class CombatMonster : MonoBehaviour
         int armadura = target.player.stats.Get(PersonajesStats.ClaseArmadura);
         
         //Si Dice + Fuerza no supera AC del enemigo, no se hace el ataque
-        if ( (stat_enemigo+ dice) >= armadura)
+        if ( (stat_enemigo+ 20) >= armadura)
         {
             //if (stat_change)
             //{

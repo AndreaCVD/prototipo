@@ -43,9 +43,9 @@ public class CommandManager : MonoBehaviour
 
         NextTurn();
     }
-    public void Inteligencia()
+    public void Inteligencia(int dado)
     {
-        int aux = lanzarDado(20);
+        int aux = lanzarDado(dado);
 
         //Acción
         turnRoundManager.current.Inteligencia(turnRoundManager.target, aux);
@@ -54,7 +54,7 @@ public class CommandManager : MonoBehaviour
         NextTurn();
 
     }
-    public void Carisma()
+    public void Carisma(int dado)
     {
         int aux = lanzarDado(20);
 

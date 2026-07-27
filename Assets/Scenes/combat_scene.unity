@@ -1224,6 +1224,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5824ea472f47a9f4cb490f25e2608272, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  protagonista: {fileID: 11400000, guid: f0233a249cd1f2b43a3d8f04e1ad2bf2, type: 2}
+  iconoLlave: {fileID: 21300000, guid: 764e82350a826cd438522e00383357e7, type: 3}
+  iconoLlaveMaestra: {fileID: 21300000, guid: 6c588ff092212ef4ba0298e3524ab9e4, type: 3}
+  iconoPocionVida: {fileID: 21300000, guid: b65d9610dbda6ba46a32505c0e82604c, type: 3}
+  iconoDaga: {fileID: 21300000, guid: dd10b42ca8b4b0e4880a096072aff5ad, type: 3}
+  iconoEspada: {fileID: 21300000, guid: e9a57d8d864fc2443b5bdcfed074ea39, type: 3}
+  iconoPocionLava: {fileID: 21300000, guid: 966a370916b06b940b0edfc209421ad2, type: 3}
   commandManager: {fileID: 88913840}
 --- !u!1 &1789937962
 GameObject:

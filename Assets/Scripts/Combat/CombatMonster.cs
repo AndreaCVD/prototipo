@@ -60,21 +60,25 @@ public class CombatMonster : MonoBehaviour
     public void Fuerza(CombatMonster target, int dice) //Enemigo
     {
         //Este daño al enemigo
-        int stat_enemigo = player.stats.Get(PersonajesStats.Fuerza);
+        int stat_damage = player.stats.Get(PersonajesStats.Fuerza);
         //Clase Armadura oponente
         int armadura = target.player.stats.Get(PersonajesStats.ClaseArmadura);
         
         //Si Dice + Fuerza no supera AC del enemigo, no se hace el ataque
-        if ( (stat_enemigo+ 20) >= armadura)
+        if ( (stat_damage+ dice) >= armadura)
         {
             //if (stat_change)
             //{
             //    restaurarStat(0); //Restauramos Fuerza
             //}
             //Escibimos Debug.Log
-            Commando(stat_enemigo, armadura, dice);
+            //Commando(stat_enemigo, armadura, dice);
             //Target recibe daño de la fuerza
-            target.TakeDamage(stat_enemigo + dice); 
+            
+            //20 nat --> doble daño
+            //1 --> d4 a ti mismo
+
+            target.TakeDamage(stat_damage + dice); 
         }
         else
         {

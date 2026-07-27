@@ -4,7 +4,7 @@ public class EmpujarObjetos : MonoBehaviour
 {
     [SerializeField] public int pesoNecesario = 5; // fuerza mínima para mover la caja
 
-    public Inventario inventario;
+    private Inventario inventario;
 
     public float distanciaCasilla = 1f;   // Tamaño de la casilla (1 unidad por defecto)
     public float velocidadMovimiento = 5f; // Velocidad de desplazamiento

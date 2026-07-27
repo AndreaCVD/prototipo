@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8991775586355283156}
   - component: {fileID: 8741789426336843346}
   - component: {fileID: 1517697482775705939}
+  - component: {fileID: 4581693941626415061}
   m_Layer: 0
   m_Name: Mimic
   m_TagString: Enemy
@@ -68,6 +69,33 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1.7541069, z: 1.0818752}
   m_Center: {x: 0.0000000039856936, y: 0.83961433, z: -0.1779062}
+--- !u!54 &4581693941626415061
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7505737226089345632}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &7479506385180178788
 PrefabInstance:
   m_ObjectHideFlags: 0

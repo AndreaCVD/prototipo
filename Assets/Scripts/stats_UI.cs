@@ -168,6 +168,8 @@ public class stats_UI : MonoBehaviour
 
     public void MostrarNotificacion(Sprite icono)
     {
+        Debug.Log("Mostrar notificacion");
+        /*
         if (notifCoroutine != null)
         {
             StopCoroutine(notifCoroutine);
@@ -176,7 +178,7 @@ public class stats_UI : MonoBehaviour
         notifIcon.style.backgroundImage = new StyleBackground(icono);
         itemNotification.style.display = DisplayStyle.Flex;
 
-        notifCoroutine = StartCoroutine(OcultarNotificacion(2.5f));
+        notifCoroutine = StartCoroutine(OcultarNotificacion(2.5f));*/
     }
 
     IEnumerator OcultarNotificacion(float segundos)
@@ -225,7 +227,11 @@ public class stats_UI : MonoBehaviour
             slotIcon.style.backgroundImage = new StyleBackground(icono);
             slot.AddToClassList("inv-slot--active");
 
-            if (esNuevo) MostrarNotificacion(icono); 
+            if (esNuevo)
+            {
+                Debug.Log(icono);
+                MostrarNotificacion(icono);
+            }
 
         }
         else

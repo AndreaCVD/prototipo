@@ -3026,6 +3026,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 924868850667036526, guid: e1e382eeb87f205439904cd395ba77a9, type: 3}
+      propertyPath: m_Name
+      value: Linterna
+      objectReference: {fileID: 0}
+    - target: {fileID: 924868850667036526, guid: e1e382eeb87f205439904cd395ba77a9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1120231492139939807, guid: e1e382eeb87f205439904cd395ba77a9, type: 3}
       propertyPath: m_IsActive
       value: 0

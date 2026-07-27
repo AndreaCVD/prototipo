@@ -13,9 +13,17 @@ MonoBehaviour:
   m_Name: Inventario Prota
   m_EditorClassIdentifier: 
   nombreObj: 
-  Llave: []
-  LlaveMaestra: []
-  PocionVida: []
-  Daga: []
-  Espada: []
-  PocionLava: []
+  Llave:
+  - 
+  LlaveMaestra:
+  - 
+  - 
+  PocionVida:
+  - 
+  Daga:
+  - 
+  Espada:
+  - 
+  - 
+  PocionLava:
+  - 

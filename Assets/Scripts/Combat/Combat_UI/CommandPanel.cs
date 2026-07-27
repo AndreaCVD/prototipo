@@ -4,6 +4,15 @@ using UnityEngine.UIElements;
 
 public class CommandPanel : MonoBehaviour
 {
+    [Header("Ficha personaje")]
+    [SerializeField] Parameters protagonista;
+    [Header("Iconos Inventario")]
+    [SerializeField] Sprite iconoLlave;
+    [SerializeField] Sprite iconoLlaveMaestra;
+    [SerializeField] Sprite iconoPocionVida;
+    [SerializeField] Sprite iconoDaga;
+    [SerializeField] Sprite iconoEspada;
+    [SerializeField] Sprite iconoPocionLava;
 
     [SerializeField] CommandManager commandManager;
 
@@ -12,15 +21,17 @@ public class CommandPanel : MonoBehaviour
 
     private VisualElement root;
     VisualElement options_menu;
-    VisualElement fuerza_options, intel_options;
+    VisualElement fuerza_options, intel_options, inventoryGrid;
 
     //fila principal
     private Button btnFUE, btnCAR, btnINT, btnITEM;
     
     //fila ataque fuerza
     private Button btnDAGA, btnESPADA, btnBACK;
-    //fila ataque fuerza
+    //fila ataque intel
     private Button btnINMOV, btnESCUDO, btnBACK_intel;
+    //fila ataque item
+    private Button btnBACK_item;
 
     //fila secundaria
     private Button btnItem, btnRun;
@@ -37,24 +48,24 @@ public class CommandPanel : MonoBehaviour
 
         var uIDocument = GetComponent<UIDocument>();
         root = uIDocument.rootVisualElement;
-
+        //Botones
         btnFUE = root.Q<Button>("btn-FUE");
             btnDAGA = root.Q<Button>("btn-DAGA");
             btnESPADA = root.Q<Button>("btn-ESPADA");
             btnBACK = root.Q<Button>("btn-BACK");
-        btnCAR = root.Q<Button>("btn-CAR");
         btnINT = root.Q<Button>("btn-INT");
             btnINMOV = root.Q<Button>("btn-INMOV");
             btnESCUDO = root.Q<Button>("btn-ESCUDO");
             btnBACK_intel = root.Q<Button>("intel-BACK");
+        btnCAR = root.Q<Button>("btn-CAR");
         btnITEM = root.Q<Button>("btn-ITEM");
-        btnItem = root.Q<Button>("btn-item");
+            btnBACK_item = root.Q<Button>("btn-ITEM-BACK");
         btnRun = root.Q<Button>("btn-huir");
-
+        //Visual Elements
         options_menu = root.Q<VisualElement>("option_menu");
         fuerza_options = root.Q<VisualElement>("atq-FUE");
         intel_options = root.Q<VisualElement>("atq-INTEL");
-
+        inventoryGrid = root.Q<VisualElement>("inventory-grid");
         // eventos
         btnFUE.clicked += Fuerza;
             btnDAGA.clicked += Daga;
@@ -67,8 +78,12 @@ public class CommandPanel : MonoBehaviour
             btnBACK_intel.clicked += Back_intel;
 
         btnCAR.clicked += Carisma;
-        btnItem.clicked += UsarItem;
+        btnITEM.clicked += UsarItem;
         btnRun.clicked += Huir;
+
+        //inventary
+        btnITEM.clicked += UsarItem;
+            btnBACK_item.clicked += Back_item;
 
     }
 
@@ -77,7 +92,7 @@ public class CommandPanel : MonoBehaviour
         btnFUE.clicked -= Fuerza;
         btnINT.clicked -= Intel; //que es intel
         btnCAR.clicked -= Carisma;
-        btnItem.clicked -= UsarItem;
+        btnITEM.clicked -= UsarItem;
         btnRun.clicked -= Huir;
     }
 
@@ -153,9 +168,70 @@ public class CommandPanel : MonoBehaviour
         loadScene.SalirCombate();
         //preload.cambiarEscena("pruevas_prototipo");
     }
-    public void UsarItem()
+
+    void UsarItem()
     {
-        Debug.Log("Usar ítem");
-        // pendiente: abrir submenú de ítems
+        Debug.Log("Abrir Inventario");
+        options_menu.style.display = DisplayStyle.None;
+        inventoryGrid.style.display = DisplayStyle.Flex;
+    }
+    void Back_item()
+    {
+        Debug.Log("Cerrar Inventario");
+        options_menu.style.display = DisplayStyle.Flex;
+        inventoryGrid.style.display = DisplayStyle.None;
+    }
+    void SetInventario()
+    {
+        // Null check antes de acceder a las listas
+        if (protagonista == null || protagonista.Inventario == null) return;
+        if (protagonista.Inventario.Llave == null) return;
+        if (protagonista.Inventario.LlaveMaestra == null) return;
+        if (protagonista.Inventario.PocionVida == null) return;
+        if (protagonista.Inventario.PocionLava == null) return;
+        if (protagonista.Inventario.Daga == null) return;
+        if (protagonista.Inventario.Espada == null) return;
+
+        int llaves = protagonista.Inventario.Llave.Count;
+        int llaveMaestra = protagonista.Inventario.LlaveMaestra.Count;
+        int pocionVida = protagonista.Inventario.PocionVida.Count;
+        int pocionLava = protagonista.Inventario.PocionLava.Count;
+        int daga = protagonista.Inventario.Daga.Count;
+        int espada = protagonista.Inventario.Espada.Count;
+
+        SetSlot(0, llaves > 0 ? iconoLlave : null, llaves);
+        SetSlot(1, llaveMaestra > 0 ? iconoLlaveMaestra : null, llaveMaestra);
+        SetSlot(2, pocionVida > 0 ? iconoPocionVida : null, pocionVida);
+        SetSlot(3, daga > 0 ? iconoDaga : null, daga);
+        SetSlot(4, espada > 0 ? iconoEspada : null, espada);
+        SetSlot(5, pocionLava > 0 ? iconoPocionLava : null, pocionLava);
+    }
+    void SetSlot(int index, Sprite icono, int cantidad)
+    {
+        //poner el icono y numero
+        var slotIcon = root.Q<VisualElement>($"slot-{index}-icon");
+        var slotBadge = root.Q<Label>($"slot-{index}-badge");
+        var slot = root.Q<VisualElement>($"slot-{index}");
+
+        if (icono != null)
+        {
+            //si antes estaba vacio
+            bool esNuevo = !slot.ClassListContains("inv-slot-active");
+            slotIcon.style.backgroundImage = new StyleBackground(icono);
+            slot.AddToClassList("inv-slot--active");
+
+            //if (esNuevo) MostrarNotificacion(icono);
+
+        }
+        else
+        {
+            slotIcon.style.backgroundImage = StyleKeyword.None;
+            slot.RemoveFromClassList("inv-slot--active");
+        }
+
+        slotBadge.text = cantidad.ToString();
+        slotBadge.style.display = cantidad > 0
+            ? DisplayStyle.Flex
+            : DisplayStyle.None;
     }
 }

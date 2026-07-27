@@ -89,7 +89,7 @@ public class NPCAction : MonoBehaviour
             case 'f':
                 //Random pero que tenga mas probabilidades de Fuerza
                 Debug.Log("Enemigo ha usado FUERZA");
-                commandManager.Fuerza();
+                commandManager.Fuerza(20);
                 break;
             case 'i':
                 //Random pero que tenga mas probabilidades de Fuerza

@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class CommandManager : MonoBehaviour
 {
+
     [SerializeField] private Menu_Command menuCommand;
     [SerializeField] TurnRoundManager turnRoundManager;
     [SerializeField] CombatDebug combatDebug;
@@ -23,27 +24,7 @@ public class CommandManager : MonoBehaviour
         combatDebug = GetComponent<CombatDebug>();
     }
 
-    public void Llave()
-    {
-        //turnRoundManager.current.Fuerza(turnRoundManager.target, aux);
-        ActualizarHP();
-
-    }
-    public void LlaveMaestra()
-    {
-        ActualizarHP();
-    }
-    public void Daga()
-    {
-        //Subir ataque por 1 turno
-        ActualizarHP();
-    }
-    public void Espada()
-    {
-        //Subir ataque
-        ActualizarHP();
-
-    }
+    //Items
     public void PocionVida()
     {
         //Subir vida
@@ -51,10 +32,10 @@ public class CommandManager : MonoBehaviour
         ActualizarHP();
     }
 
-    public void Fuerza()
+    public void Fuerza(int dado)
     {
         //Hay que llamar al DiceRoller para ver si superamos el AC
-        int aux = lanzarDado(20);
+        int aux = lanzarDado(dado);
 
         //Acción
         turnRoundManager.current.Fuerza(turnRoundManager.target, aux);

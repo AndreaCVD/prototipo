@@ -1,0 +1,47 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/Styles/general_colors.uss?fileID=7433441132597879392&amp;guid=ad6a76f9ae4c3674d898b1a5433c7bf6&amp;type=3#general_colors" />
+    <Style src="project://database/Assets/UI/Styles/combat_ui.uss?fileID=7433441132597879392&amp;guid=8ff3f6b22ac87d4459f9b3901a7eab08&amp;type=3#combat_ui" />
+    <ui:VisualElement name="combat-screen" class="combat-screen" style="display: flex;">
+        <ui:VisualElement name="combat-top" class="combat-top" style="height: 80%;">
+            <ui:VisualElement name="player-zone" class="combat-zone combat-zone--player">
+                <ui:VisualElement name="player-sprite" class="combat-sprite" />
+                <ui:VisualElement name="player-hp" class="combat-hp">
+                    <ui:Label text="HP" class="combat-hp__label" />
+                    <ui:VisualElement class="combat-hp__bar" style="width: 100%; flex-direction: row;">
+                        <ui:VisualElement name="player-hp-fill" class="combat-hp__fill" style="width: 100%;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="dialog-zone" class="combat-dialog">
+                <ui:Label name="dialog-text" class="combat-dialog__text" />
+            </ui:VisualElement>
+            <ui:VisualElement name="enemy-zone" class="combat-zone combat-zone--enemy">
+                <ui:VisualElement name="enemy-sprite" class="combat-sprite" />
+                <ui:VisualElement name="enemy-hp" class="combat-hp">
+                    <ui:Label text="HP" class="combat-hp__label" />
+                    <ui:VisualElement class="combat-hp__bar" style="width: 100%; flex-direction: row;">
+                        <ui:VisualElement name="enemy-hp-fill" class="combat-hp__fill combat-hp__fill--enemy" style="width: 100%;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="combat-menu" class="combat-menu">
+            <ui:VisualElement name="option_menu" class="combat-row" style="display: none;">
+                <ui:Button name="btn-FUE" text="Atacar" class="combat_btns combat_btn_color" />
+                <ui:Button name="btn-INT" text="Hechizos" class="combat_btns combat_btn_color" />
+                <ui:Button name="btn-CAR" text="Dialogar" class="combat_btns combat_btn_color" />
+                <ui:Button name="btn-ITEM" text="Bolsa" class="combat_btns combat_btn_color" />
+            </ui:VisualElement>
+            <ui:VisualElement name="atq-FUE" class="combat-row" style="display: flex;">
+                <ui:Button name="btn-DAGA" text="Daga - d8" class="combat_btns combat_btn_color" />
+                <ui:Button name="btn-ESPADA" text="Espada - d12" class="combat_btns combat_btn_color" />
+                <ui:Button name="btn-BACK" text="Atras" class="combat_btns items_btn_color" style="display: flex; visibility: visible; overflow: hidden;" />
+            </ui:VisualElement>
+            <ui:VisualElement class="combat-divider" />
+            <ui:VisualElement class="combat-row">
+                <ui:Button name="btn-item" text="Items" class="combat_btns items_btn_color" style="display: none; visibility: visible; overflow: hidden;" />
+                <ui:Button name="btn-huir" text="Huir" class="combat_btns option_btn_color flee_btn_color" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

@@ -31,7 +31,7 @@ public class CommandPanel : MonoBehaviour
     //fila ataque intel
     private Button btnINMOV, btnESCUDO, btnBACK_intel;
     //fila ataque item
-    private Button btnBACK_item;
+    private Button btnBACK_item, btn_slot_2;
 
     //fila secundaria
     private Button btnItem, btnRun;
@@ -61,13 +61,18 @@ public class CommandPanel : MonoBehaviour
             btnDAGA = root.Q<Button>("btn-DAGA");
             btnESPADA = root.Q<Button>("btn-ESPADA");
             btnBACK = root.Q<Button>("btn-BACK");
+        //Botones inteligencia
         btnINT = root.Q<Button>("btn-INT");
             btnINMOV = root.Q<Button>("btn-INMOV");
             btnESCUDO = root.Q<Button>("btn-ESCUDO");
             btnBACK_intel = root.Q<Button>("intel-BACK");
+        //Botones carisma
         btnCAR = root.Q<Button>("btn-CAR");
+        //Botones Bolsa Items
         btnITEM = root.Q<Button>("btn-ITEM");
             btnBACK_item = root.Q<Button>("btn-ITEM-BACK");
+            btn_slot_2 = root.Q<Button>("btn-slot-2"); //pocion vida
+
         btnRun = root.Q<Button>("btn-huir");
         //Visual Elements
         options_menu = root.Q<VisualElement>("option_menu");
@@ -86,12 +91,13 @@ public class CommandPanel : MonoBehaviour
             btnBACK_intel.clicked += Back_intel;
 
         btnCAR.clicked += Carisma;
-        btnITEM.clicked += UsarItem;
+
         btnRun.clicked += Huir;
 
         //inventary
-        btnITEM.clicked += UsarItem;
+        btnITEM.clicked += Abrir_Inventario;
             btnBACK_item.clicked += Back_item;
+            btn_slot_2.clicked += () => UsarItem(2);
 
     }
 
@@ -108,7 +114,7 @@ public class CommandPanel : MonoBehaviour
         btnFUE.clicked -= Fuerza;
         btnINT.clicked -= Intel; //que es intel
         btnCAR.clicked -= Carisma;
-        btnITEM.clicked -= UsarItem;
+        btnITEM.clicked -= Abrir_Inventario;
         btnRun.clicked -= Huir;
     }
 
@@ -185,7 +191,7 @@ public class CommandPanel : MonoBehaviour
         //preload.cambiarEscena("pruevas_prototipo");
     }
 
-    void UsarItem()
+    void Abrir_Inventario()
     {
         Debug.Log("Abrir Inventario");
         options_menu.style.display = DisplayStyle.None;
@@ -196,6 +202,35 @@ public class CommandPanel : MonoBehaviour
         Debug.Log("Cerrar Inventario");
         options_menu.style.display = DisplayStyle.Flex;
         inventoryGrid.style.display = DisplayStyle.None;
+    }
+    void UsarItem(int slot)
+    {
+        //vemos que item es y lo sacamos del inventario
+        switch (slot)
+        {
+            case 0:
+                break;
+             case 1:
+                break;
+             case 2: //Pocion de vida
+                Debug.Log("El jugador usa una pocion, recupera 10 de vida");
+                int vida = protagonista.stats.values[3].value;
+                if (vida > 0 && vida < 30) //MAX vida - 10
+                {
+                    protagonista.stats.values[3].value -= 1;
+                }
+                protagonista.Inventario.PocionVida.RemoveAt(protagonista.Inventario.PocionVida.Count - 1);
+                break;
+             case 3:
+                break;
+             case 4:
+                break;
+             case 5:
+                break;
+            default:
+                break;
+        }
+        //actualizamos el inventario
     }
     bool areListEqual()
     {

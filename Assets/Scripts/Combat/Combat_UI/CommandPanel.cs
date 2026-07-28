@@ -35,10 +35,18 @@ public class CommandPanel : MonoBehaviour
 
     //fila secundaria
     private Button btnItem, btnRun;
-
+    //contadores inventory
+    private int llaves, llaveMaestra, daga, espada, pocionVida, pocionLava;
 
     void Start()
     {
+        llaves = 0;
+        llaveMaestra = 0;
+        espada = 0;
+        daga = 0;
+        pocionVida = 0;
+        pocionLava = 0;
+
         if (load_script == null)
         {
             load_script = GameObject.Find("--SceneManagement--");
@@ -87,6 +95,14 @@ public class CommandPanel : MonoBehaviour
 
     }
 
+    void Update()
+    {
+        //inventary
+        if (!areListEqual())
+        {
+            SetInventario();
+        }
+    }
     void OnDisable()
     {
         btnFUE.clicked -= Fuerza;
@@ -181,6 +197,28 @@ public class CommandPanel : MonoBehaviour
         options_menu.style.display = DisplayStyle.Flex;
         inventoryGrid.style.display = DisplayStyle.None;
     }
+    bool areListEqual()
+    {
+        // Null check del inventario completo
+        if (protagonista == null || protagonista.Inventario == null) return false;
+
+        // Null check de cada lista antes de llamar .Count()
+        if (protagonista.Inventario.Llave == null) return false;
+        if (protagonista.Inventario.LlaveMaestra == null) return false;
+        if (protagonista.Inventario.PocionVida == null) return false;
+        if (protagonista.Inventario.Daga == null) return false;
+        if (protagonista.Inventario.PocionLava == null) return false;
+        if (protagonista.Inventario.Espada == null) return false;
+
+        if (protagonista.Inventario.Llave.Count != llaves) return false;
+        if (protagonista.Inventario.LlaveMaestra.Count != llaveMaestra) return false;
+        if (protagonista.Inventario.PocionVida.Count != pocionVida) return false;
+        if (protagonista.Inventario.PocionLava.Count != pocionVida) return false;
+        if (protagonista.Inventario.Daga.Count != daga) return false;
+        if (protagonista.Inventario.Espada.Count != espada) return false;
+
+        return true;
+    }
     void SetInventario()
     {
         // Null check antes de acceder a las listas
@@ -192,12 +230,12 @@ public class CommandPanel : MonoBehaviour
         if (protagonista.Inventario.Daga == null) return;
         if (protagonista.Inventario.Espada == null) return;
 
-        int llaves = protagonista.Inventario.Llave.Count;
-        int llaveMaestra = protagonista.Inventario.LlaveMaestra.Count;
-        int pocionVida = protagonista.Inventario.PocionVida.Count;
-        int pocionLava = protagonista.Inventario.PocionLava.Count;
-        int daga = protagonista.Inventario.Daga.Count;
-        int espada = protagonista.Inventario.Espada.Count;
+        llaves = protagonista.Inventario.Llave.Count;
+        llaveMaestra = protagonista.Inventario.LlaveMaestra.Count;
+        pocionVida = protagonista.Inventario.PocionVida.Count;
+        pocionLava = protagonista.Inventario.PocionLava.Count;
+        daga = protagonista.Inventario.Daga.Count;
+        espada = protagonista.Inventario.Espada.Count;
 
         SetSlot(0, llaves > 0 ? iconoLlave : null, llaves);
         SetSlot(1, llaveMaestra > 0 ? iconoLlaveMaestra : null, llaveMaestra);

@@ -1098,7 +1098,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &841867258
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2256,7 +2256,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1f4d6f34d4805c4184238335ec09872, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dado: {fileID: 0}
   diceText: {fileID: 0}
   imagenesDados: []
 --- !u!1001 &1521476942
@@ -2635,7 +2634,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &1808864623
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3503,6 +3502,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tienda Etkis
       objectReference: {fileID: 0}
+    - target: {fileID: 4938761487428315905, guid: 5c79d546b7316ef46949f82b1b50dfb6, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5816118659043015534, guid: 5c79d546b7316ef46949f82b1b50dfb6, type: 3}
       propertyPath: m_Size.x
       value: 2.0922785
@@ -3814,6 +3817,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tienda Lerendur
       objectReference: {fileID: 0}
+    - target: {fileID: 8754678865317439754, guid: e5229923ae0643d4391e988c8ec51f14, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3887,6 +3894,10 @@ PrefabInstance:
     - target: {fileID: 1332034927812465775, guid: 4185c72d3485a5f4b809abd1dc4642dc, type: 3}
       propertyPath: m_Name
       value: Tienda Nim
+      objectReference: {fileID: 0}
+    - target: {fileID: 1332034927812465775, guid: 4185c72d3485a5f4b809abd1dc4642dc, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1475459728727015370, guid: 4185c72d3485a5f4b809abd1dc4642dc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4127,7 +4138,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 416058362421274246, guid: 8b8041c12468cd148b48edef00fa5254, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.630598
+      value: 4.43
       objectReference: {fileID: 0}
     - target: {fileID: 416058362421274246, guid: 8b8041c12468cd148b48edef00fa5254, type: 3}
       propertyPath: m_LocalPosition.y
@@ -4135,7 +4146,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 416058362421274246, guid: 8b8041c12468cd148b48edef00fa5254, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.1606746
+      value: 8.79
       objectReference: {fileID: 0}
     - target: {fileID: 416058362421274246, guid: 8b8041c12468cd148b48edef00fa5254, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4228,6 +4239,10 @@ PrefabInstance:
     - target: {fileID: 2041731213688743200, guid: e0c92b6b6745571419ba93a8e5313c6f, type: 3}
       propertyPath: m_Name
       value: Tienda Viejo
+      objectReference: {fileID: 0}
+    - target: {fileID: 2041731213688743200, guid: e0c92b6b6745571419ba93a8e5313c6f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2485726964341952748, guid: e0c92b6b6745571419ba93a8e5313c6f, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'

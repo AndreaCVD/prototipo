@@ -21,7 +21,7 @@ public class CommandPanel : MonoBehaviour
 
     private VisualElement root;
     VisualElement options_menu;
-    VisualElement fuerza_options, intel_options, inventoryGrid;
+    VisualElement fuerza_options, intel_options, inventoryGrid, tirada_final;
 
     //fila principal
     private Button btnFUE, btnCAR, btnINT, btnITEM;
@@ -32,6 +32,8 @@ public class CommandPanel : MonoBehaviour
     private Button btnINMOV, btnESCUDO, btnBACK_intel;
     //fila ataque item
     private Button btnBACK_item, btn_slot_2;
+    //boton dado tirada final
+    private Button btnDADO;
 
     //fila secundaria
     private Button btnItem, btnRun;
@@ -74,11 +76,13 @@ public class CommandPanel : MonoBehaviour
             btn_slot_2 = root.Q<Button>("btn-slot-2"); //pocion vida
 
         btnRun = root.Q<Button>("btn-huir");
+        btnDADO = root.Q<Button>("btn-DADO");
         //Visual Elements
         options_menu = root.Q<VisualElement>("option_menu");
         fuerza_options = root.Q<VisualElement>("atq-FUE");
         intel_options = root.Q<VisualElement>("atq-INTEL");
         inventoryGrid = root.Q<VisualElement>("inventory-grid");
+        tirada_final = root.Q<VisualElement>("tirada-FINAL");
         // eventos
         btnFUE.clicked += Fuerza;
             btnDAGA.clicked += Daga;
@@ -93,6 +97,7 @@ public class CommandPanel : MonoBehaviour
         btnCAR.clicked += Carisma;
 
         btnRun.clicked += Huir;
+        btnDADO.clicked += Tirada;
 
         //inventary
         btnITEM.clicked += Abrir_Inventario;
@@ -127,7 +132,6 @@ public class CommandPanel : MonoBehaviour
 
         //commandManager.Fuerza(20);
         //Debug.Log("Ataque de fuerza");
-
     }
     public void Back()
     {
@@ -136,9 +140,19 @@ public class CommandPanel : MonoBehaviour
     }
     public void Daga()
     {
-        commandManager.Fuerza(8);
-        //Debug.Log("Ataque de fuerza");
-
+        //commandManager.Fuerza(8);
+        bool AC_superada = commandManager.Armadura(0, 8);
+        if (AC_superada)
+        {
+            fuerza_options.style.display = DisplayStyle.None;
+            Menu_TiradaFinal();
+            Debug.Log("Tira dado de 8");
+        }
+        else
+        {
+            Back();
+        }
+            
     }
     public void Espada()
     {
@@ -147,6 +161,16 @@ public class CommandPanel : MonoBehaviour
 
     }
 
+    public void Menu_TiradaFinal()
+    {
+        tirada_final.style.display = DisplayStyle.Flex;
+
+        Debug.Log("Hacer la tirada de daño final");
+    }
+    public void Tirada()
+    {
+        Debug.Log("Hacer la tirada de daño final");
+    }
     //Boton Inteligencia
     public void Intel()
     {
@@ -217,9 +241,9 @@ public class CommandPanel : MonoBehaviour
                 int vida = protagonista.stats.values[3].value;
                 if (vida > 0 && vida < 30) //MAX vida - 10
                 {
-                    protagonista.stats.values[3].value -= 1;
+                    protagonista.stats.values[3].value += 10;
+                    protagonista.Inventario.PocionVida.RemoveAt(protagonista.Inventario.PocionVida.Count - 1);
                 }
-                protagonista.Inventario.PocionVida.RemoveAt(protagonista.Inventario.PocionVida.Count - 1);
                 break;
              case 3:
                 break;

@@ -57,6 +57,36 @@ public class CombatMonster : MonoBehaviour
         HP = new Int2Val (contitucion, contitucion);
     }
 
+    //Primero tiene que superar la armadura
+    public bool Armadura (CombatMonster target, int dice, int stat)
+    {
+        //Este daño al enemigo
+        int stat_damage = player.stats.values[stat].value;
+        //Clase Armadura oponente
+        int armadura = target.player.stats.Get(PersonajesStats.ClaseArmadura);
+        //Si Dice + Fuerza no supera AC del enemigo, no se hace el ataque
+        if ((stat_damage + dice) >= armadura)
+        {
+            //if (stat_change)
+            //{
+            //    restaurarStat(0); //Restauramos Fuerza
+            //}
+            //Escibimos Debug.Log
+            //Commando(stat_enemigo, armadura, dice);
+            //Target recibe daño de la fuerza
+
+            //20 nat --> doble daño
+            //1 --> d4 a ti mismo
+
+            return true;
+        }
+        else
+        {
+
+            return false;
+        }
+    }
+    //Luego volver a tirar dado
     public void Fuerza(CombatMonster target, int dice) //Enemigo
     {
         //Este daño al enemigo

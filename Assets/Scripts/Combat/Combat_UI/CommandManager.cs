@@ -31,6 +31,27 @@ public class CommandManager : MonoBehaviour
         turnRoundManager.current.cambiarVida(10);
         ActualizarHP();
     }
+    //Ver si supera la armadura del contrincante
+    public bool Armadura(int stat, int num_dado)
+    {
+        Debug.Log("Tirar dado ");
+        int aux = lanzarDado(20);
+        bool AC_superada = turnRoundManager.current.Armadura(turnRoundManager.target, aux, stat);
+        if (AC_superada)
+        {
+            Debug.Log("Has llegado al AC del enemigo");
+            
+            return true;
+        }
+        else
+        {
+            Debug.Log("No has llegado al AC del enemigo");
+            ActualizarHP();
+
+            NextTurn();
+            return false;
+        }
+    }
 
     public void Fuerza(int dado)
     {
@@ -39,6 +60,7 @@ public class CommandManager : MonoBehaviour
 
         //Acción
         turnRoundManager.current.Fuerza(turnRoundManager.target, aux);
+        //turnRoundManager.current.Fuerza(turnRoundManager.target, aux);
         ActualizarHP();
 
         NextTurn();

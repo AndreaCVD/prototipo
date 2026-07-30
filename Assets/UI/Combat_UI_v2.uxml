@@ -71,6 +71,9 @@
                 </ui:VisualElement>
                 <ui:Button name="btn-ITEM-BACK" text="Atras" class="combat_btns items_btn_color" style="display: flex; visibility: visible; overflow: hidden;" />
             </ui:VisualElement>
+            <ui:VisualElement name="tirada-ARMADURA" class="combat-row" style="display: none;">
+                <ui:Button name="btn-DADO-CA" text="Dado CA enemigo" class="combat_btns combat_btn_color" />
+            </ui:VisualElement>
             <ui:VisualElement name="tirada-FINAL" class="combat-row" style="display: none;">
                 <ui:Button name="btn-DADO" text="Lanzar Dado" class="combat_btns combat_btn_color" />
             </ui:VisualElement>

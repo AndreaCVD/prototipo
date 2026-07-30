@@ -21,7 +21,7 @@ public class CommandPanel : MonoBehaviour
 
     private VisualElement root;
     VisualElement options_menu;
-    VisualElement fuerza_options, intel_options, inventoryGrid, tirada_final;
+    VisualElement fuerza_options, intel_options, inventoryGrid, tirada_armadura, tirada_final;
 
     //fila principal
     private Button btnFUE, btnCAR, btnINT, btnITEM;
@@ -33,15 +33,21 @@ public class CommandPanel : MonoBehaviour
     //fila ataque item
     private Button btnBACK_item, btn_slot_2;
     //boton dado tirada final
-    private Button btnDADO;
+    private Button btnDADO, btnDADO_CA;
 
     //fila secundaria
     private Button btnItem, btnRun;
     //contadores inventory
     private int llaves, llaveMaestra, daga, espada, pocionVida, pocionLava;
 
+    public string armadura, nom_ataque;
+    private int stat;
+
     void Start()
     {
+        armadura = " ";
+        nom_ataque = " ";
+
         llaves = 0;
         llaveMaestra = 0;
         espada = 0;
@@ -77,12 +83,14 @@ public class CommandPanel : MonoBehaviour
 
         btnRun = root.Q<Button>("btn-huir");
         btnDADO = root.Q<Button>("btn-DADO");
+        btnDADO_CA = root.Q<Button>("btn-DADO-CA");
         //Visual Elements
         options_menu = root.Q<VisualElement>("option_menu");
         fuerza_options = root.Q<VisualElement>("atq-FUE");
         intel_options = root.Q<VisualElement>("atq-INTEL");
         inventoryGrid = root.Q<VisualElement>("inventory-grid");
         tirada_final = root.Q<VisualElement>("tirada-FINAL");
+        tirada_armadura = root.Q<VisualElement>("tirada-ARMADURA");
         // eventos
         btnFUE.clicked += Fuerza;
             btnDAGA.clicked += Daga;
@@ -98,6 +106,7 @@ public class CommandPanel : MonoBehaviour
 
         btnRun.clicked += Huir;
         btnDADO.clicked += Tirada;
+        btnDADO_CA.clicked += TiradaArmadura;
 
         //inventary
         btnITEM.clicked += Abrir_Inventario;
@@ -141,17 +150,32 @@ public class CommandPanel : MonoBehaviour
     public void Daga()
     {
         //commandManager.Fuerza(8);
-        bool AC_superada = commandManager.Armadura(0, 8);
-        if (AC_superada)
+        if (armadura == " ") //No ha hecho nada aun
+        {
+            stat = 0;
+            nom_ataque = "daga";
+            Menu_TiradaArmadura();
+        }
+        else if (armadura == " no ") //No super el AC
+        {
+            Back();
+            armadura = " ";
+        }
+        else //si supera el AC
         {
             fuerza_options.style.display = DisplayStyle.None;
             Menu_TiradaFinal();
             Debug.Log("Tira dado de 8");
         }
-        else
-        {
-            Back();
-        }
+        //bool AC_superada = TiradaArmadura(0, 8);
+        //if (AC_superada)
+        //{
+        //    
+        //}
+        //else
+        //{
+        //    
+        //}
             
     }
     public void Espada()
@@ -160,7 +184,33 @@ public class CommandPanel : MonoBehaviour
         //Debug.Log("Ataque de fuerza");
 
     }
-
+    public void Menu_TiradaArmadura()
+    {
+        tirada_armadura.style.display = DisplayStyle.Flex;
+        fuerza_options.style.display = DisplayStyle.None;
+    }
+    public void TiradaArmadura()
+    {
+        bool AC_superada = commandManager.Armadura(stat, 20);
+        if (AC_superada)
+        {
+            tirada_armadura.style.display = DisplayStyle.None;
+            armadura = " si ";
+            switch (nom_ataque)
+            {
+                case "daga":
+                    Daga();
+                    break;
+                default:
+                    break;
+            }
+        }
+        else
+        {
+            tirada_armadura.style.display = DisplayStyle.Flex;
+            armadura = " no ";
+        }
+    }
     public void Menu_TiradaFinal()
     {
         tirada_final.style.display = DisplayStyle.Flex;

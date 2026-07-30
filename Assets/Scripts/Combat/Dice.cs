@@ -4,7 +4,9 @@ using System.Collections.Generic;
 using System.Threading;
 using TMPro;
 using UnityEngine;
-using static System.Net.Mime.MediaTypeNames;
+//using static System.Net.Mime.MediaTypeNames;
+using UnityEngine.UI;
+using UnityImage = UnityEngine.UI.Image;
 
 public class Dice : MonoBehaviour
 {
@@ -14,6 +16,9 @@ public class Dice : MonoBehaviour
    // [SerializeField] Animator dado;
     [Header("Textos dado")]
     [SerializeField] TMP_Text diceText;
+
+    [Header("Sprites")]
+    public Image image;
 
     [Header("Usar diferentes fotos")]
     [SerializeField] Sprite[] imagenesDados;
@@ -49,6 +54,12 @@ public class Dice : MonoBehaviour
     //private Vector3 dice18 = new Vector3(10.76f, 342.68f, 297.57f);
     //private Vector3 dice19 = new Vector3(350.84f, 234.66f, 47.33f);
     //private Vector3 dice20 = new Vector3(75.52f, 355.54f, 266.67f);
+    
+    public void CambiarSprite(int dado_sprite)
+    {
+        // Asignar el nuevo sprite
+        image.sprite = imagenesDados[dado_sprite];
+    }
 
     public int RollDice(int maxValue)
     {
@@ -66,7 +77,6 @@ public class Dice : MonoBehaviour
         diceText.text = a.ToString();
         yield return new WaitForSeconds(time);
         diceText.text = "?";
-
     }
 
     //private void animDice(int a)

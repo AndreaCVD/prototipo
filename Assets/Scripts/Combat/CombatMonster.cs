@@ -92,11 +92,11 @@ public class CombatMonster : MonoBehaviour
         //Este daño al enemigo
         int stat_damage = player.stats.Get(PersonajesStats.Fuerza);
         //Clase Armadura oponente
-        int armadura = target.player.stats.Get(PersonajesStats.ClaseArmadura);
+        //int armadura = target.player.stats.Get(PersonajesStats.ClaseArmadura);
         
         //Si Dice + Fuerza no supera AC del enemigo, no se hace el ataque
-        if ( (stat_damage+ dice) >= armadura)
-        {
+        //if ( (stat_damage+ dice) >= armadura)
+        //{
             //if (stat_change)
             //{
             //    restaurarStat(0); //Restauramos Fuerza
@@ -109,11 +109,11 @@ public class CombatMonster : MonoBehaviour
             //1 --> d4 a ti mismo
 
             target.TakeDamage(stat_damage + dice); 
-        }
-        else
-        {
-            Debug.Log("No has llegado al AC del enemigo");
-        }
+        //}
+        //else
+        //{
+            //Debug.Log("No has llegado al AC del enemigo");
+        //}
     }
     public void Inteligencia(CombatMonster target, int dice) //Enemigo
     {

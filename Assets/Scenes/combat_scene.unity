@@ -267,27 +267,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   diceText: {fileID: 1890569298}
+  image: {fileID: 1193116565}
   imagenesDados:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 21300000, guid: 00dd8d074de6f264089831d6c41cdc3f, type: 3}
+  - {fileID: 21300000, guid: b48c6f8d926787d4abe070877c9b8652, type: 3}
 --- !u!1 &144959331
 GameObject:
   m_ObjectHideFlags: 0
@@ -1232,6 +1215,7 @@ MonoBehaviour:
   iconoEspada: {fileID: 21300000, guid: e9a57d8d864fc2443b5bdcfed074ea39, type: 3}
   iconoPocionLava: {fileID: 21300000, guid: 966a370916b06b940b0edfc209421ad2, type: 3}
   commandManager: {fileID: 88913840}
+  diceSprite: {fileID: 88913843}
   armadura: 
   nom_ataque: 
 --- !u!1 &1789937962

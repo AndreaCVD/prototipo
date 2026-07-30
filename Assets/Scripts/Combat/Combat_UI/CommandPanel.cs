@@ -15,6 +15,7 @@ public class CommandPanel : MonoBehaviour
     [SerializeField] Sprite iconoPocionLava;
 
     [SerializeField] CommandManager commandManager;
+    [SerializeField] Dice diceSprite;
 
     private GameObject load_script;
     private LoadScene loadScene;
@@ -41,10 +42,11 @@ public class CommandPanel : MonoBehaviour
     private int llaves, llaveMaestra, daga, espada, pocionVida, pocionLava;
 
     public string armadura, nom_ataque;
-    private int stat;
+    private int stat, MAX_vida;
 
     void Start()
     {
+        MAX_vida = protagonista.stats.Get(PersonajesStats.Max_Vida);
         armadura = " ";
         nom_ataque = " ";
 
@@ -159,13 +161,12 @@ public class CommandPanel : MonoBehaviour
         else if (armadura == " no ") //No super el AC
         {
             Back();
-            armadura = " ";
+            Resetear_Valores();
         }
         else //si supera el AC
         {
             fuerza_options.style.display = DisplayStyle.None;
             Menu_TiradaFinal();
-            Debug.Log("Tira dado de 8");
         }
         //bool AC_superada = TiradaArmadura(0, 8);
         //if (AC_superada)
@@ -199,6 +200,7 @@ public class CommandPanel : MonoBehaviour
             switch (nom_ataque)
             {
                 case "daga":
+                    diceSprite.CambiarSprite(0);
                     Daga();
                     break;
                 default:
@@ -214,12 +216,32 @@ public class CommandPanel : MonoBehaviour
     public void Menu_TiradaFinal()
     {
         tirada_final.style.display = DisplayStyle.Flex;
-
-        Debug.Log("Hacer la tirada de daño final");
     }
     public void Tirada()
     {
-        Debug.Log("Hacer la tirada de daño final");
+        switch (nom_ataque)
+        {
+            case "daga":
+                commandManager.Fuerza(8);
+                break;
+            default:
+                Debug.Log("No se ha leido bien el nombre del ataque");
+                break;
+        }
+        //Debug.Log("Hacer la tirada de daño final");
+
+        Resetear_Valores();
+        //volver a menu inicial
+        tirada_final.style.display = DisplayStyle.None;
+        options_menu.style.display = DisplayStyle.Flex;
+        diceSprite.CambiarSprite(1);
+
+    }
+    void Resetear_Valores()
+    {
+        nom_ataque = " ";
+        stat = 10;
+        armadura = " ";
     }
     //Boton Inteligencia
     public void Intel()
@@ -289,7 +311,7 @@ public class CommandPanel : MonoBehaviour
              case 2: //Pocion de vida
                 Debug.Log("El jugador usa una pocion, recupera 10 de vida");
                 int vida = protagonista.stats.values[3].value;
-                if (vida > 0 && vida < 30) //MAX vida - 10
+                if (vida > 0 && vida <= MAX_vida-10) //MAX vida - 10
                 {
                     protagonista.stats.values[3].value += 10;
                     protagonista.Inventario.PocionVida.RemoveAt(protagonista.Inventario.PocionVida.Count - 1);

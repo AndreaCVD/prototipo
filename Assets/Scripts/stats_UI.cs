@@ -81,7 +81,7 @@ public class stats_UI : MonoBehaviour
         //h = protagonista.stats.Get(PersonajesStats.Constitucion).ToString();
         //int h = protagonista.stats.Get(PersonajesStats.Constitucion);
 
-        maxLife = protagonista.stats.Get(PersonajesStats.Constitucion);
+        maxLife = protagonista.stats.Get(PersonajesStats.Max_Vida);
 
         SetFuerza(f);
         SetIntel(i);
@@ -168,7 +168,7 @@ public class stats_UI : MonoBehaviour
 
     public void MostrarNotificacion(Sprite icono)
     {
-        Debug.Log("Mostrar notificacion");
+        //Debug.Log("Mostrar notificacion");
         /*
         if (notifCoroutine != null)
         {
@@ -229,7 +229,7 @@ public class stats_UI : MonoBehaviour
 
             if (esNuevo)
             {
-                Debug.Log(icono);
+                //Debug.Log(icono);
                 MostrarNotificacion(icono);
             }
 

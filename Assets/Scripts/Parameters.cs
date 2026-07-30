@@ -10,7 +10,8 @@ public enum PersonajesStats
     Inteligencia,   //1
     Carisma,        //2
     Constitucion,   //3
-    ClaseArmadura   //4
+    ClaseArmadura,  //4
+    Max_Vida        //5
 }
 
 //para poder editarlo en el editor de unity le ponemos serializable
@@ -29,7 +30,7 @@ public class ValueContainer
 [Serializable]
 public class ValueBlock
 {
-    private const int persStatsNum = 4;
+    private const int persStatsNum = 5;
     public List<ValueContainer> values;
     public void InitPersonaje()
     {

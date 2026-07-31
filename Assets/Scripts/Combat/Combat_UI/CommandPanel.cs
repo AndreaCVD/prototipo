@@ -13,6 +13,7 @@ public class CommandPanel : MonoBehaviour
     [SerializeField] Sprite iconoDaga;
     [SerializeField] Sprite iconoEspada;
     [SerializeField] Sprite iconoPocionLava;
+    [SerializeField] Sprite iconoMonedas;
 
     [SerializeField] CommandManager commandManager;
     [SerializeField] Dice diceSprite;
@@ -39,7 +40,7 @@ public class CommandPanel : MonoBehaviour
     //fila secundaria
     private Button btnItem, btnRun;
     //contadores inventory
-    private int llaves, llaveMaestra, daga, espada, pocionVida, pocionLava;
+    private int llaves, llaveMaestra, daga, espada, pocionVida, pocionLava, monedas;
 
     public string armadura, nom_ataque;
     private int stat, MAX_vida;
@@ -56,6 +57,7 @@ public class CommandPanel : MonoBehaviour
         daga = 0;
         pocionVida = 0;
         pocionLava = 0;
+        monedas = 0;
 
         if (load_script == null)
         {
@@ -304,9 +306,9 @@ public class CommandPanel : MonoBehaviour
         //vemos que item es y lo sacamos del inventario
         switch (slot)
         {
-            case 0:
+            case 0: //llave normal
                 break;
-             case 1:
+             case 1: //llave maestra
                 break;
              case 2: //Pocion de vida
                 Debug.Log("El jugador usa una pocion, recupera 10 de vida");
@@ -317,11 +319,9 @@ public class CommandPanel : MonoBehaviour
                     protagonista.Inventario.PocionVida.RemoveAt(protagonista.Inventario.PocionVida.Count - 1);
                 }
                 break;
-             case 3:
+             case 3: //pocion lava
                 break;
-             case 4:
-                break;
-             case 5:
+             case 4: //monedas
                 break;
             default:
                 break;
@@ -337,16 +337,17 @@ public class CommandPanel : MonoBehaviour
         if (protagonista.Inventario.Llave == null) return false;
         if (protagonista.Inventario.LlaveMaestra == null) return false;
         if (protagonista.Inventario.PocionVida == null) return false;
-        if (protagonista.Inventario.Daga == null) return false;
+        //if (protagonista.Inventario.Daga == null) return false;
         if (protagonista.Inventario.PocionLava == null) return false;
-        if (protagonista.Inventario.Espada == null) return false;
+        //if (protagonista.Inventario.Espada == null) return false;
 
         if (protagonista.Inventario.Llave.Count != llaves) return false;
         if (protagonista.Inventario.LlaveMaestra.Count != llaveMaestra) return false;
         if (protagonista.Inventario.PocionVida.Count != pocionVida) return false;
-        if (protagonista.Inventario.PocionLava.Count != pocionVida) return false;
-        if (protagonista.Inventario.Daga.Count != daga) return false;
-        if (protagonista.Inventario.Espada.Count != espada) return false;
+        if (protagonista.Inventario.PocionLava.Count != pocionLava) return false;
+        if (protagonista.Inventario.Monedas.Count != monedas) return false;
+        //if (protagonista.Inventario.Daga.Count != daga) return false;
+        //if (protagonista.Inventario.Espada.Count != espada) return false;
 
         return true;
     }
@@ -358,22 +359,26 @@ public class CommandPanel : MonoBehaviour
         if (protagonista.Inventario.LlaveMaestra == null) return;
         if (protagonista.Inventario.PocionVida == null) return;
         if (protagonista.Inventario.PocionLava == null) return;
-        if (protagonista.Inventario.Daga == null) return;
-        if (protagonista.Inventario.Espada == null) return;
+        if (protagonista.Inventario.Monedas == null) return;
+        //if (protagonista.Inventario.Daga == null) return;
+        //if (protagonista.Inventario.Espada == null) return;
 
         llaves = protagonista.Inventario.Llave.Count;
         llaveMaestra = protagonista.Inventario.LlaveMaestra.Count;
         pocionVida = protagonista.Inventario.PocionVida.Count;
         pocionLava = protagonista.Inventario.PocionLava.Count;
-        daga = protagonista.Inventario.Daga.Count;
-        espada = protagonista.Inventario.Espada.Count;
+        //daga = protagonista.Inventario.Daga.Count;
+        //espada = protagonista.Inventario.Espada.Count;
+        monedas = protagonista.Inventario.Monedas.Count;
 
         SetSlot(0, llaves > 0 ? iconoLlave : null, llaves);
         SetSlot(1, llaveMaestra > 0 ? iconoLlaveMaestra : null, llaveMaestra);
         SetSlot(2, pocionVida > 0 ? iconoPocionVida : null, pocionVida);
-        SetSlot(3, daga > 0 ? iconoDaga : null, daga);
-        SetSlot(4, espada > 0 ? iconoEspada : null, espada);
-        SetSlot(5, pocionLava > 0 ? iconoPocionLava : null, pocionLava);
+        //SetSlot(3, daga > 0 ? iconoDaga : null, daga);
+        //SetSlot(4, espada > 0 ? iconoEspada : null, espada);
+        //SetSlot(5, pocionLava > 0 ? iconoPocionLava : null, pocionLava);
+        SetSlot(3, pocionLava > 0 ? iconoPocionLava : null, pocionLava);
+        SetSlot(4, monedas > 0 ? iconoMonedas : null, monedas);
     }
     void SetSlot(int index, Sprite icono, int cantidad)
     {

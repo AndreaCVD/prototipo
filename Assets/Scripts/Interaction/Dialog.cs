@@ -268,13 +268,13 @@ public class Dialog : MonoBehaviour
         int a = Random.Range(1, objMax);
         switch (a)
         {
+            //case 1:
+            //    prota.Inventario.Espada.Add("Espada_Loot");
+            //    break;
             case 1:
-                prota.Inventario.Espada.Add("Espada_Loot");
+                prota.Inventario.Monedas.Add("Monedas_Loot");
                 break;
             case 2:
-                prota.Inventario.Daga.Add("Daga_Loot");
-                break;
-            case 3:
                 prota.Inventario.PocionVida.Add("PocionVida_Loot");
                 break;
             default:

@@ -60,7 +60,7 @@
                     <ui:VisualElement name="slot-4-icon" class="inv-slot__icon" />
                     <ui:Label name="slot-4-badge" text="0" class="inv-slot__badge" />
                 </ui:VisualElement>
-                <ui:VisualElement name="slot-5" class="inv-slot">
+                <ui:VisualElement name="slot-5" class="inv-slot" style="display: flex; visibility: hidden;">
                     <ui:VisualElement name="slot-5-icon" class="inv-slot__icon" />
                     <ui:Label name="slot-5-badge" text="0" class="inv-slot__badge" />
                 </ui:VisualElement>

@@ -135,6 +135,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-en-US
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c908efcf90502fa47a7039e42334ac52
+    m_Address: Entrada_Mazmorra_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ccc9faa2438f38b4090d967d4d496462
     m_Address: Cuerda_en-US
     m_ReadOnly: 1

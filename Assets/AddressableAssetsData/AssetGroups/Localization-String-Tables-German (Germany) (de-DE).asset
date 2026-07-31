@@ -57,6 +57,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-de-DE
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 65d19c5e1fc0d5948876374fc15f0418
+    m_Address: Entrada_Mazmorra_de-DE
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de-DE
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 671a74bdfbae80e42847c9ec5a68cef3
     m_Address: Fogata_de-DE
     m_ReadOnly: 1

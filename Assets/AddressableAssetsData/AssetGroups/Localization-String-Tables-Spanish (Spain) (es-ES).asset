@@ -105,6 +105,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-es-ES
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bc3dc9d37e0242542873f5f5e017f7bf
+    m_Address: Entrada_Mazmorra_es-ES
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es-ES
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c73489b5fdb94654799d1c9e041101a1
     m_Address: Nimrodel_es-ES
     m_ReadOnly: 1

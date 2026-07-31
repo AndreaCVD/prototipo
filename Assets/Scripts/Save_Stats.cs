@@ -22,7 +22,7 @@ public class Save_Stats : MonoBehaviour
         playerPersonaje.stats.values[0].value = 5; //Fuerza
         playerPersonaje.stats.values[1].value = 3; //Inteligencia
         playerPersonaje.stats.values[2].value = 3; //Carisma
-        playerPersonaje.stats.values[3].value = 50; //Vida
+        playerPersonaje.stats.values[3].value = playerPersonaje.stats.values[5].value; //Vida
         playerPersonaje.stats.values[4].value = 14; //Armadura
         //Player Stats
         //playerPersonaje.Inventario.Llave.Clear();

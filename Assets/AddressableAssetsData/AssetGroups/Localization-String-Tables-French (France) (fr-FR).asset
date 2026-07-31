@@ -57,6 +57,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-fr-FR
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 810ae3f60b1fa5a4fb415f8b30d1a61e
+    m_Address: Entrada_Mazmorra_fr-FR
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-fr-FR
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 943b3fcf88463a741824b2e079c72a5a
     m_Address: Lerendur Libre_fr-FR
     m_ReadOnly: 1

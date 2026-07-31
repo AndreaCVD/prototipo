@@ -16,6 +16,7 @@ public class stats_UI : MonoBehaviour
     [SerializeField] Sprite iconoDaga;
     [SerializeField] Sprite iconoEspada;
     [SerializeField] Sprite iconoPocionLava;
+    [SerializeField] Sprite iconoMonedas;
 
     //ref del UI
     private VisualElement root;
@@ -37,6 +38,7 @@ public class stats_UI : MonoBehaviour
     private int espada;
     private int pocionVida;
     private int pocionLava;
+    private int monedas;
 
     private void OnEnable()
     {
@@ -73,6 +75,7 @@ public class stats_UI : MonoBehaviour
         daga = 0;
         pocionVida = 0;
         pocionLava = 0;
+        monedas = 0;
 
         //Seteamos valores, int -> string
         int f = protagonista.stats.Get(PersonajesStats.Fuerza);
@@ -127,16 +130,18 @@ public class stats_UI : MonoBehaviour
         if (protagonista.Inventario.Llave == null) return false;
         if (protagonista.Inventario.LlaveMaestra == null) return false;
         if (protagonista.Inventario.PocionVida == null) return false;
-        if (protagonista.Inventario.Daga == null) return false;
+        //if (protagonista.Inventario.Daga == null) return false;
         if (protagonista.Inventario.PocionLava == null) return false;
-        if (protagonista.Inventario.Espada == null) return false;
+        if (protagonista.Inventario.Monedas == null) return false;
+        //if (protagonista.Inventario.Espada == null) return false;
 
         if (protagonista.Inventario.Llave.Count() != llaves) return false;
         if (protagonista.Inventario.LlaveMaestra.Count() != llaveMaestra) return false;
         if (protagonista.Inventario.PocionVida.Count() != pocionVida) return false;
-        if (protagonista.Inventario.PocionLava.Count() != pocionVida) return false;
-        if (protagonista.Inventario.Daga.Count() != daga) return false;
-        if (protagonista.Inventario.Espada.Count() != espada) return false;
+        if (protagonista.Inventario.PocionLava.Count() != pocionLava) return false;
+        if (protagonista.Inventario.Monedas.Count() != monedas) return false;
+        //if (protagonista.Inventario.Daga.Count() != daga) return false;
+        //if (protagonista.Inventario.Espada.Count() != espada) return false;
 
         return true;
     }
@@ -196,22 +201,26 @@ public class stats_UI : MonoBehaviour
         if (protagonista.Inventario.LlaveMaestra == null) return;
         if (protagonista.Inventario.PocionVida == null) return;
         if (protagonista.Inventario.PocionLava == null) return;
-        if (protagonista.Inventario.Daga == null) return;
-        if (protagonista.Inventario.Espada == null) return;
+        if (protagonista.Inventario.Monedas == null) return;
+        //if (protagonista.Inventario.Daga == null) return;
+        //if (protagonista.Inventario.Espada == null) return;
 
         llaves = protagonista.Inventario.Llave.Count();
         llaveMaestra = protagonista.Inventario.LlaveMaestra.Count();
         pocionVida = protagonista.Inventario.PocionVida.Count();
         pocionLava = protagonista.Inventario.PocionLava.Count();
-        daga = protagonista.Inventario.Daga.Count();
-        espada = protagonista.Inventario.Espada.Count();
+        //daga = protagonista.Inventario.Daga.Count();
+        //espada = protagonista.Inventario.Espada.Count();
+        monedas = protagonista.Inventario.Monedas.Count;
 
         SetSlot(0, llaves > 0 ? iconoLlave : null, llaves);
         SetSlot(1, llaveMaestra > 0 ? iconoLlaveMaestra : null, llaveMaestra);
         SetSlot(2, pocionVida > 0 ? iconoPocionVida : null, pocionVida);
-        SetSlot(3, daga > 0 ? iconoDaga : null, daga);
-        SetSlot(4, espada > 0 ? iconoEspada : null, espada);
-        SetSlot(5, pocionLava > 0 ? iconoPocionLava : null, pocionLava);
+        //SetSlot(3, daga > 0 ? iconoDaga : null, daga);
+        //SetSlot(4, espada > 0 ? iconoEspada : null, espada);
+        //SetSlot(5, pocionLava > 0 ? iconoPocionLava : null, pocionLava);
+        SetSlot(3, pocionLava > 0 ? iconoPocionLava : null, pocionLava);
+        SetSlot(4, monedas > 0 ? iconoMonedas : null, monedas);
     }
 
     void SetSlot(int index, Sprite icono, int cantidad)

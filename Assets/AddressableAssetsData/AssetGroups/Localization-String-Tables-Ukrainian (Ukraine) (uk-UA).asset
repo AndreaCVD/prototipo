@@ -81,6 +81,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-uk-UA
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 83638a1e09a15ec448dcaf1c01c7fb43
+    m_Address: Entrada_Mazmorra_uk-UA
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-uk-UA
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 99d97502eabd4eb488378ec5f5ee1367
     m_Address: Cuerda_uk-UA
     m_ReadOnly: 1

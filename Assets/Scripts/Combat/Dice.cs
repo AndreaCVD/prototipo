@@ -64,7 +64,7 @@ public class Dice : MonoBehaviour
     public int RollDice(int maxValue, int tiradas)
     {
         int a = 0;
-        for (int aux = 0; aux <= tiradas; aux++)
+        for (int aux = 0; aux < tiradas; aux++)
         {
             a += Random.Range(1, maxValue);
             Debug.Log("Dice=" + a);

@@ -23,7 +23,7 @@ public class CommandPanel : MonoBehaviour
 
     private VisualElement root;
     VisualElement options_menu;
-    VisualElement fuerza_options, intel_options, inventoryGrid, tirada_armadura, tirada_final;
+    VisualElement fuerza_options, intel_options, inventoryGrid, tirada_armadura, tirada_final, tirada_critica;
 
     //fila principal
     private Button btnFUE, btnCAR, btnINT, btnITEM;
@@ -35,7 +35,7 @@ public class CommandPanel : MonoBehaviour
     //fila ataque item
     private Button btnBACK_item, btn_slot_2;
     //boton dado tirada final
-    private Button btnDADO, btnDADO_CA;
+    private Button btnDADO, btnDADO_CA, btnCRITICO;
 
     //fila secundaria
     private Button btnItem, btnRun;
@@ -87,6 +87,7 @@ public class CommandPanel : MonoBehaviour
 
         btnRun = root.Q<Button>("btn-huir");
         btnDADO = root.Q<Button>("btn-DADO");
+        btnCRITICO = root.Q<Button>("btn-CRITICO");
         btnDADO_CA = root.Q<Button>("btn-DADO-CA");
         //Visual Elements
         options_menu = root.Q<VisualElement>("option_menu");
@@ -94,6 +95,7 @@ public class CommandPanel : MonoBehaviour
         intel_options = root.Q<VisualElement>("atq-INTEL");
         inventoryGrid = root.Q<VisualElement>("inventory-grid");
         tirada_final = root.Q<VisualElement>("tirada-FINAL");
+        tirada_critica = root.Q<VisualElement>("tirada-CRITICA");
         tirada_armadura = root.Q<VisualElement>("tirada-ARMADURA");
         // eventos
         btnFUE.clicked += Fuerza;
@@ -110,6 +112,7 @@ public class CommandPanel : MonoBehaviour
 
         btnRun.clicked += Huir;
         btnDADO.clicked += Tirada;
+        btnCRITICO.clicked += TiradaCritico;
         btnDADO_CA.clicked += TiradaArmadura;
 
         //inventary
@@ -136,7 +139,7 @@ public class CommandPanel : MonoBehaviour
         btnRun.clicked -= Huir;
     }
 
-    //Boton Fuerza, se dice a command manager
+    // --- BOTON FUERZA ---
     public void Fuerza()
     {
         //hacer visible los ataques de fuerza
@@ -168,7 +171,7 @@ public class CommandPanel : MonoBehaviour
         else if (armadura == " critico ") //El jugador tira NAT 20
         {
             fuerza_options.style.display = DisplayStyle.None;
-            Menu_TiradaFinal();
+            Menu_TiradaCritico();
         }
         else //si supera el AC
         {
@@ -183,23 +186,17 @@ public class CommandPanel : MonoBehaviour
         //Debug.Log("Ataque de fuerza");
 
     }
+    
+    // --- ARMADURA ---
     public void Menu_TiradaArmadura()
     {
         tirada_armadura.style.display = DisplayStyle.Flex;
         fuerza_options.style.display = DisplayStyle.None;
     }
-    public void Menu_DadoDoble()
-    {
-        // para el critico tirara dos dados
-    }
-    public void Menu_DanyoPropio()
-    {
-        // d4 para hacerse daño a uno mismo
-    }
     public void TiradaArmadura()
     {
-        // 0 = Nat 1
-        // 1 = Nat 20
+        // ? = Nat 1
+        // 0 = Nat 20
         // 2 = Tirada normal, AC superada
         // 3 = Tirada normal, AC NO superada
 
@@ -218,7 +215,7 @@ public class CommandPanel : MonoBehaviour
                     break;
             }
         }
-        else if (AC_superada == 1)
+        else if (AC_superada == 0)
         {
             //commandManager.Fuerza(8*2);
             tirada_armadura.style.display = DisplayStyle.None;
@@ -233,7 +230,7 @@ public class CommandPanel : MonoBehaviour
                     break;
             }
         }
-        else if (AC_superada == 0)
+        else if (AC_superada == 1)
         {
             tirada_armadura.style.display = DisplayStyle.None;
             // el jugador se hace daño a si mismo
@@ -245,6 +242,8 @@ public class CommandPanel : MonoBehaviour
             armadura = " no ";
         }
     }
+    
+    // --- TIRADA FINAL ---
     public void Menu_TiradaFinal()
     {
         tirada_final.style.display = DisplayStyle.Flex;
@@ -269,6 +268,34 @@ public class CommandPanel : MonoBehaviour
         diceSprite.CambiarSprite(1);
 
     }
+    
+    // --- TIRADA FINAL CON CRITICO ---
+    public void Menu_TiradaCritico()
+    {
+        tirada_critica.style.display = DisplayStyle.Flex;
+    }
+    public void TiradaCritico()
+    {
+        switch (nom_ataque)
+        {
+            case "daga":
+                commandManager.Fuerza(8, 2);
+                break;
+            default:
+                Debug.Log("No se ha leido bien el nombre del ataque");
+                break;
+        }
+        //Debug.Log("Hacer la tirada de daño final");
+
+        Resetear_Valores();
+        //volver a menu inicial
+        tirada_final.style.display = DisplayStyle.None;
+        options_menu.style.display = DisplayStyle.Flex;
+        diceSprite.CambiarSprite(1);
+
+    }
+    
+    // --- RESETEAR TIRADA ---
     void Resetear_Valores()
     {
         nom_ataque = " ";
@@ -318,7 +345,7 @@ public class CommandPanel : MonoBehaviour
         loadScene.SalirCombate();
         //preload.cambiarEscena("pruevas_prototipo");
     }
-
+    // --- INVENTARIO ---
     void Abrir_Inventario()
     {
         Debug.Log("Abrir Inventario");

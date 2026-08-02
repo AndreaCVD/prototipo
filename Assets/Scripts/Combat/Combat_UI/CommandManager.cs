@@ -34,8 +34,8 @@ public class CommandManager : MonoBehaviour
     //Ver si supera la armadura del contrincante
     public int Armadura(int stat, int num_dado)
     {
-        // 0 = Nat 1
-        // 1 = Nat 20
+        // ? = Nat 1
+        // 0 = Nat 20
         // 2 = Tirada normal, AC superada
         // 3 = Tirada normal, AC NO superada
 
@@ -48,12 +48,11 @@ public class CommandManager : MonoBehaviour
 
             NextTurn();
             return 3;            
-
         }
         else
         {
+            Debug.Log(AC_superada);
             return AC_superada;
-
         }
     }
 

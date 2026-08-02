@@ -106,7 +106,7 @@ public class CommandPanel : MonoBehaviour
         btnINT.clicked += Intel;
             btnINMOV.clicked += Inmovilizar;
             btnESCUDO.clicked += Escudo;
-            btnBACK_intel.clicked += Back_intel;
+            //btnBACK_intel.clicked += Back_intel;
 
         btnCAR.clicked += Carisma;
 
@@ -138,22 +138,38 @@ public class CommandPanel : MonoBehaviour
         btnITEM.clicked -= Abrir_Inventario;
         btnRun.clicked -= Huir;
     }
+    // --- VOLVER AL MENU PRINCIPAL ---
+    public void Back()
+    {
+        options_menu.style.display = DisplayStyle.Flex;
 
+        if (fuerza_options.style.display == DisplayStyle.Flex)
+        {
+            fuerza_options.style.display = DisplayStyle.None;
+        }
+        if (intel_options.style.display == DisplayStyle.Flex)
+        {
+            intel_options.style.display = DisplayStyle.None;
+        }
+        if (tirada_armadura.style.display == DisplayStyle.Flex)
+        {
+            tirada_armadura.style.display = DisplayStyle.None;
+        }
+        if (tirada_final.style.display == DisplayStyle.Flex)
+        {
+            tirada_final.style.display = DisplayStyle.None;
+        }
+        //fuerza_options.style.display = index == 0 ? DisplayStyle.Flex : DisplayStyle.None;
+
+
+    }
+    
     // --- BOTON FUERZA ---
     public void Fuerza()
     {
         //hacer visible los ataques de fuerza
         options_menu.style.display = DisplayStyle.None;
         fuerza_options.style.display = DisplayStyle.Flex;
-
-        //commandManager.Fuerza(20);
-        //Debug.Log("Ataque de fuerza");
-    }
-    public void Back()
-    {
-        Debug.Log("back");
-        options_menu.style.display = DisplayStyle.Flex;
-        fuerza_options.style.display = DisplayStyle.None;
     }
     public void Daga()
     {
@@ -240,7 +256,6 @@ public class CommandPanel : MonoBehaviour
         }
         else if (AC_superada == 3)
         {
-            tirada_armadura.style.display = DisplayStyle.None;
             armadura = "no";
             Back();
         }
@@ -266,10 +281,8 @@ public class CommandPanel : MonoBehaviour
 
         Resetear_Valores();
         //volver a menu inicial
-        tirada_final.style.display = DisplayStyle.None;
-        options_menu.style.display = DisplayStyle.Flex;
+        Back();
         diceSprite.CambiarSprite(1);
-
     }
     
     // --- TIRADA FINAL CON CRITICO ---
@@ -292,8 +305,7 @@ public class CommandPanel : MonoBehaviour
 
         Resetear_Valores();
         //volver a menu inicial
-        tirada_final.style.display = DisplayStyle.None;
-        options_menu.style.display = DisplayStyle.Flex;
+        Back();
         diceSprite.CambiarSprite(1);
 
     }
@@ -305,6 +317,7 @@ public class CommandPanel : MonoBehaviour
         stat = 10;
         armadura = " ";
     }
+    
     //Boton Inteligencia
     public void Intel()
     {
@@ -325,13 +338,6 @@ public class CommandPanel : MonoBehaviour
         //Debug.Log("Ataque de fuerza");
 
     }
-    public void Back_intel()
-    {
-        options_menu.style.display = DisplayStyle.Flex;
-        intel_options.style.display = DisplayStyle.None;
-        //commandManager.Inteligencia();
-        //Debug.Log("Ha usado inteligencia");
-    }
 
     //Boton Carisma
     public void Carisma()
@@ -351,13 +357,11 @@ public class CommandPanel : MonoBehaviour
     // --- INVENTARIO ---
     void Abrir_Inventario()
     {
-        Debug.Log("Abrir Inventario");
         options_menu.style.display = DisplayStyle.None;
         inventoryGrid.style.display = DisplayStyle.Flex;
     }
     void Back_item()
     {
-        Debug.Log("Cerrar Inventario");
         options_menu.style.display = DisplayStyle.Flex;
         inventoryGrid.style.display = DisplayStyle.None;
     }

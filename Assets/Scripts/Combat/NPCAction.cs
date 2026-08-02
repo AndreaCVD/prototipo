@@ -89,19 +89,19 @@ public class NPCAction : MonoBehaviour
             case 'f':
                 //Random pero que tenga mas probabilidades de Fuerza
                 Debug.Log("Enemigo ha usado FUERZA");
-                commandManager.Fuerza(20);
+                commandManager.Fuerza(12, 1);
                 break;
             case 'i':
                 //Random pero que tenga mas probabilidades de Fuerza
                 Debug.Log("Enemigo ha usado INTELIGENCIA");
 
-                commandManager.Inteligencia(20);
+                commandManager.Inteligencia(12);
                 break;
             case 'c':
                 //Random pero que tenga mas probabilidades de Fuerza
                 Debug.Log("Enemigo ha usado CARISMA");
 
-                commandManager.Carisma(20);
+                commandManager.Carisma(12);
                 break;
             default:
                 Debug.Log("--default de npc action--");

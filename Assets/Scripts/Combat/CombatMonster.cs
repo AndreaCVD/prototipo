@@ -58,33 +58,38 @@ public class CombatMonster : MonoBehaviour
     }
 
     //Primero tiene que superar la armadura
-    public bool Armadura (CombatMonster target, int dice, int stat)
+    public int Armadura (CombatMonster target, int dice, int stat)
     {
         //Este daño al enemigo
         int stat_damage = player.stats.values[stat].value;
         //Clase Armadura oponente
         int armadura = target.player.stats.Get(PersonajesStats.ClaseArmadura);
         //Si Dice + Fuerza no supera AC del enemigo, no se hace el ataque
-        if ((stat_damage + dice) >= armadura)
+        if (dice == 20) //Natrual 20, doble daño
         {
-            //if (stat_change)
-            //{
-            //    restaurarStat(0); //Restauramos Fuerza
-            //}
-            //Escibimos Debug.Log
-            //Commando(stat_enemigo, armadura, dice);
-            //Target recibe daño de la fuerza
-
-            //20 nat --> doble daño
-            //1 --> d4 a ti mismo
-
-            return true;
+            Debug.Log("NATURAL 20, el daño sera doble");
+            return 0;
+        }
+        else if (dice == 1) //daño propio --> d4 a ti mismo
+        {
+            Debug.Log("NATURAL 1, daño a uno mismo con d4");
+            return 1;
+        }
+        else if ((stat_damage + dice) >= armadura)
+        {
+            Debug.Log("Has llegado al AC del enemigo");
+            return 2;
         }
         else
         {
-
-            return false;
+            Debug.Log("No has llegado al AC del enemigo");
+            return 3;
         }
+    }
+    public void ataque_propio(CombatMonster player)
+    {
+        //player.TakeDamage(dice);
+
     }
     //Luego volver a tirar dado
     public void Fuerza(CombatMonster target, int dice) //Enemigo
@@ -107,7 +112,7 @@ public class CombatMonster : MonoBehaviour
             
             //20 nat --> doble daño
             //1 --> d4 a ti mismo
-
+            
             target.TakeDamage(stat_damage + dice); 
         //}
         //else

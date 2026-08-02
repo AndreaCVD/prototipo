@@ -165,25 +165,21 @@ public class CommandPanel : MonoBehaviour
             Back();
             Resetear_Valores();
         }
+        else if (armadura == " critico ") //El jugador tira NAT 20
+        {
+            fuerza_options.style.display = DisplayStyle.None;
+            Menu_TiradaFinal();
+        }
         else //si supera el AC
         {
             fuerza_options.style.display = DisplayStyle.None;
             Menu_TiradaFinal();
         }
-        //bool AC_superada = TiradaArmadura(0, 8);
-        //if (AC_superada)
-        //{
-        //    
-        //}
-        //else
-        //{
-        //    
-        //}
             
     }
     public void Espada()
     {
-        commandManager.Fuerza(12);
+        commandManager.Fuerza(12, 1);
         //Debug.Log("Ataque de fuerza");
 
     }
@@ -192,10 +188,23 @@ public class CommandPanel : MonoBehaviour
         tirada_armadura.style.display = DisplayStyle.Flex;
         fuerza_options.style.display = DisplayStyle.None;
     }
+    public void Menu_DadoDoble()
+    {
+        // para el critico tirara dos dados
+    }
+    public void Menu_DanyoPropio()
+    {
+        // d4 para hacerse daño a uno mismo
+    }
     public void TiradaArmadura()
     {
-        bool AC_superada = commandManager.Armadura(stat, 20);
-        if (AC_superada)
+        // 0 = Nat 1
+        // 1 = Nat 20
+        // 2 = Tirada normal, AC superada
+        // 3 = Tirada normal, AC NO superada
+
+        int AC_superada = commandManager.Armadura(stat, 20);
+        if (AC_superada == 2)
         {
             tirada_armadura.style.display = DisplayStyle.None;
             armadura = " si ";
@@ -209,7 +218,28 @@ public class CommandPanel : MonoBehaviour
                     break;
             }
         }
-        else
+        else if (AC_superada == 1)
+        {
+            //commandManager.Fuerza(8*2);
+            tirada_armadura.style.display = DisplayStyle.None;
+            armadura = " critico ";
+            switch (nom_ataque)
+            {
+                case "daga":
+                    diceSprite.CambiarSprite(0);
+                    Daga();
+                    break;
+                default:
+                    break;
+            }
+        }
+        else if (AC_superada == 0)
+        {
+            tirada_armadura.style.display = DisplayStyle.None;
+            // el jugador se hace daño a si mismo
+
+        }
+        else if (AC_superada == 3)
         {
             tirada_armadura.style.display = DisplayStyle.Flex;
             armadura = " no ";
@@ -224,7 +254,7 @@ public class CommandPanel : MonoBehaviour
         switch (nom_ataque)
         {
             case "daga":
-                commandManager.Fuerza(8);
+                commandManager.Fuerza(8, 1);
                 break;
             default:
                 Debug.Log("No se ha leido bien el nombre del ataque");

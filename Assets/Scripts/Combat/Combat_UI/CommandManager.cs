@@ -32,31 +32,37 @@ public class CommandManager : MonoBehaviour
         ActualizarHP();
     }
     //Ver si supera la armadura del contrincante
-    public bool Armadura(int stat, int num_dado)
+    public int Armadura(int stat, int num_dado)
     {
+        // 0 = Nat 1
+        // 1 = Nat 20
+        // 2 = Tirada normal, AC superada
+        // 3 = Tirada normal, AC NO superada
+
         Debug.Log("Tirar dado ");
-        int aux = lanzarDado(20);
-        bool AC_superada = turnRoundManager.current.Armadura(turnRoundManager.target, aux, stat);
-        if (AC_superada)
+        int aux = lanzarDado(20, 1);
+        int AC_superada = turnRoundManager.current.Armadura(turnRoundManager.target, aux, stat);
+        if (AC_superada == 3)
         {
-            Debug.Log("Has llegado al AC del enemigo");
-            
-            return true;
-        }
-        else
-        {
-            Debug.Log("No has llegado al AC del enemigo");
             ActualizarHP();
 
             NextTurn();
-            return false;
+            return 3;            
+
+        }
+        else
+        {
+            return AC_superada;
+
         }
     }
 
-    public void Fuerza(int dado)
+    public void Fuerza(int dado, int times)
     {
+        //RollDice(int maxValue, /*num veces a tirar dado*/)
+
         //Hay que llamar al DiceRoller para ver si superamos el AC
-        int aux = lanzarDado(dado);
+        int aux = lanzarDado(dado, times);
 
         //Acción
         turnRoundManager.current.Fuerza(turnRoundManager.target, aux);
@@ -65,9 +71,10 @@ public class CommandManager : MonoBehaviour
 
         NextTurn();
     }
+
     public void Inteligencia(int dado)
     {
-        int aux = lanzarDado(dado);
+        int aux = lanzarDado(dado, 1);
 
         //Acción
         turnRoundManager.current.Inteligencia(turnRoundManager.target, aux);
@@ -78,7 +85,7 @@ public class CommandManager : MonoBehaviour
     }
     public void Carisma(int dado)
     {
-        int aux = lanzarDado(20);
+        int aux = lanzarDado(20, 1);
 
         //Acción
         turnRoundManager.current.Carisma(turnRoundManager.target, aux);
@@ -86,9 +93,9 @@ public class CommandManager : MonoBehaviour
 
         NextTurn();
     }
-    private int lanzarDado(int caras)
+    private int lanzarDado(int caras, int tiradas)
     {
-        int a = diceRoller.RollDice(caras);
+        int a = diceRoller.RollDice(caras, tiradas);
         Debug.Log("El dado se ha lanzado");
         return a; 
     }

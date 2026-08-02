@@ -61,10 +61,15 @@ public class Dice : MonoBehaviour
         image.sprite = imagenesDados[dado_sprite];
     }
 
-    public int RollDice(int maxValue)
+    public int RollDice(int maxValue, int tiradas)
     {
-        int a = Random.Range(1, maxValue);
-        Debug.Log("Dice=" + a);
+        int a = 0;
+        for (int aux = 0; aux <= tiradas; aux++)
+        {
+            a += Random.Range(1, maxValue);
+            Debug.Log("Dice=" + a);
+        }
+
         StartCoroutine(ChangeText(a));
         //animDice(a);
         //MoveDice(a);

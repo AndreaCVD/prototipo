@@ -151,6 +151,7 @@ public class CommandPanel : MonoBehaviour
     }
     public void Back()
     {
+        Debug.Log("back");
         options_menu.style.display = DisplayStyle.Flex;
         fuerza_options.style.display = DisplayStyle.None;
     }
@@ -163,7 +164,7 @@ public class CommandPanel : MonoBehaviour
             nom_ataque = "daga";
             Menu_TiradaArmadura();
         }
-        else if (armadura == " no ") //No super el AC
+        else if (armadura == "no") //No super el AC
         {
             Back();
             Resetear_Valores();
@@ -201,6 +202,7 @@ public class CommandPanel : MonoBehaviour
         // 3 = Tirada normal, AC NO superada
 
         int AC_superada = commandManager.Armadura(stat, 20);
+        Debug.Log(AC_superada);
         if (AC_superada == 2)
         {
             tirada_armadura.style.display = DisplayStyle.None;
@@ -238,8 +240,9 @@ public class CommandPanel : MonoBehaviour
         }
         else if (AC_superada == 3)
         {
-            tirada_armadura.style.display = DisplayStyle.Flex;
-            armadura = " no ";
+            tirada_armadura.style.display = DisplayStyle.None;
+            armadura = "no";
+            Back();
         }
     }
     

@@ -39,7 +39,6 @@ public class CommandManager : MonoBehaviour
         // 2 = Tirada normal, AC superada
         // 3 = Tirada normal, AC NO superada
 
-        Debug.Log("Tirar dado ");
         int aux = lanzarDado(20, 1);
         int AC_superada = turnRoundManager.current.Armadura(turnRoundManager.target, aux, stat);
         if (AC_superada == 3)
@@ -51,11 +50,18 @@ public class CommandManager : MonoBehaviour
         }
         else
         {
-            Debug.Log(AC_superada);
             return AC_superada;
         }
     }
+    public void AutoHerirse(int dado, int times)
+    {
+        int aux = lanzarDado(dado, times);
 
+        turnRoundManager.current.ataque_propio(turnRoundManager.current, aux);
+        ActualizarHP();
+
+        NextTurn();
+    }
     public void Fuerza(int dado, int times)
     {
         //RollDice(int maxValue, /*num veces a tirar dado*/)
@@ -82,6 +88,14 @@ public class CommandManager : MonoBehaviour
         NextTurn();
 
     }
+    public void Modificar_CA(int valor)
+    {
+
+        turnRoundManager.current.modificar_CA(valor);
+        ActualizarHP();
+
+        NextTurn();
+    }
     public void Carisma(int dado)
     {
         int aux = lanzarDado(20, 1);
@@ -95,7 +109,6 @@ public class CommandManager : MonoBehaviour
     private int lanzarDado(int caras, int tiradas)
     {
         int a = diceRoller.RollDice(caras, tiradas);
-        Debug.Log("El dado se ha lanzado");
         return a; 
     }
     private void NextTurn()

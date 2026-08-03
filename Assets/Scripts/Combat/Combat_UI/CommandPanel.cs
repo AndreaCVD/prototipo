@@ -23,7 +23,8 @@ public class CommandPanel : MonoBehaviour
 
     private VisualElement root;
     VisualElement options_menu;
-    VisualElement fuerza_options, intel_options, inventoryGrid, tirada_armadura, tirada_final, tirada_critica;
+    VisualElement fuerza_options, intel_options, inventoryGrid, 
+        tirada_armadura, tirada_final, tirada_critica, tirada_fatidica;
 
     //fila principal
     private Button btnFUE, btnCAR, btnINT, btnITEM;
@@ -35,7 +36,7 @@ public class CommandPanel : MonoBehaviour
     //fila ataque item
     private Button btnBACK_item, btn_slot_2;
     //boton dado tirada final
-    private Button btnDADO, btnDADO_CA, btnCRITICO;
+    private Button btnDADO, btnDADO_CA, btnCRITICO, btnFATIDICO;
 
     //fila secundaria
     private Button btnItem, btnRun;
@@ -43,13 +44,15 @@ public class CommandPanel : MonoBehaviour
     private int llaves, llaveMaestra, daga, espada, pocionVida, pocionLava, monedas;
 
     public string armadura, nom_ataque;
-    private int stat, MAX_vida;
+    private int stat, veces_tirada, MAX_vida;
 
+    public bool escudo;
     void Start()
     {
         MAX_vida = protagonista.stats.Get(PersonajesStats.Max_Vida);
         armadura = " ";
         nom_ataque = " ";
+        veces_tirada = 1;
 
         llaves = 0;
         llaveMaestra = 0;
@@ -88,6 +91,7 @@ public class CommandPanel : MonoBehaviour
         btnRun = root.Q<Button>("btn-huir");
         btnDADO = root.Q<Button>("btn-DADO");
         btnCRITICO = root.Q<Button>("btn-CRITICO");
+        btnFATIDICO = root.Q<Button>("btn-FATIDICO");
         btnDADO_CA = root.Q<Button>("btn-DADO-CA");
         //Visual Elements
         options_menu = root.Q<VisualElement>("option_menu");
@@ -97,23 +101,25 @@ public class CommandPanel : MonoBehaviour
         tirada_final = root.Q<VisualElement>("tirada-FINAL");
         tirada_critica = root.Q<VisualElement>("tirada-CRITICA");
         tirada_armadura = root.Q<VisualElement>("tirada-ARMADURA");
+        tirada_fatidica = root.Q<VisualElement>("tirada-FATIDICA");
         // eventos
-        btnFUE.clicked += Fuerza;
+        btnFUE.clicked += Menu_Fuerza;
             btnDAGA.clicked += Daga;
             btnESPADA.clicked += Espada;
             btnBACK.clicked += Back;
 
-        btnINT.clicked += Intel;
+        btnINT.clicked += Menu_Intel;
             btnINMOV.clicked += Inmovilizar;
             btnESCUDO.clicked += Escudo;
             //btnBACK_intel.clicked += Back_intel;
 
-        btnCAR.clicked += Carisma;
+        btnCAR.clicked += Menu_Carisma;
 
         btnRun.clicked += Huir;
-        btnDADO.clicked += Tirada;
-        btnCRITICO.clicked += TiradaCritico;
+        btnDADO.clicked += TiradaAlEnemigo;
+        btnCRITICO.clicked += TiradaAlEnemigo;
         btnDADO_CA.clicked += TiradaArmadura;
+        btnFATIDICO.clicked += TiradaFatidica;
 
         //inventary
         btnITEM.clicked += Abrir_Inventario;
@@ -129,15 +135,17 @@ public class CommandPanel : MonoBehaviour
         {
             SetInventario();
         }
+
     }
     void OnDisable()
     {
-        btnFUE.clicked -= Fuerza;
-        btnINT.clicked -= Intel; //que es intel
-        btnCAR.clicked -= Carisma;
+        btnFUE.clicked -= Menu_Fuerza;
+        btnINT.clicked -= Menu_Intel;
+        btnCAR.clicked -= Menu_Carisma;
         btnITEM.clicked -= Abrir_Inventario;
         btnRun.clicked -= Huir;
     }
+    
     // --- VOLVER AL MENU PRINCIPAL ---
     public void Back()
     {
@@ -159,51 +167,18 @@ public class CommandPanel : MonoBehaviour
         {
             tirada_final.style.display = DisplayStyle.None;
         }
+        if (tirada_critica.style.display == DisplayStyle.Flex)
+        {
+            tirada_critica.style.display = DisplayStyle.None;
+        }
+        if (tirada_fatidica.style.display == DisplayStyle.Flex)
+        {
+            tirada_fatidica.style.display = DisplayStyle.None;
+        }
+        Resetear_Valores();
         //fuerza_options.style.display = index == 0 ? DisplayStyle.Flex : DisplayStyle.None;
+    }
 
-
-    }
-    
-    // --- BOTON FUERZA ---
-    public void Fuerza()
-    {
-        //hacer visible los ataques de fuerza
-        options_menu.style.display = DisplayStyle.None;
-        fuerza_options.style.display = DisplayStyle.Flex;
-    }
-    public void Daga()
-    {
-        //commandManager.Fuerza(8);
-        if (armadura == " ") //No ha hecho nada aun
-        {
-            stat = 0;
-            nom_ataque = "daga";
-            Menu_TiradaArmadura();
-        }
-        else if (armadura == "no") //No super el AC
-        {
-            Back();
-            Resetear_Valores();
-        }
-        else if (armadura == " critico ") //El jugador tira NAT 20
-        {
-            fuerza_options.style.display = DisplayStyle.None;
-            Menu_TiradaCritico();
-        }
-        else //si supera el AC
-        {
-            fuerza_options.style.display = DisplayStyle.None;
-            Menu_TiradaFinal();
-        }
-            
-    }
-    public void Espada()
-    {
-        commandManager.Fuerza(12, 1);
-        //Debug.Log("Ataque de fuerza");
-
-    }
-    
     // --- ARMADURA ---
     public void Menu_TiradaArmadura()
     {
@@ -212,102 +187,88 @@ public class CommandPanel : MonoBehaviour
     }
     public void TiradaArmadura()
     {
-        // ? = Nat 1
         // 0 = Nat 20
+        // 1 = Nat 1
         // 2 = Tirada normal, AC superada
-        // 3 = Tirada normal, AC NO superada
+        // 3 = AC NO superada
 
         int AC_superada = commandManager.Armadura(stat, 20);
-        Debug.Log(AC_superada);
         if (AC_superada == 2)
         {
             tirada_armadura.style.display = DisplayStyle.None;
-            armadura = " si ";
-            switch (nom_ataque)
-            {
-                case "daga":
-                    diceSprite.CambiarSprite(0);
-                    Daga();
-                    break;
-                default:
-                    break;
-            }
+            armadura = "si";
+            veces_tirada = 1;
+            NextAction();
         }
         else if (AC_superada == 0)
         {
-            //commandManager.Fuerza(8*2);
             tirada_armadura.style.display = DisplayStyle.None;
-            armadura = " critico ";
-            switch (nom_ataque)
-            {
-                case "daga":
-                    diceSprite.CambiarSprite(0);
-                    Daga();
-                    break;
-                default:
-                    break;
-            }
+            armadura = "critico";
+            veces_tirada = 2;
+            NextAction();
         }
-        else if (AC_superada == 1)
+        else if (AC_superada == 1) //ha tirado un 1
         {
             tirada_armadura.style.display = DisplayStyle.None;
             // el jugador se hace daño a si mismo
-
+            armadura = "fatidico";
+            NextAction();
         }
-        else if (AC_superada == 3)
+        else //(AC_superada == 3)
         {
             armadura = "no";
             Back();
         }
     }
-    
-    // --- TIRADA FINAL ---
+
+    // --- TIRADAS FINALES ---
     public void Menu_TiradaFinal()
     {
         tirada_final.style.display = DisplayStyle.Flex;
     }
-    public void Tirada()
-    {
-        switch (nom_ataque)
-        {
-            case "daga":
-                commandManager.Fuerza(8, 1);
-                break;
-            default:
-                Debug.Log("No se ha leido bien el nombre del ataque");
-                break;
-        }
-        //Debug.Log("Hacer la tirada de daño final");
-
-        Resetear_Valores();
-        //volver a menu inicial
-        Back();
-        diceSprite.CambiarSprite(1);
-    }
-    
-    // --- TIRADA FINAL CON CRITICO ---
     public void Menu_TiradaCritico()
     {
         tirada_critica.style.display = DisplayStyle.Flex;
     }
-    public void TiradaCritico()
+    void TiradaAlEnemigo()
     {
+        if (escudo)
+        {
+            Escudo();
+        }
         switch (nom_ataque)
         {
             case "daga":
-                commandManager.Fuerza(8, 2);
+                commandManager.Fuerza(8, veces_tirada);
+                break;
+            case "espada":
+                commandManager.Fuerza(12, veces_tirada);
+                break;
+            case "inmov":
+                commandManager.Fuerza(12, veces_tirada);
                 break;
             default:
                 Debug.Log("No se ha leido bien el nombre del ataque");
                 break;
         }
-        //Debug.Log("Hacer la tirada de daño final");
-
         Resetear_Valores();
         //volver a menu inicial
         Back();
         diceSprite.CambiarSprite(1);
+    }
 
+    // --- TIRADA FINAL D1 AL PROPIO JUGADOR ---
+    public void Menu_TiradaFatidica()
+    {
+        tirada_fatidica.style.display = DisplayStyle.Flex;
+    }
+    public void TiradaFatidica()
+    {
+        commandManager.AutoHerirse(4, 1);
+        Resetear_Valores();
+        //volver a menu inicial
+        Back();
+        //diceSprite.CambiarSprite(1);
     }
     
     // --- RESETEAR TIRADA ---
@@ -318,32 +279,111 @@ public class CommandPanel : MonoBehaviour
         armadura = " ";
     }
     
-    //Boton Inteligencia
-    public void Intel()
+    // --- NEXT ACTION QUE TIENE QUE HACER EL PLAYER ---
+    public void NextAction() 
+    {
+        //Mira la armadura y que menus abrir
+        if (armadura == "no") //No super el AC
+        {
+            Back();
+            Resetear_Valores();
+        }
+        else if (armadura == "critico") //El jugador tira NAT 20
+        {
+            fuerza_options.style.display = DisplayStyle.None;
+            Menu_TiradaCritico();
+        }
+        else if (armadura == "fatidico") //El jugador tira NAT 1
+        {
+            fuerza_options.style.display = DisplayStyle.None;
+            Menu_TiradaFatidica();
+        }
+        else //si supera el AC
+        {
+            fuerza_options.style.display = DisplayStyle.None;
+            Menu_TiradaFinal();
+        }
+    }
+        
+    // --- BOTON FUERZA ---
+    public void Menu_Fuerza()
+    {
+        //hacer visible los ataques de fuerza
+        options_menu.style.display = DisplayStyle.None;
+        fuerza_options.style.display = DisplayStyle.Flex;
+
+        stat = 0; //Stat de fuerza = 0
+    }
+    public void Daga()
+    {
+        if (armadura == " ") //No ha hecho nada aun
+        {
+            nom_ataque = "daga";
+            Menu_TiradaArmadura();
+        }
+        else
+        {
+            NextAction();
+        }   
+    }
+    public void Espada()
+    {
+        if (armadura == " ") //No ha hecho nada aun
+        {
+            nom_ataque = "espada";
+            Menu_TiradaArmadura();
+        }
+        else
+        {
+            NextAction();
+        }
+    }
+
+    //--- BOTON INTELIGENCIA ---
+    public void Menu_Intel()
     {
         options_menu.style.display = DisplayStyle.None;
         intel_options.style.display = DisplayStyle.Flex;
-        //commandManager.Inteligencia();
-        //Debug.Log("Ha usado inteligencia");
+
+        stat = 1; //Stat de inteligencia = 1
     }
     public void Inmovilizar()
     {
-        commandManager.Inteligencia(12);
-        //Debug.Log("Ataque de fuerza");
-
+        //commandManager.Inteligencia(12);
+        if (armadura == " ") //No ha hecho nada aun
+        {
+            nom_ataque = "inmov";
+            Menu_TiradaArmadura();
+        }
+        else
+        {
+            NextAction();
+        }
     }
     public void Escudo()
     {
-        commandManager.Inteligencia(4);
-        //Debug.Log("Ataque de fuerza");
-
+        //tirar sin tener que tirar d20
+        // te suma temporalmente +2 CA
+        if ( !escudo)
+        {
+            escudo = true;
+            commandManager.Modificar_CA(2);
+            btnESCUDO.SetEnabled(false);
+        }
+        else
+        {
+            escudo = false;
+            commandManager.Modificar_CA(-2);
+            btnESCUDO.SetEnabled(true);
+        }
     }
 
     //Boton Carisma
-    public void Carisma()
+    public void Menu_Carisma()
     {
         commandManager.Carisma(20);
-        //Debug.Log("Ha usado carisma");
+
+        stat = 2; //Stat de carisma = 2
     }
 
     // SECUNDARIAS

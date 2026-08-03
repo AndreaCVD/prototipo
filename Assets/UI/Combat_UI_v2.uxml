@@ -26,7 +26,7 @@
             </ui:VisualElement>
         </ui:VisualElement>
         <ui:VisualElement name="combat-menu" class="combat-menu">
-            <ui:VisualElement name="option_menu" class="combat-row" style="display: flex;">
+            <ui:VisualElement name="option_menu" class="combat-row" style="display: flex; visibility: visible;">
                 <ui:Button name="btn-FUE" text="Atacar" class="combat_btns combat_btn_color" />
                 <ui:Button name="btn-INT" text="Hechizos" class="combat_btns combat_btn_color" />
                 <ui:Button name="btn-CAR" text="Dialogar" class="combat_btns combat_btn_color" />
@@ -39,7 +39,7 @@
             </ui:VisualElement>
             <ui:VisualElement name="atq-INTEL" class="combat-row" style="display: none;">
                 <ui:Button name="btn-INMOV" text="Inmovilizar - d12" class="combat_btns combat_btn_color" />
-                <ui:Button name="btn-ESCUDO" text="Escudo - d4" class="combat_btns combat_btn_color" />
+                <ui:Button name="btn-ESCUDO" text="Escudo - d4" class="combat_btns combat_btn_color" style="display: flex;" />
                 <ui:Button name="btn-BACK" text="Atras" class="combat_btns items_btn_color" style="display: flex; visibility: visible; overflow: hidden;" />
             </ui:VisualElement>
             <ui:VisualElement name="inventory-grid" class="inventory-grid" style="justify-content: space-evenly; display: none; flex-direction: row; background-color: rgb(68, 28, 4); -unity-background-image-tint-color: rgb(68, 28, 4); padding-top: 4px; padding-right: 4px; padding-bottom: 4px; padding-left: 4px; border-top-left-radius: 8px; border-top-right-radius: 8px; border-bottom-right-radius: 8px; border-bottom-left-radius: 8px; align-items: center;">
@@ -79,6 +79,9 @@
             </ui:VisualElement>
             <ui:VisualElement name="tirada-CRITICA" class="combat-row" style="display: none;">
                 <ui:Button name="btn-CRITICO" text="Lanzar Dado x2" class="combat_btns combat_btn_color" />
+            </ui:VisualElement>
+            <ui:VisualElement name="tirada-FATIDICA" class="combat-row" style="display: none;">
+                <ui:Button name="btn-FATIDICO" text="d4 a ti mismo" class="combat_btns combat_btn_color" />
             </ui:VisualElement>
             <ui:VisualElement class="combat-divider" />
             <ui:VisualElement class="combat-row">

@@ -63,8 +63,6 @@ public class Menu_Command : MonoBehaviour
     public void SetPlayerHp(int hpActual)
     {
         float porcentaje = Mathf.Clamp01((float)hpActual / playerMaxHp);
-        Debug.Log(hpActual);
-        Debug.Log(playerMaxHp);
         // Debug: forzar un valor fijo para ver si responde
         Debug.Log($"SetPlayerHp: {hpActual}/{playerMaxHp} = {porcentaje * 100f}%");
         playerHpFill.transform.scale = new Vector3(porcentaje, 1f, 1f);

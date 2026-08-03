@@ -67,13 +67,13 @@ public class Dice : MonoBehaviour
         for (int aux = 0; aux < tiradas; aux++)
         {
             a += Random.Range(1, maxValue);
-            Debug.Log("Dice=" + a);
         }
 
         StartCoroutine(ChangeText(a));
         //animDice(a);
         //MoveDice(a);
         return a;
+
         //diceText.text = a.ToString();
 
     }

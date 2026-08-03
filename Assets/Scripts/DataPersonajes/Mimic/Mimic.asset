@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3184c13f5276613429ba2c5118bbc8ba, type: 3}
   m_Name: Mimic
   m_EditorClassIdentifier: 
-  namePers: 
+  namePers: Mimic
   stats:
     values:
     - value: 3

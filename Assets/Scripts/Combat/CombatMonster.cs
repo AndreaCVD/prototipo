@@ -17,21 +17,23 @@ public class CombatMonster : MonoBehaviour
     private LoadScene load;
     private Preload preload;
 
-    //Si cambiamos las stats de Fuerza
-    //private bool stat_change; //si se cambia un stat volver al anterior despues de turno
+    //Si cambiamos las stats
+    private bool stat_change; //si se cambia un stat volver al anterior despues de turno
     //private int fuerzaChanged;
     //private int intelChanged;
     //private int carismaChanged;
+    private int caChanged;
 
     private void Start()
     {
         //GameObject a = GameObject.Find("--WorldManagement--");
         //guardado = a.GetComponent<Save_Stats>();
 
-        //stat_change = false;
+        stat_change = false;
         //fuerzaChanged = 0;
         //intelChanged = 0;
         //carismaChanged = 0;
+        caChanged = 0;
 
         if (objLoadScene == null)
         {
@@ -86,9 +88,17 @@ public class CombatMonster : MonoBehaviour
             return 3;
         }
     }
-    public void ataque_propio(CombatMonster player)
+    public void ataque_propio(CombatMonster player, int dice)
     {
-        //player.TakeDamage(dice);
+        Debug.Log("El prota se ha hecho " + dice + " a si mismo");
+        player.TakeDamage(dice);
+
+    }
+    public void modificar_CA(int valor)
+    {
+        stat_change = true;
+        //caChanged = valor;
+        player.stats.values[4].value += valor;
 
     }
     //Luego volver a tirar dado
@@ -98,22 +108,22 @@ public class CombatMonster : MonoBehaviour
         int stat_damage = player.stats.Get(PersonajesStats.Fuerza);
         //Clase Armadura oponente
         //int armadura = target.player.stats.Get(PersonajesStats.ClaseArmadura);
-        
+
         //Si Dice + Fuerza no supera AC del enemigo, no se hace el ataque
         //if ( (stat_damage+ dice) >= armadura)
         //{
-            //if (stat_change)
-            //{
-            //    restaurarStat(0); //Restauramos Fuerza
-            //}
-            //Escibimos Debug.Log
-            //Commando(stat_enemigo, armadura, dice);
-            //Target recibe daño de la fuerza
-            
-            //20 nat --> doble daño
-            //1 --> d4 a ti mismo
-            
-            target.TakeDamage(stat_damage + dice); 
+        if (stat_change)
+        {
+            restaurarStat(0); //Restauramos Fuerza
+        }
+        //Escibimos Debug.Log
+        //Commando(stat_enemigo, armadura, dice);
+        //Target recibe daño de la fuerza
+
+        //20 nat --> doble daño
+        //1 --> d4 a ti mismo
+        Debug.Log("Daño = " + stat_damage+" || Dice = "+dice);
+        target.TakeDamage(stat_damage + dice); 
         //}
         //else
         //{
@@ -170,11 +180,9 @@ public class CombatMonster : MonoBehaviour
         return player.stats.Get(PersonajesStats.Fuerza);
     }
     public void TakeDamage(int damage)
-    {
-
+    { 
         HP.current -= damage;
-        // a -= damage;
-        //enemigo.stats.values[3].value++;
+
         player.stats.values[3].value -= damage;
 
         //guardado.guardar_stats(player, damage); //guardar estats
@@ -190,6 +198,7 @@ public class CombatMonster : MonoBehaviour
             //Si es el prota es GAMEOVER
             if (player.namePers == "Prota")
             {
+                restaurarStat(10); //Restaurar todos los stats prota si han sido cambiados
                 Debug.Log("Prota ha perdido");
                 //load.GameOver();
                 Debug.Log("GAME OVER");
@@ -201,12 +210,11 @@ public class CombatMonster : MonoBehaviour
                 //Restaurar constitucino ficha enemigo
                 player.stats.values[3].value = 0;
 
-                //restaurarStat(10); //Restaurar todos los stats prota si han sido cambiados
+                restaurarStat(10); //Restaurar todos los stats prota si han sido cambiados
                 //destruir el obj del enemigo
                 preload.DestroyEnemy();
-                //Hablar con SceneManager -> LoadScene volver a la pantalla anterior
+
                 load.SalirCombate();
-       
             }
             //guardado.alguien_eliminado(player); //enviara el personaje que se elimine
         }
@@ -227,29 +235,30 @@ public class CombatMonster : MonoBehaviour
     {
         //player.stats.values[3].value += vida; //Le sumamos la vida
     }
-    //void restaurarStat(int stat)
-    //{
-    //    stat_change = false;
-    //    switch(stat)
-    //    { 
-    //        case 0:
-    //            player.stats.values[stat].value -= fuerzaChanged; //Le cambiamos la fuerza
-    //            break;
-    //        case 1:
-    //            player.stats.values[stat].value -= intelChanged; //Le cambiamos la fuerza
-    //            break;
-    //        case 2:
-    //            player.stats.values[stat].value -= carismaChanged; //Le cambiamos la fuerza
-    //            break;
-    //        case 10: //CAMBIAR TODOS LOS STATS
-    //            player.stats.values[0].value -= fuerzaChanged;
-    //            player.stats.values[1].value -= intelChanged;
-    //            player.stats.values[2].value -= carismaChanged; 
-    //            break;
-    //        default:
-    //            Debug.Log("No se ha restaurado bien el stat");
-    //            break;
-    //    }
-    //}
+    void restaurarStat(int stat)
+    {
+        stat_change = false;
+        switch (stat)
+        {
+            //case 0:
+            //    player.stats.values[stat].value -= fuerzaChanged; //Le cambiamos la fuerza
+            //    break;
+            //case 1:
+            //    player.stats.values[stat].value -= intelChanged; //Le cambiamos la fuerza
+            //    break;
+            //case 2:
+            //    player.stats.values[stat].value -= carismaChanged; //Le cambiamos la fuerza
+            //    break;
+            case 10: //CAMBIAR TODOS LOS STATS
+                //player.stats.values[0].value -= fuerzaChanged;
+                //player.stats.values[1].value -= intelChanged;
+                //player.stats.values[2].value -= carismaChanged;
+                player.stats.values[2].value -= caChanged;
+                break;
+            default:
+                Debug.Log("No se ha restaurado bien el stat");
+                break;
+        }
+    }
 
 }

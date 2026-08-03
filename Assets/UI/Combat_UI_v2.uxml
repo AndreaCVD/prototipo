@@ -40,7 +40,12 @@
             <ui:VisualElement name="atq-INTEL" class="combat-row" style="display: none;">
                 <ui:Button name="btn-INMOV" text="Inmovilizar - d12" class="combat_btns combat_btn_color" />
                 <ui:Button name="btn-ESCUDO" text="Escudo - d4" class="combat_btns combat_btn_color" style="display: flex;" />
-                <ui:Button name="btn-BACK" text="Atras" class="combat_btns items_btn_color" style="display: flex; visibility: visible; overflow: hidden;" />
+                <ui:Button name="btn-intelBACK" text="Atras" class="combat_btns items_btn_color" style="display: flex; visibility: visible; overflow: hidden;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="atq-CARISMA" class="combat-row" style="display: none;">
+                <ui:Button name="btn-INMOV" text="Inmovilizar - d12" class="combat_btns combat_btn_color" />
+                <ui:Button name="btn-ESCUDO" text="Escudo - d4" class="combat_btns combat_btn_color" style="display: flex;" />
+                <ui:Button name="btn-intelBACK" text="Atras" class="combat_btns items_btn_color" style="display: flex; visibility: visible; overflow: hidden;" />
             </ui:VisualElement>
             <ui:VisualElement name="inventory-grid" class="inventory-grid" style="justify-content: space-evenly; display: none; flex-direction: row; background-color: rgb(68, 28, 4); -unity-background-image-tint-color: rgb(68, 28, 4); padding-top: 4px; padding-right: 4px; padding-bottom: 4px; padding-left: 4px; border-top-left-radius: 8px; border-top-right-radius: 8px; border-bottom-right-radius: 8px; border-bottom-left-radius: 8px; align-items: center;">
                 <ui:VisualElement name="slot-0" class="inv-slot" style="background-color: rgb(100, 65, 52); width: 80px; height: 80px; margin-right: 4px; border-top-left-radius: 6px; border-top-right-radius: 6px; border-bottom-right-radius: 6px; border-bottom-left-radius: 6px;">

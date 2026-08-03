@@ -11,7 +11,9 @@ public class CommandManager : MonoBehaviour
     [SerializeField] CombatDebug combatDebug;
     [SerializeField] Dice diceRoller;
 
-    bool gameOver;
+    public bool gameOver, enemigo_inmovilizado;
+    private int turnos_inmovil = 1;
+
     //[SerializeField] CombatMonster opponent;
 
     //current = al que le toque el turno
@@ -96,6 +98,10 @@ public class CommandManager : MonoBehaviour
 
         NextTurn();
     }
+    public void EnemigoInmovilizado(bool inmov)
+    {
+        enemigo_inmovilizado = inmov;
+    }
     public void Carisma(int dado)
     {
         int aux = lanzarDado(20, 1);
@@ -113,9 +119,24 @@ public class CommandManager : MonoBehaviour
     }
     private void NextTurn()
     {
-        //Cambiamos turno, y vemos si es el turno del enemigo
-        turnRoundManager.ChangeTurn();
-        turnRoundManager.EnemyTurn();
+        if (enemigo_inmovilizado)
+        {
+            //No cambiamos el turno
+            //Activar animacion 
+            turnos_inmovil--;
+            Debug.Log("Enemigo Inmovilizado. Le quedan = " + turnos_inmovil);
+            if (turnos_inmovil == 0)
+            {
+                Debug.Log("Ya no esta inmovilizado");
+                enemigo_inmovilizado = false;
+            }
+        }
+        else
+        {
+            //Cambiamos turno, y vemos si es el turno del enemigo
+            turnRoundManager.ChangeTurn();
+            turnRoundManager.EnemyTurn();
+        }
     }
 
     private void ActualizarHP()

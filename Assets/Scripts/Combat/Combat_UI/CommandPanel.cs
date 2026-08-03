@@ -46,7 +46,7 @@ public class CommandPanel : MonoBehaviour
     public string armadura, nom_ataque;
     private int stat, veces_tirada, MAX_vida;
 
-    public bool escudo;
+    private bool escudo;
     void Start()
     {
         MAX_vida = protagonista.stats.Get(PersonajesStats.Max_Vida);
@@ -71,16 +71,19 @@ public class CommandPanel : MonoBehaviour
 
         var uIDocument = GetComponent<UIDocument>();
         root = uIDocument.rootVisualElement;
+        //Volver a menu opciones
+        btnBACK = root.Q<Button>("btn-BACK");
+        btnBACK_intel = root.Q<Button>("btn-intelBACK");
         //Botones
         btnFUE = root.Q<Button>("btn-FUE");
             btnDAGA = root.Q<Button>("btn-DAGA");
             btnESPADA = root.Q<Button>("btn-ESPADA");
-            btnBACK = root.Q<Button>("btn-BACK");
+
         //Botones inteligencia
         btnINT = root.Q<Button>("btn-INT");
             btnINMOV = root.Q<Button>("btn-INMOV");
             btnESCUDO = root.Q<Button>("btn-ESCUDO");
-            btnBACK_intel = root.Q<Button>("intel-BACK");
+            
         //Botones carisma
         btnCAR = root.Q<Button>("btn-CAR");
         //Botones Bolsa Items
@@ -106,7 +109,6 @@ public class CommandPanel : MonoBehaviour
         btnFUE.clicked += Menu_Fuerza;
             btnDAGA.clicked += Daga;
             btnESPADA.clicked += Espada;
-            btnBACK.clicked += Back;
 
         btnINT.clicked += Menu_Intel;
             btnINMOV.clicked += Inmovilizar;
@@ -125,7 +127,9 @@ public class CommandPanel : MonoBehaviour
         btnITEM.clicked += Abrir_Inventario;
             btnBACK_item.clicked += Back_item;
             btn_slot_2.clicked += () => UsarItem(2);
-
+        
+        btnBACK.clicked += Back;
+        btnBACK_intel.clicked += Back;
     }
 
     void Update()
@@ -244,9 +248,6 @@ public class CommandPanel : MonoBehaviour
             case "espada":
                 commandManager.Fuerza(12, veces_tirada);
                 break;
-            case "inmov":
-                commandManager.Fuerza(12, veces_tirada);
-                break;
             default:
                 Debug.Log("No se ha leido bien el nombre del ataque");
                 break;
@@ -349,16 +350,11 @@ public class CommandPanel : MonoBehaviour
     }
     public void Inmovilizar()
     {
-        //commandManager.Inteligencia(12);
-        if (armadura == " ") //No ha hecho nada aun
-        {
-            nom_ataque = "inmov";
-            Menu_TiradaArmadura();
-        }
-        else
-        {
-            NextAction();
-        }
+        commandManager.EnemigoInmovilizado(true);
+        btnINMOV.SetEnabled(false);
+
+        Back();
+        //tirar dos veces, enemigo inmovil
     }
     public void Escudo()
     {

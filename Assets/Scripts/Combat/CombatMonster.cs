@@ -23,12 +23,13 @@ public class CombatMonster : MonoBehaviour
     //private int intelChanged;
     //private int carismaChanged;
     private int caChanged;
+    public bool finishCombat;
 
     private void Start()
     {
         //GameObject a = GameObject.Find("--WorldManagement--");
         //guardado = a.GetComponent<Save_Stats>();
-
+        finishCombat = false;
         stat_change = false;
         //fuerzaChanged = 0;
         //intelChanged = 0;
@@ -62,19 +63,19 @@ public class CombatMonster : MonoBehaviour
     //Primero tiene que superar la armadura
     public int Armadura (CombatMonster target, int dice, int stat)
     {
-        //Este daño al enemigo
+        //Este daï¿½o al enemigo
         int stat_damage = player.stats.values[stat].value;
         //Clase Armadura oponente
         int armadura = target.player.stats.Get(PersonajesStats.ClaseArmadura);
         //Si Dice + Fuerza no supera AC del enemigo, no se hace el ataque
-        if (dice == 20) //Natrual 20, doble daño
+        if (dice == 20) //Natrual 20, doble daï¿½o
         {
-            Debug.Log("NATURAL 20, el daño sera doble");
+            Debug.Log("NATURAL 20, el daï¿½o sera doble");
             return 0;
         }
-        else if (dice == 1) //daño propio --> d4 a ti mismo
+        else if (dice == 1) //daï¿½o propio --> d4 a ti mismo
         {
-            Debug.Log("NATURAL 1, daño a uno mismo con d4");
+            Debug.Log("NATURAL 1, daï¿½o a uno mismo con d4");
             return 1;
         }
         else if ((stat_damage + dice) >= armadura)
@@ -101,10 +102,20 @@ public class CombatMonster : MonoBehaviour
         player.stats.values[4].value += valor;
 
     }
+    public void SimpleAttack(CombatMonster target, int dice, bool acabarCombate)
+    {
+        //Ataque solo de un dado
+        //finishCombat = acabarCombate;
+        Debug.Log("acabarCombate = " +acabarCombate);
+        Debug.Log("finishCombat = " +finishCombat);
+
+        Debug.Log("en simple attack");
+        target.TakeDamage(dice); 
+    }
     //Luego volver a tirar dado
     public void Fuerza(CombatMonster target, int dice) //Enemigo
     {
-        //Este daño al enemigo
+        //Este daï¿½o al enemigo
         int stat_damage = player.stats.Get(PersonajesStats.Fuerza);
         //Clase Armadura oponente
         //int armadura = target.player.stats.Get(PersonajesStats.ClaseArmadura);
@@ -118,11 +129,11 @@ public class CombatMonster : MonoBehaviour
         }
         //Escibimos Debug.Log
         //Commando(stat_enemigo, armadura, dice);
-        //Target recibe daño de la fuerza
+        //Target recibe daï¿½o de la fuerza
 
-        //20 nat --> doble daño
+        //20 nat --> doble daï¿½o
         //1 --> d4 a ti mismo
-        Debug.Log("Daño = " + stat_damage+" || Dice = "+dice);
+        Debug.Log("Daï¿½o = " + stat_damage+" || Dice = "+dice);
         target.TakeDamage(stat_damage + dice); 
         //}
         //else
@@ -132,7 +143,7 @@ public class CombatMonster : MonoBehaviour
     }
     public void Inteligencia(CombatMonster target, int dice) //Enemigo
     {
-        //Este daño al enemigo
+        //Este daï¿½o al enemigo
         int stat_enemigo = player.stats.Get(PersonajesStats.Inteligencia);
         //Clase Armadura oponente
         int armadura = target.player.stats.Get(PersonajesStats.ClaseArmadura);
@@ -142,7 +153,7 @@ public class CombatMonster : MonoBehaviour
         {
             //Escibimos Debug.Log
             Commando(stat_enemigo, armadura, dice);
-            //Target recibe daño de la fuerza
+            //Target recibe daï¿½o de la fuerza
             target.TakeDamage(stat_enemigo + dice);
         }
         else
@@ -152,7 +163,7 @@ public class CombatMonster : MonoBehaviour
     }
     public void Carisma(CombatMonster target, int dice) //Enemigo
     {
-        //Este daño al enemigo
+        //Este daï¿½o al enemigo
         int stat_enemigo = player.stats.Get(PersonajesStats.Carisma);
         //Clase Armadura oponente
         int armadura = target.player.stats.Get(PersonajesStats.ClaseArmadura);
@@ -162,7 +173,7 @@ public class CombatMonster : MonoBehaviour
         {
             //Escibimos Debug.Log
             Commando(stat_enemigo, armadura, dice);
-            //Target recibe daño de la fuerza
+            //Target recibe daï¿½o de la fuerza
             target.TakeDamage(stat_enemigo + dice);
         }
         else
@@ -220,10 +231,20 @@ public class CombatMonster : MonoBehaviour
         }
         else
         {
+            
+            SalirCombate();
             Debug.Log("FIN TURNO");
         }
     }
-
+    public void SalirCombate()
+    {
+        Debug.Log(finishCombat);
+        if (finishCombat)
+        {
+            Debug.Log("?????");
+            load.SalirCombate();
+        }
+    }
     public void cambiarFuerza(int damage)
     {
         //Subir Fuerza

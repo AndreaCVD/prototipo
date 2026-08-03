@@ -40,7 +40,7 @@ public class TurnRoundManager : MonoBehaviour
             uIDocument = GetComponent<UIDocument>();
         }
 
-        // 2. Verificación de seguridad
+        // 2. Verificaciï¿½n de seguridad
         if (uIDocument != null && uIDocument.rootVisualElement != null)
         {
             root = uIDocument.rootVisualElement;
@@ -49,12 +49,12 @@ public class TurnRoundManager : MonoBehaviour
 
             if (combat_options == null)
             {
-                Debug.LogWarning("No se encontró el elemento 'combat_options' en el UXML.");
+                Debug.LogWarning("No se encontrï¿½ el elemento 'combat_options' en el UXML.");
             }
         }
         else
         {
-            Debug.LogError("TurnRoundManager: No hay un UIDocument asignado o el root está vacío.");
+            Debug.LogError("TurnRoundManager: No hay un UIDocument asignado o el root estï¿½ vacï¿½o.");
         }
     }
 
@@ -126,5 +126,10 @@ public class TurnRoundManager : MonoBehaviour
             //Debug.Log("------AHORA ATCATA EL ENEMIGO-----");
             npcTurn.DoAction();
         }
+    }
+    public void AtaqueOportunidad()
+    {
+        Debug.Log("El enemigo tiene un ataque de oportunidad");
+        npcTurn.AtaqueOportunidad();
     }
 }

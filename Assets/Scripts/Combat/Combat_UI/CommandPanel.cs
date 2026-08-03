@@ -399,8 +399,9 @@ public class CommandPanel : MonoBehaviour
     //Boton Huir
     public void Huir()
     {
-        //Debug.Log("Huir");
-        loadScene.SalirCombate();
+        //Ataque de oportunidad del enemigo de d4
+        commandManager.Huir();
+        //loadScene.SalirCombate();
         //preload.cambiarEscena("pruevas_prototipo");
     }
     // --- INVENTARIO ---

@@ -21,7 +21,10 @@ public class NPCAction : MonoBehaviour
         //Podemos hacer que dependiendo del enemigo, de sus estats, estas varien
 
     }
-
+    public void AtaqueOportunidad()
+    {
+        StartCoroutine(Esperar(3f));
+    }
     public void DoAction()
     {
         StartCoroutine(EsperarYContinuar(3f));
@@ -29,7 +32,7 @@ public class NPCAction : MonoBehaviour
         
         //Podemos hacer que dependiendo del enemigo, de sus estats, estas varien
         //Cualquier opcion tenemos que hablar con commandManager
-        Debug.Log("--ORDEN--");
+        //Debug.Log("--ORDEN--");
     }
     char bestFeature()
     {
@@ -80,9 +83,9 @@ public class NPCAction : MonoBehaviour
     IEnumerator EsperarYContinuar(float segundos)
     {
         yield return new WaitForSeconds(segundos);
-        // Código que se ejecuta después del retraso
+        // Cï¿½digo que se ejecuta despuï¿½s del retraso
         Debug.Log("Han pasado 3 segundos.");
-        Debug.Log("TIEMPO ESPERA SE HA AGOTADO");
+        //Debug.Log("TIEMPO ESPERA SE HA AGOTADO");
         char aux = bestFeature();
         switch (aux)
         {
@@ -103,9 +106,21 @@ public class NPCAction : MonoBehaviour
 
                 commandManager.Carisma(12);
                 break;
+            case 'h':
+                //Random pero que tenga mas probabilidades de Fuerza
+                commandManager.Fuerza(4, 1);
+                break;
             default:
                 Debug.Log("--default de npc action--");
                 break;
         }
+    }
+    IEnumerator Esperar(float segundos)
+    {
+        yield return new WaitForSeconds(segundos);
+        // Cï¿½digo que se ejecuta despuï¿½s del retraso
+        // Enviamos d4, tirar 1 vez, acabar el combate cuando acabe de atacar
+        commandManager.SimpleAttack(4, 1, true);
+
     }
 }

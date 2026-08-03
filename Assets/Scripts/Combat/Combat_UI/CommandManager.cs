@@ -55,6 +55,18 @@ public class CommandManager : MonoBehaviour
             return AC_superada;
         }
     }
+    public void Huir()
+    {
+        //Enemigo hace d4 y se cierra el combate
+        turnRoundManager.ChangeTurn();
+        turnRoundManager.AtaqueOportunidad();
+    }
+    public void SimpleAttack(int dado, int times, bool acabarCombate)
+    {
+        int aux = lanzarDado(dado, times);
+        turnRoundManager.current.SimpleAttack(turnRoundManager.target, aux, acabarCombate);
+
+    }
     public void AutoHerirse(int dado, int times)
     {
         int aux = lanzarDado(dado, times);
@@ -71,7 +83,7 @@ public class CommandManager : MonoBehaviour
         //Hay que llamar al DiceRoller para ver si superamos el AC
         int aux = lanzarDado(dado, times);
 
-        //Acción
+        //Acciï¿½n
         turnRoundManager.current.Fuerza(turnRoundManager.target, aux);
         //turnRoundManager.current.Fuerza(turnRoundManager.target, aux);
         ActualizarHP();
@@ -83,7 +95,7 @@ public class CommandManager : MonoBehaviour
     {
         int aux = lanzarDado(dado, 1);
 
-        //Acción
+        //Acciï¿½n
         turnRoundManager.current.Inteligencia(turnRoundManager.target, aux);
         ActualizarHP();
 
@@ -106,7 +118,7 @@ public class CommandManager : MonoBehaviour
     {
         int aux = lanzarDado(20, 1);
 
-        //Acción
+        //Acciï¿½n
         turnRoundManager.current.Carisma(turnRoundManager.target, aux);
         ActualizarHP();
 

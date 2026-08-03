@@ -25,6 +25,8 @@ MonoBehaviour:
       stats: 3
     - value: 17
       stats: 4
+    - value: 60
+      stats: 5
   Inventario: {fileID: 0}
   modelPrefab: {fileID: 0}
   art: {fileID: 0}

@@ -15,12 +15,12 @@ public class Menu_Command : MonoBehaviour
     [Header("Extraer info enemigo")]
     private CombatDebug info_enemy;
     private Parameters enemyData;
-    private int enemyMaxHp;
+    private int enemyMaxHp, enemyActualHp;
 
     [Header("Extraer info prota")]
     private CombatDebug info_prota;
     private Parameters playerData;
-    private int playerMaxHp;
+    private int playerMaxHp, playerActualHp;
 
     //UI
     [SerializeField] UIDocument uIDocument;
@@ -44,16 +44,18 @@ public class Menu_Command : MonoBehaviour
         //encontrar el script y las datas
         info_enemy = GetComponent<CombatDebug>();
         enemyData = info_enemy.ReturnPlayer();
-        enemyMaxHp = enemyData.stats.Get(PersonajesStats.Constitucion);
+        enemyMaxHp = enemyData.stats.Get(PersonajesStats.Max_Vida);
+        enemyActualHp = enemyData.stats.Get(PersonajesStats.Constitucion);
 
         info_prota = GetComponent<CombatDebug>();
         playerData = info_prota.ReturnPlayer();
-        playerMaxHp = playerData.stats.Get(PersonajesStats.Constitucion);
+        playerMaxHp = playerData.stats.Get(PersonajesStats.Max_Vida);
+        playerActualHp = playerData.stats.Get(PersonajesStats.Constitucion);
 
-        // Inicializar barras al 100%
-        SetPlayerHp(playerMaxHp);
-        SetEnemyHp(enemyMaxHp);
-        Debug.Log("Prota: " + playerMaxHp + " Enemy: " + playerMaxHp);
+        // Inicializar barras a la vida correspondiente
+        SetPlayerHp(playerActualHp);
+        SetEnemyHp(enemyActualHp);
+        Debug.Log("Prota: " + playerMaxHp + " Enemy: " + enemyMaxHp);
 
     }
 
@@ -61,7 +63,8 @@ public class Menu_Command : MonoBehaviour
     public void SetPlayerHp(int hpActual)
     {
         float porcentaje = Mathf.Clamp01((float)hpActual / playerMaxHp);
-
+        Debug.Log(hpActual);
+        Debug.Log(playerMaxHp);
         // Debug: forzar un valor fijo para ver si responde
         Debug.Log($"SetPlayerHp: {hpActual}/{playerMaxHp} = {porcentaje * 100f}%");
         playerHpFill.transform.scale = new Vector3(porcentaje, 1f, 1f);

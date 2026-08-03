@@ -23,7 +23,7 @@ public class CommandPanel : MonoBehaviour
 
     private VisualElement root;
     VisualElement options_menu;
-    VisualElement fuerza_options, intel_options, inventoryGrid, 
+    VisualElement fuerza_options, intel_options, caris_options, inventoryGrid, 
         tirada_armadura, tirada_final, tirada_critica, tirada_fatidica;
 
     //fila principal
@@ -33,6 +33,8 @@ public class CommandPanel : MonoBehaviour
     private Button btnDAGA, btnESPADA, btnBACK;
     //fila ataque intel
     private Button btnINMOV, btnESCUDO, btnBACK_intel;
+    //fila ataque carisma
+    private Button btnLOVE, btnINTIMIDAR, btnBACK_carisma;
     //fila ataque item
     private Button btnBACK_item, btn_slot_2;
     //boton dado tirada final
@@ -74,6 +76,8 @@ public class CommandPanel : MonoBehaviour
         //Volver a menu opciones
         btnBACK = root.Q<Button>("btn-BACK");
         btnBACK_intel = root.Q<Button>("btn-intelBACK");
+        btnBACK_carisma = root.Q<Button>("btn-carisBACK");
+        
         //Botones
         btnFUE = root.Q<Button>("btn-FUE");
             btnDAGA = root.Q<Button>("btn-DAGA");
@@ -86,6 +90,9 @@ public class CommandPanel : MonoBehaviour
             
         //Botones carisma
         btnCAR = root.Q<Button>("btn-CAR");
+            btnLOVE = root.Q<Button>("btn-ENAMORAR");
+            btnINTIMIDAR = root.Q<Button>("btn-INTIMIDAR"); 
+
         //Botones Bolsa Items
         btnITEM = root.Q<Button>("btn-ITEM");
             btnBACK_item = root.Q<Button>("btn-ITEM-BACK");
@@ -100,6 +107,7 @@ public class CommandPanel : MonoBehaviour
         options_menu = root.Q<VisualElement>("option_menu");
         fuerza_options = root.Q<VisualElement>("atq-FUE");
         intel_options = root.Q<VisualElement>("atq-INTEL");
+        caris_options = root.Q<VisualElement>("atq-CARISMA");
         inventoryGrid = root.Q<VisualElement>("inventory-grid");
         tirada_final = root.Q<VisualElement>("tirada-FINAL");
         tirada_critica = root.Q<VisualElement>("tirada-CRITICA");
@@ -130,6 +138,7 @@ public class CommandPanel : MonoBehaviour
         
         btnBACK.clicked += Back;
         btnBACK_intel.clicked += Back;
+        btnBACK_carisma.clicked += Back;
     }
 
     void Update()
@@ -162,6 +171,10 @@ public class CommandPanel : MonoBehaviour
         if (intel_options.style.display == DisplayStyle.Flex)
         {
             intel_options.style.display = DisplayStyle.None;
+        }
+        if (caris_options.style.display == DisplayStyle.Flex)
+        {
+            caris_options.style.display = DisplayStyle.None;
         }
         if (tirada_armadura.style.display == DisplayStyle.Flex)
         {
@@ -377,8 +390,8 @@ public class CommandPanel : MonoBehaviour
     //Boton Carisma
     public void Menu_Carisma()
     {
-        commandManager.Carisma(20);
-
+        options_menu.style.display = DisplayStyle.None;
+        caris_options.style.display = DisplayStyle.Flex;
         stat = 2; //Stat de carisma = 2
     }
 

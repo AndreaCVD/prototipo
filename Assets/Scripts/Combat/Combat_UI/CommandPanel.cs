@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
+using System.Collections;
 
 public class CommandPanel : MonoBehaviour
 {
@@ -49,7 +50,7 @@ public class CommandPanel : MonoBehaviour
     private int stat, veces_tirada, MAX_vida;
     
     // Variables activas de combate
-    private bool escudo;
+    private bool escudo, inLove;
     public int enamorado;
     void Start()
     {
@@ -58,6 +59,8 @@ public class CommandPanel : MonoBehaviour
         nom_ataque = " ";
         veces_tirada = 1;
         enamorado = 0;
+        //inLove = commandManager.Return_inLove();
+        inLove = commandManager.enemigo_inLove;
 
         llaves = 0;
         llaveMaestra = 0;
@@ -144,14 +147,20 @@ public class CommandPanel : MonoBehaviour
         btnBACK_carisma.clicked += Back;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         //inventary
         if (!areListEqual())
         {
             SetInventario();
         }
+        if (inLove && enamorado != 3)
+        {
+            btnLOVE.SetEnabled(false);
+            inLove = commandManager.Return_inLove();
+            //inLove = commandManager.enemigo_inLove;
 
+        }
     }
     void OnDisable()
     {
@@ -448,14 +457,8 @@ public class CommandPanel : MonoBehaviour
         if (armadura == " ") //No ha hecho nada aun
         {
             nom_ataque = "enamorado";
+            caris_options.style.display = DisplayStyle.None;
             Menu_TiradaArmadura();
-        }
-        else if (enamorado == 3 )
-        {
-            //activar estado Enamorado
-            //opcion 1 --> todos sus stats a 0
-            //opcion 2 --> que su turno no haga nada
-
         }
         else if (armadura == "no")
         {
@@ -466,14 +469,17 @@ public class CommandPanel : MonoBehaviour
         }
         else //Armadura Si
         {
-            //Se tiene que acertar
             //si se usa 3 veces --> enemigo estado Enamorado
             enamorado++;
-            if (enamorado == 3)
+            if (enamorado == 3 && !inLove)
             {
                 //enamorado por 30 segundos
+                btnLOVE.SetEnabled(false);
+                StartCoroutine(Enamorado(30));
                 commandManager.enemigoEnamorado();
             }
+            Resetear_Valores();
+            Back();
             commandManager.NextTurn();
         }
 
@@ -613,5 +619,11 @@ public class CommandPanel : MonoBehaviour
         slotBadge.style.display = cantidad > 0
             ? DisplayStyle.Flex
             : DisplayStyle.None;
+    }
+    // --- COROUTINES ---
+    IEnumerator Enamorado(int time)
+    {
+        yield return new WaitForSeconds(time);
+        commandManager.enemigo_inLove = false;
     }
 }

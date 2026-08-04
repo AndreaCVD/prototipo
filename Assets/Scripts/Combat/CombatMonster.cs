@@ -89,6 +89,17 @@ public class CombatMonster : MonoBehaviour
             return 3;
         }
     }
+    public bool InLove()
+    {
+        if (player.enamorado)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
     public void Enamorado()
     {
         player.enamorado = true;
@@ -270,16 +281,20 @@ public class CombatMonster : MonoBehaviour
  
                 preload.DestroyEnemy();
 
-                load.SalirCombate();
+                SalirCombate();
             }
         }
         else
         {
             if (acabarCombate)
-                load.SalirCombate();
+                SalirCombate();
         }
     }
+    public void SalirCombate()
+    {
+        load.SalirCombate();
 
+    }
     public void cambiarFuerza(int damage)
     {
         //Subir Fuerza

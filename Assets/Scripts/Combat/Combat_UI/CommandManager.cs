@@ -11,7 +11,7 @@ public class CommandManager : MonoBehaviour
     [SerializeField] CombatDebug combatDebug;
     [SerializeField] Dice diceRoller;
 
-    public bool gameOver, enemigo_inmovilizado;
+    public bool gameOver, enemigo_inmovilizado, enemigo_inLove;
     private int turnos_inmovil = 1;
 
     //[SerializeField] CombatMonster opponent;
@@ -24,8 +24,13 @@ public class CommandManager : MonoBehaviour
     {
         menuCommand = GetComponent<Menu_Command>();
         combatDebug = GetComponent<CombatDebug>();
-    }
 
+
+    }
+    void Start()
+    {
+        enemigo_inLove = turnRoundManager.target.InLove();
+    }
     //Items
     public void PocionVida()
     {
@@ -58,8 +63,17 @@ public class CommandManager : MonoBehaviour
     public void Huir()
     {
         //Enemigo hace d4 y se cierra el combate
-        turnRoundManager.ChangeTurn();
-        turnRoundManager.AtaqueOportunidad();
+        if (!enemigo_inLove)
+        {
+            turnRoundManager.ChangeTurn();
+            turnRoundManager.AtaqueOportunidad();
+        }
+        else
+        {
+            //Si esta enamorado no te persigue
+            turnRoundManager.current.SalirCombate();
+
+        }
     }
     public void SimpleAttack(int dado, int times, bool acabarCombate)
     {
@@ -109,8 +123,18 @@ public class CommandManager : MonoBehaviour
 
         NextTurn();
     }
+    public bool Return_inLove()
+    {
+        enemigo_inLove = turnRoundManager.target.InLove();
+        if (enemigo_inLove)
+            return true;
+        else
+            enemigo_inLove = false;
+            return false;
+    }
     public void enemigoEnamorado()
     {
+        enemigo_inLove = true;
         //Enemigo no tiene que atacar mas
         turnRoundManager.target.Enamorado();
 
@@ -152,6 +176,10 @@ public class CommandManager : MonoBehaviour
                 Debug.Log("Ya no esta inmovilizado");
                 enemigo_inmovilizado = false;
             }
+        }
+        else if (enemigo_inLove)
+        {
+            Debug.Log("Enemigo enamorado, no te ataca");
         }
         else
         {

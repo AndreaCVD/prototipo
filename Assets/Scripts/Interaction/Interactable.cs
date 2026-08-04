@@ -9,6 +9,8 @@ public class Interactable : MonoBehaviour
 {
     [Header("EL DIALOGO DEL OBJ")]
     [SerializeField] cherrydev.DialogNodeGraph dialogo_obj;
+    [Header("FICHA DEL OBJ")]
+    public Parameters ficha_obj;
     //Para encontrar los scripts de SceneManager
     private LoadScene load;
     private Preload preload;

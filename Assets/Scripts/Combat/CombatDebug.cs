@@ -17,13 +17,13 @@ public class CombatDebug : MonoBehaviour
     /*Prota --> */ [SerializeField] Parameters playerData;
     /*Oponente combate --> */ private Parameters enemyData;
     
-    [Header("Possibles enemigos a combatir")]
+    //[Header("Enemigos a combatir")]
     //[SerializeField] List<Parameters> Enemigos = new List<Parameters>();
 
-    [SerializeField] Parameters slime;
-    [SerializeField] Parameters caballero;
-    [SerializeField] Parameters mimic;
-    [SerializeField] Parameters libro;
+    //[SerializeField] Parameters slime;
+    //[SerializeField] Parameters caballero;
+    //[SerializeField] Parameters mimic;
+    //[SerializeField] Parameters libro;
 
     CombatManager manager;
 
@@ -48,30 +48,28 @@ public class CombatDebug : MonoBehaviour
     }
     private void ElegirEnemigo()
     {
-        string nameEnemy = preload.nameOpponent();
+        //string nameEnemy = preload.nameOpponent();
+        enemyData = preload.fichaOpponent;      
+        Debug.Log("NAME ENEMY="+ enemyData.namePers);
 
-        //Aqui se tiene que elegir enemigo y enviar los parameters para que el
-            //combate se realize con el oponente correcto        
-        Debug.Log("NAME ENEMY="+ nameEnemy);
-
-        switch (nameEnemy)
-        {
-            case string b when b.Contains("Slime"):
-                enemyData = slime;
-                break;
-            case string b when b.Contains("Caballero"):
-                enemyData = caballero;
-                break;
-            case string b when b.Contains("Mimic"):
-                enemyData = mimic;
-                break;
-            case string b when b.Contains("Jefe"):
-                enemyData = libro;
-                break;
-            default:
-                Debug.Log("No se ha identificado al enemigo");
-                break;
-        }
+        //switch (nameEnemy)
+        //{
+        //    case string b when b.Contains("Slime"):
+        //        enemyData = slime;
+        //        break;
+        //    case string b when b.Contains("Caballero"):
+        //        enemyData = caballero;
+        //        break;
+        //    case string b when b.Contains("Mimic"):
+        //        enemyData = mimic;
+        //        break;
+        //    case string b when b.Contains("Jefe"):
+        //        enemyData = libro;
+        //        break;
+        //    default:
+        //        Debug.Log("No se ha identificado al enemigo");
+        //        break;
+        //}
     }
     public Parameters ReturnEnemy()
     {

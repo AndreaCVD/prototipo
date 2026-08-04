@@ -34,8 +34,8 @@ public class stats_UI : MonoBehaviour
     //contadores inventory
     private int llaves;
     private int llaveMaestra;
-    private int daga;
-    private int espada;
+    //private int daga;
+    //private int espada;
     private int pocionVida;
     private int pocionLava;
     private int monedas;
@@ -71,8 +71,8 @@ public class stats_UI : MonoBehaviour
     {
         llaves = 0;
         llaveMaestra = 0;
-        espada = 0;
-        daga = 0;
+        //espada = 0;
+        //daga = 0;
         pocionVida = 0;
         pocionLava = 0;
         monedas = 0;

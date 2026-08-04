@@ -31,6 +31,8 @@ public class Preload : MonoBehaviour
     personaje vectorPosicion;
     //Para Combat Debug
     [SerializeField] string NameOpponent;
+    public Parameters fichaOpponent;
+
     public GameObject enemigo;
 
 
@@ -49,12 +51,11 @@ public class Preload : MonoBehaviour
         //NameOpponent = "nada";
     }
 
-    public void CombatOpponent(GameObject enemyName)
+    public void CombatOpponent(GameObject enemy)
     {
-        enemigo = enemyName;
-        NameOpponent = enemyName.name;
-        Debug.Log(NameOpponent);
-
+        enemigo = enemy;
+        //NameOpponent = enemyName.name;
+        fichaOpponent = enemy.GetComponent<Interactable>().ficha_obj;
     }
     public string nameOpponent()
     {
@@ -84,9 +85,10 @@ public class Preload : MonoBehaviour
         }
 
 
+        //}
+
+        //void boolTrue(string namePuzzle)
+        //{
+        //    Puzzles_Pruevas[namePuzzle] = true;
+        }
     }
-    //void boolTrue(string namePuzzle)
-    //{
-    //    Puzzles_Pruevas[namePuzzle] = true;
-    //}
-}

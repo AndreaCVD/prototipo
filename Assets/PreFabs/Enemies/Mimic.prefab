@@ -48,6 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogo_obj: {fileID: 0}
+  ficha_obj: {fileID: 11400000, guid: c08f978cb3d9328489a28fcbf2453c84, type: 2}
 --- !u!65 &1517697482775705939
 BoxCollider:
   m_ObjectHideFlags: 0

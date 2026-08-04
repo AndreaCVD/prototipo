@@ -43,7 +43,7 @@ public class CommandPanel : MonoBehaviour
     //fila secundaria
     private Button btnItem, btnRun;
     //contadores inventory
-    private int llaves, llaveMaestra, daga, espada, pocionVida, pocionLava, monedas;
+    private int llaves, llaveMaestra, pocionVida, pocionLava, monedas;
 
     public string armadura, nom_ataque;
     private int stat, veces_tirada, MAX_vida;
@@ -58,8 +58,6 @@ public class CommandPanel : MonoBehaviour
 
         llaves = 0;
         llaveMaestra = 0;
-        espada = 0;
-        daga = 0;
         pocionVida = 0;
         pocionLava = 0;
         monedas = 0;
@@ -364,7 +362,7 @@ public class CommandPanel : MonoBehaviour
     public void Inmovilizar()
     {
         commandManager.EnemigoInmovilizado(true);
-        btnINMOV.SetEnabled(false);
+        btnINMOV.SetEnabled(false); //usar solo una vez por partida
 
         Back();
         //tirar dos veces, enemigo inmovil

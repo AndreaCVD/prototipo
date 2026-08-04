@@ -23,13 +23,12 @@ public class CombatMonster : MonoBehaviour
     //private int intelChanged;
     //private int carismaChanged;
     private int caChanged;
-    public bool finishCombat;
 
     private void Start()
     {
         //GameObject a = GameObject.Find("--WorldManagement--");
         //guardado = a.GetComponent<Save_Stats>();
-        finishCombat = false;
+
         stat_change = false;
         //fuerzaChanged = 0;
         //intelChanged = 0;
@@ -48,9 +47,8 @@ public class CombatMonster : MonoBehaviour
     {
         //inicializamos el jugador
         this.player = player;
-            //colocamos copia del modelo
             //GameObject modelo = Instantiate(player.modelPrefab, transform);
-        //colocamos imagen
+
         imagenPers.sprite = player.art;
             //restablecer rotacion
             //player.modelPrefab.transform.localPosition = Vector3.zero;
@@ -105,12 +103,9 @@ public class CombatMonster : MonoBehaviour
     public void SimpleAttack(CombatMonster target, int dice, bool acabarCombate)
     {
         //Ataque solo de un dado
-        //finishCombat = acabarCombate;
-        Debug.Log("acabarCombate = " +acabarCombate);
-        Debug.Log("finishCombat = " +finishCombat);
 
         Debug.Log("en simple attack");
-        target.TakeDamage(dice); 
+        target.TakeDamage(dice, acabarCombate); 
     }
     //Luego volver a tirar dado
     public void Fuerza(CombatMonster target, int dice) //Enemigo
@@ -232,19 +227,51 @@ public class CombatMonster : MonoBehaviour
         else
         {
             
-            SalirCombate();
+            //SalirCombate();
             Debug.Log("FIN TURNO");
         }
     }
-    public void SalirCombate()
-    {
-        Debug.Log(finishCombat);
-        if (finishCombat)
+    public void TakeDamage(int damage, bool acabarCombate)
+    { 
+        HP.current -= damage;
+
+        player.stats.values[3].value -= damage;
+
+        Debug.Log(player.namePers + " ha sido atacado! : "+ "// HP RESTANTE : " + HP.current.ToString());
+
+        if (HP.current <= 0)
         {
-            Debug.Log("?????");
-            load.SalirCombate();
+            HP.current = 0;
+            player.stats.values[3].value = HP.max;
+
+            //Si es el prota es GAMEOVER
+            if (player.namePers == "Prota")
+            {
+                restaurarStat(10); //Restaurar todos los stats prota si han sido cambiados
+                Debug.Log("Prota ha perdido");
+
+                Debug.Log("GAME OVER");
+                load.GameOver();
+            }
+            else //Si pierde el enemigo:
+            {
+                //Restaurar constitucino ficha enemigo
+                player.stats.values[3].value = 0;
+
+                restaurarStat(10); //Restaurar todos los stats prota si han sido cambiados
+ 
+                preload.DestroyEnemy();
+
+                load.SalirCombate();
+            }
+        }
+        else
+        {
+            if (acabarCombate)
+                load.SalirCombate();
         }
     }
+
     public void cambiarFuerza(int damage)
     {
         //Subir Fuerza

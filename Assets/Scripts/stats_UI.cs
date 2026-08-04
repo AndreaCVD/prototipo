@@ -29,7 +29,7 @@ public class stats_UI : MonoBehaviour
     private Button btnInventory;
     private VisualElement itemNotification;
     private VisualElement notifIcon;
-    private Coroutine notifCoroutine;
+    //private Coroutine notifCoroutine;
 
     //contadores inventory
     private int llaves;
@@ -190,7 +190,7 @@ public class stats_UI : MonoBehaviour
     {
         yield return new WaitForSeconds(segundos);
         itemNotification.style.display = DisplayStyle.None;
-        notifCoroutine = null;
+        //notifCoroutine = null;
     }
 
     void SetInventario()

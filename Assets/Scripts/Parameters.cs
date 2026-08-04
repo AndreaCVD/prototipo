@@ -54,6 +54,7 @@ public class ValueBlock
 public class Parameters : ScriptableObject
 {
     public string namePers;
+    public bool enamorado;
     public ValueBlock stats;
     public Bolsa Inventario;
     //public List<A> X;
@@ -67,6 +68,7 @@ public class Parameters : ScriptableObject
     {
         stats = new ValueBlock();
         stats.InitPersonaje();
+
     }
 
 }

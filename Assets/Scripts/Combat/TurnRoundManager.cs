@@ -132,4 +132,9 @@ public class TurnRoundManager : MonoBehaviour
         Debug.Log("El enemigo tiene un ataque de oportunidad");
         npcTurn.AtaqueOportunidad();
     }
+    public void AtaqueEnamorado()
+    {
+        Debug.Log("El enemigo no ataca, esta enamorado");
+        //npcTurn.AtaqueOportunidad();
+    }
 }

@@ -104,11 +104,16 @@ public class CommandManager : MonoBehaviour
     }
     public void Modificar_CA(int valor)
     {
-
         turnRoundManager.current.modificar_CA(valor);
         ActualizarHP();
 
         NextTurn();
+    }
+    public void enemigoEnamorado()
+    {
+        //Enemigo no tiene que atacar mas
+        turnRoundManager.target.Enamorado();
+
     }
     public void EnemigoInmovilizado(bool inmov)
     {
@@ -129,7 +134,12 @@ public class CommandManager : MonoBehaviour
         int a = diceRoller.RollDice(caras, tiradas);
         return a; 
     }
-    private void NextTurn()
+    private int lanzarDado(int caras_1, int tiradas_1, int caras_2, int tiradas_2)
+    {
+        int a = diceRoller.RollDice(caras_1, tiradas_1, caras_2, tiradas_2);
+        return a; 
+    }
+    public void NextTurn()
     {
         if (enemigo_inmovilizado)
         {

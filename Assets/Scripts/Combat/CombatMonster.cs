@@ -16,6 +16,7 @@ public class CombatMonster : MonoBehaviour
     GameObject objLoadScene;
     private LoadScene load;
     private Preload preload;
+    private Estado_Parameters estado_Parameters;
 
     //Si cambiamos las stats
     private bool stat_change; //si se cambia un stat volver al anterior despues de turno
@@ -40,6 +41,7 @@ public class CombatMonster : MonoBehaviour
             objLoadScene = GameObject.Find("--SceneManagement--");
             load = objLoadScene.GetComponent<LoadScene>();
             preload = objLoadScene.GetComponent<Preload>();
+            estado_Parameters = objLoadScene.GetComponent<Estado_Parameters>();
         }
         cambiarVida(0);
     }
@@ -87,6 +89,11 @@ public class CombatMonster : MonoBehaviour
             return 3;
         }
     }
+    public void Enamorado()
+    {
+        player.enamorado = true;
+        estado_Parameters.EliminarEstado(player, 30, "enamorado");
+    }
     public void ataque_propio(CombatMonster player, int dice)
     {
         Debug.Log("El prota se ha hecho " + dice + " a si mismo");
@@ -103,9 +110,10 @@ public class CombatMonster : MonoBehaviour
     public void SimpleAttack(CombatMonster target, int dice, bool acabarCombate)
     {
         //Ataque solo de un dado
+        int stat_damage = player.stats.Get(PersonajesStats.Fuerza);
 
-        Debug.Log("en simple attack");
-        target.TakeDamage(dice, acabarCombate); 
+        Debug.Log(stat_damage);
+        target.TakeDamage(dice+ stat_damage, acabarCombate); 
     }
     //Luego volver a tirar dado
     public void Fuerza(CombatMonster target, int dice) //Enemigo

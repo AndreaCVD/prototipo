@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1942295723155004613}
   - component: {fileID: 8228760125869817717}
   - component: {fileID: 6506991104880826745}
+  - component: {fileID: 9188930617865153330}
   m_Layer: 0
   m_Name: --SceneManagement--
   m_TagString: Untagged
@@ -63,10 +64,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af38a4fe4a18a3a4482a4e4286d39c8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pantalla: {fileID: 4636500077556328165}
   escenaState: {fileID: 0}
-  preload: {fileID: 0}
-  destroyObjs: {fileID: 0}
+  onPause: 0
 --- !u!114 &8228760125869817717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80,6 +79,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NameOpponent: 
+  fichaOpponent: {fileID: 0}
   enemigo: {fileID: 0}
 --- !u!114 &6506991104880826745
 MonoBehaviour:
@@ -94,3 +94,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lista: {fileID: 11400000, guid: 92b50351187af094c96f6e51da1599fa, type: 2}
+--- !u!114 &9188930617865153330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5107496890064737642}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a438fc6a6b3c5b4bb224ad83090656d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

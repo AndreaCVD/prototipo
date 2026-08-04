@@ -47,14 +47,17 @@ public class CommandPanel : MonoBehaviour
 
     public string armadura, nom_ataque;
     private int stat, veces_tirada, MAX_vida;
-
+    
+    // Variables activas de combate
     private bool escudo;
+    public int enamorado;
     void Start()
     {
         MAX_vida = protagonista.stats.Get(PersonajesStats.Max_Vida);
         armadura = " ";
         nom_ataque = " ";
         veces_tirada = 1;
+        enamorado = 0;
 
         llaves = 0;
         llaveMaestra = 0;
@@ -122,6 +125,8 @@ public class CommandPanel : MonoBehaviour
             //btnBACK_intel.clicked += Back_intel;
 
         btnCAR.clicked += Menu_Carisma;
+            btnLOVE.clicked += Enamorar;
+            btnINTIMIDAR.clicked += Intimidar;
 
         btnRun.clicked += Huir;
         btnDADO.clicked += TiradaAlEnemigo;
@@ -206,6 +211,49 @@ public class CommandPanel : MonoBehaviour
         // 1 = Nat 1
         // 2 = Tirada normal, AC superada
         // 3 = AC NO superada
+        if (nom_ataque == "enamorado")
+        {
+            TiradaArmadura(0);
+        }
+        else
+        {
+
+
+            int AC_superada = commandManager.Armadura(stat, 20);
+            if (AC_superada == 2)
+            {
+                tirada_armadura.style.display = DisplayStyle.None;
+                armadura = "si";
+                veces_tirada = 1;
+                NextAction();
+            }
+            else if (AC_superada == 0)
+            {
+                tirada_armadura.style.display = DisplayStyle.None;
+                armadura = "critico";
+                veces_tirada = 2;
+                NextAction();
+            }
+            else if (AC_superada == 1) //ha tirado un 1
+            {
+                tirada_armadura.style.display = DisplayStyle.None;
+                // el jugador se hace daño a si mismo
+                armadura = "fatidico";
+                NextAction();
+            }
+            else //(AC_superada == 3)
+            {
+                armadura = "no";
+                Back();
+            }
+        }
+    }
+    public void TiradaArmadura(int a) //Para Enamorado
+    {
+        // 0 = Nat 20
+        // 1 = Nat 1
+        // 2 = Tirada normal, AC superada
+        // 3 = AC NO superada
 
         int AC_superada = commandManager.Armadura(stat, 20);
         if (AC_superada == 2)
@@ -213,26 +261,29 @@ public class CommandPanel : MonoBehaviour
             tirada_armadura.style.display = DisplayStyle.None;
             armadura = "si";
             veces_tirada = 1;
-            NextAction();
+
+            Enamorar();
         }
-        else if (AC_superada == 0)
-        {
-            tirada_armadura.style.display = DisplayStyle.None;
-            armadura = "critico";
-            veces_tirada = 2;
-            NextAction();
-        }
-        else if (AC_superada == 1) //ha tirado un 1
-        {
-            tirada_armadura.style.display = DisplayStyle.None;
-            // el jugador se hace daño a si mismo
-            armadura = "fatidico";
-            NextAction();
-        }
+        //else if (AC_superada == 0)
+        //{
+        //    tirada_armadura.style.display = DisplayStyle.None;
+        //    armadura = "critico";
+        //    veces_tirada = 2;
+        //    NextAction();
+        //}
+        //else if (AC_superada == 1) //ha tirado un 1
+        //{
+        //    tirada_armadura.style.display = DisplayStyle.None;
+        //    // el jugador se hace daño a si mismo
+        //    armadura = "fatidico";
+        //    NextAction();
+        //}
         else //(AC_superada == 3)
         {
+            tirada_armadura.style.display = DisplayStyle.None;
             armadura = "no";
-            Back();
+
+            Enamorar();
         }
     }
 
@@ -392,15 +443,58 @@ public class CommandPanel : MonoBehaviour
         caris_options.style.display = DisplayStyle.Flex;
         stat = 2; //Stat de carisma = 2
     }
+    public void Enamorar()
+    {
+        if (armadura == " ") //No ha hecho nada aun
+        {
+            nom_ataque = "enamorado";
+            Menu_TiradaArmadura();
+        }
+        else if (enamorado == 3 )
+        {
+            //activar estado Enamorado
+            //opcion 1 --> todos sus stats a 0
+            //opcion 2 --> que su turno no haga nada
 
+        }
+        else if (armadura == "no")
+        {
+            Resetear_Valores();
+            Back();
+            // Fallas enamoramiento == se enfada
+            // un d4 mas || daño +2
+        }
+        else //Armadura Si
+        {
+            //Se tiene que acertar
+            //si se usa 3 veces --> enemigo estado Enamorado
+            enamorado++;
+            if (enamorado == 3)
+            {
+                //enamorado por 30 segundos
+                commandManager.enemigoEnamorado();
+            }
+            commandManager.NextTurn();
+        }
+
+
+    }
+    public void Intimidar()
+    {
+        // Aciertas == Menos daño al enemigo
+        // Fallas == Mas daño al enemigo
+
+        //Asustado
+        //Enfadado
+
+        //dura 1 turno
+    }
     // SECUNDARIAS
     //Boton Huir
     public void Huir()
     {
         //Ataque de oportunidad del enemigo de d4
         commandManager.Huir();
-        //loadScene.SalirCombate();
-        //preload.cambiarEscena("pruevas_prototipo");
     }
     // --- INVENTARIO ---
     void Abrir_Inventario()

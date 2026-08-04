@@ -11,7 +11,7 @@ public class CommandManager : MonoBehaviour
     [SerializeField] CombatDebug combatDebug;
     [SerializeField] Dice diceRoller;
 
-    public bool gameOver, enemigo_inmovilizado, enemigo_inLove;
+    public bool gameOver, enemigo_inmovilizado, enemigo_inLove, enfadado, asustado;
     private int turnos_inmovil = 1;
 
     //[SerializeField] CombatMonster opponent;
@@ -53,7 +53,7 @@ public class CommandManager : MonoBehaviour
             ActualizarHP();
 
             NextTurn();
-            return 3;            
+            return 3;
         }
         else
         {
@@ -90,21 +90,26 @@ public class CommandManager : MonoBehaviour
 
         NextTurn();
     }
+    // --- ATAQUES SIMPLES ---
     public void Fuerza(int dado, int times)
     {
-        //RollDice(int maxValue, /*num veces a tirar dado*/)
-
-        //Hay que llamar al DiceRoller para ver si superamos el AC
         int aux = lanzarDado(dado, times);
-
-        //Acci�n
         turnRoundManager.current.Fuerza(turnRoundManager.target, aux);
-        //turnRoundManager.current.Fuerza(turnRoundManager.target, aux);
+
         ActualizarHP();
 
         NextTurn();
     }
+    public void Carisma(int dado)
+    {
+        int aux = lanzarDado(20, 1);
 
+        //Acci�n
+        turnRoundManager.current.Carisma(turnRoundManager.target, aux);
+        ActualizarHP();
+
+        NextTurn();
+    }
     public void Inteligencia(int dado)
     {
         int aux = lanzarDado(dado, 1);
@@ -122,6 +127,82 @@ public class CommandManager : MonoBehaviour
         ActualizarHP();
 
         NextTurn();
+    }
+    // --- MOVIMIENTOS ENEMIGO ---
+    public void AtaqueEnfadado(int dado, int times)
+    {
+        enfadado = false;
+        if (Armadura(0, 20) == 2) //supera armadura
+        {
+            Debug.Log("Ataque de enfado ha funcionado");
+            int aux = lanzarDado(dado, times);
+            int aux_2 = lanzarDado(4, 1);
+            turnRoundManager.current.Fuerza(turnRoundManager.target, aux + aux_2);
+
+            ActualizarHP();
+            NextTurn();
+        }
+        else if (Armadura(0, 20) == 0) //CRITICO
+        {
+            Debug.Log("Ataque de enfado es critico");
+
+            int aux = lanzarDado(dado, times);
+            int aux_2 = lanzarDado(4, 1);
+            int aux_3 = lanzarDado(4, 1);
+            turnRoundManager.current.Fuerza(turnRoundManager.target, aux + aux_2 +aux_3);
+
+            ActualizarHP();
+            NextTurn();
+        }
+        else if(Armadura(0, 20) == 1) //TIRA UN 1
+        {
+            Debug.Log("Ataque de enfado no ha funcionado");
+
+            AutoHerirse(4, 1);
+        }
+        else
+        {
+            ActualizarHP();
+            NextTurn();
+        }
+    }
+    public void AtaqueAsustado(int dado, int times)
+    {
+        asustado = false;
+        if (Armadura(0, 20) == 2)
+        {
+            Debug.Log("Ataque de asustado ha funcionado");
+
+            int aux = lanzarDado(dado, times);
+            int aux_2 = lanzarDado(4, 1);
+            int total = Math.Abs(aux - aux_2);
+            turnRoundManager.current.Fuerza(turnRoundManager.target, total);
+            
+            
+            ActualizarHP();
+            NextTurn();
+        }
+        else if (Armadura(0, 20) == 0) //CRITICO
+        {
+            Debug.Log("Ataque de asustado es critico");
+
+            int aux = lanzarDado(dado, times);
+            int aux_2 = lanzarDado(4, 1);
+            int aux_3 = lanzarDado(4, 1);
+            int total = Math.Abs(aux + aux_2 - aux_3);
+            turnRoundManager.current.Fuerza(turnRoundManager.target, total);
+            ActualizarHP();
+            NextTurn();
+        }
+        else if (Armadura(0, 20) == 1) //TIRA UN 1
+        {
+            AutoHerirse(4, 1);
+        }
+        else
+        {
+            ActualizarHP();
+            NextTurn();
+        }
     }
     public bool Return_inLove()
     {
@@ -143,26 +224,13 @@ public class CommandManager : MonoBehaviour
     {
         enemigo_inmovilizado = inmov;
     }
-    public void Carisma(int dado)
-    {
-        int aux = lanzarDado(20, 1);
-
-        //Acci�n
-        turnRoundManager.current.Carisma(turnRoundManager.target, aux);
-        ActualizarHP();
-
-        NextTurn();
-    }
+    // --- DADOS ---
     private int lanzarDado(int caras, int tiradas)
     {
         int a = diceRoller.RollDice(caras, tiradas);
         return a; 
     }
-    private int lanzarDado(int caras_1, int tiradas_1, int caras_2, int tiradas_2)
-    {
-        int a = diceRoller.RollDice(caras_1, tiradas_1, caras_2, tiradas_2);
-        return a; 
-    }
+
     public void NextTurn()
     {
         if (enemigo_inmovilizado)
@@ -180,6 +248,20 @@ public class CommandManager : MonoBehaviour
         else if (enemigo_inLove)
         {
             Debug.Log("Enemigo enamorado, no te ataca");
+        }
+        else if (enfadado)
+        {
+            //Cambiamos turno, y vemos si es el turno del enemigo
+            turnRoundManager.ChangeTurn();
+            turnRoundManager.AtaqueEnfadado();
+
+        }
+        else if ( asustado)
+        {
+            //Cambiamos turno, y vemos si es el turno del enemigo
+            turnRoundManager.ChangeTurn();
+            turnRoundManager.AtaqueAsustado();
+
         }
         else
         {

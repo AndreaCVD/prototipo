@@ -137,4 +137,15 @@ public class TurnRoundManager : MonoBehaviour
         Debug.Log("El enemigo no ataca, esta enamorado");
         //npcTurn.AtaqueOportunidad();
     }
+    public void AtaqueEnfadado()
+    {
+        if (current == Manager.enemyPersonaje)
+            npcTurn.AtaqueEnfadado();
+
+    }
+    public void AtaqueAsustado()
+    {
+        if (current == Manager.enemyPersonaje)
+            npcTurn.AtaqueAsustado();
+    }
 }

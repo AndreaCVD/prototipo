@@ -220,7 +220,7 @@ public class CommandPanel : MonoBehaviour
         // 1 = Nat 1
         // 2 = Tirada normal, AC superada
         // 3 = AC NO superada
-        if (nom_ataque == "enamorado")
+        if (nom_ataque == "enamorado" || nom_ataque == "intimidar")
         {
             TiradaArmadura(0);
         }
@@ -270,30 +270,16 @@ public class CommandPanel : MonoBehaviour
             tirada_armadura.style.display = DisplayStyle.None;
             armadura = "si";
             veces_tirada = 1;
-
-            Enamorar();
         }
-        //else if (AC_superada == 0)
-        //{
-        //    tirada_armadura.style.display = DisplayStyle.None;
-        //    armadura = "critico";
-        //    veces_tirada = 2;
-        //    NextAction();
-        //}
-        //else if (AC_superada == 1) //ha tirado un 1
-        //{
-        //    tirada_armadura.style.display = DisplayStyle.None;
-        //    // el jugador se hace daño a si mismo
-        //    armadura = "fatidico";
-        //    NextAction();
-        //}
         else //(AC_superada == 3)
         {
             tirada_armadura.style.display = DisplayStyle.None;
             armadura = "no";
-
-            Enamorar();
         }
+        if (nom_ataque == "intimidar")
+            Intimidar();
+        else
+            Enamorado(30);
     }
 
     // --- TIRADAS FINALES ---
@@ -482,17 +468,33 @@ public class CommandPanel : MonoBehaviour
             Back();
             commandManager.NextTurn();
         }
-
-
     }
     public void Intimidar()
     {
-        // Aciertas == Menos daño al enemigo
-        // Fallas == Mas daño al enemigo
-
-        //Asustado
-        //Enfadado
-
+        // Aciertas == Menos daño al enemigo -> asustado -d4
+        // Fallas == Mas daño al enemigo -> enfadadp +1d4
+        if (armadura == " ") //No ha hecho nada aun
+        {
+            nom_ataque = "intimidar";
+            caris_options.style.display = DisplayStyle.None;
+            Menu_TiradaArmadura();
+        }
+        else if (armadura == "no")
+        {
+            //enemigo enfadado
+            commandManager.enfadado = true;
+            Resetear_Valores();
+            Back();
+            commandManager.NextTurn();
+        }
+        else if (armadura == "si")
+        {
+            //enemigo enfadado
+            commandManager.asustado = true;
+            Resetear_Valores();
+            Back();
+            commandManager.NextTurn();
+        }
         //dura 1 turno
     }
     // SECUNDARIAS

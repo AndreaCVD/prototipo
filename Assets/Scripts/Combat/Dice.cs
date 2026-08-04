@@ -61,23 +61,7 @@ public class Dice : MonoBehaviour
         image.sprite = imagenesDados[dado_sprite];
     }
    // int a = diceRoller.RollDice(caras_1, tiradas_1, int caras_2, int tiradas_2);
-   //Tirar dos dados diferentes
-    public int RollDice(int maxValue_1, int tiradas_1, int maxValue_2, int tiradas_2)
-    {
-        int a = 0;
-        int b = 0;
-        for (int aux = 0; aux < tiradas_1; aux++)
-        {
-            a += Random.Range(1, maxValue_1);
-        }
-        for (int aux = 0; aux < tiradas_2; aux++)
-        {
-            b += Random.Range(1, maxValue_2);
-        }
-
-        StartCoroutine(ChangeText(a + b));
-        return a + b;
-    }
+   
     public int RollDice(int maxValue, int tiradas)
     {
         int a = 0;

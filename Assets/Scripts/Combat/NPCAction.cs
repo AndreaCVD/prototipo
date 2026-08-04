@@ -23,8 +23,17 @@ public class NPCAction : MonoBehaviour
     }
     public void AtaqueOportunidad()
     {
-        StartCoroutine(Esperar(3f));
+        StartCoroutine(Esperar(3f, "simple"));
     }
+    public void AtaqueEnfadado()
+    {
+        StartCoroutine(Esperar(3f, "enfadado" ));
+    }
+    public void AtaqueAsustado()
+    {
+        StartCoroutine(Esperar(3f, "asustado"));
+    }
+
     public void DoAction()
     {
         StartCoroutine(EsperarYContinuar(3f));
@@ -107,7 +116,6 @@ public class NPCAction : MonoBehaviour
                 commandManager.Carisma(12);
                 break;
             case 'h':
-                //Random pero que tenga mas probabilidades de Fuerza
                 commandManager.Fuerza(4, 1);
                 break;
             default:
@@ -115,12 +123,27 @@ public class NPCAction : MonoBehaviour
                 break;
         }
     }
-    IEnumerator Esperar(float segundos)
+    IEnumerator Esperar(float segundos, string ataque)
     {
         yield return new WaitForSeconds(segundos);
         // C�digo que se ejecuta despu�s del retraso
         // Enviamos d4, tirar 1 vez, acabar el combate cuando acabe de atacar
-        commandManager.SimpleAttack(4, 1, true);
+        switch(ataque)
+        {
+            case "simple":
+                commandManager.SimpleAttack(4, 1, true);
+                break;
+            case "enfadado":
+                commandManager.AtaqueEnfadado(8, 1);
+                break;
+            case "asustado":
+                commandManager.AtaqueAsustado(8, 1);
+                break;
+            default:
+                Debug.Log("No se lee bien");
+                break;
+        }
+        
 
     }
 }

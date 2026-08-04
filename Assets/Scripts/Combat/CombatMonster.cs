@@ -70,7 +70,7 @@ public class CombatMonster : MonoBehaviour
         //Si Dice + Fuerza no supera AC del enemigo, no se hace el ataque
         if (dice == 20) //Natrual 20, doble da�o
         {
-            Debug.Log("NATURAL 20, el da�o sera doble");
+            Debug.Log("NATURAL 20, el dayo sera doble");
             return 0;
         }
         else if (dice == 1) //da�o propio --> d4 a ti mismo
@@ -107,7 +107,7 @@ public class CombatMonster : MonoBehaviour
     }
     public void ataque_propio(CombatMonster player, int dice)
     {
-        Debug.Log("El prota se ha hecho " + dice + " a si mismo");
+        Debug.Log(" se ha hecho " + dice + " a si mismo");
         player.TakeDamage(dice);
 
     }

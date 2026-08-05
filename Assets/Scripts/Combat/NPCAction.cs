@@ -92,35 +92,122 @@ public class NPCAction : MonoBehaviour
     IEnumerator EsperarYContinuar(float segundos)
     {
         yield return new WaitForSeconds(segundos);
-        // C�digo que se ejecuta despu�s del retraso
-        Debug.Log("Han pasado 3 segundos.");
+        //Debug.Log("Han pasado 3 segundos.");
         //Debug.Log("TIEMPO ESPERA SE HA AGOTADO");
         char aux = bestFeature();
         switch (aux)
         {
             case 'f':
-                //Random pero que tenga mas probabilidades de Fuerza
-                Debug.Log("Enemigo ha usado FUERZA");
-                commandManager.Fuerza(12, 1);
+                Fuerza_Enemy();
                 break;
             case 'i':
-                //Random pero que tenga mas probabilidades de Fuerza
-                Debug.Log("Enemigo ha usado INTELIGENCIA");
-
-                commandManager.Inteligencia(12);
+                Inteligencia_Enemy();
                 break;
             case 'c':
-                //Random pero que tenga mas probabilidades de Fuerza
-                Debug.Log("Enemigo ha usado CARISMA");
-
-                commandManager.Carisma(12);
+                Carisma_Enemy();
                 break;
-            case 'h':
+            case 'h': //Si player huye
                 commandManager.Fuerza(4, 1);
                 break;
             default:
                 Debug.Log("--default de npc action--");
                 break;
+        }
+    }
+    //void Ver_Armadura()
+    //{
+    //    int ca_player = commandManager.Armadura(0, 20);
+    //    if (ca_player == 0) // Tirada critica
+    //    {
+
+    //    }
+    //    else if (ca_player == 1) // Tira un 1 
+    //    {
+    //        Debug.Log("Tirada fatidica del enemigo");
+    //        commandManager.AutoHerirse(4, 1);
+    //    }
+    //    else if (ca_player == 2) // Llega a la armadura
+    //    {
+
+    //    }
+    //    else // no supera la armadura
+    //    {
+    //        commandManager.NextTurn();
+    //    }
+    //}
+    void Fuerza_Enemy()
+    {
+        int ca_player = commandManager.Armadura(0, 20);
+        Debug.Log("Enemigo usa FUERZA");
+
+        if (ca_player == 2) //supera armadura
+        {
+            commandManager.Fuerza(12, 1);
+        }
+        else if (ca_player == 0) //CRITICO
+        {
+            Debug.Log("Tirada critica del enemigo");
+            commandManager.Fuerza(12, 2);
+        }
+        else if (ca_player == 1) //TIRA UN 1
+        {
+            Debug.Log("Tirada fatidica del enemigo");
+
+            commandManager.AutoHerirse(4, 1);
+        }
+        else // no supera la armadura
+        {
+            commandManager.NextTurn();
+        }
+    }
+    void Inteligencia_Enemy()
+    {
+        int ca_player = commandManager.Armadura(0, 20);
+        Debug.Log("Enemigo usa INTELIGENCIA");
+
+        if (ca_player == 2) //supera armadura
+        {
+            commandManager.Inteligencia(12, 1);
+        }
+        else if (ca_player == 0) //CRITICO
+        {
+            Debug.Log("Tirada critica del enemigo");
+            commandManager.Inteligencia(12, 2);
+        }
+        else if (ca_player == 1) //TIRA UN 1
+        {
+            Debug.Log("Tirada fatidica del enemigo");
+
+            commandManager.AutoHerirse(4, 1);
+        }
+        else // no supera la armadura
+        {
+            commandManager.NextTurn();
+        }
+    }
+    void Carisma_Enemy()
+    {
+        int ca_player = commandManager.Armadura(0, 20);
+        Debug.Log("Enemigo usa CARISMA");
+
+        if (ca_player == 2) //supera armadura
+        {
+            commandManager.Carisma(12, 1);
+        }
+        else if (ca_player == 0) //CRITICO
+        {
+            Debug.Log("Tirada critica del enemigo");
+            commandManager.Carisma(12, 2);
+        }
+        else if (ca_player == 1) //TIRA UN 1
+        {
+            Debug.Log("Tirada fatidica del enemigo");
+
+            commandManager.AutoHerirse(4, 1);
+        }
+        else // no supera la armadura
+        {
+            commandManager.NextTurn();
         }
     }
     IEnumerator Esperar(float segundos, string ataque)

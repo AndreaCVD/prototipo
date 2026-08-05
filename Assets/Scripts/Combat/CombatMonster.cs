@@ -80,12 +80,12 @@ public class CombatMonster : MonoBehaviour
         }
         else if ((stat_damage + dice) >= armadura)
         {
-            Debug.Log("Has llegado al AC del enemigo");
+            Debug.Log("Has llegado al AC");
             return 2;
         }
         else
         {
-            Debug.Log("No has llegado al AC del enemigo");
+            Debug.Log("No has llegado al AC");
             return 3;
         }
     }
@@ -159,41 +159,20 @@ public class CombatMonster : MonoBehaviour
     {
         //Este da�o al enemigo
         int stat_enemigo = player.stats.Get(PersonajesStats.Inteligencia);
-        //Clase Armadura oponente
-        int armadura = target.player.stats.Get(PersonajesStats.ClaseArmadura);
 
-        //Si Dice + Inteligencia no supera AC del enemigo, no se hace el ataque
-        if ((stat_enemigo + dice) >= armadura)
-        {
-            //Escibimos Debug.Log
-            Commando(stat_enemigo, armadura, dice);
-            //Target recibe da�o de la fuerza
-            target.TakeDamage(stat_enemigo + dice);
-        }
-        else
-        {
-            Debug.Log("No has llegado al AC del enemigo");
-        }
+        target.TakeDamage(stat_enemigo + dice);
+     
     }
     public void Carisma(CombatMonster target, int dice) //Enemigo
     {
         //Este da�o al enemigo
         int stat_enemigo = player.stats.Get(PersonajesStats.Carisma);
-        //Clase Armadura oponente
-        int armadura = target.player.stats.Get(PersonajesStats.ClaseArmadura);
 
-        //Si Dice + Carisma no supera AC del enemigo, no se hace el ataque
-        if ((stat_enemigo + dice) >= armadura)
-        {
             //Escibimos Debug.Log
-            Commando(stat_enemigo, armadura, dice);
-            //Target recibe da�o de la fuerza
-            target.TakeDamage(stat_enemigo + dice);
-        }
-        else
-        {
-            Debug.Log("No has llegado al AC del enemigo");
-        }
+            //Commando(stat_enemigo, armadura, dice);
+        //Target recibe da�o de la fuerza
+        target.TakeDamage(stat_enemigo + dice);
+
     }
     private void Commando(int stat_enemigo, int armadura, int dice)
     {

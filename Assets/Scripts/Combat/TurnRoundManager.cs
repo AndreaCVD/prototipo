@@ -124,7 +124,7 @@ public class TurnRoundManager : MonoBehaviour
 
         //Si es el turno del Enemigo, hacemos que actue solo
         if (current == Manager.enemyPersonaje)
-        {        Debug.Log("Enemy Turn function");
+        { 
             //Debug.Log("------AHORA ATCATA EL ENEMIGO-----");
             npcTurn.DoAction();
         }
@@ -140,14 +140,19 @@ public class TurnRoundManager : MonoBehaviour
         //npcTurn.AtaqueOportunidad();
     }
     public void AtaqueEnfadado()
-    {        
-        Debug.Log("turno enemigo, usa enfado");
+    {
         if (current == Manager.enemyPersonaje)
+        {
+            Debug.Log("turno enemigo, usa enfado");
             npcTurn.AtaqueEnfadado();
+        }
     }
     public void AtaqueAsustado()
     {
         if (current == Manager.enemyPersonaje)
+        {
+            Debug.Log("turno enemigo, usa asustado");
             npcTurn.AtaqueAsustado();
+        }
     }
 }

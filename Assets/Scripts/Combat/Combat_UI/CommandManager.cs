@@ -100,9 +100,9 @@ public class CommandManager : MonoBehaviour
 
         NextTurn();
     }
-    public void Carisma(int dado)
+    public void Carisma(int dado, int times)
     {
-        int aux = lanzarDado(20, 1);
+        int aux = lanzarDado(dado, times);
 
         //Acci�n
         turnRoundManager.current.Carisma(turnRoundManager.target, aux);
@@ -110,16 +110,14 @@ public class CommandManager : MonoBehaviour
 
         NextTurn();
     }
-    public void Inteligencia(int dado)
+    public void Inteligencia(int dado, int times)
     {
-        int aux = lanzarDado(dado, 1);
+        int aux = lanzarDado(dado, times);
 
-        //Acci�n
         turnRoundManager.current.Inteligencia(turnRoundManager.target, aux);
+        
         ActualizarHP();
-
         NextTurn();
-
     }
     public void Modificar_CA(int valor)
     {

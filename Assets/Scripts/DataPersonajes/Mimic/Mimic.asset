@@ -22,11 +22,11 @@ MonoBehaviour:
       stats: 1
     - value: 0
       stats: 2
-    - value: 100
+    - value: 40
       stats: 3
     - value: 12
       stats: 4
-    - value: 100
+    - value: 40
       stats: 5
   Inventario: {fileID: 0}
   modelPrefab: {fileID: 0}

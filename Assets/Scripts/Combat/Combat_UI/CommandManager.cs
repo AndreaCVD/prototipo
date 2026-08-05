@@ -131,20 +131,22 @@ public class CommandManager : MonoBehaviour
     // --- MOVIMIENTOS ENEMIGO ---
     public void AtaqueEnfadado(int dado, int times)
     {
+        int armadura = Armadura(0, 20);
         enfadado = false;
-        if (Armadura(0, 20) == 2) //supera armadura
+        if (armadura == 2) //supera armadura
         {
-            Debug.Log("Ataque de enfado ha funcionado");
+            Debug.Log("Ataque de enfado del enemigo ha funcionado");
+
             int aux = lanzarDado(dado, times);
             int aux_2 = lanzarDado(4, 1);
             turnRoundManager.current.Fuerza(turnRoundManager.target, aux + aux_2);
 
             ActualizarHP();
             NextTurn();
-        }
-        else if (Armadura(0, 20) == 0) //CRITICO
+    }
+        else if (armadura == 0) //CRITICO
         {
-            Debug.Log("Ataque de enfado es critico");
+            Debug.Log("Ataque de enfado del enemigo es critico");
 
             int aux = lanzarDado(dado, times);
             int aux_2 = lanzarDado(4, 1);
@@ -154,9 +156,9 @@ public class CommandManager : MonoBehaviour
             ActualizarHP();
             NextTurn();
         }
-        else if(Armadura(0, 20) == 1) //TIRA UN 1
+        else if (armadura == 1) //TIRA UN 1
         {
-            Debug.Log("Ataque de enfado no ha funcionado");
+            Debug.Log("Ataque de enfado del enemigo no ha funcionado");
 
             AutoHerirse(4, 1);
         }
@@ -166,12 +168,27 @@ public class CommandManager : MonoBehaviour
             NextTurn();
         }
     }
+    public void EstadoIntimidar(string name, bool estado)
+    {
+        switch(name)
+        {
+            case "enfadado":
+                enfadado = estado;
+                NextTurn();
+                break;
+            case "asustado":
+                asustado = estado;
+                NextTurn();
+                break;
+        }
+    }
     public void AtaqueAsustado(int dado, int times)
     {
+        int armadura = Armadura(0, 20);
         asustado = false;
-        if (Armadura(0, 20) == 2)
+        if (armadura == 2)
         {
-            Debug.Log("Ataque de asustado ha funcionado");
+            Debug.Log("Ataque de asustado del enemigo ha funcionado");
 
             int aux = lanzarDado(dado, times);
             int aux_2 = lanzarDado(4, 1);
@@ -182,9 +199,9 @@ public class CommandManager : MonoBehaviour
             ActualizarHP();
             NextTurn();
         }
-        else if (Armadura(0, 20) == 0) //CRITICO
+        else if (armadura == 0) //CRITICO
         {
-            Debug.Log("Ataque de asustado es critico");
+            Debug.Log("Ataque de asustado del enemigo es critico");
 
             int aux = lanzarDado(dado, times);
             int aux_2 = lanzarDado(4, 1);
@@ -194,14 +211,14 @@ public class CommandManager : MonoBehaviour
             ActualizarHP();
             NextTurn();
         }
-        else if (Armadura(0, 20) == 1) //TIRA UN 1
+        else if (armadura == 1) //TIRA UN 1
         {
             AutoHerirse(4, 1);
         }
         else
         {
-            ActualizarHP();
-            NextTurn();
+        ActualizarHP();
+        NextTurn();
         }
     }
     public bool Return_inLove()

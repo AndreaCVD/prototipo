@@ -89,7 +89,7 @@ public class TurnRoundManager : MonoBehaviour
             //Cambiar current y target
             current = Manager.enemyPersonaje;
             target = Manager.playerPersonaje;
-
+            Debug.Log("current = " + current);
             //Animacion
             anim.SetBool("TurnProta", false);
             anim.SetBool("TurnEnemy", true);
@@ -107,6 +107,7 @@ public class TurnRoundManager : MonoBehaviour
             //Cambiar current y target
             current = Manager.playerPersonaje;
             target = Manager.enemyPersonaje;
+            Debug.Log("current = " + current);
 
             //Animacion
             anim.SetBool("TurnProta", true);
@@ -120,9 +121,10 @@ public class TurnRoundManager : MonoBehaviour
     }
     public void EnemyTurn()
     {
+
         //Si es el turno del Enemigo, hacemos que actue solo
         if (current == Manager.enemyPersonaje)
-        {
+        {        Debug.Log("Enemy Turn function");
             //Debug.Log("------AHORA ATCATA EL ENEMIGO-----");
             npcTurn.DoAction();
         }
@@ -138,10 +140,10 @@ public class TurnRoundManager : MonoBehaviour
         //npcTurn.AtaqueOportunidad();
     }
     public void AtaqueEnfadado()
-    {
+    {        
+        Debug.Log("turno enemigo, usa enfado");
         if (current == Manager.enemyPersonaje)
             npcTurn.AtaqueEnfadado();
-
     }
     public void AtaqueAsustado()
     {

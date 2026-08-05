@@ -481,19 +481,22 @@ public class CommandPanel : MonoBehaviour
         }
         else if (armadura == "no")
         {
+            Debug.Log("armadura no del prota");
             //enemigo enfadado
-            commandManager.enfadado = true;
             Resetear_Valores();
             Back();
-            commandManager.NextTurn();
+            commandManager.EstadoIntimidar("enfadado", true);
+
         }
         else if (armadura == "si")
         {
+            Debug.Log("armadura si del prota");
+
             //enemigo enfadado
-            commandManager.asustado = true;
             Resetear_Valores();
             Back();
-            commandManager.NextTurn();
+            commandManager.EstadoIntimidar("asustado", true);
+
         }
         //dura 1 turno
     }

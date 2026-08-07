@@ -6,9 +6,14 @@ public class NPCAction : MonoBehaviour
 
     [SerializeField] CombatDebug combatDebug;
     [SerializeField] CommandManager commandManager;
+    
+    [SerializeField] Mimic_Action m;
+
     private Parameters enemyData;
     int fuerza, intel, carisma;
-    private int[] orden;
+    int action_enemy;
+    string action;
+
     void Start()
     {
         //Encontrar el script y las datas
@@ -19,7 +24,8 @@ public class NPCAction : MonoBehaviour
         intel = enemyData.stats.Get(PersonajesStats.Inteligencia);
         carisma = enemyData.stats.Get(PersonajesStats.Carisma);
         //Podemos hacer que dependiendo del enemigo, de sus estats, estas varien
-
+        
+        action = enemyData.namePers;
     }
     public void AtaqueOportunidad()
     {
@@ -33,7 +39,7 @@ public class NPCAction : MonoBehaviour
     {
         StartCoroutine(Esperar(3f, "asustado"));
     }
-
+    //var slot = root.Q<VisualElement>($"slot-{index}");
     public void DoAction()
     {
         StartCoroutine(EsperarYContinuar(3f));
@@ -98,9 +104,13 @@ public class NPCAction : MonoBehaviour
         switch (aux)
         {
             case 'f':
+                action_enemy = 1;
+                Invoke(action, 0f);
                 Fuerza_Enemy();
                 break;
             case 'i':
+                action_enemy = 2;
+                Invoke(action, 0f);
                 Inteligencia_Enemy();
                 break;
             case 'c':
@@ -113,6 +123,18 @@ public class NPCAction : MonoBehaviour
                 Debug.Log("--default de npc action--");
                 break;
         }
+    }
+    void Mimic()
+    {
+        if (action_enemy == 1)
+        {
+            m.Ataque_1();
+        }
+        else if (action_enemy == 2)
+        {
+            m.Ataque_2();
+        }
+        action_enemy = 0;
     }
     //void Ver_Armadura()
     //{

@@ -8,6 +8,9 @@ public class NPCAction : MonoBehaviour
     [SerializeField] CommandManager commandManager;
     
     [SerializeField] Mimic_Action m;
+    [SerializeField] Caballero_Action c;
+    [SerializeField] Slime_Action s;
+    [SerializeField] Jefe_Action j;
 
     private Parameters enemyData;
     int fuerza, intel, carisma;
@@ -124,6 +127,8 @@ public class NPCAction : MonoBehaviour
                 break;
         }
     }
+
+    // -- INVOKE LLAMA A ESTAS FUNCIONES --
     void Mimic()
     {
         if (action_enemy == 1)
@@ -136,6 +141,46 @@ public class NPCAction : MonoBehaviour
         }
         action_enemy = 0;
     }
+    void Caballero()
+    {
+        // action 1 puede ser basado en fuerza, y en el script de caballero
+        // hacer un random para las opciones de fuerza
+        // asi cada uno puede tener diferentes numeros de ataques, en un mismo numero de stats (fuerza, carisma, inteligencia)
+        if (action_enemy == 1)
+        {
+            c.Ataque_1();
+        }
+        else if (action_enemy == 2)
+        {
+            c.Ataque_2();
+        }
+        action_enemy = 0;
+    }
+    void Slime()
+    {
+        if (action_enemy == 1)
+        {
+            s.Ataque_1();
+        }
+        else if (action_enemy == 2)
+        {
+            s.Ataque_2();
+        }
+        action_enemy = 0;
+    }
+    void Jefe_Libro()
+    {
+        if (action_enemy == 1)
+        {
+            j.Ataque_1();
+        }
+        else if (action_enemy == 2)
+        {
+            j.Ataque_2();
+        }
+        action_enemy = 0;
+    }
+    
     //void Ver_Armadura()
     //{
     //    int ca_player = commandManager.Armadura(0, 20);
@@ -157,6 +202,8 @@ public class NPCAction : MonoBehaviour
     //        commandManager.NextTurn();
     //    }
     //}
+
+    // --- ATAQUES ---
     void Fuerza_Enemy()
     {
         int ca_player = commandManager.Armadura(0, 20);

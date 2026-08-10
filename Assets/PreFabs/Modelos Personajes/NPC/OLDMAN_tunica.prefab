@@ -164,3 +164,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogo_obj: {fileID: 11400000, guid: 9b3756fe82d36214eb47b1ea5cfb735f, type: 2}
+  ficha_obj: {fileID: 11400000, guid: 8875812061a14d841b24079c00e83647, type: 2}

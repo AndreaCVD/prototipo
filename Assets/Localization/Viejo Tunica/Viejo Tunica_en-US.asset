@@ -18,88 +18,104 @@ MonoBehaviour:
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 835699867971584
+  - m_Id: 25299178637029376
     m_Localized: "Ah, tu eres el del rescate, \xBFno es as\xED?"
     m_Metadata:
       m_Items: []
-  - m_Id: 835699867971585
+  - m_Id: 25299178674778112
     m_Localized: ???
     m_Metadata:
       m_Items: []
-  - m_Id: 835699867971586
+  - m_Id: 25299178674778113
     m_Localized: "\xBFQue pasa? \xBFTienes miedo?"
     m_Metadata:
       m_Items: []
-  - m_Id: 835699867971587
+  - m_Id: 25299178674778114
     m_Localized: Yusseif
     m_Metadata:
       m_Items: []
-  - m_Id: 835699867971588
+  - m_Id: 25299178674778115
     m_Localized: "Tienes que buscar un grupo de tres aventureros que se qued\xF3
       atrapado buscando algo. Una banda de in\xFAtiles, vaya. "
     m_Metadata:
       m_Items: []
-  - m_Id: 835699867971589
+  - m_Id: 25299178674778116
     m_Localized: ???
     m_Metadata:
       m_Items: []
-  - m_Id: 835699867971590
+  - m_Id: 25299178674778117
     m_Localized: "Y tu... Porfin te has decidido a venir, eh, que ya tardabas. F\xEDjate
       que hasta me iba a poner yo y todo. "
     m_Metadata:
       m_Items: []
-  - m_Id: 835699867971591
+  - m_Id: 25299178674778118
     m_Localized: "Pero como ves, yo estoy muy mayor como para rescatar a nadie, as\xED
       que tendr\xE1s que hacerlo tu."
     m_Metadata:
       m_Items: []
-  - m_Id: 835699867971592
+  - m_Id: 25299178674778119
     m_Localized: (Observar detenidamente)
     m_Metadata:
       m_Items: []
-  - m_Id: 835699867971593
+  - m_Id: 25299178674778120
     m_Localized: "\xBFSeria tan amable de obsequiarme con su ayuda?"
     m_Metadata:
       m_Items: []
-  - m_Id: 835699867971594
+  - m_Id: 25299178674778121
     m_Localized: (Quedarse callado)
     m_Metadata:
       m_Items: []
-  - m_Id: 835699867971595
+  - m_Id: 25299178674778122
     m_Localized: "\xBF...qu\xE9 le pasa?"
     m_Metadata:
       m_Items: []
-  - m_Id: 835699867971596
+  - m_Id: 25299178674778123
     m_Localized: Carlos
     m_Metadata:
       m_Items: []
-  - m_Id: 835699867971597
+  - m_Id: 25299178674778124
     m_Localized: "Bueno, si me lo dices as\xED..."
     m_Metadata:
       m_Items: []
-  - m_Id: 835699867971598
+  - m_Id: 25299178674778125
     m_Localized: Yusseif
     m_Metadata:
       m_Items: []
-  - m_Id: 835699867971599
+  - m_Id: 25299178674778126
     m_Localized: No. Ponte a trabajar.
     m_Metadata:
       m_Items: []
-  - m_Id: 835699867971600
+  - m_Id: 25299178674778127
     m_Localized: "\xBFA qu\xE9 esperas? Va, a trabajar. Yo me quedar\xE9 aqu\xED
       sentado, que me duelen los pies."
     m_Metadata:
       m_Items: []
-  - m_Id: 835699867971601
+  - m_Id: 25299178674778128
     m_Localized: "...Si quieres practicar tienes ese \xE1rbol redondo."
     m_Metadata:
       m_Items: []
-  - m_Id: 835699867971602
+  - m_Id: 25299178674778129
     m_Localized: "Puedo irte a buscar pociones al pueblo, \xA1y no te cobro comisiones!"
     m_Metadata:
       m_Items: []
-  - m_Id: 835699867971603
+  - m_Id: 25299178674778130
     m_Localized: "\xBFC\xF3mo lo ves?"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25299178674778131
+    m_Localized: "Pelear con \xE9l"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25299178674778132
+    m_Localized: "Ir a entrenar con el \xE1rbol"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25299178674778133
+    m_Localized: Irse
+    m_Metadata:
+      m_Items: []
+  - m_Id: 25299178674778134
+    m_Localized: "\xBFQuieres practicar? Muy bien."
     m_Metadata:
       m_Items: []
   references:

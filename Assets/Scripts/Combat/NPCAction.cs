@@ -11,6 +11,7 @@ public class NPCAction : MonoBehaviour
     [SerializeField] Caballero_Action c;
     [SerializeField] Slime_Action s;
     [SerializeField] Jefe_Action j;
+    [SerializeField] Viejo_Action y;
 
     private Parameters enemyData;
     int fuerza, intel, carisma;
@@ -177,6 +178,18 @@ public class NPCAction : MonoBehaviour
         else if (action_enemy == 2)
         {
             j.Ataque_2();
+        }
+        action_enemy = 0;
+    }
+    void Yusseif()
+    {
+        if (action_enemy == 1)
+        {
+            y.Ataque_1();
+        }
+        else if (action_enemy == 2)
+        {
+            y.Ataque_2();
         }
         action_enemy = 0;
     }

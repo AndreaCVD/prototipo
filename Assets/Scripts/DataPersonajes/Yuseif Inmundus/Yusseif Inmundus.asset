@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3184c13f5276613429ba2c5118bbc8ba, type: 3}
   m_Name: Yusseif Inmundus
   m_EditorClassIdentifier: 
-  namePers: Yusseif Inmundus
+  namePers: Yusseif
+  enamorado: 0
   stats:
     values:
     - value: 3

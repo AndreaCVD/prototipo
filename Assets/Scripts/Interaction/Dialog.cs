@@ -6,7 +6,7 @@ using cherrydev;
 
 public class Dialog : MonoBehaviour
 {
-
+    Preload preload;
     LoadScene load;
     Dice dados;
     [Header("LISTA PUZZLE")]
@@ -38,6 +38,7 @@ public class Dialog : MonoBehaviour
 
         GameObject aux = GameObject.Find("--SceneManagement--");
         load = aux.GetComponent<LoadScene>();
+        preload = aux.GetComponent<Preload>();
 
         //lastEstate = load.onCombat;
     }
@@ -136,9 +137,11 @@ public class Dialog : MonoBehaviour
     {
         Destroy(obj);
     }
+    // Combate
     public void Combate()
     {
         Debug.Log("Inicia combate por dialogo");
+        preload.CombatOpponent(obj);
         load.Combat(obj);
     }
     public void SetBool(string nombreVal, bool val)

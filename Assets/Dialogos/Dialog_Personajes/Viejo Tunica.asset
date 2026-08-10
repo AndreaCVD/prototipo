@@ -15,8 +15,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 588.80145
-    y: -81.19989
+    x: 1570.3989
+    y: -279.59937
     width: 190
     height: 135
   IsDragging: 1
@@ -47,8 +47,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -845.6
-    y: 430.0009
+    x: 396.79947
+    y: 325.20108
     width: 190
     height: 135
   IsDragging: 1
@@ -58,7 +58,7 @@ MonoBehaviour:
     Text: "...Si quieres practicar tienes ese \xE1rbol redondo."
     CharacterSprite: {fileID: 21300000, guid: ba9938e5f4d041b40ac8c5f6316c4210, type: 3}
   ParentNodes:
-  - {fileID: 1436545033789331739}
+  - {fileID: -5505563987510042894}
   ChildNode: {fileID: 5573192301709980262}
   _isExternalFunc: 0
   _externalFunctionName: 
@@ -79,8 +79,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -705.6005
-    y: 136.40018
+    x: 275.9988
+    y: -61.99977
     width: 190
     height: 135
   IsDragging: 1
@@ -97,6 +97,38 @@ MonoBehaviour:
   _externalFunctionName: 
   CharacterNameKey: SentenceName_e253742b-8e28-4f47-92e0-81dd3c9710e3
   SentenceTextKey: SentenceText_2ca42b92-57ba-4619-9544-2fb1aa67a5b3
+--- !u!114 &-5505563987510042894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1717f3c6dba9fa40844ddacac301510, type: 3}
+  m_Name: Answer Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 179.19998
+    y: 391.6
+    width: 190
+    height: 155
+  IsDragging: 1
+  IsSelected: 0
+  Answers:
+  - "Pelear con \xE9l"
+  - "Ir a entrenar con el \xE1rbol"
+  - Irse
+  AnswerKeys: []
+  ParentNodes:
+  - {fileID: 1436545033789331739}
+  ChildNodes:
+  - {fileID: -1391876497512673634}
+  - {fileID: -7759637944755910918}
+  - {fileID: 5573192301709980262}
 --- !u!114 &-4619645803194315248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,8 +144,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -252.00366
-    y: 119.60019
+    x: 729.59607
+    y: -78.79976
     width: 190
     height: 155
   IsDragging: 1
@@ -147,8 +179,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 7.999939
-    y: 233.20004
+    x: 989.5979
+    y: 34.800095
     width: 190
     height: 135
   IsDragging: 1
@@ -180,8 +212,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 580.00214
-    y: 66
+    x: 1561.5996
+    y: -132.39995
     width: 190
     height: 135
   IsDragging: 1
@@ -212,8 +244,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -1767.2019
-    y: 345.20053
+    x: -785.6019
+    y: 146.8007
     width: 190
     height: 80
   IsDragging: 1
@@ -237,8 +269,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -1361.6003
-    y: 68.400055
+    x: -380.00095
+    y: -129.9999
     width: 210
     height: 155
   IsDragging: 1
@@ -252,6 +284,38 @@ MonoBehaviour:
   ParentNodes:
   - {fileID: 1485920470349927989}
   ChildNode: {fileID: 7821905148948879972}
+--- !u!114 &-1391876497512673634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 165.59998
+    y: 214.00003
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 1
+  _sentence:
+    CharacterName: Yusseif
+    Text: "\xBFQuieres practicar? Muy bien."
+    CharacterSprite: {fileID: 21300000, guid: ba9938e5f4d041b40ac8c5f6316c4210, type: 3}
+  ParentNodes:
+  - {fileID: -5505563987510042894}
+  ChildNode: {fileID: 2199450240286703569}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: 
+  SentenceTextKey: 
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -285,6 +349,9 @@ MonoBehaviour:
   - {fileID: -7759637944755910918}
   - {fileID: 8273924187952059092}
   - {fileID: 2816176419974027607}
+  - {fileID: -5505563987510042894}
+  - {fileID: -1391876497512673634}
+  - {fileID: 2199450240286703569}
   VariablesConfig: {fileID: 11400000, guid: 61133ed5c4a3f7d488a61fd3977e33ab, type: 2}
   _localizationTableName: Viejo Tunica
   _characterNamesLocalizationName: 
@@ -306,8 +373,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -2.4019165
-    y: 151.60043
+    x: 979.19604
+    y: -46.799515
     width: 190
     height: 80
   IsDragging: 1
@@ -332,8 +399,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -1077.6003
-    y: 426.001
+    x: -96.000824
+    y: 227.60121
     width: 190
     height: 135
   IsDragging: 1
@@ -344,7 +411,7 @@ MonoBehaviour:
     CharacterSprite: {fileID: 21300000, guid: ba9938e5f4d041b40ac8c5f6316c4210, type: 3}
   ParentNodes:
   - {fileID: 1485920470349927989}
-  ChildNode: {fileID: -7759637944755910918}
+  ChildNode: {fileID: -5505563987510042894}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: SentenceName_68c76cc9-f0a3-4680-b2b7-cfaa42a79a96
@@ -364,8 +431,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -1408.801
-    y: 269.20004
+    x: -427.20163
+    y: 70.800095
     width: 240
     height: 160
   IsDragging: 1
@@ -395,8 +462,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -11.201477
-    y: -1.1998901
+    x: 970.397
+    y: -199.59984
     width: 190
     height: 135
   IsDragging: 1
@@ -412,6 +479,32 @@ MonoBehaviour:
   _externalFunctionName: 
   CharacterNameKey: SentenceName_91ccb710-7fa3-461b-91e0-4714cd3e5f28
   SentenceTextKey: SentenceText_edd821af-c10d-4356-b932-e58895ec239c
+--- !u!114 &2199450240286703569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f4b3c64aaf434ea0df52154c1c7680, type: 3}
+  m_Name: External Function Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 260
+    y: 107.600006
+    width: 190
+    height: 80
+  IsDragging: 1
+  IsSelected: 0
+  _functionName: Combate
+  _description: 
+  ParentNodes:
+  - {fileID: -1391876497512673634}
+  ChildNode: {fileID: 5573192301709980262}
 --- !u!114 &2816176419974027607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -427,8 +520,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1048.8052
-    y: -85.99991
+    x: 2030.4001
+    y: -284.3994
     width: 190
     height: 135
   IsDragging: 1
@@ -459,8 +552,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 273.60263
-    y: 31.600037
+    x: 1255.1992
+    y: -166.79991
     width: 240
     height: 160
   IsDragging: 1
@@ -490,8 +583,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -907.99945
-    y: 140.4003
+    x: 73.599976
+    y: -57.99965
     width: 190
     height: 135
   IsDragging: 1
@@ -523,8 +616,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 382.39957
-    y: 298.00027
+    x: 1363.9961
+    y: 99.60033
     width: 190
     height: 80
   IsDragging: 1
@@ -552,8 +645,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -576.0006
-    y: 453.20087
+    x: 460.79846
+    y: 177.201
     width: 190
     height: 80
   IsDragging: 1
@@ -562,6 +655,8 @@ MonoBehaviour:
   _description: 
   ParentNodes:
   - {fileID: -7759637944755910918}
+  - {fileID: 2199450240286703569}
+  - {fileID: -5505563987510042894}
   ChildNode: {fileID: 0}
 --- !u!114 &7821905148948879972
 MonoBehaviour:
@@ -578,8 +673,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -1129.5996
-    y: 139.60031
+    x: -148.00006
+    y: -58.799637
     width: 190
     height: 135
   IsDragging: 1
@@ -610,8 +705,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -488.8037
-    y: 137.20023
+    x: 492.79578
+    y: -61.199722
     width: 190
     height: 135
   IsDragging: 1
@@ -643,8 +738,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 833.60693
-    y: -81.19989
+    x: 1815.2058
+    y: -279.59937
     width: 190
     height: 135
   IsDragging: 1

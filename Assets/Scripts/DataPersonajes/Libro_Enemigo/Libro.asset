@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3184c13f5276613429ba2c5118bbc8ba, type: 3}
   m_Name: Libro
   m_EditorClassIdentifier: 
-  namePers: Jefe Libro
+  namePers: Jefe_Libro
+  enamorado: 0
   stats:
     values:
     - value: 1

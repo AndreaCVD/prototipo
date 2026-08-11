@@ -12,6 +12,7 @@ public class CommandManager : MonoBehaviour
     [SerializeField] Dice diceRoller;
 
     public bool gameOver, enemigo_inmovilizado, enemigo_inLove, enfadado, asustado;
+    public bool player_inmovilizado = false;
     private int turnos_inmovil = 1;
 
     //[SerializeField] CombatMonster opponent;
@@ -95,6 +96,17 @@ public class CommandManager : MonoBehaviour
     {
         int aux = lanzarDado(dado, times);
         turnRoundManager.current.Fuerza(turnRoundManager.target, aux);
+
+        ActualizarHP();
+
+        NextTurn();
+    }
+    public void Fuerza(int dado_1, int times_1, int dado_2, int times_2) //dos dados diferentes
+    {
+        int aux = lanzarDado(dado_1, times_1);
+        int aux_2 = lanzarDado(dado_2, times_2);
+
+        turnRoundManager.current.Fuerza(turnRoundManager.target, aux+aux_2);
 
         ActualizarHP();
 
@@ -239,6 +251,10 @@ public class CommandManager : MonoBehaviour
     {
         enemigo_inmovilizado = inmov;
     }
+    public void PlayerInmovilizado(bool inmov)
+    {
+        player_inmovilizado = inmov;
+    }
     // --- DADOS ---
     private int lanzarDado(int caras, int tiradas)
     {
@@ -248,6 +264,7 @@ public class CommandManager : MonoBehaviour
 
     public void NextTurn()
     {
+        //estados enemigo
         if (enemigo_inmovilizado)
         {
             //No cambiamos el turno
@@ -258,6 +275,7 @@ public class CommandManager : MonoBehaviour
             {
                 Debug.Log("Ya no esta inmovilizado");
                 enemigo_inmovilizado = false;
+                turnos_inmovil = 1;
             }
         }
         else if (enemigo_inLove)
@@ -277,6 +295,21 @@ public class CommandManager : MonoBehaviour
             turnRoundManager.ChangeTurn();
             turnRoundManager.AtaqueAsustado();
 
+        }
+        //estados jugador
+        else if (player_inmovilizado)
+        {
+            //No cambiamos el turno
+            //Activar animacion 
+            turnos_inmovil--;
+            Debug.Log("Enemigo Inmovilizado. Le quedan = " + turnos_inmovil);
+            if (turnos_inmovil == 0)
+            {
+                Debug.Log("Ya no esta inmovilizado");
+                player_inmovilizado = false;
+                turnos_inmovil = 1;
+            }
+            turnRoundManager.EnemyTurn();
         }
         else
         {

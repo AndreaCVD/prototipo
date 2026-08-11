@@ -48,7 +48,6 @@ public class NPCAction : MonoBehaviour
     {
         StartCoroutine(EsperarYContinuar(3f));
 
-        
         //Podemos hacer que dependiendo del enemigo, de sus estats, estas varien
         //Cualquier opcion tenemos que hablar con commandManager
         //Debug.Log("--ORDEN--");
@@ -99,123 +98,69 @@ public class NPCAction : MonoBehaviour
         //    return 'c';
         //}
     }
+    //IEnumerator EsperarYContinuar(float segundos)
+    //{
+    //    yield return new WaitForSeconds(segundos);
+    //    //Debug.Log("Han pasado 3 segundos.");
+    //    //Debug.Log("TIEMPO ESPERA SE HA AGOTADO");
+
+    //    char aux = bestFeature();
+
+    //    switch (aux)
+    //    {
+    //        case 'f':
+    //            action_enemy = 1;
+    //            Invoke(action, 0f);
+    //            Fuerza_Enemy();
+    //            break;
+    //        case 'i':
+    //            action_enemy = 2;
+    //            Invoke(action, 0f);
+    //            Inteligencia_Enemy();
+    //            break;
+    //        case 'c':
+    //            Carisma_Enemy();
+    //            break;
+    //        case 'h': //Si player huye
+    //            commandManager.Fuerza(4, 1);
+    //            break;
+    //        default:
+    //            Debug.Log("--default de npc action--");
+    //            break;
+    //    }
+    //}
     IEnumerator EsperarYContinuar(float segundos)
     {
         yield return new WaitForSeconds(segundos);
-        //Debug.Log("Han pasado 3 segundos.");
-        //Debug.Log("TIEMPO ESPERA SE HA AGOTADO");
-        char aux = bestFeature();
-        switch (aux)
-        {
-            case 'f':
-                action_enemy = 1;
-                Invoke(action, 0f);
-                Fuerza_Enemy();
-                break;
-            case 'i':
-                action_enemy = 2;
-                Invoke(action, 0f);
-                Inteligencia_Enemy();
-                break;
-            case 'c':
-                Carisma_Enemy();
-                break;
-            case 'h': //Si player huye
-                commandManager.Fuerza(4, 1);
-                break;
-            default:
-                Debug.Log("--default de npc action--");
-                break;
-        }
+
+        Invoke(action, 0f);
     }
 
     // -- INVOKE LLAMA A ESTAS FUNCIONES --
     void Mimic()
     {
-        if (action_enemy == 1)
-        {
-            m.Ataque_1();
-        }
-        else if (action_enemy == 2)
-        {
-            m.Ataque_2();
-        }
-        action_enemy = 0;
+        m.Ataque_Aleatorio();
     }
     void Caballero()
     {
         // action 1 puede ser basado en fuerza, y en el script de caballero
         // hacer un random para las opciones de fuerza
         // asi cada uno puede tener diferentes numeros de ataques, en un mismo numero de stats (fuerza, carisma, inteligencia)
-        if (action_enemy == 1)
-        {
-            c.Ataque_1();
-        }
-        else if (action_enemy == 2)
-        {
-            c.Ataque_2();
-        }
-        action_enemy = 0;
+        c.Ataque_Aleatorio();
     }
     void Slime()
     {
-        if (action_enemy == 1)
-        {
-            s.Ataque_1();
-        }
-        else if (action_enemy == 2)
-        {
-            s.Ataque_2();
-        }
-        action_enemy = 0;
+        s.Ataque_Aleatorio();
     }
     void Jefe_Libro()
     {
-        if (action_enemy == 1)
-        {
-            j.Ataque_1();
-        }
-        else if (action_enemy == 2)
-        {
-            j.Ataque_2();
-        }
-        action_enemy = 0;
+        j.Ataque_Aleatorio();
     }
     void Yusseif()
     {
-        if (action_enemy == 1)
-        {
-            y.Ataque_1();
-        }
-        else if (action_enemy == 2)
-        {
-            y.Ataque_2();
-        }
-        action_enemy = 0;
+        y.Ataque_Aleatorio();
     }
     
-    //void Ver_Armadura()
-    //{
-    //    int ca_player = commandManager.Armadura(0, 20);
-    //    if (ca_player == 0) // Tirada critica
-    //    {
-
-    //    }
-    //    else if (ca_player == 1) // Tira un 1 
-    //    {
-    //        Debug.Log("Tirada fatidica del enemigo");
-    //        commandManager.AutoHerirse(4, 1);
-    //    }
-    //    else if (ca_player == 2) // Llega a la armadura
-    //    {
-
-    //    }
-    //    else // no supera la armadura
-    //    {
-    //        commandManager.NextTurn();
-    //    }
-    //}
-
     // --- ATAQUES ---
     void Fuerza_Enemy()
     {
@@ -234,7 +179,6 @@ public class NPCAction : MonoBehaviour
         else if (ca_player == 1) //TIRA UN 1
         {
             Debug.Log("Tirada fatidica del enemigo");
-
             commandManager.AutoHerirse(4, 1);
         }
         else // no supera la armadura

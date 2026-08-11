@@ -15,8 +15,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1570.3989
-    y: -279.59937
+    x: 1627.999
+    y: 18.000671
     width: 190
     height: 135
   IsDragging: 1
@@ -47,8 +47,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 396.79947
-    y: 325.20108
+    x: 454.39966
+    y: 622.8011
     width: 190
     height: 135
   IsDragging: 1
@@ -79,17 +79,17 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 275.9988
-    y: -61.99977
+    x: 333.59875
+    y: 235.60027
     width: 190
     height: 135
   IsDragging: 1
-  IsSelected: 0
+  IsSelected: 1
   _sentence:
     CharacterName: ???
     Text: "Y tu... Porfin te has decidido a venir, eh, que ya tardabas. F\xEDjate
       que hasta me iba a poner yo y todo. "
-    CharacterSprite: {fileID: 21300000, guid: ba9938e5f4d041b40ac8c5f6316c4210, type: 3}
+    CharacterSprite: {fileID: 21300000, guid: e5cf9c767afef7f47b63adde7fea7ed6, type: 3}
   ParentNodes:
   - {fileID: 4293345670854002962}
   ChildNode: {fileID: 8023769765697480976}
@@ -112,8 +112,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 179.19998
-    y: 391.6
+    x: 236.79993
+    y: 689.20013
     width: 190
     height: 155
   IsDragging: 1
@@ -122,7 +122,10 @@ MonoBehaviour:
   - "Pelear con \xE9l"
   - "Ir a entrenar con el \xE1rbol"
   - Irse
-  AnswerKeys: []
+  AnswerKeys:
+  - Answer_2dfb1ab0-7e5d-4591-b3a9-e7e35eff5ca6
+  - Answer_d804d7e1-a248-4385-b506-32450f9ddb3d
+  - Answer_3182b598-1a0c-4d2f-9969-909e85bbc95b
   ParentNodes:
   - {fileID: 1436545033789331739}
   ChildNodes:
@@ -144,8 +147,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 729.59607
-    y: -78.79976
+    x: 787.19635
+    y: 218.80028
     width: 190
     height: 155
   IsDragging: 1
@@ -179,8 +182,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 989.5979
-    y: 34.800095
+    x: 1047.198
+    y: 332.40012
     width: 190
     height: 135
   IsDragging: 1
@@ -212,8 +215,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1561.5996
-    y: -132.39995
+    x: 1619.1997
+    y: 165.20009
     width: 190
     height: 135
   IsDragging: 1
@@ -244,8 +247,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -785.6019
-    y: 146.8007
+    x: -728.00165
+    y: 444.40076
     width: 190
     height: 80
   IsDragging: 1
@@ -269,8 +272,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -380.00095
-    y: -129.9999
+    x: -322.401
+    y: 167.60014
     width: 210
     height: 155
   IsDragging: 1
@@ -299,12 +302,12 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 165.59998
-    y: 214.00003
+    x: 223.1999
+    y: 511.60004
     width: 190
     height: 135
   IsDragging: 1
-  IsSelected: 1
+  IsSelected: 0
   _sentence:
     CharacterName: Yusseif
     Text: "\xBFQuieres practicar? Muy bien."
@@ -314,7 +317,7 @@ MonoBehaviour:
   ChildNode: {fileID: 2199450240286703569}
   _isExternalFunc: 0
   _externalFunctionName: 
-  CharacterNameKey: 
+  CharacterNameKey: SentenceName_68c76cc9-f0a3-4680-b2b7-cfaa42a79a96
   SentenceTextKey: 
 --- !u!114 &11400000
 MonoBehaviour:
@@ -373,8 +376,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 979.19604
-    y: -46.799515
+    x: 1036.7964
+    y: 250.80052
     width: 190
     height: 80
   IsDragging: 1
@@ -399,8 +402,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -96.000824
-    y: 227.60121
+    x: -38.40085
+    y: 525.20123
     width: 190
     height: 135
   IsDragging: 1
@@ -431,8 +434,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -427.20163
-    y: 70.800095
+    x: -369.60168
+    y: 368.40015
     width: 240
     height: 160
   IsDragging: 1
@@ -462,8 +465,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 970.397
-    y: -199.59984
+    x: 1027.9971
+    y: 98.0002
     width: 190
     height: 135
   IsDragging: 1
@@ -494,8 +497,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 260
-    y: 107.600006
+    x: 317.5999
+    y: 405.20004
     width: 190
     height: 80
   IsDragging: 1
@@ -520,8 +523,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 2030.4001
-    y: -284.3994
+    x: 2088.0012
+    y: 13.200623
     width: 190
     height: 135
   IsDragging: 1
@@ -552,8 +555,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1255.1992
-    y: -166.79991
+    x: 1312.7993
+    y: 130.80013
     width: 240
     height: 160
   IsDragging: 1
@@ -583,8 +586,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 73.599976
-    y: -57.99965
+    x: 131.19995
+    y: 239.60039
     width: 190
     height: 135
   IsDragging: 1
@@ -593,7 +596,7 @@ MonoBehaviour:
     CharacterName: ???
     Text: "Tienes que buscar un grupo de tres aventureros que se qued\xF3 atrapado
       buscando algo. Una banda de in\xFAtiles, vaya. "
-    CharacterSprite: {fileID: 21300000, guid: ba9938e5f4d041b40ac8c5f6316c4210, type: 3}
+    CharacterSprite: {fileID: 21300000, guid: e5cf9c767afef7f47b63adde7fea7ed6, type: 3}
   ParentNodes:
   - {fileID: 7821905148948879972}
   ChildNode: {fileID: -6479709222405977522}
@@ -616,8 +619,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1363.9961
-    y: 99.60033
+    x: 1421.5962
+    y: 397.20038
     width: 190
     height: 80
   IsDragging: 1
@@ -645,8 +648,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 460.79846
-    y: 177.201
+    x: 518.39874
+    y: 474.80103
     width: 190
     height: 80
   IsDragging: 1
@@ -673,8 +676,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -148.00006
-    y: -58.799637
+    x: -90.400085
+    y: 238.8004
     width: 190
     height: 135
   IsDragging: 1
@@ -705,8 +708,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 492.79578
-    y: -61.199722
+    x: 550.39606
+    y: 236.40031
     width: 190
     height: 135
   IsDragging: 1
@@ -738,8 +741,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1815.2058
-    y: -279.59937
+    x: 1872.8062
+    y: 18.000671
     width: 190
     height: 135
   IsDragging: 1

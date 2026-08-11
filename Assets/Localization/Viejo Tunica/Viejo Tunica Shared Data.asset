@@ -15,100 +15,100 @@ MonoBehaviour:
   m_TableCollectionName: Viejo Tunica
   m_TableCollectionNameGuidString: 815d8418464589a4cbd0763fcc0c6dec
   m_Entries:
-  - m_Id: 25299178637029376
+  - m_Id: 25650014345031680
     m_Key: SentenceText_3e8d5adb-651a-44fa-9836-4290d9ae2d2d
     m_Metadata:
       m_Items: []
-  - m_Id: 25299178674778112
+  - m_Id: 25650014378586112
     m_Key: SentenceName_e253742b-8e28-4f47-92e0-81dd3c9710e3
     m_Metadata:
       m_Items: []
-  - m_Id: 25299178674778113
+  - m_Id: 25650014378586113
     m_Key: SentenceText_ddfe1473-90f4-46be-a42e-865f4fe450df
     m_Metadata:
       m_Items: []
-  - m_Id: 25299178674778114
+  - m_Id: 25650014378586114
     m_Key: SentenceName_68c76cc9-f0a3-4680-b2b7-cfaa42a79a96
     m_Metadata:
       m_Items: []
-  - m_Id: 25299178674778115
+  - m_Id: 25650014378586115
     m_Key: SentenceText_25b95a35-0865-4e77-8e80-4cd5cf52beb8
     m_Metadata:
       m_Items: []
-  - m_Id: 25299178674778116
+  - m_Id: 25650014378586116
     m_Key: SentenceName_e10afa9f-edad-46ba-94f8-105dc50cf245
     m_Metadata:
       m_Items: []
-  - m_Id: 25299178674778117
+  - m_Id: 25650014378586117
     m_Key: SentenceText_2ca42b92-57ba-4619-9544-2fb1aa67a5b3
     m_Metadata:
       m_Items: []
-  - m_Id: 25299178674778118
+  - m_Id: 25650014378586118
     m_Key: SentenceText_1ee94dce-ee07-4f61-99f3-9cfa4eaf7f19
     m_Metadata:
       m_Items: []
-  - m_Id: 25299178674778119
+  - m_Id: 25650014378586119
     m_Key: Answer_9e541cba-0d0b-4f58-8bab-5e6aef23e0f8
     m_Metadata:
       m_Items: []
-  - m_Id: 25299178674778120
+  - m_Id: 25650014378586120
     m_Key: Answer_2e8d9761-7242-41ea-ad95-3b58ed7f5720
     m_Metadata:
       m_Items: []
-  - m_Id: 25299178674778121
+  - m_Id: 25650014378586121
     m_Key: Answer_233a8b88-db36-4007-8cf0-9ad60372cab2
     m_Metadata:
       m_Items: []
-  - m_Id: 25299178674778122
+  - m_Id: 25650014378586122
     m_Key: SentenceText_edd821af-c10d-4356-b932-e58895ec239c
     m_Metadata:
       m_Items: []
-  - m_Id: 25299178674778123
+  - m_Id: 25650014378586123
     m_Key: SentenceName_91ccb710-7fa3-461b-91e0-4714cd3e5f28
     m_Metadata:
       m_Items: []
-  - m_Id: 25299178674778124
+  - m_Id: 25650014378586124
     m_Key: SentenceText_9558c466-1ab0-4b98-9a70-4ac481eac251
     m_Metadata:
       m_Items: []
-  - m_Id: 25299178674778125
+  - m_Id: 25650014378586125
     m_Key: SentenceName_80ed632c-42fd-4020-ae50-db154045d989
     m_Metadata:
       m_Items: []
-  - m_Id: 25299178674778126
+  - m_Id: 25650014378586126
     m_Key: SentenceText_006b5d11-ade9-4526-ba64-5862a554fe74
     m_Metadata:
       m_Items: []
-  - m_Id: 25299178674778127
+  - m_Id: 25650014378586127
     m_Key: SentenceText_017ab963-4cd2-42be-9a24-6409297ca005
     m_Metadata:
       m_Items: []
-  - m_Id: 25299178674778128
+  - m_Id: 25650014378586128
     m_Key: SentenceText_2b074a5f-0444-46ce-b775-271ed4c7149c
     m_Metadata:
       m_Items: []
-  - m_Id: 25299178674778129
+  - m_Id: 25650014378586129
     m_Key: SentenceText_7a28e8ab-9d89-442b-9d5c-be016a2b7d25
     m_Metadata:
       m_Items: []
-  - m_Id: 25299178674778130
+  - m_Id: 25650014378586130
     m_Key: SentenceText_cb86d033-bbff-408f-b01d-736b52d2fcfe
     m_Metadata:
       m_Items: []
-  - m_Id: 25299178674778131
-    m_Key: Answer_2bedab34-7577-476f-8c15-86225afa5123
+  - m_Id: 25650014378586131
+    m_Key: Answer_2dfb1ab0-7e5d-4591-b3a9-e7e35eff5ca6
     m_Metadata:
       m_Items: []
-  - m_Id: 25299178674778132
-    m_Key: Answer_168c4231-e2e9-4741-9e30-bd0156842323
+  - m_Id: 25650014378586132
+    m_Key: Answer_d804d7e1-a248-4385-b506-32450f9ddb3d
     m_Metadata:
       m_Items: []
-  - m_Id: 25299178674778133
-    m_Key: Answer_376eb6c0-e1e4-430c-b53d-d6271da411e3
+  - m_Id: 25650014378586133
+    m_Key: Answer_3182b598-1a0c-4d2f-9969-909e85bbc95b
     m_Metadata:
       m_Items: []
-  - m_Id: 25299178674778134
-    m_Key: SentenceText_5b6dcfac-62d2-48ef-bc0d-bdadcc150968
+  - m_Id: 25650014382780416
+    m_Key: 
     m_Metadata:
       m_Items: []
   m_Metadata:

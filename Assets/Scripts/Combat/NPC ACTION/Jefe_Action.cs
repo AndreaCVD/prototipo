@@ -2,22 +2,30 @@ using UnityEngine;
 
 public class Jefe_Action : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    int ataque;
 
-    // Update is called once per frame
-    void Update()
+    public void Ataque_Aleatorio()
     {
-        
+        ataque = Random.Range(1, 4);
+
+        switch (ataque)
+        {
+            case 1:
+                Ataque_1();
+                break;
+            case 2:
+                Ataque_2();
+                break;
+            default:
+                Debug.Log("Error de lectura");
+                break;
+        }
     }
-    public void Ataque_1()
+    void Ataque_1()
     {
         Debug.Log("Ataque 1 de jefe");
     }
-    public void Ataque_2()
+    void Ataque_2()
     {
         Debug.Log("Ataque 2 de jefe");
     }

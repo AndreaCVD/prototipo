@@ -1241,7 +1241,7 @@ GameObject:
   - component: {fileID: 1676679108}
   - component: {fileID: 1676679107}
   m_Layer: 0
-  m_Name: Enemy Data
+  m_Name: --Enemy Data--
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1259,6 +1259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3d120fefa6f3f24aae364f0aac5d271, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  commandManager: {fileID: 88913840}
 --- !u!4 &1676679105
 Transform:
   m_ObjectHideFlags: 0
@@ -1769,6 +1770,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 88913837}
+  - {fileID: 1676679105}
   - {fileID: 2146570005}
   - {fileID: 1789937966}
   - {fileID: 144959335}
@@ -1776,4 +1778,3 @@ SceneRoots:
   - {fileID: 977890929}
   - {fileID: 686572649}
   - {fileID: 1840981203}
-  - {fileID: 1676679105}

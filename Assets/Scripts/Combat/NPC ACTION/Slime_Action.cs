@@ -23,11 +23,37 @@ public class Slime_Action : MonoBehaviour
             //del 0 a 8
             ataque = Random.Range(0, 10);
         }
-
+        // Escupir = 60%
+        // Mov Hipnotizantes = 30%
+        // Atrapar = 10%
         switch (ataque)
         {
+            case 0:
+                Escupir();
+                break;
             case 1:
                 Escupir();
+                break;
+            case 2:
+                Escupir();
+                break;
+            case 3:
+                Escupir();
+                break;
+            case 4:
+                Escupir();
+                break;
+            case 5:
+                Escupir();
+                break;
+            case 6:
+                Hipnotizar();
+                break;
+            case 7:
+                Hipnotizar();
+                break;
+            case 8:
+                Hipnotizar();
                 break;
             case 9:
                 Atrapar();

@@ -22,38 +22,41 @@ public class Mimic_Action : MonoBehaviour
             //del 0 a 8
             ataque = Random.Range(0, 10);            
         }
-            
-        switch(ataque)
+        // Mordisco = 40%
+        // Vomito = 30%
+        // Lenguetazo = 20%
+        // Atrapar = 10%    
+        switch (ataque)
         {
             case 0:
-                Mordisco(); //35%
+                Mordisco(); 
                 break;
             case 1:
-                Vomito(); //35%
+                Vomito(); 
                 break;
             case 2:
-                Mordisco(); //35%
+                Mordisco(); 
                 break;
             case 3:
-                Vomito(); //35%
+                Vomito(); 
                 break;
             case 4:
-                Mordisco(); //35%
+                Mordisco(); 
                 break;
             case 5:
-                Vomito(); //35%
+                Vomito(); 
                 break;
             case 6:
-                Mordisco(); //35%
+                Mordisco();
                 break;
             case 7:
-                Lenguetazo(); //20%
+                Lenguetazo(); 
                 break;
             case 8:
-                Lenguetazo(); //20%
+                Lenguetazo(); 
                 break;
             case 9:
-                Atrapar(); // menos probable 10%
+                Atrapar();
                 break;
 
             default:

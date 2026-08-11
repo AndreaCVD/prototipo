@@ -72,7 +72,6 @@ public class Mimic_Action : MonoBehaviour
 
         if (ca_player == 2) //supera armadura
         {
-            //Fuerza(int dado_1, int times_1, int dado_2, int times_2)
             commandManager.Fuerza(8, 1);
         }
         else if (ca_player == 0) //CRITICO

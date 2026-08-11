@@ -15,12 +15,12 @@ public class Mimic_Action : MonoBehaviour
         if (player_inmovilizado)
         {
             player_inmovilizado = false;
-            ataque = Random.Range(0, 8); //sin atrapar
+            ataque = Random.Range(0, 9); //sin atrapar
         }
         else
         {
             //del 0 a 8
-            ataque = Random.Range(0, 9);            
+            ataque = Random.Range(0, 10);            
         }
             
         switch(ataque)
@@ -44,12 +44,15 @@ public class Mimic_Action : MonoBehaviour
                 Vomito(); //35%
                 break;
             case 6:
-                Lenguetazo(); //20%
+                Mordisco(); //35%
                 break;
             case 7:
                 Lenguetazo(); //20%
                 break;
             case 8:
+                Lenguetazo(); //20%
+                break;
+            case 9:
                 Atrapar(); // menos probable 10%
                 break;
 

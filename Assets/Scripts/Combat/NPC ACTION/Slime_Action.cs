@@ -89,7 +89,7 @@ public class Slime_Action : MonoBehaviour
     {
         Debug.Log("Atrapar de slime + Acido");
         player_inmovilizado = true;
-        commandManager.PlayerInmovilizado(true);
+        commandManager.PlayerInmovilizado(true, 1);
         
         int ca_player = commandManager.Armadura(0, 20);
         if (ca_player == 2) //supera armadura

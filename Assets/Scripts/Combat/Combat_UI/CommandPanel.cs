@@ -407,7 +407,7 @@ public class CommandPanel : MonoBehaviour
     }
     public void Inmovilizar()
     {
-        commandManager.EnemigoInmovilizado(true);
+        commandManager.EnemigoInmovilizado(true, 1);
         btnINMOV.SetEnabled(false); //usar solo una vez por partida
 
         Back();

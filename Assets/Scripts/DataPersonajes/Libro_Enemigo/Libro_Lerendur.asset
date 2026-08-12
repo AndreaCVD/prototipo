@@ -10,24 +10,24 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3184c13f5276613429ba2c5118bbc8ba, type: 3}
-  m_Name: Yusseif Inmundus
+  m_Name: Libro_Lerendur
   m_EditorClassIdentifier: 
-  namePers: Yusseif
+  namePers: Jefe_Lerendur
   enamorado: 0
   stats:
     values:
-    - value: 3
+    - value: 0
       stats: 0
-    - value: 5
+    - value: 6
       stats: 1
-    - value: 2
+    - value: 0
       stats: 2
-    - value: 60
+    - value: 20
       stats: 3
-    - value: 17
+    - value: 12
       stats: 4
-    - value: 60
+    - value: 20
       stats: 5
   Inventario: {fileID: 0}
   modelPrefab: {fileID: 0}
-  art: {fileID: 21300000, guid: ba9938e5f4d041b40ac8c5f6316c4210, type: 3}
+  art: {fileID: 21300000, guid: c321d5205b202404bb7a77e6f9916dbd, type: 3}

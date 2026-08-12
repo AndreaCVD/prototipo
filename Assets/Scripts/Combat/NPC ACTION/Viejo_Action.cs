@@ -3,7 +3,7 @@ using UnityEngine;
 public class Viejo_Action : MonoBehaviour
 {
     int ataque;
-
+    [SerializeField] CommandManager commandManager;
     public void Ataque_Aleatorio()
     {
         ataque = Random.Range(1, 4);

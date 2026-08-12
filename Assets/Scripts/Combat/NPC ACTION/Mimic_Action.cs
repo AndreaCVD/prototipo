@@ -122,7 +122,7 @@ public class Mimic_Action : MonoBehaviour
     {
         Debug.Log("Atrapar de mimic");
         player_inmovilizado = true;
-        commandManager.PlayerInmovilizado(true);
+        commandManager.PlayerInmovilizado(true, 1);
         commandManager.NextTurn();
     }
     // Carisma - lenguetazo, 2d4+carisma

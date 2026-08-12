@@ -35,14 +35,14 @@ public class Jefe_Action : MonoBehaviour
         switch (ataque)
         {
             case 1:
-                Puyo();
+                Libretazo();
                 break;
 
             case 8:
-                Escudo();
+                Atrapar();
                 break;
             case 9:
-                Inmovilizar();
+                Corte();
                 break;
             default:
                 Debug.Log("Error de lectura");
@@ -50,10 +50,31 @@ public class Jefe_Action : MonoBehaviour
         }
     }
 
-    // Fuerza - 1d4+fue
-    void Puyo()
+    // Fuerza - 1d6+fue
+    void Libretazo()
     {
-        Debug.Log("Puño de jefe");
+        Debug.Log("Libretazo de jefe");
+        int ca_player = commandManager.Armadura(0, 20);
+
+        if (ca_player == 2) //supera armadura
+        {
+            commandManager.Fuerza(6, 1);
+        }
+        else if (ca_player == 0) //CRITICO
+        {
+            Debug.Log("Tirada critica del enemigo");
+            commandManager.Fuerza(6, 2);
+        }
+        else if (ca_player == 1) //TIRA UN 1
+        {
+            Debug.Log("Tirada fatidica del enemigo");
+            commandManager.AutoHerirse(4, 1);
+        }
+    }
+    // Fuerza - 1d4+fue
+    void Corte()
+    {
+        Debug.Log("Corte de pagina de jefe");
         int ca_player = commandManager.Armadura(0, 20);
 
         if (ca_player == 2) //supera armadura
@@ -68,44 +89,41 @@ public class Jefe_Action : MonoBehaviour
         else if (ca_player == 1) //TIRA UN 1
         {
             Debug.Log("Tirada fatidica del enemigo");
-
             commandManager.AutoHerirse(4, 1);
         }
     }
-    // Inteligencia - inmovilizar 2 turnos
-    void Inmovilizar()
+    // Inteligencia - durante 1 turno
+    void Atrapar()
     {
-        Debug.Log("Inmovilizar de jefe");
-    }
-    // Inteligencia - Escudo +5CA (durante 1 turno)
-    void Escudo()
-    {
-        Debug.Log("Escudo de jefe");
-        escudo = true;
-        commandManager.Modificar_CA(5);
-    }
-    // Inteligencia - Rayo Escarcha 1d8
-    void Escarcha()
-    {
-        Debug.Log("Rayo escarcha de jefe");
+        Debug.Log("Atrapar de jefe");
 
     }
-    // Inteligencia - Proyectil Magico 3d4+1, el siguiente turno no lo usa
-    void Proyectil()
+    // Carisma - inmovilizado 1 turno y 1d4+carisma
+    void Convencer()
     {
-        Debug.Log("Proyectil Magico de jefe");
-        //comprovar 3 veces a la CA, si uno llega le da solo ese
-    }
-    // Inteligencia - Ola Atronadora 2d8, el siguiente turno no lo usa
-    void Ola_Atronadora()
-    {
-        Debug.Log("Ola Atronadora de jefe");
+        Debug.Log("Convencer de jefe");
 
     }
-    // Inteligencia - Esfera de llamas 3d6, una vez por combate
-    void Esfera_Llamas()
+    // Inteligencia - 2d6+intel
+    void Ataque_X()
     {
-        Debug.Log("Esfera Llamas de jefe");
+        Debug.Log("Ataque X de jefe");
+        int ca_player = commandManager.Armadura(0, 20);
 
+        if (ca_player == 2) //supera armadura
+        {
+            commandManager.Inteligencia(6, 2);
+        }
+        else if (ca_player == 0) //CRITICO
+        {
+            Debug.Log("Tirada critica del enemigo");
+            commandManager.Inteligencia(6, 4);
+        }
+        else if (ca_player == 1) //TIRA UN 1
+        {
+            Debug.Log("Tirada fatidica del enemigo");
+            commandManager.AutoHerirse(4, 1);
+        }
     }
+
 }

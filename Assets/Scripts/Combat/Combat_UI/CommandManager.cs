@@ -247,13 +247,26 @@ public class CommandManager : MonoBehaviour
         turnRoundManager.target.Enamorado();
 
     }
-    public void EnemigoInmovilizado(bool inmov)
+    public void EnemigoInmovilizado(bool inmov, int turnos)
     {
         enemigo_inmovilizado = inmov;
+        turnos_inmovil = turnos;
     }
-    public void PlayerInmovilizado(bool inmov)
+    public void PlayerInmovilizado(bool inmov, int turnos)
     {
         player_inmovilizado = inmov;
+        turnos_inmovil = turnos;
+    }
+    public bool Return_Inmovil(string name)
+    {
+        if (name == "player")
+        {
+            return player_inmovilizado;
+        }
+        else
+        {
+            return enemigo_inmovilizado;
+        }
     }
     // --- DADOS ---
     private int lanzarDado(int caras, int tiradas)

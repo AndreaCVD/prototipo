@@ -117,7 +117,7 @@ public class Caballero_Action : MonoBehaviour
         if (ca_player == 2 || ca_player == 0) //supera armadura con o sin critico
         {
             player_inmovilizado = true;
-            commandManager.PlayerInmovilizado(true);
+            commandManager.PlayerInmovilizado(true, 1);
             commandManager.NextTurn();
         }
         else

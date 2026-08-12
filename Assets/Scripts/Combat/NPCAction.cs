@@ -11,6 +11,7 @@ public class NPCAction : MonoBehaviour
     [SerializeField] Caballero_Action c;
     [SerializeField] Slime_Action s;
     [SerializeField] Jefe_Action j;
+    [SerializeField] Libro_Lerendur l;
     [SerializeField] Viejo_Action y;
 
     private Parameters enemyData;
@@ -155,6 +156,10 @@ public class NPCAction : MonoBehaviour
     void Jefe_Libro()
     {
         j.Ataque_Aleatorio();
+    }
+    void Jefe_Lerendur()
+    {
+        l.Ataque_Aleatorio();
     }
     void Yusseif()
     {

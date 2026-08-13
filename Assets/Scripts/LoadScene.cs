@@ -25,11 +25,12 @@ public class LoadScene : MonoBehaviour
     string name_anterior;
     private bool onCombat;
     public bool onPause;
-    private bool jefeFin;
+    private bool jefeLerendur, jefeLibro;
 
     private void Start()
     {
-        jefeFin = false;
+        jefeLerendur = false;
+        jefeLibro = false;
         onCombat = false;
         onPause = false;
         Cursor.visible = false;
@@ -118,9 +119,13 @@ public class LoadScene : MonoBehaviour
             SceneManager.LoadScene(name_anterior);
         }
     }
-    public bool boss()
+    public bool boss_Lerendur()
     {
-        return jefeFin;
+        return jefeLerendur ;
+    }
+    public bool boss_Libro()
+    {
+        return jefeLibro ;
     }
 
     public void SalirCombate()//Salimos del combate
@@ -134,7 +139,13 @@ public class LoadScene : MonoBehaviour
         escenaState.ScenePause(false); //false, se mueve
         if (preload.nameOpponent() == "Jefe Final(Clone)")
         {
-            jefeFin = true;
+            jefeLerendur = true;
+            //Debug.Log("el jefe s'ha guanyat");
+
+        }
+        if (preload.nameOpponent() == "Jefe Libro Final(Clone)")
+        {
+            jefeLibro = true;
             //Debug.Log("el jefe s'ha guanyat");
 
         }

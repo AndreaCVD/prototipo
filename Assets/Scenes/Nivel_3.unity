@@ -4822,12 +4822,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   load: {fileID: 1363474686}
   lista: {fileID: 11400000, guid: 92b50351187af094c96f6e51da1599fa, type: 2}
-  jefeFinal: 0
+  jefe_Lerendur: 0
+  jefe_Libro: 0
   puertaMaestra: {fileID: 3846526417761077098}
   candado: {fileID: 1114307510}
   JefeFinal:
   - {fileID: 1229232443153610453, guid: 9f9de993c95365544a643d358d29bf76, type: 3}
   - {fileID: 314591737}
+  - {fileID: 2083212010963815186, guid: 3e6f1206884f757419fd398c680c68d2, type: 3}
 --- !u!1 &1638098950
 GameObject:
   m_ObjectHideFlags: 0
@@ -5740,6 +5742,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogo_obj: {fileID: 11400000, guid: c0362549bebb3c34b9a9cf229e560dd0, type: 2}
+  ficha_obj: {fileID: 0}
 --- !u!1 &3073276187675492830
 GameObject:
   m_ObjectHideFlags: 0

@@ -35,6 +35,9 @@ MonoBehaviour:
   - name: Nivel_2
     acabado: 0
   - name: Nivel_3
+    acabado: 1
+  Jefes:
+  - name: Lerendur_hechizado
     acabado: 0
-  - name: Jefe_Final
+  - name: Libro
     acabado: 0

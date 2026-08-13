@@ -9,7 +9,8 @@ public class ThirdFloorPuzzle : MonoBehaviour
 
     [SerializeField] LoadScene load;
     [SerializeField] Puzzle lista;
-    public bool jefeFinal;
+    public bool jefe_Lerendur;
+    public bool jefe_Libro;
 
 
     [Header("Obj a modificar al acabar puzzle")]
@@ -23,7 +24,8 @@ public class ThirdFloorPuzzle : MonoBehaviour
 
     void Start()
     {
-        jefeFinal = false;
+        jefe_Lerendur = lista.Jefes[0].acabado;
+        jefe_Libro = lista.Jefes[0].acabado;
         InstanciarPers();
         //finalBoss();
     }
@@ -38,11 +40,21 @@ public class ThirdFloorPuzzle : MonoBehaviour
             puertaMaestra.SetBool("doorOpen", true);
         }
         //mirar pelea
-        bool aux = load.boss();
-        if (aux && !jefeFinal)
+        if (!jefe_Lerendur || !jefe_Libro)
         {
-            jefeFinal = true;
-            lista.NivelDesbloqueado[4].acabado = true;
+            bool lerendur = load.boss_Lerendur();
+            bool libro = load.boss_Libro();
+            if (lerendur && !jefe_Lerendur)
+            {
+                jefe_Lerendur = true;
+                lista.Jefes[0].acabado = true;
+                InstanciarPers();
+            }
+            else if (libro && !jefe_Libro)
+            {
+                jefe_Libro = true;
+                lista.Jefes[1].acabado = true;
+            }
         }
     }
 
@@ -73,10 +85,14 @@ public class ThirdFloorPuzzle : MonoBehaviour
     void InstanciarPers()
     {
         //Instanciar Llibre + Lerendur
-        if (!load.boss() && !lista.NivelDesbloqueado[4].acabado)
+        if (!jefe_Lerendur /*&& !lista.NivelDesbloqueado[3].acabado*/)
         {
             Instantiate(JefeFinal[0], JefeFinal[1].transform.position, JefeFinal[1].transform.rotation);
         }
         //Quan guanyem, nomes al Llibre
+        else if (!jefe_Libro /*&& !lista.NivelDesbloqueado[4].acabado*/)
+        {
+            Instantiate(JefeFinal[3], JefeFinal[1].transform.position, JefeFinal[1].transform.rotation);
+        }
     }
 }

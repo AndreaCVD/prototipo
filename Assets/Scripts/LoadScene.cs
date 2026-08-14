@@ -25,7 +25,7 @@ public class LoadScene : MonoBehaviour
     string name_anterior;
     private bool onCombat;
     public bool onPause;
-    private bool jefeLerendur, jefeLibro;
+    public bool jefeLerendur, jefeLibro;
 
     private void Start()
     {
@@ -140,10 +140,10 @@ public class LoadScene : MonoBehaviour
         if (preload.nameOpponent() == "Jefe Final(Clone)")
         {
             jefeLerendur = true;
-            //Debug.Log("el jefe s'ha guanyat");
+            Debug.Log("Lerendur ya no esta hechizado");
 
         }
-        if (preload.nameOpponent() == "Jefe Libro Final(Clone)")
+        else if (preload.nameOpponent() == "Jefe Libro Final(Clone)")
         {
             jefeLibro = true;
             //Debug.Log("el jefe s'ha guanyat");
@@ -162,7 +162,7 @@ public class LoadScene : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("uiHub es null al salir — no se pudo reactivar");
+            Debug.LogWarning("uiHub es null al salir ï¿½ no se pudo reactivar");
         }
         //uiHub.SetActive(true);
     }
@@ -185,7 +185,7 @@ public class LoadScene : MonoBehaviour
             //if (uiHub != null)
                // uiHub.SetActive(false);
           //  else
-            //    Debug.LogWarning("UI_HUB no encontrado — comprueba el nombre del GameObject");
+            //    Debug.LogWarning("UI_HUB no encontrado ï¿½ comprueba el nombre del GameObject");
 
 
             preload.CombatOpponent(enemyName); //Pasem el nom

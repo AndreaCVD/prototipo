@@ -30,7 +30,7 @@ public class Preload : MonoBehaviour
     //para recibir la posicion anterior
     personaje vectorPosicion;
     //Para Combat Debug
-    [SerializeField] string NameOpponent;
+    //[SerializeField] string NameOpponent;
     public Parameters fichaOpponent;
 
     public GameObject enemigo;
@@ -38,7 +38,7 @@ public class Preload : MonoBehaviour
 
     void Awake()
     {
-        NameOpponent = "";
+        //NameOpponent = "";
         //vectorPosicion = GetComponent<personaje>();
         //protagonista = GameObject.Find("Player Character");
 
@@ -56,10 +56,11 @@ public class Preload : MonoBehaviour
         enemigo = enemy;
         //NameOpponent = enemyName.name;
         fichaOpponent = enemy.GetComponent<Interactable>().ficha_obj;
+
     }
     public string nameOpponent()
     {
-        return NameOpponent;
+        return enemigo.name;
     }
     public void DestroyEnemy()
     {

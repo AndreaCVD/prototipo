@@ -3,13 +3,12 @@ using UnityEngine;
 public class Jefe_Action : MonoBehaviour
 {
     int ataque;
-    bool player_inmovilizado, escudo;
+    bool player_inmovilizado, convencer;
     [SerializeField] CommandManager commandManager;
 
     private void Start()
     {
         player_inmovilizado = false;
-        escudo = false;
     }
 
     public void Ataque_Aleatorio()
@@ -17,39 +16,69 @@ public class Jefe_Action : MonoBehaviour
         if (player_inmovilizado)
         {
             player_inmovilizado = false;
-            ataque = Random.Range(0, 9); //sin inmovilizar
+            ataque = Random.Range(3, 10); //sin atrapar
         }
-        else if (escudo)
+        else if (convencer)
         {
-            escudo = false;
-            ataque = Random.Range(0, 10);
+            convencer = false;
+            ataque = Random.Range(0, 8); // sin convencer
         }
         else
         {
             //del 0 a 9
-            ataque = Random.Range(0, 10);
-            if (ataque == 8)
-                ataque++;
-        }
+            ataque = Random.Range(0, 10); // con atrapar
 
+        }
+        Choise();
+
+    }
+    // --- SWITCH DECIDIR ATAQUE ---
+    void Choise()
+    {
         switch (ataque)
         {
-            case 1:
-                Libretazo();
-                break;
-
-            case 8:
+        // Atrapar 30%
+            case 0:
                 Atrapar();
                 break;
-            case 9:
+            case 1:
+                Atrapar();
+                break;
+            case 2:
+                Atrapar();
+                break;
+        // Ataque X 30% 
+            case 3:
+                Ataque_X();
+                break;
+            case 4:
+                Ataque_X();
+                break;
+            case 5:
+                Ataque_X();
+                break;
+        // Libretazo 10%
+            case 6:
+                Libretazo();
+                break;
+        // Corte de página 10%
+            case 7:
                 Corte();
                 break;
+
+            // Convencer 20%    
+            case 8:
+                Convencer();
+                break;
+            case 9:
+                Convencer();
+                break;
+
             default:
                 Debug.Log("Error de lectura");
                 break;
         }
     }
-
     // Fuerza - 1d6+fue
     void Libretazo()
     {
@@ -96,13 +125,19 @@ public class Jefe_Action : MonoBehaviour
     void Atrapar()
     {
         Debug.Log("Atrapar de jefe");
-
+        player_inmovilizado = true;
+        commandManager.PlayerInmovilizado(true, 1);
+        commandManager.NextTurn();
     }
     // Carisma - inmovilizado 1 turno y 1d4+carisma
     void Convencer()
     {
         Debug.Log("Convencer de jefe");
-
+        player_inmovilizado = true;
+        commandManager.PlayerInmovilizado(true, 1);
+        Debug.Log("EL LIBRO TE ESTA INTENTANDO CONVENCER DE UNIRTE A EL");
+        Debug.Log("ACTIVAR DIALOGO");
+        commandManager.NextTurn();
     }
     // Inteligencia - 2d6+intel
     void Ataque_X()

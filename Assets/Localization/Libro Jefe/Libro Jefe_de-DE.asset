@@ -18,77 +18,56 @@ MonoBehaviour:
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 431193338474496
-    m_Localized: Que lejos has llegado...
+  - m_Id: 27105725495177216
+    m_Localized: "\xA1\xBFQue has hecho?!"
     m_Metadata:
       m_Items: []
-  - m_Id: 431193346863104
-    m_Localized: ???
+  - m_Id: 27105725516148736
+    m_Localized: Libro
     m_Metadata:
       m_Items: []
-  - m_Id: 431193346863105
-    m_Localized: "Has conseguio liberar a ese mediano, y a la elfa esa...que quieres
-      exactamente, \xBFquiz\xE1s mi muerte?"
+  - m_Id: 27105725516148737
+    m_Localized: Todo mi trabajo, mis hechizos...TU NO PINTAS NADA AQUI
     m_Metadata:
       m_Items: []
-  - m_Id: 431193346863106
-    m_Localized: Luchar
+  - m_Id: 27105725516148738
+    m_Localized: Combatir
     m_Metadata:
       m_Items: []
-  - m_Id: 431193346863107
-    m_Localized: Irse
+  - m_Id: 27105725516148739
+    m_Localized: Unirse al libro
     m_Metadata:
       m_Items: []
-  - m_Id: 431193346863108
-    m_Localized: "Me sorpende que no hayas liberado a nadie, al final seremos m\xE1s
-      parecidos de lo que cre\xEDa..."
+  - m_Id: 27105725516148740
+    m_Localized: Irse de este lugar
     m_Metadata:
       m_Items: []
-  - m_Id: 431193346863109
-    m_Localized: No me compares.
+  - m_Id: 27105725516148741
+    m_Localized: "Aunque...que te parecer\xEDa ocuper su lugar? "
     m_Metadata:
       m_Items: []
-  - m_Id: 431193346863110
+  - m_Id: 27105725516148742
+    m_Localized: "\xBFY bien? Dec\xEDdete"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27105725516148743
+    m_Localized: "Vine aqu\xED para acabar el trabajo, depu\xE9s ya me ir\xE9."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 27105725516148744
     m_Localized: Carlos
     m_Metadata:
       m_Items: []
-  - m_Id: 431193346863111
-    m_Localized: "Es tu \xFAltima advertencia, da la vuelta, y no vuelvas."
+  - m_Id: 27105725516148745
+    m_Localized: "Me unir\xE9 a ti, pero libera al elfo."
     m_Metadata:
       m_Items: []
-  - m_Id: 431193346863112
-    m_Localized: Creador
+  - m_Id: 27105725516148746
+    m_Localized: Trato, espero que nos llevemos bien hehe
     m_Metadata:
       m_Items: []
-  - m_Id: 431193346863113
-    m_Localized: "(No dices nada, la extra\xF1a persona tampoco se mueve)"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 431193346863114
-    m_Localized: Tu lo has querido...
-    m_Metadata:
-      m_Items: []
-  - m_Id: 431193346863115
-    m_Localized: "\xBFEres tu el tercer compa\xF1ero al que ten\xEDa que rescatar?
-      \xBFLerendur?"
-    m_Metadata:
-      m_Items: []
-  - m_Id: 431193346863116
-    m_Localized: "\xBFLerendur? No, no, yo soy el CREADOR."
-    m_Metadata:
-      m_Items: []
-  - m_Id: 431193346863117
-    m_Localized: "Todo lo que ves, existe por m\xED, para m\xED. LLevo d\xE9cadas
-      perfeccionando esta mazmorra..."
-    m_Metadata:
-      m_Items: []
-  - m_Id: 431193346863118
-    m_Localized: Hasta que esos tres se metieron y empezaron a matar a mis creaciones,
-      tuve que paralos, seguro me entiendes.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 431193346863119
-    m_Localized: Pero cuando por fin estaba todo controlado, vino una cuarta persona...
+  - m_Id: 27105725516148747
+    m_Localized: "No me unire a ti...pero volver\xE9"
     m_Metadata:
       m_Items: []
   references:

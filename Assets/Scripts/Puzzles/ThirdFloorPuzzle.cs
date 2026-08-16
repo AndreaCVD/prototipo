@@ -25,7 +25,14 @@ public class ThirdFloorPuzzle : MonoBehaviour
     void Start()
     {
         jefe_Lerendur = lista.Jefes[0].acabado;
-        jefe_Libro = lista.Jefes[0].acabado;
+        jefe_Libro = lista.Jefes[1].acabado;
+
+        if (jefe_Lerendur &&  !jefe_Libro)
+        {
+            Debug.Log("Libro vuelve a tener control sobre Lerendur");
+            lista.Jefes[0].acabado = false;
+            jefe_Lerendur = false;
+        }
         InstanciarPers();
         //finalBoss();
     }

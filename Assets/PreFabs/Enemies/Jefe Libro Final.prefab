@@ -79,7 +79,7 @@ PrefabInstance:
     - target: {fileID: 4182238130948787067, guid: 9f9de993c95365544a643d358d29bf76, type: 3}
       propertyPath: dialogo_obj
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 11400000, guid: 84c718dbdc8e5cb4aaa358baaff95090, type: 2}
     - target: {fileID: 8819371833568649175, guid: 9f9de993c95365544a643d358d29bf76, type: 3}
       propertyPath: m_Enabled
       value: 0

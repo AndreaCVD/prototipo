@@ -101,6 +101,7 @@ public class Slime_Action : MonoBehaviour
             Debug.Log("Tirada critica del enemigo");
             commandManager.Inteligencia(4, 2);
         }
+        Debug.Log("continua la accion?");
     }
 
     // Carisma - Movimientos Hipnotizantes 2d4+car

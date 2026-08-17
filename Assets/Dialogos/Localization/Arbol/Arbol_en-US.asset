@@ -19,31 +19,31 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 1992631844663296
-    m_Localized: Deberia practicar
+    m_Localized: I should practice
     m_Metadata:
       m_Items: []
   - m_Id: 1992631844663297
-    m_Localized: Prota
+    m_Localized: Carlos
     m_Metadata:
       m_Items: []
   - m_Id: 1992631844663298
-    m_Localized: Fuerza
+    m_Localized: Strenght
     m_Metadata:
       m_Items: []
   - m_Id: 1992631844663299
-    m_Localized: Inteligencia
+    m_Localized: Inteligence
     m_Metadata:
       m_Items: []
   - m_Id: 1992631844663300
-    m_Localized: Carisma
+    m_Localized: Charisma
     m_Metadata:
       m_Items: []
   - m_Id: 1992631844663301
-    m_Localized: Huir
+    m_Localized: Flight
     m_Metadata:
       m_Items: []
   - m_Id: 1992631844663302
-    m_Localized: El ataque no ha hecho nada...
+    m_Localized: The attack did nothing...
     m_Metadata:
       m_Items: []
   - m_Id: 1992631844663303
@@ -51,38 +51,38 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 1992631844663304
-    m_Localized: "\xA1EY! Cuidado"
+    m_Localized: "\xA1EY! Be careful"
     m_Metadata:
       m_Items: []
   - m_Id: 1992631844663305
-    m_Localized: Arbol
+    m_Localized: Tree
     m_Metadata:
       m_Items: []
   - m_Id: 1992631844663306
-    m_Localized: Un arbol te ha intimidado...
+    m_Localized: A tree has intimidated you...
     m_Metadata:
       m_Items: []
   - m_Id: 1992631844663307
-    m_Localized: "(A lo alto del \xE1rbol ves un nido de pajaros, seria una pena
-      que cayesen...\xBFverdad?)"
+    m_Localized: (In the heights of the ttree you see a bird nest, it would be a
+      shame if it fell, right?)
     m_Metadata:
       m_Items: []
   - m_Id: 1992631844663308
-    m_Localized: "(Es s\xF3lo un \xE1rbol...la raz\xF3n por la que puedes escucharlo
-      es un misterio, quiz\xE1s la magia de la mazmorra le llega las ra\xEDzes)"
+    m_Localized: (It's just a tree...the reason you can talk to it is a mistery,
+      maybe it's for the magic of the dungeon that reaches its roots)
     m_Metadata:
       m_Items: []
   - m_Id: 1992631844663309
-    m_Localized: "El \xE1rbol se ha sonrojado. \xA1Te da dado un regalo!)"
+    m_Localized: "The tree is blushing. \xA1You have recieved a gift!)"
     m_Metadata:
       m_Items: []
   - m_Id: 1992631844663310
-    m_Localized: "(Una pi\xF1a casi te cae en la cabeza...tiene pinta que ha sido
-      a prop\xF3sito)"
+    m_Localized: (A pine cone almost fells rights to your head...it seams it was
+      on purpos)
     m_Metadata:
       m_Items: []
   - m_Id: 1992631915966464
-    m_Localized: "(Te enfada que te de tanta rabia el \xE1rbol)"
+    m_Localized: (You don't like your own disgust towards this tree)
     m_Metadata:
       m_Items: []
   - m_Id: 1992631915966465

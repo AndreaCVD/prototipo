@@ -51,7 +51,7 @@ public class CombatMonster : MonoBehaviour
         this.player = player;
             //GameObject modelo = Instantiate(player.modelPrefab, transform);
 
-        imagenPers.sprite = player.art;
+        imagenPers.sprite = player.idle;
             //restablecer rotacion
             //player.modelPrefab.transform.localPosition = Vector3.zero;
             //player.modelPrefab.transform.localRotation = Quaternion.identity;

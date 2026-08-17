@@ -60,7 +60,15 @@ public class Parameters : ScriptableObject
     //public List<A> X;
 
     public GameObject modelPrefab;
-    public Sprite art;
+    public Sprite idle;
+    //public Sprite herido;
+    //public Sprite ataque;
+    ////estados
+    //public Sprite atrapado;
+    //public Sprite enfadado;
+    //public Sprite asustado;
+    //public Sprite enamorado_1, enamorado_2, enamorado_3;
+
     //public GameObject variantModel;
 
     [ContextMenu("Init")]

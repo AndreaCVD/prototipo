@@ -121,7 +121,7 @@ public class TutorialFloorPuzzle : MonoBehaviour
             Instantiate(Nim[0], Nim[1].transform.position, Nim[1].transform.rotation);
         }
         //Lerendur --> Ganar pelea final
-        if (lista.NivelDesbloqueado[4].acabado)
+        if (lista.Jefes[1].acabado)
         {
             Instantiate(Lerendur[0], Lerendur[1].transform.position, Lerendur[1].transform.rotation);
         }

@@ -87,6 +87,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-uk-UA
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8bebb28adad8a2e4d93e3475aef1cc05
+    m_Address: Pista Cofre Lava_uk-UA
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-uk-UA
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 99d97502eabd4eb488378ec5f5ee1367
     m_Address: Cuerda_uk-UA
     m_ReadOnly: 1

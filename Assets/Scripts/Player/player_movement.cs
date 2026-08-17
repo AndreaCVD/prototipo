@@ -22,6 +22,7 @@ public class player_movement : MonoBehaviour
     [SerializeField] private Transform modelTransform;
     Rigidbody rb;
     private bool isGrounded;
+    private int lastMovement;
 
     public void AddMoveVectorInput(Vector3 moveVector)
     {
@@ -38,7 +39,7 @@ public class player_movement : MonoBehaviour
         rotationSpeed = 220f;
     }
 
-    void Update()
+    void FixedUpdate()
     {
         x = _inputHandler.moveVector.x;
         y = _inputHandler.moveVector.y;
@@ -55,9 +56,21 @@ public class player_movement : MonoBehaviour
 
         if (!isGrounded && rb.linearVelocity.y < 0)
             rb.AddForce(Vector3.down * (jumpForce + 9.81f), ForceMode.Acceleration);
-
-        if (x != 0 || y != 0)
+        // Last movement [ 0 = X ] [ 1 = Y ]
+        if (x == 0 && y != 0)
+        { lastMovement = 0;
             MoveCharacter(x, y);
+        }
+        else if (x != 0 && y == 0)
+        { lastMovement = 1;
+            MoveCharacter(x, y);
+        }
+        if (x != 0 && y != 0) //clicar las dos a la vez
+        { if (lastMovement == 0)
+                MoveCharacter(x, 0);
+            if (lastMovement == 1)
+                MoveCharacter(0, y);
+        }
     }
 
     private void MoveCharacter(float horizontalInput, float verticalInput)

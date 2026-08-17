@@ -105,6 +105,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-en-US
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 95719365d3f60e54ba1d6b2b527c57bd
+    m_Address: Pista Cofre Lava_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a55a5c8499807ac40a0b9b04f1b37988
     m_Address: Viejo Tunica_en-US
     m_ReadOnly: 1

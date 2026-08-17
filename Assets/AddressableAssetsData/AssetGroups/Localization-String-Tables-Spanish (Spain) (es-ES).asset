@@ -117,6 +117,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-es-ES
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ca8feb1a2c3c8664f8e60f878791d2f7
+    m_Address: Pista Cofre Lava_es-ES
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es-ES
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: cc81fec3d54ac004cbb1dabf197d07eb
     m_Address: Libro Jefe_es-ES
     m_ReadOnly: 1

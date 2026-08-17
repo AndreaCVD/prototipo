@@ -19,7 +19,7 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 11145474849697792
-    m_Localized: "Hola, \xBFcomo est\xE1s?"
+    m_Localized: "Hi, \xBFhow are you?"
     m_Metadata:
       m_Items: []
   - m_Id: 11145474895835136

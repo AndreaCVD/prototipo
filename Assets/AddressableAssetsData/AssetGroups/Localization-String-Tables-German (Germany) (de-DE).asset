@@ -105,6 +105,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-de-DE
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bdb5034ef9dd1904da932aeb246bbaee
+    m_Address: Pista Cofre Lava_de-DE
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de-DE
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: cc6ff777dc6267b44a0223c623176d6c
     m_Address: DebugCombat_de-DE
     m_ReadOnly: 1

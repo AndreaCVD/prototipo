@@ -1,0 +1,173 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33f741ea10ebcf842a91c9b871dd032a, type: 3}
+  m_Name: Pista Cofre Lava
+  m_EditorClassIdentifier: 
+  NodesList:
+  - {fileID: 5090474058681986593}
+  - {fileID: 8517625099069392218}
+  - {fileID: 510480545750958095}
+  - {fileID: 8590454215253840243}
+  - {fileID: 4337899540969037033}
+  VariablesConfig: {fileID: 0}
+  _localizationTableName: Pista Cofre Lava
+  _characterNamesLocalizationName: 
+  NodeToDrawLineFrom: {fileID: 0}
+  LinePosition: {x: 0, y: 0}
+  IsLocalizationSetUp: 1
+--- !u!114 &510480545750958095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 551.99976
+    y: 367.3
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Carlos
+    Text: "\xBFProtecci\xF3n m\xE1gica? \xBFUna poci\xF3n?"
+    CharacterSprite: {fileID: 21300000, guid: a188ce1c9b6fce644b5efac5bf9be647, type: 3}
+  ParentNodes:
+  - {fileID: 8517625099069392218}
+  ChildNode: {fileID: 4337899540969037033}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: SentenceName_871e70ad-d2fe-4800-acd1-c7bfbf66acee
+  SentenceTextKey: SentenceText_f16924fd-57be-4216-b29b-c76010ae1839
+--- !u!114 &4337899540969037033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f4b3c64aaf434ea0df52154c1c7680, type: 3}
+  m_Name: External Function Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 785.6001
+    y: 397.69998
+    width: 190
+    height: 80
+  IsDragging: 1
+  IsSelected: 0
+  _functionName: ContinuarMov
+  _description: 
+  ParentNodes:
+  - {fileID: 510480545750958095}
+  ChildNode: {fileID: 0}
+--- !u!114 &5090474058681986593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 139.99988
+    y: 369.7
+    width: 190
+    height: 135
+  IsDragging: 0
+  IsSelected: 0
+  _sentence:
+    CharacterName: Carlos
+    Text: "Hay una inscripci\xF3n en la armadura"
+    CharacterSprite: {fileID: 21300000, guid: a188ce1c9b6fce644b5efac5bf9be647, type: 3}
+  ParentNodes:
+  - {fileID: 8590454215253840243}
+  ChildNode: {fileID: 8517625099069392218}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: SentenceName_871e70ad-d2fe-4800-acd1-c7bfbf66acee
+  SentenceTextKey: SentenceText_0e83a339-d0f9-487f-b0ad-4ffa01860ffe
+--- !u!114 &8517625099069392218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 347.99985
+    y: 368.90002
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Carlos
+    Text: "\"No pasar sin protecci\xF3n m\xE1gica.\""
+    CharacterSprite: {fileID: 21300000, guid: a188ce1c9b6fce644b5efac5bf9be647, type: 3}
+  ParentNodes:
+  - {fileID: 5090474058681986593}
+  ChildNode: {fileID: 510480545750958095}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: SentenceName_871e70ad-d2fe-4800-acd1-c7bfbf66acee
+  SentenceTextKey: SentenceText_0b1ff829-9b3d-49b8-8d1e-30f351ced7b6
+--- !u!114 &8590454215253840243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f4b3c64aaf434ea0df52154c1c7680, type: 3}
+  m_Name: External Function Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -57.600098
+    y: 392.9
+    width: 190
+    height: 80
+  IsDragging: 1
+  IsSelected: 0
+  _functionName: PararMov
+  _description: 
+  ParentNodes: []
+  ChildNode: {fileID: 5090474058681986593}

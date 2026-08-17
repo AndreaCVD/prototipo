@@ -66,9 +66,10 @@ public class player_movement : MonoBehaviour
             MoveCharacter(x, y);
         }
         if (x != 0 && y != 0) //clicar las dos a la vez
-        { if (lastMovement == 0)
+        { 
+            if (lastMovement == 0)
                 MoveCharacter(x, 0);
-            if (lastMovement == 1)
+            else
                 MoveCharacter(0, y);
         }
     }

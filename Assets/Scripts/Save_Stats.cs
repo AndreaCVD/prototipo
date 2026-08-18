@@ -19,11 +19,12 @@ public class Save_Stats : MonoBehaviour
     {
         //Setear los valores para cada vez
         //Player
-        playerPersonaje.stats.values[0].value = 5; //Fuerza
-        playerPersonaje.stats.values[1].value = 3; //Inteligencia
-        playerPersonaje.stats.values[2].value = 3; //Carisma
+        playerPersonaje.stats.values[0].value = 0; //Fuerza
+        playerPersonaje.stats.values[1].value = 0; //Inteligencia
+        playerPersonaje.stats.values[2].value = 0; //Carisma
         playerPersonaje.stats.values[3].value = playerPersonaje.stats.values[5].value; //Vida
-        playerPersonaje.stats.values[4].value = 14; //Armadura
+        playerPersonaje.stats.values[4].value = 12; //Armadura
+        playerPersonaje.stats.values[5].value = 60; //Max Vida
         //Player Stats
         //playerPersonaje.Inventario.Llave.Clear();
         //playerPersonaje.Inventario.LlaveMaestra.Clear();

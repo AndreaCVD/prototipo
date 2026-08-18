@@ -30,4 +30,4 @@ MonoBehaviour:
       stats: 5
   Inventario: {fileID: 0}
   modelPrefab: {fileID: 5305385646599809368, guid: 18956a4a129394a42aeebd1263fb6080, type: 3}
-  art: {fileID: 21300000, guid: 1fe1c5aac947f1146af4c816f966cf4f, type: 3}
+  idle: {fileID: 21300000, guid: 1fe1c5aac947f1146af4c816f966cf4f, type: 3}

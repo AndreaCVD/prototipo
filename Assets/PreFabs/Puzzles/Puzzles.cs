@@ -9,4 +9,5 @@ public class Puzzle : ScriptableObject
     public List<Bools> Nivel_2 = new List<Bools>();
     public List<Bools> NivelDesbloqueado = new List<Bools>();
     public List<Bools> Jefes = new List<Bools>();
+    public List<Bools> Subir_Nivel = new List<Bools>();
 }

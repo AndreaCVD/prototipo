@@ -1,0 +1,122 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/Styles/btn_styles.uss?fileID=7433441132597879392&amp;guid=707766d513c398d4d9b5562e3939797a&amp;type=3#btn_styles" />
+    <Style src="project://database/Assets/UI/Styles/opt_styles.uss?fileID=7433441132597879392&amp;guid=d6e248ec91fc6ed4697f1ebf65dd6d4c&amp;type=3#opt_styles" />
+    <ui:VisualElement name="VisualElement" style="flex-grow: 1; background-color: rgb(159, 151, 135); width: 100%; height: 100%; flex-direction: row; flex-wrap: wrap; align-self: center; justify-content: center; align-content: stretch;">
+        <ui:VisualElement style="flex-grow: 1; width: 60%; height: 100%; flex-wrap: wrap; justify-content: center; align-self: center; align-content: stretch;">
+            <ui:VisualElement name="Main_menu" style="flex-grow: 1; display: flex;">
+                <ui:VisualElement style="flex-grow: 1; height: 70%; align-items: center; justify-content: center; padding-bottom: 0;">
+                    <ui:Label text="Deep In Rescue" style="-unity-font-definition: url(&quot;project://database/Assets/UI/Fonts/Macondo_Swash_Caps/MacondoSwashCaps-Regular.ttf?fileID=12800000&amp;guid=5546ed486a9069048a9db0b71fda3440&amp;type=3#MacondoSwashCaps-Regular&quot;); font-size: 128px; margin-bottom: 40px; margin-top: 40px;" />
+                    <ui:VisualElement name="btns" class="btns" style="flex-grow: 1; align-items: center; justify-content: center; width: 100%; flex-direction: column;">
+                        <ui:Button name="fuerza_btn" class="Btn" style="flex-direction: column; border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; border-left-color: rgb(43, 22, 3); border-right-color: rgb(43, 22, 3); border-top-color: rgb(43, 22, 3); border-bottom-color: rgb(43, 22, 3); justify-content: space-evenly; align-items: center; align-self: center; -unity-slice-type: tiled; padding: 4px; margin-top: 0; margin-bottom: 0; margin-right: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; width: 232px; height: 247px; background-image: url(&quot;project://database/Assets/Art/Interface/FUE.png?fileID=2800000&amp;guid=c9d7adfdf4a74854c8e9321fc29c505d&amp;type=3#FUE&quot;); background-color: rgba(0, 0, 0, 0); -unity-background-image-tint-color: rgb(255, 255, 255); border-top-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 0; border-bottom-left-radius: 0;">
+                            <ui:Label text="Fuerza&#10;+2" name="Label" class="text" style="font-size: 40px; -unity-font-definition: url(&quot;project://database/Assets/UI/Fonts/Alegreya_Sans_SC/AlegreyaSansSC-Regular.ttf?fileID=12800000&amp;guid=d6178a5cf8026f746b57e92d6b0e680f&amp;type=3#AlegreyaSansSC-Regular&quot;); -unity-font-style: bold; padding: 4px; border-radius: 8px; border-width: 2px; width: 192px; background-color: rgba(255, 255, 255, 0); border-top-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 0; border-bottom-left-radius: 0; border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; border-left-color: rgba(255, 255, 255, 0); border-right-color: rgba(255, 255, 255, 0); border-top-color: rgba(255, 255, 255, 0); border-bottom-color: rgba(255, 255, 255, 0); margin-top: 7px; height: 20%; bottom: -34px;" />
+                        </ui:Button>
+                        <ui:Button name="intel_btn" class="Btn" style="flex-direction: column; border-top-width: 4px; border-right-width: 6px; border-bottom-width: 4px; border-left-width: 6px; border-left-color: rgb(43, 22, 3); border-right-color: rgb(43, 22, 3); border-top-color: rgb(43, 22, 3); border-bottom-color: rgb(43, 22, 3); justify-content: space-evenly; align-items: center; align-self: center; -unity-slice-type: tiled; margin-top: 5px; margin-bottom: 5px; overflow: visible; display: flex;">
+                            <ui:Label text="Inteligencia" name="Label" class="text" style="font-size: 40px; -unity-font-definition: url(&quot;project://database/Assets/UI/Fonts/Alegreya_Sans_SC/AlegreyaSansSC-Regular.ttf?fileID=12800000&amp;guid=d6178a5cf8026f746b57e92d6b0e680f&amp;type=3#AlegreyaSansSC-Regular&quot;); -unity-font-style: bold; padding: 4px; border-radius: 8px; border-width: 2px;" />
+                        </ui:Button>
+                        <ui:Button name="carisma_btn" class="Btn" style="flex-direction: column; border-top-width: 4px; border-right-width: 6px; border-bottom-width: 4px; border-left-width: 6px; border-left-color: rgb(43, 22, 3); border-right-color: rgb(43, 22, 3); border-top-color: rgb(43, 22, 3); border-bottom-color: rgb(43, 22, 3); justify-content: space-evenly; align-items: center; align-self: center; -unity-slice-type: tiled; margin-top: 5px; margin-bottom: 5px;">
+                            <ui:Label text="Carisma" name="Label" class="text" style="font-size: 40px; -unity-font-definition: url(&quot;project://database/Assets/UI/Fonts/Alegreya_Sans_SC/AlegreyaSansSC-Regular.ttf?fileID=12800000&amp;guid=d6178a5cf8026f746b57e92d6b0e680f&amp;type=3#AlegreyaSansSC-Regular&quot;); -unity-font-style: bold; padding: 4px; border-radius: 8px; border-width: 2px;" />
+                        </ui:Button>
+                        <ui:Button name="vida_btn" class="Btn" style="flex-direction: column; border-top-width: 4px; border-right-width: 6px; border-bottom-width: 4px; border-left-width: 6px; border-left-color: rgb(43, 22, 3); border-right-color: rgb(43, 22, 3); border-top-color: rgb(43, 22, 3); border-bottom-color: rgb(43, 22, 3); justify-content: space-evenly; align-items: center; align-self: center; -unity-slice-type: tiled; padding: 4px; margin-top: 5px; margin-bottom: 5px; display: flex;">
+                            <ui:Label text="Constitucion" name="Label" class="text" style="font-size: 40px; -unity-font-definition: url(&quot;project://database/Assets/UI/Fonts/Alegreya_Sans_SC/AlegreyaSansSC-Regular.ttf?fileID=12800000&amp;guid=d6178a5cf8026f746b57e92d6b0e680f&amp;type=3#AlegreyaSansSC-Regular&quot;); -unity-font-style: bold; padding: 4px; border-radius: 8px; border-width: 2px;" />
+                        </ui:Button>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement style="flex-grow: 0; height: 30%; align-items: center; justify-content: center; flex-direction: column; flex-wrap: wrap; flex-shrink: 0;">
+                    <ui:VisualElement style="flex-grow: 0; background-image: url(&quot;project://database/Assets/Art/Interface/team_logo.png?fileID=2800000&amp;guid=62587fdd6e98df6418fe5bcf60e807b7&amp;type=3#team_logo&quot;); width: 240px; height: 200px; align-self: center; flex-shrink: 0; -unity-background-image-tint-color: rgb(255, 255, 255);" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="Options" style="flex-grow: 1; display: none; align-items: center; justify-content: center;">
+                <ui:VisualElement class="opt-panel">
+                    <ui:VisualElement class="opt-header">
+                        <ui:Label text="Opciones" class="opt-title" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="tab-bar" class="opt-tab-bar">
+                        <ui:Button name="tab-audio" text="Audio" class="opt-tab opt-tab-active" />
+                        <ui:Button name="tab-controls" text="Controles" tabindex="1" class="opt-tab" />
+                        <ui:Button name="tab-credits" text="Creditos" tabindex="2" class="opt-tab" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="section-audio" class="opt-section" style="display: flex;">
+                        <ui:VisualElement class="opt-row">
+                            <ui:Label text="Música" class="opt-label" />
+                            <ui:Slider name="slider-music" low-value="0" high-value="100" value="100" class="opt-slider" />
+                            <ui:Label name="val-music" text="100" class="opt-value" />
+                        </ui:VisualElement>
+                        <ui:VisualElement class="opt-row">
+                            <ui:Label text="Efectos" class="opt-label" />
+                            <ui:Slider name="slider-sfx" low-value="0" high-value="100" value="100" class="opt-slider" />
+                            <ui:Label name="val-sfx" text="100" class="opt-value" />
+                        </ui:VisualElement>
+                        <ui:VisualElement class="opt-row">
+                            <ui:Label text="Ambiente" class="opt-label" />
+                            <ui:Slider name="slider-ambient" low-value="0" high-value="100" value="100" class="opt-slider" />
+                            <ui:Label name="val-ambient" text="100" class="opt-value" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="section-controls" tabindex="1" class="opt-section opt-hidden" style="display: none;">
+                        <ui:VisualElement class="opt-row">
+                            <ui:Label text="Arriba" class="opt-label" />
+                            <ui:Button name="key-up" text="W" class="opt-key" />
+                        </ui:VisualElement>
+                        <ui:VisualElement class="opt-row">
+                            <ui:Label text="Abajo" class="opt-label" />
+                            <ui:Button name="key-down" text="S" class="opt-key" />
+                        </ui:VisualElement>
+                        <ui:VisualElement class="opt-row">
+                            <ui:Label text="Izquierda" class="opt-label" />
+                            <ui:Button name="key-left" text="A" class="opt-key" />
+                        </ui:VisualElement>
+                        <ui:VisualElement class="opt-row">
+                            <ui:Label text="Derecha" class="opt-label" />
+                            <ui:Button name="key-right" text="D" class="opt-key" />
+                        </ui:VisualElement>
+                        <ui:VisualElement class="opt-row">
+                            <ui:Label text="Saltar" class="opt-label" />
+                            <ui:Button name="key-jump" text="Space" class="opt-key" />
+                        </ui:VisualElement>
+                        <ui:VisualElement class="opt-row">
+                            <ui:Label text="Inventario" class="opt-label" />
+                            <ui:Button name="key-interact" text="I" class="opt-key" />
+                        </ui:VisualElement>
+                        <ui:VisualElement class="opt-row">
+                            <ui:Label text="Reset Puzzle" class="opt-label" />
+                            <ui:Button name="key-interact" text="R" class="opt-key" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="section-credits" tabindex="2" class="opt-section opt-hidden" style="display: none;">
+                        <ui:VisualElement class="opt-row">
+                            <ui:Label text="Productor" class="opt-label" />
+                            <ui:Label text="Riu Lloreda" class="opt-label" />
+                        </ui:VisualElement>
+                        <ui:VisualElement class="opt-row">
+                            <ui:Label text="Programadora" class="opt-label" />
+                            <ui:Label text="Aina Mestres" enable-rich-text="true" class="opt-label" />
+                        </ui:VisualElement>
+                        <ui:VisualElement class="opt-row">
+                            <ui:Label text="Artista 3D" class="opt-label" />
+                            <ui:Label text="Andrea Vargas" class="opt-label" />
+                        </ui:VisualElement>
+                        <ui:VisualElement class="opt-row">
+                            <ui:Label text="Diseño de niveles" class="opt-label" />
+                            <ui:Label text="Riu Lloreda &amp; Aina Mestres" class="opt-label" style="width: 246px;" />
+                        </ui:VisualElement>
+                        <ui:VisualElement class="opt-row">
+                            <ui:Label text="Sonido" class="opt-label" />
+                            <ui:Label text="Arnau Moreno" class="opt-label" style="width: 246px;" />
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement class="opt-footer">
+                        <ui:Button name="btn-back" text="Volver" class="opt-btn opt-btn-back" />
+                        <ui:Button name="btn-apply" text="Aplicar" class="opt-btn opt-btn-primary" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="VisualElement" style="flex-grow: 1; width: 40%; height: 100%; align-self: auto; justify-content: center; flex-direction: column; display: flex;">
+            <ui:VisualElement name="nivel_3" style="flex-grow: 1; position: absolute; background-image: url(&quot;project://database/Assets/Art/MainMenu/nivel_3_bloqueado.png?fileID=21300000&amp;guid=04ad243970a44374cbc9bec8bfc98eda&amp;type=3#nivel_3_bloqueado&quot;); width: 130%; height: 85%; align-self: center; left: auto; right: 70px;" />
+            <ui:VisualElement name="nivel_2" style="flex-grow: 1; position: absolute; background-image: url(&quot;project://database/Assets/Art/MainMenu/nivel_2_bloqueado.png?fileID=21300000&amp;guid=e65476de132fd994d9727ae0d50c5a72&amp;type=3#nivel_2_bloqueado&quot;); width: 130%; height: 85%; align-self: center; left: auto; right: 70px;" />
+            <ui:VisualElement name="nivel_1" style="flex-grow: 1; position: absolute; background-image: url(&quot;project://database/Assets/Art/MainMenu/nivel_1_bloqueado.png?fileID=21300000&amp;guid=a19ea47f76144fb48b02ffd66e890a68&amp;type=3#nivel_1_bloqueado&quot;); width: 130%; height: 85%; align-self: center; left: auto; right: 70px;" />
+            <ui:VisualElement name="tutorial" style="flex-grow: 1; position: absolute; background-image: url(&quot;project://database/Assets/Art/MainMenu/nivel_0.png?fileID=21300000&amp;guid=1c89498a0b60ee848930277b2205549f&amp;type=3#nivel_0&quot;); width: 130%; height: 85%; align-self: center; left: auto; right: 70px;" />
+        </ui:VisualElement>
+        <ui:VisualElement name="camera_viewport" style="flex-grow: 1; width: 40%; height: 100%; background-image: url(&quot;project://database/Assets/UI/CamaraVista.renderTexture?fileID=8400000&amp;guid=afffa15d9cd371347b2e3a4364216206&amp;type=2#CamaraVista&quot;); -unity-background-image-tint-color: rgb(255, 255, 255); display: none;" />
+    </ui:VisualElement>
+</ui:UXML>

@@ -15,55 +15,55 @@ MonoBehaviour:
   m_TableCollectionName: Tienda Viejo
   m_TableCollectionNameGuidString: a9a8a49134c698441850a8b70f5ecd02
   m_Entries:
-  - m_Id: 3753608802304
+  - m_Id: 8243701642227712
     m_Key: SentenceText_8c0b8bb1-6349-471e-ac98-73464072f3ae
     m_Metadata:
       m_Items: []
-  - m_Id: 3753608802305
+  - m_Id: 8243701642227713
     m_Key: SentenceName_2a33a30d-016b-4355-8984-36e6f3097638
     m_Metadata:
       m_Items: []
-  - m_Id: 3753608802306
+  - m_Id: 8243701642227714
     m_Key: Answer_55900ace-7f8d-498e-b82a-a2adbc28324a
     m_Metadata:
       m_Items: []
-  - m_Id: 3753608802307
+  - m_Id: 8243701642227715
     m_Key: Answer_a10e3a07-b4f7-4879-9178-5da98062cbc6
     m_Metadata:
       m_Items: []
-  - m_Id: 3753608802308
+  - m_Id: 8243701642227716
     m_Key: Answer_f55368b3-8ee3-4bd4-a077-111983eb344b
     m_Metadata:
       m_Items: []
-  - m_Id: 3753608802309
+  - m_Id: 8243701642227717
     m_Key: Answer_26c952dc-3741-45fa-9f91-5873b32c64ff
     m_Metadata:
       m_Items: []
-  - m_Id: 3753608802310
+  - m_Id: 8243701642227718
     m_Key: SentenceText_fb2586da-4f03-4c74-9261-55a2b4963daf
     m_Metadata:
       m_Items: []
-  - m_Id: 3753608802311
+  - m_Id: 8243701642227719
     m_Key: SentenceName_151a1352-eeda-4d03-8391-efecab70a65f
     m_Metadata:
       m_Items: []
-  - m_Id: 3753608802312
+  - m_Id: 8243701642227720
     m_Key: Answer_f607d445-0d6f-43ff-a3db-db56f89314ca
     m_Metadata:
       m_Items: []
-  - m_Id: 3753608802313
+  - m_Id: 8243701642227721
     m_Key: Answer_a853e2d4-4ea7-4f27-b9ce-b70be0083ada
     m_Metadata:
       m_Items: []
-  - m_Id: 3753608802314
+  - m_Id: 8243701642227722
     m_Key: Answer_4863c3df-5229-45ab-8867-3fd58288dc8a
     m_Metadata:
       m_Items: []
-  - m_Id: 3753608802315
+  - m_Id: 8243701642227723
     m_Key: Answer_11fb37de-df17-4687-b827-89258b066a5d
     m_Metadata:
       m_Items: []
-  - m_Id: 3753608802316
+  - m_Id: 8243701642227724
     m_Key: SentenceText_be33a960-d380-4660-a0af-4f46b299dd28
     m_Metadata:
       m_Items: []

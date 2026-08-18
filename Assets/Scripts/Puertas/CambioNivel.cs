@@ -3,12 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class CambioNivel : MonoBehaviour
 {
     [SerializeField] string nextScene;
     private GameObject objLoadScene;
     private LoadScene load;
+
+    public Puzzle lista;
+
 
     private float tiempoEspera = 1.5f;
 
@@ -47,7 +51,29 @@ public class CambioNivel : MonoBehaviour
         {
             Debug.Log("El prota sigue aqui, cambio de escena");
             tiempo = false;
-            load.ChangeScene(nextScene);
+            
+            Scene escenaActual = SceneManager.GetActiveScene();
+
+            if (nextScene == "Nivel_1" && !lista.Subir_Nivel[0].acabado)
+            {
+                lista.Subir_Nivel[0].acabado = true;
+                load.NombreEscenaAnterior();
+                load.ChangeScene("Menu_SubirStat");
+            }
+            else if (nextScene == "Nivel_2" && !lista.Subir_Nivel[1].acabado)
+            {
+                lista.Subir_Nivel[1].acabado = true;
+                load.NombreEscenaAnterior();
+                load.ChangeScene("Menu_SubirStat");
+            }
+            else if (nextScene == "Nivel_3" && !lista.Subir_Nivel[2].acabado)
+            {
+                lista.Subir_Nivel[2].acabado = true;
+                load.NombreEscenaAnterior();
+                load.ChangeScene("Menu_SubirStat");
+            }
+            else
+                load.ChangeScene(nextScene);
 
         }
 

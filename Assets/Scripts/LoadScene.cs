@@ -41,31 +41,36 @@ public class LoadScene : MonoBehaviour
         pantalla = this.GetComponent<TintScreen>();
     }
 
-    void Update()
+    //void Update()
+    //{
+
+    //    //encontrar el personaje prefab 
+    //    if (protagonista == null)
+    //    {
+    //        protagonista = GameObject.Find("personaje");
+    //    }
+    //    if (escenaState == null)
+    //    {
+    //        obj_input = GameObject.Find("personaje");
+    //        escenaState = obj_input.GetComponent<InputHandler>();
+    //        //save_posicion = GetComponent<personaje>();
+    //    }
+
+    //    if (Input.GetKeyDown(KeyCode.Escape) && !onPause)
+    //    {
+    //        onPause = true;
+    //        ChangeScene("Pause_Menu");
+    //    }
+    //    if (SceneManager.sceneCount  == 1 && onPause)
+    //    {
+    //        //ya no estamos en pausa
+    //        onPause = false;
+    //    }
+    //}
+
+    public string NombreEscenaAnterior()
     {
-
-        //encontrar el personaje prefab 
-        if (protagonista == null)
-        {
-            protagonista = GameObject.Find("personaje");
-        }
-        if (escenaState == null)
-        {
-            obj_input = GameObject.Find("personaje");
-            escenaState = obj_input.GetComponent<InputHandler>();
-            //save_posicion = GetComponent<personaje>();
-        }
-
-        if (Input.GetKeyDown(KeyCode.Escape) && !onPause)
-        {
-            onPause = true;
-            ChangeScene("Pause_Menu");
-        }
-        if (SceneManager.sceneCount  == 1 && onPause)
-        {
-            //ya no estamos en pausa
-            onPause = false;
-        }
+        return name_anterior;
     }
 
     public void ChangeScene(string sceneName) //Anar a una escena en especific
@@ -87,6 +92,13 @@ public class LoadScene : MonoBehaviour
             escenaState.ScenePause(false);
             SceneManager.LoadScene("Pause_Menu", LoadSceneMode.Additive);
             //SceneManager.SetActiveScene(sceneName);
+        }
+        else if (sceneName == "Menu_SubirStat")
+        {
+            pantalla.UnTint();
+            Cursor.visible = true;
+            SceneManager.LoadScene(sceneName);
+
         }
         else
         {

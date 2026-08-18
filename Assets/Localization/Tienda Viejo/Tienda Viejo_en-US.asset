@@ -18,56 +18,56 @@ MonoBehaviour:
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 3753608802304
+  - m_Id: 8243701642227712
     m_Localized: Venda de pociones
     m_Metadata:
       m_Items: []
-  - m_Id: 3753608802305
+  - m_Id: 8243701642227713
     m_Localized: Tienda Viejo
     m_Metadata:
       m_Items: []
-  - m_Id: 3753608802306
-    m_Localized: "Poci\xF3n Vida - 10 po"
+  - m_Id: 8243701642227714
+    m_Localized: "Poci\xF3n Vida - te cura 10pt - 10 po"
     m_Metadata:
       m_Items: []
-  - m_Id: 3753608802307
-    m_Localized: "Protecci\xF3n - 20 po"
+  - m_Id: 8243701642227715
+    m_Localized: "Escudo - te a\xF1ade +2 CA - 20 po"
     m_Metadata:
       m_Items: []
-  - m_Id: 3753608802308
+  - m_Id: 8243701642227716
     m_Localized: "Irse de aqu\xED"
     m_Metadata:
       m_Items: []
-  - m_Id: 3753608802309
+  - m_Id: 8243701642227717
     m_Localized: "Preguntar al se\xF1or"
     m_Metadata:
       m_Items: []
-  - m_Id: 3753608802310
+  - m_Id: 8243701642227718
     m_Localized: Estas pociones te pueden ayudar en la mazmorra. Miratelas bien,
       si quieres alguna, ya sabes el precio.
     m_Metadata:
       m_Items: []
-  - m_Id: 3753608802311
+  - m_Id: 8243701642227719
     m_Localized: Yuissef
     m_Metadata:
       m_Items: []
-  - m_Id: 3753608802312
+  - m_Id: 8243701642227720
     m_Localized: "Poci\xF3n Vida - 10 po"
     m_Metadata:
       m_Items: []
-  - m_Id: 3753608802313
+  - m_Id: 8243701642227721
     m_Localized: "Protecci\xF3n - 20 po"
     m_Metadata:
       m_Items: []
-  - m_Id: 3753608802314
+  - m_Id: 8243701642227722
     m_Localized: "Irse de aqu\xED "
     m_Metadata:
       m_Items: []
-  - m_Id: 3753608802315
+  - m_Id: 8243701642227723
     m_Localized: Volver a preguntar
     m_Metadata:
       m_Items: []
-  - m_Id: 3753608802316
+  - m_Id: 8243701642227724
     m_Localized: "\xBFNo he has entendido? Haber escuchado mejor. Ve ya a la mazmorra."
     m_Metadata:
       m_Items: []

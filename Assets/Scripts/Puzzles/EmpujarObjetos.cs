@@ -54,13 +54,13 @@ public class EmpujarObjetos : MonoBehaviour
     }
     void OnCollisionEnter(Collision col)
     {
-        int fuerzaJugador = inventario.prota.stats.Get(PersonajesStats.Fuerza);
+        //int fuerzaJugador = inventario.prota.stats.Get(PersonajesStats.Fuerza);
 
-        if (fuerzaJugador < pesoNecesario)
-        {
-            Debug.Log("No tienes suficiente fuerza para mover esto");
-            return;
-        }
+        //if (fuerzaJugador < pesoNecesario)
+        //{
+        //    Debug.Log("No tienes suficiente fuerza para mover esto");
+        //    return;
+        //}
 
 
         // Si el jugador choca con este objeto y el puzzle no esta completado

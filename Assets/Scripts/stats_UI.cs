@@ -20,7 +20,7 @@ public class stats_UI : MonoBehaviour
 
     //ref del UI
     private VisualElement root;
-    private IntegerField fieldFUE, fieldINT, fieldCAR, fieldLIFE;
+    private IntegerField fieldFUE, fieldINT, fieldCAR, fieldLIFE, fieldCA;
     private VisualElement heartFill;
     private int maxLife;
 
@@ -50,6 +50,7 @@ public class stats_UI : MonoBehaviour
         fieldINT = root.Q("INT").Q<IntegerField>();
         fieldCAR = root.Q("CAR").Q<IntegerField>();
         fieldLIFE = root.Q("int_life").Q<IntegerField>();
+        fieldCA = root.Q("int_CA").Q<IntegerField>();
         heartFill = root.Q<VisualElement>("heart-fill");
 
         //inventary
@@ -81,6 +82,7 @@ public class stats_UI : MonoBehaviour
         int f = protagonista.stats.Get(PersonajesStats.Fuerza);
         int i = protagonista.stats.Get(PersonajesStats.Inteligencia);
         int c = protagonista.stats.Get(PersonajesStats.Carisma);
+        int ca = protagonista.stats.Get(PersonajesStats.ClaseArmadura);
         //h = protagonista.stats.Get(PersonajesStats.Constitucion).ToString();
         //int h = protagonista.stats.Get(PersonajesStats.Constitucion);
 
@@ -89,6 +91,7 @@ public class stats_UI : MonoBehaviour
         SetFuerza(f);
         SetIntel(i);
         SetCarisma(c);
+        SetCA(ca);
         SetInventario();
     }
 
@@ -157,6 +160,10 @@ public class stats_UI : MonoBehaviour
     void SetCarisma(int num)
     {
         fieldCAR.value = num;
+    }
+    void SetCA(int num)
+    {
+        fieldCA.value = num;
     }
     void SetConstitucion(int num)
     {

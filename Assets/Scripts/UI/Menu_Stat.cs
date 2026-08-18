@@ -32,9 +32,9 @@ public class Menu_Stat : MonoBehaviour
 
 
         root.Q<Button>("fuerza_btn").clicked += Fuerza;
-        root.Q<Button>("intel_btn").clicked +=  ChangeScene;
-        root.Q<Button>("carisma_btn").clicked +=  ChangeScene;
-        root.Q<Button>("vida_btn").clicked += ShowOptions;
+        root.Q<Button>("intel_btn").clicked +=  Inteligencia;
+        root.Q<Button>("carisma_btn").clicked +=  Carisma;
+        root.Q<Button>("vida_btn").clicked += Vida;
 
     }
 
@@ -55,6 +55,28 @@ public class Menu_Stat : MonoBehaviour
     {
         //subir +2 a fuerza
         prota.stats.values[0].value += 2;
+        //cambiar escena
+        ChangeScene();
+    }
+    private void Inteligencia()
+    {
+        //subir +2 a inteligencia
+        prota.stats.values[1].value += 2;
+        //cambiar escena
+        ChangeScene();
+    }
+    private void Carisma()
+    {
+        //subir +2 a carisma
+        prota.stats.values[2].value += 2;
+        //cambiar escena
+        ChangeScene();
+    }
+    private void Vida()
+    {
+        //subir +5 a vida y vida max
+        prota.stats.values[3].value += 5;
+        prota.stats.values[5].value += 5;
         //cambiar escena
         ChangeScene();
     }

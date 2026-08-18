@@ -6,6 +6,7 @@ using cherrydev;
 
 public class Dialog : MonoBehaviour
 {
+    Preload preload;
     LoadScene load;
     Dice dados;
     [Header("LISTA PUZZLE")]
@@ -16,7 +17,7 @@ public class Dialog : MonoBehaviour
     [SerializeField] InputHandler escenaState;
     [Header("EL PREFAB")]
     [SerializeField] private cherrydev.DialogBehaviour _dialogBehaviour;
-    
+    bool lastEstate;
     private GameObject obj;
     private int vidaMax = 50;
     private int objMax = 3;
@@ -32,14 +33,31 @@ public class Dialog : MonoBehaviour
     }
     public void Start()
     {
+
         dados = this.GetComponent<Dice>();
 
         GameObject aux = GameObject.Find("--SceneManagement--");
         load = aux.GetComponent<LoadScene>();
+        preload = aux.GetComponent<Preload>();
+
+        //lastEstate = load.onCombat;
     }
+    //void Update()
+    //{
+    //    if (lastEstate != load.onCombat)
+    //    {
+    //        lastEstate = load.onCombat;
+    //        if (lastEstate == false)
+    //        {
+    //            EmpezarDialogo(dialogo_obj, A);
+    //            Debug.Log("Ha sortit del combat");
+    //        }
+
+    //    }
+    //}
     public void EmpezarDialogo(DialogNodeGraph dialogo, GameObject obj)
     {
-        //this.obj = obj;
+        this.obj = obj;
         //Debug.Log(this.obj);
         //Llamar a funcion
         //BindExternalFunction(string funcName, Action function);
@@ -48,6 +66,10 @@ public class Dialog : MonoBehaviour
         _dialogBehaviour.BindExternalFunction("dadoFuerza", dadoFuerza);
         _dialogBehaviour.BindExternalFunction("dadoIntel", dadoIntel);
         _dialogBehaviour.BindExternalFunction("dadoCarisma", dadoCarisma);
+
+        //Tienda viejo
+        _dialogBehaviour.BindExternalFunction("PocionVida", pocVida);
+        _dialogBehaviour.BindExternalFunction("Proteccion", pocProtect);
 
         //Funciones pa todos
         _dialogBehaviour.BindExternalFunction("ContinuarMov", continuarMov);
@@ -63,6 +85,7 @@ public class Dialog : MonoBehaviour
         //Personajes
         _dialogBehaviour.BindExternalFunction("EstadoEtkis", estadoEtkis);
         _dialogBehaviour.BindExternalFunction("EstadoNim", estadoNim);
+        _dialogBehaviour.BindExternalFunction("EstadoNim", estadoLere);
         //Dialogo
         _dialogBehaviour.BindExternalFunction("Dialogo", Dialogo);
         //Prota
@@ -73,6 +96,7 @@ public class Dialog : MonoBehaviour
         _dialogBehaviour.StartDialog(dialogo);
 
     }
+
     //Dialogo
     public void Dialogo()
     {
@@ -113,9 +137,11 @@ public class Dialog : MonoBehaviour
     {
         Destroy(obj);
     }
+    // Combate
     public void Combate()
     {
         Debug.Log("Inicia combate por dialogo");
+        preload.CombatOpponent(obj);
         load.Combat(obj);
     }
     public void SetBool(string nombreVal, bool val)
@@ -123,6 +149,7 @@ public class Dialog : MonoBehaviour
         Debug.Log(val);
         _dialogBehaviour.SetVariableValue(nombreVal, val);
     }
+    //Cambio escena
     public void irCampamento()
     {
         load.ChangeScene("Nivel_0");
@@ -139,6 +166,7 @@ public class Dialog : MonoBehaviour
     {
         load.ChangeScene("Nivel_3");
     }
+    
     public void pisosDesbloqueados()
     {
         //Nivel 1
@@ -169,6 +197,17 @@ public class Dialog : MonoBehaviour
             _dialogBehaviour.SetVariableValue("nivel_3", 0);
         }
     }
+    //Tienda Viejo
+    public void pocVida()
+    {
+        prota.Inventario.PocionVida.Add("PocionVida_Loot");
+    }
+    public void pocProtect()
+    {
+        Debug.Log("Tienes una pocion de proteccion");
+        //prota.Inventario.PocionVida.Add("PocionVida_Loot");
+    }
+    //Personajes
     public void estadoEtkis()
     {
         if (lista.Nivel_1[1].acabado)
@@ -195,6 +234,20 @@ public class Dialog : MonoBehaviour
             _dialogBehaviour.SetVariableValue("nim_libre_nivel2", 0);
         }
     }
+    public void estadoLere()
+    {
+        if (lista.Nivel_2[2].acabado)
+        {
+            Debug.Log("Nim es libre");
+            _dialogBehaviour.SetVariableValue("nim_libre_nivel2", 1);
+        }
+        else
+        {
+            Debug.Log("Nim no es libre");
+            _dialogBehaviour.SetVariableValue("nim_libre_nivel2", 0);
+        }
+    }
+    //Prota
     public void vidaParcial()
     {
         //Tint screen, fer una transició
@@ -218,13 +271,13 @@ public class Dialog : MonoBehaviour
         int a = Random.Range(1, objMax);
         switch (a)
         {
+            //case 1:
+            //    prota.Inventario.Espada.Add("Espada_Loot");
+            //    break;
             case 1:
-                prota.Inventario.Espada.Add("Espada_Loot");
+                prota.Inventario.Monedas.Add("Monedas_Loot");
                 break;
             case 2:
-                prota.Inventario.Daga.Add("Daga_Loot");
-                break;
-            case 3:
                 prota.Inventario.PocionVida.Add("PocionVida_Loot");
                 break;
             default:

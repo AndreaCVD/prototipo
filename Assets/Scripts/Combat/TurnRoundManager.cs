@@ -40,7 +40,7 @@ public class TurnRoundManager : MonoBehaviour
             uIDocument = GetComponent<UIDocument>();
         }
 
-        // 2. Verificación de seguridad
+        // 2. Verificaciï¿½n de seguridad
         if (uIDocument != null && uIDocument.rootVisualElement != null)
         {
             root = uIDocument.rootVisualElement;
@@ -49,12 +49,12 @@ public class TurnRoundManager : MonoBehaviour
 
             if (combat_options == null)
             {
-                Debug.LogWarning("No se encontró el elemento 'combat_options' en el UXML.");
+                Debug.LogWarning("No se encontrï¿½ el elemento 'combat_options' en el UXML.");
             }
         }
         else
         {
-            Debug.LogError("TurnRoundManager: No hay un UIDocument asignado o el root está vacío.");
+            Debug.LogError("TurnRoundManager: No hay un UIDocument asignado o el root estï¿½ vacï¿½o.");
         }
     }
 
@@ -89,7 +89,7 @@ public class TurnRoundManager : MonoBehaviour
             //Cambiar current y target
             current = Manager.enemyPersonaje;
             target = Manager.playerPersonaje;
-
+            Debug.Log("current = " + current);
             //Animacion
             anim.SetBool("TurnProta", false);
             anim.SetBool("TurnEnemy", true);
@@ -107,6 +107,7 @@ public class TurnRoundManager : MonoBehaviour
             //Cambiar current y target
             current = Manager.playerPersonaje;
             target = Manager.enemyPersonaje;
+            Debug.Log("current = " + current);
 
             //Animacion
             anim.SetBool("TurnProta", true);
@@ -120,11 +121,38 @@ public class TurnRoundManager : MonoBehaviour
     }
     public void EnemyTurn()
     {
+
         //Si es el turno del Enemigo, hacemos que actue solo
         if (current == Manager.enemyPersonaje)
-        {
+        { 
             //Debug.Log("------AHORA ATCATA EL ENEMIGO-----");
             npcTurn.DoAction();
+        }
+    }
+    public void AtaqueOportunidad()
+    {
+        Debug.Log("El enemigo tiene un ataque de oportunidad");
+        npcTurn.AtaqueOportunidad();
+    }
+    public void AtaqueEnamorado()
+    {
+        Debug.Log("El enemigo no ataca, esta enamorado");
+        //npcTurn.AtaqueOportunidad();
+    }
+    public void AtaqueEnfadado()
+    {
+        if (current == Manager.enemyPersonaje)
+        {
+            Debug.Log("turno enemigo, usa enfado");
+            npcTurn.AtaqueEnfadado();
+        }
+    }
+    public void AtaqueAsustado()
+    {
+        if (current == Manager.enemyPersonaje)
+        {
+            Debug.Log("turno enemigo, usa asustado");
+            npcTurn.AtaqueAsustado();
         }
     }
 }

@@ -33,6 +33,7 @@ public class InputHandler : MonoBehaviour
 
             //characterMovement.AddMoveVectorInput(moveVector);
 
+            /*
             //Salto
             Jump = Input.GetKeyDown(KeyCode.Space);
             //Mirar si barra espaciadora esta activada
@@ -40,7 +41,7 @@ public class InputHandler : MonoBehaviour
             {
                 Debug.Log("Spacebar Pressed");
             }
-
+            */
         }
         else
         {

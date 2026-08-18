@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5be51871efa6c3e4eae1703925c8f5ac, type: 3}
+  m_Name: Entrada_Mazmorra
+  m_EditorClassIdentifier: 
+  m_SharedTableData: {fileID: 11400000, guid: 502a4f02b9dcb124596702e6c4e00c1a, type: 2}
+  m_Tables:
+  - {fileID: 11400000, guid: bc3dc9d37e0242542873f5f5e017f7bf, type: 2}
+  - {fileID: 11400000, guid: c908efcf90502fa47a7039e42334ac52, type: 2}
+  - {fileID: 11400000, guid: 810ae3f60b1fa5a4fb415f8b30d1a61e, type: 2}
+  - {fileID: 11400000, guid: 65d19c5e1fc0d5948876374fc15f0418, type: 2}
+  - {fileID: 11400000, guid: 83638a1e09a15ec448dcaf1c01c7fb43, type: 2}
+  m_Extensions: []
+  m_Group: String Table
+  references:
+    version: 2
+    RefIds: []

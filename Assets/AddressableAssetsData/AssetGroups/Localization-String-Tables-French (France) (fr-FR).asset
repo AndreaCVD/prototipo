@@ -57,14 +57,14 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-fr-FR
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 943b3fcf88463a741824b2e079c72a5a
-    m_Address: Lerendur Libre_fr-FR
+  - m_GUID: 810ae3f60b1fa5a4fb415f8b30d1a61e
+    m_Address: Entrada_Mazmorra_fr-FR
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-fr-FR
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 9b69939639db29b4bb4bb36d2a39d2d7
-    m_Address: test_fr-FR
+  - m_GUID: 943b3fcf88463a741824b2e079c72a5a
+    m_Address: Lerendur Libre_fr-FR
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-fr-FR
@@ -87,6 +87,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-fr-FR
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c9ce367db06eaf84588af5b9419953df
+    m_Address: Pista Cofre Lava_fr-FR
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-fr-FR
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: cac9cceef241c6e4cabacab6fddfdba3
     m_Address: Cuerda_fr-FR
     m_ReadOnly: 1
@@ -101,6 +107,18 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: cfa3c2dff72d12d4ba4f0b5a7f1f3c1f
     m_Address: Cofre_fr-FR
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-fr-FR
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d23bf82346068a345a4f6c5d9db872c1
+    m_Address: DebugCombat_fr-FR
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-fr-FR
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d5025e491175b6648aa8cebe57c51404
+    m_Address: Tienda Viejo_fr-FR
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-fr-FR

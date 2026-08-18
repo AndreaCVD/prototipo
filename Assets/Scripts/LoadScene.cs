@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
+using Cursor = UnityEngine.Cursor;
+
 public class LoadScene : MonoBehaviour
 {
     private GameObject uiHub;
@@ -21,37 +23,54 @@ public class LoadScene : MonoBehaviour
 
     //[SerializeField] Preload preload;
     string name_anterior;
-    bool onCombat;
+    private bool onCombat;
+    public bool onPause;
+    public bool jefeLerendur, jefeLibro;
 
     private void Start()
     {
+        jefeLerendur = false;
+        jefeLibro = false;
         onCombat = false;
-
+        onPause = false;
+        Cursor.visible = false;
+        //if (SceneManager.GetActiveScene().name != "Pause_Menu" || SceneManager.GetActiveScene().name != "Start_MainMenu" || SceneManager.GetActiveScene().name != "combat_scene")
+        
         destroyObjs = this.GetComponent<crear_obj>();
         preload = this.GetComponent<Preload>();
         pantalla = this.GetComponent<TintScreen>();
     }
 
-    void Update()
+    //void Update()
+    //{
+
+    //    //encontrar el personaje prefab 
+    //    if (protagonista == null)
+    //    {
+    //        protagonista = GameObject.Find("personaje");
+    //    }
+    //    if (escenaState == null)
+    //    {
+    //        obj_input = GameObject.Find("personaje");
+    //        escenaState = obj_input.GetComponent<InputHandler>();
+    //        //save_posicion = GetComponent<personaje>();
+    //    }
+
+    //    if (Input.GetKeyDown(KeyCode.Escape) && !onPause)
+    //    {
+    //        onPause = true;
+    //        ChangeScene("Pause_Menu");
+    //    }
+    //    if (SceneManager.sceneCount  == 1 && onPause)
+    //    {
+    //        //ya no estamos en pausa
+    //        onPause = false;
+    //    }
+    //}
+
+    public string NombreEscenaAnterior()
     {
-
-        //encontrar el personaje prefab 
-        if (protagonista == null)
-        {
-            protagonista = GameObject.Find("personaje");
-        }
-        if (escenaState == null)
-        {
-            obj_input = GameObject.Find("personaje");
-            escenaState = obj_input.GetComponent<InputHandler>();
-            //save_posicion = GetComponent<personaje>();
-        }
-
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            //destroyObjs.destroyAll();
-            ChangeScene("Start_MainMenu");
-        }
+        return name_anterior;
     }
 
     public void ChangeScene(string sceneName) //Anar a una escena en especific
@@ -65,6 +84,21 @@ public class LoadScene : MonoBehaviour
             // Unload Scene
             SceneManager.UnloadSceneAsync(escenaActual);
             onCombat = false;
+        }
+        else if (sceneName == "Pause_Menu" && escenaActual.name != "Pause_Menu")
+        {
+            onPause = true;
+            Cursor.visible = true;
+            escenaState.ScenePause(false);
+            SceneManager.LoadScene("Pause_Menu", LoadSceneMode.Additive);
+            //SceneManager.SetActiveScene(sceneName);
+        }
+        else if (sceneName == "Menu_SubirStat")
+        {
+            pantalla.UnTint();
+            Cursor.visible = true;
+            SceneManager.LoadScene(sceneName);
+
         }
         else
         {
@@ -97,24 +131,52 @@ public class LoadScene : MonoBehaviour
             SceneManager.LoadScene(name_anterior);
         }
     }
+    public bool boss_Lerendur()
+    {
+        return jefeLerendur ;
+    }
+    public bool boss_Libro()
+    {
+        return jefeLibro ;
+    }
+
     public void SalirCombate()//Salimos del combate
     {
         Debug.Log("Salimos de combate");
         onCombat = false;
+        //sacamos el cursor
+        Cursor.visible = false;
         //si estamos en combate eliminar esta escena
         //Sacamos la pausa del juego principal
         escenaState.ScenePause(false); //false, se mueve
+        if (preload.nameOpponent() == "Jefe Final(Clone)")
+        {
+            jefeLerendur = true;
+            Debug.Log("Lerendur ya no esta hechizado");
 
-        //recibir loot
+        }
+        else if (preload.nameOpponent() == "Jefe Libro Final(Clone)")
+        {
+            jefeLibro = true;
+            //Debug.Log("el jefe s'ha guanyat");
+
+        }
+      // Unload Scene
+        //SceneManager.UnloadSceneAsync("combat_scene");
+        AsyncOperation unloadOp = SceneManager.UnloadSceneAsync("combat_scene");
 
         // reactiva el HUD al salir del combate
         if (uiHub != null)
-            uiHub.SetActive(true);
-        else
-            Debug.LogWarning("uiHub es null al salir — no se pudo reactivar");
+        {
 
-        // Unload Scene
-        SceneManager.UnloadSceneAsync("combat_scene");
+            //uiHub.SetActive(false);
+
+        }
+        else
+        {
+            Debug.LogWarning("uiHub es null al salir ï¿½ no se pudo reactivar");
+        }
+        //uiHub.SetActive(true);
     }
     public void Combat(GameObject enemyName)
     {
@@ -122,17 +184,20 @@ public class LoadScene : MonoBehaviour
         {
             onCombat = true;
 
+            //mostramos el cursor
+            Cursor.visible = true;
+
             name_anterior = SceneManager.GetActiveScene().name;
 
             escenaState.ScenePause(true); //true, se para
             pantalla.UnTint();
 
             // busca y oculta el HUD ANTES de cargar el combate
-            uiHub = GameObject.Find("UI_HUB");
-            if (uiHub != null)
-                uiHub.SetActive(false);
-            else
-                Debug.LogWarning("UI_HUB no encontrado — comprueba el nombre del GameObject");
+            //uiHub = GameObject.Find("UI_HUB");
+            //if (uiHub != null)
+               // uiHub.SetActive(false);
+          //  else
+            //    Debug.LogWarning("UI_HUB no encontrado ï¿½ comprueba el nombre del GameObject");
 
 
             preload.CombatOpponent(enemyName); //Pasem el nom

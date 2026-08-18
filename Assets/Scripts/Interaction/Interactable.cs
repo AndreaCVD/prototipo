@@ -9,6 +9,8 @@ public class Interactable : MonoBehaviour
 {
     [Header("EL DIALOGO DEL OBJ")]
     [SerializeField] cherrydev.DialogNodeGraph dialogo_obj;
+    [Header("FICHA DEL OBJ")]
+    public Parameters ficha_obj;
     //Para encontrar los scripts de SceneManager
     private LoadScene load;
     private Preload preload;
@@ -57,18 +59,18 @@ public class Interactable : MonoBehaviour
             //    //Debug.Log("This is a Puzzle");
             //    break;
             case "Interact_Scene":
-                Debug.Log("Interaccionable por dialogo");
+                dialog.EmpezarDialogo(dialogo_obj, a);
+                break;
+            case "NPC":
                 dialog.EmpezarDialogo(dialogo_obj, a);
                 break;
             case "Cofre":
-                //Debug.Log("Interaccionable por dialogo");
                 inventario.CofreKey(a, dialogo_obj);
                 break;
             case "Puerta":
                 inventario.PuertaKey(a, dialogo_obj);
                 break;
             case "PuertaMaestra":
-                Debug.Log("This is a PuertaMaestra");
                 inventario.PuertaMaestraKey(a, dialogo_obj);
                 break;
             default:

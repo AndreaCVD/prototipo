@@ -76,6 +76,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogo_obj: {fileID: 11400000, guid: cc1560664261495479fb1e01e70ea10e, type: 2}
+  ficha_obj: {fileID: 11400000, guid: 28ba7516c0a95464c800d09bbc1b9e06, type: 2}
 --- !u!65 &7150246651518417920
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -95,8 +96,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.6842611, y: 1.9868064, z: 1}
-  m_Center: {x: 0.34213054, y: -0.4934032, z: 0}
+  m_Size: {x: 1.6842611, y: 2.4129806, z: 1}
+  m_Center: {x: 0.34213054, y: -0.7064903, z: 0}
 --- !u!1001 &4865244446927769561
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -201,6 +202,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: b6bc1032b70fe28418e4ffc0579935b6, type: 2}
+    - target: {fileID: 2334287063755584472, guid: 2f2f2188d2e9c6f44a7f9a41c1027b58, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 04fecff51690a4c47af5281571f5940a, type: 2}
     - target: {fileID: 2364382280300810539, guid: 2f2f2188d2e9c6f44a7f9a41c1027b58, type: 3}
       propertyPath: m_Enabled
       value: 0

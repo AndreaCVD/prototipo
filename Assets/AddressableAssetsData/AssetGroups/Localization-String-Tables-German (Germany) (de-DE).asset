@@ -27,12 +27,6 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-de-DE
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 207fd56f492ee0747bd1faf66395c474
-    m_Address: test_de-DE
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-de-DE
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 34f75d529f315fe4bb3c0713980cdf64
     m_Address: Nimrodel Libre_de-DE
     m_ReadOnly: 1
@@ -63,6 +57,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-de-DE
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 65d19c5e1fc0d5948876374fc15f0418
+    m_Address: Entrada_Mazmorra_de-DE
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de-DE
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 671a74bdfbae80e42847c9ec5a68cef3
     m_Address: Fogata_de-DE
     m_ReadOnly: 1
@@ -71,6 +71,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 77a0dda5010ccb94680731078208bd7e
     m_Address: Etkis_de-DE
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de-DE
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7f595b049195764499402764f9aba155
+    m_Address: Tienda Viejo_de-DE
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-de-DE
@@ -95,6 +101,18 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a84946a8add149048bbc3da42e7e5b35
     m_Address: Cuerda_de-DE
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de-DE
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bdb5034ef9dd1904da932aeb246bbaee
+    m_Address: Pista Cofre Lava_de-DE
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de-DE
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cc6ff777dc6267b44a0223c623176d6c
+    m_Address: DebugCombat_de-DE
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-de-DE

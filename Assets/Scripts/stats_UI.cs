@@ -16,10 +16,11 @@ public class stats_UI : MonoBehaviour
     [SerializeField] Sprite iconoDaga;
     [SerializeField] Sprite iconoEspada;
     [SerializeField] Sprite iconoPocionLava;
+    [SerializeField] Sprite iconoMonedas;
 
     //ref del UI
     private VisualElement root;
-    private IntegerField fieldFUE, fieldINT, fieldCAR, fieldLIFE;
+    private IntegerField fieldFUE, fieldINT, fieldCAR, fieldLIFE, fieldCA;
     private VisualElement heartFill;
     private int maxLife;
 
@@ -28,15 +29,16 @@ public class stats_UI : MonoBehaviour
     private Button btnInventory;
     private VisualElement itemNotification;
     private VisualElement notifIcon;
-    private Coroutine notifCoroutine;
+    //private Coroutine notifCoroutine;
 
     //contadores inventory
     private int llaves;
     private int llaveMaestra;
-    private int daga;
-    private int espada;
+    //private int daga;
+    //private int espada;
     private int pocionVida;
     private int pocionLava;
+    private int monedas;
 
     private void OnEnable()
     {
@@ -48,6 +50,7 @@ public class stats_UI : MonoBehaviour
         fieldINT = root.Q("INT").Q<IntegerField>();
         fieldCAR = root.Q("CAR").Q<IntegerField>();
         fieldLIFE = root.Q("int_life").Q<IntegerField>();
+        fieldCA = root.Q("int_CA").Q<IntegerField>();
         heartFill = root.Q<VisualElement>("heart-fill");
 
         //inventary
@@ -69,23 +72,26 @@ public class stats_UI : MonoBehaviour
     {
         llaves = 0;
         llaveMaestra = 0;
-        espada = 0;
-        daga = 0;
+        //espada = 0;
+        //daga = 0;
         pocionVida = 0;
         pocionLava = 0;
+        monedas = 0;
 
         //Seteamos valores, int -> string
         int f = protagonista.stats.Get(PersonajesStats.Fuerza);
         int i = protagonista.stats.Get(PersonajesStats.Inteligencia);
         int c = protagonista.stats.Get(PersonajesStats.Carisma);
+        int ca = protagonista.stats.Get(PersonajesStats.ClaseArmadura);
         //h = protagonista.stats.Get(PersonajesStats.Constitucion).ToString();
         //int h = protagonista.stats.Get(PersonajesStats.Constitucion);
 
-        maxLife = protagonista.stats.Get(PersonajesStats.Constitucion);
+        maxLife = protagonista.stats.Get(PersonajesStats.Max_Vida);
 
         SetFuerza(f);
         SetIntel(i);
         SetCarisma(c);
+        SetCA(ca);
         SetInventario();
     }
 
@@ -127,16 +133,18 @@ public class stats_UI : MonoBehaviour
         if (protagonista.Inventario.Llave == null) return false;
         if (protagonista.Inventario.LlaveMaestra == null) return false;
         if (protagonista.Inventario.PocionVida == null) return false;
-        if (protagonista.Inventario.Daga == null) return false;
+        //if (protagonista.Inventario.Daga == null) return false;
         if (protagonista.Inventario.PocionLava == null) return false;
-        if (protagonista.Inventario.Espada == null) return false;
+        if (protagonista.Inventario.Monedas == null) return false;
+        //if (protagonista.Inventario.Espada == null) return false;
 
         if (protagonista.Inventario.Llave.Count() != llaves) return false;
         if (protagonista.Inventario.LlaveMaestra.Count() != llaveMaestra) return false;
         if (protagonista.Inventario.PocionVida.Count() != pocionVida) return false;
-        if (protagonista.Inventario.PocionLava.Count() != pocionVida) return false;
-        if (protagonista.Inventario.Daga.Count() != daga) return false;
-        if (protagonista.Inventario.Espada.Count() != espada) return false;
+        if (protagonista.Inventario.PocionLava.Count() != pocionLava) return false;
+        if (protagonista.Inventario.Monedas.Count() != monedas) return false;
+        //if (protagonista.Inventario.Daga.Count() != daga) return false;
+        //if (protagonista.Inventario.Espada.Count() != espada) return false;
 
         return true;
     }
@@ -153,6 +161,10 @@ public class stats_UI : MonoBehaviour
     {
         fieldCAR.value = num;
     }
+    void SetCA(int num)
+    {
+        fieldCA.value = num;
+    }
     void SetConstitucion(int num)
     {
         fieldLIFE.value = num;
@@ -168,6 +180,8 @@ public class stats_UI : MonoBehaviour
 
     public void MostrarNotificacion(Sprite icono)
     {
+        //Debug.Log("Mostrar notificacion");
+        /*
         if (notifCoroutine != null)
         {
             StopCoroutine(notifCoroutine);
@@ -176,14 +190,14 @@ public class stats_UI : MonoBehaviour
         notifIcon.style.backgroundImage = new StyleBackground(icono);
         itemNotification.style.display = DisplayStyle.Flex;
 
-        notifCoroutine = StartCoroutine(OcultarNotificacion(2.5f));
+        notifCoroutine = StartCoroutine(OcultarNotificacion(2.5f));*/
     }
 
     IEnumerator OcultarNotificacion(float segundos)
     {
         yield return new WaitForSeconds(segundos);
         itemNotification.style.display = DisplayStyle.None;
-        notifCoroutine = null;
+        //notifCoroutine = null;
     }
 
     void SetInventario()
@@ -194,22 +208,26 @@ public class stats_UI : MonoBehaviour
         if (protagonista.Inventario.LlaveMaestra == null) return;
         if (protagonista.Inventario.PocionVida == null) return;
         if (protagonista.Inventario.PocionLava == null) return;
-        if (protagonista.Inventario.Daga == null) return;
-        if (protagonista.Inventario.Espada == null) return;
+        if (protagonista.Inventario.Monedas == null) return;
+        //if (protagonista.Inventario.Daga == null) return;
+        //if (protagonista.Inventario.Espada == null) return;
 
         llaves = protagonista.Inventario.Llave.Count();
         llaveMaestra = protagonista.Inventario.LlaveMaestra.Count();
         pocionVida = protagonista.Inventario.PocionVida.Count();
         pocionLava = protagonista.Inventario.PocionLava.Count();
-        daga = protagonista.Inventario.Daga.Count();
-        espada = protagonista.Inventario.Espada.Count();
+        //daga = protagonista.Inventario.Daga.Count();
+        //espada = protagonista.Inventario.Espada.Count();
+        monedas = protagonista.Inventario.Monedas.Count;
 
         SetSlot(0, llaves > 0 ? iconoLlave : null, llaves);
         SetSlot(1, llaveMaestra > 0 ? iconoLlaveMaestra : null, llaveMaestra);
         SetSlot(2, pocionVida > 0 ? iconoPocionVida : null, pocionVida);
-        SetSlot(3, daga > 0 ? iconoDaga : null, daga);
-        SetSlot(4, espada > 0 ? iconoEspada : null, espada);
-        SetSlot(5, pocionLava > 0 ? iconoPocionLava : null, pocionLava);
+        //SetSlot(3, daga > 0 ? iconoDaga : null, daga);
+        //SetSlot(4, espada > 0 ? iconoEspada : null, espada);
+        //SetSlot(5, pocionLava > 0 ? iconoPocionLava : null, pocionLava);
+        SetSlot(3, pocionLava > 0 ? iconoPocionLava : null, pocionLava);
+        SetSlot(4, monedas > 0 ? iconoMonedas : null, monedas);
     }
 
     void SetSlot(int index, Sprite icono, int cantidad)
@@ -225,7 +243,11 @@ public class stats_UI : MonoBehaviour
             slotIcon.style.backgroundImage = new StyleBackground(icono);
             slot.AddToClassList("inv-slot--active");
 
-            if (esNuevo) MostrarNotificacion(icono); 
+            if (esNuevo)
+            {
+                //Debug.Log(icono);
+                MostrarNotificacion(icono);
+            }
 
         }
         else

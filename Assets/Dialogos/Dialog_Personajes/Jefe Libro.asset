@@ -1,0 +1,493 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8841503810834274688
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 378.3999
+    y: 131.59996
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Libro
+    Text: "Aunque...que te parecer\xEDa ocuper su lugar? "
+    CharacterSprite: {fileID: 0}
+  ParentNodes:
+  - {fileID: 7555315198138010728}
+  ChildNode: {fileID: 6295087103891731877}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: SentenceName_1dcec883-d328-4f13-b704-2a0ca3787930
+  SentenceTextKey: SentenceText_55511e2f-d481-4c3c-8738-e735223ab4e1
+--- !u!114 &-8808052155800576863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 831.2013
+    y: 406.80002
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Carlos
+    Text: "Me unir\xE9 a ti, pero libera al elfo."
+    CharacterSprite: {fileID: 21300000, guid: a188ce1c9b6fce644b5efac5bf9be647, type: 3}
+  ParentNodes:
+  - {fileID: 7133105192545036480}
+  ChildNode: {fileID: 419566194824768525}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: SentenceName_25b6a952-0243-4915-966f-f766923b34f6
+  SentenceTextKey: SentenceText_5c989f1e-d8d7-4f74-a167-1f6465a3514c
+--- !u!114 &-7940496025079005799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f4b3c64aaf434ea0df52154c1c7680, type: 3}
+  m_Name: External Function Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 1049.594
+    y: 290.80026
+    width: 190
+    height: 80
+  IsDragging: 1
+  IsSelected: 0
+  _functionName: ContinuarMov
+  _description: 
+  ParentNodes:
+  - {fileID: 1683345164915612956}
+  ChildNode: {fileID: 4309282294101278756}
+--- !u!114 &-4997141825472189875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f4b3c64aaf434ea0df52154c1c7680, type: 3}
+  m_Name: External Function Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 1315.2021
+    y: 442
+    width: 190
+    height: 80
+  IsDragging: 1
+  IsSelected: 0
+  _functionName: ContinuarMov
+  _description: 
+  ParentNodes:
+  - {fileID: 419566194824768525}
+  - {fileID: 2011702643565772919}
+  ChildNode: {fileID: 0}
+--- !u!114 &-1273808113976320407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f4b3c64aaf434ea0df52154c1c7680, type: 3}
+  m_Name: External Function Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -472.0016
+    y: 390.00055
+    width: 190
+    height: 80
+  IsDragging: 1
+  IsSelected: 0
+  _functionName: PararMov
+  _description: 
+  ParentNodes: []
+  ChildNode: {fileID: 7272657368292283377}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33f741ea10ebcf842a91c9b871dd032a, type: 3}
+  m_Name: Jefe Libro
+  m_EditorClassIdentifier: 
+  NodesList:
+  - {fileID: 5328373985199432021}
+  - {fileID: -1273808113976320407}
+  - {fileID: 4309282294101278756}
+  - {fileID: -7940496025079005799}
+  - {fileID: 7272657368292283377}
+  - {fileID: 7004989737295386085}
+  - {fileID: 7555315198138010728}
+  - {fileID: 7133105192545036480}
+  - {fileID: -8841503810834274688}
+  - {fileID: 6295087103891731877}
+  - {fileID: 1683345164915612956}
+  - {fileID: -8808052155800576863}
+  - {fileID: 419566194824768525}
+  - {fileID: -4997141825472189875}
+  - {fileID: 2011702643565772919}
+  VariablesConfig: {fileID: 11400000, guid: 18b09256f245a3742aa99b349e6e8cc1, type: 2}
+  _localizationTableName: Libro Jefe
+  _characterNamesLocalizationName: 
+  NodeToDrawLineFrom: {fileID: 0}
+  LinePosition: {x: 0, y: 0}
+  IsLocalizationSetUp: 1
+--- !u!114 &419566194824768525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 1048.8015
+    y: 409.2
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Libro
+    Text: Trato, espero que nos llevemos bien hehe
+    CharacterSprite: {fileID: 0}
+  ParentNodes:
+  - {fileID: -8808052155800576863}
+  ChildNode: {fileID: -4997141825472189875}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: SentenceName_1dcec883-d328-4f13-b704-2a0ca3787930
+  SentenceTextKey: SentenceText_acc1e541-f09f-463b-9631-19b7ea6c7509
+--- !u!114 &1683345164915612956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 823.20105
+    y: 264.39993
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Carlos
+    Text: "Vine aqu\xED para acabar el trabajo, depu\xE9s ya me ir\xE9."
+    CharacterSprite: {fileID: 21300000, guid: a188ce1c9b6fce644b5efac5bf9be647, type: 3}
+  ParentNodes:
+  - {fileID: 7133105192545036480}
+  ChildNode: {fileID: -7940496025079005799}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: SentenceName_25b6a952-0243-4915-966f-f766923b34f6
+  SentenceTextKey: SentenceText_34163cdd-92cf-4ac7-8721-9414f4332a80
+--- !u!114 &2011702643565772919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 836.00134
+    y: 546.8
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Carlos
+    Text: "No me unire a ti...pero volver\xE9"
+    CharacterSprite: {fileID: 21300000, guid: a188ce1c9b6fce644b5efac5bf9be647, type: 3}
+  ParentNodes:
+  - {fileID: 7133105192545036480}
+  ChildNode: {fileID: -4997141825472189875}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: SentenceName_25b6a952-0243-4915-966f-f766923b34f6
+  SentenceTextKey: SentenceText_bd288fa0-427d-405c-b03c-55b497a6d7f5
+--- !u!114 &4309282294101278756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f4b3c64aaf434ea0df52154c1c7680, type: 3}
+  m_Name: External Function Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 1270.3967
+    y: 295.6002
+    width: 190
+    height: 80
+  IsDragging: 1
+  IsSelected: 0
+  _functionName: Combate
+  _description: 
+  ParentNodes:
+  - {fileID: -7940496025079005799}
+  ChildNode: {fileID: 0}
+--- !u!114 &5328373985199432021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -65.60211
+    y: 124.400116
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Libro
+    Text: "\xA1\xBFQue has hecho?!"
+    CharacterSprite: {fileID: 21300000, guid: cb49f1d4184a4b146bdfee8689056089, type: 3}
+  ParentNodes:
+  - {fileID: 7004989737295386085}
+  ChildNode: {fileID: 7555315198138010728}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: SentenceName_1dcec883-d328-4f13-b704-2a0ca3787930
+  SentenceTextKey: SentenceText_2bfc4fbe-c961-4532-a94d-09bee40885f4
+--- !u!114 &6295087103891731877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 374.39966
+    y: 353.99997
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Libro
+    Text: "\xBFY bien? Dec\xEDdete"
+    CharacterSprite: {fileID: 0}
+  ParentNodes:
+  - {fileID: -8841503810834274688}
+  - {fileID: 7272657368292283377}
+  ChildNode: {fileID: 7133105192545036480}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: SentenceName_1dcec883-d328-4f13-b704-2a0ca3787930
+  SentenceTextKey: SentenceText_bdb62b83-3be5-4f7d-be55-590aca6e72d4
+--- !u!114 &7004989737295386085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30402c10d300488491eb82eed1db9a20, type: 3}
+  m_Name: Modify Variable Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -319.2012
+    y: 149.20007
+    width: 210
+    height: 155
+  IsDragging: 1
+  IsSelected: 0
+  _variableName: libroFirstTalk
+  _modifyType: 0
+  _boolValue: 0
+  _intValue: 1
+  _floatValue: 0
+  _stringValue: 
+  ParentNodes:
+  - {fileID: 7272657368292283377}
+  ChildNode: {fileID: 5328373985199432021}
+--- !u!114 &7133105192545036480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1717f3c6dba9fa40844ddacac301510, type: 3}
+  m_Name: Answer Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 601.59985
+    y: 370
+    width: 190
+    height: 155
+  IsDragging: 1
+  IsSelected: 0
+  Answers:
+  - Combatir
+  - Unirse al libro
+  - Irse de este lugar
+  AnswerKeys:
+  - Answer_5b0c0152-7742-4760-9ab9-301d6424afd1
+  - Answer_b005a079-1b4e-444c-94cd-e097f127cb93
+  - Answer_e8a6c09c-062b-4474-8e4b-0d126750af96
+  ParentNodes:
+  - {fileID: 6295087103891731877}
+  ChildNodes:
+  - {fileID: 1683345164915612956}
+  - {fileID: -8808052155800576863}
+  - {fileID: 2011702643565772919}
+--- !u!114 &7272657368292283377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38789157e7795244280823d019530045, type: 3}
+  m_Name: Variable Condition Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -198.40051
+    y: 352.4004
+    width: 240
+    height: 160
+  IsDragging: 1
+  IsSelected: 0
+  _variableName: libroFirstTalk
+  _conditionType: 0
+  _boolTargetValue: 0
+  _intTargetValue: 0
+  _floatTargetValue: 0
+  _stringTargetValue: 
+  ParentNodes:
+  - {fileID: -1273808113976320407}
+  TrueChildNode: {fileID: 7004989737295386085}
+  FalseChildNode: {fileID: 6295087103891731877}
+--- !u!114 &7555315198138010728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 150.40024
+    y: 125.999954
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Libro
+    Text: Todo mi trabajo, mis hechizos...TU NO PINTAS NADA AQUI
+    CharacterSprite: {fileID: 0}
+  ParentNodes:
+  - {fileID: 5328373985199432021}
+  ChildNode: {fileID: -8841503810834274688}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: SentenceName_1dcec883-d328-4f13-b704-2a0ca3787930
+  SentenceTextKey: SentenceText_75ed11c4-eae7-46ee-86a1-0fb42bb49060

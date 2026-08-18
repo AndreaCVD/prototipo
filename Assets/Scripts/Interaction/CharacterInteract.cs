@@ -1,7 +1,14 @@
+using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CharacterInteract : MonoBehaviour
 {
+    [Header("Canvas")] //Passar a UI
+    public CanvasGroup grup;
+    [SerializeField] TMP_Text text_interaccion;
+
     [Header("Pivot personaje")]
     [SerializeField] Transform pivot_personaje;
     //[SerializeField] Vector3 interactAreaSize = Vector3.one;
@@ -10,9 +17,15 @@ public class CharacterInteract : MonoBehaviour
     Ray ray;
     [Header("Bools")]
     public bool interaction;
+    public bool text_canvas;
+    public bool canvas_visible;  // ver si presiona para interaccion
+    public  bool isEnemy;  // ver si presiona para interaccion
     void Start()
     {
+        opacidad(0f);
         interaction = false;
+        text_canvas = false;
+        canvas_visible = false;
     }
     void Update()
     {
@@ -33,24 +46,63 @@ public class CharacterInteract : MonoBehaviour
             //Si no es null -> ha encontrado algo que tiene Interactable
             if (hitInfo.transform.gameObject.GetComponent<Interactable>() != null && !interaction)
             {
-                //Bool true asi no se sobreponen otras interacciones
-                interaction = true;    
-                
-                //Devuelve Obj que tiene Interactable
-                //Debug.Log(hitInfo.transform.gameObject.GetComponent<Interactable>());
-                interactable = hitInfo.transform.gameObject.GetComponent<Interactable>();
+                if (!text_canvas)
+                {
+                    text_canvas=true;
+                    textCanva(hitInfo.transform.gameObject);
+                }
+                //clicar boton para interaccionar
+                //Interaccion
+                canvas_visible = Input.GetKeyDown(KeyCode.P);
+                if (isEnemy)
+                {
+                    Cursor.visible = true;
+                    Debug.Log("Activar dialogo");
 
-                interactable.DetectObj(hitInfo.transform.gameObject);
+                    //Bool true asi no se sobreponen otras interacciones
+                    interaction = true;
+
+                    //Devuelve Obj que tiene Interactable
+                    interactable = hitInfo.transform.gameObject.GetComponent<Interactable>();
+
+                    interactable.DetectObj(hitInfo.transform.gameObject);
                     
+                }
+
+                opacidad(1f);
+                if (canvas_visible) //Si se clica el boton
+                {
+                    Cursor.visible = true;
+                    Debug.Log("Activar dialogo");
+
+                    //Bool true asi no se sobreponen otras interacciones
+                    interaction = true;
+
+                    //Devuelve Obj que tiene Interactable
+                    interactable = hitInfo.transform.gameObject.GetComponent<Interactable>();
+
+                    interactable.DetectObj(hitInfo.transform.gameObject);
+                }  
 
             }
-                       
+        
                 //Debug.Log("No tiene Ineteractable");
             
         }
-        else if(interaction) //Cuando el Raycast no detecte nada
+        else  //Cuando el Raycast no detecte nada
         {
-            interaction = false; //Volvemos a poner bool falso
+            if (text_canvas)
+                text_canvas = false;
+
+            if (Cursor.visible)
+                Cursor.visible = false;
+
+            opacidad(0f);
+            if (interaction)
+                interaction = false; //Volvemos a poner bool falso
+
+            if (isEnemy)
+                isEnemy = false;
         }
             //foreach (Collider c in colliders)
             //{
@@ -64,5 +116,36 @@ public class CharacterInteract : MonoBehaviour
             //    }
             //} 
         
+    }
+    void opacidad(float nueva_opacidad)
+    {
+        grup.alpha = Mathf.Lerp(0f, nueva_opacidad, 5f);
+    }
+    void textCanva(GameObject obj)
+    {
+        switch (obj.tag)
+        {
+            case "Enemy":
+                isEnemy = true;
+                break;
+            case "Interact_Scene":
+                text_interaccion.text = "P - Inspeccionar";
+                break;
+            case "NPC":
+                text_interaccion.text = "P - para hablar";
+                break;
+            case "Cofre":
+                text_interaccion.text = "P - Abrir Cofre ";
+                break;
+            case "Puerta":
+                text_interaccion.text = "P - Abrir Puerta";
+                break;
+            case "PuertaMaestra":
+                text_interaccion.text = "P - Abrir Puerta Maestra";
+                break;
+            default:
+                //Debug.Log("No hay nada");
+                break;
+        }
     }
 }

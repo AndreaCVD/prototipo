@@ -1,0 +1,28 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="inventory-grid" class="inventory-grid" style="justify-content: space-evenly; display: flex;">
+        <ui:VisualElement name="slot-0" class="inv-slot">
+            <ui:VisualElement name="slot-0-icon" class="inv-slot__icon" />
+            <ui:Label name="slot-0-badge" text="0" class="inv-slot__badge" />
+        </ui:VisualElement>
+        <ui:VisualElement name="slot-1" class="inv-slot">
+            <ui:VisualElement name="slot-1-icon" class="inv-slot__icon" />
+            <ui:Label name="slot-1-badge" text="0" class="inv-slot__badge" />
+        </ui:VisualElement>
+        <ui:VisualElement name="slot-2" class="inv-slot">
+            <ui:VisualElement name="slot-2-icon" class="inv-slot__icon" />
+            <ui:Label name="slot-2-badge" text="0" class="inv-slot__badge" />
+        </ui:VisualElement>
+        <ui:VisualElement name="slot-3" class="inv-slot">
+            <ui:VisualElement name="slot-3-icon" class="inv-slot__icon" />
+            <ui:Label name="slot-3-badge" text="0" class="inv-slot__badge" />
+        </ui:VisualElement>
+        <ui:VisualElement name="slot-4" class="inv-slot">
+            <ui:VisualElement name="slot-4-icon" class="inv-slot__icon" />
+            <ui:Label name="slot-4-badge" text="0" class="inv-slot__badge" />
+        </ui:VisualElement>
+        <ui:VisualElement name="slot-5" class="inv-slot">
+            <ui:VisualElement name="slot-5-icon" class="inv-slot__icon" />
+            <ui:Label name="slot-5-badge" text="0" class="inv-slot__badge" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

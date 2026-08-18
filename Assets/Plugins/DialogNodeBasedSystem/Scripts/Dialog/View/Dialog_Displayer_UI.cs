@@ -23,8 +23,18 @@ namespace cherrydev
         {
             _uiDocument = GameObject.Find("UI_HUB").GetComponent<UIDocument>();
             if (_uiDocument == null) Debug.LogError("No se encontró UIDocument en UI_HUB");
-        }
 
+
+        }
+        //void Update()
+        //{
+        //    if ( _uiDocument == null)
+        //    {
+        //        Debug.Log("no esta el doc de ui");
+        //        _uiDocument = GameObject.Find("UI_HUB").GetComponent<UIDocument>();                
+        //    }
+
+        //}
         private void OnEnable()
         {
             var root = _uiDocument.rootVisualElement;

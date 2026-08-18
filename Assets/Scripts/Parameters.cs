@@ -10,7 +10,8 @@ public enum PersonajesStats
     Inteligencia,   //1
     Carisma,        //2
     Constitucion,   //3
-    ClaseArmadura   //4
+    ClaseArmadura,  //4
+    Max_Vida        //5
 }
 
 //para poder editarlo en el editor de unity le ponemos serializable
@@ -29,7 +30,7 @@ public class ValueContainer
 [Serializable]
 public class ValueBlock
 {
-    private const int persStatsNum = 4;
+    private const int persStatsNum = 5;
     public List<ValueContainer> values;
     public void InitPersonaje()
     {
@@ -53,12 +54,21 @@ public class ValueBlock
 public class Parameters : ScriptableObject
 {
     public string namePers;
+    public bool enamorado;
     public ValueBlock stats;
     public Bolsa Inventario;
     //public List<A> X;
 
     public GameObject modelPrefab;
-    public Sprite art;
+    public Sprite idle;
+    //public Sprite herido;
+    //public Sprite ataque;
+    ////estados
+    //public Sprite atrapado;
+    //public Sprite enfadado;
+    //public Sprite asustado;
+    //public Sprite enamorado_1, enamorado_2, enamorado_3;
+
     //public GameObject variantModel;
 
     [ContextMenu("Init")]
@@ -66,6 +76,7 @@ public class Parameters : ScriptableObject
     {
         stats = new ValueBlock();
         stats.InitPersonaje();
+
     }
 
 }

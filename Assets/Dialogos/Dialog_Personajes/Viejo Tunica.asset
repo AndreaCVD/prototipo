@@ -15,8 +15,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1662.4006
-    y: -154.79999
+    x: 1627.999
+    y: 18.000671
     width: 190
     height: 135
   IsDragging: 1
@@ -47,8 +47,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 227.99902
-    y: 356.4006
+    x: 454.39966
+    y: 622.8011
     width: 190
     height: 135
   IsDragging: 1
@@ -58,7 +58,7 @@ MonoBehaviour:
     Text: "...Si quieres practicar tienes ese \xE1rbol redondo."
     CharacterSprite: {fileID: 21300000, guid: ba9938e5f4d041b40ac8c5f6316c4210, type: 3}
   ParentNodes:
-  - {fileID: 1436545033789331739}
+  - {fileID: -5505563987510042894}
   ChildNode: {fileID: 5573192301709980262}
   _isExternalFunc: 0
   _externalFunctionName: 
@@ -79,17 +79,17 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 367.9991
-    y: 62.80008
+    x: 333.59875
+    y: 235.60027
     width: 190
     height: 135
   IsDragging: 1
-  IsSelected: 0
+  IsSelected: 1
   _sentence:
     CharacterName: ???
     Text: "Y tu... Porfin te has decidido a venir, eh, que ya tardabas. F\xEDjate
       que hasta me iba a poner yo y todo. "
-    CharacterSprite: {fileID: 21300000, guid: ba9938e5f4d041b40ac8c5f6316c4210, type: 3}
+    CharacterSprite: {fileID: 21300000, guid: e5cf9c767afef7f47b63adde7fea7ed6, type: 3}
   ParentNodes:
   - {fileID: 4293345670854002962}
   ChildNode: {fileID: 8023769765697480976}
@@ -97,6 +97,41 @@ MonoBehaviour:
   _externalFunctionName: 
   CharacterNameKey: SentenceName_e253742b-8e28-4f47-92e0-81dd3c9710e3
   SentenceTextKey: SentenceText_2ca42b92-57ba-4619-9544-2fb1aa67a5b3
+--- !u!114 &-5505563987510042894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1717f3c6dba9fa40844ddacac301510, type: 3}
+  m_Name: Answer Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 236.79993
+    y: 689.20013
+    width: 190
+    height: 155
+  IsDragging: 1
+  IsSelected: 0
+  Answers:
+  - "Pelear con \xE9l"
+  - "Ir a entrenar con el \xE1rbol"
+  - Irse
+  AnswerKeys:
+  - Answer_2dfb1ab0-7e5d-4591-b3a9-e7e35eff5ca6
+  - Answer_d804d7e1-a248-4385-b506-32450f9ddb3d
+  - Answer_3182b598-1a0c-4d2f-9969-909e85bbc95b
+  ParentNodes:
+  - {fileID: 1436545033789331739}
+  ChildNodes:
+  - {fileID: -1391876497512673634}
+  - {fileID: -7759637944755910918}
+  - {fileID: 5573192301709980262}
 --- !u!114 &-4619645803194315248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,8 +147,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 821.59674
-    y: 46.00009
+    x: 787.19635
+    y: 218.80028
     width: 190
     height: 155
   IsDragging: 1
@@ -147,8 +182,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1081.5996
-    y: 159.59995
+    x: 1047.198
+    y: 332.40012
     width: 190
     height: 135
   IsDragging: 1
@@ -180,8 +215,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1653.6011
-    y: -7.6000977
+    x: 1619.1997
+    y: 165.20009
     width: 190
     height: 135
   IsDragging: 1
@@ -212,8 +247,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -693.60175
-    y: 271.6003
+    x: -728.00165
+    y: 444.40076
     width: 190
     height: 80
   IsDragging: 1
@@ -237,8 +272,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -288.0022
-    y: -5.2000427
+    x: -322.401
+    y: 167.60014
     width: 210
     height: 155
   IsDragging: 1
@@ -252,6 +287,38 @@ MonoBehaviour:
   ParentNodes:
   - {fileID: 1485920470349927989}
   ChildNode: {fileID: 7821905148948879972}
+--- !u!114 &-1391876497512673634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 223.1999
+    y: 511.60004
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Yusseif
+    Text: "\xBFQuieres practicar? Muy bien."
+    CharacterSprite: {fileID: 21300000, guid: ba9938e5f4d041b40ac8c5f6316c4210, type: 3}
+  ParentNodes:
+  - {fileID: -5505563987510042894}
+  ChildNode: {fileID: 2199450240286703569}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: SentenceName_68c76cc9-f0a3-4680-b2b7-cfaa42a79a96
+  SentenceTextKey: 
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -285,6 +352,9 @@ MonoBehaviour:
   - {fileID: -7759637944755910918}
   - {fileID: 8273924187952059092}
   - {fileID: 2816176419974027607}
+  - {fileID: -5505563987510042894}
+  - {fileID: -1391876497512673634}
+  - {fileID: 2199450240286703569}
   VariablesConfig: {fileID: 11400000, guid: 61133ed5c4a3f7d488a61fd3977e33ab, type: 2}
   _localizationTableName: Viejo Tunica
   _characterNamesLocalizationName: 
@@ -306,8 +376,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1071.1978
-    y: 78.000336
+    x: 1036.7964
+    y: 250.80052
     width: 190
     height: 80
   IsDragging: 1
@@ -332,8 +402,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -4.0010986
-    y: 352.40073
+    x: -38.40085
+    y: 525.20123
     width: 190
     height: 135
   IsDragging: 1
@@ -344,7 +414,7 @@ MonoBehaviour:
     CharacterSprite: {fileID: 21300000, guid: ba9938e5f4d041b40ac8c5f6316c4210, type: 3}
   ParentNodes:
   - {fileID: 1485920470349927989}
-  ChildNode: {fileID: -7759637944755910918}
+  ChildNode: {fileID: -5505563987510042894}
   _isExternalFunc: 0
   _externalFunctionName: 
   CharacterNameKey: SentenceName_68c76cc9-f0a3-4680-b2b7-cfaa42a79a96
@@ -364,8 +434,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -335.20294
-    y: 195.59995
+    x: -369.60168
+    y: 368.40015
     width: 240
     height: 160
   IsDragging: 1
@@ -395,8 +465,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1062.3982
-    y: -74.79999
+    x: 1027.9971
+    y: 98.0002
     width: 190
     height: 135
   IsDragging: 1
@@ -412,6 +482,32 @@ MonoBehaviour:
   _externalFunctionName: 
   CharacterNameKey: SentenceName_91ccb710-7fa3-461b-91e0-4714cd3e5f28
   SentenceTextKey: SentenceText_edd821af-c10d-4356-b932-e58895ec239c
+--- !u!114 &2199450240286703569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f4b3c64aaf434ea0df52154c1c7680, type: 3}
+  m_Name: External Function Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 317.5999
+    y: 405.20004
+    width: 190
+    height: 80
+  IsDragging: 1
+  IsSelected: 0
+  _functionName: Combate
+  _description: 
+  ParentNodes:
+  - {fileID: -1391876497512673634}
+  ChildNode: {fileID: 5573192301709980262}
 --- !u!114 &2816176419974027607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -427,8 +523,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 2122.4045
-    y: -159.6
+    x: 2088.0012
+    y: 13.200623
     width: 190
     height: 135
   IsDragging: 1
@@ -459,8 +555,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1347.2024
-    y: -42.00006
+    x: 1312.7993
+    y: 130.80013
     width: 240
     height: 160
   IsDragging: 1
@@ -490,8 +586,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 165.60034
-    y: 66.8002
+    x: 131.19995
+    y: 239.60039
     width: 190
     height: 135
   IsDragging: 1
@@ -500,7 +596,7 @@ MonoBehaviour:
     CharacterName: ???
     Text: "Tienes que buscar un grupo de tres aventureros que se qued\xF3 atrapado
       buscando algo. Una banda de in\xFAtiles, vaya. "
-    CharacterSprite: {fileID: 21300000, guid: ba9938e5f4d041b40ac8c5f6316c4210, type: 3}
+    CharacterSprite: {fileID: 21300000, guid: e5cf9c767afef7f47b63adde7fea7ed6, type: 3}
   ParentNodes:
   - {fileID: 7821905148948879972}
   ChildNode: {fileID: -6479709222405977522}
@@ -523,8 +619,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1455.9988
-    y: 224.40024
+    x: 1421.5962
+    y: 397.20038
     width: 190
     height: 80
   IsDragging: 1
@@ -552,8 +648,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 497.5992
-    y: 379.60062
+    x: 518.39874
+    y: 474.80103
     width: 190
     height: 80
   IsDragging: 1
@@ -562,6 +658,8 @@ MonoBehaviour:
   _description: 
   ParentNodes:
   - {fileID: -7759637944755910918}
+  - {fileID: 2199450240286703569}
+  - {fileID: -5505563987510042894}
   ChildNode: {fileID: 0}
 --- !u!114 &7821905148948879972
 MonoBehaviour:
@@ -578,8 +676,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -56.000366
-    y: 66.00021
+    x: -90.400085
+    y: 238.8004
     width: 190
     height: 135
   IsDragging: 1
@@ -610,8 +708,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 584.7962
-    y: 63.60013
+    x: 550.39606
+    y: 236.40031
     width: 190
     height: 135
   IsDragging: 1
@@ -643,8 +741,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1907.2058
-    y: -154.79999
+    x: 1872.8062
+    y: 18.000671
     width: 190
     height: 135
   IsDragging: 1

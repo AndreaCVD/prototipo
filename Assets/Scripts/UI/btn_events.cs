@@ -30,6 +30,8 @@ public class btn_events : MonoBehaviour
 
 
         root.Q<Button>("start_btn").clicked += () => ChangeSceneUI("Nivel_0");
+        root.Q<Button>("start_menu_btn").clicked += () => ChangeSceneUI("Start_MainMenu");
+        root.Q<Button>("resume_btn").clicked += () => ChangeSceneUI("resumeGame");
         root.Q<Button>("options_btn").clicked += ShowOptions;
         root.Q<Button>("exit_btn").clicked += () =>
         {
@@ -98,6 +100,14 @@ public class btn_events : MonoBehaviour
     public void ChangeSceneUI(string sceneName)
     {
         if (pantalla != null) pantalla.UnTint();
-        SceneManager.LoadScene(sceneName);
+        if (sceneName == "resumeGame")
+        {
+            AsyncOperation unloadOp = SceneManager.UnloadSceneAsync("Pause_Menu");
+        }
+        else
+        {
+            SceneManager.LoadScene(sceneName);
+        }
+
     }
 }

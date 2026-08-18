@@ -8,21 +8,33 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4056358053625070472, guid: 73907372ce105224293386482d6c65dd, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0.051985003
+      objectReference: {fileID: 0}
+    - target: {fileID: 4056358053625070472, guid: 73907372ce105224293386482d6c65dd, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0.0394375
+      objectReference: {fileID: 0}
+    - target: {fileID: 4056358053625070472, guid: 73907372ce105224293386482d6c65dd, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0.10943389
+      objectReference: {fileID: 0}
     - target: {fileID: 5313873141152896601, guid: 73907372ce105224293386482d6c65dd, type: 3}
       propertyPath: m_Name
-      value: CameraTarget
+      value: CameraTarget Variant
       objectReference: {fileID: 0}
     - target: {fileID: 8832347403372551288, guid: 73907372ce105224293386482d6c65dd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -30.3
       objectReference: {fileID: 0}
     - target: {fileID: 8832347403372551288, guid: 73907372ce105224293386482d6c65dd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 26.1
       objectReference: {fileID: 0}
     - target: {fileID: 8832347403372551288, guid: 73907372ce105224293386482d6c65dd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -30.3
       objectReference: {fileID: 0}
     - target: {fileID: 8832347403372551288, guid: 73907372ce105224293386482d6c65dd, type: 3}
       propertyPath: m_LocalRotation.w

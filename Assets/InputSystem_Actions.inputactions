@@ -990,6 +990,34 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "Interact",
+            "id": "9c37c866-2213-4056-af37-adff1d377050",
+            "actions": [
+                {
+                    "name": "Interact",
+                    "type": "Button",
+                    "id": "fc53f3f3-f8d3-442a-b45e-ade85b4f7897",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "Press",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "9cc932fe-c5d6-432a-bb35-31bfaa95df57",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [

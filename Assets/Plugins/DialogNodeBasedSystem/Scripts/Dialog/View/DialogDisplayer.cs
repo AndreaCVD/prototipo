@@ -37,6 +37,10 @@ namespace cherrydev
             _dialogBehaviour.LanguageChanged += HandleLanguageChanged;
 #endif
         }
+        void OnDestroy()
+        {
+            DisableDialogPanel();
+        }
 
         private void OnDisable()
         {

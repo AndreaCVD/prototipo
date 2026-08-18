@@ -15,6 +15,11 @@ MonoBehaviour:
   m_GroupName: Localization-Assets-Shared
   m_GUID: 47f921677bea8b246adf25729ebe1bb4
   m_SerializeEntries:
+  - m_GUID: 06b883403fac90249a6b8d1df4f60cbc
+    m_Address: Assets/Localization/DebugCombat/DebugCombat Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 0e2128e9652d23a4d93569f4522f9c2f
     m_Address: Assets/Localization/Nimrodel/Nimrodel Shared Data.asset
     m_ReadOnly: 1
@@ -27,6 +32,16 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 1b22461cddf1c434ba221e09e37c647b
     m_Address: Assets/Localization/Nim/Nim Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 502a4f02b9dcb124596702e6c4e00c1a
+    m_Address: Assets/Localization/Entrada_Mazmorra/Entrada_Mazmorra Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5a8d7c0c6a638904b9d9119bd1818719
+    m_Address: Assets/Localization/Pista Cofre Lava/Pista Cofre Lava Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -65,8 +80,8 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: a71f8ed6b3a3fb84fbd035b0efa114fa
-    m_Address: Assets/Localization/test/test Shared Data.asset
+  - m_GUID: a9a8a49134c698441850a8b70f5ecd02
+    m_Address: Assets/Localization/Tienda Viejo/Tienda Viejo Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -75,18 +90,8 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: bfa41515759b64a4bbfd0fa683c6097d
-    m_Address: Assets/Localization/Dialogo Prueva/Dialogo Prueva Shared Data.asset
-    m_ReadOnly: 1
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d922aef77150fda4d9b79c911ee605ed
     m_Address: Assets/Localization/Cofre/Cofre Shared Data.asset
-    m_ReadOnly: 1
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: e49352c0d5424b2428d61347135a0f1a
-    m_Address: Assets/Localization/Cube_Prueva/Cube_Prueva Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

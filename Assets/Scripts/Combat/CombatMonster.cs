@@ -2,6 +2,7 @@ using System.Reflection;
 using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class CombatMonster : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class CombatMonster : MonoBehaviour
         // 2 - Mecanica cambiada/obsoleta no quitada por falta de tiempo
     Parameters player; //El que tiene el script (todos)
     Save_Stats guardado; //Enviar las estats
+    [Header("Img combate")]
     [SerializeField] Image imagenPers; 
     public Int2Val HP;
     public int damage;
@@ -24,6 +26,13 @@ public class CombatMonster : MonoBehaviour
     //private int intelChanged;
     //private int carismaChanged;
     private int caChanged;
+    [Header("Canvas y textos")]
+    [SerializeField] Canvas canvas_enemy;
+    [SerializeField] Canvas canvas_player;
+    [SerializeField] TMP_Text text_enemy;
+    [SerializeField] TMP_Text text_player;
+    [SerializeField] Animator anim;
+
 
     private void Start()
     {
@@ -186,6 +195,7 @@ public class CombatMonster : MonoBehaviour
     public void TakeDamage(int damage)
     { 
         HP.current -= damage;
+        UI_damage(damage);
 
         player.stats.values[3].value -= damage;
 
@@ -232,6 +242,7 @@ public class CombatMonster : MonoBehaviour
     public void TakeDamage(int damage, bool acabarCombate)
     { 
         HP.current -= damage;
+        UI_damage(damage);
 
         player.stats.values[3].value -= damage;
 
@@ -311,4 +322,20 @@ public class CombatMonster : MonoBehaviour
         }
     }
 
+    void UI_damage(int damage)
+    {
+        if (player.namePers == "Prota")
+        {
+            text_player.text = "+" + damage.ToString();
+            anim.SetTrigger("player");
+
+        }
+        else
+        {
+            text_enemy.text = "+" + damage.ToString();
+            anim.SetTrigger("enemy");
+        }
+        //anim.SetInteger("Damage", 2);
+
+    }
 }

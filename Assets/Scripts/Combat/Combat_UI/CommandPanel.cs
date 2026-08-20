@@ -46,8 +46,7 @@ public class CommandPanel : MonoBehaviour
     //contadores inventory
     private int llaves, llaveMaestra, pocionVida, pocionLava, monedas;
 
-    private TextField info_tirada;
-    private Label info_result;
+    private Label info_tirada, info_result;
 
     public string armadura, nom_ataque;
     private int stat, veces_tirada, MAX_vida;
@@ -120,10 +119,13 @@ public class CommandPanel : MonoBehaviour
         tirada_critica = root.Q<VisualElement>("tirada-CRITICA");
         tirada_armadura = root.Q<VisualElement>("tirada-ARMADURA");
         tirada_fatidica = root.Q<VisualElement>("tirada-FATIDICA");
+        
         //texto tirada
-        info_tirada = root.Q("info-tirada").Q<TextField>();
-        info_tirada.label = " ";
+        info_tirada = root.Q("info-tirada").Q<Label>();
+        info_tirada.text = " ";
         info_result = root.Q("resultado-info").Q<Label>();
+        info_result.style.visibility = Visibility.Hidden;
+
 
         //info_tirada.label = " ";
         // eventos
@@ -190,15 +192,15 @@ public class CommandPanel : MonoBehaviour
         {
             case 0: //fuerza
                 string f = protagonista.stats.Get(PersonajesStats.Fuerza).ToString();
-                info_tirada.label = "+" + f + "(fuerza)";
+                info_tirada.text = "+" + f + "(fuerza)";
                 break;
             case 1:// inteligencia
                 string i = protagonista.stats.Get(PersonajesStats.Inteligencia).ToString();
-                info_tirada.label = "+" + i + "(intel)";
+                info_tirada.text = "+" + i + "(intel)";
                 break;
             case 2:// carisma
                 string c = protagonista.stats.Get(PersonajesStats.Carisma).ToString();
-                info_tirada.label = "+" + c + "(carisma)";
+                info_tirada.text = "+" + c + "(carisma)";
                 break;
             default:
                 break;
@@ -206,7 +208,9 @@ public class CommandPanel : MonoBehaviour
     }
     void Resultado_Tirada()
     {
-        switch(armadura)
+        info_result.style.visibility = Visibility.Visible;
+
+        switch (armadura)
         {
             case "si":
                 info_result.text = "Bien hecho";
@@ -392,13 +396,20 @@ public class CommandPanel : MonoBehaviour
     // --- RESETEAR TIRADA ---
     void Resetear_Valores()
     {
-        info_tirada.label = " ";
+        info_tirada.text = " ";
+        StartCoroutine(ChangeText(2)); //sacaer el mensaje de "Bien hecho"
 
         nom_ataque = " ";
         stat = 10;
         armadura = " ";
     }
-    
+    IEnumerator ChangeText(int time)
+    {
+        yield return new WaitForSeconds(time);
+        info_result.style.visibility = Visibility.Hidden;
+
+    }
+
     // --- NEXT ACTION QUE TIENE QUE HACER EL PLAYER ---
     public void NextAction() 
     {
@@ -474,6 +485,9 @@ public class CommandPanel : MonoBehaviour
         commandManager.EnemigoInmovilizado(true, 1);
         btnINMOV.SetEnabled(false); //usar solo una vez por partida
 
+        info_result.style.visibility = Visibility.Visible;
+        info_result.text = "Enemigo Inmovilizado";
+
         Back();
         //tirar dos veces, enemigo inmovil
     }
@@ -486,12 +500,19 @@ public class CommandPanel : MonoBehaviour
             escudo = true;
             commandManager.Modificar_CA(2);
             btnESCUDO.SetEnabled(false);
+
+            info_result.style.visibility = Visibility.Visible;
+            info_result.text = "Escudo activado";
+
         }
         else
         {
             escudo = false;
             commandManager.Modificar_CA(-2);
             btnESCUDO.SetEnabled(true);
+
+            info_result.style.visibility = Visibility.Visible;
+            info_result.text = "Escudo desactivado";
         }
     }
 
@@ -513,6 +534,9 @@ public class CommandPanel : MonoBehaviour
         }
         else if (armadura == "no")
         {
+            info_result.style.visibility = Visibility.Visible;
+            info_result.text = "CA no superada";
+
             Resetear_Valores();
             Back();
             // Fallas enamoramiento == se enfada
@@ -529,6 +553,8 @@ public class CommandPanel : MonoBehaviour
                 StartCoroutine(Enamorado(30));
                 commandManager.enemigoEnamorado();
             }
+            info_result.style.visibility = Visibility.Visible;
+            info_result.text = "Enemigo enamorado no te ataca";
             Resetear_Valores();
             Back();
             commandManager.NextTurn();

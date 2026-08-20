@@ -46,6 +46,8 @@ public class CommandPanel : MonoBehaviour
     //contadores inventory
     private int llaves, llaveMaestra, pocionVida, pocionLava, monedas;
 
+    private TextField info_tirada;
+
     public string armadura, nom_ataque;
     private int stat, veces_tirada, MAX_vida;
     
@@ -117,6 +119,9 @@ public class CommandPanel : MonoBehaviour
         tirada_critica = root.Q<VisualElement>("tirada-CRITICA");
         tirada_armadura = root.Q<VisualElement>("tirada-ARMADURA");
         tirada_fatidica = root.Q<VisualElement>("tirada-FATIDICA");
+        //texto tirada
+        info_tirada = root.Q("info-tirada").Q<TextField>();
+        info_tirada.label = " ";
         // eventos
         btnFUE.clicked += Menu_Fuerza;
             btnDAGA.clicked += Daga;
@@ -170,7 +175,31 @@ public class CommandPanel : MonoBehaviour
         btnITEM.clicked -= Abrir_Inventario;
         btnRun.clicked -= Huir;
     }
-    
+    // --- INFO TIRADA ---
+    public void Texto_Tirada()
+    {
+        //info_tirada.style.display = DisplayStyle.Flex;
+
+        //info_tirada.label = " ";
+        //info_tirada.value = "";
+
+        if (stat == 0)// si es fuerza
+        {
+            string aux = protagonista.stats.Get(PersonajesStats.Fuerza).ToString();
+            info_tirada.label = "+" + aux + "(fuerza)";
+        }
+        else if (stat == 1)// inteligencia
+        {
+            string aux = protagonista.stats.Get(PersonajesStats.Inteligencia).ToString();
+            info_tirada.label = "+" + aux + "(intel)";
+        }
+        else /*if (stat == 1)*/// carisma
+        {
+            string aux = protagonista.stats.Get(PersonajesStats.Carisma).ToString();
+            info_tirada.label = "+" + aux + "(carisma)";
+        }
+    }
+    //fieldLIFE.value = num;
     // --- VOLVER AL MENU PRINCIPAL ---
     public void Back()
     {
@@ -226,8 +255,6 @@ public class CommandPanel : MonoBehaviour
         }
         else
         {
-
-
             int AC_superada = commandManager.Armadura(stat, 20);
             if (AC_superada == 2)
             {
@@ -332,6 +359,8 @@ public class CommandPanel : MonoBehaviour
     // --- RESETEAR TIRADA ---
     void Resetear_Valores()
     {
+        info_tirada.label = " ";
+
         nom_ataque = " ";
         stat = 10;
         armadura = " ";
@@ -371,6 +400,7 @@ public class CommandPanel : MonoBehaviour
         fuerza_options.style.display = DisplayStyle.Flex;
 
         stat = 0; //Stat de fuerza = 0
+        Texto_Tirada();
     }
     public void Daga()
     {
@@ -404,6 +434,7 @@ public class CommandPanel : MonoBehaviour
         intel_options.style.display = DisplayStyle.Flex;
 
         stat = 1; //Stat de inteligencia = 1
+        Texto_Tirada();
     }
     public void Inmovilizar()
     {
@@ -437,6 +468,7 @@ public class CommandPanel : MonoBehaviour
         options_menu.style.display = DisplayStyle.None;
         caris_options.style.display = DisplayStyle.Flex;
         stat = 2; //Stat de carisma = 2
+        Texto_Tirada();
     }
     public void Enamorar()
     {

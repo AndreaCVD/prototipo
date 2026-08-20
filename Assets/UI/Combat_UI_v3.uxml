@@ -1,0 +1,99 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/Styles/general_colors.uss?fileID=7433441132597879392&amp;guid=ad6a76f9ae4c3674d898b1a5433c7bf6&amp;type=3#general_colors" />
+    <Style src="project://database/Assets/UI/Styles/combat_ui.uss?fileID=7433441132597879392&amp;guid=8ff3f6b22ac87d4459f9b3901a7eab08&amp;type=3#combat_ui" />
+    <ui:VisualElement name="combat-screen" class="combat-screen" style="display: flex; background-color: rgba(113, 113, 113, 0);">
+        <ui:VisualElement name="combat-top" class="combat-top" style="height: 80%;">
+            <ui:VisualElement name="player-zone" class="combat-zone combat-zone--player">
+                <ui:VisualElement name="player-sprite" class="combat-sprite" style="-unity-text-align: upper-center;" />
+                <ui:VisualElement name="player-hp" class="combat-hp">
+                    <ui:Label text="HP" class="combat-hp__label" />
+                    <ui:VisualElement class="combat-hp__bar" style="width: 100%; flex-direction: row;">
+                        <ui:VisualElement name="player-hp-fill" class="combat-hp__fill" style="width: 100%;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="dialog-zone" class="combat-dialog" style="height: 320px; top: 0; -unity-text-align: upper-center; align-self: auto; align-items: center;">
+                <ui:Label name="dialog-text" class="combat-dialog__text" />
+                <ui:TextField label="+x (stat)" name="info-tirada" hide-placeholder-on-focus="false" enabled="true" focusable="false" style="background-image: url(&quot;project://database/Assets/Art/Interface/info%20tirada.png?fileID=2800000&amp;guid=61eaee3b769fb574dbd240cfcc127476&amp;type=3#info tirada&quot;); display: flex; top: 53px; flex-direction: row; align-self: auto; padding-top: 1px; padding-right: 1px; padding-bottom: 1px; padding-left: 1px; -unity-font-style: normal; -unity-text-align: middle-center; white-space: nowrap;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="enemy-zone" class="combat-zone combat-zone--enemy">
+                <ui:VisualElement name="enemy-sprite" class="combat-sprite" style="-unity-text-align: upper-center; white-space: normal;" />
+                <ui:VisualElement name="enemy-hp" class="combat-hp">
+                    <ui:Label text="HP" class="combat-hp__label" />
+                    <ui:VisualElement class="combat-hp__bar" style="width: 100%; flex-direction: row;">
+                        <ui:VisualElement name="enemy-hp-fill" class="combat-hp__fill combat-hp__fill--enemy" style="width: 100%;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="combat-menu" class="combat-menu">
+            <ui:VisualElement name="option_menu" class="combat-row" style="display: flex; visibility: visible;">
+                <ui:Button name="btn-FUE" text="Atacar" class="combat_btns combat_btn_color" />
+                <ui:Button name="btn-INT" text="Hechizos" class="combat_btns combat_btn_color" />
+                <ui:Button name="btn-CAR" text="Dialogar" class="combat_btns combat_btn_color" />
+                <ui:Button name="btn-ITEM" text="Bolsa" class="combat_btns combat_btn_color" />
+            </ui:VisualElement>
+            <ui:VisualElement name="atq-FUE" class="combat-row" style="display: none;">
+                <ui:Button name="btn-DAGA" text="Daga - d8" class="combat_btns combat_btn_color" />
+                <ui:Button name="btn-ESPADA" text="Espada - d12" class="combat_btns combat_btn_color" />
+                <ui:Button name="btn-BACK" text="Atras" class="combat_btns items_btn_color" style="display: flex; visibility: visible; overflow: hidden;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="atq-INTEL" class="combat-row" style="display: none;">
+                <ui:Button name="btn-INMOV" text="Inmovilizar - d12" class="combat_btns combat_btn_color" />
+                <ui:Button name="btn-ESCUDO" text="Escudo - d4" class="combat_btns combat_btn_color" style="display: flex;" />
+                <ui:Button name="btn-intelBACK" text="Atras" class="combat_btns items_btn_color" style="display: flex; visibility: visible; overflow: hidden;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="atq-CARISMA" class="combat-row" style="display: none;">
+                <ui:Button name="btn-ENAMORAR" text="Enamorar - d12&#10;" class="combat_btns combat_btn_color" />
+                <ui:Button name="btn-INTIMIDAR" text="Intimidar - d12" selectable="true" class="combat_btns combat_btn_color" style="display: flex;" />
+                <ui:Button name="btn-carisBACK" text="Atras" class="combat_btns items_btn_color" style="display: flex; visibility: visible; overflow: hidden;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="inventory-grid" class="inventory-grid" style="justify-content: space-evenly; display: none; flex-direction: row; background-color: rgb(68, 28, 4); -unity-background-image-tint-color: rgb(68, 28, 4); padding-top: 4px; padding-right: 4px; padding-bottom: 4px; padding-left: 4px; border-top-left-radius: 8px; border-top-right-radius: 8px; border-bottom-right-radius: 8px; border-bottom-left-radius: 8px; align-items: center;">
+                <ui:VisualElement name="slot-0" class="inv-slot" style="background-color: rgb(100, 65, 52); width: 80px; height: 80px; margin-right: 4px; border-top-left-radius: 6px; border-top-right-radius: 6px; border-bottom-right-radius: 6px; border-bottom-left-radius: 6px;">
+                    <ui:VisualElement name="slot-0-icon" class="inv-slot__icon" style="width: 70px; height: 70px; align-self: center; justify-content: flex-start; align-content: flex-start;" />
+                    <ui:Label name="slot-0-badge" text="0" class="inv-slot__badge" style="padding-top: 2px; padding-right: 2px; padding-bottom: 2px; padding-left: 2px; position: absolute; top: 2px; right: 2px; color: rgb(68, 28, 4); background-color: rgb(255, 237, 200); border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="slot-1" class="inv-slot" style="background-color: rgb(100, 65, 52); width: 80px; height: 80px; margin-right: 4px; border-top-left-radius: 6px; border-top-right-radius: 6px; border-bottom-right-radius: 6px; border-bottom-left-radius: 6px;">
+                    <ui:VisualElement name="slot-1-icon" class="inv-slot__icon" style="width: 70px; height: 70px; align-self: center; justify-content: flex-start; align-content: flex-start;" />
+                    <ui:Label name="slot-1-badge" text="0" class="inv-slot__badge" style="padding-top: 2px; padding-right: 2px; padding-bottom: 2px; padding-left: 2px; position: absolute; top: 2px; right: 2px; color: rgb(68, 28, 4); background-color: rgb(255, 237, 200); border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px;" />
+                </ui:VisualElement>
+                <ui:Button name="btn-slot-2" style="padding-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0;">
+                    <ui:VisualElement name="slot-2" class="inv-slot" style="background-color: rgb(137, 44, 8); width: 80px; height: 80px; margin-right: 4px; border-top-left-radius: 6px; border-top-right-radius: 6px; border-bottom-right-radius: 6px; border-bottom-left-radius: 6px;">
+                        <ui:VisualElement name="slot-2-icon" class="inv-slot__icon" style="width: 70px; height: 70px; align-self: center; justify-content: flex-start; align-content: flex-start;" />
+                        <ui:Label name="slot-2-badge" text="0" class="inv-slot__badge" style="padding-top: 2px; padding-right: 2px; padding-bottom: 2px; padding-left: 2px; position: absolute; top: 2px; right: 2px; color: rgb(68, 28, 4); background-color: rgb(255, 237, 200); border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px;" />
+                    </ui:VisualElement>
+                </ui:Button>
+                <ui:VisualElement name="slot-3" class="inv-slot" style="background-color: rgb(100, 65, 52); width: 80px; height: 80px; margin-right: 4px; border-top-left-radius: 6px; border-top-right-radius: 6px; border-bottom-right-radius: 6px; border-bottom-left-radius: 6px;">
+                    <ui:VisualElement name="slot-3-icon" class="inv-slot__icon" style="width: 70px; height: 70px; align-self: center; justify-content: flex-start; align-content: flex-start;" />
+                    <ui:Label name="slot-3-badge" text="0" class="inv-slot__badge" style="padding-top: 2px; padding-right: 2px; padding-bottom: 2px; padding-left: 2px; position: absolute; top: 2px; right: 2px; color: rgb(68, 28, 4); background-color: rgb(255, 237, 200); border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="slot-4" class="inv-slot" style="background-color: rgb(99, 65, 51); width: 80px; height: 80px; margin-right: 4px; border-top-left-radius: 6px; border-top-right-radius: 6px; border-bottom-right-radius: 6px; border-bottom-left-radius: 6px;">
+                    <ui:VisualElement name="slot-4-icon" class="inv-slot__icon" style="width: 70px; height: 70px; align-self: center; justify-content: flex-start; align-content: flex-start;" />
+                    <ui:Label name="slot-4-badge" text="0" class="inv-slot__badge" style="padding-top: 2px; padding-right: 2px; padding-bottom: 2px; padding-left: 2px; position: absolute; top: 2px; right: 2px; color: rgb(68, 28, 4); background-color: rgb(255, 237, 200); border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px;" />
+                </ui:VisualElement>
+                <ui:VisualElement name="slot-5" class="inv-slot" style="background-color: rgb(137, 44, 8); width: 80px; height: 80px; margin-right: 4px; border-top-left-radius: 6px; border-top-right-radius: 6px; border-bottom-right-radius: 6px; border-bottom-left-radius: 6px; display: none;">
+                    <ui:VisualElement name="slot-5-icon" class="inv-slot__icon" style="width: 70px; height: 70px; align-self: center; justify-content: flex-start; align-content: flex-start;" />
+                    <ui:Label name="slot-5-badge" text="0" class="inv-slot__badge" style="padding-top: 2px; padding-right: 2px; padding-bottom: 2px; padding-left: 2px; position: absolute; top: 2px; right: 2px; color: rgb(68, 28, 4); background-color: rgb(255, 237, 200); border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px;" />
+                </ui:VisualElement>
+                <ui:Button name="btn-ITEM-BACK" text="Atras" class="combat_btns items_btn_color" style="display: flex; visibility: visible; overflow: hidden;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="tirada-ARMADURA" class="combat-row" style="display: none;">
+                <ui:Button name="btn-DADO-CA" text="Dado CA enemigo" class="combat_btns combat_btn_color" />
+            </ui:VisualElement>
+            <ui:VisualElement name="tirada-FINAL" class="combat-row" style="display: none;">
+                <ui:Button name="btn-DADO" text="Lanzar Dado" class="combat_btns combat_btn_color" />
+            </ui:VisualElement>
+            <ui:VisualElement name="tirada-CRITICA" class="combat-row" style="display: none;">
+                <ui:Button name="btn-CRITICO" text="Lanzar Dado x2" class="combat_btns combat_btn_color" />
+            </ui:VisualElement>
+            <ui:VisualElement name="tirada-FATIDICA" class="combat-row" style="display: none;">
+                <ui:Button name="btn-FATIDICO" text="d4 a ti mismo" class="combat_btns combat_btn_color" />
+            </ui:VisualElement>
+            <ui:VisualElement class="combat-divider" />
+            <ui:VisualElement class="combat-row">
+                <ui:Button name="btn-item" text="Items" class="combat_btns items_btn_color" style="display: none; visibility: visible; overflow: hidden;" />
+                <ui:Button name="btn-huir" text="Huir" class="combat_btns option_btn_color flee_btn_color" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

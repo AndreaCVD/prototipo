@@ -47,6 +47,7 @@ public class CommandPanel : MonoBehaviour
     private int llaves, llaveMaestra, pocionVida, pocionLava, monedas;
 
     private TextField info_tirada;
+    private Label info_result;
 
     public string armadura, nom_ataque;
     private int stat, veces_tirada, MAX_vida;
@@ -122,6 +123,9 @@ public class CommandPanel : MonoBehaviour
         //texto tirada
         info_tirada = root.Q("info-tirada").Q<TextField>();
         info_tirada.label = " ";
+        info_result = root.Q("resultado-info").Q<Label>();
+
+        //info_tirada.label = " ";
         // eventos
         btnFUE.clicked += Menu_Fuerza;
             btnDAGA.clicked += Daga;
@@ -176,30 +180,51 @@ public class CommandPanel : MonoBehaviour
         btnRun.clicked -= Huir;
     }
     // --- INFO TIRADA ---
-    public void Texto_Tirada()
+    void Texto_Tirada()
     {
         //info_tirada.style.display = DisplayStyle.Flex;
 
         //info_tirada.label = " ";
         //info_tirada.value = "";
-
-        if (stat == 0)// si es fuerza
+        switch (stat)
         {
-            string aux = protagonista.stats.Get(PersonajesStats.Fuerza).ToString();
-            info_tirada.label = "+" + aux + "(fuerza)";
-        }
-        else if (stat == 1)// inteligencia
-        {
-            string aux = protagonista.stats.Get(PersonajesStats.Inteligencia).ToString();
-            info_tirada.label = "+" + aux + "(intel)";
-        }
-        else /*if (stat == 1)*/// carisma
-        {
-            string aux = protagonista.stats.Get(PersonajesStats.Carisma).ToString();
-            info_tirada.label = "+" + aux + "(carisma)";
+            case 0: //fuerza
+                string f = protagonista.stats.Get(PersonajesStats.Fuerza).ToString();
+                info_tirada.label = "+" + f + "(fuerza)";
+                break;
+            case 1:// inteligencia
+                string i = protagonista.stats.Get(PersonajesStats.Inteligencia).ToString();
+                info_tirada.label = "+" + i + "(intel)";
+                break;
+            case 2:// carisma
+                string c = protagonista.stats.Get(PersonajesStats.Carisma).ToString();
+                info_tirada.label = "+" + c + "(carisma)";
+                break;
+            default:
+                break;
         }
     }
-    //fieldLIFE.value = num;
+    void Resultado_Tirada()
+    {
+        switch(armadura)
+        {
+            case "si":
+                info_result.text = "Bien hecho";
+                break;
+            case "critico":
+                info_result.text = "Tirada critica";
+                break;
+            case "fatidico":
+                info_result.text = "Tirada fatidica";
+                break;
+            case "no":
+                info_result.text = "CA no superada";
+                break;
+            default:
+                info_result.text = "???";
+                break;
+        }
+    }
     // --- VOLVER AL MENU PRINCIPAL ---
     public void Back()
     {
@@ -261,6 +286,8 @@ public class CommandPanel : MonoBehaviour
                 tirada_armadura.style.display = DisplayStyle.None;
                 armadura = "si";
                 veces_tirada = 1;
+                
+                Resultado_Tirada();
                 NextAction();
             }
             else if (AC_superada == 0)
@@ -268,6 +295,8 @@ public class CommandPanel : MonoBehaviour
                 tirada_armadura.style.display = DisplayStyle.None;
                 armadura = "critico";
                 veces_tirada = 2;
+
+                Resultado_Tirada();
                 NextAction();
             }
             else if (AC_superada == 1) //ha tirado un 1
@@ -275,11 +304,15 @@ public class CommandPanel : MonoBehaviour
                 tirada_armadura.style.display = DisplayStyle.None;
                 // el jugador se hace daño a si mismo
                 armadura = "fatidico";
+
+                Resultado_Tirada();
                 NextAction();
             }
             else //(AC_superada == 3)
             {
                 armadura = "no";
+
+                Resultado_Tirada();
                 Back();
             }
         }

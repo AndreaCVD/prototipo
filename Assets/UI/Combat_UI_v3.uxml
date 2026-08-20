@@ -15,6 +15,7 @@
             <ui:VisualElement name="dialog-zone" class="combat-dialog" style="height: 320px; top: 0; -unity-text-align: upper-center; align-self: auto; align-items: center;">
                 <ui:Label name="dialog-text" class="combat-dialog__text" />
                 <ui:TextField label="+x (stat)" name="info-tirada" hide-placeholder-on-focus="false" enabled="true" focusable="false" style="background-image: url(&quot;project://database/Assets/Art/Interface/info%20tirada.png?fileID=2800000&amp;guid=61eaee3b769fb574dbd240cfcc127476&amp;type=3#info tirada&quot;); display: flex; top: 53px; flex-direction: row; align-self: auto; padding-top: 1px; padding-right: 1px; padding-bottom: 1px; padding-left: 1px; -unity-font-style: normal; -unity-text-align: middle-center; white-space: nowrap;" />
+                <ui:Label name="resultado-info" text="Default Text" class="combat-dialog__text" style="font-size: 36px; -unity-font-style: bold; top: 152px;" />
             </ui:VisualElement>
             <ui:VisualElement name="enemy-zone" class="combat-zone combat-zone--enemy">
                 <ui:VisualElement name="enemy-sprite" class="combat-sprite" style="-unity-text-align: upper-center; white-space: normal;" />

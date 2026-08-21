@@ -31,6 +31,8 @@ public class CommandManager : MonoBehaviour
     void Start()
     {
         enemigo_inLove = turnRoundManager.target.InLove();
+        if (enemigo_inLove == true)
+            Change_img("enamorado_3");
     }
     //Items
     public void PocionVida()
@@ -244,6 +246,7 @@ public class CommandManager : MonoBehaviour
     {
         enemigo_inLove = true;
         //Enemigo no tiene que atacar mas
+        Change_img("enamorado_3");
         turnRoundManager.target.Enamorado();
 
     }
@@ -274,7 +277,72 @@ public class CommandManager : MonoBehaviour
         int a = diceRoller.RollDice(caras, tiradas);
         return a; 
     }
+    // --- IMG COMBATE -- 
+    public void Change_img(string ataque)
+    {
+        //if (person == "enemy") // img del enemigo
+        //{
+        //    switch (ataque)
+        //    {
+        //        case "idle":
+        //            turnRoundManager.target.Cambiar_Idle();
+        //            break;
+        //        case "idle":
+        //            turnRoundManager.target.Cambiar_Idle();
+        //            break;
+        //        default:
+        //            turnRoundManager.target.Cambiar_Idle();
+        //            break;
+        //    }
+        //}
+        //else // img es del prota
+        //{
+            switch (ataque)
+            {
+                case "idle_prota":
+                    turnRoundManager.current.Cambiar_Idle();
+                    break;
+                case "idle_enemy":
+                    turnRoundManager.target.Cambiar_Idle();
+                    break;
+                case "daga": //prota daga[0] - enemy herido
+                    turnRoundManager.target.Cambiar_imgHerido();
+                    turnRoundManager.current.Cambiar_imgAtaque(0);
+                    break;
+                case "espada": //prota espada[1] - enemy herido
+                    turnRoundManager.target.Cambiar_imgHerido();
+                    turnRoundManager.current.Cambiar_imgAtaque(1);
+                    break;
+                case "escudo": 
+                    turnRoundManager.target.Cambiar_imgEstado(0);
+                    break;
+                case "enamorado_1": 
+                    turnRoundManager.current.Cambiar_imgAtaque(4);
+                    turnRoundManager.target.Cambiar_imgEnamorado(0);
+                    break;
+                case "enamorado_2":
+                    turnRoundManager.current.Cambiar_imgAtaque(4);
+                    turnRoundManager.target.Cambiar_imgEnamorado(1);
+                    break;
+                case "enamorado_3": 
+                    turnRoundManager.target.Cambiar_imgEnamorado(2);
+                    break;
+                case "inmovil_prota":
+                    Debug.Log(" PONER IMAGEN PROTA INMOVILIZADO");    
+                    break;
+                case "inmovil_enemy": 
+                    turnRoundManager.target.Cambiar_imgEstado(0);
+                    break;
+                case "enfadado": 
+                    turnRoundManager.target.Cambiar_imgEstado(1);
+                    break;
+                default:
+                    turnRoundManager.target.Cambiar_Idle();
+                    break;
+            }
+        
 
+    }
     public void NextTurn()
     {
         //estados enemigo
@@ -289,6 +357,7 @@ public class CommandManager : MonoBehaviour
                 Debug.Log("Ya no esta inmovilizado");
                 enemigo_inmovilizado = false;
                 turnos_inmovil = 1;
+                Change_img("idle_enemy");
             }
         }
         else if (enemigo_inLove)

@@ -1,8 +1,10 @@
+using System.Collections;
 using System.Reflection;
 using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Collections.Generic;
 
 public class CombatMonster : MonoBehaviour
 {
@@ -12,7 +14,8 @@ public class CombatMonster : MonoBehaviour
     Parameters player; //El que tiene el script (todos)
     Save_Stats guardado; //Enviar las estats
     [Header("Img combate")]
-    [SerializeField] Image imagenPers; 
+    [SerializeField] Image imagenPers; // cambiar aqui la img
+
     public Int2Val HP;
     public int damage;
     GameObject objLoadScene;
@@ -321,7 +324,7 @@ public class CombatMonster : MonoBehaviour
                 break;
         }
     }
-
+    // DAÑO EN UI
     void UI_damage(int damage)
     {
         if (player.namePers == "Prota")
@@ -338,4 +341,41 @@ public class CombatMonster : MonoBehaviour
         //anim.SetInteger("Damage", 2);
 
     }
+    public void Cambiar_imgAtaque(int indice)
+    {
+        //guardamos la actual
+        Sprite aux = imagenPers.sprite;
+        //cambiamos para el ataque
+        imagenPers.sprite = player.Ataques[indice];
+        //despues de X tiempo volver a la anterior
+        StartCoroutine(Img_Anterior(aux));
+    }
+    public void Cambiar_imgEstado(int indice)
+    {
+        imagenPers.sprite = player.Estados_combate[indice];
+    }
+    public void Cambiar_imgEnamorado(int indice)
+    {
+        imagenPers.sprite = player.Estados_enamorado[indice];
+    }
+    public void Cambiar_imgHerido()
+    {
+        //guardamos la actual
+        Sprite aux = imagenPers.sprite;
+        // cambiar a aherido
+        imagenPers.sprite = player.herido;
+        // despues de X tiempo volver a la anterior
+        StartCoroutine(Img_Anterior(aux));
+    }
+    public void Cambiar_Idle()
+    {
+        imagenPers.sprite = player.idle;
+    }
+    IEnumerator Img_Anterior(Sprite img)
+    {
+        yield return new WaitForSeconds(2);
+        imagenPers.sprite = img;
+
+    }
+
 }

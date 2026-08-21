@@ -340,10 +340,11 @@ public class CommandPanel : MonoBehaviour
             tirada_armadura.style.display = DisplayStyle.None;
             armadura = "no";
         }
+
         if (nom_ataque == "intimidar")
             Intimidar();
         else
-            Enamorado(30);
+            Enamorar();
     }
 
     // --- TIRADAS FINALES ---
@@ -364,9 +365,11 @@ public class CommandPanel : MonoBehaviour
         switch (nom_ataque)
         {
             case "daga":
+                commandManager.Change_img("daga");
                 commandManager.Fuerza(8, veces_tirada);
                 break;
             case "espada":
+                commandManager.Change_img("espada");
                 commandManager.Fuerza(12, veces_tirada);
                 break;
             default:
@@ -501,6 +504,8 @@ public class CommandPanel : MonoBehaviour
             commandManager.Modificar_CA(2);
             btnESCUDO.SetEnabled(false);
 
+            commandManager.Change_img("escudo");
+
             info_result.style.visibility = Visibility.Visible;
             info_result.text = "Escudo activado";
 
@@ -510,6 +515,8 @@ public class CommandPanel : MonoBehaviour
             escudo = false;
             commandManager.Modificar_CA(-2);
             btnESCUDO.SetEnabled(true);
+
+            commandManager.Change_img("idle_prota");
 
             info_result.style.visibility = Visibility.Visible;
             info_result.text = "Escudo desactivado";
@@ -534,18 +541,23 @@ public class CommandPanel : MonoBehaviour
         }
         else if (armadura == "no")
         {
+            Resetear_Valores();
+            Back();
+
             info_result.style.visibility = Visibility.Visible;
             info_result.text = "CA no superada";
 
-            Resetear_Valores();
-            Back();
+            commandManager.NextTurn();
             // Fallas enamoramiento == se enfada
-            // un d4 mas || daño +2
         }
         else //Armadura Si
         {
             //si se usa 3 veces --> enemigo estado Enamorado
             enamorado++;
+            if (enamorado == 1)
+                commandManager.Change_img("enamorado_1");
+            if (enamorado == 2)
+                commandManager.Change_img("enamorado_2");
             if (enamorado == 3 && !inLove)
             {
                 //enamorado por 30 segundos
@@ -553,10 +565,13 @@ public class CommandPanel : MonoBehaviour
                 StartCoroutine(Enamorado(30));
                 commandManager.enemigoEnamorado();
             }
+
             info_result.style.visibility = Visibility.Visible;
             info_result.text = "Enemigo enamorado no te ataca";
+
             Resetear_Valores();
             Back();
+            Debug.Log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
             commandManager.NextTurn();
         }
     }
@@ -577,7 +592,7 @@ public class CommandPanel : MonoBehaviour
             Resetear_Valores();
             Back();
             commandManager.EstadoIntimidar("enfadado", true);
-
+            commandManager.Change_img("enfadado");
         }
         else if (armadura == "si")
         {

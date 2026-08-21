@@ -16,7 +16,7 @@ MonoBehaviour:
   enamorado: 0
   stats:
     values:
-    - value: 0
+    - value: 2
       stats: 0
     - value: 0
       stats: 1
@@ -31,3 +31,13 @@ MonoBehaviour:
   Inventario: {fileID: 11400000, guid: ef858081fb817bd4697c8d4406be6ad1, type: 2}
   modelPrefab: {fileID: 446173625170946264, guid: 31817a986efa72f418ed20de88438f44, type: 3}
   idle: {fileID: 21300000, guid: 21db1b91d273c3748925020bc1da1b2b, type: 3}
+  herido: {fileID: 21300000, guid: 771cb939c6421404a895aadf1ed830a4, type: 3}
+  Ataques:
+  - {fileID: 21300000, guid: 2561b5cea5a09e548ae1fb03526382d2, type: 3}
+  - {fileID: 21300000, guid: b9a524f5eddbd5f42a8a00e61c67d5a0, type: 3}
+  - {fileID: 21300000, guid: f7140fc6e5a39df488cf0d17f161c46a, type: 3}
+  - {fileID: 21300000, guid: d6760d27d788716498bde75417a0d017, type: 3}
+  - {fileID: 21300000, guid: e8eb8cbd0b734df4b8e66711638c2ae6, type: 3}
+  Estados_combate:
+  - {fileID: 21300000, guid: 7533aea9777c37e4aae12e050d62ea29, type: 3}
+  Estados_enamorado: []

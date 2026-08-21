@@ -225,7 +225,7 @@ public class CombatMonster : MonoBehaviour
             {
                 //Player == enemigo
                 //Restaurar constitucino ficha enemigo
-                player.stats.values[3].value = 0;
+                player.stats.values[3].value = player.stats.values[5].value;
 
                 restaurarStat(10); //Restaurar todos los stats prota si han sido cambiados
                 //destruir el obj del enemigo
@@ -285,6 +285,7 @@ public class CombatMonster : MonoBehaviour
     }
     public void SalirCombate()
     {
+        player.stats.values[4].value =12;
         load.SalirCombate();
 
     }
@@ -352,6 +353,7 @@ public class CombatMonster : MonoBehaviour
     }
     public void Cambiar_imgEstado(int indice)
     {
+        Debug.Log(indice);
         imagenPers.sprite = player.Estados_combate[indice];
     }
     public void Cambiar_imgEnamorado(int indice)

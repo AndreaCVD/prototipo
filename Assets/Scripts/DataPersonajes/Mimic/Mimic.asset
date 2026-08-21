@@ -22,9 +22,9 @@ MonoBehaviour:
       stats: 1
     - value: 0
       stats: 2
-    - value: 40
+    - value: 25
       stats: 3
-    - value: 12
+    - value: 2
       stats: 4
     - value: 40
       stats: 5

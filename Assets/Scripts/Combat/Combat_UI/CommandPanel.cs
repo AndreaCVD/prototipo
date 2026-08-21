@@ -269,6 +269,10 @@ public class CommandPanel : MonoBehaviour
     // --- ARMADURA ---
     public void Menu_TiradaArmadura()
     {
+        if (escudo)
+        {
+            Escudo();
+        }
         tirada_armadura.style.display = DisplayStyle.Flex;
         fuerza_options.style.display = DisplayStyle.None;
     }
@@ -327,7 +331,10 @@ public class CommandPanel : MonoBehaviour
         // 1 = Nat 1
         // 2 = Tirada normal, AC superada
         // 3 = AC NO superada
-
+        if (escudo)
+        {
+            Escudo();
+        }
         int AC_superada = commandManager.Armadura(stat, 20);
         if (AC_superada == 2)
         {
@@ -358,10 +365,7 @@ public class CommandPanel : MonoBehaviour
     }
     void TiradaAlEnemigo()
     {
-        if (escudo)
-        {
-            Escudo();
-        }
+
         switch (nom_ataque)
         {
             case "daga":
@@ -490,6 +494,8 @@ public class CommandPanel : MonoBehaviour
 
         info_result.style.visibility = Visibility.Visible;
         info_result.text = "Enemigo Inmovilizado";
+        StartCoroutine(ChangeText(2));
+        commandManager.Change_img("inmovil_enemy");
 
         Back();
         //tirar dos veces, enemigo inmovil
@@ -508,7 +514,8 @@ public class CommandPanel : MonoBehaviour
 
             info_result.style.visibility = Visibility.Visible;
             info_result.text = "Escudo activado";
-
+            StartCoroutine(ChangeText(0));
+            commandManager.NextTurn();
         }
         else
         {
@@ -520,6 +527,8 @@ public class CommandPanel : MonoBehaviour
 
             info_result.style.visibility = Visibility.Visible;
             info_result.text = "Escudo desactivado";
+
+            StartCoroutine(ChangeText(2));
         }
     }
 
@@ -547,6 +556,7 @@ public class CommandPanel : MonoBehaviour
             info_result.style.visibility = Visibility.Visible;
             info_result.text = "CA no superada";
 
+            commandManager.Change_img("enfadado");
             commandManager.NextTurn();
             // Fallas enamoramiento == se enfada
         }
@@ -560,6 +570,7 @@ public class CommandPanel : MonoBehaviour
                 commandManager.Change_img("enamorado_2");
             if (enamorado == 3 && !inLove)
             {
+                info_result.text = "Enemigo enamorado no te ataca";
                 //enamorado por 30 segundos
                 btnLOVE.SetEnabled(false);
                 StartCoroutine(Enamorado(30));
@@ -567,11 +578,10 @@ public class CommandPanel : MonoBehaviour
             }
 
             info_result.style.visibility = Visibility.Visible;
-            info_result.text = "Enemigo enamorado no te ataca";
+            info_result.text = "Eres un rompecorazones~";
 
             Resetear_Valores();
             Back();
-            Debug.Log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
             commandManager.NextTurn();
         }
     }
@@ -588,20 +598,26 @@ public class CommandPanel : MonoBehaviour
         else if (armadura == "no")
         {
             Debug.Log("armadura no del prota");
+            info_result.style.visibility = Visibility.Visible;
+            info_result.text = "¡Cuidado! Has enfadado al enemigo";
             //enemigo enfadado
             Resetear_Valores();
             Back();
             commandManager.EstadoIntimidar("enfadado", true);
             commandManager.Change_img("enfadado");
+            commandManager.NextTurn();
         }
         else if (armadura == "si")
         {
             Debug.Log("armadura si del prota");
-
-            //enemigo enfadado
+            info_result.style.visibility = Visibility.Visible;
+            info_result.text = "El enemigo se ha asustado y atacara con menos fuerza";
+            //enemigo asustado
             Resetear_Valores();
             Back();
+            commandManager.Change_img("asustado");
             commandManager.EstadoIntimidar("asustado", true);
+            commandManager.NextTurn();
 
         }
         //dura 1 turno

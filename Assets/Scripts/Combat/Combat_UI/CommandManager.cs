@@ -297,12 +297,19 @@ public class CommandManager : MonoBehaviour
 
             switch (ataque)
             {
+                case "autoataque":
+                    turnRoundManager.current.Cambiar_imgHerido();
+                    break;
                 case "idle_prota":
                     turnRoundManager.current.Cambiar_Idle();
                     break;
                 case "idle_enemy":
                     turnRoundManager.target.Cambiar_Idle();
                     break;
+                case "enemy_attack": //enemy atack [0] - prota herido
+                    turnRoundManager.target.Cambiar_imgHerido();
+                    turnRoundManager.current.Cambiar_imgAtaque(0);
+                break;
                 case "daga": //prota daga[0] - enemy herido
                     turnRoundManager.target.Cambiar_imgHerido();
                     turnRoundManager.current.Cambiar_imgAtaque(0);

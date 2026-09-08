@@ -70,16 +70,22 @@ public class Slime_Action : MonoBehaviour
 
         if (ca_player == 2) //supera armadura
         {
+            commandManager.Change_img("enemy_attack");
+
             //Fuerza(int dado_1, int times_1, int dado_2, int times_2)
             commandManager.Fuerza(6, 1, 4, 1);
         }
         else if (ca_player == 0) //CRITICO
         {
+            commandManager.Change_img("enemy_attack");
+
             Debug.Log("Tirada critica del enemigo");
             commandManager.Fuerza(6, 2, 4, 2);
         }
         else if (ca_player == 1) //TIRA UN 1
         {
+            commandManager.Change_img("autoataque");
+
             Debug.Log("Tirada fatidica del enemigo");
             commandManager.AutoHerirse(4, 1);
         }
@@ -90,7 +96,8 @@ public class Slime_Action : MonoBehaviour
         Debug.Log("Atrapar de slime + Acido");
         player_inmovilizado = true;
         commandManager.PlayerInmovilizado(true, 1);
-        
+        commandManager.Change_img("inmovil_enemy");
+
         int ca_player = commandManager.Armadura(0, 20);
         if (ca_player == 2) //supera armadura
         {
@@ -98,6 +105,8 @@ public class Slime_Action : MonoBehaviour
         }
         else if (ca_player == 0) //CRITICO
         {
+            commandManager.Change_img("autoataque");
+
             Debug.Log("Tirada critica del enemigo");
             commandManager.Inteligencia(4, 2);
         }
@@ -112,15 +121,21 @@ public class Slime_Action : MonoBehaviour
 
         if (ca_player == 2) //supera armadura
         {
+            commandManager.Change_img("enemy_attack");
+
             commandManager.Carisma(4, 2);
         }
         else if (ca_player == 0) //CRITICO
         {
+            commandManager.Change_img("enemy_attack");
+
             Debug.Log("Tirada critica del enemigo");
             commandManager.Carisma(4, 4);
         }
         else if (ca_player == 1) //TIRA UN 1
         {
+            commandManager.Change_img("autoataque");
+
             Debug.Log("Tirada fatidica del enemigo");
             commandManager.AutoHerirse(4, 1);
         }

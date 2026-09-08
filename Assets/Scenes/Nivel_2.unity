@@ -248,6 +248,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogo_obj: {fileID: 11400000, guid: f879e7ab78b5dac4b9deff3d3798eaa3, type: 2}
+  ficha_obj: {fileID: 0}
 --- !u!65 &108969933
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2088,7 +2089,8 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: 4.8090935
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3558212917984701821, guid: 87b652990df6cfa4b9c927d9d0e12c6f, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -3883,7 +3885,10 @@ PrefabInstance:
     - {fileID: 3061432036549576514, guid: 18956a4a129394a42aeebd1263fb6080, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5305385646599809368, guid: 18956a4a129394a42aeebd1263fb6080, type: 3}
+      insertIndex: 1
+      addedObject: {fileID: 2003543322}
   m_SourcePrefab: {fileID: 100100000, guid: 18956a4a129394a42aeebd1263fb6080, type: 3}
 --- !u!4 &745272085 stripped
 Transform:
@@ -7084,6 +7089,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1942295723155004613, guid: ca28d6627cc19d84893b1c16657bf7d9, type: 3}
+      propertyPath: escenaState
+      value: 
+      objectReference: {fileID: 759957468}
     - target: {fileID: 4557602514861464371, guid: ca28d6627cc19d84893b1c16657bf7d9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -9676,6 +9685,25 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c897a4dddd7061f4292b1cb900937df4, type: 3}
+--- !u!1 &2003543314 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5305385646599809368, guid: 18956a4a129394a42aeebd1263fb6080, type: 3}
+  m_PrefabInstance: {fileID: 745272084}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2003543322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2003543314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3d42b3a497006740958fffd87391ec7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogo_obj: {fileID: 0}
+  ficha_obj: {fileID: 11400000, guid: 2007cbc7d80ee3c47b7757d6652637d1, type: 2}
 --- !u!1001 &2009553793
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10317,6 +10345,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogo_obj: {fileID: 11400000, guid: f879e7ab78b5dac4b9deff3d3798eaa3, type: 2}
+  ficha_obj: {fileID: 0}
 --- !u!65 &2092286829
 BoxCollider:
   m_ObjectHideFlags: 0

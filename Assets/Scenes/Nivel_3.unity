@@ -4360,6 +4360,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1942295723155004613, guid: ca28d6627cc19d84893b1c16657bf7d9, type: 3}
+      propertyPath: escenaState
+      value: 
+      objectReference: {fileID: 759957468}
     - target: {fileID: 4557602514861464371, guid: ca28d6627cc19d84893b1c16657bf7d9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -6106,6 +6110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextScene: first_floor
+  lista: {fileID: 0}
   tiempo: 0
 --- !u!95 &3846526417761077098
 Animator:

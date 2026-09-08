@@ -23,7 +23,7 @@ public class LoadScene : MonoBehaviour
 
     //[SerializeField] Preload preload;
     string name_anterior;
-    private bool onCombat;
+    public bool onCombat;
     public bool onPause;
     public bool jefeLerendur, jefeLibro;
 
@@ -180,6 +180,8 @@ public class LoadScene : MonoBehaviour
     }
     public void Combat(GameObject enemyName)
     {
+        Debug.Log(enemyName);
+
         if (!onCombat)
         {
             onCombat = true;

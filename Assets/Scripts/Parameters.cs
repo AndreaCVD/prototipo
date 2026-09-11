@@ -61,12 +61,22 @@ public class Parameters : ScriptableObject
 
     public GameObject modelPrefab;
     public Sprite idle;
-    //public Sprite herido;
-    //public Sprite ataque;
-    ////estados
-    //public Sprite atrapado;
-    //public Sprite enfadado;
-    //public Sprite asustado;
+    public Sprite herido;
+
+    public List<Sprite> Ataques = new List<Sprite>();
+    // ataque [0] -> todos lo tienen && daga prota
+    // ataque [1] -> espada prota
+    // ataque [2] -> ataque hechizo
+    // ataque [3] -> ataque intimidar
+    // ataque [4] -> ataque enamorar
+
+    // Lista estados
+    public List<Sprite> Estados_combate = new List<Sprite>();
+    // [0] atrapado; && PROTA PROTECCION
+    // [1] enfadado;
+    // [2] asustado;
+
+    public List<Sprite> Estados_enamorado = new List<Sprite>();
     //public Sprite enamorado_1, enamorado_2, enamorado_3;
 
     //public GameObject variantModel;

@@ -243,7 +243,7 @@ public class NPCAction : MonoBehaviour
     }
     IEnumerator Esperar(float segundos, string ataque)
     {
-        yield return new WaitForSeconds(segundos);
+        yield return new WaitForSeconds(5);
         // C�digo que se ejecuta despu�s del retraso
         // Enviamos d4, tirar 1 vez, acabar el combate cuando acabe de atacar
         switch(ataque)

@@ -46,6 +46,8 @@ public class CommandPanel : MonoBehaviour
     //contadores inventory
     private int llaves, llaveMaestra, pocionVida, pocionLava, monedas;
 
+    private Label info_tirada, info_result;
+
     public string armadura, nom_ataque;
     private int stat, veces_tirada, MAX_vida;
     
@@ -117,6 +119,15 @@ public class CommandPanel : MonoBehaviour
         tirada_critica = root.Q<VisualElement>("tirada-CRITICA");
         tirada_armadura = root.Q<VisualElement>("tirada-ARMADURA");
         tirada_fatidica = root.Q<VisualElement>("tirada-FATIDICA");
+        
+        //texto tirada
+        info_tirada = root.Q("info-tirada").Q<Label>();
+        info_tirada.text = " ";
+        info_result = root.Q("resultado-info").Q<Label>();
+        info_result.style.visibility = Visibility.Hidden;
+
+
+        //info_tirada.label = " ";
         // eventos
         btnFUE.clicked += Menu_Fuerza;
             btnDAGA.clicked += Daga;
@@ -170,7 +181,54 @@ public class CommandPanel : MonoBehaviour
         btnITEM.clicked -= Abrir_Inventario;
         btnRun.clicked -= Huir;
     }
-    
+    // --- INFO TIRADA ---
+    void Texto_Tirada()
+    {
+        //info_tirada.style.display = DisplayStyle.Flex;
+
+        //info_tirada.label = " ";
+        //info_tirada.value = "";
+        switch (stat)
+        {
+            case 0: //fuerza
+                string f = protagonista.stats.Get(PersonajesStats.Fuerza).ToString();
+                info_tirada.text = "+" + f + "(fuerza)";
+                break;
+            case 1:// inteligencia
+                string i = protagonista.stats.Get(PersonajesStats.Inteligencia).ToString();
+                info_tirada.text = "+" + i + "(intel)";
+                break;
+            case 2:// carisma
+                string c = protagonista.stats.Get(PersonajesStats.Carisma).ToString();
+                info_tirada.text = "+" + c + "(carisma)";
+                break;
+            default:
+                break;
+        }
+    }
+    void Resultado_Tirada()
+    {
+        info_result.style.visibility = Visibility.Visible;
+
+        switch (armadura)
+        {
+            case "si":
+                info_result.text = "Bien hecho";
+                break;
+            case "critico":
+                info_result.text = "Tirada critica";
+                break;
+            case "fatidico":
+                info_result.text = "Tirada fatidica";
+                break;
+            case "no":
+                info_result.text = "CA no superada";
+                break;
+            default:
+                info_result.text = "???";
+                break;
+        }
+    }
     // --- VOLVER AL MENU PRINCIPAL ---
     public void Back()
     {
@@ -211,6 +269,10 @@ public class CommandPanel : MonoBehaviour
     // --- ARMADURA ---
     public void Menu_TiradaArmadura()
     {
+        if (escudo)
+        {
+            Escudo();
+        }
         tirada_armadura.style.display = DisplayStyle.Flex;
         fuerza_options.style.display = DisplayStyle.None;
     }
@@ -226,14 +288,14 @@ public class CommandPanel : MonoBehaviour
         }
         else
         {
-
-
             int AC_superada = commandManager.Armadura(stat, 20);
             if (AC_superada == 2)
             {
                 tirada_armadura.style.display = DisplayStyle.None;
                 armadura = "si";
                 veces_tirada = 1;
+                
+                Resultado_Tirada();
                 NextAction();
             }
             else if (AC_superada == 0)
@@ -241,6 +303,8 @@ public class CommandPanel : MonoBehaviour
                 tirada_armadura.style.display = DisplayStyle.None;
                 armadura = "critico";
                 veces_tirada = 2;
+
+                Resultado_Tirada();
                 NextAction();
             }
             else if (AC_superada == 1) //ha tirado un 1
@@ -248,11 +312,15 @@ public class CommandPanel : MonoBehaviour
                 tirada_armadura.style.display = DisplayStyle.None;
                 // el jugador se hace daño a si mismo
                 armadura = "fatidico";
+
+                Resultado_Tirada();
                 NextAction();
             }
             else //(AC_superada == 3)
             {
                 armadura = "no";
+
+                Resultado_Tirada();
                 Back();
             }
         }
@@ -263,7 +331,10 @@ public class CommandPanel : MonoBehaviour
         // 1 = Nat 1
         // 2 = Tirada normal, AC superada
         // 3 = AC NO superada
-
+        if (escudo)
+        {
+            Escudo();
+        }
         int AC_superada = commandManager.Armadura(stat, 20);
         if (AC_superada == 2)
         {
@@ -276,10 +347,11 @@ public class CommandPanel : MonoBehaviour
             tirada_armadura.style.display = DisplayStyle.None;
             armadura = "no";
         }
+
         if (nom_ataque == "intimidar")
             Intimidar();
         else
-            Enamorado(30);
+            Enamorar();
     }
 
     // --- TIRADAS FINALES ---
@@ -293,16 +365,15 @@ public class CommandPanel : MonoBehaviour
     }
     void TiradaAlEnemigo()
     {
-        if (escudo)
-        {
-            Escudo();
-        }
+
         switch (nom_ataque)
         {
             case "daga":
+                commandManager.Change_img("daga");
                 commandManager.Fuerza(8, veces_tirada);
                 break;
             case "espada":
+                commandManager.Change_img("espada");
                 commandManager.Fuerza(12, veces_tirada);
                 break;
             default:
@@ -332,11 +403,20 @@ public class CommandPanel : MonoBehaviour
     // --- RESETEAR TIRADA ---
     void Resetear_Valores()
     {
+        info_tirada.text = " ";
+        StartCoroutine(ChangeText(2)); //sacaer el mensaje de "Bien hecho"
+
         nom_ataque = " ";
         stat = 10;
         armadura = " ";
     }
-    
+    IEnumerator ChangeText(int time)
+    {
+        yield return new WaitForSeconds(time);
+        info_result.style.visibility = Visibility.Hidden;
+
+    }
+
     // --- NEXT ACTION QUE TIENE QUE HACER EL PLAYER ---
     public void NextAction() 
     {
@@ -371,6 +451,7 @@ public class CommandPanel : MonoBehaviour
         fuerza_options.style.display = DisplayStyle.Flex;
 
         stat = 0; //Stat de fuerza = 0
+        Texto_Tirada();
     }
     public void Daga()
     {
@@ -404,11 +485,17 @@ public class CommandPanel : MonoBehaviour
         intel_options.style.display = DisplayStyle.Flex;
 
         stat = 1; //Stat de inteligencia = 1
+        Texto_Tirada();
     }
     public void Inmovilizar()
     {
         commandManager.EnemigoInmovilizado(true, 1);
         btnINMOV.SetEnabled(false); //usar solo una vez por partida
+
+        info_result.style.visibility = Visibility.Visible;
+        info_result.text = "Enemigo Inmovilizado";
+        StartCoroutine(ChangeText(2));
+        commandManager.Change_img("inmovil_enemy");
 
         Back();
         //tirar dos veces, enemigo inmovil
@@ -422,12 +509,26 @@ public class CommandPanel : MonoBehaviour
             escudo = true;
             commandManager.Modificar_CA(2);
             btnESCUDO.SetEnabled(false);
+
+            commandManager.Change_img("escudo");
+
+            info_result.style.visibility = Visibility.Visible;
+            info_result.text = "Escudo activado";
+            StartCoroutine(ChangeText(0));
+            commandManager.NextTurn();
         }
         else
         {
             escudo = false;
             commandManager.Modificar_CA(-2);
             btnESCUDO.SetEnabled(true);
+
+            commandManager.Change_img("idle_prota");
+
+            info_result.style.visibility = Visibility.Visible;
+            info_result.text = "Escudo desactivado";
+
+            StartCoroutine(ChangeText(2));
         }
     }
 
@@ -437,6 +538,7 @@ public class CommandPanel : MonoBehaviour
         options_menu.style.display = DisplayStyle.None;
         caris_options.style.display = DisplayStyle.Flex;
         stat = 2; //Stat de carisma = 2
+        Texto_Tirada();
     }
     public void Enamorar()
     {
@@ -450,20 +552,34 @@ public class CommandPanel : MonoBehaviour
         {
             Resetear_Valores();
             Back();
+
+            info_result.style.visibility = Visibility.Visible;
+            info_result.text = "CA no superada";
+
+            commandManager.Change_img("enfadado");
+            commandManager.NextTurn();
             // Fallas enamoramiento == se enfada
-            // un d4 mas || daño +2
         }
         else //Armadura Si
         {
             //si se usa 3 veces --> enemigo estado Enamorado
             enamorado++;
+            if (enamorado == 1)
+                commandManager.Change_img("enamorado_1");
+            if (enamorado == 2)
+                commandManager.Change_img("enamorado_2");
             if (enamorado == 3 && !inLove)
             {
+                info_result.text = "Enemigo enamorado no te ataca";
                 //enamorado por 30 segundos
                 btnLOVE.SetEnabled(false);
                 StartCoroutine(Enamorado(30));
                 commandManager.enemigoEnamorado();
             }
+
+            info_result.style.visibility = Visibility.Visible;
+            info_result.text = "Eres un rompecorazones~";
+
             Resetear_Valores();
             Back();
             commandManager.NextTurn();
@@ -482,20 +598,26 @@ public class CommandPanel : MonoBehaviour
         else if (armadura == "no")
         {
             Debug.Log("armadura no del prota");
+            info_result.style.visibility = Visibility.Visible;
+            info_result.text = "¡Cuidado! Has enfadado al enemigo";
             //enemigo enfadado
             Resetear_Valores();
             Back();
             commandManager.EstadoIntimidar("enfadado", true);
-
+            commandManager.Change_img("enfadado");
+            commandManager.NextTurn();
         }
         else if (armadura == "si")
         {
             Debug.Log("armadura si del prota");
-
-            //enemigo enfadado
+            info_result.style.visibility = Visibility.Visible;
+            info_result.text = "El enemigo se ha asustado y atacara con menos fuerza";
+            //enemigo asustado
             Resetear_Valores();
             Back();
+            commandManager.Change_img("asustado");
             commandManager.EstadoIntimidar("asustado", true);
+            commandManager.NextTurn();
 
         }
         //dura 1 turno

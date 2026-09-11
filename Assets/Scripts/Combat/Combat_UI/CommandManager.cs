@@ -13,6 +13,7 @@ public class CommandManager : MonoBehaviour
 
     public bool gameOver, enemigo_inmovilizado, enemigo_inLove, enfadado, asustado;
     public bool player_inmovilizado = false;
+    public bool player_escudo = false;
     private int turnos_inmovil = 1;
 
     //[SerializeField] CombatMonster opponent;
@@ -31,6 +32,8 @@ public class CommandManager : MonoBehaviour
     void Start()
     {
         enemigo_inLove = turnRoundManager.target.InLove();
+        if (enemigo_inLove == true)
+            Change_img("enamorado_3");
     }
     //Items
     public void PocionVida()
@@ -133,10 +136,11 @@ public class CommandManager : MonoBehaviour
     }
     public void Modificar_CA(int valor)
     {
+        Debug.Log("Se ha modificado la CA");
         turnRoundManager.current.modificar_CA(valor);
         ActualizarHP();
 
-        NextTurn();
+        //NextTurn();
     }
     // --- MOVIMIENTOS ENEMIGO ---
     public void AtaqueEnfadado(int dado, int times)
@@ -149,11 +153,13 @@ public class CommandManager : MonoBehaviour
 
             int aux = lanzarDado(dado, times);
             int aux_2 = lanzarDado(4, 1);
+            turnRoundManager.current.Cambiar_Idle();
+
             turnRoundManager.current.Fuerza(turnRoundManager.target, aux + aux_2);
 
             ActualizarHP();
             NextTurn();
-    }
+        }
         else if (armadura == 0) //CRITICO
         {
             Debug.Log("Ataque de enfado del enemigo es critico");
@@ -161,6 +167,8 @@ public class CommandManager : MonoBehaviour
             int aux = lanzarDado(dado, times);
             int aux_2 = lanzarDado(4, 1);
             int aux_3 = lanzarDado(4, 1);
+
+            turnRoundManager.current.Cambiar_Idle();
             turnRoundManager.current.Fuerza(turnRoundManager.target, aux + aux_2 +aux_3);
 
             ActualizarHP();
@@ -169,11 +177,12 @@ public class CommandManager : MonoBehaviour
         else if (armadura == 1) //TIRA UN 1
         {
             Debug.Log("Ataque de enfado del enemigo no ha funcionado");
-
+            turnRoundManager.current.Cambiar_Idle();
             AutoHerirse(4, 1);
         }
         else
         {
+            turnRoundManager.current.Cambiar_Idle();
             ActualizarHP();
             NextTurn();
         }
@@ -184,11 +193,11 @@ public class CommandManager : MonoBehaviour
         {
             case "enfadado":
                 enfadado = estado;
-                NextTurn();
+                //NextTurn();
                 break;
             case "asustado":
                 asustado = estado;
-                NextTurn();
+               // NextTurn();
                 break;
         }
     }
@@ -204,8 +213,8 @@ public class CommandManager : MonoBehaviour
             int aux_2 = lanzarDado(4, 1);
             int total = Math.Abs(aux - aux_2);
             turnRoundManager.current.Fuerza(turnRoundManager.target, total);
-            
-            
+
+            turnRoundManager.current.Cambiar_Idle();
             ActualizarHP();
             NextTurn();
         }
@@ -218,17 +227,21 @@ public class CommandManager : MonoBehaviour
             int aux_3 = lanzarDado(4, 1);
             int total = Math.Abs(aux + aux_2 - aux_3);
             turnRoundManager.current.Fuerza(turnRoundManager.target, total);
+            
+            turnRoundManager.current.Cambiar_Idle();
             ActualizarHP();
             NextTurn();
         }
         else if (armadura == 1) //TIRA UN 1
         {
+            turnRoundManager.current.Cambiar_Idle();
             AutoHerirse(4, 1);
         }
         else
         {
-        ActualizarHP();
-        NextTurn();
+            turnRoundManager.current.Cambiar_Idle();
+            ActualizarHP();
+            NextTurn();
         }
     }
     public bool Return_inLove()
@@ -244,6 +257,7 @@ public class CommandManager : MonoBehaviour
     {
         enemigo_inLove = true;
         //Enemigo no tiene que atacar mas
+        Change_img("enamorado_3");
         turnRoundManager.target.Enamorado();
 
     }
@@ -256,6 +270,8 @@ public class CommandManager : MonoBehaviour
     {
         player_inmovilizado = inmov;
         turnos_inmovil = turnos;
+        if (player_inmovilizado)
+            Change_img("inmovil_prota");
     }
     public bool Return_Inmovil(string name)
     {
@@ -268,13 +284,76 @@ public class CommandManager : MonoBehaviour
             return enemigo_inmovilizado;
         }
     }
+
     // --- DADOS ---
     private int lanzarDado(int caras, int tiradas)
     {
         int a = diceRoller.RollDice(caras, tiradas);
         return a; 
     }
+    // --- IMG COMBATE -- 
+    public void Change_img(string ataque)
+    {
 
+            switch (ataque)
+            {
+                case "autoataque":
+                    turnRoundManager.current.Cambiar_imgHerido();
+                    break;
+                case "idle_prota":
+                    turnRoundManager.current.Cambiar_Idle();
+                    break;
+                case "idle_enemy":
+                    turnRoundManager.target.Cambiar_Idle();
+                    break;
+                case "enemy_attack": //enemy atack [0] - prota herido
+                    turnRoundManager.target.Cambiar_imgHerido();
+                    turnRoundManager.current.Cambiar_imgAtaque(0);
+                break;
+                case "daga": //prota daga[0] - enemy herido
+                    turnRoundManager.target.Cambiar_imgHerido();
+                    turnRoundManager.current.Cambiar_imgAtaque(0);
+                    break;
+                case "espada": //prota espada[1] - enemy herido
+                    turnRoundManager.target.Cambiar_imgHerido();
+                    turnRoundManager.current.Cambiar_imgAtaque(1);
+                    break;
+                case "escudo":
+                    player_escudo = true;
+                    turnRoundManager.current.Cambiar_imgEstado(0);
+                    break;
+                case "enamorado_1": 
+                    turnRoundManager.current.Cambiar_imgAtaque(4);
+                    turnRoundManager.target.Cambiar_imgEnamorado(0);
+                    break;
+                case "enamorado_2":
+                    turnRoundManager.current.Cambiar_imgAtaque(4);
+                    turnRoundManager.target.Cambiar_imgEnamorado(1);
+                    break;
+                case "enamorado_3": 
+                    turnRoundManager.target.Cambiar_imgEnamorado(2);
+                    break;
+                case "inmovil_prota":
+                    Debug.Log(" PONER IMAGEN PROTA INMOVILIZADO");    
+                    break;
+                case "inmovil_enemy": 
+                    turnRoundManager.target.Cambiar_imgEstado(0);
+                    break;
+                case "enfadado": 
+                    turnRoundManager.current.Cambiar_imgEstado(1);
+                    break;
+                case "asustado": 
+                    turnRoundManager.target.Cambiar_imgEstado(2);
+                    break;
+                default:
+                    Debug.Log("por default");
+                    turnRoundManager.current.Cambiar_Idle();
+                    turnRoundManager.target.Cambiar_Idle();
+                    break;
+            }
+        
+
+    }
     public void NextTurn()
     {
         //estados enemigo
@@ -286,9 +365,12 @@ public class CommandManager : MonoBehaviour
             Debug.Log("Enemigo Inmovilizado. Le quedan = " + turnos_inmovil);
             if (turnos_inmovil == 0)
             {
+                Change_img("idle_enemy");
                 Debug.Log("Ya no esta inmovilizado");
                 enemigo_inmovilizado = false;
                 turnos_inmovil = 1;
+                turnRoundManager.ChangeTurn();
+                turnRoundManager.EnemyTurn();
             }
         }
         else if (enemigo_inLove)
@@ -318,12 +400,21 @@ public class CommandManager : MonoBehaviour
             Debug.Log("Enemigo Inmovilizado. Le quedan = " + turnos_inmovil);
             if (turnos_inmovil == 0)
             {
+                Change_img("idle_player");
+
                 Debug.Log("Ya no esta inmovilizado");
                 player_inmovilizado = false;
                 turnos_inmovil = 1;
             }
             turnRoundManager.EnemyTurn();
         }
+        //else if (player_escudo)
+        //{
+        //    Change_img("idle_player");
+        //    Modificar_CA(-2);
+        //    turnRoundManager.ChangeTurn();
+        //    turnRoundManager.EnemyTurn();
+        //}
         else
         {
             //Cambiamos turno, y vemos si es el turno del enemigo

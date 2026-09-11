@@ -100,8 +100,12 @@ public class EnemyWalk : MonoBehaviour
     //Si hay collide vamos al combate
     void OnCollisionEnter(Collision col)
     {
+        Debug.Log(col.gameObject);
+        Debug.Log(col.gameObject.tag);
         if (col.gameObject.CompareTag("Player") )
         {
+            Debug.Log("???????????");
+
             //Combat(GameObject enemyName)
             //Parar la persecusion
             persiguiendo = false;
@@ -109,8 +113,8 @@ public class EnemyWalk : MonoBehaviour
             load.Combat(this.gameObject);
         }
     }
-            //Volver a la posicion original si no esta el prota en X tiempo
-            IEnumerator EsperarYComprovar()
+    //Volver a la posicion original si no esta el prota en X tiempo
+    IEnumerator EsperarYComprovar()
     {
         yield return new WaitForSeconds(tiempoEspera);
         Debug.Log("Han pasado " + tiempoEspera + " segundos.");

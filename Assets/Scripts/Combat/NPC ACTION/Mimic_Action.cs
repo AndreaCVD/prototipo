@@ -64,6 +64,9 @@ public class Mimic_Action : MonoBehaviour
                 break;
         }
     }
+    
+    //commandManager.Change_img("inmovil_enemy");
+
     // Fuerza - Mordisco 1d8+fue
     void Mordisco()
     {
@@ -72,17 +75,19 @@ public class Mimic_Action : MonoBehaviour
 
         if (ca_player == 2) //supera armadura
         {
+            commandManager.Change_img("enemy_attack");
             commandManager.Fuerza(8, 1);
         }
         else if (ca_player == 0) //CRITICO
         {
+            commandManager.Change_img("enemy_attack");
             Debug.Log("Tirada critica del enemigo");
             commandManager.Fuerza(8, 2);
         }
         else if (ca_player == 1) //TIRA UN 1
         {
             Debug.Log("Tirada fatidica del enemigo");
-
+            commandManager.Change_img("autoataque");
             commandManager.AutoHerirse(4, 1);
         }
         //else // no supera la armadura
@@ -98,18 +103,20 @@ public class Mimic_Action : MonoBehaviour
 
         if (ca_player == 2) //supera armadura
         {
+            commandManager.Change_img("enemy_attack");
             //Fuerza(int dado_1, int times_1, int dado_2, int times_2)
             commandManager.Fuerza(6, 1, 4, 1);
         }
         else if (ca_player == 0) //CRITICO
         {
+            commandManager.Change_img("enemy_attack");
             Debug.Log("Tirada critica del enemigo");
             commandManager.Fuerza(6, 2, 4, 2);
         }
         else if (ca_player == 1) //TIRA UN 1
         {
             Debug.Log("Tirada fatidica del enemigo");
-
+            commandManager.Change_img("autoataque");
             commandManager.AutoHerirse(4, 1);
         }
         //else // no supera la armadura
@@ -120,6 +127,8 @@ public class Mimic_Action : MonoBehaviour
     // Inteligencia - Atrapar, inmovilizar 1 turno
     void Atrapar()
     {
+        commandManager.Change_img("inmovil_prota");
+
         Debug.Log("Atrapar de mimic");
         player_inmovilizado = true;
         commandManager.PlayerInmovilizado(true, 1);
@@ -133,16 +142,19 @@ public class Mimic_Action : MonoBehaviour
 
         if (ca_player == 2) //supera armadura
         {
+            commandManager.Change_img("enemy_attack");
             //Fuerza(int dado_1, int times_1, int dado_2, int times_2)
             commandManager.Carisma(4, 2);
         }
         else if (ca_player == 0) //CRITICO
         {
+            commandManager.Change_img("enemy_attack");
             Debug.Log("Tirada critica del enemigo");
             commandManager.Carisma(4, 4);
         }
         else if (ca_player == 1) //TIRA UN 1
         {
+            commandManager.Change_img("autoataque");
             Debug.Log("Tirada fatidica del enemigo");
             commandManager.AutoHerirse(4, 1);
         }

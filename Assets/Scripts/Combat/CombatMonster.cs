@@ -1,7 +1,10 @@
+using System.Collections;
 using System.Reflection;
 using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
+using System.Collections.Generic;
 
 public class CombatMonster : MonoBehaviour
 {
@@ -10,7 +13,9 @@ public class CombatMonster : MonoBehaviour
         // 2 - Mecanica cambiada/obsoleta no quitada por falta de tiempo
     Parameters player; //El que tiene el script (todos)
     Save_Stats guardado; //Enviar las estats
-    [SerializeField] Image imagenPers; 
+    [Header("Img combate")]
+    [SerializeField] Image imagenPers; // cambiar aqui la img
+
     public Int2Val HP;
     public int damage;
     GameObject objLoadScene;
@@ -24,6 +29,13 @@ public class CombatMonster : MonoBehaviour
     //private int intelChanged;
     //private int carismaChanged;
     private int caChanged;
+    [Header("Canvas y textos")]
+    [SerializeField] Canvas canvas_enemy;
+    [SerializeField] Canvas canvas_player;
+    [SerializeField] TMP_Text text_enemy;
+    [SerializeField] TMP_Text text_player;
+    [SerializeField] Animator anim;
+
 
     private void Start()
     {
@@ -186,6 +198,7 @@ public class CombatMonster : MonoBehaviour
     public void TakeDamage(int damage)
     { 
         HP.current -= damage;
+        UI_damage(damage);
 
         player.stats.values[3].value -= damage;
 
@@ -212,7 +225,7 @@ public class CombatMonster : MonoBehaviour
             {
                 //Player == enemigo
                 //Restaurar constitucino ficha enemigo
-                player.stats.values[3].value = 0;
+                player.stats.values[3].value = player.stats.values[5].value;
 
                 restaurarStat(10); //Restaurar todos los stats prota si han sido cambiados
                 //destruir el obj del enemigo
@@ -232,6 +245,7 @@ public class CombatMonster : MonoBehaviour
     public void TakeDamage(int damage, bool acabarCombate)
     { 
         HP.current -= damage;
+        UI_damage(damage);
 
         player.stats.values[3].value -= damage;
 
@@ -271,6 +285,7 @@ public class CombatMonster : MonoBehaviour
     }
     public void SalirCombate()
     {
+        player.stats.values[4].value =12;
         load.SalirCombate();
 
     }
@@ -309,6 +324,60 @@ public class CombatMonster : MonoBehaviour
                 Debug.Log("No se ha restaurado bien el stat");
                 break;
         }
+    }
+    // DAÑO EN UI
+    void UI_damage(int damage)
+    {
+        if (player.namePers == "Prota")
+        {
+            text_player.text = "+" + damage.ToString();
+            anim.SetTrigger("player");
+
+        }
+        else
+        {
+            text_enemy.text = "+" + damage.ToString();
+            anim.SetTrigger("enemy");
+        }
+        //anim.SetInteger("Damage", 2);
+
+    }
+    public void Cambiar_imgAtaque(int indice)
+    {
+        //guardamos la actual
+        Sprite aux = imagenPers.sprite;
+        //cambiamos para el ataque
+        imagenPers.sprite = player.Ataques[indice];
+        //despues de X tiempo volver a la anterior
+        StartCoroutine(Img_Anterior(aux));
+    }
+    public void Cambiar_imgEstado(int indice)
+    {
+        Debug.Log(indice);
+        imagenPers.sprite = player.Estados_combate[indice];
+    }
+    public void Cambiar_imgEnamorado(int indice)
+    {
+        imagenPers.sprite = player.Estados_enamorado[indice];
+    }
+    public void Cambiar_imgHerido()
+    {
+        //guardamos la actual
+        Sprite aux = imagenPers.sprite;
+        // cambiar a aherido
+        imagenPers.sprite = player.herido;
+        // despues de X tiempo volver a la anterior
+        StartCoroutine(Img_Anterior(aux));
+    }
+    public void Cambiar_Idle()
+    {
+        imagenPers.sprite = player.idle;
+    }
+    IEnumerator Img_Anterior(Sprite img)
+    {
+        yield return new WaitForSeconds(2);
+        imagenPers.sprite = img;
+
     }
 
 }

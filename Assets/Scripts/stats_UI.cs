@@ -111,6 +111,12 @@ public class stats_UI : MonoBehaviour
             SetInventario();
         }
 
+        //CA
+        int ca = protagonista.stats.Get(PersonajesStats.ClaseArmadura);
+        if (fieldCA.value != ca)
+        {
+            SetCA(ca);
+        }
         //abrir/cerrar con la tecla I
         if (Input.GetKeyDown(KeyCode.I))
         {
@@ -170,6 +176,7 @@ public class stats_UI : MonoBehaviour
         fieldLIFE.value = num;
         ActualizarCorazon(num);
     }
+
     void ActualizarCorazon(int vidaActual)
     {
         float porcentaje = Mathf.Clamp01((float)vidaActual / maxLife);

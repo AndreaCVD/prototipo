@@ -29,7 +29,10 @@ public class CommandPanel : MonoBehaviour
 
     //fila principal
     private Button btnFUE, btnCAR, btnINT, btnITEM;
-    
+
+    //Stats
+    private Label fieldFUE, fieldINT, fieldCAR;
+
     //fila ataque fuerza
     private Button btnDAGA, btnESPADA, btnBACK;
     //fila ataque intel
@@ -54,7 +57,7 @@ public class CommandPanel : MonoBehaviour
     // Variables activas de combate
     private bool escudo, inLove;
     public int enamorado;
-    void Start()
+    void OnEnable()
     {
         MAX_vida = protagonista.stats.Get(PersonajesStats.Max_Vida);
         armadura = " ";
@@ -79,6 +82,10 @@ public class CommandPanel : MonoBehaviour
 
         var uIDocument = GetComponent<UIDocument>();
         root = uIDocument.rootVisualElement;
+        //stats
+        fieldFUE = root.Q("val-fue").Q<Label>();
+        fieldINT = root.Q("val-int").Q<Label>();
+        fieldCAR = root.Q("val-car").Q<Label>();
         //Volver a menu opciones
         btnBACK = root.Q<Button>("btn-BACK");
         btnBACK_intel = root.Q<Button>("btn-intelBACK");
@@ -158,6 +165,7 @@ public class CommandPanel : MonoBehaviour
         btnBACK_intel.clicked += Back;
         btnBACK_carisma.clicked += Back;
 
+        SetStats();
         Back();
     }
 
@@ -184,6 +192,19 @@ public class CommandPanel : MonoBehaviour
         btnITEM.clicked -= Abrir_Inventario;
         btnRun.clicked -= Huir;
     }
+
+    void SetStats()
+    {
+        int fue = protagonista.stats.values[0].value;
+        fieldFUE.text = fue.ToString();
+        
+        int intel = protagonista.stats.values[1].value;
+        fieldINT.text = intel.ToString();
+
+        int car = protagonista.stats.values[2].value;
+        fieldCAR.text = car.ToString();
+    }
+
     // --- INFO TIRADA ---
     void Texto_Tirada()
     {

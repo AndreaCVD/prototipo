@@ -5,6 +5,17 @@
         <ui:VisualElement name="combat-top" class="combat-top" style="height: 80%;">
             <ui:VisualElement name="player-zone" class="combat-zone combat-zone--player">
                 <ui:VisualElement name="player-sprite" class="combat-sprite" style="-unity-text-align: upper-center;" />
+                <ui:VisualElement name="info-player" style="flex-grow: 1; -unity-text-align: upper-center; position: absolute; height: 131px; top: 0; width: 350px; left: -12px; visibility: visible; flex-direction: row; align-items: flex-start; justify-content: center; align-self: stretch; margin-left: 6px;">
+                    <ui:VisualElement name="VisualElement" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Art/Interface/fuerza_combat.png?fileID=2800000&amp;guid=b0957cd2faa056b40965a7d1bcc81934&amp;type=3#fuerza_combat&quot;); height: 138px; align-items: center; justify-content: flex-end; margin-top: 4px; margin-right: 4px; margin-bottom: 4px; margin-left: 4px; padding-top: 7px; padding-right: 7px; padding-bottom: 7px; padding-left: 7px; min-width: 66px;">
+                        <ui:Label text="0" name="val-fue" style="justify-content: flex-end; align-items: center; bottom: 19px;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="VisualElement" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Art/Interface/fuerza_combat.png?fileID=2800000&amp;guid=b0957cd2faa056b40965a7d1bcc81934&amp;type=3#fuerza_combat&quot;); height: 138px; align-items: center; justify-content: flex-end; margin-top: 4px; margin-right: 4px; margin-bottom: 4px; margin-left: 4px; padding-top: 7px; padding-right: 7px; padding-bottom: 7px; padding-left: 7px; min-width: 66px;">
+                        <ui:Label text="0" name="val-int" style="justify-content: flex-end; align-items: center; bottom: 19px;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="VisualElement" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Art/Interface/fuerza_combat.png?fileID=2800000&amp;guid=b0957cd2faa056b40965a7d1bcc81934&amp;type=3#fuerza_combat&quot;); height: 138px; align-items: center; justify-content: flex-end; margin-top: 4px; margin-right: 4px; margin-bottom: 4px; margin-left: 4px; padding-top: 7px; padding-right: 7px; padding-bottom: 7px; padding-left: 7px; min-width: 66px;">
+                        <ui:Label text="0" name="val-car" style="justify-content: flex-end; align-items: center; bottom: 19px;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
                 <ui:VisualElement name="player-hp" class="combat-hp">
                     <ui:Label text="HP" class="combat-hp__label" />
                     <ui:VisualElement class="combat-hp__bar" style="width: 100%; flex-direction: row;">

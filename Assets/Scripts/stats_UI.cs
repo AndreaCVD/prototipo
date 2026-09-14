@@ -20,6 +20,7 @@ public class stats_UI : MonoBehaviour
 
     //ref del UI
     private VisualElement root;
+    private VisualElement hud_top, hud_bottom;
     private IntegerField fieldFUE, fieldINT, fieldCAR, fieldLIFE, fieldCA;
     private VisualElement heartFill;
     private int maxLife;
@@ -39,12 +40,15 @@ public class stats_UI : MonoBehaviour
     private int pocionVida;
     private int pocionLava;
     private int monedas;
+    private bool inCombat;
 
     private void OnEnable()
     {
         var uiDocument = GetComponent<UIDocument>();
         root = uiDocument.rootVisualElement;
 
+        hud_top = root.Q("hud-top").Q<VisualElement>();
+        hud_bottom = root.Q("hud-bottom-right").Q<VisualElement>();
         //stats
         fieldFUE = root.Q("FUE").Q<IntegerField>();
         fieldINT = root.Q("INT").Q<IntegerField>();
@@ -124,10 +128,31 @@ public class stats_UI : MonoBehaviour
         }
     }
 
+    public void Iniciar_Combate()
+    {
+        inCombat = true;
+        //arriba, el puzle, y inventory grid
+        hud_top.style.display = DisplayStyle.None;
+        hud_bottom.style.display = DisplayStyle.None;
+
+        inventoryGrid.style.display = DisplayStyle.None;
+    }
+    public void Acabar_Combate()
+    {
+        inCombat = false;
+
+        hud_top.style.display = DisplayStyle.Flex;
+        hud_bottom.style.display = DisplayStyle.Flex;
+
+    }
+
     void ToggleInventary()
     {
-        bool isDisplayed = inventoryGrid.style.display == DisplayStyle.Flex;
-        inventoryGrid.style.display = isDisplayed ? DisplayStyle.None : DisplayStyle.Flex;
+        if (!inCombat)
+        {
+            bool isDisplayed = inventoryGrid.style.display == DisplayStyle.Flex;
+            inventoryGrid.style.display = isDisplayed ? DisplayStyle.None : DisplayStyle.Flex;
+        }
     }
 
     bool areListEqual()

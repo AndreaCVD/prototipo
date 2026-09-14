@@ -12,7 +12,6 @@ public class Dice : MonoBehaviour
 {
     //[SerializeField] CanvasGroup canvas_dice;
     //[SerializeField] Transform dice_obj;
-    private float time = 1.5f;
 
     [Header("Textos dado")]
     [SerializeField] TMP_Text diceText;

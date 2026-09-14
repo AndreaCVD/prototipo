@@ -7,7 +7,8 @@ using Cursor = UnityEngine.Cursor;
 
 public class LoadScene : MonoBehaviour
 {
-    private GameObject uiHub;
+    private stats_UI UI;
+
         [Header("Degradado pantalla")]
     private TintScreen pantalla;
         [Header("Datos prota")]
@@ -39,34 +40,38 @@ public class LoadScene : MonoBehaviour
         destroyObjs = this.GetComponent<crear_obj>();
         preload = this.GetComponent<Preload>();
         pantalla = this.GetComponent<TintScreen>();
+
+        UI = GameObject.Find("UI_HUB").GetComponent<stats_UI>();
+
     }
+
 
     //void Update()
     //{
 
-    //    //encontrar el personaje prefab 
-    //    if (protagonista == null)
-    //    {
-    //        protagonista = GameObject.Find("personaje");
-    //    }
-    //    if (escenaState == null)
-    //    {
-    //        obj_input = GameObject.Find("personaje");
-    //        escenaState = obj_input.GetComponent<InputHandler>();
-    //        //save_posicion = GetComponent<personaje>();
-    //    }
+        //    //encontrar el personaje prefab 
+        //    if (protagonista == null)
+        //    {
+        //        protagonista = GameObject.Find("personaje");
+        //    }
+        //    if (escenaState == null)
+        //    {
+        //        obj_input = GameObject.Find("personaje");
+        //        escenaState = obj_input.GetComponent<InputHandler>();
+        //        //save_posicion = GetComponent<personaje>();
+        //    }
 
-    //    if (Input.GetKeyDown(KeyCode.Escape) && !onPause)
-    //    {
-    //        onPause = true;
-    //        ChangeScene("Pause_Menu");
-    //    }
-    //    if (SceneManager.sceneCount  == 1 && onPause)
-    //    {
-    //        //ya no estamos en pausa
-    //        onPause = false;
-    //    }
-    //}
+        //    if (Input.GetKeyDown(KeyCode.Escape) && !onPause)
+        //    {
+        //        onPause = true;
+        //        ChangeScene("Pause_Menu");
+        //    }
+        //    if (SceneManager.sceneCount  == 1 && onPause)
+        //    {
+        //        //ya no estamos en pausa
+        //        onPause = false;
+        //    }
+        //}
 
     public string NombreEscenaAnterior()
     {
@@ -161,21 +166,13 @@ public class LoadScene : MonoBehaviour
             //Debug.Log("el jefe s'ha guanyat");
 
         }
-      // Unload Scene
+        UI.Acabar_Combate();
+
+        // Unload Scene
         //SceneManager.UnloadSceneAsync("combat_scene");
         AsyncOperation unloadOp = SceneManager.UnloadSceneAsync("combat_scene");
 
-        // reactiva el HUD al salir del combate
-        if (uiHub != null)
-        {
 
-            //uiHub.SetActive(false);
-
-        }
-        else
-        {
-            Debug.LogWarning("uiHub es null al salir � no se pudo reactivar");
-        }
         //uiHub.SetActive(true);
     }
     public void Combat(GameObject enemyName)
@@ -197,10 +194,11 @@ public class LoadScene : MonoBehaviour
             // busca y oculta el HUD ANTES de cargar el combate
             //uiHub = GameObject.Find("UI_HUB");
             //if (uiHub != null)
-               // uiHub.SetActive(false);
-          //  else
+            // uiHub.SetActive(false);
+            //  else
             //    Debug.LogWarning("UI_HUB no encontrado � comprueba el nombre del GameObject");
 
+            UI.Iniciar_Combate();
 
             preload.CombatOpponent(enemyName); //Pasem el nom
 

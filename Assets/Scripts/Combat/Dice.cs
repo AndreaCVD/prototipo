@@ -19,10 +19,17 @@ public class Dice : MonoBehaviour
     [SerializeField] Animator dado;
 
     [Header("Sprites")]
+    [SerializeField] List<GameObject> dados = new List<GameObject>();
+
+    [Header("Dados")]
     public Image image;
 
     [Header("Usar diferentes fotos")]
     [SerializeField] Sprite[] imagenesDados;
+
+    GameObject dado_activar;
+    GameObject dado_desactivar;
+
     //[SerializeField] List<Image> Fotos Dado = new List<Image>();
     //public Image imageContainer;
 
@@ -33,7 +40,33 @@ public class Dice : MonoBehaviour
     //        imageContainer.sprite = images[index];
     //    }
 
-    
+    void Start()
+    {
+        foreach (var a in dados)
+        {
+            if (a.name == "d20")
+                a.SetActive(true);
+            else
+                a.SetActive(false);
+        }
+
+    }
+    public void cambiar_3d(int dado)
+    {
+        string aux = "d" + dado.ToString();
+
+        foreach (var a in dados)
+        {
+            if (a.name == aux)
+                dado_activar = a;
+
+            else if (a.activeInHierarchy) // si esta actiu l'amaguem
+                dado_desactivar = a;
+        }
+
+        StartCoroutine(ChangeModel(dado_activar, dado_desactivar, dado));
+    }
+
     public void CambiarSprite(int dado_sprite)
     {
         // Asignar el nuevo sprite
@@ -43,6 +76,7 @@ public class Dice : MonoBehaviour
    
     public int RollDice(int maxValue, int tiradas)
     {
+
         int a = 0;
         for (int aux = 0; aux < tiradas; aux++)
         {
@@ -52,18 +86,18 @@ public class Dice : MonoBehaviour
         //StartCoroutine(ChangeText(a));
         
 
-            Move_dado20(a);
+         Move_dado20(a);
 
         //primero hay que ver que dado es, si el de 20, 4 o mas
         //ver que animators estan activos o no, y enviar el numero
 
         return a;
     }
-    IEnumerator ChangeText(int a)
+    IEnumerator ChangeModel(GameObject activar, GameObject desactivar, int dado)
     {
-        //diceText.text = a.ToString();
-        yield return new WaitForSeconds(time);
-        diceText.text = "?";
+        yield return new WaitForSeconds(1);
+        activar.SetActive(true);
+        desactivar.SetActive(false);
     }
 
     void Move_dado20(int num)

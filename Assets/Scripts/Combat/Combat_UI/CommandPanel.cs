@@ -131,6 +131,7 @@ public class CommandPanel : MonoBehaviour
         // eventos
         btnFUE.clicked += Menu_Fuerza;
             btnDAGA.clicked += Daga;
+            //btnDAGA.selected += a;
             btnESPADA.clicked += Espada;
 
         btnINT.clicked += Menu_Intel;
@@ -156,6 +157,8 @@ public class CommandPanel : MonoBehaviour
         btnBACK.clicked += Back;
         btnBACK_intel.clicked += Back;
         btnBACK_carisma.clicked += Back;
+
+        Back();
     }
 
     void FixedUpdate()
@@ -294,7 +297,9 @@ public class CommandPanel : MonoBehaviour
                 tirada_armadura.style.display = DisplayStyle.None;
                 armadura = "si";
                 veces_tirada = 1;
-                
+
+                //cambiamos el dado tambien
+                dado();
                 Resultado_Tirada();
                 NextAction();
             }
@@ -319,7 +324,7 @@ public class CommandPanel : MonoBehaviour
             else //(AC_superada == 3)
             {
                 armadura = "no";
-
+                dado();
                 Resultado_Tirada();
                 Back();
             }
@@ -623,6 +628,22 @@ public class CommandPanel : MonoBehaviour
         //dura 1 turno
     }
     // SECUNDARIAS
+    // --- DADO ---
+    void dado()
+    {
+        if (nom_ataque == "daga") //d8
+        {
+            commandManager.model_dados(8);
+        }
+        else if (nom_ataque == "espada") //d12
+        {
+            commandManager.model_dados(12);
+        }
+        else if (armadura == "no")
+        {
+            commandManager.model_dados(4);
+        }
+    }
     //Boton Huir
     public void Huir()
     {
@@ -652,11 +673,17 @@ public class CommandPanel : MonoBehaviour
              case 2: //Pocion de vida
                 Debug.Log("El jugador usa una pocion, recupera 10 de vida");
                 int vida = protagonista.stats.values[3].value;
-                if (vida > 0 && vida <= MAX_vida-10) //MAX vida - 10
+                if (protagonista.Inventario.PocionVida.Count != 0)
                 {
-                    protagonista.stats.values[3].value += 10;
-                    protagonista.Inventario.PocionVida.RemoveAt(protagonista.Inventario.PocionVida.Count - 1);
+                    if (vida > 0 && vida <= MAX_vida-10) //MAX vida - 10
+                    {
+                        protagonista.stats.values[3].value += 10;
+                        protagonista.Inventario.PocionVida.RemoveAt(protagonista.Inventario.PocionVida.Count - 1);
+                    }
+                    
                 }
+                else
+                    btn_slot_2.SetEnabled(false);
                 break;
              case 3: //pocion lava
                 break;

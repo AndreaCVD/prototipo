@@ -35,8 +35,8 @@
                 <ui:Button name="btn-ITEM" text="Bolsa" class="combat_btns combat_btn_color" />
             </ui:VisualElement>
             <ui:VisualElement name="atq-FUE" class="combat-row" style="display: none;">
-                <ui:Button name="btn-DAGA" text="Daga - d8" class="combat_btns combat_btn_color" />
-                <ui:Button name="btn-ESPADA" text="Espada - d12" class="combat_btns combat_btn_color" />
+                <ui:Button name="btn-DAGA" text="Daga - d8" enabled="true" selectable="true" class="combat_btns combat_btn_color" style="cursor: initial;" />
+                <ui:Button name="btn-ESPADA" text="Espada - d12" class="combat_btns combat_btn_color" style="cursor: initial;" />
                 <ui:Button name="btn-BACK" text="Atras" class="combat_btns items_btn_color" style="display: flex; visibility: visible; overflow: hidden;" />
             </ui:VisualElement>
             <ui:VisualElement name="atq-INTEL" class="combat-row" style="display: none;">

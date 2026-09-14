@@ -34,6 +34,8 @@ public class CommandManager : MonoBehaviour
         enemigo_inLove = turnRoundManager.target.InLove();
         if (enemigo_inLove == true)
             Change_img("enamorado_3");
+
+
     }
     //Items
     public void PocionVida()
@@ -291,6 +293,10 @@ public class CommandManager : MonoBehaviour
         int a = diceRoller.RollDice(caras, tiradas);
         return a; 
     }
+    public void model_dados(int dado)
+    {
+        diceRoller.cambiar_3d(dado);
+    }
     // --- IMG COMBATE -- 
     public void Mimic_img(string ataque)
     {
@@ -381,6 +387,7 @@ public class CommandManager : MonoBehaviour
     }
     public void NextTurn()
     {
+        model_dados(20);
         //estados enemigo
         if (enemigo_inmovilizado)
         {

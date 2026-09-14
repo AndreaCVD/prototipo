@@ -549,12 +549,16 @@ public class CommandPanel : MonoBehaviour
     {
         if (armadura == " ") //No ha hecho nada aun
         {
+            commandManager.model_dados(12);
+
             nom_ataque = "enamorado";
             caris_options.style.display = DisplayStyle.None;
             Menu_TiradaArmadura();
         }
         else if (armadura == "no")
         {
+            commandManager.model_dados(20);
+
             Resetear_Valores();
             Back();
 
@@ -567,6 +571,8 @@ public class CommandPanel : MonoBehaviour
         }
         else //Armadura Si
         {
+            commandManager.model_dados(20);
+
             //si se usa 3 veces --> enemigo estado Enamorado
             enamorado++;
             if (enamorado == 1)

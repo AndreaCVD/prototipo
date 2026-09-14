@@ -2213,31 +2213,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8323840446460283375, guid: e8f139171a79cc34a9591a4d695cd51d, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: -0.7607255
       objectReference: {fileID: 0}
     - target: {fileID: 8323840446460283375, guid: e8f139171a79cc34a9591a4d695cd51d, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: 0.18538903
       objectReference: {fileID: 0}
     - target: {fileID: 8323840446460283375, guid: e8f139171a79cc34a9591a4d695cd51d, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0.03569564
       objectReference: {fileID: 0}
     - target: {fileID: 8323840446460283375, guid: e8f139171a79cc34a9591a4d695cd51d, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: -0.62101
       objectReference: {fileID: 0}
     - target: {fileID: 8323840446460283375, guid: e8f139171a79cc34a9591a4d695cd51d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -13.752
       objectReference: {fileID: 0}
     - target: {fileID: 8323840446460283375, guid: e8f139171a79cc34a9591a4d695cd51d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: -17.036
       objectReference: {fileID: 0}
     - target: {fileID: 8323840446460283375, guid: e8f139171a79cc34a9591a4d695cd51d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: -279.478
       objectReference: {fileID: 0}
     - target: {fileID: 8603101405693112548, guid: e8f139171a79cc34a9591a4d695cd51d, type: 3}
       propertyPath: m_Controller
@@ -2318,7 +2318,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7609131952577228994, guid: 9f7babebc7fe55848b58a97446114b25, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2339,7 +2339,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2089052596587424462, guid: 1a285922771129b42958446a5650b13d, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5407847665193465979, guid: 1a285922771129b42958446a5650b13d, type: 3}
       propertyPath: m_LocalScale.x

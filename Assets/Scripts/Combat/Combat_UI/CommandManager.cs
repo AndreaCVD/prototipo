@@ -292,6 +292,31 @@ public class CommandManager : MonoBehaviour
         return a; 
     }
     // --- IMG COMBATE -- 
+    public void Mimic_img(string ataque)
+    {
+        switch (ataque)
+        {
+            case "mordisco":
+                turnRoundManager.target.Cambiar_imgHerido(); //prota herido
+                turnRoundManager.current.Cambiar_imgAtaque(0);
+                break;
+            case "atrapar":
+                Debug.Log(" PONER IMAGEN PROTA INMOVILIZADO");
+                turnRoundManager.current.Cambiar_imgAtaque(1);
+                break;
+            case "lenguetazo":
+                turnRoundManager.target.Cambiar_imgHerido(); //prota herido
+                turnRoundManager.current.Cambiar_imgAtaque(2);
+                break;
+            case "vomito":
+                turnRoundManager.target.Cambiar_imgHerido(); //prota herido
+                turnRoundManager.current.Cambiar_imgAtaque(3);
+                break;
+            default:
+                Debug.Log("error lectura img mimic");
+                break;
+        }
+    }
     public void Change_img(string ataque)
     {
 

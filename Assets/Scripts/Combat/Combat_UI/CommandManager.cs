@@ -388,6 +388,7 @@ public class CommandManager : MonoBehaviour
     public void NextTurn()
     {
         model_dados(20);
+
         //estados enemigo
         if (enemigo_inmovilizado)
         {

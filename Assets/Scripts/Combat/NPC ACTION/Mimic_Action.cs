@@ -76,18 +76,27 @@ public class Mimic_Action : MonoBehaviour
         if (ca_player == 2) //supera armadura
         {
             commandManager.Mimic_img("mordisco");
+
+            //commandManager.model_dados(8);
+
             commandManager.Fuerza(8, 1);
         }
         else if (ca_player == 0) //CRITICO
         {
             commandManager.Mimic_img("mordisco");
             Debug.Log("Tirada critica del enemigo");
+
+            //commandManager.model_dados(8);
+
             commandManager.Fuerza(8, 2);
         }
         else if (ca_player == 1) //TIRA UN 1
         {
             Debug.Log("Tirada fatidica del enemigo");
             commandManager.Change_img("autoataque");
+            
+            //commandManager.model_dados(4);
+
             commandManager.AutoHerirse(4, 1);
         }
         //else // no supera la armadura
@@ -103,18 +112,24 @@ public class Mimic_Action : MonoBehaviour
 
         if (ca_player == 2) //supera armadura
         {
+            //commandManager.model_dados(6);
+
             commandManager.Mimic_img("vomito");
             //Fuerza(int dado_1, int times_1, int dado_2, int times_2)
             commandManager.Fuerza(6, 1, 4, 1);
         }
         else if (ca_player == 0) //CRITICO
         {
+            //commandManager.model_dados(6);
+
             commandManager.Mimic_img("vomito");
             Debug.Log("Tirada critica del enemigo");
             commandManager.Fuerza(6, 2, 4, 2);
         }
         else if (ca_player == 1) //TIRA UN 1
         {
+            //commandManager.model_dados(4);
+
             Debug.Log("Tirada fatidica del enemigo");
             commandManager.Change_img("autoataque");
             commandManager.AutoHerirse(4, 1);
@@ -141,18 +156,24 @@ public class Mimic_Action : MonoBehaviour
 
         if (ca_player == 2) //supera armadura
         {
+            //commandManager.model_dados(4);
+
             commandManager.Mimic_img("lenguetazo");
             //Fuerza(int dado_1, int times_1, int dado_2, int times_2)
             commandManager.Carisma(4, 2);
         }
         else if (ca_player == 0) //CRITICO
         {
+            //commandManager.model_dados(4);
+
             commandManager.Mimic_img("lenguetazo");
             Debug.Log("Tirada critica del enemigo");
             commandManager.Carisma(4, 4);
         }
         else if (ca_player == 1) //TIRA UN 1
         {
+            //commandManager.model_dados(4);
+
             commandManager.Mimic_img("autoataque");
             Debug.Log("Tirada fatidica del enemigo");
             commandManager.AutoHerirse(4, 1);

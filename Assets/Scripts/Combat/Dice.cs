@@ -16,7 +16,7 @@ public class Dice : MonoBehaviour
 
     [Header("Textos dado")]
     [SerializeField] TMP_Text diceText;
-    [SerializeField] Animator dado;
+    [SerializeField] Animator anim_dado;
 
     [Header("Sprites")]
     [SerializeField] List<GameObject> dados = new List<GameObject>();
@@ -84,12 +84,19 @@ public class Dice : MonoBehaviour
         }
 
         //StartCoroutine(ChangeText(a));
-        
 
-         Move_dado20(a);
 
         //primero hay que ver que dado es, si el de 20, 4 o mas
         //ver que animators estan activos o no, y enviar el numero
+        //Animar el dado
+        foreach (var b in dados)
+        {
+            if (b.activeInHierarchy) // si esta actiu l'amaguem
+            {
+                anim_dado = b.GetComponent<Animator>();
+                anim_dado.SetInteger("dado", a);
+            }
+        }
 
         return a;
     }
@@ -102,7 +109,7 @@ public class Dice : MonoBehaviour
 
     void Move_dado20(int num)
     {
-        dado.SetInteger("dado", num);
+        anim_dado.SetInteger("dado", num);
     }
     void Move_dado12(int num)
     {

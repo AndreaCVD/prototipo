@@ -43,6 +43,10 @@ public class Interactable : MonoBehaviour
             inventario = script_inventario.GetComponent<Inventario>();
         }
     }
+    public void anim_to_Combat()
+    {
+        load.Combat();
+    }
     public void Interact()
     {
        // onInteract?.Invoke();
@@ -52,8 +56,11 @@ public class Interactable : MonoBehaviour
         switch (a.tag)
         {
             case "Enemy":
-                preload.CombatOpponent( a );
-                load.Combat(a);
+                preload.CombatOpponent(a);
+                //Activar animacion -> animacion envia a load.Combat(a)
+                Animator anim = a.GetComponent<Animator>();
+                anim.SetTrigger("inCombat");
+                //load.Combat(a);
                 break;
             //case "Puzzle":
             //    //Debug.Log("This is a Puzzle");

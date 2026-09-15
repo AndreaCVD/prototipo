@@ -31,12 +31,12 @@ MonoBehaviour:
   Inventario: {fileID: 0}
   modelPrefab: {fileID: 0}
   idle: {fileID: 21300000, guid: 61befc0d270d01d4aafc3e16e18f994c, type: 3}
-  herido: {fileID: 21300000, guid: ed699ef34935db543bedbb2433db0c68, type: 3}
+  herido: {fileID: 21300000, guid: abc7b0554a6fa5d42830c49b99cc9fa3, type: 3}
   Ataques:
   - {fileID: 21300000, guid: 34995f5051e4fd144b9f7bfb2ed43818, type: 3}
   - {fileID: 21300000, guid: 2f71b0613041830438eb027068eb3d34, type: 3}
-  - {fileID: 21300000, guid: f081a996473271849b714c4979e1e24c, type: 3}
-  - {fileID: 21300000, guid: a6130b68f673ad442802ac7e45b759d3, type: 3}
+  - {fileID: 21300000, guid: 96a74ea1dee64194897179cb0dacda8e, type: 3}
+  - {fileID: 21300000, guid: f61dd58524617ff4997d0b83abdd4a14, type: 3}
   Estados_combate:
   - {fileID: 21300000, guid: a2313163331852f4e91b49b2a7e69aeb, type: 3}
   - {fileID: 21300000, guid: 8255726bd18182a41a14162990f5157c, type: 3}

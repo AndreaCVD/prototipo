@@ -6,6 +6,7 @@ using UnityEngine.AI;
 public class EnemyWalk : MonoBehaviour
 {
     private LoadScene load;
+    private Preload preload;
     private GameObject script_load;
 
     public bool isHome;
@@ -39,10 +40,10 @@ public class EnemyWalk : MonoBehaviour
         isHome = true;
         firstWalk = false;
 
-        if (script_load == null)
+        if (load == null)
         {
-            script_load = GameObject.Find("--SceneManagement--");
-            load = script_load.GetComponent<LoadScene>();
+            load = GameObject.Find("--SceneManagement--").GetComponent<LoadScene>();
+            preload = GameObject.Find("--SceneManagement--").GetComponent<Preload>();
         }
     }
     private void Update()
@@ -110,7 +111,9 @@ public class EnemyWalk : MonoBehaviour
             //Parar la persecusion
             persiguiendo = false;
             enemy.speed = 0;
-            load.Combat(this.gameObject);
+
+            preload.CombatOpponent(this.gameObject);
+            load.Combat();
         }
     }
     //Volver a la posicion original si no esta el prota en X tiempo

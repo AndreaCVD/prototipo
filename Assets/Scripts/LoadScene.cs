@@ -175,9 +175,8 @@ public class LoadScene : MonoBehaviour
 
         //uiHub.SetActive(true);
     }
-    public void Combat(GameObject enemyName)
+    public void Combat()
     {
-        Debug.Log(enemyName);
 
         if (!onCombat)
         {
@@ -199,8 +198,6 @@ public class LoadScene : MonoBehaviour
             //    Debug.LogWarning("UI_HUB no encontrado � comprueba el nombre del GameObject");
 
             UI.Iniciar_Combate();
-
-            preload.CombatOpponent(enemyName); //Pasem el nom
 
             //save_posicion.save_LastPos();
             SceneManager.LoadScene("combat_scene", LoadSceneMode.Additive);

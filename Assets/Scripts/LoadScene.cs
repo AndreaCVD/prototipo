@@ -43,35 +43,36 @@ public class LoadScene : MonoBehaviour
 
         UI = GameObject.Find("UI_HUB").GetComponent<stats_UI>();
 
+        //encontrar el personaje prefab 
+        if (protagonista == null)
+        {
+            protagonista = GameObject.Find("personaje");
+        }
+        if (escenaState == null)
+        {
+            obj_input = GameObject.Find("personaje");
+            escenaState = obj_input.GetComponent<InputHandler>();
+            //save_posicion = GetComponent<personaje>();
+        }
     }
 
 
-    //void Update()
-    //{
-
-        //    //encontrar el personaje prefab 
-        //    if (protagonista == null)
-        //    {
-        //        protagonista = GameObject.Find("personaje");
-        //    }
-        //    if (escenaState == null)
-        //    {
-        //        obj_input = GameObject.Find("personaje");
-        //        escenaState = obj_input.GetComponent<InputHandler>();
-        //        //save_posicion = GetComponent<personaje>();
-        //    }
-
-        //    if (Input.GetKeyDown(KeyCode.Escape) && !onPause)
-        //    {
-        //        onPause = true;
-        //        ChangeScene("Pause_Menu");
-        //    }
-        //    if (SceneManager.sceneCount  == 1 && onPause)
-        //    {
-        //        //ya no estamos en pausa
-        //        onPause = false;
-        //    }
-        //}
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape) && !onPause)
+        {
+            escenaState.ScenePause(true); //true, se para
+            onPause = true;
+            UI.Pausa();
+            ChangeScene("Pause_Menu");
+        }
+        if (SceneManager.sceneCount == 1 && onPause)
+        {
+            UI.DesPausa();
+            escenaState.ScenePause(false); //false, se mueve
+            onPause = false;
+        }
+    }
 
     public string NombreEscenaAnterior()
     {
@@ -208,6 +209,8 @@ public class LoadScene : MonoBehaviour
     
     public void GameOver()
     {
+        //activar animacion de personaje y luego acabar juego
+
         pantalla.UnTint();
  
         SceneManager.LoadScene("GameOver");

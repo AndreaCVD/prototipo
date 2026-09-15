@@ -20,7 +20,8 @@ public class stats_UI : MonoBehaviour
 
     //ref del UI
     private VisualElement root;
-    private VisualElement hud_top, hud_bottom;
+    private VisualElement hud_top, hud_bottom_right, hud_bottom;
+
     private IntegerField fieldFUE, fieldINT, fieldCAR, fieldLIFE, fieldCA;
     private VisualElement heartFill;
     private int maxLife;
@@ -48,7 +49,8 @@ public class stats_UI : MonoBehaviour
         root = uiDocument.rootVisualElement;
 
         hud_top = root.Q("hud-top").Q<VisualElement>();
-        hud_bottom = root.Q("hud-bottom-right").Q<VisualElement>();
+        hud_bottom_right = root.Q("hud-bottom-right").Q<VisualElement>();
+        hud_bottom = root.Q("hud-bottom").Q<VisualElement>();
         //stats
         fieldFUE = root.Q("FUE").Q<IntegerField>();
         fieldINT = root.Q("INT").Q<IntegerField>();
@@ -133,7 +135,7 @@ public class stats_UI : MonoBehaviour
         inCombat = true;
         //arriba, el puzle, y inventory grid
         hud_top.style.display = DisplayStyle.None;
-        hud_bottom.style.display = DisplayStyle.None;
+        hud_bottom_right.style.display = DisplayStyle.None;
 
         inventoryGrid.style.display = DisplayStyle.None;
     }
@@ -142,8 +144,20 @@ public class stats_UI : MonoBehaviour
         inCombat = false;
 
         hud_top.style.display = DisplayStyle.Flex;
-        hud_bottom.style.display = DisplayStyle.Flex;
+        hud_bottom_right.style.display = DisplayStyle.Flex;
 
+    }
+    public void DesPausa()
+    {
+        hud_top.style.display = DisplayStyle.Flex;
+        hud_bottom_right.style.display = DisplayStyle.Flex;
+        hud_bottom.style.display = DisplayStyle.Flex;
+    }
+    public void Pausa()
+    {
+        hud_top.style.display = DisplayStyle.None;
+        hud_bottom_right.style.display = DisplayStyle.None;
+        hud_bottom.style.display = DisplayStyle.None;
     }
 
     void ToggleInventary()

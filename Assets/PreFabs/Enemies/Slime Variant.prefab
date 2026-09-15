@@ -72,7 +72,7 @@ PrefabInstance:
       addedObject: {fileID: 5020085300430537757}
     - targetCorrespondingSourceObject: {fileID: 6902702733525548753, guid: 72ba70447d044094c8668fff4b0afd52, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 3558212917984701821}
+      addedObject: {fileID: 3464644385341906846}
   m_SourcePrefab: {fileID: 100100000, guid: 72ba70447d044094c8668fff4b0afd52, type: 3}
 --- !u!1 &4520375252668954185 stripped
 GameObject:
@@ -127,17 +127,25 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 128.89069, y: 134.85083, z: 138.6669}
   m_Center: {x: -9.851719, y: -21.321327, z: -12.589273}
---- !u!114 &3558212917984701821
-MonoBehaviour:
+--- !u!95 &3464644385341906846
+Animator:
+  serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4520375252668954185}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c3d42b3a497006740958fffd87391ec7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogo_obj: {fileID: 0}
-  ficha_obj: {fileID: 0}
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d538e5178a7542b43a7e254cd4dd6c1b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

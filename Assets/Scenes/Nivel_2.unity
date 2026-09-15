@@ -2063,7 +2063,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3886687821754068211, guid: 87b652990df6cfa4b9c927d9d0e12c6f, type: 3}
       propertyPath: m_ConstrainProportionsScale
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4520375252668954185, guid: 87b652990df6cfa4b9c927d9d0e12c6f, type: 3}
       propertyPath: m_Name
@@ -9212,7 +9212,7 @@ Animator:
   m_GameObject: {fileID: 1815081954}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 524a8268215960f46945cde95d541ee2, type: 2}
+  m_Controller: {fileID: 9100000, guid: d538e5178a7542b43a7e254cd4dd6c1b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

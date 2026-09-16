@@ -20,12 +20,14 @@ public class CharacterInteract : MonoBehaviour
     public bool text_canvas;
     public bool canvas_visible;  // ver si presiona para interaccion
     public  bool isEnemy;  // ver si presiona para interaccion
+    public  bool death;  
     void Start()
     {
         opacidad(0f);
         interaction = false;
         text_canvas = false;
         canvas_visible = false;
+        death = false;
 
         CanvasGroup hijo_canvas = transform.Find("Canvas Puzzle").GetComponent<CanvasGroup>();
         grup = hijo_canvas;
@@ -44,7 +46,7 @@ public class CharacterInteract : MonoBehaviour
         //detectar todos los objetos DELANTE del jugador
         //Collider[] colliders = Physics.OverlapBox(pivot.position, interactAreaSize);
         //Distancia máxima del ray, sino con Mathf.Infinity no tiene limite
-        if (Physics.Raycast(ray, out hitInfo, 1f))
+        if (Physics.Raycast(ray, out hitInfo, 1f) && !death)
         {
             //Debug.DrawRay(ray.origin, ray.direction * 1f, Color.red);
             Interactable interactable;

@@ -16,13 +16,13 @@ MonoBehaviour:
   enamorado: 0
   stats:
     values:
-    - value: 2
+    - value: 0
       stats: 0
     - value: 0
       stats: 1
     - value: 0
       stats: 2
-    - value: 60
+    - value: 1
       stats: 3
     - value: 12
       stats: 4

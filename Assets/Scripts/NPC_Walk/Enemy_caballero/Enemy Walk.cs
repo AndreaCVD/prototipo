@@ -105,14 +105,13 @@ public class EnemyWalk : MonoBehaviour
         Debug.Log(col.gameObject.tag);
         if (col.gameObject.CompareTag("Player") )
         {
-            Debug.Log("???????????");
 
             //Combat(GameObject enemyName)
             //Parar la persecusion
             persiguiendo = false;
             enemy.speed = 0;
 
-            preload.CombatOpponent(this.gameObject);
+            //preload.CombatOpponent(this.gameObject);
             load.Combat();
         }
     }

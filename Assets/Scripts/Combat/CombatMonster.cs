@@ -216,10 +216,10 @@ public class CombatMonster : MonoBehaviour
             if (player.namePers == "Prota")
             {
                 restaurarStat(10); //Restaurar todos los stats prota si han sido cambiados
-                Debug.Log("Prota ha perdido");
+                Debug.Log("MUERTE PERSONAJE");
+                preload.Carlos_Death();
+                load.SalirCombate();
                 //load.GameOver();
-                Debug.Log("GAME OVER");
-                load.GameOver();
             }
             else //Si pierde el enemigo:
             {
@@ -228,11 +228,10 @@ public class CombatMonster : MonoBehaviour
                 player.stats.values[3].value = player.stats.values[5].value;
 
                 restaurarStat(10); //Restaurar todos los stats prota si han sido cambiados
-                                   //destruir el obj del enemigo
                 
-                preload.DestroyEnemy();
+                preload.DestroyEnemy(); //anim muerte enemigo
               
-                load.SalirCombate();
+                load.SalirCombate(); //salimos de la escena
             }
             //guardado.alguien_eliminado(player); //enviara el personaje que se elimine
         }
@@ -243,7 +242,7 @@ public class CombatMonster : MonoBehaviour
             Debug.Log("FIN TURNO");
         }
     }
-    public void TakeDamage(int damage, bool acabarCombate)
+    public void TakeDamage(int damage, bool acabarCombate) //Huir sin destruir a enemigo
     { 
         HP.current -= damage;
         UI_damage(damage);

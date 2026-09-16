@@ -100,7 +100,7 @@ public class Dice : MonoBehaviour
     }
     IEnumerator ChangeModel(GameObject activar, GameObject desactivar, int dado)
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.5f);
         activar.SetActive(true);
         desactivar.SetActive(false);
     }

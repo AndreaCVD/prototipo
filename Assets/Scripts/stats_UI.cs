@@ -231,15 +231,16 @@ public class stats_UI : MonoBehaviour
     {
         Debug.Log("Mostrar notificacion");
         
-        if (notifCoroutine != null)
-        {
-            StopCoroutine(notifCoroutine);
-        }
+        //if (notifCoroutine != null)
+        //{
+        //    StopCoroutine(notifCoroutine);
+        //}
 
         notifIcon.style.backgroundImage = new StyleBackground(icono);
         itemNotification.style.display = DisplayStyle.Flex;
 
         notifCoroutine = StartCoroutine(OcultarNotificacion(2.5f));
+        Debug.Log(notifCoroutine);
     }
 
     IEnumerator OcultarNotificacion(float segundos)
@@ -247,6 +248,8 @@ public class stats_UI : MonoBehaviour
         yield return new WaitForSeconds(segundos);
         itemNotification.style.display = DisplayStyle.None;
         notifCoroutine = null;
+        Debug.Log("No mostrar notificacion");
+
     }
 
     void SetInventario()

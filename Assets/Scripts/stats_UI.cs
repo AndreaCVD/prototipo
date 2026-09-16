@@ -31,7 +31,7 @@ public class stats_UI : MonoBehaviour
     private Button btnInventory;
     private VisualElement itemNotification;
     private VisualElement notifIcon;
-    //private Coroutine notifCoroutine;
+    private Coroutine notifCoroutine;
 
     //contadores inventory
     private int llaves;
@@ -68,6 +68,9 @@ public class stats_UI : MonoBehaviour
 
         itemNotification = root.Q<VisualElement>("item-notification");
         notifIcon = root.Q<VisualElement>("notif-icon");
+        Debug.Log(inventoryGrid);
+        Debug.Log(notifIcon);
+
     }
     private void OnDisable()
     {
@@ -226,8 +229,8 @@ public class stats_UI : MonoBehaviour
 
     public void MostrarNotificacion(Sprite icono)
     {
-        //Debug.Log("Mostrar notificacion");
-        /*
+        Debug.Log("Mostrar notificacion");
+        
         if (notifCoroutine != null)
         {
             StopCoroutine(notifCoroutine);
@@ -236,14 +239,14 @@ public class stats_UI : MonoBehaviour
         notifIcon.style.backgroundImage = new StyleBackground(icono);
         itemNotification.style.display = DisplayStyle.Flex;
 
-        notifCoroutine = StartCoroutine(OcultarNotificacion(2.5f));*/
+        notifCoroutine = StartCoroutine(OcultarNotificacion(2.5f));
     }
 
     IEnumerator OcultarNotificacion(float segundos)
     {
         yield return new WaitForSeconds(segundos);
         itemNotification.style.display = DisplayStyle.None;
-        //notifCoroutine = null;
+        notifCoroutine = null;
     }
 
     void SetInventario()

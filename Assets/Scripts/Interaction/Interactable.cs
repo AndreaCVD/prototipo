@@ -43,6 +43,10 @@ public class Interactable : MonoBehaviour
             inventario = script_inventario.GetComponent<Inventario>();
         }
     }
+    public void Death()
+    {
+        preload.Death();
+    }
     public void anim_to_Combat()
     {
         load.Combat();

@@ -228,9 +228,10 @@ public class CombatMonster : MonoBehaviour
                 player.stats.values[3].value = player.stats.values[5].value;
 
                 restaurarStat(10); //Restaurar todos los stats prota si han sido cambiados
-                //destruir el obj del enemigo
+                                   //destruir el obj del enemigo
+                
                 preload.DestroyEnemy();
-
+              
                 load.SalirCombate();
             }
             //guardado.alguien_eliminado(player); //enviara el personaje que se elimine

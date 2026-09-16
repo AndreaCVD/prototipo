@@ -13,15 +13,14 @@ public class Dice : MonoBehaviour
     //[SerializeField] CanvasGroup canvas_dice;
     //[SerializeField] Transform dice_obj;
 
-    [Header("Textos dado")]
-    [SerializeField] TMP_Text diceText;
-    [SerializeField] Animator anim_dado;
+    //[Header("Textos dado")]
+    //[SerializeField] TMP_Text diceText;
+    private Animator anim_dado;
+    //[Header("Dados")]
+    //public Image image;
 
-    [Header("Sprites")]
+    [Header("Dados 3d")]
     [SerializeField] List<GameObject> dados = new List<GameObject>();
-
-    [Header("Dados")]
-    public Image image;
 
     [Header("Usar diferentes fotos")]
     [SerializeField] Sprite[] imagenesDados;
@@ -66,11 +65,11 @@ public class Dice : MonoBehaviour
         StartCoroutine(ChangeModel(dado_activar, dado_desactivar, dado));
     }
 
-    public void CambiarSprite(int dado_sprite)
-    {
-        // Asignar el nuevo sprite
-        image.sprite = imagenesDados[dado_sprite];
-    }
+    //public void CambiarSprite(int dado_sprite)
+    //{
+    //    // Asignar el nuevo sprite
+    //    image.sprite = imagenesDados[dado_sprite];
+    //}
    // int a = diceRoller.RollDice(caras_1, tiradas_1, int caras_2, int tiradas_2);
    
     public int RollDice(int maxValue, int tiradas)

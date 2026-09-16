@@ -230,17 +230,16 @@ public class stats_UI : MonoBehaviour
     public void MostrarNotificacion(Sprite icono)
     {
         Debug.Log("Mostrar notificacion");
-        
-        //if (notifCoroutine != null)
-        //{
-        //    StopCoroutine(notifCoroutine);
-        //}
+
+        if (notifCoroutine != null)
+        {
+            StopCoroutine(notifCoroutine);
+        }
 
         notifIcon.style.backgroundImage = new StyleBackground(icono);
         itemNotification.style.display = DisplayStyle.Flex;
 
         notifCoroutine = StartCoroutine(OcultarNotificacion(2.5f));
-        Debug.Log(notifCoroutine);
     }
 
     IEnumerator OcultarNotificacion(float segundos)

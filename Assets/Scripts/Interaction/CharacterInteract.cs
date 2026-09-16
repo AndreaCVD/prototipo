@@ -26,6 +26,11 @@ public class CharacterInteract : MonoBehaviour
         interaction = false;
         text_canvas = false;
         canvas_visible = false;
+
+        CanvasGroup hijo_canvas = transform.Find("Canvas Puzzle").GetComponent<CanvasGroup>();
+        grup = hijo_canvas;
+        TMP_Text hijo_texto = GetComponentInChildren< TMP_Text>();
+        text_interaccion = hijo_texto;
     }
     void Update()
     {
@@ -41,7 +46,7 @@ public class CharacterInteract : MonoBehaviour
         //Distancia máxima del ray, sino con Mathf.Infinity no tiene limite
         if (Physics.Raycast(ray, out hitInfo, 1f))
         {
-            Debug.DrawRay(ray.origin, ray.direction * 1f, Color.red);
+            //Debug.DrawRay(ray.origin, ray.direction * 1f, Color.red);
             Interactable interactable;
             //Si no es null -> ha encontrado algo que tiene Interactable
             if (hitInfo.transform.gameObject.GetComponent<Interactable>() != null && !interaction)
@@ -56,11 +61,10 @@ public class CharacterInteract : MonoBehaviour
                 canvas_visible = Input.GetKeyDown(KeyCode.P);
                 if (isEnemy)
                 {
-                    Cursor.visible = true;
-                    Debug.Log("Activar dialogo");
+                    //Cursor.visible = true;
 
                     //Bool true asi no se sobreponen otras interacciones
-                    interaction = true;
+                    //interaction = true;
 
                     //Devuelve Obj que tiene Interactable
                     interactable = hitInfo.transform.gameObject.GetComponent<Interactable>();

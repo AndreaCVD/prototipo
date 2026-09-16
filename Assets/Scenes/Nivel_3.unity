@@ -135,10 +135,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 74dbeb0b571f0364baa9494e50819354, type: 2}
-    - target: {fileID: 6339653649807243775, guid: 98dfa289a0241804cb7c42a12725b490, type: 3}
-      propertyPath: 'm_Materials.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2100000, guid: 6e04ff1ec8ba7db4084913f0a60f05fe, type: 2}
+    - target: {fileID: 3737838746223356081, guid: 98dfa289a0241804cb7c42a12725b490, type: 3}
+      propertyPath: m_Name
+      value: Slime
+      objectReference: {fileID: 0}
     - target: {fileID: 4187363374808963143, guid: 98dfa289a0241804cb7c42a12725b490, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.015
@@ -195,10 +195,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 3737838746223356081, guid: 98dfa289a0241804cb7c42a12725b490, type: 3}
-      propertyPath: m_Name
-      value: Slime
-      objectReference: {fileID: 0}
+    - target: {fileID: 6339653649807243775, guid: 98dfa289a0241804cb7c42a12725b490, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 6e04ff1ec8ba7db4084913f0a60f05fe, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -596,6 +596,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player Character
       objectReference: {fileID: 0}
+    - target: {fileID: 7514057873174281745, guid: e1e382eeb87f205439904cd395ba77a9, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 204058763}
+    - target: {fileID: 7514057873174281745, guid: e1e382eeb87f205439904cd395ba77a9, type: 3}
+      propertyPath: m_VertexColorAlwaysGammaSpace
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -947,6 +955,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ce2b85ddb3a1c244806b6c38dcd973b, type: 3}
+--- !u!20 &204058763 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 2395438993725710846, guid: 9ce2b85ddb3a1c244806b6c38dcd973b, type: 3}
+  m_PrefabInstance: {fileID: 204058762}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &241176704 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2851141393439377359, guid: 7bd55e637a373424f9318c984b00c3ea, type: 3}
@@ -1935,7 +1948,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8970149887093246708, guid: dfde021bd3e93984490b17c715c82b27, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

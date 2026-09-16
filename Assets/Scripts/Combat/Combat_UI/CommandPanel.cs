@@ -409,7 +409,6 @@ public class CommandPanel : MonoBehaviour
         Resetear_Valores();
         //volver a menu inicial
         Back();
-        diceSprite.CambiarSprite(1);
     }
 
     // --- TIRADA FINAL D1 AL PROPIO JUGADOR ---

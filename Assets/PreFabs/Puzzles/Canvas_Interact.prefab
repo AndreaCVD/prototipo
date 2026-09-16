@@ -226,7 +226,7 @@ GameObject:
   - component: {fileID: 9093850615281479210}
   - component: {fileID: 5390747008729869349}
   m_Layer: 5
-  m_Name: Canvas Puzzle
+  m_Name: Canvas_Interact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -323,7 +323,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8970149887093246708}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0

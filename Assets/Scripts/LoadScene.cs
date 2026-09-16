@@ -59,7 +59,7 @@ public class LoadScene : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && !onPause)
+        if (Input.GetKeyDown(KeyCode.Escape) && !onPause &&!onCombat)
         {
             escenaState.ScenePause(true); //true, se para
             onPause = true;

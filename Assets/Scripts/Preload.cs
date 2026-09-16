@@ -66,6 +66,19 @@ public class Preload : MonoBehaviour
     {
         if (enemigo != null)
         {   
+            //Destroy(enemigo);
+            Animator anim = enemigo.GetComponent<Animator>();
+            anim.SetTrigger("death");
+        }
+        else
+        {
+            Debug.Log("No hay enemigo a destruir");
+        }
+    }
+    public void Death()
+    {
+        if (enemigo != null)
+        {
             Destroy(enemigo);
         }
         else
@@ -73,7 +86,6 @@ public class Preload : MonoBehaviour
             Debug.Log("No hay enemigo a destruir");
         }
     }
-
     public void puzzleTrue(string namePuzzle)
     {
 

@@ -101,8 +101,8 @@ public class EnemyWalk : MonoBehaviour
     //Si hay collide vamos al combate
     void OnCollisionEnter(Collision col)
     {
-        Debug.Log(col.gameObject);
-        Debug.Log(col.gameObject.tag);
+        //Debug.Log(col.gameObject);
+        //Debug.Log(col.gameObject.tag);
         if (col.gameObject.CompareTag("Player") )
         {
 
@@ -111,7 +111,7 @@ public class EnemyWalk : MonoBehaviour
             persiguiendo = false;
             enemy.speed = 0;
 
-            //preload.CombatOpponent(this.gameObject);
+            preload.CombatOpponent(this.gameObject);
             load.Combat();
         }
     }
@@ -134,7 +134,7 @@ public class EnemyWalk : MonoBehaviour
     {
         //detectar todos los objetos DELANTE del enemigo
         //Collider[] colliders = Physics.OverlapBox(pivot.position, interactAreaSize);
-        //Distancia máxima del ray, sino con Mathf.Infinity no tiene limite
+        //Distancia mï¿½xima del ray, sino con Mathf.Infinity no tiene limite
         if (Physics.Raycast(ray, out hitInfo, distanciaRayCast))
         {
             Debug.DrawRay(ray.origin, ray.direction * 1f, Color.red);

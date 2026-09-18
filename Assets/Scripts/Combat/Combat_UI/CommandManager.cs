@@ -307,7 +307,7 @@ public class CommandManager : MonoBehaviour
                 turnRoundManager.current.Cambiar_imgAtaque(0);
                 break;
             case "atrapar":
-                Debug.Log(" PONER IMAGEN PROTA INMOVILIZADO");
+                turnRoundManager.target.Cambiar_imgEstado(1); //prota vacio
                 turnRoundManager.current.Cambiar_imgAtaque(1);
                 break;
             case "lenguetazo":
@@ -320,6 +320,44 @@ public class CommandManager : MonoBehaviour
                 break;
             default:
                 Debug.Log("error lectura img mimic");
+                break;
+        }
+    }
+    public void Slime_img(string ataque)
+    {
+        switch (ataque)
+        {
+            case "atrapar":
+                turnRoundManager.target.Cambiar_imgEstado(1); //prota vacio
+                turnRoundManager.current.Cambiar_imgAtaque(0);
+                break;
+            case "escupir":
+                turnRoundManager.target.Cambiar_imgHerido(); 
+                turnRoundManager.current.Cambiar_imgAtaque(1);
+                break;
+            case "mov_hip":
+                turnRoundManager.target.Cambiar_imgHerido(); //prota herido
+                turnRoundManager.current.Cambiar_imgAtaque(2);
+                break;
+            default:
+                Debug.Log("error lectura img slime");
+                break;
+        }
+    }
+    public void Caballero_img(string ataque)
+    {
+        switch (ataque)
+        {
+            case "ataque": //espada y golpe
+                turnRoundManager.target.Cambiar_imgHerido(); //prota herido
+                turnRoundManager.current.Cambiar_imgAtaque(0);
+                break;
+            case "intimidar":
+                turnRoundManager.target.Cambiar_imgHerido(); //prota herido
+                turnRoundManager.current.Cambiar_imgAtaque(1);
+                break;
+            default:
+                Debug.Log("error lectura img caballero");
                 break;
         }
     }
@@ -398,10 +436,18 @@ public class CommandManager : MonoBehaviour
             Debug.Log("Enemigo Inmovilizado. Le quedan = " + turnos_inmovil);
             if (turnos_inmovil == 0)
             {
-                Change_img("idle_enemy");
                 Debug.Log("Ya no esta inmovilizado");
+                Debug.Log(turnRoundManager.target.name());
+                if (turnRoundManager.target.name() == "Carlos")//si es carlos cambiamos la del player actual
+                {    //Debug.Log("a");
+                    turnRoundManager.current.Cambiar_Idle();
+                }
+                else
+                    turnRoundManager.target.Cambiar_Idle();
+
                 enemigo_inmovilizado = false;
                 turnos_inmovil = 1;
+
                 turnRoundManager.ChangeTurn();
                 turnRoundManager.EnemyTurn();
             }
@@ -433,7 +479,11 @@ public class CommandManager : MonoBehaviour
             Debug.Log("Enemigo Inmovilizado. Le quedan = " + turnos_inmovil);
             if (turnos_inmovil == 0)
             {
-                Change_img("idle_player");
+
+                if (turnRoundManager.target.name() == "Carlos")//si es carlos cambiamos la del player actual
+                    turnRoundManager.target.Cambiar_Idle();
+                else
+                    turnRoundManager.current.Cambiar_Idle();
 
                 Debug.Log("Ya no esta inmovilizado");
                 player_inmovilizado = false;

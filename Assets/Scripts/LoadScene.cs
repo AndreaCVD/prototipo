@@ -191,13 +191,7 @@ public class LoadScene : MonoBehaviour
             escenaState.ScenePause(true); //true, se para
             pantalla.UnTint();
 
-            // busca y oculta el HUD ANTES de cargar el combate
-            //uiHub = GameObject.Find("UI_HUB");
-            //if (uiHub != null)
-            // uiHub.SetActive(false);
-            //  else
-            //    Debug.LogWarning("UI_HUB no encontrado � comprueba el nombre del GameObject");
-
+            
             UI.Iniciar_Combate();
 
             //save_posicion.save_LastPos();

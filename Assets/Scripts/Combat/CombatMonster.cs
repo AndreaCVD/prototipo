@@ -325,6 +325,10 @@ public class CombatMonster : MonoBehaviour
                 break;
         }
     }
+    public string name()
+    {
+        return player.namePers;
+    }
     // DAÑO EN UI
     void UI_damage(int damage)
     {
@@ -348,12 +352,12 @@ public class CombatMonster : MonoBehaviour
         Sprite aux = imagenPers.sprite;
         //cambiamos para el ataque
         imagenPers.sprite = player.Ataques[indice];
+        
         //despues de X tiempo volver a la anterior
         StartCoroutine(Img_Anterior(aux));
     }
     public void Cambiar_imgEstado(int indice)
     {
-        Debug.Log(indice);
         imagenPers.sprite = player.Estados_combate[indice];
     }
     public void Cambiar_imgEnamorado(int indice)
@@ -371,6 +375,7 @@ public class CombatMonster : MonoBehaviour
     }
     public void Cambiar_Idle()
     {
+        Debug.Log(player);
         imagenPers.sprite = player.idle;
     }
     IEnumerator Img_Anterior(Sprite img)

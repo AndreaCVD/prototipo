@@ -293,13 +293,14 @@ public class stats_UI : MonoBehaviour
             bool esNuevo = !slot.ClassListContains("inv-slot-active");
             slotIcon.style.backgroundImage = new StyleBackground(icono);
             slot.AddToClassList("inv-slot--active");
-
+            //no activar, no para de apareixer sempre, ns el seu obj original per aixo el deixo
+            /*
             if (esNuevo)
             {
                 //Debug.Log(icono);
                 MostrarNotificacion(icono);
             }
-
+            */
         }
         else
         {

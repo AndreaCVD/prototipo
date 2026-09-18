@@ -20,7 +20,8 @@ public class CharacterInteract : MonoBehaviour
     public bool text_canvas;
     public bool canvas_visible;  // ver si presiona para interaccion
     public  bool isEnemy;  // ver si presiona para interaccion
-    public  bool death;  
+    public  bool death; 
+    
     void Start()
     {
         opacidad(0f);
@@ -60,7 +61,7 @@ public class CharacterInteract : MonoBehaviour
                 }
                 //clicar boton para interaccionar
                 //Interaccion
-                canvas_visible = Input.GetKeyDown(KeyCode.P);
+                
                 if (isEnemy)
                 {
                     //Cursor.visible = true;
@@ -74,8 +75,12 @@ public class CharacterInteract : MonoBehaviour
                     interactable.DetectObj(hitInfo.transform.gameObject);
                     
                 }
-
-                opacidad(1f);
+                else
+                {
+                    canvas_visible = Input.GetKeyDown(KeyCode.P);
+                    opacidad(1f);
+                }
+                   
                 if (canvas_visible) //Si se clica el boton
                 {
                     Cursor.visible = true;

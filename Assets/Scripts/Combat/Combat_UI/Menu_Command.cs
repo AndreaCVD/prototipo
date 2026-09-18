@@ -7,10 +7,6 @@ using UnityEngine.UI;
 using UnityEngine.UIElements;
 public class Menu_Command : MonoBehaviour
 {
-    //Canvas
-    [Header("Canvas")]
-    [SerializeField] CanvasGroup canvas_acciones;
-    [SerializeField] CanvasGroup canva_Arma;
 
     [Header("Extraer info enemigo")]
     private CombatDebug info_enemy;
@@ -75,10 +71,7 @@ public class Menu_Command : MonoBehaviour
         enemyHpFill.style.width = Length.Percent(porcentaje * 100f);
     }
 
-    public void opacidad(float nueva_opacidad)
-    {
-        canvas_acciones.alpha = Mathf.Lerp(0f, nueva_opacidad, 5f);
-    }
+
 
 
 }

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
 using UnityEngine;
+using Cursor = UnityEngine.Cursor;
 
 //Enviarle al combat manager los personajes que se peleen
 //para hacer test de combate
@@ -44,7 +45,16 @@ public class CombatDebug : MonoBehaviour
     {
         ElegirEnemigo();
 
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
         manager.StartBattle(playerData, enemyData);   
+    }
+    void Update()
+    {
+        if (!Cursor.visible)
+            Cursor.visible = true;
+
     }
     private void ElegirEnemigo()
     {

@@ -34,7 +34,9 @@ public class LoadScene : MonoBehaviour
         jefeLibro = false;
         onCombat = false;
         onPause = false;
-        Cursor.visible = false;
+
+        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.visible = false;
         //if (SceneManager.GetActiveScene().name != "Pause_Menu" || SceneManager.GetActiveScene().name != "Start_MainMenu" || SceneManager.GetActiveScene().name != "combat_scene")
         
         destroyObjs = this.GetComponent<crear_obj>();
@@ -94,7 +96,7 @@ public class LoadScene : MonoBehaviour
         else if (sceneName == "Pause_Menu" && escenaActual.name != "Pause_Menu")
         {
             onPause = true;
-            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
             escenaState.ScenePause(false);
             SceneManager.LoadScene("Pause_Menu", LoadSceneMode.Additive);
             //SceneManager.SetActiveScene(sceneName);
@@ -102,7 +104,7 @@ public class LoadScene : MonoBehaviour
         else if (sceneName == "Menu_SubirStat")
         {
             pantalla.UnTint();
-            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
             SceneManager.LoadScene(sceneName);
 
         }
@@ -151,7 +153,8 @@ public class LoadScene : MonoBehaviour
         Debug.Log("Salimos de combate");
         onCombat = false;
         //sacamos el cursor
-        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.visible = false;
         //si estamos en combate eliminar esta escena
         //Sacamos la pausa del juego principal
         escenaState.ScenePause(false); //false, se mueve
@@ -184,17 +187,17 @@ public class LoadScene : MonoBehaviour
             onCombat = true;
 
             //mostramos el cursor
-            Cursor.visible = true;
+            //Cursor.lockState = CursorLockMode.None;
 
-            name_anterior = SceneManager.GetActiveScene().name;
+            //para volver a la escena anterior
+            //name_anterior = SceneManager.GetActiveScene().name;
+            //save_posicion.save_LastPos();
 
             escenaState.ScenePause(true); //true, se para
             pantalla.UnTint();
-
             
             UI.Iniciar_Combate();
-
-            //save_posicion.save_LastPos();
+            
             SceneManager.LoadScene("combat_scene", LoadSceneMode.Additive);
 
         }

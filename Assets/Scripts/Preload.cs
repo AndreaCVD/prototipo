@@ -42,12 +42,12 @@ public class Preload : MonoBehaviour
         //vectorPosicion = GetComponent<personaje>();
         protagonista = GameObject.Find("personaje");
 
-        Scene escenaActual = SceneManager.GetActiveScene();
-        if (escenaActual.name == "pruevas_prototipo")
-        {
+        //Scene escenaActual = SceneManager.GetActiveScene();
+        //if (escenaActual.name == "pruevas_prototipo")
+        //{
             //Guardamos posicion y la ponemos en el personaje
            // PrefabProta.transform.position = vectorPosicion.load_LastPos();
-        }
+        //}
         //NameOpponent = "nada";
     }
 
@@ -57,6 +57,9 @@ public class Preload : MonoBehaviour
         //NameOpponent = enemyName.name;
         fichaOpponent = enemy.GetComponent<Interactable>().ficha_obj;
 
+        //bloqueamos al prota
+        InputHandler escenaState = protagonista.GetComponent<InputHandler>();
+        escenaState.ScenePause(true);
     }
     public string nameOpponent()
     {

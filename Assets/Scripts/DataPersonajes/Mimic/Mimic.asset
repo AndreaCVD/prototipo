@@ -22,9 +22,9 @@ MonoBehaviour:
       stats: 1
     - value: 0
       stats: 2
-    - value: 25
+    - value: 20
       stats: 3
-    - value: 2
+    - value: 12
       stats: 4
     - value: 40
       stats: 5
@@ -33,7 +33,7 @@ MonoBehaviour:
   idle: {fileID: 21300000, guid: 61befc0d270d01d4aafc3e16e18f994c, type: 3}
   herido: {fileID: 21300000, guid: abc7b0554a6fa5d42830c49b99cc9fa3, type: 3}
   Ataques:
-  - {fileID: 21300000, guid: 34995f5051e4fd144b9f7bfb2ed43818, type: 3}
+  - {fileID: 21300000, guid: bac7c14498f325141a79b46ada5fabb3, type: 3}
   - {fileID: 21300000, guid: 2f71b0613041830438eb027068eb3d34, type: 3}
   - {fileID: 21300000, guid: 96a74ea1dee64194897179cb0dacda8e, type: 3}
   - {fileID: 21300000, guid: f61dd58524617ff4997d0b83abdd4a14, type: 3}

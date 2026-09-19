@@ -332,7 +332,7 @@ public class CombatMonster : MonoBehaviour
     // DAÑO EN UI
     void UI_damage(int damage)
     {
-        if (player.namePers == "Prota")
+        if (player.namePers == "Carlos")
         {
             text_player.text = "+" + damage.ToString();
             anim.SetTrigger("player");
@@ -375,7 +375,6 @@ public class CombatMonster : MonoBehaviour
     }
     public void Cambiar_Idle()
     {
-        Debug.Log(player);
         imagenPers.sprite = player.idle;
     }
     IEnumerator Img_Anterior(Sprite img)

@@ -395,11 +395,11 @@ public class CommandPanel : MonoBehaviour
         switch (nom_ataque)
         {
             case "daga":
-                commandManager.Change_img("daga");
+                commandManager.Carlos_img("daga");
                 commandManager.Fuerza(8, veces_tirada);
                 break;
             case "espada":
-                commandManager.Change_img("espada");
+                commandManager.Carlos_img("espada");
                 commandManager.Fuerza(12, veces_tirada);
                 break;
             default:
@@ -418,6 +418,8 @@ public class CommandPanel : MonoBehaviour
     }
     public void TiradaFatidica()
     {
+        commandManager.Change_img("autoataque");
+
         commandManager.AutoHerirse(4, 1);
         Resetear_Valores();
         //volver a menu inicial
@@ -514,13 +516,14 @@ public class CommandPanel : MonoBehaviour
     }
     public void Inmovilizar()
     {
+        commandManager.Carlos_img("inmov");
+
         commandManager.EnemigoInmovilizado(true, 1);
         btnINMOV.SetEnabled(false); //usar solo una vez por partida
 
         info_result.style.visibility = Visibility.Visible;
         info_result.text = "Enemigo Inmovilizado";
         StartCoroutine(ChangeText(2));
-        commandManager.Change_img("inmovil_enemy");
 
         Back();
         //tirar dos veces, enemigo inmovil
@@ -535,7 +538,7 @@ public class CommandPanel : MonoBehaviour
             commandManager.Modificar_CA(2);
             btnESCUDO.SetEnabled(false);
 
-            commandManager.Change_img("escudo");
+            commandManager.Carlos_img("escudo");
 
             info_result.style.visibility = Visibility.Visible;
             info_result.text = "Escudo activado";
@@ -596,15 +599,17 @@ public class CommandPanel : MonoBehaviour
             //si se usa 3 veces --> enemigo estado Enamorado
             enamorado++;
             if (enamorado == 1)
-                commandManager.Change_img("enamorado_1");
+                commandManager.Change_img("love_1");
             if (enamorado == 2)
-                commandManager.Change_img("enamorado_2");
+                commandManager.Change_img("love_2");
             if (enamorado == 3 && !inLove)
             {
                 info_result.text = "Enemigo enamorado no te ataca";
                 //enamorado por 30 segundos
                 btnLOVE.SetEnabled(false);
                 StartCoroutine(Enamorado(30));
+
+                //cambio img en esta funcion
                 commandManager.enemigoEnamorado();
             }
 
@@ -622,18 +627,22 @@ public class CommandPanel : MonoBehaviour
         // Fallas == Mas daño al enemigo -> enfadadp +1d4
         if (armadura == " ") //No ha hecho nada aun
         {
+            commandManager.Carlos_img("intimidar");
+
             nom_ataque = "intimidar";
             caris_options.style.display = DisplayStyle.None;
             Menu_TiradaArmadura();
         }
         else if (armadura == "no")
         {
+            Resetear_Valores();
+            Back();
+
             Debug.Log("armadura no del prota");
             info_result.style.visibility = Visibility.Visible;
             info_result.text = "¡Cuidado! Has enfadado al enemigo";
             //enemigo enfadado
-            Resetear_Valores();
-            Back();
+
             commandManager.EstadoIntimidar("enfadado", true);
             commandManager.Change_img("enfadado");
             commandManager.NextTurn();

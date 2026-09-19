@@ -68,8 +68,8 @@ public class stats_UI : MonoBehaviour
 
         itemNotification = root.Q<VisualElement>("item-notification");
         notifIcon = root.Q<VisualElement>("notif-icon");
-        Debug.Log(inventoryGrid);
-        Debug.Log(notifIcon);
+        //Debug.Log(inventoryGrid);
+        //Debug.Log(notifIcon);
 
     }
     private void OnDisable()

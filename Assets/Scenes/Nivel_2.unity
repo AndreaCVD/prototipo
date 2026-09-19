@@ -9800,7 +9800,8 @@ PrefabInstance:
       propertyPath: dialogo_obj
       value: 
       objectReference: {fileID: 11400000, guid: cbbe85d89f5758143acb164b3feaf66b, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8055249102021272130, guid: 54ea6e94fea220649b7c743470b56aa6, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

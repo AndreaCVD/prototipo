@@ -142,7 +142,7 @@ public class Dialog : MonoBehaviour
     {
         Debug.Log("Inicia combate por dialogo");
         preload.CombatOpponent(obj);
-        load.Combat(obj);
+        load.Combat();
     }
     public void SetBool(string nombreVal, bool val)
     {

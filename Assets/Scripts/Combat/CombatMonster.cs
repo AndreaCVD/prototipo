@@ -216,10 +216,10 @@ public class CombatMonster : MonoBehaviour
             if (player.namePers == "Prota")
             {
                 restaurarStat(10); //Restaurar todos los stats prota si han sido cambiados
-                Debug.Log("Prota ha perdido");
+                Debug.Log("MUERTE PERSONAJE");
+                preload.Carlos_Death();
+                load.SalirCombate();
                 //load.GameOver();
-                Debug.Log("GAME OVER");
-                load.GameOver();
             }
             else //Si pierde el enemigo:
             {
@@ -228,10 +228,10 @@ public class CombatMonster : MonoBehaviour
                 player.stats.values[3].value = player.stats.values[5].value;
 
                 restaurarStat(10); //Restaurar todos los stats prota si han sido cambiados
-                //destruir el obj del enemigo
-                preload.DestroyEnemy();
-
-                load.SalirCombate();
+                
+                preload.DestroyEnemy(); //anim muerte enemigo
+              
+                load.SalirCombate(); //salimos de la escena
             }
             //guardado.alguien_eliminado(player); //enviara el personaje que se elimine
         }
@@ -242,7 +242,7 @@ public class CombatMonster : MonoBehaviour
             Debug.Log("FIN TURNO");
         }
     }
-    public void TakeDamage(int damage, bool acabarCombate)
+    public void TakeDamage(int damage, bool acabarCombate) //Huir sin destruir a enemigo
     { 
         HP.current -= damage;
         UI_damage(damage);
@@ -325,10 +325,14 @@ public class CombatMonster : MonoBehaviour
                 break;
         }
     }
+    public string name()
+    {
+        return player.namePers;
+    }
     // DAÑO EN UI
     void UI_damage(int damage)
     {
-        if (player.namePers == "Prota")
+        if (player.namePers == "Carlos")
         {
             text_player.text = "+" + damage.ToString();
             anim.SetTrigger("player");
@@ -348,12 +352,12 @@ public class CombatMonster : MonoBehaviour
         Sprite aux = imagenPers.sprite;
         //cambiamos para el ataque
         imagenPers.sprite = player.Ataques[indice];
+        
         //despues de X tiempo volver a la anterior
         StartCoroutine(Img_Anterior(aux));
     }
     public void Cambiar_imgEstado(int indice)
     {
-        Debug.Log(indice);
         imagenPers.sprite = player.Estados_combate[indice];
     }
     public void Cambiar_imgEnamorado(int indice)

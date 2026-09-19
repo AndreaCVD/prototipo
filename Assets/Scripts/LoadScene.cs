@@ -7,7 +7,8 @@ using Cursor = UnityEngine.Cursor;
 
 public class LoadScene : MonoBehaviour
 {
-    private GameObject uiHub;
+    private stats_UI UI;
+
         [Header("Degradado pantalla")]
     private TintScreen pantalla;
         [Header("Datos prota")]
@@ -33,40 +34,47 @@ public class LoadScene : MonoBehaviour
         jefeLibro = false;
         onCombat = false;
         onPause = false;
-        Cursor.visible = false;
+
+        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.visible = false;
         //if (SceneManager.GetActiveScene().name != "Pause_Menu" || SceneManager.GetActiveScene().name != "Start_MainMenu" || SceneManager.GetActiveScene().name != "combat_scene")
         
         destroyObjs = this.GetComponent<crear_obj>();
         preload = this.GetComponent<Preload>();
         pantalla = this.GetComponent<TintScreen>();
+
+        UI = GameObject.Find("UI_HUB").GetComponent<stats_UI>();
+
+        //encontrar el personaje prefab 
+        if (protagonista == null)
+        {
+            protagonista = GameObject.Find("personaje");
+        }
+        if (escenaState == null)
+        {
+            obj_input = GameObject.Find("personaje");
+            escenaState = obj_input.GetComponent<InputHandler>();
+            //save_posicion = GetComponent<personaje>();
+        }
     }
 
-    //void Update()
-    //{
 
-    //    //encontrar el personaje prefab 
-    //    if (protagonista == null)
-    //    {
-    //        protagonista = GameObject.Find("personaje");
-    //    }
-    //    if (escenaState == null)
-    //    {
-    //        obj_input = GameObject.Find("personaje");
-    //        escenaState = obj_input.GetComponent<InputHandler>();
-    //        //save_posicion = GetComponent<personaje>();
-    //    }
-
-    //    if (Input.GetKeyDown(KeyCode.Escape) && !onPause)
-    //    {
-    //        onPause = true;
-    //        ChangeScene("Pause_Menu");
-    //    }
-    //    if (SceneManager.sceneCount  == 1 && onPause)
-    //    {
-    //        //ya no estamos en pausa
-    //        onPause = false;
-    //    }
-    //}
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape) && !onPause &&!onCombat)
+        {
+            escenaState.ScenePause(true); //true, se para
+            onPause = true;
+            UI.Pausa();
+            ChangeScene("Pause_Menu");
+        }
+        if (SceneManager.sceneCount == 1 && onPause)
+        {
+            UI.DesPausa();
+            escenaState.ScenePause(false); //false, se mueve
+            onPause = false;
+        }
+    }
 
     public string NombreEscenaAnterior()
     {
@@ -88,7 +96,7 @@ public class LoadScene : MonoBehaviour
         else if (sceneName == "Pause_Menu" && escenaActual.name != "Pause_Menu")
         {
             onPause = true;
-            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
             escenaState.ScenePause(false);
             SceneManager.LoadScene("Pause_Menu", LoadSceneMode.Additive);
             //SceneManager.SetActiveScene(sceneName);
@@ -96,7 +104,7 @@ public class LoadScene : MonoBehaviour
         else if (sceneName == "Menu_SubirStat")
         {
             pantalla.UnTint();
-            Cursor.visible = true;
+            Cursor.lockState = CursorLockMode.None;
             SceneManager.LoadScene(sceneName);
 
         }
@@ -145,7 +153,8 @@ public class LoadScene : MonoBehaviour
         Debug.Log("Salimos de combate");
         onCombat = false;
         //sacamos el cursor
-        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.visible = false;
         //si estamos en combate eliminar esta escena
         //Sacamos la pausa del juego principal
         escenaState.ScenePause(false); //false, se mueve
@@ -161,50 +170,34 @@ public class LoadScene : MonoBehaviour
             //Debug.Log("el jefe s'ha guanyat");
 
         }
-      // Unload Scene
+        UI.Acabar_Combate();
+
+        // Unload Scene
         //SceneManager.UnloadSceneAsync("combat_scene");
         AsyncOperation unloadOp = SceneManager.UnloadSceneAsync("combat_scene");
 
-        // reactiva el HUD al salir del combate
-        if (uiHub != null)
-        {
 
-            //uiHub.SetActive(false);
-
-        }
-        else
-        {
-            Debug.LogWarning("uiHub es null al salir � no se pudo reactivar");
-        }
         //uiHub.SetActive(true);
     }
-    public void Combat(GameObject enemyName)
+    public void Combat()
     {
-        Debug.Log(enemyName);
 
         if (!onCombat)
         {
             onCombat = true;
 
             //mostramos el cursor
-            Cursor.visible = true;
+            //Cursor.lockState = CursorLockMode.None;
 
-            name_anterior = SceneManager.GetActiveScene().name;
+            //para volver a la escena anterior
+            //name_anterior = SceneManager.GetActiveScene().name;
+            //save_posicion.save_LastPos();
 
             escenaState.ScenePause(true); //true, se para
             pantalla.UnTint();
-
-            // busca y oculta el HUD ANTES de cargar el combate
-            //uiHub = GameObject.Find("UI_HUB");
-            //if (uiHub != null)
-               // uiHub.SetActive(false);
-          //  else
-            //    Debug.LogWarning("UI_HUB no encontrado � comprueba el nombre del GameObject");
-
-
-            preload.CombatOpponent(enemyName); //Pasem el nom
-
-            //save_posicion.save_LastPos();
+            
+            UI.Iniciar_Combate();
+            
             SceneManager.LoadScene("combat_scene", LoadSceneMode.Additive);
 
         }
@@ -213,6 +206,8 @@ public class LoadScene : MonoBehaviour
     
     public void GameOver()
     {
+        //activar animacion de personaje y luego acabar juego
+
         pantalla.UnTint();
  
         SceneManager.LoadScene("GameOver");

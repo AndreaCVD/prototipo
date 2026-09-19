@@ -70,14 +70,14 @@ public class Slime_Action : MonoBehaviour
 
         if (ca_player == 2) //supera armadura
         {
-            commandManager.Change_img("enemy_attack");
+            commandManager.Slime_img("escupir");
 
             //Fuerza(int dado_1, int times_1, int dado_2, int times_2)
             commandManager.Fuerza(6, 1, 4, 1);
         }
         else if (ca_player == 0) //CRITICO
         {
-            commandManager.Change_img("enemy_attack");
+            commandManager.Slime_img("escupir");
 
             Debug.Log("Tirada critica del enemigo");
             commandManager.Fuerza(6, 2, 4, 2);
@@ -96,7 +96,8 @@ public class Slime_Action : MonoBehaviour
         Debug.Log("Atrapar de slime + Acido");
         player_inmovilizado = true;
         commandManager.PlayerInmovilizado(true, 1);
-        commandManager.Change_img("inmovil_enemy");
+        
+        commandManager.Slime_img("atrapar");;
 
         int ca_player = commandManager.Armadura(0, 20);
         if (ca_player == 2) //supera armadura
@@ -110,7 +111,7 @@ public class Slime_Action : MonoBehaviour
             Debug.Log("Tirada critica del enemigo");
             commandManager.Inteligencia(4, 2);
         }
-        Debug.Log("continua la accion?");
+        //Debug.Log("continua la accion?");
     }
 
     // Carisma - Movimientos Hipnotizantes 2d4+car
@@ -121,13 +122,13 @@ public class Slime_Action : MonoBehaviour
 
         if (ca_player == 2) //supera armadura
         {
-            commandManager.Change_img("enemy_attack");
+            commandManager.Slime_img("mov_hip");
 
             commandManager.Carisma(4, 2);
         }
         else if (ca_player == 0) //CRITICO
         {
-            commandManager.Change_img("enemy_attack");
+            commandManager.Slime_img("mov_hip");
 
             Debug.Log("Tirada critica del enemigo");
             commandManager.Carisma(4, 4);

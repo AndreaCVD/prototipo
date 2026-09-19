@@ -2,6 +2,9 @@ using UnityEngine;
 
 public class Jefe_Action : MonoBehaviour
 {
+    [Header("EL DIALOGO DEL OBJ")]
+    [SerializeField] cherrydev.DialogNodeGraph dialogo;
+
     int ataque;
     bool player_inmovilizado, convencer;
     [SerializeField] CommandManager commandManager;
@@ -87,15 +90,21 @@ public class Jefe_Action : MonoBehaviour
 
         if (ca_player == 2) //supera armadura
         {
+            commandManager.Libro_img("libretazo");
+
             commandManager.Fuerza(6, 1);
         }
         else if (ca_player == 0) //CRITICO
         {
+            commandManager.Libro_img("libretazo");
+
             Debug.Log("Tirada critica del enemigo");
             commandManager.Fuerza(6, 2);
         }
         else if (ca_player == 1) //TIRA UN 1
         {
+            commandManager.Change_img("autoataque");
+
             Debug.Log("Tirada fatidica del enemigo");
             commandManager.AutoHerirse(4, 1);
         }
@@ -108,15 +117,21 @@ public class Jefe_Action : MonoBehaviour
 
         if (ca_player == 2) //supera armadura
         {
+            commandManager.Libro_img("corte");
+
             commandManager.Fuerza(4, 1);
         }
         else if (ca_player == 0) //CRITICO
         {
+            commandManager.Libro_img("corte");
+
             Debug.Log("Tirada critica del enemigo");
             commandManager.Fuerza(4, 2);
         }
         else if (ca_player == 1) //TIRA UN 1
         {
+            commandManager.Change_img("autoataque");
+
             Debug.Log("Tirada fatidica del enemigo");
             commandManager.AutoHerirse(4, 1);
         }
@@ -126,6 +141,9 @@ public class Jefe_Action : MonoBehaviour
     {
         Debug.Log("Atrapar de jefe");
         player_inmovilizado = true;
+
+        commandManager.Libro_img("atrapar");
+
         commandManager.PlayerInmovilizado(true, 1);
         commandManager.NextTurn();
     }
@@ -133,8 +151,12 @@ public class Jefe_Action : MonoBehaviour
     void Convencer()
     {
         Debug.Log("Convencer de jefe");
+
         player_inmovilizado = true;
         commandManager.PlayerInmovilizado(true, 1);
+
+        commandManager.Libro_img("convencer");
+
         Debug.Log("EL LIBRO TE ESTA INTENTANDO CONVENCER DE UNIRTE A EL");
         Debug.Log("ACTIVAR DIALOGO");
         commandManager.NextTurn();
@@ -147,15 +169,21 @@ public class Jefe_Action : MonoBehaviour
 
         if (ca_player == 2) //supera armadura
         {
+            commandManager.Libro_img("x");
+
             commandManager.Inteligencia(6, 2);
         }
         else if (ca_player == 0) //CRITICO
         {
+            commandManager.Libro_img("x");
+
             Debug.Log("Tirada critica del enemigo");
             commandManager.Inteligencia(6, 4);
         }
         else if (ca_player == 1) //TIRA UN 1
         {
+            commandManager.Change_img("autoataque");
+
             Debug.Log("Tirada fatidica del enemigo");
             commandManager.AutoHerirse(4, 1);
         }

@@ -152,7 +152,7 @@ public class PuzzleZone : MonoBehaviour
             }
         }
     }
-    void OnTriggerEnter(Collider other)
+    void OnTriggerExit(Collider other)
     {
 
         if (other.tag == "Player")

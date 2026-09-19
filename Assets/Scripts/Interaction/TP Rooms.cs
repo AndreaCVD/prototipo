@@ -38,6 +38,6 @@ public class TPRooms : MonoBehaviour
         }
 
         obj.transform.rotation = destination.rotation;
-        Debug.Log($"{obj.name} teleportado a {destination.name}");
+        //Debug.Log($"{obj.name} teleportado a {destination.name}");
     }
 }

@@ -20,12 +20,20 @@ public class CharacterInteract : MonoBehaviour
     public bool text_canvas;
     public bool canvas_visible;  // ver si presiona para interaccion
     public  bool isEnemy;  // ver si presiona para interaccion
+    public  bool death; 
+    
     void Start()
     {
         opacidad(0f);
         interaction = false;
         text_canvas = false;
         canvas_visible = false;
+        death = false;
+
+        CanvasGroup hijo_canvas = transform.Find("Canvas Puzzle").GetComponent<CanvasGroup>();
+        grup = hijo_canvas;
+        TMP_Text hijo_texto = GetComponentInChildren< TMP_Text>();
+        text_interaccion = hijo_texto;
     }
     void Update()
     {
@@ -39,9 +47,9 @@ public class CharacterInteract : MonoBehaviour
         //detectar todos los objetos DELANTE del jugador
         //Collider[] colliders = Physics.OverlapBox(pivot.position, interactAreaSize);
         //Distancia máxima del ray, sino con Mathf.Infinity no tiene limite
-        if (Physics.Raycast(ray, out hitInfo, 1f))
+        if (Physics.Raycast(ray, out hitInfo, 1f) && !death)
         {
-            Debug.DrawRay(ray.origin, ray.direction * 1f, Color.red);
+            //Debug.DrawRay(ray.origin, ray.direction * 1f, Color.red);
             Interactable interactable;
             //Si no es null -> ha encontrado algo que tiene Interactable
             if (hitInfo.transform.gameObject.GetComponent<Interactable>() != null && !interaction)
@@ -53,14 +61,13 @@ public class CharacterInteract : MonoBehaviour
                 }
                 //clicar boton para interaccionar
                 //Interaccion
-                canvas_visible = Input.GetKeyDown(KeyCode.P);
+                
                 if (isEnemy)
                 {
-                    Cursor.visible = true;
-                    Debug.Log("Activar dialogo");
+                    //Cursor.visible = true;
 
                     //Bool true asi no se sobreponen otras interacciones
-                    interaction = true;
+                    //interaction = true;
 
                     //Devuelve Obj que tiene Interactable
                     interactable = hitInfo.transform.gameObject.GetComponent<Interactable>();
@@ -68,8 +75,12 @@ public class CharacterInteract : MonoBehaviour
                     interactable.DetectObj(hitInfo.transform.gameObject);
                     
                 }
-
-                opacidad(1f);
+                else
+                {
+                    canvas_visible = Input.GetKeyDown(KeyCode.P);
+                    opacidad(1f);
+                }
+                   
                 if (canvas_visible) //Si se clica el boton
                 {
                     Cursor.visible = true;

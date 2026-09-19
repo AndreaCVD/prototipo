@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 8991775586355283156}
   - component: {fileID: 8741789426336843346}
   - component: {fileID: 1517697482775705939}
+  - component: {fileID: 5343454061427439357}
   - component: {fileID: 4581693941626415061}
   m_Layer: 0
   m_Name: Mimic
@@ -70,6 +71,28 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1.7541069, z: 1.0818752}
   m_Center: {x: 0.0000000039856936, y: 0.83961433, z: -0.1779062}
+--- !u!95 &5343454061427439357
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7505737226089345632}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 226f486f5b6a9374e9afc1776a473fd9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!54 &4581693941626415061
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -149,6 +172,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7751802114640391768, guid: 9d7cc97ad560acb44b9215ddf22af98e, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 226f486f5b6a9374e9afc1776a473fd9, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

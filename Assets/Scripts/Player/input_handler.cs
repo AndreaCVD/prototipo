@@ -49,6 +49,7 @@ public class InputHandler : MonoBehaviour
             moveVector.y = 0;
         }
     }
+
     public void ScenePause(bool newState)
     {
         scenePaused = newState;

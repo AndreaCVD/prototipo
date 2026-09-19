@@ -29,7 +29,10 @@ public class CommandPanel : MonoBehaviour
 
     //fila principal
     private Button btnFUE, btnCAR, btnINT, btnITEM;
-    
+
+    //Stats
+    private Label fieldFUE, fieldINT, fieldCAR;
+
     //fila ataque fuerza
     private Button btnDAGA, btnESPADA, btnBACK;
     //fila ataque intel
@@ -54,7 +57,7 @@ public class CommandPanel : MonoBehaviour
     // Variables activas de combate
     private bool escudo, inLove;
     public int enamorado;
-    void Start()
+    void OnEnable()
     {
         MAX_vida = protagonista.stats.Get(PersonajesStats.Max_Vida);
         armadura = " ";
@@ -79,6 +82,10 @@ public class CommandPanel : MonoBehaviour
 
         var uIDocument = GetComponent<UIDocument>();
         root = uIDocument.rootVisualElement;
+        //stats
+        fieldFUE = root.Q("val-fue").Q<Label>();
+        fieldINT = root.Q("val-int").Q<Label>();
+        fieldCAR = root.Q("val-car").Q<Label>();
         //Volver a menu opciones
         btnBACK = root.Q<Button>("btn-BACK");
         btnBACK_intel = root.Q<Button>("btn-intelBACK");
@@ -131,6 +138,7 @@ public class CommandPanel : MonoBehaviour
         // eventos
         btnFUE.clicked += Menu_Fuerza;
             btnDAGA.clicked += Daga;
+            //btnDAGA.selected += a;
             btnESPADA.clicked += Espada;
 
         btnINT.clicked += Menu_Intel;
@@ -156,6 +164,9 @@ public class CommandPanel : MonoBehaviour
         btnBACK.clicked += Back;
         btnBACK_intel.clicked += Back;
         btnBACK_carisma.clicked += Back;
+
+        SetStats();
+        Back();
     }
 
     void FixedUpdate()
@@ -181,6 +192,19 @@ public class CommandPanel : MonoBehaviour
         btnITEM.clicked -= Abrir_Inventario;
         btnRun.clicked -= Huir;
     }
+
+    void SetStats()
+    {
+        int fue = protagonista.stats.values[0].value;
+        fieldFUE.text = fue.ToString();
+        
+        int intel = protagonista.stats.values[1].value;
+        fieldINT.text = intel.ToString();
+
+        int car = protagonista.stats.values[2].value;
+        fieldCAR.text = car.ToString();
+    }
+
     // --- INFO TIRADA ---
     void Texto_Tirada()
     {
@@ -294,7 +318,9 @@ public class CommandPanel : MonoBehaviour
                 tirada_armadura.style.display = DisplayStyle.None;
                 armadura = "si";
                 veces_tirada = 1;
-                
+
+                //cambiamos el dado tambien
+                dado();
                 Resultado_Tirada();
                 NextAction();
             }
@@ -319,7 +345,7 @@ public class CommandPanel : MonoBehaviour
             else //(AC_superada == 3)
             {
                 armadura = "no";
-
+                dado();
                 Resultado_Tirada();
                 Back();
             }
@@ -369,11 +395,11 @@ public class CommandPanel : MonoBehaviour
         switch (nom_ataque)
         {
             case "daga":
-                commandManager.Change_img("daga");
+                commandManager.Carlos_img("daga");
                 commandManager.Fuerza(8, veces_tirada);
                 break;
             case "espada":
-                commandManager.Change_img("espada");
+                commandManager.Carlos_img("espada");
                 commandManager.Fuerza(12, veces_tirada);
                 break;
             default:
@@ -383,7 +409,6 @@ public class CommandPanel : MonoBehaviour
         Resetear_Valores();
         //volver a menu inicial
         Back();
-        diceSprite.CambiarSprite(1);
     }
 
     // --- TIRADA FINAL D1 AL PROPIO JUGADOR ---
@@ -393,6 +418,8 @@ public class CommandPanel : MonoBehaviour
     }
     public void TiradaFatidica()
     {
+        commandManager.Change_img("autoataque");
+
         commandManager.AutoHerirse(4, 1);
         Resetear_Valores();
         //volver a menu inicial
@@ -489,13 +516,14 @@ public class CommandPanel : MonoBehaviour
     }
     public void Inmovilizar()
     {
+        commandManager.Carlos_img("inmov");
+
         commandManager.EnemigoInmovilizado(true, 1);
         btnINMOV.SetEnabled(false); //usar solo una vez por partida
 
         info_result.style.visibility = Visibility.Visible;
         info_result.text = "Enemigo Inmovilizado";
         StartCoroutine(ChangeText(2));
-        commandManager.Change_img("inmovil_enemy");
 
         Back();
         //tirar dos veces, enemigo inmovil
@@ -510,7 +538,7 @@ public class CommandPanel : MonoBehaviour
             commandManager.Modificar_CA(2);
             btnESCUDO.SetEnabled(false);
 
-            commandManager.Change_img("escudo");
+            commandManager.Carlos_img("escudo");
 
             info_result.style.visibility = Visibility.Visible;
             info_result.text = "Escudo activado";
@@ -544,12 +572,16 @@ public class CommandPanel : MonoBehaviour
     {
         if (armadura == " ") //No ha hecho nada aun
         {
+            commandManager.model_dados(12);
+
             nom_ataque = "enamorado";
             caris_options.style.display = DisplayStyle.None;
             Menu_TiradaArmadura();
         }
         else if (armadura == "no")
         {
+            commandManager.model_dados(20);
+
             Resetear_Valores();
             Back();
 
@@ -562,18 +594,22 @@ public class CommandPanel : MonoBehaviour
         }
         else //Armadura Si
         {
+            commandManager.model_dados(20);
+
             //si se usa 3 veces --> enemigo estado Enamorado
             enamorado++;
             if (enamorado == 1)
-                commandManager.Change_img("enamorado_1");
+                commandManager.Change_img("love_1");
             if (enamorado == 2)
-                commandManager.Change_img("enamorado_2");
+                commandManager.Change_img("love_2");
             if (enamorado == 3 && !inLove)
             {
                 info_result.text = "Enemigo enamorado no te ataca";
                 //enamorado por 30 segundos
                 btnLOVE.SetEnabled(false);
                 StartCoroutine(Enamorado(30));
+
+                //cambio img en esta funcion
                 commandManager.enemigoEnamorado();
             }
 
@@ -591,18 +627,22 @@ public class CommandPanel : MonoBehaviour
         // Fallas == Mas daño al enemigo -> enfadadp +1d4
         if (armadura == " ") //No ha hecho nada aun
         {
+            commandManager.Carlos_img("intimidar");
+
             nom_ataque = "intimidar";
             caris_options.style.display = DisplayStyle.None;
             Menu_TiradaArmadura();
         }
         else if (armadura == "no")
         {
+            Resetear_Valores();
+            Back();
+
             Debug.Log("armadura no del prota");
             info_result.style.visibility = Visibility.Visible;
             info_result.text = "¡Cuidado! Has enfadado al enemigo";
             //enemigo enfadado
-            Resetear_Valores();
-            Back();
+
             commandManager.EstadoIntimidar("enfadado", true);
             commandManager.Change_img("enfadado");
             commandManager.NextTurn();
@@ -623,6 +663,22 @@ public class CommandPanel : MonoBehaviour
         //dura 1 turno
     }
     // SECUNDARIAS
+    // --- DADO ---
+    void dado()
+    {
+        if (nom_ataque == "daga") //d8
+        {
+            commandManager.model_dados(8);
+        }
+        else if (nom_ataque == "espada") //d12
+        {
+            commandManager.model_dados(12);
+        }
+        else if (armadura == "no")
+        {
+            commandManager.model_dados(4);
+        }
+    }
     //Boton Huir
     public void Huir()
     {
@@ -652,11 +708,17 @@ public class CommandPanel : MonoBehaviour
              case 2: //Pocion de vida
                 Debug.Log("El jugador usa una pocion, recupera 10 de vida");
                 int vida = protagonista.stats.values[3].value;
-                if (vida > 0 && vida <= MAX_vida-10) //MAX vida - 10
+                if (protagonista.Inventario.PocionVida.Count != 0)
                 {
-                    protagonista.stats.values[3].value += 10;
-                    protagonista.Inventario.PocionVida.RemoveAt(protagonista.Inventario.PocionVida.Count - 1);
+                    if (vida > 0 && vida <= MAX_vida-10) //MAX vida - 10
+                    {
+                        protagonista.stats.values[3].value += 10;
+                        protagonista.Inventario.PocionVida.RemoveAt(protagonista.Inventario.PocionVida.Count - 1);
+                    }
+                    
                 }
+                else
+                    btn_slot_2.SetEnabled(false);
                 break;
              case 3: //pocion lava
                 break;

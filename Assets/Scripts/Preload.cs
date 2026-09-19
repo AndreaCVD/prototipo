@@ -22,9 +22,9 @@ public class Preload : MonoBehaviour
     [SerializeField] List<ListaPuzzles> ListaPuzzles = new List<ListaPuzzles>();   
 
     //guardar las variables para no perderlas
-    private GameObject preloadObj;
+    //private GameObject preloadObj;
     //public Vector3 posicion;
-    private GameObject PrefabProta;
+    //private GameObject PrefabProta;
     //hacer que el personaje no se destruya
     private GameObject protagonista;
     //para recibir la posicion anterior
@@ -40,14 +40,14 @@ public class Preload : MonoBehaviour
     {
         //NameOpponent = "";
         //vectorPosicion = GetComponent<personaje>();
-        //protagonista = GameObject.Find("Player Character");
+        protagonista = GameObject.Find("personaje");
 
-        Scene escenaActual = SceneManager.GetActiveScene();
-        if (escenaActual.name == "pruevas_prototipo")
-        {
+        //Scene escenaActual = SceneManager.GetActiveScene();
+        //if (escenaActual.name == "pruevas_prototipo")
+        //{
             //Guardamos posicion y la ponemos en el personaje
            // PrefabProta.transform.position = vectorPosicion.load_LastPos();
-        }
+        //}
         //NameOpponent = "nada";
     }
 
@@ -57,6 +57,9 @@ public class Preload : MonoBehaviour
         //NameOpponent = enemyName.name;
         fichaOpponent = enemy.GetComponent<Interactable>().ficha_obj;
 
+        //bloqueamos al prota
+        InputHandler escenaState = protagonista.GetComponent<InputHandler>();
+        escenaState.ScenePause(true);
     }
     public string nameOpponent()
     {
@@ -66,6 +69,19 @@ public class Preload : MonoBehaviour
     {
         if (enemigo != null)
         {   
+            //Destroy(enemigo);
+            Animator anim = enemigo.GetComponent<Animator>();
+            anim.SetTrigger("death");
+        }
+        else
+        {
+            Debug.Log("No hay enemigo a destruir");
+        }
+    }
+    public void Death()
+    {
+        if (enemigo != null)
+        {
             Destroy(enemigo);
         }
         else
@@ -73,7 +89,15 @@ public class Preload : MonoBehaviour
             Debug.Log("No hay enemigo a destruir");
         }
     }
-
+    public void Carlos_Death()
+    {
+        //que no pugui detectar a ningu mes pq sino salta a combat
+        CharacterInteract character = protagonista.GetComponent<CharacterInteract>();
+        character.death = true;
+        //activar animacio
+        Animator anim = protagonista.GetComponent<Animator>();
+        anim.SetTrigger("death");
+    }
     public void puzzleTrue(string namePuzzle)
     {
 

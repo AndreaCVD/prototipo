@@ -7,8 +7,8 @@ public class btn_events : MonoBehaviour
 {
     [SerializeField] UIDocument uIDocument;
     private VisualElement root;
-    private VisualElement _mainPanel;
-    private VisualElement _optionsPanel;
+    private VisualElement _mainPanel, _pausePanel;
+    private VisualElement _optionsPanel, _optionsPause;
 
     [Header("Degradado pantalla")]
     [SerializeField] TintScreen pantalla;
@@ -23,6 +23,9 @@ public class btn_events : MonoBehaviour
         _mainPanel = root.Q<VisualElement>("Main_menu");
         _optionsPanel = root.Q<VisualElement>("Options");
 
+        _pausePanel = root.Q<VisualElement>("Pause_menu");
+        _optionsPause = root.Q<VisualElement>("options_pause");
+
         // Cargar valores guardados
         root.Q<Slider>("slider-music").value = PlayerPrefs.GetFloat("MusicVol", 80f);
         root.Q<Slider>("slider-sfx").value = PlayerPrefs.GetFloat("SFXVol", 100f);
@@ -33,6 +36,7 @@ public class btn_events : MonoBehaviour
         root.Q<Button>("start_menu_btn").clicked += () => ChangeSceneUI("Start_MainMenu");
         root.Q<Button>("resume_btn").clicked += () => ChangeSceneUI("resumeGame");
         root.Q<Button>("options_btn").clicked += ShowOptions;
+        root.Q<Button>("options_pause").clicked += ShowOptionsPause;
         root.Q<Button>("exit_btn").clicked += () =>
         {
 #if UNITY_EDITOR
@@ -43,6 +47,7 @@ public class btn_events : MonoBehaviour
         };
 
         root.Q<Button>("btn-back").clicked += HideOptions;
+        root.Q<Button>("pause-btn-back").clicked += HideOptionsPause;
         root.Q<Button>("btn-apply").clicked += OnApply;
 
         root.Q<Button>("tab-audio").clicked += () => SwitchTab(0);
@@ -63,11 +68,25 @@ public class btn_events : MonoBehaviour
         _optionsPanel.style.display = DisplayStyle.Flex;
         SwitchTab(0);
     }
+    private void ShowOptionsPause()
+    {
+        _optionsPause.style.display = DisplayStyle.Flex;
+        _pausePanel.style.display = DisplayStyle.None;
+
+        Debug.Log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+        Debug.Log(_optionsPause.style.display);
+        SwitchTab(0);
+    }
 
     private void HideOptions()
     {
         _optionsPanel.style.display = DisplayStyle.None;
         _mainPanel.style.display = DisplayStyle.Flex;
+    }
+    private void HideOptionsPause()
+    {
+        _optionsPause.style.display = DisplayStyle.None;
+        _pausePanel.style.display = DisplayStyle.Flex;
     }
 
     private void SwitchTab(int index)

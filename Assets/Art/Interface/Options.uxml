@@ -1,0 +1,87 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="Options" style="flex-grow: 1; display: flex; align-items: center; justify-content: center;">
+        <ui:VisualElement class="opt-panel">
+            <ui:VisualElement class="opt-header">
+                <ui:Label text="Opciones" class="opt-title" />
+            </ui:VisualElement>
+            <ui:VisualElement name="tab-bar" class="opt-tab-bar">
+                <ui:Button name="tab-audio" text="Audio" class="opt-tab opt-tab-active" />
+                <ui:Button name="tab-controls" text="Controles" tabindex="1" class="opt-tab" />
+                <ui:Button name="tab-credits" text="Creditos" tabindex="2" class="opt-tab" />
+            </ui:VisualElement>
+            <ui:VisualElement name="section-audio" class="opt-section" style="display: flex;">
+                <ui:VisualElement class="opt-row">
+                    <ui:Label text="Música" class="opt-label" />
+                    <ui:Slider name="slider-music" low-value="0" high-value="100" value="100" class="opt-slider" />
+                    <ui:Label name="val-music" text="100" class="opt-value" />
+                </ui:VisualElement>
+                <ui:VisualElement class="opt-row">
+                    <ui:Label text="Efectos" class="opt-label" />
+                    <ui:Slider name="slider-sfx" low-value="0" high-value="100" value="100" class="opt-slider" />
+                    <ui:Label name="val-sfx" text="100" class="opt-value" />
+                </ui:VisualElement>
+                <ui:VisualElement class="opt-row">
+                    <ui:Label text="Ambiente" class="opt-label" />
+                    <ui:Slider name="slider-ambient" low-value="0" high-value="100" value="100" class="opt-slider" />
+                    <ui:Label name="val-ambient" text="100" class="opt-value" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="section-controls" tabindex="1" class="opt-section opt-hidden" style="display: none;">
+                <ui:VisualElement class="opt-row">
+                    <ui:Label text="Arriba" class="opt-label" />
+                    <ui:Button name="key-up" text="W" class="opt-key" />
+                </ui:VisualElement>
+                <ui:VisualElement class="opt-row">
+                    <ui:Label text="Abajo" class="opt-label" />
+                    <ui:Button name="key-down" text="S" class="opt-key" />
+                </ui:VisualElement>
+                <ui:VisualElement class="opt-row">
+                    <ui:Label text="Izquierda" class="opt-label" />
+                    <ui:Button name="key-left" text="A" class="opt-key" />
+                </ui:VisualElement>
+                <ui:VisualElement class="opt-row">
+                    <ui:Label text="Derecha" class="opt-label" />
+                    <ui:Button name="key-right" text="D" class="opt-key" />
+                </ui:VisualElement>
+                <ui:VisualElement class="opt-row">
+                    <ui:Label text="Saltar" class="opt-label" />
+                    <ui:Button name="key-jump" text="Space" class="opt-key" />
+                </ui:VisualElement>
+                <ui:VisualElement class="opt-row">
+                    <ui:Label text="Inventario" class="opt-label" />
+                    <ui:Button name="key-interact" text="I" class="opt-key" />
+                </ui:VisualElement>
+                <ui:VisualElement class="opt-row">
+                    <ui:Label text="Reset Puzzle" class="opt-label" />
+                    <ui:Button name="key-interact" text="R" class="opt-key" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="section-credits" tabindex="2" class="opt-section opt-hidden" style="display: none;">
+                <ui:VisualElement class="opt-row">
+                    <ui:Label text="Productor" class="opt-label" />
+                    <ui:Label text="Riu Lloreda" class="opt-label" />
+                </ui:VisualElement>
+                <ui:VisualElement class="opt-row">
+                    <ui:Label text="Programadora" class="opt-label" />
+                    <ui:Label text="Aina Mestres" enable-rich-text="true" class="opt-label" />
+                </ui:VisualElement>
+                <ui:VisualElement class="opt-row">
+                    <ui:Label text="Artista 3D" class="opt-label" />
+                    <ui:Label text="Andrea Vargas" class="opt-label" />
+                </ui:VisualElement>
+                <ui:VisualElement class="opt-row">
+                    <ui:Label text="Diseño de niveles" class="opt-label" />
+                    <ui:Label text="Riu Lloreda &amp; Aina Mestres" class="opt-label" style="width: 246px;" />
+                </ui:VisualElement>
+                <ui:VisualElement class="opt-row">
+                    <ui:Label text="Sonido" class="opt-label" />
+                    <ui:Label text="Arnau Moreno" class="opt-label" style="width: 246px;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement class="opt-footer">
+                <ui:Button name="btn-back" text="Volver" class="opt-btn opt-btn-back" />
+                <ui:Button name="btn-apply" text="Aplicar" class="opt-btn opt-btn-primary" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

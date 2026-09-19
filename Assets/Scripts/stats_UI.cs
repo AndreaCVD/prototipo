@@ -20,6 +20,8 @@ public class stats_UI : MonoBehaviour
 
     //ref del UI
     private VisualElement root;
+    private VisualElement hud_top, hud_bottom_right, hud_bottom;
+
     private IntegerField fieldFUE, fieldINT, fieldCAR, fieldLIFE, fieldCA;
     private VisualElement heartFill;
     private int maxLife;
@@ -29,7 +31,7 @@ public class stats_UI : MonoBehaviour
     private Button btnInventory;
     private VisualElement itemNotification;
     private VisualElement notifIcon;
-    //private Coroutine notifCoroutine;
+    private Coroutine notifCoroutine;
 
     //contadores inventory
     private int llaves;
@@ -39,12 +41,16 @@ public class stats_UI : MonoBehaviour
     private int pocionVida;
     private int pocionLava;
     private int monedas;
+    private bool inCombat;
 
     private void OnEnable()
     {
         var uiDocument = GetComponent<UIDocument>();
         root = uiDocument.rootVisualElement;
 
+        hud_top = root.Q("hud-top").Q<VisualElement>();
+        hud_bottom_right = root.Q("hud-bottom-right").Q<VisualElement>();
+        hud_bottom = root.Q("hud-bottom").Q<VisualElement>();
         //stats
         fieldFUE = root.Q("FUE").Q<IntegerField>();
         fieldINT = root.Q("INT").Q<IntegerField>();
@@ -62,6 +68,9 @@ public class stats_UI : MonoBehaviour
 
         itemNotification = root.Q<VisualElement>("item-notification");
         notifIcon = root.Q<VisualElement>("notif-icon");
+        //Debug.Log(inventoryGrid);
+        //Debug.Log(notifIcon);
+
     }
     private void OnDisable()
     {
@@ -124,10 +133,43 @@ public class stats_UI : MonoBehaviour
         }
     }
 
+    public void Iniciar_Combate()
+    {
+        inCombat = true;
+        //arriba, el puzle, y inventory grid
+        hud_top.style.display = DisplayStyle.None;
+        hud_bottom_right.style.display = DisplayStyle.None;
+
+        inventoryGrid.style.display = DisplayStyle.None;
+    }
+    public void Acabar_Combate()
+    {
+        inCombat = false;
+
+        hud_top.style.display = DisplayStyle.Flex;
+        hud_bottom_right.style.display = DisplayStyle.Flex;
+
+    }
+    public void DesPausa()
+    {
+        hud_top.style.display = DisplayStyle.Flex;
+        hud_bottom_right.style.display = DisplayStyle.Flex;
+        hud_bottom.style.display = DisplayStyle.Flex;
+    }
+    public void Pausa()
+    {
+        hud_top.style.display = DisplayStyle.None;
+        hud_bottom_right.style.display = DisplayStyle.None;
+        hud_bottom.style.display = DisplayStyle.None;
+    }
+
     void ToggleInventary()
     {
-        bool isDisplayed = inventoryGrid.style.display == DisplayStyle.Flex;
-        inventoryGrid.style.display = isDisplayed ? DisplayStyle.None : DisplayStyle.Flex;
+        if (!inCombat)
+        {
+            bool isDisplayed = inventoryGrid.style.display == DisplayStyle.Flex;
+            inventoryGrid.style.display = isDisplayed ? DisplayStyle.None : DisplayStyle.Flex;
+        }
     }
 
     bool areListEqual()
@@ -187,8 +229,8 @@ public class stats_UI : MonoBehaviour
 
     public void MostrarNotificacion(Sprite icono)
     {
-        //Debug.Log("Mostrar notificacion");
-        /*
+        Debug.Log("Mostrar notificacion");
+
         if (notifCoroutine != null)
         {
             StopCoroutine(notifCoroutine);
@@ -197,14 +239,16 @@ public class stats_UI : MonoBehaviour
         notifIcon.style.backgroundImage = new StyleBackground(icono);
         itemNotification.style.display = DisplayStyle.Flex;
 
-        notifCoroutine = StartCoroutine(OcultarNotificacion(2.5f));*/
+        notifCoroutine = StartCoroutine(OcultarNotificacion(2.5f));
     }
 
     IEnumerator OcultarNotificacion(float segundos)
     {
         yield return new WaitForSeconds(segundos);
         itemNotification.style.display = DisplayStyle.None;
-        //notifCoroutine = null;
+        notifCoroutine = null;
+        Debug.Log("No mostrar notificacion");
+
     }
 
     void SetInventario()
@@ -249,13 +293,14 @@ public class stats_UI : MonoBehaviour
             bool esNuevo = !slot.ClassListContains("inv-slot-active");
             slotIcon.style.backgroundImage = new StyleBackground(icono);
             slot.AddToClassList("inv-slot--active");
-
+            //no activar, no para de apareixer sempre, ns el seu obj original per aixo el deixo
+            /*
             if (esNuevo)
             {
                 //Debug.Log(icono);
                 MostrarNotificacion(icono);
             }
-
+            */
         }
         else
         {

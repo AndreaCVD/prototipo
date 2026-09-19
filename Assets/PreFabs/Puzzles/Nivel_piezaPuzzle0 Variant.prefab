@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: d49aca012b16676458a659e946184c05, type: 2}
+    - target: {fileID: 3859146759075316617, guid: 008e265248192be43828fc642a5dbe72, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5209426863682793152, guid: 008e265248192be43828fc642a5dbe72, type: 3}
       propertyPath: m_Mass
       value: 800
@@ -68,7 +72,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Nivel_piezaPuzzle0 Variant
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8987765881091770296, guid: 008e265248192be43828fc642a5dbe72, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 3859146759075316617, guid: 008e265248192be43828fc642a5dbe72, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

@@ -102,7 +102,7 @@ public class EmpujarObjetos : MonoBehaviour
                         destino = nuevaPos;
                         enMovimiento = true;
                         puzzleFinished = true;
-                        enviarVal();
+                        //enviarVal();
                     }
 
                 }
@@ -119,11 +119,11 @@ public class EmpujarObjetos : MonoBehaviour
         }
 
     }
-    private void enviarVal()
-    {
-        Interactable interact = this.GetComponent<Interactable>();
-        interact.PuzzleFinished(true);
-    }
+    //private void enviarVal()
+    //{
+    //    Interactable interact = this.GetComponent<Interactable>();
+    //    interact.PuzzleFinished(true);
+    //}
     //si encuentra suelo mazmorra (negro) se tiene que bloquear
 
 }

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class TintScreen : MonoBehaviour
 {
     //lo que haremos sera mezclar dos colores, de un lado a otro
-    [SerializeField] Image screenCover;
+    private Image screenCover;
     [SerializeField] Color untintedColor;
     [SerializeField] Color tintedColor;
 
@@ -14,7 +14,7 @@ public class TintScreen : MonoBehaviour
     [SerializeField] float speed;
     public void Awake()
     {
-
+        screenCover = GameObject.Find("ImageCover").GetComponent<Image>();
         UnTint();
     }
     [ContextMenu("Tint")]

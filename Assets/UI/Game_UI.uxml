@@ -1,7 +1,7 @@
 <ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI/Styles/game_ui.uss?fileID=7433441132597879392&amp;guid=9067a09fa4e7f914ebacaaa1c73abafc&amp;type=3#game_ui" />
     <ui:VisualElement name="root" style="flex-grow: 1; flex-direction: column; margin-top: 40px; margin-bottom: 40px; margin-left: 60px; margin-right: 60px;">
-        <ui:VisualElement name="hud-top" class="hud-top" style="flex-grow: 0; height: 150px;">
+        <ui:VisualElement name="hud-top" class="hud-top" style="flex-grow: 0; height: 150px; display: flex;">
             <ui:VisualElement name="card-row" class="card-row" style="flex-grow: 1;">
                 <ui:VisualElement name="FUE" class="stats" style="background-image: url(&quot;project://database/Assets/Art/Interface/FUE.png?fileID=2800000&amp;guid=c9d7adfdf4a74854c8e9321fc29c505d&amp;type=3#FUE&quot;);">
                     <ui:IntegerField value="0" focusable="false" class="card__value" />
@@ -13,6 +13,11 @@
                     <ui:IntegerField value="0" focusable="false" class="card__value" />
                 </ui:VisualElement>
             </ui:VisualElement>
+            <ui:VisualElement name="item-notification" style="flex-grow: 1; display: none; align-items: auto; flex-direction: row-reverse; height: 83px; align-self: center; justify-content: flex-start; white-space: nowrap; position: relative;">
+                <ui:VisualElement name="notif-icon" style="flex-grow: 1; position: relative; height: 56px; width: 64px; top: auto; left: auto; align-self: center; align-items: center; min-width: 70px; min-height: 70px; max-width: 70px; max-height: 70px;">
+                    <ui:VisualElement name="new-icon" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Art/Interface/notificacion.png?fileID=2800000&amp;guid=357257fcc3358a64ea381bd5dd1f6d58&amp;type=3#notificacion&quot;); min-width: 70px; min-height: 70px; overflow: visible; position: relative; right: 24px; top: -30px; bottom: 0;" />
+                </ui:VisualElement>
+            </ui:VisualElement>
             <ui:VisualElement name="inventory-row" class="inventory-row" style="flex-direction: row-reverse; align-self: center;">
                 <ui:Button name="btn-inventory" class="inventory-btn" style="background-image: url(&quot;project://database/Assets/Art/Interface/inventory.png?fileID=2800000&amp;guid=b787edb1344ca4745ba4a6dcce51a01b&amp;type=3#inventory&quot;); flex-direction: column; justify-content: space-between; align-content: flex-start;">
                     <ui:Label name="char-badge" text="I" class="char-badge" />
@@ -22,7 +27,7 @@
         <ui:VisualElement name="play-area" style="flex-grow: 1; flex-direction: column-reverse;">
             <ui:VisualElement name="dialog-box" style="flex-grow: 0; background-color: rgba(0, 0, 0, 0); width: auto; height: 230px; display: flex; align-items: center;">
                 <ui:VisualElement name="sentence-panel" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); display: flex; flex-direction: row; align-content: center; align-items: center; justify-content: space-evenly; background-image: url(&quot;project://database/Assets/Art/Interface/dialog_box.png?fileID=2800000&amp;guid=5512dc02dc7f5fd45a5d8d2282890e2f&amp;type=3#dialog_box&quot;); width: 60%;">
-                    <ui:Label text="name" name="character-name" style="left: 192px; top: auto; right: auto; bottom: 85px; position: relative; margin-left: 0; justify-content: flex-start; align-self: center; border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; border-top-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 0; border-bottom-left-radius: 0; background-color: rgba(255, 255, 255, 0); height: 35px; width: 228px; flex-shrink: 0; flex-direction: column; align-items: auto; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin-top: 0; margin-right: 0; margin-bottom: 0; white-space: normal;" />
+                    <ui:Label text="name" name="character-name" style="left: 192px; top: auto; right: auto; bottom: 85px; position: relative; margin-left: 0; justify-content: flex-start; align-self: center; border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; border-top-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 0; border-bottom-left-radius: 0; background-color: rgba(255, 255, 255, 0); height: 35px; width: 228px; flex-shrink: 0; flex-direction: column; align-items: auto; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; margin-top: 0; margin-right: 0; margin-bottom: 0; white-space: normal; -unity-text-align: middle-left;" />
                     <ui:Label text="Label" name="dialogue-text" style="width: 100%; align-self: center; justify-content: center; align-content: auto; background-color: rgba(0, 0, 0, 0); font-size: 28px; background-image: none; background-size: 100% 100%; -unity-background-scale-mode: stretch-to-fill; height: 100%; padding-top: 67px; padding-bottom: 33px; padding-left: 65px; padding-right: 160px; flex-wrap: nowrap; align-items: center; flex-shrink: 0; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; -unity-font-definition: url(&quot;project://database/Assets/UI/Fonts/Alegreya_Sans_SC/AlegreyaSansSC-Medium.ttf?fileID=12800000&amp;guid=096bf93933eb8ff4f99413b0e96b7efd&amp;type=3#AlegreyaSansSC-Medium&quot;);" />
                     <ui:VisualElement name="character-image" style="flex-grow: 0; background-image: url(&quot;project://database/Assets/PreFabs/UI/png%20vacio.png?fileID=21300000&amp;guid=d4d3a38f353de664aa8174df9aee9edc&amp;type=3#png vacio&quot;); background-color: rgba(0, 0, 0, 0); top: auto; left: auto; right: 8px; bottom: 11px; width: 240px; height: 240px; background-size: cover; align-self: center; position: relative; flex-shrink: 0;" />
                 </ui:VisualElement>
@@ -69,7 +74,7 @@
                     <ui:Label name="slot-5-badge" text="0" class="inv-slot__badge" />
                 </ui:VisualElement>
             </ui:VisualElement>
-            <ui:VisualElement name="hud-bottom-right" class="hud-bottom-right" style="flex-direction: row-reverse;">
+            <ui:VisualElement name="hud-bottom-right" class="hud-bottom-right" style="flex-direction: row-reverse; display: flex;">
                 <ui:Button name="btn-reset" class="inventory-btn" style="background-image: url(&quot;project://database/Assets/Art/Interface/puzzle_Icon.png?fileID=21300000&amp;guid=9a8f573c56e460842ae4af856510a1bd&amp;type=3#puzzle_Icon&quot;); flex-direction: column; justify-content: space-between; align-content: flex-start; display: flex;">
                     <ui:Label name="char-badge" text="R" class="char-badge" />
                 </ui:Button>

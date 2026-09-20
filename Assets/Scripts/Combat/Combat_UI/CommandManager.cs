@@ -371,6 +371,7 @@ public class CommandManager : MonoBehaviour
                 turnRoundManager.current.Cambiar_imgAtaque(1);
                 break;
             case "convencer":
+                //activar dialogo
                 turnRoundManager.target.Cambiar_imgEstado(1); //prota vacio
                 turnRoundManager.current.Cambiar_imgAtaque(1);
                 break;
@@ -381,6 +382,38 @@ public class CommandManager : MonoBehaviour
 
             default:
                 Debug.Log("error lectura img caballero");
+                break;
+        }
+    }
+    public void Lerendur_img(string ataque)
+    {
+        switch (ataque)
+        {
+            case "escudo":
+                turnRoundManager.current.Cambiar_imgAtaque(0);
+                break;
+            case "inmovil":
+                turnRoundManager.target.Cambiar_imgEstado(1); //prota vacio
+                turnRoundManager.current.Cambiar_imgAtaque(1);
+                break;
+            case "esfera":
+                turnRoundManager.target.Cambiar_imgHerido(); //prota herido
+                turnRoundManager.current.Cambiar_imgAtaque(2);
+                break;
+            case "ola":
+                turnRoundManager.target.Cambiar_imgHerido(); //prota herido
+                turnRoundManager.current.Cambiar_imgAtaque(3);
+                break;
+            case "proyectil":
+                turnRoundManager.target.Cambiar_imgHerido(); //prota herido
+                turnRoundManager.current.Cambiar_imgAtaque(4);
+                break;
+            case "escarcha":
+                turnRoundManager.target.Cambiar_imgHerido(); //prota herido
+                turnRoundManager.current.Cambiar_imgAtaque(5);
+                break;
+            default:
+                Debug.Log("error lectura img lerendur");
                 break;
         }
     }

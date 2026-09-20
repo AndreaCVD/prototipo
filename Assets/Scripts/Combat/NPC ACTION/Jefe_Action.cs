@@ -109,6 +109,8 @@ public class Jefe_Action : MonoBehaviour
         }
         else if (ca_player == 1) //TIRA UN 1
         {
+            commandManager.model_dados(4);
+
             commandManager.Change_img("autoataque");
 
             Debug.Log("Tirada fatidica del enemigo");

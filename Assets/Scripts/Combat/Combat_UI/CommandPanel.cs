@@ -321,6 +321,7 @@ public class CommandPanel : MonoBehaviour
 
                 //cambiamos el dado tambien
                 dado();
+
                 Resultado_Tirada();
                 NextAction();
             }
@@ -330,6 +331,8 @@ public class CommandPanel : MonoBehaviour
                 armadura = "critico";
                 veces_tirada = 2;
 
+                dado();
+
                 Resultado_Tirada();
                 NextAction();
             }
@@ -338,14 +341,12 @@ public class CommandPanel : MonoBehaviour
                 tirada_armadura.style.display = DisplayStyle.None;
                 // el jugador se hace daño a si mismo
                 armadura = "fatidico";
-
                 Resultado_Tirada();
                 NextAction();
             }
             else //(AC_superada == 3)
             {
                 armadura = "no";
-                dado();
                 Resultado_Tirada();
                 Back();
             }
@@ -414,6 +415,7 @@ public class CommandPanel : MonoBehaviour
     // --- TIRADA FINAL D1 AL PROPIO JUGADOR ---
     public void Menu_TiradaFatidica()
     {
+        commandManager.model_dados(4);
         tirada_fatidica.style.display = DisplayStyle.Flex;
     }
     public void TiradaFatidica()
@@ -673,10 +675,6 @@ public class CommandPanel : MonoBehaviour
         else if (nom_ataque == "espada") //d12
         {
             commandManager.model_dados(12);
-        }
-        else if (armadura == "no")
-        {
-            commandManager.model_dados(4);
         }
     }
     //Boton Huir

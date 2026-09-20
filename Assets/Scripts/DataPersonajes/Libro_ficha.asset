@@ -42,4 +42,5 @@ MonoBehaviour:
   - {fileID: 21300000, guid: ccfc1cbb8e83b9e46b1443a3aa84d620, type: 3}
   - {fileID: 21300000, guid: 8255726bd18182a41a14162990f5157c, type: 3}
   - {fileID: 21300000, guid: 456126db4550c314eb690bf5d7d5e7ca, type: 3}
-  Estados_enamorado: []
+  Estados_enamorado:
+  - {fileID: 21300000, guid: 29347c332b1772e4d95ec60ce7c14edf, type: 3}

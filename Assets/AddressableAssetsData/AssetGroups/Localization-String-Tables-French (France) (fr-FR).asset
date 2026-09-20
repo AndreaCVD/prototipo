@@ -87,6 +87,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-fr-FR
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c704937cf2c594d46b4829182784a57d
+    m_Address: Libro Combate_fr-FR
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-fr-FR
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: c9ce367db06eaf84588af5b9419953df
     m_Address: Pista Cofre Lava_fr-FR
     m_ReadOnly: 1

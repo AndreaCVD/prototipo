@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UIElements;
+using UnityEngine.SceneManagement;
 
 namespace cherrydev
 {
@@ -21,10 +22,17 @@ namespace cherrydev
 
         private void Awake()
         {
-            _uiDocument = GameObject.Find("UI_HUB").GetComponent<UIDocument>();
-            if (_uiDocument == null) Debug.LogError("No se encontró UIDocument en UI_HUB");
-
-
+            if (SceneManager.sceneCount > 1)
+            {
+                _uiDocument = GameObject.Find("COMBAT_UI").GetComponent<UIDocument>();
+                Debug.Log("COMBAT UI ACTIVADA");
+                if (_uiDocument == null) Debug.LogError("No se encontró UIDocument en UI_HUB");
+            }
+            else
+            {
+                _uiDocument = GameObject.Find("UI_HUB").GetComponent<UIDocument>();
+                if (_uiDocument == null) Debug.LogError("No se encontró UIDocument en UI_HUB");
+            }
         }
         //void Update()
         //{

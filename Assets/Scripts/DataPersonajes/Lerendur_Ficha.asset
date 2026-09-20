@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Lerendur_Ficha
   m_EditorClassIdentifier: 
   namePers: Lerendur
+  enamorado: 0
   stats:
     values:
     - value: 0
@@ -21,9 +22,16 @@ MonoBehaviour:
       stats: 1
     - value: -1
       stats: 2
-    - value: 20
+    - value: 2
       stats: 3
-    - value: 12
+    - value: 2
       stats: 4
+    - value: 50
+      stats: 5
+  Inventario: {fileID: 0}
   modelPrefab: {fileID: 0}
-  art: {fileID: 0}
+  idle: {fileID: 0}
+  herido: {fileID: 0}
+  Ataques: []
+  Estados_combate: []
+  Estados_enamorado: []

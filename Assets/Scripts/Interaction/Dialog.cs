@@ -3,6 +3,7 @@ using Random = UnityEngine.Random;
 using System.Collections.Generic;
 using UnityEngine;
 using cherrydev;
+using Cursor = UnityEngine.Cursor;
 
 public class Dialog : MonoBehaviour
 {
@@ -92,11 +93,25 @@ public class Dialog : MonoBehaviour
         _dialogBehaviour.BindExternalFunction("RecuperarVida", vidaParcial);
         _dialogBehaviour.BindExternalFunction("FullVida", fullVida);
         _dialogBehaviour.BindExternalFunction("randLoot", lootRandom);
+
+        //Libro Jefe Final
+        _dialogBehaviour.BindExternalFunction("aceptar", aceptar_libro);
+        _dialogBehaviour.BindExternalFunction("denegar", denegar_libro);
+
+        //mouse
+        _dialogBehaviour.BindExternalFunction("mouse", Mouse);
+
         //Le enviamos el dialogo que tiene que hacer --> ESTE SIEMPRE ÚLTIMO
         _dialogBehaviour.StartDialog(dialogo);
 
     }
 
+    //mouse
+    public void Mouse()
+    {
+        //Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
     //Dialogo
     public void Dialogo()
     {
@@ -283,6 +298,22 @@ public class Dialog : MonoBehaviour
             default:
                 break;
         }
+    }
+
+    // Libro
+    // ACCEPTAR CONVENCER
+    public void aceptar_libro()
+    {
+        //sacar el Jefe_Action de obj
+        Jefe_Action libro = obj.GetComponent<Jefe_Action>();
+        //activar funcion y luego hacer la accion que toque
+
+    }
+    // DENEGAR CONVENCER
+    public void denegar_libro()
+    {
+        Jefe_Action libro = obj.GetComponent<Jefe_Action>();
+        libro.Denegar();
     }
 }
 

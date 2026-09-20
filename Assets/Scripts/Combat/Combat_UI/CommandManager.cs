@@ -367,17 +367,17 @@ public class CommandManager : MonoBehaviour
                 turnRoundManager.current.Cambiar_imgAtaque(1);
                 break;
             case "atrapar":
-                turnRoundManager.target.Cambiar_imgEstado(1); //prota vacio
-                turnRoundManager.current.Cambiar_imgAtaque(1);
+                turnRoundManager.target.Cambiar_imgEstado(3); //prota atrpado libro
+                turnRoundManager.current.Cambiar_imgAtaque(2);
                 break;
             case "convencer":
-                //activar dialogo
-                turnRoundManager.target.Cambiar_imgEstado(1); //prota vacio
-                turnRoundManager.current.Cambiar_imgAtaque(1);
+                //el estado enamorado no cambia de sprite en el tiempo
+                turnRoundManager.target.Cambiar_imgEnamorado(0); // img en carlos side
+                turnRoundManager.current.Cambiar_imgEnamorado(0); //libro vacio
                 break;
             case "x":
-                turnRoundManager.target.Cambiar_imgEstado(1); //prota vacio
-                turnRoundManager.current.Cambiar_imgAtaque(1);
+                turnRoundManager.target.Cambiar_imgHerido();
+                turnRoundManager.current.Cambiar_imgAtaque(4);
                 break;
 
             default:

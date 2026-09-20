@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Libro Combate Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Libro Combate
+  m_TableCollectionNameGuidString: 2827112fa38949f48acd7057159b83a8
+  m_Entries:
+  - m_Id: 13245935616
+    m_Key: SentenceText_1fbcc24f-158e-4c2c-a048-cb443351d0be
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13245935617
+    m_Key: SentenceName_67a4024e-a065-4516-b704-04baef67c804
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13245935618
+    m_Key: SentenceText_0ebad919-5c21-4a3d-a708-131b0f164182
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13245935619
+    m_Key: Answer_bc6f7996-4528-405b-b618-367757d1a482
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13245935620
+    m_Key: Answer_02be2f9b-4523-4bbd-b035-005cf0a2efea
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13245935621
+    m_Key: SentenceText_d5e7c480-a0c3-408b-ac22-3898ac4065a1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 13245935622
+    m_Key: SentenceText_f75938a1-86e4-4873-ab80-fc381142c976
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 1566622023100137730
+  references:
+    version: 2
+    RefIds:
+    - rid: 1566622023100137730
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1789941519385

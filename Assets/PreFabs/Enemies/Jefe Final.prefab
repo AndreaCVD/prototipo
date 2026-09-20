@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 10837317539248773}
   - component: {fileID: 4182238130948787067}
   - component: {fileID: 7150246651518417920}
+  - component: {fileID: 479056053790718948}
   m_Layer: 0
   m_Name: Jefe Final
   m_TagString: Interact_Scene
@@ -98,6 +99,28 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.6842611, y: 2.4129806, z: 1}
   m_Center: {x: 0.34213054, y: -0.7064903, z: 0}
+--- !u!95 &479056053790718948
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1229232443153610453}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fa4cb94878a3fa34a8bda5ac8a242825, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &4865244446927769561
 PrefabInstance:
   m_ObjectHideFlags: 0

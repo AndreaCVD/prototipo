@@ -128,6 +128,7 @@ public class CharacterInteract : MonoBehaviour
     }
     void opacidad(float nueva_opacidad)
     {
+        Debug.Log(nueva_opacidad);
         grup.alpha = Mathf.Lerp(0f, nueva_opacidad, 5f);
     }
     void textCanva(GameObject obj)

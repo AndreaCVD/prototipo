@@ -553,6 +553,18 @@ PrefabInstance:
       propertyPath: prota
       value: 
       objectReference: {fileID: 11400000, guid: f0233a249cd1f2b43a3d8f04e1ad2bf2, type: 2}
+    - target: {fileID: 6286827285162658893, guid: e1e382eeb87f205439904cd395ba77a9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -96
+      objectReference: {fileID: 0}
+    - target: {fileID: 6286827285162658893, guid: e1e382eeb87f205439904cd395ba77a9, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 6286827285162658893, guid: e1e382eeb87f205439904cd395ba77a9, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 66
+      objectReference: {fileID: 0}
     - target: {fileID: 6895287885210710789, guid: e1e382eeb87f205439904cd395ba77a9, type: 3}
       propertyPath: m_Alpha
       value: 0

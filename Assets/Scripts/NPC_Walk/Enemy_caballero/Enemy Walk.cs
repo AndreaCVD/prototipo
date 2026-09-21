@@ -56,7 +56,7 @@ public class EnemyWalk : MonoBehaviour
             Invoke(nameof(Interact), 1.0f);
         }
 
-        if (firstWalk && load.isPaused())
+        if (firstWalk && !load.isPaused())
         {
             //primero hacemos que se calcule la distancia entre el y el jugador
             distancia = Vector3.Distance(enemy.transform.position, objetivo.position);
@@ -68,14 +68,13 @@ public class EnemyWalk : MonoBehaviour
                 //{
                 //    isHome = false;
                 //}
-                anim.SetBool("walking", true);
 
                 persiguiendo = true;
                 Debug.Log("persiguiendo");
             }
             else if (distancia > rango + distanciaExtra && persiguiendo)
             {
-                anim.SetBool("walking", false);
+               
                 persiguiendo = false;
                 Debug.Log("no persiguiendo");
 
@@ -90,13 +89,14 @@ public class EnemyWalk : MonoBehaviour
                 //}
 
                 enemy.speed = 0;
-                
+                anim.SetInteger("speed", 0);
 
             }
             else if (persiguiendo)
             {
                 //StopCoroutine(miCoroutine);
                 enemy.speed = velocidad;
+                anim.SetInteger("speed", (int)velocidad);
 
                 enemy.SetDestination(objetivo.position);
             }

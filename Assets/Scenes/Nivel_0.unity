@@ -2891,6 +2891,10 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: -0.12155104
       objectReference: {fileID: 0}
+    - target: {fileID: 5397258268782871841, guid: e1e382eeb87f205439904cd395ba77a9, type: 3}
+      propertyPath: m_Constraints
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 5542090142335494573, guid: e1e382eeb87f205439904cd395ba77a9, type: 3}
       propertyPath: lista
       value: 
@@ -2902,6 +2906,18 @@ PrefabInstance:
     - target: {fileID: 5917766070851696415, guid: e1e382eeb87f205439904cd395ba77a9, type: 3}
       propertyPath: m_ApplyRootMotion
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6286827285162658893, guid: e1e382eeb87f205439904cd395ba77a9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -318
+      objectReference: {fileID: 0}
+    - target: {fileID: 6286827285162658893, guid: e1e382eeb87f205439904cd395ba77a9, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6286827285162658893, guid: e1e382eeb87f205439904cd395ba77a9, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -13
       objectReference: {fileID: 0}
     - target: {fileID: 6376016087389561806, guid: e1e382eeb87f205439904cd395ba77a9, type: 3}
       propertyPath: m_AABB.m_Center.x

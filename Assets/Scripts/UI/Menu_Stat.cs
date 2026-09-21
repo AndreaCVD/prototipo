@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 using UnityEngine.Audio;
+using Cursor = UnityEngine.Cursor;
 
 public class Menu_Stat : MonoBehaviour
 {
@@ -25,6 +26,8 @@ public class Menu_Stat : MonoBehaviour
 
     void Start()
     {
+        Cursor.lockState = CursorLockMode.None;
+
         root = uIDocument.rootVisualElement;
 
         _mainPanel = root.Q<VisualElement>("Main_menu");

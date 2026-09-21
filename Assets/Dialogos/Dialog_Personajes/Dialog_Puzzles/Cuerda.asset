@@ -1,5 +1,31 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7759331683390253666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f4b3c64aaf434ea0df52154c1c7680, type: 3}
+  m_Name: External Function Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 1982.3992
+    y: 189.99988
+    width: 190
+    height: 80
+  IsDragging: 1
+  IsSelected: 0
+  _functionName: no_Mouse
+  _description: 
+  ParentNodes:
+  - {fileID: -2106874830306727601}
+  ChildNode: {fileID: 308131441627324060}
 --- !u!114 &-7401661441927131018
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,8 +41,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 54.399902
-    y: 278.79953
+    x: 1104.001
+    y: 416.39957
     width: 190
     height: 80
   IsDragging: 1
@@ -28,7 +54,59 @@ MonoBehaviour:
   - {fileID: 9024950101025651931}
   - {fileID: 4760993107417321355}
   - {fileID: -2381589728315482750}
-  ChildNode: {fileID: -617770388122609846}
+  ChildNode: {fileID: 271370184958344236}
+--- !u!114 &-5118648566050038099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f4b3c64aaf434ea0df52154c1c7680, type: 3}
+  m_Name: External Function Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 170.4
+    y: 322.80002
+    width: 190
+    height: 80
+  IsDragging: 1
+  IsSelected: 1
+  _functionName: Mouse
+  _description: 
+  ParentNodes:
+  - {fileID: 3093827038934681396}
+  ChildNode: {fileID: -3425903161041344827}
+--- !u!114 &-4592145781323620007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f4b3c64aaf434ea0df52154c1c7680, type: 3}
+  m_Name: External Function Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 1849.5994
+    y: 611.6
+    width: 190
+    height: 80
+  IsDragging: 1
+  IsSelected: 0
+  _functionName: no_Mouse
+  _description: 
+  ParentNodes:
+  - {fileID: 4522958931929700681}
+  ChildNode: {fileID: 0}
 --- !u!114 &-3425903161041344827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44,8 +122,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -800.79944
-    y: 101.99997
+    x: 266.40198
+    y: 225.99988
     width: 190
     height: 80
   IsDragging: 1
@@ -53,7 +131,7 @@ MonoBehaviour:
   _functionName: PisosDesbloqueados
   _description: 
   ParentNodes:
-  - {fileID: 3093827038934681396}
+  - {fileID: -5118648566050038099}
   ChildNode: {fileID: 7722732253474417685}
 --- !u!114 &-2381589728315482750
 MonoBehaviour:
@@ -70,8 +148,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 366.40057
-    y: -269.20013
+    x: 1433.6013
+    y: -145.20009
     width: 190
     height: 195
   IsDragging: 1
@@ -111,8 +189,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 682.3995
-    y: 28.399994
+    x: 1749.5994
+    y: 152.40002
     width: 190
     height: 80
   IsDragging: 1
@@ -122,7 +200,7 @@ MonoBehaviour:
   ParentNodes:
   - {fileID: 4760993107417321355}
   - {fileID: -2381589728315482750}
-  ChildNode: {fileID: 308131441627324060}
+  ChildNode: {fileID: -7759331683390253666}
 --- !u!114 &-1896232509494548426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,8 +216,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 672.7994
-    y: -158.80002
+    x: 1739.9993
+    y: -34.799896
     width: 190
     height: 80
   IsDragging: 1
@@ -148,7 +226,33 @@ MonoBehaviour:
   _description: 
   ParentNodes:
   - {fileID: -2381589728315482750}
-  ChildNode: {fileID: 3542580953609265815}
+  ChildNode: {fileID: 7055789397958964676}
+--- !u!114 &-1319264323790281893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f4b3c64aaf434ea0df52154c1c7680, type: 3}
+  m_Name: External Function Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 1827.9995
+    y: 393.19995
+    width: 190
+    height: 80
+  IsDragging: 0
+  IsSelected: 0
+  _functionName: no_Mouse
+  _description: 
+  ParentNodes:
+  - {fileID: 3640164698885939766}
+  ChildNode: {fileID: 2187321377584024926}
 --- !u!114 &-887244613691101627
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -164,8 +268,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -253.59991
-    y: 164.40033
+    x: 813.6002
+    y: 288.40024
     width: 190
     height: 135
   IsDragging: 1
@@ -196,8 +300,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 65.599884
-    y: 364.39975
+    x: 1095.2009
+    y: 608.39954
     width: 190
     height: 80
   IsDragging: 1
@@ -205,7 +309,7 @@ MonoBehaviour:
   _functionName: irCampamento
   _description: 
   ParentNodes:
-  - {fileID: -7401661441927131018}
+  - {fileID: 271370184958344236}
   ChildNode: {fileID: 0}
 --- !u!114 &11400000
 MonoBehaviour:
@@ -238,12 +342,44 @@ MonoBehaviour:
   - {fileID: -1896232509494548426}
   - {fileID: 3542580953609265815}
   - {fileID: 4522958931929700681}
+  - {fileID: 271370184958344236}
+  - {fileID: -4592145781323620007}
+  - {fileID: -7759331683390253666}
+  - {fileID: -1319264323790281893}
+  - {fileID: 7055789397958964676}
+  - {fileID: -5118648566050038099}
   VariablesConfig: {fileID: 11400000, guid: fd3c0eeb49ef7a944b8628ab44b19a6e, type: 2}
   _localizationTableName: Cuerda
   _characterNamesLocalizationName: 
   NodeToDrawLineFrom: {fileID: 0}
   LinePosition: {x: 0, y: 0}
   IsLocalizationSetUp: 1
+--- !u!114 &271370184958344236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f4b3c64aaf434ea0df52154c1c7680, type: 3}
+  m_Name: External Function Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 1098.4001
+    y: 513.9999
+    width: 190
+    height: 80
+  IsDragging: 1
+  IsSelected: 0
+  _functionName: no_Mouse
+  _description: 
+  ParentNodes:
+  - {fileID: -7401661441927131018}
+  ChildNode: {fileID: -617770388122609846}
 --- !u!114 &308131441627324060
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -259,8 +395,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 755.1991
-    y: 156.40009
+    x: 1822.3992
+    y: 280.4
     width: 190
     height: 80
   IsDragging: 1
@@ -268,7 +404,7 @@ MonoBehaviour:
   _functionName: irNivel_2
   _description: 
   ParentNodes:
-  - {fileID: -2106874830306727601}
+  - {fileID: -7759331683390253666}
   ChildNode: {fileID: 0}
 --- !u!114 &2187321377584024926
 MonoBehaviour:
@@ -285,8 +421,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 426.3996
-    y: 299.60007
+    x: 1493.6008
+    y: 423.60007
     width: 190
     height: 80
   IsDragging: 1
@@ -294,7 +430,7 @@ MonoBehaviour:
   _functionName: irNivel_1
   _description: 
   ParentNodes:
-  - {fileID: 3640164698885939766}
+  - {fileID: -1319264323790281893}
   ChildNode: {fileID: 0}
 --- !u!114 &3093827038934681396
 MonoBehaviour:
@@ -311,8 +447,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -1016.8008
-    y: 105.20004
+    x: 50.401184
+    y: 229.19995
     width: 190
     height: 80
   IsDragging: 1
@@ -320,7 +456,7 @@ MonoBehaviour:
   _functionName: PararMov
   _description: 
   ParentNodes: []
-  ChildNode: {fileID: -3425903161041344827}
+  ChildNode: {fileID: -5118648566050038099}
 --- !u!114 &3542580953609265815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -336,8 +472,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 899.19916
-    y: -153.20001
+    x: 1966.3992
+    y: -29.199936
     width: 190
     height: 80
   IsDragging: 1
@@ -345,7 +481,7 @@ MonoBehaviour:
   _functionName: irNivel_3
   _description: 
   ParentNodes:
-  - {fileID: -1896232509494548426}
+  - {fileID: 7055789397958964676}
   ChildNode: {fileID: 0}
 --- !u!114 &3640164698885939766
 MonoBehaviour:
@@ -362,8 +498,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 404.79974
-    y: 195.60016
+    x: 1472.0002
+    y: 319.60007
     width: 190
     height: 80
   IsDragging: 1
@@ -374,7 +510,7 @@ MonoBehaviour:
   - {fileID: 9024950101025651931}
   - {fileID: 4760993107417321355}
   - {fileID: -2381589728315482750}
-  ChildNode: {fileID: 2187321377584024926}
+  ChildNode: {fileID: -1319264323790281893}
 --- !u!114 &4522958931929700681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -390,12 +526,12 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 578.4002
-    y: 479.6002
+    x: 1645.6001
+    y: 603.6001
     width: 190
     height: 80
   IsDragging: 1
-  IsSelected: 1
+  IsSelected: 0
   _functionName: ContinuarMov
   _description: 
   ParentNodes:
@@ -403,7 +539,7 @@ MonoBehaviour:
   - {fileID: 9024950101025651931}
   - {fileID: 4760993107417321355}
   - {fileID: -2381589728315482750}
-  ChildNode: {fileID: 0}
+  ChildNode: {fileID: -4592145781323620007}
 --- !u!114 &4760993107417321355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -419,8 +555,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 367.2005
-    y: -70.80002
+    x: 1434.4011
+    y: 53.200134
     width: 190
     height: 175
   IsDragging: 1
@@ -457,8 +593,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -13.5998535
-    y: -166.80005
+    x: 1053.6008
+    y: -42.799957
     width: 240
     height: 160
   IsDragging: 1
@@ -488,8 +624,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -304.79987
-    y: -114.79999
+    x: 762.40027
+    y: 9.200134
     width: 240
     height: 160
   IsDragging: 1
@@ -504,6 +640,32 @@ MonoBehaviour:
   - {fileID: 7722732253474417685}
   TrueChildNode: {fileID: 5018439262714322912}
   FalseChildNode: {fileID: 9024950101025651931}
+--- !u!114 &7055789397958964676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f4b3c64aaf434ea0df52154c1c7680, type: 3}
+  m_Name: External Function Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 1851.9995
+    y: 51.600098
+    width: 190
+    height: 80
+  IsDragging: 1
+  IsSelected: 0
+  _functionName: no_Mouse
+  _description: 
+  ParentNodes:
+  - {fileID: -1896232509494548426}
+  ChildNode: {fileID: 3542580953609265815}
 --- !u!114 &7722732253474417685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -519,8 +681,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -567.19977
-    y: 33.99997
+    x: 500.0007
+    y: 158
     width: 240
     height: 160
   IsDragging: 1
@@ -550,8 +712,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 4
-    y: 47.600006
+    x: 1071.2009
+    y: 171.60004
     width: 190
     height: 155
   IsDragging: 1

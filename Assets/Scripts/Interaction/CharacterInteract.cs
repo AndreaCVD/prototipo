@@ -30,10 +30,10 @@ public class CharacterInteract : MonoBehaviour
         canvas_visible = false;
         death = false;
 
-        CanvasGroup hijo_canvas = transform.Find("Canvas Puzzle").GetComponent<CanvasGroup>();
-        grup = hijo_canvas;
-        TMP_Text hijo_texto = GetComponentInChildren< TMP_Text>();
-        text_interaccion = hijo_texto;
+        //CanvasGroup hijo_canvas = transform.Find("Canvas Puzzle").GetComponent<CanvasGroup>();
+        //grup = hijo_canvas;
+        //TMP_Text hijo_texto = GetComponentInChildren< TMP_Text>();
+        //text_interaccion = hijo_texto;
     }
     void Update()
     {
@@ -56,20 +56,14 @@ public class CharacterInteract : MonoBehaviour
             {
                 if (!text_canvas)
                 {
-                    text_canvas=true;
+                    text_canvas = true;
                     textCanva(hitInfo.transform.gameObject);
                 }
                 //clicar boton para interaccionar
                 //Interaccion
                 
-                if (isEnemy)
+                if (isEnemy) //se pone en Texto canva
                 {
-                    //Cursor.visible = true;
-
-                    //Bool true asi no se sobreponen otras interacciones
-                    //interaction = true;
-
-                    //Devuelve Obj que tiene Interactable
                     interactable = hitInfo.transform.gameObject.GetComponent<Interactable>();
 
                     interactable.DetectObj(hitInfo.transform.gameObject);
@@ -77,6 +71,8 @@ public class CharacterInteract : MonoBehaviour
                 }
                 else
                 {
+                    Debug.Log("c");
+
                     canvas_visible = Input.GetKeyDown(KeyCode.P);
                     opacidad(1f);
                 }
@@ -96,8 +92,6 @@ public class CharacterInteract : MonoBehaviour
                 }  
 
             }
-        
-                //Debug.Log("No tiene Ineteractable");
             
         }
         else  //Cuando el Raycast no detecte nada

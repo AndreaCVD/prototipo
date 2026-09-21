@@ -385,6 +385,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 003f3b5576696d24b8f1b50d2b060d6a, type: 3}
+--- !u!1001 &99183276
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 529005356309165491, guid: 3e6f1206884f757419fd398c680c68d2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -13.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 529005356309165491, guid: 3e6f1206884f757419fd398c680c68d2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.0141299
+      objectReference: {fileID: 0}
+    - target: {fileID: 529005356309165491, guid: 3e6f1206884f757419fd398c680c68d2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 24.026453
+      objectReference: {fileID: 0}
+    - target: {fileID: 529005356309165491, guid: 3e6f1206884f757419fd398c680c68d2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 529005356309165491, guid: 3e6f1206884f757419fd398c680c68d2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 529005356309165491, guid: 3e6f1206884f757419fd398c680c68d2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 529005356309165491, guid: 3e6f1206884f757419fd398c680c68d2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 529005356309165491, guid: 3e6f1206884f757419fd398c680c68d2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 529005356309165491, guid: 3e6f1206884f757419fd398c680c68d2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 529005356309165491, guid: 3e6f1206884f757419fd398c680c68d2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2083212010963815186, guid: 3e6f1206884f757419fd398c680c68d2, type: 3}
+      propertyPath: m_Name
+      value: Jefe Libro Final
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3e6f1206884f757419fd398c680c68d2, type: 3}
 --- !u!1001 &126921798
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7161,3 +7218,4 @@ SceneRoots:
   - {fileID: 1913518101}
   - {fileID: 50736286}
   - {fileID: 1727404536}
+  - {fileID: 99183276}

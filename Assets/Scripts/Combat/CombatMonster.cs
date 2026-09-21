@@ -227,6 +227,7 @@ public class CombatMonster : MonoBehaviour
                 //Restaurar constitucino ficha enemigo
                 player.stats.values[3].value = player.stats.values[5].value;
 
+                player.Inventario.Monedas += 5;
                 restaurarStat(10); //Restaurar todos los stats prota si han sido cambiados
                 
                 preload.DestroyEnemy(); //anim muerte enemigo

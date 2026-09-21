@@ -185,6 +185,7 @@ public class Inventario : MonoBehaviour
         {
             case string b when b.Contains("b1"):
                 prota.Inventario.LlaveMaestra.Add("llave_cofre");
+                prota.Inventario.Monedas += 15;
                 break;
             //case string b when b.Contains("c2"):
             //    prota.Inventario.Espada.Add("espada_cofre");
@@ -192,11 +193,13 @@ public class Inventario : MonoBehaviour
             //    break;
             case string b when b.Contains("c2"):
                 //prota.Inventario.Monedas.Add("monedas_cofre");
-                prota.Inventario.Monedas += 10;
+                prota.Inventario.Monedas += 50;
 
                 break;
             case string b when b.Contains("c5"):
-                prota.Inventario.PocionLava.Add("pocion_cofre");
+                prota.Inventario.PocionVida.Add("pocion_cofre");
+                prota.Inventario.Monedas += 10;
+
                 break;
             case string b when b.Contains("c6"):
                 prota.Inventario.LlaveMaestra.Add("llave_cofre");
@@ -210,7 +213,7 @@ public class Inventario : MonoBehaviour
             //    break;
             case string b when b.Contains("d5"):
                 //prota.Inventario.Monedas.Add("monedas_cofre");
-                prota.Inventario.Monedas += 10;
+                prota.Inventario.Monedas += 125;
 
                 prota.Inventario.PocionVida.Add("pocion_cofre");
                 break;

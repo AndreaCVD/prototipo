@@ -104,6 +104,7 @@ public class Dialog : MonoBehaviour
         _dialogBehaviour.BindExternalFunction("no_Mouse", No_Mouse);
 
         _dialogBehaviour.BindExternalFunction("tienda", Tienda);
+        _dialogBehaviour.BindExternalFunction("moneda", moneda);
 
         //Le enviamos el dialogo que tiene que hacer --> ESTE SIEMPRE ÚLTIMO
         _dialogBehaviour.StartDialog(dialogo);
@@ -312,6 +313,11 @@ public class Dialog : MonoBehaviour
         }
     }
 
+    //recopmensa
+    public void moneda()
+    {
+        prota.Inventario.Monedas += 10;
+    }
     // Libro
     // ACCEPTAR CONVENCER
     public void aceptar_libro()

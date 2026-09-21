@@ -20,8 +20,9 @@ public class CharacterInteract : MonoBehaviour
     public bool text_canvas;
     public bool canvas_visible;  // ver si presiona para interaccion
     public  bool isEnemy;  // ver si presiona para interaccion
-    public  bool death; 
-    
+    public  bool death;
+    public bool inCombat;
+
     void Start()
     {
         opacidad(0f);
@@ -29,7 +30,7 @@ public class CharacterInteract : MonoBehaviour
         text_canvas = false;
         canvas_visible = false;
         death = false;
-
+        inCombat = false;
         //CanvasGroup hijo_canvas = transform.Find("Canvas Puzzle").GetComponent<CanvasGroup>();
         //grup = hijo_canvas;
         //TMP_Text hijo_texto = GetComponentInChildren< TMP_Text>();
@@ -64,8 +65,9 @@ public class CharacterInteract : MonoBehaviour
                 //clicar boton para interaccionar
                 //Interaccion
                 
-                if (isEnemy) //se pone en Texto canva
+                if (isEnemy && !inCombat) //se pone en Texto canva
                 {
+                    inCombat = true;
                     interactable = hitInfo.transform.gameObject.GetComponent<Interactable>();
 
                     interactable.DetectObj(hitInfo.transform.gameObject);
@@ -107,6 +109,9 @@ public class CharacterInteract : MonoBehaviour
 
             if (isEnemy)
                 isEnemy = false;
+
+            if (inCombat)
+                inCombat = false;
         }
             //foreach (Collider c in colliders)
             //{

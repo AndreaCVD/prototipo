@@ -151,7 +151,9 @@ public class LoadScene : MonoBehaviour
     public void SalirCombate()//Salimos del combate
     {
         Debug.Log("Salimos de combate");
+
         onCombat = false;
+
         //sacamos el cursor
         Cursor.lockState = CursorLockMode.Locked;
         //Cursor.visible = false;

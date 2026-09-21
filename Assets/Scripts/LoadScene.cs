@@ -80,7 +80,10 @@ public class LoadScene : MonoBehaviour
     {
         return name_anterior;
     }
-
+    public bool isPaused()
+    {
+        return onPause;
+    }
     public void ChangeScene(string sceneName) //Anar a una escena en especific
     {
         Scene escenaActual = SceneManager.GetActiveScene();

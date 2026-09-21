@@ -74,7 +74,7 @@ public class CharacterInteract : MonoBehaviour
                     interactable.DetectObj(hitInfo.transform.gameObject);
                     
                 }
-                else if ( grup.alpha < 1f)
+                else if (!isEnemy && grup.alpha < 1f)
                 {
 
                     opacidad(1f);

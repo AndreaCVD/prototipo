@@ -7,10 +7,10 @@ using Cursor = UnityEngine.Cursor;
 public class Tienda : MonoBehaviour
 {
     [Header("Precios")]
-    [SerializeField] int poc_vida_cost;
-    [SerializeField] int poc_lava;
-    [SerializeField] int arm_cuero;
-    [SerializeField] int arm_malla;
+    [SerializeField] int cost_vida;
+    [SerializeField] int cost_lava;
+    [SerializeField] int cost_cuero;
+    [SerializeField] int cost_malla;
 
     private InputHandler escenaState;
 
@@ -72,6 +72,7 @@ public class Tienda : MonoBehaviour
         btn_lava = root.Q<Button>("btn-pocion-lava");
 
         btn_cura.clicked += Pocion_Cura;
+        btn_lava.clicked += Pocion_Lava;
 
         //SetInventario();
     }
@@ -80,11 +81,29 @@ public class Tienda : MonoBehaviour
         //numero de monedas que tenemos
         monedas = protagonista.Inventario.Monedas;
         // si llega, restamos monedas y sumamos uno al inventario
-        if (monedas >= poc_vida_cost)
+        if (monedas >= cost_vida)
         {
-            protagonista.Inventario.Monedas -= poc_vida_cost;
+            protagonista.Inventario.Monedas -= cost_vida;
             
             protagonista.Inventario.PocionVida.Add("pocion_tienda");
+            Update_Money();
+        }
+        //si no llega no puede comprar
+        else
+        {
+            Debug.Log("Monedas insuficientes");
+        }
+    }
+    void Pocion_Lava()
+    {
+        //numero de monedas que tenemos
+        monedas = protagonista.Inventario.Monedas;
+        // si llega, restamos monedas y sumamos uno al inventario
+        if (monedas >= cost_lava)
+        {
+            protagonista.Inventario.Monedas -= cost_lava;
+            
+            protagonista.Inventario.PocionLava.Add("pocion_tienda");
             Update_Money();
         }
         //si no llega no puede comprar

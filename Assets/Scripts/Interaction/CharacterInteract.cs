@@ -41,7 +41,8 @@ public class CharacterInteract : MonoBehaviour
         //De dnd sale y adonde va
         ray = new Ray(pivot_personaje.transform.position, pivot_personaje.transform.forward);
 
-        canvas_visible = Input.GetKeyDown(KeyCode.P);
+        //canvas_visible = Input.GetKeyDown(KeyCode.P);
+        canvas_visible = Input.GetKeyDown((KeyCode.Mouse0));
 
         Invoke(nameof(Interact), 1.0f);
     }
@@ -73,8 +74,9 @@ public class CharacterInteract : MonoBehaviour
                     interactable.DetectObj(hitInfo.transform.gameObject);
                     
                 }
-                else
+                else if ( grup.alpha < 1f)
                 {
+
                     opacidad(1f);
                 }
                    
@@ -102,8 +104,10 @@ public class CharacterInteract : MonoBehaviour
 
             if (Cursor.visible)
                 Cursor.visible = false;
-
-            opacidad(0f);
+            
+            if (grup.alpha > 0f)
+                opacidad(0f);
+            
             if (interaction)
                 interaction = false; //Volvemos a poner bool falso
 
@@ -128,7 +132,6 @@ public class CharacterInteract : MonoBehaviour
     }
     void opacidad(float nueva_opacidad)
     {
-        Debug.Log(nueva_opacidad);
         grup.alpha = Mathf.Lerp(0f, nueva_opacidad, 5f);
     }
     void textCanva(GameObject obj)
@@ -139,19 +142,19 @@ public class CharacterInteract : MonoBehaviour
                 isEnemy = true;
                 break;
             case "Interact_Scene":
-                text_interaccion.text = "P - Inspeccionar";
+                text_interaccion.text = "Inspeccionar";
                 break;
             case "NPC":
-                text_interaccion.text = "P - para hablar";
+                text_interaccion.text = "Hablar";
                 break;
             case "Cofre":
-                text_interaccion.text = "P - Abrir Cofre ";
+                text_interaccion.text = "Abrir Cofre";
                 break;
             case "Puerta":
-                text_interaccion.text = "P - Abrir Puerta";
+                text_interaccion.text = "Abrir Puerta";
                 break;
             case "PuertaMaestra":
-                text_interaccion.text = "P - Abrir Puerta Maestra";
+                text_interaccion.text = "Abrir Puerta Maestra";
                 break;
             default:
                 //Debug.Log("No hay nada");

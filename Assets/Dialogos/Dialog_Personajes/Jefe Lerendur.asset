@@ -15,8 +15,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1568.7979
-    y: 83.6001
+    x: 391.99966
+    y: 226.80023
     width: 190
     height: 80
   IsDragging: 1
@@ -41,8 +41,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1255.2034
-    y: -118.80011
+    x: 78.40399
+    y: 24.400024
     width: 190
     height: 135
   IsDragging: 1
@@ -73,12 +73,12 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1371.2021
-    y: 218.00061
+    x: 194.40265
+    y: 361.20078
     width: 190
-    height: 135
+    height: 155
   IsDragging: 1
-  IsSelected: 0
+  IsSelected: 1
   _sentence:
     CharacterName: Carlos
     Text: "(No dices nada, la extra\xF1a persona tampoco se mueve)"
@@ -86,8 +86,8 @@ MonoBehaviour:
   ParentNodes:
   - {fileID: -1186959537270248168}
   ChildNode: {fileID: -3764425648543031705}
-  _isExternalFunc: 0
-  _externalFunctionName: 
+  _isExternalFunc: 1
+  _externalFunctionName: no_Mouse
   CharacterNameKey: SentenceName_be54fb28-ff78-47e4-9675-d65212408a20
   SentenceTextKey: SentenceText_a26842ec-92c7-49c0-b40b-597694acdd00
 --- !u!114 &-5930550159138293099
@@ -105,8 +105,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 342.40027
-    y: -66.80017
+    x: -834.39984
+    y: 76.39996
     width: 190
     height: 135
   IsDragging: 1
@@ -140,8 +140,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1648.7988
-    y: 243.60104
+    x: 472.0009
+    y: 386.80112
     width: 190
     height: 80
   IsDragging: 1
@@ -166,8 +166,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -142.40033
-    y: 23.600098
+    x: -1319.1997
+    y: 166.80023
     width: 240
     height: 160
   IsDragging: 1
@@ -197,8 +197,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 363.9999
-    y: -290.8
+    x: -812.8
+    y: -147.59985
     width: 190
     height: 135
   IsDragging: 1
@@ -230,8 +230,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 452.0009
-    y: 236.4011
+    x: -724.7995
+    y: 379.60135
     width: 190
     height: 135
   IsDragging: 1
@@ -263,8 +263,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -758.3994
-    y: 284.40045
+    x: -1935.1987
+    y: 427.60062
     width: 190
     height: 80
   IsDragging: 1
@@ -288,8 +288,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1140.0005
-    y: 53.200073
+    x: -36.79976
+    y: 196.4002
     width: 190
     height: 135
   IsDragging: 1
@@ -320,11 +320,11 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1053.602
-    y: 276.40002
+    x: -158.39816
+    y: 398.80005
     width: 190
     height: 80
-  IsDragging: 0
+  IsDragging: 1
   IsSelected: 0
   _functionName: Mouse
   _description: 
@@ -346,8 +346,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1032.002
-    y: -112.40018
+    x: -144.79819
+    y: 30.799957
     width: 190
     height: 135
   IsDragging: 1
@@ -421,8 +421,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 596.0006
-    y: -74.80017
+    x: -580.79974
+    y: 68.39996
     width: 190
     height: 135
   IsDragging: 1
@@ -453,8 +453,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 157.59995
-    y: 151.60071
+    x: -1019.19977
+    y: 294.80084
     width: 240
     height: 160
   IsDragging: 1
@@ -484,8 +484,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 665.60315
-    y: 235.60129
+    x: -511.19708
+    y: 378.80154
     width: 190
     height: 135
   IsDragging: 1
@@ -516,8 +516,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1776.7979
-    y: 83.6001
+    x: 600.0003
+    y: 226.80023
     width: 190
     height: 80
   IsDragging: 1
@@ -542,8 +542,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -351.99942
-    y: 18.799957
+    x: -1528.7986
+    y: 162.00009
     width: 190
     height: 135
   IsDragging: 1
@@ -574,8 +574,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 59.99991
-    y: -183.59995
+    x: -1116.7996
+    y: -40.39981
     width: 240
     height: 160
   IsDragging: 1
@@ -605,10 +605,10 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 1360.8018
-    y: 41.19995
+    x: 184.00238
+    y: 184.40009
     width: 190
-    height: 135
+    height: 155
   IsDragging: 1
   IsSelected: 0
   _sentence:
@@ -618,8 +618,8 @@ MonoBehaviour:
   ParentNodes:
   - {fileID: -1186959537270248168}
   ChildNode: {fileID: -7940496025079005799}
-  _isExternalFunc: 0
-  _externalFunctionName: 
+  _isExternalFunc: 1
+  _externalFunctionName: no_Mouse
   CharacterNameKey: SentenceName_538b82ab-a307-4ca9-bde0-fc7b0f9ab11f
   SentenceTextKey: SentenceText_c6ff0818-b78f-455f-83e6-f780f872852d
 --- !u!114 &6815412026337283795
@@ -637,8 +637,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 815.2018
-    y: -107.60013
+    x: -361.59845
+    y: 35.600006
     width: 190
     height: 135
   IsDragging: 1
@@ -670,8 +670,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -605.5984
-    y: 43.599915
+    x: -1782.3975
+    y: 186.80005
     width: 210
     height: 155
   IsDragging: 1
@@ -700,8 +700,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: -403.19922
-    y: 244.4003
+    x: -1579.9988
+    y: 387.60043
     width: 240
     height: 160
   IsDragging: 1
@@ -731,8 +731,8 @@ MonoBehaviour:
   NodeGraph: {fileID: 11400000}
   Rect:
     serializedVersion: 2
-    x: 872.0021
-    y: 71.59993
+    x: -304.79813
+    y: 214.80005
     width: 190
     height: 135
   IsDragging: 1

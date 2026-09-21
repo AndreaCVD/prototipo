@@ -99,7 +99,8 @@ public class Dialog : MonoBehaviour
         _dialogBehaviour.BindExternalFunction("denegar", denegar_libro);
 
         //mouse
-        _dialogBehaviour.BindExternalFunction("mouse", Mouse);
+        _dialogBehaviour.BindExternalFunction("Mouse", Mouse);
+        _dialogBehaviour.BindExternalFunction("no_Mouse", No_Mouse);
 
         //Le enviamos el dialogo que tiene que hacer --> ESTE SIEMPRE ÚLTIMO
         _dialogBehaviour.StartDialog(dialogo);
@@ -109,8 +110,11 @@ public class Dialog : MonoBehaviour
     //mouse
     public void Mouse()
     {
-        //Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+    }
+    public void No_Mouse()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
     }
     //Dialogo
     public void Dialogo()

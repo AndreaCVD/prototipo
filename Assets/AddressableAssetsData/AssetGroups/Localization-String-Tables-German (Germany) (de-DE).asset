@@ -123,6 +123,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-de-DE
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e7749aa82453c0b4bb8083299e487b97
+    m_Address: Tienda Yusseif_de-DE
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de-DE
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f36f0721cf44fd04fbd8263d782cdbcb
     m_Address: DemoNodeGraph_de-DE
     m_ReadOnly: 1

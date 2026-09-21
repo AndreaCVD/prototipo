@@ -2909,15 +2909,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6286827285162658893, guid: e1e382eeb87f205439904cd395ba77a9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -318
+      value: -241
       objectReference: {fileID: 0}
     - target: {fileID: 6286827285162658893, guid: e1e382eeb87f205439904cd395ba77a9, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 8
+      value: 258
       objectReference: {fileID: 0}
     - target: {fileID: 6286827285162658893, guid: e1e382eeb87f205439904cd395ba77a9, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -13
+      value: -134
       objectReference: {fileID: 0}
     - target: {fileID: 6376016087389561806, guid: e1e382eeb87f205439904cd395ba77a9, type: 3}
       propertyPath: m_AABB.m_Center.x
@@ -4503,6 +4503,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4002518852735060712, guid: e0c92b6b6745571419ba93a8e5313c6f, type: 3}
+      propertyPath: dialogo_obj
+      value: 
+      objectReference: {fileID: 11400000, guid: e95c0a9de44184d42bf48fa3f566a771, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

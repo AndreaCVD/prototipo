@@ -65,6 +65,11 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 75f5b78222a2efd468df20f80ba7c422
+    m_Address: Assets/Localization/Tienda Yusseif/Tienda Yusseif Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 77f6bfb189ad01143a2632e17e45e31c
     m_Address: Assets/Localization/Puerta/Puerta Shared Data.asset
     m_ReadOnly: 1

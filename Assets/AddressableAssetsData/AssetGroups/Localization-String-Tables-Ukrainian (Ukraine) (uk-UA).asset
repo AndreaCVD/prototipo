@@ -123,6 +123,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-uk-UA
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dea9c6f8d98a0b34ba045071b830c697
+    m_Address: Tienda Yusseif_uk-UA
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-uk-UA
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: df489edfbcd38de48ae50fdd200db61f
     m_Address: CofreVacio_uk-UA
     m_ReadOnly: 1

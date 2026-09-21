@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using cherrydev;
 using Cursor = UnityEngine.Cursor;
+using UnityEngine.SceneManagement;
 
 public class Dialog : MonoBehaviour
 {
@@ -102,11 +103,16 @@ public class Dialog : MonoBehaviour
         _dialogBehaviour.BindExternalFunction("Mouse", Mouse);
         _dialogBehaviour.BindExternalFunction("no_Mouse", No_Mouse);
 
+        _dialogBehaviour.BindExternalFunction("tienda", Tienda);
+
         //Le enviamos el dialogo que tiene que hacer --> ESTE SIEMPRE ÚLTIMO
         _dialogBehaviour.StartDialog(dialogo);
 
     }
-
+    public void Tienda()
+    {
+        SceneManager.LoadScene("Tienda_Yusseif", LoadSceneMode.Additive);
+    }
     //mouse
     public void Mouse()
     {
@@ -294,7 +300,9 @@ public class Dialog : MonoBehaviour
             //    prota.Inventario.Espada.Add("Espada_Loot");
             //    break;
             case 1:
-                prota.Inventario.Monedas.Add("Monedas_Loot");
+                //prota.Inventario.Monedas.Add("Monedas_Loot");
+                prota.Inventario.Monedas += 10;
+
                 break;
             case 2:
                 prota.Inventario.PocionVida.Add("PocionVida_Loot");

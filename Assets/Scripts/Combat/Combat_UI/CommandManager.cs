@@ -504,8 +504,8 @@ public class CommandManager : MonoBehaviour
             if (turnos_inmovil == 0)
             {
                 Debug.Log("Ya no esta inmovilizado");
-                Debug.Log(turnRoundManager.target.name());
-                if (turnRoundManager.target.name() == "Carlos")//si es carlos cambiamos la del player actual
+                Debug.Log(turnRoundManager.target.name_pers());
+                if (turnRoundManager.target.name_pers() == "Carlos")//si es carlos cambiamos la del player actual
                 {    //Debug.Log("a");
                     turnRoundManager.current.Cambiar_Idle();
                 }
@@ -548,7 +548,7 @@ public class CommandManager : MonoBehaviour
             if (turnos_inmovil == 0)
             {
 
-                if (turnRoundManager.target.name() == "Carlos")//si es carlos cambiamos la del player actual
+                if (turnRoundManager.target.name_pers() == "Carlos")//si es carlos cambiamos la del player actual
                     turnRoundManager.target.Cambiar_Idle();
                 else
                     turnRoundManager.current.Cambiar_Idle();

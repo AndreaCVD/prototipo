@@ -40,6 +40,8 @@ public class CharacterInteract : MonoBehaviour
         //De dnd sale y adonde va
         ray = new Ray(pivot_personaje.transform.position, pivot_personaje.transform.forward);
 
+        canvas_visible = Input.GetKeyDown(KeyCode.P);
+
         Invoke(nameof(Interact), 1.0f);
     }
     public void Interact()
@@ -71,9 +73,6 @@ public class CharacterInteract : MonoBehaviour
                 }
                 else
                 {
-                    Debug.Log("c");
-
-                    canvas_visible = Input.GetKeyDown(KeyCode.P);
                     opacidad(1f);
                 }
                    

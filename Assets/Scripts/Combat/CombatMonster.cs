@@ -326,7 +326,7 @@ public class CombatMonster : MonoBehaviour
                 break;
         }
     }
-    public string name()
+    public string name_pers()
     {
         return player.namePers;
     }

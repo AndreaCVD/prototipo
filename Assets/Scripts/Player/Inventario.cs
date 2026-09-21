@@ -27,7 +27,11 @@ public class Inventario : MonoBehaviour
         if (prota.Inventario.PocionLava == null) prota.Inventario.PocionVida = new List<string>();
         //if (prota.Inventario.Daga == null) prota.Inventario.Daga = new List<string>();
         //if (prota.Inventario.Espada == null) prota.Inventario.Espada = new List<string>();
-        if (prota.Inventario.Monedas == null) prota.Inventario.Monedas = new List<string>();
+        //if (prota.Inventario.Monedas == null) prota.Inventario.Monedas = new List<string>();
+        //if (prota.Inventario.Monedas == null) prota.Inventario.Monedas = new int;
+
+        if (prota.Inventario.ArmaduraCuero == null) prota.Inventario.ArmaduraCuero = new List<string>();
+        if (prota.Inventario.ArmaduraMalla == null) prota.Inventario.ArmaduraMalla = new List<string>();
 
         //prota.Inventario.Clear();
         if (script_dialog == null)
@@ -72,7 +76,8 @@ public class Inventario : MonoBehaviour
         }
         else if (other.gameObject.tag == "Monedas")
         {
-            prota.Inventario.Monedas.Add(other.gameObject.name);
+            //prota.Inventario.Monedas.Add(other.gameObject.name);
+            prota.Inventario.Monedas += 10;
             Destroy(other.gameObject);
         }
         //else if (other.gameObject.tag == "Daga")
@@ -186,7 +191,9 @@ public class Inventario : MonoBehaviour
             //    prota.stats.values[0].value += 3;
             //    break;
             case string b when b.Contains("c2"):
-                prota.Inventario.Monedas.Add("monedas_cofre");
+                //prota.Inventario.Monedas.Add("monedas_cofre");
+                prota.Inventario.Monedas += 10;
+
                 break;
             case string b when b.Contains("c5"):
                 prota.Inventario.PocionLava.Add("pocion_cofre");
@@ -202,7 +209,9 @@ public class Inventario : MonoBehaviour
             //    prota.Inventario.PocionVida.Add("pocion_cofre");
             //    break;
             case string b when b.Contains("d5"):
-                prota.Inventario.Monedas.Add("monedas_cofre");
+                //prota.Inventario.Monedas.Add("monedas_cofre");
+                prota.Inventario.Monedas += 10;
+
                 prota.Inventario.PocionVida.Add("pocion_cofre");
                 break;
             default:
@@ -228,11 +237,15 @@ public class Inventario : MonoBehaviour
             //    prota.stats.values[0].value += 1;
             //    break;
             case 1:
-                prota.Inventario.Monedas.Add("monedas_loot");
+                //prota.Inventario.Monedas.Add("monedas_loot");
+                prota.Inventario.Monedas += 10;
+
                 //prota.stats.values[0].value += 3;
                 break;
             case 2:
-                prota.Inventario.Monedas.Add("monedas_loot");
+                //prota.Inventario.Monedas.Add("monedas_loot");
+                prota.Inventario.Monedas += 10;
+
                 //prota.stats.values[0].value += 1;
                 break;
             case 3:

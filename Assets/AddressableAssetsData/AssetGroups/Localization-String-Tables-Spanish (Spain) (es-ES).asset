@@ -105,6 +105,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-es-ES
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b976177a7a63ea24299e1a4dd7363901
+    m_Address: Tienda Yusseif_es-ES
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es-ES
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: bc3dc9d37e0242542873f5f5e017f7bf
     m_Address: Entrada_Mazmorra_es-ES
     m_ReadOnly: 1

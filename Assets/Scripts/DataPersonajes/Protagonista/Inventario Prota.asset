@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Inventario Prota
   m_EditorClassIdentifier: 
   nombreObj: 
-  Llave: []
-  LlaveMaestra: []
+  Llave:
+  - 
+  LlaveMaestra:
+  - 
   PocionVida:
-  - pocion_tienda
-  - pocion_tienda
   - pocion_tienda
   - pocion_tienda
   PocionLava: []

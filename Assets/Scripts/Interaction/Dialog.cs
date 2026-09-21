@@ -319,7 +319,7 @@ public class Dialog : MonoBehaviour
         //sacar el Jefe_Action de obj
         Jefe_Action libro = obj.GetComponent<Jefe_Action>();
         //activar funcion y luego hacer la accion que toque
-
+        libro.Aceptar();
     }
     // DENEGAR CONVENCER
     public void denegar_libro()

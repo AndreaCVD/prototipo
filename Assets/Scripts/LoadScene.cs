@@ -184,6 +184,7 @@ public class LoadScene : MonoBehaviour
 
         //uiHub.SetActive(true);
     }
+
     public void Combat()
     {
 

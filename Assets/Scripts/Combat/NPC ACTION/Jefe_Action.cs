@@ -170,10 +170,16 @@ public class Jefe_Action : MonoBehaviour
     }
     public void Aceptar()
     {
+        GameObject aux = GameObject.Find("--SceneManagement--");
+        LoadScene load = aux.GetComponent<LoadScene>();
+        Preload preload = aux.GetComponent<Preload>();
         //salir de combate
         //activar animacion de que el libro se va con Carlos
         //la pantalla oscurece -> Game Over
         Debug.Log("ACABAR COMBATE");
+
+        preload.Carlos_Death();
+        load.SalirCombate();
     }
     public void Denegar()
     {

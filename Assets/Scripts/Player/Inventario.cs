@@ -30,8 +30,8 @@ public class Inventario : MonoBehaviour
         //if (prota.Inventario.Monedas == null) prota.Inventario.Monedas = new List<string>();
         //if (prota.Inventario.Monedas == null) prota.Inventario.Monedas = new int;
 
-        if (prota.Inventario.ArmaduraCuero == null) prota.Inventario.ArmaduraCuero = new List<string>();
-        if (prota.Inventario.ArmaduraMalla == null) prota.Inventario.ArmaduraMalla = new List<string>();
+        //if (prota.Inventario.ArmaduraCuero == null) prota.Inventario.ArmaduraCuero = new List<string>();
+        //if (prota.Inventario.ArmaduraMalla == null) prota.Inventario.ArmaduraMalla = new List<string>();
 
         //prota.Inventario.Clear();
         if (script_dialog == null)

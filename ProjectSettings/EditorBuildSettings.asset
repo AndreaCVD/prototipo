@@ -32,6 +32,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu_SubirStat.unity
     guid: 59f97d0e37802bf44b7bc07cbd117651
+  - enabled: 1
+    path: Assets/Scenes/Tienda_Yusseif.unity
+    guid: e6e156e22e92d2a47b8962e776257f3e
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: a028e39953340324ca0ac3c1d91e7b7b, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}

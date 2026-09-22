@@ -49,6 +49,9 @@ public class Tienda : MonoBehaviour
 
     void Start()
     {
+        if (protagonista.Inventario.Armadura == "")
+            protagonista.stats.values[4].value = 12;
+
         escenaState = GameObject.Find("personaje").GetComponent<InputHandler>();
         Update_Money();
     }
@@ -73,6 +76,8 @@ public class Tienda : MonoBehaviour
 
         btn_cura.clicked += Pocion_Cura;
         btn_lava.clicked += Pocion_Lava;
+        btn_malla.clicked += Armadura_Malla;
+        btn_cuero.clicked += Armadura_Cuero;
 
         //SetInventario();
     }
@@ -112,6 +117,34 @@ public class Tienda : MonoBehaviour
             Debug.Log("Monedas insuficientes");
         }
     }
+    void Armadura_Malla()
+    {
+        if (monedas >= cost_malla)
+        {
+            protagonista.Inventario.Monedas -= cost_malla;
+            protagonista.Inventario.Armadura = "malla";
+            protagonista.stats.values[4].value = 16;
+
+        }
+        else
+        {
+            Debug.Log("Monedas insuficientes");
+        }
+    }
+    void Armadura_Cuero()
+    {
+        if (monedas >= cost_cuero)
+        {
+            protagonista.Inventario.Monedas -= cost_cuero;
+            protagonista.Inventario.Armadura = "cuero";
+            protagonista.stats.values[4].value = 14;
+        }
+        else
+        {
+            Debug.Log("Monedas insuficientes");
+        }
+    }
+
     void Exit()
     {
         //volver a poder moverse

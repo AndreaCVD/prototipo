@@ -19,7 +19,11 @@ MonoBehaviour:
   - 
   PocionVida:
   - 
+  - pocion_tienda
+  - pocion_tienda
   PocionLava:
   - 
-  Monedas: 28
-  Armadura: malla
+  - pocion_tienda
+  - pocion_tienda
+  Monedas: 100
+  Armadura: cuero

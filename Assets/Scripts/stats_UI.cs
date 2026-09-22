@@ -106,6 +106,7 @@ public class stats_UI : MonoBehaviour
         SetCarisma(c);
         SetCA(ca);
         SetInventario();
+        SetArmadura();
     }
 
     void Update()
@@ -291,6 +292,7 @@ public class stats_UI : MonoBehaviour
         else if (armadura == "malla")
             SetSlot(5, armadura != null ? iconoArmaduraMalla : null, 1);
 
+        SetArmadura();
     }
 
     void SetSlot(int index, Sprite icono, int cantidad)
@@ -324,5 +326,14 @@ public class stats_UI : MonoBehaviour
         slotBadge.style.display = cantidad > 0
             ? DisplayStyle.Flex
             : DisplayStyle.None;
+    }
+    void SetArmadura()
+    {
+        if (armadura == "cuero")
+            protagonista.stats.values[4].value = 14;
+        else if (armadura == "malla")
+            protagonista.stats.values[4].value = 16;
+        else
+            protagonista.stats.values[4].value = 12;
     }
 }

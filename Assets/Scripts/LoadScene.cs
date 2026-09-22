@@ -80,7 +80,10 @@ public class LoadScene : MonoBehaviour
     {
         return name_anterior;
     }
-
+    public bool isPaused()
+    {
+        return onPause;
+    }
     public void ChangeScene(string sceneName) //Anar a una escena en especific
     {
         Scene escenaActual = SceneManager.GetActiveScene();
@@ -151,7 +154,9 @@ public class LoadScene : MonoBehaviour
     public void SalirCombate()//Salimos del combate
     {
         Debug.Log("Salimos de combate");
+
         onCombat = false;
+
         //sacamos el cursor
         Cursor.lockState = CursorLockMode.Locked;
         //Cursor.visible = false;
@@ -179,6 +184,7 @@ public class LoadScene : MonoBehaviour
 
         //uiHub.SetActive(true);
     }
+
     public void Combat()
     {
 

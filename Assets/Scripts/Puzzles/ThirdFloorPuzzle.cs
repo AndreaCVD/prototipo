@@ -99,7 +99,13 @@ public class ThirdFloorPuzzle : MonoBehaviour
         //Quan guanyem, nomes al Llibre
         else if (!jefe_Libro /*&& !lista.NivelDesbloqueado[4].acabado*/)
         {
-            Instantiate(JefeFinal[2], JefeFinal[1].transform.position, JefeFinal[1].transform.rotation);
+            StartCoroutine(a());
         }
+    }
+    IEnumerator a()
+    {
+        yield return new WaitForSeconds(2);
+        Instantiate(JefeFinal[2], JefeFinal[1].transform.position, JefeFinal[1].transform.rotation);
+
     }
 }

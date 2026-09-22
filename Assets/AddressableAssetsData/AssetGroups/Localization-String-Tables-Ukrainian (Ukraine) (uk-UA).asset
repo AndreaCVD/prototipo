@@ -75,6 +75,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-uk-UA
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6bad9f4db36277a49bea53b78ce15652
+    m_Address: Libro Combate_uk-UA
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-uk-UA
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 80119c925851dc541bc15ecac614c3d0
     m_Address: Cofre_uk-UA
     m_ReadOnly: 1
@@ -113,6 +119,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: dd6900f450260424cb179122198b7c24
     m_Address: Nimrodel Libre_uk-UA
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-uk-UA
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dea9c6f8d98a0b34ba045071b830c697
+    m_Address: Tienda Yusseif_uk-UA
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-uk-UA

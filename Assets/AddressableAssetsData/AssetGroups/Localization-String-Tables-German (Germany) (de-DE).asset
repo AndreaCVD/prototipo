@@ -87,6 +87,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-de-DE
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 96e855a00028c6f43b5c031b0ae314b7
+    m_Address: Libro Combate_de-DE
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de-DE
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 9af49136d6d23bd41967e535cc41e62a
     m_Address: Nim_de-DE
     m_ReadOnly: 1
@@ -113,6 +119,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: cc6ff777dc6267b44a0223c623176d6c
     m_Address: DebugCombat_de-DE
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de-DE
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e7749aa82453c0b4bb8083299e487b97
+    m_Address: Tienda Yusseif_de-DE
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-de-DE

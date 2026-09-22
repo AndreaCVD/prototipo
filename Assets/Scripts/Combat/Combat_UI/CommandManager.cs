@@ -367,20 +367,53 @@ public class CommandManager : MonoBehaviour
                 turnRoundManager.current.Cambiar_imgAtaque(1);
                 break;
             case "atrapar":
-                turnRoundManager.target.Cambiar_imgEstado(1); //prota vacio
-                turnRoundManager.current.Cambiar_imgAtaque(1);
+                turnRoundManager.target.Cambiar_imgEstado(3); //prota atrpado libro
+                turnRoundManager.current.Cambiar_imgAtaque(2);
                 break;
             case "convencer":
-                turnRoundManager.target.Cambiar_imgEstado(1); //prota vacio
-                turnRoundManager.current.Cambiar_imgAtaque(1);
+                //el estado enamorado no cambia de sprite en el tiempo
+                turnRoundManager.target.Cambiar_imgEnamorado(0); // img en carlos side
+                turnRoundManager.current.Cambiar_imgEnamorado(0); //libro vacio
                 break;
             case "x":
-                turnRoundManager.target.Cambiar_imgEstado(1); //prota vacio
-                turnRoundManager.current.Cambiar_imgAtaque(1);
+                turnRoundManager.target.Cambiar_imgHerido();
+                turnRoundManager.current.Cambiar_imgAtaque(4);
                 break;
 
             default:
                 Debug.Log("error lectura img caballero");
+                break;
+        }
+    }
+    public void Lerendur_img(string ataque)
+    {
+        switch (ataque)
+        {
+            case "escudo":
+                turnRoundManager.current.Cambiar_imgAtaque(0);
+                break;
+            case "inmovil":
+                turnRoundManager.target.Cambiar_imgEstado(1); //prota vacio
+                turnRoundManager.current.Cambiar_imgAtaque(1);
+                break;
+            case "esfera":
+                turnRoundManager.target.Cambiar_imgHerido(); //prota herido
+                turnRoundManager.current.Cambiar_imgAtaque(2);
+                break;
+            case "ola":
+                turnRoundManager.target.Cambiar_imgHerido(); //prota herido
+                turnRoundManager.current.Cambiar_imgAtaque(3);
+                break;
+            case "proyectil":
+                turnRoundManager.target.Cambiar_imgHerido(); //prota herido
+                turnRoundManager.current.Cambiar_imgAtaque(4);
+                break;
+            case "escarcha":
+                turnRoundManager.target.Cambiar_imgHerido(); //prota herido
+                turnRoundManager.current.Cambiar_imgAtaque(5);
+                break;
+            default:
+                Debug.Log("error lectura img lerendur");
                 break;
         }
     }
@@ -471,8 +504,8 @@ public class CommandManager : MonoBehaviour
             if (turnos_inmovil == 0)
             {
                 Debug.Log("Ya no esta inmovilizado");
-                Debug.Log(turnRoundManager.target.name());
-                if (turnRoundManager.target.name() == "Carlos")//si es carlos cambiamos la del player actual
+                Debug.Log(turnRoundManager.target.name_pers());
+                if (turnRoundManager.target.name_pers() == "Carlos")//si es carlos cambiamos la del player actual
                 {    //Debug.Log("a");
                     turnRoundManager.current.Cambiar_Idle();
                 }
@@ -515,7 +548,7 @@ public class CommandManager : MonoBehaviour
             if (turnos_inmovil == 0)
             {
 
-                if (turnRoundManager.target.name() == "Carlos")//si es carlos cambiamos la del player actual
+                if (turnRoundManager.target.name_pers() == "Carlos")//si es carlos cambiamos la del player actual
                     turnRoundManager.target.Cambiar_Idle();
                 else
                     turnRoundManager.current.Cambiar_Idle();

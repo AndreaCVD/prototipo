@@ -11,6 +11,8 @@ public class Bolsa : ScriptableObject
     //public List<string> Daga = new List<string>();
     //public List<string> Espada = new List<string>();
     public List<string> PocionLava = new List<string>();
-    public List<string> Monedas = new List<string>();
+    //public List<string> Monedas = new List<string>();
+    public int Monedas;
+    public string Armadura;
 
 }

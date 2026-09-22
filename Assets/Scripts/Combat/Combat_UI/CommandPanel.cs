@@ -321,6 +321,7 @@ public class CommandPanel : MonoBehaviour
 
                 //cambiamos el dado tambien
                 dado();
+
                 Resultado_Tirada();
                 NextAction();
             }
@@ -330,6 +331,8 @@ public class CommandPanel : MonoBehaviour
                 armadura = "critico";
                 veces_tirada = 2;
 
+                dado();
+
                 Resultado_Tirada();
                 NextAction();
             }
@@ -338,14 +341,12 @@ public class CommandPanel : MonoBehaviour
                 tirada_armadura.style.display = DisplayStyle.None;
                 // el jugador se hace daño a si mismo
                 armadura = "fatidico";
-
                 Resultado_Tirada();
                 NextAction();
             }
             else //(AC_superada == 3)
             {
                 armadura = "no";
-                dado();
                 Resultado_Tirada();
                 Back();
             }
@@ -414,6 +415,7 @@ public class CommandPanel : MonoBehaviour
     // --- TIRADA FINAL D1 AL PROPIO JUGADOR ---
     public void Menu_TiradaFatidica()
     {
+        commandManager.model_dados(4);
         tirada_fatidica.style.display = DisplayStyle.Flex;
     }
     public void TiradaFatidica()
@@ -674,10 +676,6 @@ public class CommandPanel : MonoBehaviour
         {
             commandManager.model_dados(12);
         }
-        else if (armadura == "no")
-        {
-            commandManager.model_dados(4);
-        }
     }
     //Boton Huir
     public void Huir()
@@ -746,7 +744,7 @@ public class CommandPanel : MonoBehaviour
         if (protagonista.Inventario.LlaveMaestra.Count != llaveMaestra) return false;
         if (protagonista.Inventario.PocionVida.Count != pocionVida) return false;
         if (protagonista.Inventario.PocionLava.Count != pocionLava) return false;
-        if (protagonista.Inventario.Monedas.Count != monedas) return false;
+        if (protagonista.Inventario.Monedas != monedas) return false;
         //if (protagonista.Inventario.Daga.Count != daga) return false;
         //if (protagonista.Inventario.Espada.Count != espada) return false;
 
@@ -760,7 +758,7 @@ public class CommandPanel : MonoBehaviour
         if (protagonista.Inventario.LlaveMaestra == null) return;
         if (protagonista.Inventario.PocionVida == null) return;
         if (protagonista.Inventario.PocionLava == null) return;
-        if (protagonista.Inventario.Monedas == null) return;
+        if (protagonista.Inventario.Monedas == 0) return;
         //if (protagonista.Inventario.Daga == null) return;
         //if (protagonista.Inventario.Espada == null) return;
 
@@ -770,7 +768,7 @@ public class CommandPanel : MonoBehaviour
         pocionLava = protagonista.Inventario.PocionLava.Count;
         //daga = protagonista.Inventario.Daga.Count;
         //espada = protagonista.Inventario.Espada.Count;
-        monedas = protagonista.Inventario.Monedas.Count;
+        monedas = protagonista.Inventario.Monedas;
 
         SetSlot(0, llaves > 0 ? iconoLlave : null, llaves);
         SetSlot(1, llaveMaestra > 0 ? iconoLlaveMaestra : null, llaveMaestra);

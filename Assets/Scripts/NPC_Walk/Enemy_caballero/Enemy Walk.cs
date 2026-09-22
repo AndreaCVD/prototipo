@@ -29,14 +29,14 @@ public class EnemyWalk : MonoBehaviour
     [SerializeField] Transform objetivo; //lo que persigue el enemigo
    
     [Header("Animaciones")]
-    Animation anim;
-    string nombreAnimacionWalk;
-    string nombreAnimQuieto;
+    Animator anim;
+
     //[Header("Raycast")]
     RaycastHit hitInfo; //Informacion de cuando el raycast del personaje se encuentre con un obj
     Ray ray;
     void Start()
     {
+        anim = this.GetComponent<Animator>();
         isHome = true;
         firstWalk = false;
 
@@ -56,7 +56,7 @@ public class EnemyWalk : MonoBehaviour
             Invoke(nameof(Interact), 1.0f);
         }
 
-        if (firstWalk)
+        if (firstWalk && !load.isPaused())
         {
             //primero hacemos que se calcule la distancia entre el y el jugador
             distancia = Vector3.Distance(enemy.transform.position, objetivo.position);
@@ -68,11 +68,13 @@ public class EnemyWalk : MonoBehaviour
                 //{
                 //    isHome = false;
                 //}
+
                 persiguiendo = true;
                 Debug.Log("persiguiendo");
             }
             else if (distancia > rango + distanciaExtra && persiguiendo)
             {
+               
                 persiguiendo = false;
                 Debug.Log("no persiguiendo");
 
@@ -87,15 +89,22 @@ public class EnemyWalk : MonoBehaviour
                 //}
 
                 enemy.speed = 0;
-                //anim.CrossFade("Stand");
+                anim.SetInteger("speed", 0);
+
             }
             else if (persiguiendo)
             {
                 //StopCoroutine(miCoroutine);
                 enemy.speed = velocidad;
-                ///anim.CrossFade(nombreAnimacionWalk);
+                anim.SetInteger("speed", (int)velocidad);
+
                 enemy.SetDestination(objetivo.position);
             }
+        }
+        else
+        {
+            persiguiendo = false;
+            enemy.speed = velocidad;
         }
     }
     //Si hay collide vamos al combate

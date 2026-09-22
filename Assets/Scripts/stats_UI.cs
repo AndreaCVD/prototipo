@@ -17,6 +17,8 @@ public class stats_UI : MonoBehaviour
     [SerializeField] Sprite iconoEspada;
     [SerializeField] Sprite iconoPocionLava;
     [SerializeField] Sprite iconoMonedas;
+    [SerializeField] Sprite iconoArmaduraCuero;
+    [SerializeField] Sprite iconoArmaduraMalla;
 
     //ref del UI
     private VisualElement root;
@@ -41,6 +43,7 @@ public class stats_UI : MonoBehaviour
     private int pocionVida;
     private int pocionLava;
     private int monedas;
+    private string armadura;
     private bool inCombat;
 
     private void OnEnable()
@@ -86,6 +89,7 @@ public class stats_UI : MonoBehaviour
         pocionVida = 0;
         pocionLava = 0;
         monedas = 0;
+        armadura = null;
 
         //Seteamos valores, int -> string
         int f = protagonista.stats.Get(PersonajesStats.Fuerza);
@@ -102,6 +106,7 @@ public class stats_UI : MonoBehaviour
         SetCarisma(c);
         SetCA(ca);
         SetInventario();
+        SetArmadura();
     }
 
     void Update()
@@ -183,14 +188,16 @@ public class stats_UI : MonoBehaviour
         if (protagonista.Inventario.PocionVida == null) return false;
         //if (protagonista.Inventario.Daga == null) return false;
         if (protagonista.Inventario.PocionLava == null) return false;
-        if (protagonista.Inventario.Monedas == null) return false;
+        if (protagonista.Inventario.Monedas == 0) return false;
         //if (protagonista.Inventario.Espada == null) return false;
+        if (protagonista.Inventario.Armadura == null) return false;
 
         if (protagonista.Inventario.Llave.Count() != llaves) return false;
         if (protagonista.Inventario.LlaveMaestra.Count() != llaveMaestra) return false;
         if (protagonista.Inventario.PocionVida.Count() != pocionVida) return false;
         if (protagonista.Inventario.PocionLava.Count() != pocionLava) return false;
-        if (protagonista.Inventario.Monedas.Count() != monedas) return false;
+        if (protagonista.Inventario.Monedas != monedas) return false;
+        if (protagonista.Inventario.Armadura != armadura) return false;
         //if (protagonista.Inventario.Daga.Count() != daga) return false;
         //if (protagonista.Inventario.Espada.Count() != espada) return false;
 
@@ -241,7 +248,6 @@ public class stats_UI : MonoBehaviour
 
         notifCoroutine = StartCoroutine(OcultarNotificacion(2.5f));
     }
-
     IEnumerator OcultarNotificacion(float segundos)
     {
         yield return new WaitForSeconds(segundos);
@@ -259,7 +265,8 @@ public class stats_UI : MonoBehaviour
         if (protagonista.Inventario.LlaveMaestra == null) return;
         if (protagonista.Inventario.PocionVida == null) return;
         if (protagonista.Inventario.PocionLava == null) return;
-        if (protagonista.Inventario.Monedas == null) return;
+        if (protagonista.Inventario.Monedas == 0) return;
+        if (protagonista.Inventario.Armadura == null) return;
         //if (protagonista.Inventario.Daga == null) return;
         //if (protagonista.Inventario.Espada == null) return;
 
@@ -269,7 +276,8 @@ public class stats_UI : MonoBehaviour
         pocionLava = protagonista.Inventario.PocionLava.Count();
         //daga = protagonista.Inventario.Daga.Count();
         //espada = protagonista.Inventario.Espada.Count();
-        monedas = protagonista.Inventario.Monedas.Count;
+        monedas = protagonista.Inventario.Monedas;
+        armadura = protagonista.Inventario.Armadura;
 
         SetSlot(0, llaves > 0 ? iconoLlave : null, llaves);
         SetSlot(1, llaveMaestra > 0 ? iconoLlaveMaestra : null, llaveMaestra);
@@ -279,6 +287,12 @@ public class stats_UI : MonoBehaviour
         //SetSlot(5, pocionLava > 0 ? iconoPocionLava : null, pocionLava);
         SetSlot(3, pocionLava > 0 ? iconoPocionLava : null, pocionLava);
         SetSlot(4, monedas > 0 ? iconoMonedas : null, monedas);
+        if (armadura == "cuero")
+            SetSlot(5, armadura != null ? iconoArmaduraCuero : null, 1);
+        else if (armadura == "malla")
+            SetSlot(5, armadura != null ? iconoArmaduraMalla : null, 1);
+
+        SetArmadura();
     }
 
     void SetSlot(int index, Sprite icono, int cantidad)
@@ -312,5 +326,14 @@ public class stats_UI : MonoBehaviour
         slotBadge.style.display = cantidad > 0
             ? DisplayStyle.Flex
             : DisplayStyle.None;
+    }
+    void SetArmadura()
+    {
+        if (armadura == "cuero")
+            protagonista.stats.values[4].value = 14;
+        else if (armadura == "malla")
+            protagonista.stats.values[4].value = 16;
+        else
+            protagonista.stats.values[4].value = 12;
     }
 }

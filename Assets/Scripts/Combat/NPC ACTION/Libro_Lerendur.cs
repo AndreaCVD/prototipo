@@ -123,7 +123,8 @@ public class Libro_Lerendur : MonoBehaviour
     // Inteligencia - inmovilizar 2 turnos
     void Inmovilizar()
     {
-        Debug.Log("Inmovilizar de jefe");
+        commandManager.Lerendur_img("inmovil");
+
         player_inmovilizado = true;
         commandManager.PlayerInmovilizado(true, 2);
         commandManager.NextTurn();
@@ -131,7 +132,8 @@ public class Libro_Lerendur : MonoBehaviour
     // Inteligencia - Escudo +5CA (durante 1 turno)
     void Escudo()
     {
-        Debug.Log("Escudo de jefe");
+        commandManager.Lerendur_img("escudo");
+
         escudo = true;
         commandManager.Modificar_CA(5); //modificar salta turno solo
     }
@@ -143,10 +145,14 @@ public class Libro_Lerendur : MonoBehaviour
 
         if (ca_player == 2) //supera armadura
         {
+            commandManager.Lerendur_img("escarcha");
+
             commandManager.Inteligencia(8, 1);
         }
         else if (ca_player == 0) //CRITICO
         {
+            commandManager.Lerendur_img("escarcha");
+
             Debug.Log("Tirada critica del enemigo");
             commandManager.Inteligencia(8, 1);
         }
@@ -172,23 +178,31 @@ public class Libro_Lerendur : MonoBehaviour
             }
         }
         if (proyectiles != 0)
+        {
+            commandManager.Lerendur_img("proyectil");
             commandManager.Fuerza(4, proyectiles);
-        else 
+        }
+        else
             commandManager.NextTurn();
     }
     // Inteligencia - Ola Atronadora 2d8, el siguiente turno no lo usa
     void Ola_Atronadora()
     {
+
         ola_atronadora = true;
         Debug.Log("Ola Atronadora de jefe");
         int ca_player = commandManager.Armadura(0, 20);
 
         if (ca_player == 2) //supera armadura
         {
+            commandManager.Lerendur_img("ola");
+
             commandManager.Inteligencia(8, 2);
         }
         else if (ca_player == 0) //CRITICO
         {
+            commandManager.Lerendur_img("ola");
+
             Debug.Log("Tirada critica del enemigo");
             commandManager.Inteligencia(8, 4);
         }
@@ -207,10 +221,14 @@ public class Libro_Lerendur : MonoBehaviour
 
         if (ca_player == 2) //supera armadura
         {
+            commandManager.Lerendur_img("escarcha");
+
             commandManager.Inteligencia(6, 3);
         }
         else if (ca_player == 0) //CRITICO
         {
+            commandManager.Lerendur_img("escarcha");
+
             Debug.Log("Tirada critica del enemigo");
             commandManager.Inteligencia(6, 6);
         }

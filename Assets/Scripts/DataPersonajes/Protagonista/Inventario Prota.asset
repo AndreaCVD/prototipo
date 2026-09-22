@@ -15,16 +15,15 @@ MonoBehaviour:
   nombreObj: 
   Llave:
   - 
-  - 
   LlaveMaestra:
-  - 
   - 
   PocionVida:
   - 
-  - 
-  - 
+  - pocion_tienda
+  - pocion_tienda
   PocionLava:
   - 
-  Monedas:
-  - 
-  - 
+  - pocion_tienda
+  - pocion_tienda
+  Monedas: 100
+  Armadura: cuero

@@ -3,6 +3,8 @@ using Random = UnityEngine.Random;
 using System.Collections.Generic;
 using UnityEngine;
 using cherrydev;
+using Cursor = UnityEngine.Cursor;
+using UnityEngine.SceneManagement;
 
 public class Dialog : MonoBehaviour
 {
@@ -92,11 +94,35 @@ public class Dialog : MonoBehaviour
         _dialogBehaviour.BindExternalFunction("RecuperarVida", vidaParcial);
         _dialogBehaviour.BindExternalFunction("FullVida", fullVida);
         _dialogBehaviour.BindExternalFunction("randLoot", lootRandom);
+
+        //Libro Jefe Final
+        _dialogBehaviour.BindExternalFunction("aceptar", aceptar_libro);
+        _dialogBehaviour.BindExternalFunction("denegar", denegar_libro);
+
+        //mouse
+        _dialogBehaviour.BindExternalFunction("Mouse", Mouse);
+        _dialogBehaviour.BindExternalFunction("no_Mouse", No_Mouse);
+
+        _dialogBehaviour.BindExternalFunction("tienda", Tienda);
+        _dialogBehaviour.BindExternalFunction("moneda", moneda);
+
         //Le enviamos el dialogo que tiene que hacer --> ESTE SIEMPRE ÚLTIMO
         _dialogBehaviour.StartDialog(dialogo);
 
     }
-
+    public void Tienda()
+    {
+        SceneManager.LoadScene("Tienda_Yusseif", LoadSceneMode.Additive);
+    }
+    //mouse
+    public void Mouse()
+    {
+        Cursor.lockState = CursorLockMode.None;
+    }
+    public void No_Mouse()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+    }
     //Dialogo
     public void Dialogo()
     {
@@ -275,7 +301,9 @@ public class Dialog : MonoBehaviour
             //    prota.Inventario.Espada.Add("Espada_Loot");
             //    break;
             case 1:
-                prota.Inventario.Monedas.Add("Monedas_Loot");
+                //prota.Inventario.Monedas.Add("Monedas_Loot");
+                prota.Inventario.Monedas += 10;
+
                 break;
             case 2:
                 prota.Inventario.PocionVida.Add("PocionVida_Loot");
@@ -283,6 +311,32 @@ public class Dialog : MonoBehaviour
             default:
                 break;
         }
+    }
+
+    //recopmensa
+    public void moneda()
+    {
+        prota.Inventario.Monedas += 10;
+    }
+    // Libro
+    // ACCEPTAR CONVENCER
+    public void aceptar_libro()
+    {
+        //sacar el Jefe_Action de obj
+        Jefe_Action libro = obj.GetComponent<Jefe_Action>();
+        if (libro != null) //activar funcion y luego hacer la accion que toque
+            libro.Aceptar();
+        else
+        {
+            preload.Carlos_Death();
+            load.SalirCombate();
+        }
+    }
+    // DENEGAR CONVENCER
+    public void denegar_libro()
+    {
+        Jefe_Action libro = obj.GetComponent<Jefe_Action>();
+        libro.Denegar();
     }
 }
 

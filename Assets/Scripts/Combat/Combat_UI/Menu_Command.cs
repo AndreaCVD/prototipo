@@ -23,6 +23,7 @@ public class Menu_Command : MonoBehaviour
     private VisualElement root;
     private VisualElement playerHpFill;
     private VisualElement enemyHpFill;
+    //private VisualElement dialog;
 
     private void OnEnable()
     {
@@ -31,6 +32,7 @@ public class Menu_Command : MonoBehaviour
 
         playerHpFill = root.Q<VisualElement>("player-hp-fill");
         enemyHpFill = root.Q<VisualElement>("enemy-hp-fill");
+        //dialog = root.Q<VisualElement>("play-area");
 
     }
 
@@ -47,6 +49,8 @@ public class Menu_Command : MonoBehaviour
         playerData = info_prota.ReturnPlayer();
         playerMaxHp = playerData.stats.Get(PersonajesStats.Max_Vida);
         playerActualHp = playerData.stats.Get(PersonajesStats.Constitucion);
+
+        //dialog.style.visibility = Visibility.Hidden;
 
         // Inicializar barras a la vida correspondiente
         SetPlayerHp(playerActualHp);

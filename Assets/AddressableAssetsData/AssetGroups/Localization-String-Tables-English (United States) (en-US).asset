@@ -33,6 +33,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-en-US
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2260fa42d2c64e849b02711fb6089992
+    m_Address: Tienda Yusseif_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 33a2dab61baffad4ab805517a95cfdfa
     m_Address: Viejo Playa_en-US
     m_ReadOnly: 1
@@ -47,6 +53,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 43cf4a5dac5c02f4994885954219a488
     m_Address: DemoNodeGraph_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 49e99f277df974445813fb29da3bf3d4
+    m_Address: Libro Combate_en-US
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en-US

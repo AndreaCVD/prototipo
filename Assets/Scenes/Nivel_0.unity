@@ -746,6 +746,8 @@ MonoBehaviour:
   iconoEspada: {fileID: 21300000, guid: e9a57d8d864fc2443b5bdcfed074ea39, type: 3}
   iconoPocionLava: {fileID: 21300000, guid: 966a370916b06b940b0edfc209421ad2, type: 3}
   iconoMonedas: {fileID: 21300000, guid: 9cea3f8dfcbfc2c469fe5dd676dbfba7, type: 3}
+  iconoArmaduraCuero: {fileID: 21300000, guid: 6c440f56b0d50db408d676f6addf69de, type: 3}
+  iconoArmaduraMalla: {fileID: 21300000, guid: b66d992fe8a19b5428aa632308597d12, type: 3}
 --- !u!114 &495269048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7729,6 +7731,10 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: -0.12155104
       objectReference: {fileID: 0}
+    - target: {fileID: 5397258268782871841, guid: e1e382eeb87f205439904cd395ba77a9, type: 3}
+      propertyPath: m_Constraints
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 5542090142335494573, guid: e1e382eeb87f205439904cd395ba77a9, type: 3}
       propertyPath: lista
       value: 
@@ -7740,6 +7746,18 @@ PrefabInstance:
     - target: {fileID: 5917766070851696415, guid: e1e382eeb87f205439904cd395ba77a9, type: 3}
       propertyPath: m_ApplyRootMotion
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6286827285162658893, guid: e1e382eeb87f205439904cd395ba77a9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -241
+      objectReference: {fileID: 0}
+    - target: {fileID: 6286827285162658893, guid: e1e382eeb87f205439904cd395ba77a9, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 258
+      objectReference: {fileID: 0}
+    - target: {fileID: 6286827285162658893, guid: e1e382eeb87f205439904cd395ba77a9, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -134
       objectReference: {fileID: 0}
     - target: {fileID: 6376016087389561806, guid: e1e382eeb87f205439904cd395ba77a9, type: 3}
       propertyPath: m_AABB.m_Center.x
@@ -9328,6 +9346,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4002518852735060712, guid: e0c92b6b6745571419ba93a8e5313c6f, type: 3}
+      propertyPath: dialogo_obj
+      value: 
+      objectReference: {fileID: 11400000, guid: e95c0a9de44184d42bf48fa3f566a771, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

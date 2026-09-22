@@ -22,6 +22,7 @@ public class Anim_toCombat : StateMachineBehaviour
     //}
     public void OnStateExit(Animator animator)
     {
+        //animator.SetBool("inCombat", false);
         GameObject thisObj = animator.gameObject;
         Interactable interact = thisObj.GetComponent<Interactable>();
         if (interact != null)

@@ -20,8 +20,9 @@ public class CharacterInteract : MonoBehaviour
     public bool text_canvas;
     public bool canvas_visible;  // ver si presiona para interaccion
     public  bool isEnemy;  // ver si presiona para interaccion
-    public  bool death; 
-    
+    public  bool death;
+    public bool inCombat;
+
     void Start()
     {
         opacidad(0f);
@@ -29,16 +30,19 @@ public class CharacterInteract : MonoBehaviour
         text_canvas = false;
         canvas_visible = false;
         death = false;
-
-        CanvasGroup hijo_canvas = transform.Find("Canvas Puzzle").GetComponent<CanvasGroup>();
-        grup = hijo_canvas;
-        TMP_Text hijo_texto = GetComponentInChildren< TMP_Text>();
-        text_interaccion = hijo_texto;
+        inCombat = false;
+        //CanvasGroup hijo_canvas = transform.Find("Canvas Puzzle").GetComponent<CanvasGroup>();
+        //grup = hijo_canvas;
+        //TMP_Text hijo_texto = GetComponentInChildren< TMP_Text>();
+        //text_interaccion = hijo_texto;
     }
     void Update()
     {
         //De dnd sale y adonde va
         ray = new Ray(pivot_personaje.transform.position, pivot_personaje.transform.forward);
+
+        //canvas_visible = Input.GetKeyDown(KeyCode.P);
+        canvas_visible = Input.GetKeyDown((KeyCode.Mouse0));
 
         Invoke(nameof(Interact), 1.0f);
     }
@@ -56,28 +60,23 @@ public class CharacterInteract : MonoBehaviour
             {
                 if (!text_canvas)
                 {
-                    text_canvas=true;
+                    text_canvas = true;
                     textCanva(hitInfo.transform.gameObject);
                 }
                 //clicar boton para interaccionar
                 //Interaccion
                 
-                if (isEnemy)
+                if (isEnemy && !inCombat) //se pone en Texto canva
                 {
-                    //Cursor.visible = true;
-
-                    //Bool true asi no se sobreponen otras interacciones
-                    //interaction = true;
-
-                    //Devuelve Obj que tiene Interactable
+                    inCombat = true;
                     interactable = hitInfo.transform.gameObject.GetComponent<Interactable>();
 
                     interactable.DetectObj(hitInfo.transform.gameObject);
                     
                 }
-                else
+                else if (!isEnemy && grup.alpha < 1f)
                 {
-                    canvas_visible = Input.GetKeyDown(KeyCode.P);
+
                     opacidad(1f);
                 }
                    
@@ -96,8 +95,6 @@ public class CharacterInteract : MonoBehaviour
                 }  
 
             }
-        
-                //Debug.Log("No tiene Ineteractable");
             
         }
         else  //Cuando el Raycast no detecte nada
@@ -107,13 +104,18 @@ public class CharacterInteract : MonoBehaviour
 
             if (Cursor.visible)
                 Cursor.visible = false;
-
-            opacidad(0f);
+            
+            if (grup.alpha > 0f)
+                opacidad(0f);
+            
             if (interaction)
                 interaction = false; //Volvemos a poner bool falso
 
             if (isEnemy)
                 isEnemy = false;
+
+            if (inCombat)
+                inCombat = false;
         }
             //foreach (Collider c in colliders)
             //{
@@ -140,19 +142,19 @@ public class CharacterInteract : MonoBehaviour
                 isEnemy = true;
                 break;
             case "Interact_Scene":
-                text_interaccion.text = "P - Inspeccionar";
+                text_interaccion.text = "Inspeccionar";
                 break;
             case "NPC":
-                text_interaccion.text = "P - para hablar";
+                text_interaccion.text = "Hablar";
                 break;
             case "Cofre":
-                text_interaccion.text = "P - Abrir Cofre ";
+                text_interaccion.text = "Abrir Cofre";
                 break;
             case "Puerta":
-                text_interaccion.text = "P - Abrir Puerta";
+                text_interaccion.text = "Abrir Puerta";
                 break;
             case "PuertaMaestra":
-                text_interaccion.text = "P - Abrir Puerta Maestra";
+                text_interaccion.text = "Abrir Puerta Maestra";
                 break;
             default:
                 //Debug.Log("No hay nada");

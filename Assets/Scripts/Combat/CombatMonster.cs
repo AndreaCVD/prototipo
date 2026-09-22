@@ -227,6 +227,7 @@ public class CombatMonster : MonoBehaviour
                 //Restaurar constitucino ficha enemigo
                 player.stats.values[3].value = player.stats.values[5].value;
 
+                player.Inventario.Monedas += 5;
                 restaurarStat(10); //Restaurar todos los stats prota si han sido cambiados
                 
                 preload.DestroyEnemy(); //anim muerte enemigo
@@ -285,6 +286,7 @@ public class CombatMonster : MonoBehaviour
     }
     public void SalirCombate()
     {
+        Debug.Log("????????????????????");
         player.stats.values[4].value =12;
         load.SalirCombate();
 
@@ -325,7 +327,7 @@ public class CombatMonster : MonoBehaviour
                 break;
         }
     }
-    public string name()
+    public string name_pers()
     {
         return player.namePers;
     }
@@ -358,6 +360,11 @@ public class CombatMonster : MonoBehaviour
     }
     public void Cambiar_imgEstado(int indice)
     {
+        //guardamos la actual
+        Sprite aux = imagenPers.sprite;
+        //despues de X tiempo volver a la anterior
+        StartCoroutine(Img_Anterior(aux));
+
         imagenPers.sprite = player.Estados_combate[indice];
     }
     public void Cambiar_imgEnamorado(int indice)
@@ -368,20 +375,21 @@ public class CombatMonster : MonoBehaviour
     {
         //guardamos la actual
         Sprite aux = imagenPers.sprite;
-        // cambiar a aherido
-        imagenPers.sprite = player.herido;
         // despues de X tiempo volver a la anterior
         StartCoroutine(Img_Anterior(aux));
+        
+        // cambiar a aherido
+        imagenPers.sprite = player.herido;
     }
     public void Cambiar_Idle()
     {
         imagenPers.sprite = player.idle;
     }
+
     IEnumerator Img_Anterior(Sprite img)
     {
         yield return new WaitForSeconds(2);
         imagenPers.sprite = img;
-
     }
 
 }

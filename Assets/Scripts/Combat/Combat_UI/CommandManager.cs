@@ -418,7 +418,7 @@ public class CommandManager : MonoBehaviour
                 turnRoundManager.current.Cambiar_imgAtaque(1);
                 break;
             case "inmov":
-                turnRoundManager.target.Cambiar_imgEstado(0); //enemigo inmovil
+                turnRoundManager.target.imgEstado_estatica(0); //enemigo inmovil
                 turnRoundManager.current.Cambiar_imgAtaque(2);
                 break;
             case "escudo":
@@ -498,12 +498,7 @@ public class CommandManager : MonoBehaviour
             {
                 Debug.Log("Ya no esta inmovilizado");
 
-                if (turnRoundManager.target.name_pers() == "Carlos")//si es carlos cambiamos la del player actual
-                {    
-                    turnRoundManager.current.Cambiar_Idle();
-                }
-                else
-                    turnRoundManager.target.Cambiar_Idle();
+                turnRoundManager.target.Cambiar_Idle();
 
                 enemigo_inmovilizado = false;
                 turnos_inmovil = 1;

@@ -89,6 +89,10 @@ public class Slime_Action : MonoBehaviour
             Debug.Log("Tirada fatidica del enemigo");
             commandManager.AutoHerirse(4, 1);
         }
+        else // no supera la armadura
+        {
+            commandManager.NextTurn();
+        }
     }
     // Inteligencia - Atrapar, inmovilizar 1 turno
     void Atrapar()
@@ -111,7 +115,10 @@ public class Slime_Action : MonoBehaviour
             Debug.Log("Tirada critica del enemigo");
             commandManager.Inteligencia(4, 2);
         }
-        //Debug.Log("continua la accion?");
+        else // no supera la armadura
+        {
+            commandManager.NextTurn();
+        }
     }
 
     // Carisma - Movimientos Hipnotizantes 2d4+car
@@ -139,6 +146,10 @@ public class Slime_Action : MonoBehaviour
 
             Debug.Log("Tirada fatidica del enemigo");
             commandManager.AutoHerirse(4, 1);
+        }
+        else // no supera la armadura
+        {
+            commandManager.NextTurn();
         }
     }
 }

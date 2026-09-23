@@ -26,7 +26,7 @@ public class Mimic_Action : MonoBehaviour
         // Vomito = 30%
         // Lenguetazo = 20%
         // Atrapar = 10%    
-        switch (ataque)
+        switch (Random.Range(7, 10))
         {
             case 0:
                 Mordisco(); 

@@ -300,7 +300,7 @@ public class CommandManager : MonoBehaviour
                 turnRoundManager.current.Cambiar_imgAtaque(0);
                 break;
             case "atrapar":
-                turnRoundManager.target.Cambiar_imgEstado(1); //prota vacio
+                turnRoundManager.target.Cambiar_imgEstado(2); //prota vacio
                 turnRoundManager.current.Cambiar_imgAtaque(1);
                 break;
             case "lenguetazo":
@@ -321,7 +321,7 @@ public class CommandManager : MonoBehaviour
         switch (ataque)
         {
             case "atrapar":
-                turnRoundManager.target.Cambiar_imgEstado(1); //prota vacio
+                turnRoundManager.target.Cambiar_imgEstado(2); //prota vacio
                 turnRoundManager.current.Cambiar_imgAtaque(0);
                 break;
             case "escupir":
@@ -363,7 +363,7 @@ public class CommandManager : MonoBehaviour
                 turnRoundManager.current.Cambiar_imgAtaque(0);
                 break;
             case "corte":
-                turnRoundManager.target.Cambiar_imgEstado(1); //prota vacio
+                turnRoundManager.target.Cambiar_imgHerido(); //prota herido
                 turnRoundManager.current.Cambiar_imgAtaque(1);
                 break;
             case "atrapar":
@@ -393,7 +393,7 @@ public class CommandManager : MonoBehaviour
                 turnRoundManager.current.Cambiar_imgAtaque(0);
                 break;
             case "inmovil":
-                turnRoundManager.target.Cambiar_imgEstado(1); //prota vacio
+                turnRoundManager.target.Cambiar_imgEstado(2); //prota vacio
                 turnRoundManager.current.Cambiar_imgAtaque(1);
                 break;
             case "esfera":
@@ -440,6 +440,21 @@ public class CommandManager : MonoBehaviour
             case "intimidar":
                 turnRoundManager.current.Cambiar_imgAtaque(3);
                 break;
+            case "love_1":
+                turnRoundManager.current.Cambiar_imgAtaque(4);
+                turnRoundManager.target.Cambiar_imgEnamorado(0); 
+                break;
+            case "love_2":
+                turnRoundManager.current.Cambiar_imgAtaque(4);
+                turnRoundManager.target.Cambiar_imgEnamorado(1); 
+                break;
+            case "love_3":
+                turnRoundManager.current.Cambiar_imgAtaque(4);
+                turnRoundManager.target.Cambiar_imgEnamorado(2); 
+                break;
+            case "love_no":
+                turnRoundManager.current.Cambiar_imgAtaque(4);
+                break;
             default:
                 Debug.Log("error lectura img caballero");
                 break;
@@ -469,15 +484,6 @@ public class CommandManager : MonoBehaviour
                 case "asustado": 
                     turnRoundManager.target.Cambiar_imgEstado(2);
                     break;
-                case "love_1": 
-                    turnRoundManager.target.Cambiar_imgEnamorado(0);
-                    break;
-                case "love_2": 
-                    turnRoundManager.target.Cambiar_imgEnamorado(1);
-                    break;
-                case "love_3": 
-                    turnRoundManager.target.Cambiar_imgEnamorado(2);
-                    break;
                 default:
                     Debug.Log("por default");
                     turnRoundManager.current.Cambiar_Idle();
@@ -504,9 +510,9 @@ public class CommandManager : MonoBehaviour
             if (turnos_inmovil == 0)
             {
                 Debug.Log("Ya no esta inmovilizado");
-                Debug.Log(turnRoundManager.target.name_pers());
+
                 if (turnRoundManager.target.name_pers() == "Carlos")//si es carlos cambiamos la del player actual
-                {    //Debug.Log("a");
+                {    
                     turnRoundManager.current.Cambiar_Idle();
                 }
                 else
@@ -517,6 +523,7 @@ public class CommandManager : MonoBehaviour
 
                 turnRoundManager.ChangeTurn();
                 turnRoundManager.EnemyTurn();
+                
             }
         }
         else if (enemigo_inLove)
@@ -553,12 +560,22 @@ public class CommandManager : MonoBehaviour
                 else
                     turnRoundManager.current.Cambiar_Idle();
 
+                Debug.Log(turnRoundManager.target.name_pers());
                 Debug.Log("Ya no esta inmovilizado");
                 player_inmovilizado = false;
                 turnos_inmovil = 1;
             }
             turnRoundManager.EnemyTurn();
         }
+        //else if (!player_inmovilizado)
+        //{
+        //    if (turnRoundManager.target.name_pers() == "Carlos")//si es carlos cambiamos la del player actual
+        //        turnRoundManager.target.Cambiar_Idle();
+        //    else
+        //        turnRoundManager.current.Cambiar_Idle();
+        //    turnRoundManager.ChangeTurn();
+        //    turnRoundManager.EnemyTurn();
+        //}
         //else if (player_escudo)
         //{
         //    Change_img("idle_player");
@@ -573,6 +590,8 @@ public class CommandManager : MonoBehaviour
             turnRoundManager.EnemyTurn();
         }
     }
+
+    // --- COMPROVACIONES ---
 
     private void ActualizarHP()
     {

@@ -50,7 +50,8 @@ public class LoadScene : MonoBehaviour
         {
             protagonista = GameObject.Find("personaje");
         }
-        if (escenaState == null)
+        Scene escenaActual = SceneManager.GetActiveScene();
+        if (escenaState == null && escenaActual.name != "Menu_SubirStat")
         {
             obj_input = GameObject.Find("personaje");
             escenaState = obj_input.GetComponent<InputHandler>();

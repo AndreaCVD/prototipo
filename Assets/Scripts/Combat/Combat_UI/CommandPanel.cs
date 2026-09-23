@@ -590,6 +590,8 @@ public class CommandPanel : MonoBehaviour
             info_result.style.visibility = Visibility.Visible;
             info_result.text = "CA no superada";
 
+            commandManager.Carlos_img("love_no");
+
             commandManager.Change_img("enfadado");
             commandManager.NextTurn();
             // Fallas enamoramiento == se enfada
@@ -601,11 +603,13 @@ public class CommandPanel : MonoBehaviour
             //si se usa 3 veces --> enemigo estado Enamorado
             enamorado++;
             if (enamorado == 1)
-                commandManager.Change_img("love_1");
+                commandManager.Carlos_img("love_1");
             if (enamorado == 2)
-                commandManager.Change_img("love_2");
+                commandManager.Carlos_img("love_2");
             if (enamorado == 3 && !inLove)
             {
+                commandManager.Carlos_img("love_3");
+
                 info_result.text = "Enemigo enamorado no te ataca";
                 //enamorado por 30 segundos
                 btnLOVE.SetEnabled(false);

@@ -30,17 +30,17 @@ MonoBehaviour:
       stats: 5
   Inventario: {fileID: 11400000, guid: ef858081fb817bd4697c8d4406be6ad1, type: 2}
   modelPrefab: {fileID: 446173625170946264, guid: 31817a986efa72f418ed20de88438f44, type: 3}
-  idle: {fileID: 21300000, guid: 6c4459d802e173b489768a0a83bd9fc7, type: 3}
-  herido: {fileID: 21300000, guid: 0c60120878b4fd84994446fee9e7be27, type: 3}
+  idle: {fileID: 21300000, guid: 34a1c42074f336b44b0e5431653d56f9, type: 3}
+  herido: {fileID: 21300000, guid: 9c052ed87ad318e4989d25355e88dd8b, type: 3}
   Ataques:
-  - {fileID: 21300000, guid: cfa39aa2c521ce544b9ee7c5fe39b507, type: 3}
-  - {fileID: 21300000, guid: 52f7156c565fcf14caf8422fb22489f5, type: 3}
-  - {fileID: 21300000, guid: f7429adf87e8a4d44882cdb6ff9186fa, type: 3}
-  - {fileID: 21300000, guid: 480d53cf39ad67948b56b5c2eba053b0, type: 3}
-  - {fileID: 21300000, guid: a8c1f089b1ba97c41833b7f66aa3a0fb, type: 3}
+  - {fileID: 21300000, guid: f1be8b700d828b840bffc2eb9a462cd6, type: 3}
+  - {fileID: 21300000, guid: 7f7981d9b3d02ea4bb6c097ad09c89cf, type: 3}
+  - {fileID: 21300000, guid: 3615567cdd54b964891bdbace3f09249, type: 3}
+  - {fileID: 21300000, guid: a1218fc1569b3c040bc0e79863b6d38a, type: 3}
+  - {fileID: 21300000, guid: 934d50626d98ee540b66fb7445822c60, type: 3}
   Estados_combate:
-  - {fileID: 21300000, guid: 0ef5845482692604888dbf25489ae17d, type: 3}
-  - {fileID: 21300000, guid: faeece3f9d310324fabaeab6b4443dd6, type: 3}
+  - {fileID: 21300000, guid: 8e797ec8a05f06d4faea9123ff6c39a1, type: 3}
+  - {fileID: 21300000, guid: ab42eb17a69ba964687b20e3c08d3d84, type: 3}
   - {fileID: 21300000, guid: 29347c332b1772e4d95ec60ce7c14edf, type: 3}
   - {fileID: 21300000, guid: ce089b0e2f8a94d4c8f5276f5acb136c, type: 3}
   Estados_enamorado:

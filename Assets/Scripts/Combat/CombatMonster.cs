@@ -227,7 +227,7 @@ public class CombatMonster : MonoBehaviour
                 //Restaurar constitucino ficha enemigo
                 player.stats.values[3].value = player.stats.values[5].value;
 
-                player.Inventario.Monedas += 5;
+                //player.Inventario.Monedas += 5;
                 restaurarStat(10); //Restaurar todos los stats prota si han sido cambiados
                 
                 preload.DestroyEnemy(); //anim muerte enemigo
@@ -350,6 +350,11 @@ public class CombatMonster : MonoBehaviour
     {
         //guardamos la actual
         Sprite aux = imagenPers.sprite;
+        if (aux.name.Contains("inmov"))
+        {
+            //si la anterior era inmovil --> idle
+            aux = player.idle;
+        }
         //cambiamos para el ataque
         imagenPers.sprite = player.Ataques[indice];
         
@@ -364,17 +369,22 @@ public class CombatMonster : MonoBehaviour
     {
         //guardamos la actual
         Sprite aux = imagenPers.sprite;
+        if (aux.name.Contains("inmov"))
+        {
+            //si la anterior era inmovil --> idle
+            aux = player.idle;
+        }
         imagenPers.sprite = player.Estados_combate[indice];
         //despues de X tiempo volver a la anterior
         StartCoroutine(Img_Anterior(aux));
-        Debug.Log(aux);
 
-        Debug.Log(imagenPers.sprite);
 
     }
     public void imgEstado_estatica(int indice) //img esado sin cambio automatico
     {
         imagenPers.sprite = player.Estados_combate[indice];
+        Debug.Log(imagenPers.sprite);
+
     }
     public void Cambiar_imgEnamorado(int indice)
     {
@@ -384,6 +394,11 @@ public class CombatMonster : MonoBehaviour
     {
         //guardamos la actual
         Sprite aux = imagenPers.sprite;
+        if (aux.name.Contains("inmov"))
+        {
+            //si la anterior era inmovil --> idle
+            aux = player.idle;
+        }
         // despues de X tiempo volver a la anterior
         StartCoroutine(Img_Anterior(aux));
         
@@ -392,6 +407,7 @@ public class CombatMonster : MonoBehaviour
     }
     public void Cambiar_Idle()
     {
+
         imagenPers.sprite = player.idle;
     }
 

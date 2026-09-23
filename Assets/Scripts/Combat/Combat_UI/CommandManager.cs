@@ -35,7 +35,6 @@ public class CommandManager : MonoBehaviour
         if (enemigo_inLove == true)
             Change_img("enamorado_3");
         //com que sempre comença prota Taget sempre es el enemig
-        name_opponent =  turnRoundManager.target.name_pers();
     }
     //Items
     public void PocionVida()
@@ -242,6 +241,11 @@ public class CommandManager : MonoBehaviour
     {
         enemigo_inmovilizado = inmov;
         turnos_inmovil = turnos;
+
+        if (!inmov)
+        {
+            turnRoundManager.target.Cambiar_Idle();
+        }
     }
     public void PlayerInmovilizado(bool inmov, int turnos)
     {
@@ -501,10 +505,8 @@ public class CommandManager : MonoBehaviour
             {
                 Debug.Log("Ya no esta inmovilizado");
 
-                turnRoundManager.target.Cambiar_Idle();
-
-                enemigo_inmovilizado = false;
-                turnos_inmovil = 1;
+                EnemigoInmovilizado(false, 1);
+                Debug.Log(turnRoundManager.target);
 
                 turnRoundManager.ChangeTurn();
                 turnRoundManager.EnemyTurn();  
@@ -580,6 +582,8 @@ public class CommandManager : MonoBehaviour
     // --- COMPROVACIONES ---
     public string name_Target()
     {
+        name_opponent = turnRoundManager.target.name_pers();
+
         return name_opponent;
     }
     private void ActualizarHP()

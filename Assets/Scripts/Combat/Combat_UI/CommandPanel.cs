@@ -74,12 +74,8 @@ public class CommandPanel : MonoBehaviour
         pocionLava = 0;
         monedas = 0;
 
-        string aux = commandManager.name_Target();
-        if (aux == "Jefe_Lerendur" || aux == "Jefe_Libro")
-            isJefe = true;
-        else
-            isJefe = false;
-        Debug.Log(isJefe);
+
+
         if (load_script == null)
         {
             load_script = GameObject.Find("--SceneManagement--");
@@ -527,6 +523,7 @@ public class CommandPanel : MonoBehaviour
     }
     public void Inmovilizar()
     {
+
         commandManager.Carlos_img("inmov");
 
         commandManager.EnemigoInmovilizado(true, 1);
@@ -581,34 +578,39 @@ public class CommandPanel : MonoBehaviour
     }
     public void Enamorar()
     {
-
+        Debug.Log(isJefe);
         if (armadura == " ") //No ha hecho nada aun
         {
+            string aux = commandManager.name_Target();
+            if (aux == "Jefe_Lerendur" || aux == "Jefe_Libro")
+                isJefe = true;
+            else
+                isJefe = false;
+
             commandManager.model_dados(12);
 
             nom_ataque = "enamorado";
             caris_options.style.display = DisplayStyle.None;
             Menu_TiradaArmadura();
         }
-        else if (isJefe)
+        else if (armadura == "no")
         {
-            if (armadura == "no")
-            {
-                commandManager.model_dados(20);
+            commandManager.model_dados(20);
 
-                Resetear_Valores();
-                Back();
+            Resetear_Valores();
+            Back();
 
-                info_result.style.visibility = Visibility.Visible;
-                info_result.text = "CA no superada";
+            info_result.style.visibility = Visibility.Visible;
+            info_result.text = "CA no superada";
 
-                commandManager.Carlos_img("love_no");
+            commandManager.Carlos_img("love_no");
 
-                commandManager.Change_img("enfadado");
-                commandManager.NextTurn();
-                // Fallas enamoramiento == se enfada
-            }
-            else //Armadura Si
+            commandManager.Change_img("enfadado");
+            commandManager.NextTurn();
+        }
+        else //Armadura Si
+        {
+            if (!isJefe)
             {
                 commandManager.model_dados(20);
 
@@ -639,14 +641,14 @@ public class CommandPanel : MonoBehaviour
                 Back();
                 commandManager.NextTurn();
             }
-        }
-        else
-        {
-            info_result.style.visibility = Visibility.Visible;
-            info_result.text = "Parece ser immune a tus encantos...";
-            Resetear_Valores();
-            Back();
-            commandManager.NextTurn();
+            else
+            {
+                info_result.style.visibility = Visibility.Visible;
+                info_result.text = "Parece ser immune a tus encantos...";
+                Resetear_Valores();
+                Back();
+                commandManager.NextTurn();
+            }
         }
     }
     public void Intimidar()

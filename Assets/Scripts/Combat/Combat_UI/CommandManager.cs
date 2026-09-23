@@ -15,7 +15,7 @@ public class CommandManager : MonoBehaviour
     public bool player_inmovilizado = false;
     public bool player_escudo = false;
     private int turnos_inmovil = 1;
-
+    private string name_opponent;
     //[SerializeField] CombatMonster opponent;
 
     //current = al que le toque el turno
@@ -34,8 +34,8 @@ public class CommandManager : MonoBehaviour
         enemigo_inLove = turnRoundManager.target.InLove();
         if (enemigo_inLove == true)
             Change_img("enamorado_3");
-
-
+        //com que sempre comença prota Taget sempre es el enemig
+        name_opponent =  turnRoundManager.target.name_pers();
     }
     //Items
     public void PocionVida()
@@ -139,7 +139,7 @@ public class CommandManager : MonoBehaviour
         Debug.Log("Se ha modificado la CA");
         turnRoundManager.current.modificar_CA(valor);
         ActualizarHP();
-
+        //no  saltar el turn, a vegadoes nomes volem modificar sense fer res mes
         //NextTurn();
     }
     // --- MOVIMIENTOS ENEMIGO ---
@@ -247,8 +247,6 @@ public class CommandManager : MonoBehaviour
     {
         player_inmovilizado = inmov;
         turnos_inmovil = turnos;
-        //if (player_inmovilizado)
-        //    Change_img("inmovil_prota");
     }
     public bool Return_Inmovil(string name)
     {
@@ -376,6 +374,9 @@ public class CommandManager : MonoBehaviour
     {
         switch (ataque)
         {
+            case "idle":
+                turnRoundManager.current.Cambiar_Idle();
+                break;
             case "escudo":
                 turnRoundManager.current.Cambiar_imgAtaque(0);
                 break;
@@ -577,7 +578,10 @@ public class CommandManager : MonoBehaviour
     }
 
     // --- COMPROVACIONES ---
-
+    public string name_Target()
+    {
+        return name_opponent;
+    }
     private void ActualizarHP()
     {
         int playerHp = combatDebug.ReturnPlayer().stats.Get(PersonajesStats.Constitucion);

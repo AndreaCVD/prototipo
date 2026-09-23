@@ -53,7 +53,8 @@ public class CommandPanel : MonoBehaviour
 
     public string armadura, nom_ataque;
     private int stat, veces_tirada, MAX_vida;
-    
+
+    private bool isJefe;
     // Variables activas de combate
     private bool escudo, inLove;
     public int enamorado;
@@ -73,11 +74,16 @@ public class CommandPanel : MonoBehaviour
         pocionLava = 0;
         monedas = 0;
 
+        string aux = commandManager.name_Target();
+        if (aux == "Jefe_Lerendur" || aux == "Jefe_Libro")
+            isJefe = true;
+        else
+            isJefe = false;
+        Debug.Log(isJefe);
         if (load_script == null)
         {
             load_script = GameObject.Find("--SceneManagement--");
             loadScene = load_script.GetComponent<LoadScene>();
-
         }
 
         var uIDocument = GetComponent<UIDocument>();
@@ -575,6 +581,7 @@ public class CommandPanel : MonoBehaviour
     }
     public void Enamorar()
     {
+
         if (armadura == " ") //No ha hecho nada aun
         {
             commandManager.model_dados(12);
@@ -583,48 +590,60 @@ public class CommandPanel : MonoBehaviour
             caris_options.style.display = DisplayStyle.None;
             Menu_TiradaArmadura();
         }
-        else if (armadura == "no")
+        else if (isJefe)
         {
-            commandManager.model_dados(20);
-
-            Resetear_Valores();
-            Back();
-
-            info_result.style.visibility = Visibility.Visible;
-            info_result.text = "CA no superada";
-
-            commandManager.Carlos_img("love_no");
-
-            commandManager.Change_img("enfadado");
-            commandManager.NextTurn();
-            // Fallas enamoramiento == se enfada
-        }
-        else //Armadura Si
-        {
-            commandManager.model_dados(20);
-
-            //si se usa 3 veces --> enemigo estado Enamorado
-            enamorado++;
-            if (enamorado == 1)
-                commandManager.Carlos_img("love_1");
-            if (enamorado == 2)
-                commandManager.Carlos_img("love_2");
-            if (enamorado == 3 && !inLove)
+            if (armadura == "no")
             {
-                commandManager.Carlos_img("love_3");
+                commandManager.model_dados(20);
 
-                info_result.text = "Enemigo enamorado no te ataca";
-                //enamorado por 30 segundos
-                btnLOVE.SetEnabled(false);
-                StartCoroutine(Enamorado(30));
+                Resetear_Valores();
+                Back();
 
-                //cambio img en esta funcion
-                commandManager.enemigoEnamorado();
+                info_result.style.visibility = Visibility.Visible;
+                info_result.text = "CA no superada";
+
+                commandManager.Carlos_img("love_no");
+
+                commandManager.Change_img("enfadado");
+                commandManager.NextTurn();
+                // Fallas enamoramiento == se enfada
             }
+            else //Armadura Si
+            {
+                commandManager.model_dados(20);
 
+                //si se usa 3 veces --> enemigo estado Enamorado
+                enamorado++;
+                if (enamorado == 1)
+                    commandManager.Carlos_img("love_1");
+                else if (enamorado == 2)
+                    commandManager.Carlos_img("love_2");
+                else if (enamorado == 3 && !inLove)
+                {
+                    commandManager.Carlos_img("love_3");
+
+                    info_result.style.visibility = Visibility.Visible;
+                    info_result.text = "Enemigo enamorado no te ataca";
+                    //enamorado por 30 segundos
+                    btnLOVE.SetEnabled(false);
+                    StartCoroutine(Enamorado(30));
+
+                    //cambio img en esta funcion
+                    commandManager.enemigoEnamorado();
+                }
+
+                info_result.style.visibility = Visibility.Visible;
+                info_result.text = "Eres un rompecorazones~";
+
+                Resetear_Valores();
+                Back();
+                commandManager.NextTurn();
+            }
+        }
+        else
+        {
             info_result.style.visibility = Visibility.Visible;
-            info_result.text = "Eres un rompecorazones~";
-
+            info_result.text = "Parece ser immune a tus encantos...";
             Resetear_Valores();
             Back();
             commandManager.NextTurn();

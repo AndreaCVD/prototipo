@@ -27,7 +27,7 @@ public class Caballero_Action : MonoBehaviour
         // Espada = 50%
         // Golpe = 40%
         // Intimidar = 10%
-        switch (Random.Range(8, 10))
+        switch (ataque)
         {
             case 0:
                 Espada();

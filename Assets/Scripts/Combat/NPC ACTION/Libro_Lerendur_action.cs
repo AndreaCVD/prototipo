@@ -14,8 +14,14 @@ public class Libro_Lerendur : MonoBehaviour
 
     public void Ataque_Aleatorio()
     {
-        //ataques 1 vez * turno: inmovilizar, escudo, proyectil magico, ola atronadora
-        //ataque una vez por partida: esfera de llamas
+        if (!commandManager.Return_Inmovil("player"))
+        {
+            player_inmovilizado = false;
+            commandManager.Caballero_img("idle_prota");
+        }
+
+            //ataques 1 vez * turno: inmovilizar, escudo, proyectil magico, ola atronadora
+            //ataque una vez por partida: esfera de llamas
         if (esfera_llamas)
         {
             if (proyectil)
@@ -37,13 +43,12 @@ public class Libro_Lerendur : MonoBehaviour
         }
         if (player_inmovilizado && ataque == 11)
         {
-            if (!commandManager.Return_Inmovil("player"))
-                player_inmovilizado = false;
             ataque--; //ahora es un escudo
         }
         // solo uno de estos estara bloqueado un turno, no se solapan
         if (escudo && ataque == 10)
         {
+            commandManager.Lerendur_img("idle");
             escudo = false;
             ataque--; //ahora es Ola Atronadora
         }
@@ -59,6 +64,13 @@ public class Libro_Lerendur : MonoBehaviour
             if (ataque == 8)
                 ataque++;
         }
+
+        if (escudo)
+        {
+            commandManager.Lerendur_img("idle");
+            escudo = false;
+        }
+
         Choise();
     }
     // --- SWITCH DECIDIR ATAQUE ---
@@ -135,7 +147,8 @@ public class Libro_Lerendur : MonoBehaviour
         commandManager.Lerendur_img("escudo");
 
         escudo = true;
-        commandManager.Modificar_CA(5); //modificar salta turno solo
+        commandManager.Modificar_CA(5);
+        commandManager.NextTurn();
     }
     // Inteligencia - Rayo Escarcha 1d8
     void Escarcha()
@@ -160,6 +173,10 @@ public class Libro_Lerendur : MonoBehaviour
         {
             Debug.Log("Tirada fatidica del enemigo");
             commandManager.AutoHerirse(4, 1);
+        }
+        else // no supera la armadura
+        {
+            commandManager.NextTurn();
         }
     }
     // Inteligencia - Proyectil Magico 3d4+1, el siguiente turno no lo usa
@@ -211,6 +228,10 @@ public class Libro_Lerendur : MonoBehaviour
             Debug.Log("Tirada fatidica del enemigo");
             commandManager.AutoHerirse(4, 1);
         }
+        else // no supera la armadura
+        {
+            commandManager.NextTurn();
+        }
     }
     // Inteligencia - Esfera de llamas 3d6, una vez por combate
     void Esfera_Llamas()
@@ -236,6 +257,10 @@ public class Libro_Lerendur : MonoBehaviour
         {
             Debug.Log("Tirada fatidica del enemigo");
             commandManager.AutoHerirse(4, 1);
+        }
+        else // no supera la armadura
+        {
+            commandManager.NextTurn();
         }
     }
 }

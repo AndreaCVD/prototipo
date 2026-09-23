@@ -164,20 +164,17 @@ public class CommandManager : MonoBehaviour
             //int aux = lanzarDado(dado, times);
             //int aux_2 = lanzarDado(4, 1);
             //int aux_3 = lanzarDado(4, 1);
-
-            turnRoundManager.current.Cambiar_Idle();
+            
             Fuerza(dado, times, 4, 2, true);
-
         }
         else if (armadura == 1) //TIRA UN 1
         {
             Debug.Log("Ataque de enfado del enemigo no ha funcionado");
-            turnRoundManager.current.Cambiar_Idle();
+
             AutoHerirse(4, 1);
         }
         else
         {
-            turnRoundManager.current.Cambiar_Idle();
             ActualizarHP();
             NextTurn();
         }
@@ -188,11 +185,9 @@ public class CommandManager : MonoBehaviour
         {
             case "enfadado":
                 enfadado = estado;
-                //NextTurn();
                 break;
             case "asustado":
                 asustado = estado;
-               // NextTurn();
                 break;
         }
     }
@@ -204,32 +199,25 @@ public class CommandManager : MonoBehaviour
         {
             Debug.Log("Ataque de asustado del enemigo ha funcionado");
 
-            turnRoundManager.current.Cambiar_Idle();
             Fuerza(dado, times, 4, 1, false);
-            NextTurn();
         }
         else if (armadura == 0) //CRITICO
         {
             Debug.Log("Ataque de asustado del enemigo es critico");
 
-            int aux = lanzarDado(dado, times);
-            int aux_2 = lanzarDado(4, 1);
-            int aux_3 = lanzarDado(4, 1);
-            int total = Math.Abs(aux + aux_2 - aux_3);
+            //int aux = lanzarDado(dado, times);
+            //int aux_2 = lanzarDado(4, 1);
+            //int aux_3 = lanzarDado(4, 1);
+            //int total = Math.Abs(aux + aux_2 - aux_3);
             
-            turnRoundManager.current.Cambiar_Idle();
             Fuerza(dado, times, 4, 2, false);
-
-            NextTurn();
         }
         else if (armadura == 1) //TIRA UN 1
         {
-            turnRoundManager.current.Cambiar_Idle();
             AutoHerirse(4, 1);
         }
         else
         {
-            turnRoundManager.current.Cambiar_Idle();
             ActualizarHP();
             NextTurn();
         }
@@ -418,6 +406,9 @@ public class CommandManager : MonoBehaviour
     {
         switch (ataque)
         {
+            case "idle":
+                turnRoundManager.current.Cambiar_Idle();
+                break;
             case "daga": //espada y golpe
                 turnRoundManager.target.Cambiar_imgHerido(); //enemigo herido
                 turnRoundManager.current.Cambiar_imgAtaque(0);
@@ -435,7 +426,7 @@ public class CommandManager : MonoBehaviour
                 turnRoundManager.current.Cambiar_imgEstado(0);
                 break;
             case "intimidar":
-                turnRoundManager.current.Cambiar_imgAtaque(3);
+                turnRoundManager.current.imgAtaque_estatica(3);
                 break;
             case "love_1":
                 turnRoundManager.current.Cambiar_imgAtaque(4);
@@ -476,7 +467,7 @@ public class CommandManager : MonoBehaviour
                     turnRoundManager.target.Cambiar_imgEstado(1);
                     break;
                 case "enfadado": 
-                    turnRoundManager.current.Cambiar_imgEstado(1);
+                    turnRoundManager.target.Cambiar_imgEstado(1);
                     break;
                 case "asustado": 
                     turnRoundManager.target.Cambiar_imgEstado(2);

@@ -286,10 +286,8 @@ public class CombatMonster : MonoBehaviour
     }
     public void SalirCombate()
     {
-        Debug.Log("????????????????????");
         player.stats.values[4].value =12;
         load.SalirCombate();
-
     }
     public void cambiarFuerza(int damage)
     {
@@ -357,6 +355,10 @@ public class CombatMonster : MonoBehaviour
         
         //despues de X tiempo volver a la anterior
         StartCoroutine(Img_Anterior(aux));
+    }
+    public void imgAtaque_estatica(int indice) //img esado sin cambio automatico
+    {
+        imagenPers.sprite = player.Ataques[indice];
     }
     public void Cambiar_imgEstado(int indice)
     {

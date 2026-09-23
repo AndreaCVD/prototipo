@@ -647,13 +647,15 @@ public class CommandPanel : MonoBehaviour
             Resetear_Valores();
             Back();
 
-            Debug.Log("armadura no del prota");
             info_result.style.visibility = Visibility.Visible;
             info_result.text = "¡Cuidado! Has enfadado al enemigo";
             //enemigo enfadado
 
             commandManager.EstadoIntimidar("enfadado", true);
+            
+            commandManager.Carlos_img("idle");
             commandManager.Change_img("enfadado");
+
             commandManager.NextTurn();
         }
         else if (armadura == "si")
@@ -664,7 +666,10 @@ public class CommandPanel : MonoBehaviour
             //enemigo asustado
             Resetear_Valores();
             Back();
+
+            commandManager.Carlos_img("idle");
             commandManager.Change_img("asustado");
+
             commandManager.EstadoIntimidar("asustado", true);
             commandManager.NextTurn();
 

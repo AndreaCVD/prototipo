@@ -26,7 +26,7 @@ public class Mimic_Action : MonoBehaviour
         // Vomito = 30%
         // Lenguetazo = 20%
         // Atrapar = 10%    
-        switch (Random.Range(7, 10))
+        switch (ataque)
         {
             case 0:
                 Mordisco(); 
@@ -99,10 +99,10 @@ public class Mimic_Action : MonoBehaviour
 
             commandManager.AutoHerirse(4, 1);
         }
-        //else // no supera la armadura
-        //{
-        //    commandManager.NextTurn();
-        //}
+        else // no supera la armadura
+        {
+            commandManager.NextTurn();
+        }
     }
     // Fuerza - Vomito 1d6+fue+1d4(acido)
     void Vomito()
@@ -134,10 +134,10 @@ public class Mimic_Action : MonoBehaviour
             commandManager.Change_img("autoataque");
             commandManager.AutoHerirse(4, 1);
         }
-        //else // no supera la armadura
-        //{
-        //    commandManager.NextTurn();
-        //}
+        else // no supera la armadura
+        {
+            commandManager.NextTurn();
+        }
     }
     // Inteligencia - Atrapar, inmovilizar 1 turno
     void Atrapar()
@@ -178,9 +178,9 @@ public class Mimic_Action : MonoBehaviour
             Debug.Log("Tirada fatidica del enemigo");
             commandManager.AutoHerirse(4, 1);
         }
-        //else // no supera la armadura
-        //{
-        //    commandManager.NextTurn();
-        //}
+        else // no supera la armadura
+        {
+            commandManager.NextTurn();
+        }
     }
 }

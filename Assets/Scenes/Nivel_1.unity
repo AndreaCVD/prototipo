@@ -4293,6 +4293,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4636500077556328165, guid: ca28d6627cc19d84893b1c16657bf7d9, type: 3}
+      propertyPath: speed
+      value: 0.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 4636500077556328165, guid: ca28d6627cc19d84893b1c16657bf7d9, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
@@ -4300,6 +4304,18 @@ PrefabInstance:
       propertyPath: screenCover
       value: 
       objectReference: {fileID: 527165388}
+    - target: {fileID: 4636500077556328165, guid: ca28d6627cc19d84893b1c16657bf7d9, type: 3}
+      propertyPath: untintedColor.b
+      value: 0.43925232
+      objectReference: {fileID: 0}
+    - target: {fileID: 4636500077556328165, guid: ca28d6627cc19d84893b1c16657bf7d9, type: 3}
+      propertyPath: untintedColor.g
+      value: 0.7207546
+      objectReference: {fileID: 0}
+    - target: {fileID: 4636500077556328165, guid: ca28d6627cc19d84893b1c16657bf7d9, type: 3}
+      propertyPath: untintedColor.r
+      value: 0.44849646
+      objectReference: {fileID: 0}
     - target: {fileID: 5107496890064737642, guid: ca28d6627cc19d84893b1c16657bf7d9, type: 3}
       propertyPath: m_Name
       value: --SceneManagement--

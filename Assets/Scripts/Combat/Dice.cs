@@ -106,6 +106,8 @@ public class Dice : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         activar.SetActive(true);
         desactivar.SetActive(false);
+        activar = null;
+        desactivar = null;
     }
 
     void Move_dado20(int num)

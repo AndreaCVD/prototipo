@@ -362,10 +362,13 @@ public class CombatMonster : MonoBehaviour
     {
         //guardamos la actual
         Sprite aux = imagenPers.sprite;
+        imagenPers.sprite = player.Estados_combate[indice];
         //despues de X tiempo volver a la anterior
         StartCoroutine(Img_Anterior(aux));
+        Debug.Log(aux);
 
-        imagenPers.sprite = player.Estados_combate[indice];
+        Debug.Log(imagenPers.sprite);
+
     }
     public void Cambiar_imgEnamorado(int indice)
     {
@@ -388,7 +391,7 @@ public class CombatMonster : MonoBehaviour
 
     IEnumerator Img_Anterior(Sprite img)
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(2.2f);
         imagenPers.sprite = img;
     }
 

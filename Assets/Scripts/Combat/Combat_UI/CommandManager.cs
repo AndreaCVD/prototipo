@@ -265,8 +265,8 @@ public class CommandManager : MonoBehaviour
     {
         player_inmovilizado = inmov;
         turnos_inmovil = turnos;
-        if (player_inmovilizado)
-            Change_img("inmovil_prota");
+        //if (player_inmovilizado)
+        //    Change_img("inmovil_prota");
     }
     public bool Return_Inmovil(string name)
     {
@@ -301,7 +301,9 @@ public class CommandManager : MonoBehaviour
                 break;
             case "atrapar":
                 turnRoundManager.target.Cambiar_imgEstado(2); //prota vacio
+
                 turnRoundManager.current.Cambiar_imgAtaque(1);
+
                 break;
             case "lenguetazo":
                 turnRoundManager.target.Cambiar_imgHerido(); //prota herido
@@ -431,7 +433,7 @@ public class CommandManager : MonoBehaviour
                 break;
             case "inmov":
                 turnRoundManager.target.Cambiar_imgEstado(0); //enemigo inmovil
-                turnRoundManager.current.Cambiar_imgAtaque(1);
+                turnRoundManager.current.Cambiar_imgAtaque(2);
                 break;
             case "escudo":
                 player_escudo = true;
@@ -496,7 +498,6 @@ public class CommandManager : MonoBehaviour
     // --- NEXT TURN LOGIC ---
     public void NextTurn()
     {
-        Debug.Log("????????????????????????????????????????????");
 
         model_dados(20);
 
@@ -522,13 +523,13 @@ public class CommandManager : MonoBehaviour
                 turnos_inmovil = 1;
 
                 turnRoundManager.ChangeTurn();
-                turnRoundManager.EnemyTurn();
-                
+                turnRoundManager.EnemyTurn();  
             }
         }
         else if (enemigo_inLove)
         {
             Debug.Log("Enemigo enamorado, no te ataca");
+            return;
         }
         else if (enfadado)
         {
@@ -548,19 +549,21 @@ public class CommandManager : MonoBehaviour
         //estados jugador
         else if (player_inmovilizado)
         {
+            //if (turnRoundManager.target.name_pers() == "Carlos")//si es carlos cambiamos la del player actual
+            //    turnRoundManager.target.Cambiar_imgEstado(1);
+            //else
+            //    turnRoundManager.current.Cambiar_imgEstado(1);
             //No cambiamos el turno
-            //Activar animacion 
             turnos_inmovil--;
             Debug.Log("Enemigo Inmovilizado. Le quedan = " + turnos_inmovil);
             if (turnos_inmovil == 0)
             {
 
-                if (turnRoundManager.target.name_pers() == "Carlos")//si es carlos cambiamos la del player actual
-                    turnRoundManager.target.Cambiar_Idle();
-                else
-                    turnRoundManager.current.Cambiar_Idle();
+                //if (turnRoundManager.target.name_pers() == "Carlos")//si es carlos cambiamos la del player actual
+                //    turnRoundManager.target.Cambiar_Idle();
+                //else
+                //    turnRoundManager.current.Cambiar_Idle();
 
-                Debug.Log(turnRoundManager.target.name_pers());
                 Debug.Log("Ya no esta inmovilizado");
                 player_inmovilizado = false;
                 turnos_inmovil = 1;

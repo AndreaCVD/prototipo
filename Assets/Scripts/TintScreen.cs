@@ -17,6 +17,10 @@ public class TintScreen : MonoBehaviour
         screenCover = GameObject.Find("ImageCover").GetComponent<Image>();
         UnTint();
     }
+    public void Start()
+    {
+        UnTint();
+    }
     [ContextMenu("Tint")]
     public void Tint()
     {

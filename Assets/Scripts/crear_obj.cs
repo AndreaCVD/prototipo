@@ -35,19 +35,20 @@ public class crear_obj : MonoBehaviour
         //    DontDestroyOnLoad(x);
         //}
 
-        if (!GameObject.Find("ScreenTint") && !GameObject.Find("ScreenTint(Clone)"))
-        {
-            Debug.Log("a");
-            GameObject nuevoObj = Instantiate(screenTint);
-            nuevoObj.name = "ScreenTint";
-            DontDestroyOnLoad(nuevoObj);
-        }
-        else
-        {
-            GameObject tint = GameObject.Find("ScreenTint");
-            tint.name = "ScreenTint";
-            DontDestroyOnLoad(tint);
-        }
+        //if (!GameObject.Find("ScreenTint") && !GameObject.Find("ScreenTint(Clone)"))
+        //{
+        //    Debug.Log("a");
+        //    GameObject nuevoObj = Instantiate(screenTint);
+        //    nuevoObj.name = "ScreenTint";
+        //    DontDestroyOnLoad(nuevoObj);
+        //}
+        //else
+        //{
+        //    GameObject tint = GameObject.Find("ScreenTint");
+        //    tint.name = "ScreenTint";
+        //    DontDestroyOnLoad(tint);
+        //}
+
         //if (!GameObject.Find("--DialogManager--") && !GameObject.Find("--DialogManager--(Clone)"))
         //{
         //    GameObject nuevoObj = Instantiate(dialog);

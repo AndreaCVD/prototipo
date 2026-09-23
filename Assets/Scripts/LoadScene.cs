@@ -30,6 +30,8 @@ public class LoadScene : MonoBehaviour
 
     private void Start()
     {
+        //Transform hijo = transform.GetChild(0);
+        //Debug.Log(hijo.name);
         jefeLerendur = false;
         jefeLibro = false;
         onCombat = false;

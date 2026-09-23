@@ -356,7 +356,7 @@ public class CommandManager : MonoBehaviour
                 turnRoundManager.current.Cambiar_imgAtaque(1);
                 break;
             case "atrapar":
-                turnRoundManager.target.Cambiar_imgEstado(3); //prota atrpado libro
+                turnRoundManager.target.Cambiar_imgEstado(2); //prota vacio
                 turnRoundManager.current.Cambiar_imgAtaque(2);
                 break;
             case "convencer":
@@ -385,7 +385,7 @@ public class CommandManager : MonoBehaviour
                 turnRoundManager.current.Cambiar_imgAtaque(0);
                 break;
             case "inmovil":
-                turnRoundManager.target.Cambiar_imgEstado(2); //prota vacio
+                turnRoundManager.target.Cambiar_imgEstado(3); //prota vacio
                 turnRoundManager.current.Cambiar_imgAtaque(1);
                 break;
             case "esfera":

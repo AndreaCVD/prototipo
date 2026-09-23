@@ -15,6 +15,7 @@ public class Caballero_Action : MonoBehaviour
     {
         if (player_inmovilizado)
         {
+            commandManager.Caballero_img("idle_prota");
             player_inmovilizado = false;
             ataque = Random.Range(0, 9); //sin atrapar
         }
@@ -26,7 +27,7 @@ public class Caballero_Action : MonoBehaviour
         // Espada = 50%
         // Golpe = 40%
         // Intimidar = 10%
-        switch (ataque)
+        switch (Random.Range(8, 10))
         {
             case 0:
                 Espada();
@@ -90,6 +91,10 @@ public class Caballero_Action : MonoBehaviour
 
             commandManager.AutoHerirse(4, 1);
         }
+        else // no supera la armadura
+        {
+            commandManager.NextTurn();
+        }
     }
     // Fuerza - 1d6+fue
     void Golpe()
@@ -119,12 +124,14 @@ public class Caballero_Action : MonoBehaviour
 
             commandManager.AutoHerirse(4, 1);
         }
+        else // no supera la armadura
+        {
+            commandManager.NextTurn();
+        }
     }
     // Carisma
     void Intimidar()
     {
-
-        commandManager.Caballero_img("intimidar");
 
         Debug.Log("Intimidar de caballero");
         int ca_player = commandManager.Armadura(0, 20);
@@ -133,6 +140,8 @@ public class Caballero_Action : MonoBehaviour
         {
             player_inmovilizado = true;
             commandManager.PlayerInmovilizado(true, 1);
+
+            commandManager.Caballero_img("intimidar");
             commandManager.NextTurn();
         }
         else

@@ -94,7 +94,6 @@ public class CommandManager : MonoBehaviour
         turnRoundManager.current.Fuerza(turnRoundManager.target, aux);
 
         ActualizarHP();
-        Debug.Log("aaaaaaaaaaaaaaaaaaaaaa");
         NextTurn();
     }
     public void Fuerza(int dado_1, int times_1, int dado_2, int times_2, bool suma) //dos dados diferentes
@@ -331,8 +330,11 @@ public class CommandManager : MonoBehaviour
                 turnRoundManager.current.Cambiar_imgAtaque(0);
                 break;
             case "intimidar":
-                turnRoundManager.target.Cambiar_imgHerido(); //prota herido
+                turnRoundManager.target.imgEstado_estatica(1); //prota herido
                 turnRoundManager.current.Cambiar_imgAtaque(1);
+                break;
+            case "idle_prota":
+                turnRoundManager.target.Cambiar_Idle();
                 break;
             default:
                 Debug.Log("error lectura img caballero");
@@ -531,10 +533,7 @@ public class CommandManager : MonoBehaviour
         //estados jugador
         else if (player_inmovilizado)
         {
-            //if (turnRoundManager.target.name_pers() == "Carlos")//si es carlos cambiamos la del player actual
-            //    turnRoundManager.target.Cambiar_imgEstado(1);
-            //else
-            //    turnRoundManager.current.Cambiar_imgEstado(1);
+
             //No cambiamos el turno
             turnos_inmovil--;
             Debug.Log("Enemigo Inmovilizado. Le quedan = " + turnos_inmovil);
@@ -547,6 +546,7 @@ public class CommandManager : MonoBehaviour
                 //    turnRoundManager.current.Cambiar_Idle();
 
                 Debug.Log("Ya no esta inmovilizado");
+
                 player_inmovilizado = false;
                 turnos_inmovil = 1;
             }

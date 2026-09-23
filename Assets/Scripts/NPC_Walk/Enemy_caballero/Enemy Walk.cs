@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class EnemyWalk : MonoBehaviour
 {
@@ -56,7 +57,7 @@ public class EnemyWalk : MonoBehaviour
             Invoke(nameof(Interact), 1.0f);
         }
 
-        if (firstWalk && !load.isPaused())
+        if (firstWalk && SceneManager.sceneCount == 1)
         {
             //primero hacemos que se calcule la distancia entre el y el jugador
             distancia = Vector3.Distance(enemy.transform.position, objetivo.position);

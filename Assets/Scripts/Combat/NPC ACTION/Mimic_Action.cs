@@ -116,7 +116,7 @@ public class Mimic_Action : MonoBehaviour
 
             commandManager.Mimic_img("vomito");
             //Fuerza(int dado_1, int times_1, int dado_2, int times_2)
-            commandManager.Fuerza(6, 1, 4, 1);
+            commandManager.Fuerza(6, 1, 4, 1, true);
         }
         else if (ca_player == 0) //CRITICO
         {
@@ -124,7 +124,7 @@ public class Mimic_Action : MonoBehaviour
 
             commandManager.Mimic_img("vomito");
             Debug.Log("Tirada critica del enemigo");
-            commandManager.Fuerza(6, 2, 4, 2);
+            commandManager.Fuerza(6, 2, 4, 2, true);
         }
         else if (ca_player == 1) //TIRA UN 1
         {

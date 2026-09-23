@@ -54,17 +54,8 @@ public class CommandManager : MonoBehaviour
 
         int aux = lanzarDado(20, 1);
         int AC_superada = turnRoundManager.current.Armadura(turnRoundManager.target, aux, stat);
-        if (AC_superada == 3)
-        {
-            ActualizarHP();
 
-            NextTurn();
-            return 3;
-        }
-        else
-        {
-            return AC_superada;
-        }
+        return AC_superada;
     }
     public void Huir()
     {
@@ -106,17 +97,25 @@ public class CommandManager : MonoBehaviour
         Debug.Log("aaaaaaaaaaaaaaaaaaaaaa");
         NextTurn();
     }
-    public void Fuerza(int dado_1, int times_1, int dado_2, int times_2) //dos dados diferentes
+    public void Fuerza(int dado_1, int times_1, int dado_2, int times_2, bool suma) //dos dados diferentes
     {
         int aux = lanzarDado(dado_1, times_1);
         int aux_2 = lanzarDado(dado_2, times_2);
+        int total;
 
-        turnRoundManager.current.Fuerza(turnRoundManager.target, aux+aux_2);
+        //ver si se tiene que sumar o restar
+        if (!suma)
+            total = Math.Abs(aux - aux_2);
+        else
+            total = aux + aux_2;
+
+        turnRoundManager.current.Fuerza(turnRoundManager.target, total);
 
         ActualizarHP();
 
         NextTurn();
     }
+
     public void Carisma(int dado, int times)
     {
         int aux = lanzarDado(dado, times);
@@ -153,22 +152,22 @@ public class CommandManager : MonoBehaviour
         {
             Debug.Log("Ataque de enfado del enemigo ha funcionado");
 
-            int aux = lanzarDado(dado, times);
-            int aux_2 = lanzarDado(4, 1);
+            //int aux = lanzarDado(dado, times);
+            //int aux_2 = lanzarDado(4, 1);
 
-            turnRoundManager.current.Cambiar_Idle();
-            turnRoundManager.current.Fuerza(turnRoundManager.target, aux + aux_2);
+            Fuerza(dado, times, 4, 1, true);        
         }
         else if (armadura == 0) //CRITICO
         {
             Debug.Log("Ataque de enfado del enemigo es critico");
 
-            int aux = lanzarDado(dado, times);
-            int aux_2 = lanzarDado(4, 1);
-            int aux_3 = lanzarDado(4, 1);
+            //int aux = lanzarDado(dado, times);
+            //int aux_2 = lanzarDado(4, 1);
+            //int aux_3 = lanzarDado(4, 1);
 
             turnRoundManager.current.Cambiar_Idle();
-            turnRoundManager.current.Fuerza(turnRoundManager.target, aux + aux_2 +aux_3);
+            Fuerza(dado, times, 4, 2, true);
+
         }
         else if (armadura == 1) //TIRA UN 1
         {
@@ -180,8 +179,7 @@ public class CommandManager : MonoBehaviour
         {
             turnRoundManager.current.Cambiar_Idle();
             ActualizarHP();
-            Debug.Log("????????????????????");
-
+            NextTurn();
         }
     }
     public void EstadoIntimidar(string name, bool estado)
@@ -206,13 +204,9 @@ public class CommandManager : MonoBehaviour
         {
             Debug.Log("Ataque de asustado del enemigo ha funcionado");
 
-            int aux = lanzarDado(dado, times);
-            int aux_2 = lanzarDado(4, 1);
-            int total = Math.Abs(aux - aux_2);
-
             turnRoundManager.current.Cambiar_Idle();
-            turnRoundManager.current.Fuerza(turnRoundManager.target, total);
-
+            Fuerza(dado, times, 4, 1, false);
+            NextTurn();
         }
         else if (armadura == 0) //CRITICO
         {
@@ -224,8 +218,9 @@ public class CommandManager : MonoBehaviour
             int total = Math.Abs(aux + aux_2 - aux_3);
             
             turnRoundManager.current.Cambiar_Idle();
-            turnRoundManager.current.Fuerza(turnRoundManager.target, total);
+            Fuerza(dado, times, 4, 2, false);
 
+            NextTurn();
         }
         else if (armadura == 1) //TIRA UN 1
         {
@@ -236,7 +231,7 @@ public class CommandManager : MonoBehaviour
         {
             turnRoundManager.current.Cambiar_Idle();
             ActualizarHP();
-            Debug.Log("????????????????????");
+            NextTurn();
         }
     }
     public bool Return_inLove()
@@ -533,6 +528,7 @@ public class CommandManager : MonoBehaviour
         }
         else if (enfadado)
         {
+            enfadado = false;
             Debug.Log("creo que aqui hay fallo");
             //Cambiamos turno, y vemos si es el turno del enemigo
             turnRoundManager.ChangeTurn();

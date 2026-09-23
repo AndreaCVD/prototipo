@@ -349,6 +349,8 @@ public class CommandPanel : MonoBehaviour
                 armadura = "no";
                 Resultado_Tirada();
                 Back();
+                commandManager.NextTurn();
+
             }
         }
     }
@@ -454,6 +456,7 @@ public class CommandPanel : MonoBehaviour
         {
             Back();
             Resetear_Valores();
+            commandManager.NextTurn();
         }
         else if (armadura == "critico") //El jugador tira NAT 20
         {

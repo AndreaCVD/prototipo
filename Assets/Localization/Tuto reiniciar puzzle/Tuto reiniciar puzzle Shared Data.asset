@@ -10,27 +10,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
-  m_Name: Puerta Shared Data
+  m_Name: Tuto reiniciar puzzle Shared Data
   m_EditorClassIdentifier: 
-  m_TableCollectionName: Puerta
-  m_TableCollectionNameGuidString: 77f6bfb189ad01143a2632e17e45e31c
+  m_TableCollectionName: Tuto reiniciar puzzle
+  m_TableCollectionNameGuidString: d74b5cc7f961415469beea6ab1977edb
   m_Entries:
-  - m_Id: 43119240102080512
-    m_Key: SentenceText_79e2e3ea-e2fb-4c55-a2c8-9ebec6f01871
+  - m_Id: 15548608512
+    m_Key: SentenceText_9d7462c0-bf79-4563-bf87-6b8d32167294
     m_Metadata:
       m_Items: []
-  - m_Id: 43119240135634944
-    m_Key: SentenceName_361b2586-387d-4263-992e-c477733b6418
+  - m_Id: 15548608513
+    m_Key: SentenceName_4183ea76-d53c-4570-a217-c13990d064de
     m_Metadata:
       m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
-    rid: 2271896265318203550
+    rid: 1566622138992689209
   references:
     version: 2
     RefIds:
-    - rid: 2271896265318203550
+    - rid: 1566622138992689209
       type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
       data:
-        m_CustomEpoch: 1780099384308
+        m_CustomEpoch: 1790379994692

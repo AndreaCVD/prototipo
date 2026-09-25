@@ -100,6 +100,12 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d74b5cc7f961415469beea6ab1977edb
+    m_Address: Assets/Localization/Tuto reiniciar puzzle/Tuto reiniciar puzzle Shared
+      Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d922aef77150fda4d9b79c911ee605ed
     m_Address: Assets/Localization/Cofre/Cofre Shared Data.asset
     m_ReadOnly: 1

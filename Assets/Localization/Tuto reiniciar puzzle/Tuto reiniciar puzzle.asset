@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5be51871efa6c3e4eae1703925c8f5ac, type: 3}
+  m_Name: Tuto reiniciar puzzle
+  m_EditorClassIdentifier: 
+  m_SharedTableData: {fileID: 11400000, guid: d74b5cc7f961415469beea6ab1977edb, type: 2}
+  m_Tables:
+  - {fileID: 11400000, guid: a32d17491aa0e0345bbd9f5ea34e8c0a, type: 2}
+  - {fileID: 11400000, guid: 59e7732d7404a75408cb365e627597ab, type: 2}
+  - {fileID: 11400000, guid: 484e9a47b2ed985439143accb76e2e43, type: 2}
+  - {fileID: 11400000, guid: 7cb5f351dfedef64daf545dc16aa2806, type: 2}
+  - {fileID: 11400000, guid: 0304a139873f60842a1d3e6455f86613, type: 2}
+  m_Extensions: []
+  m_Group: String Table
+  references:
+    version: 2
+    RefIds: []

@@ -51,6 +51,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-fr-FR
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 484e9a47b2ed985439143accb76e2e43
+    m_Address: Tuto reiniciar puzzle_fr-FR
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-fr-FR
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 5a839a9294c4b334e94ebfe3ab84670f
     m_Address: Tienda Yusseif_fr-FR
     m_ReadOnly: 1

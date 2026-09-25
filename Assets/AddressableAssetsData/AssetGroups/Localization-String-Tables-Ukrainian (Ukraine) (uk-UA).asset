@@ -21,6 +21,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-uk-UA
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0304a139873f60842a1d3e6455f86613
+    m_Address: Tuto reiniciar puzzle_uk-UA
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-uk-UA
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 05f4f9e20ac2ad34da6248c9773a8471
     m_Address: Tienda_uk-UA
     m_ReadOnly: 1

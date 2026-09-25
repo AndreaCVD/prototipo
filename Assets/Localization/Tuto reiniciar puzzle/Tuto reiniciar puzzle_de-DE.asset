@@ -10,32 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
-  m_Name: Tienda_en-US
+  m_Name: Tuto reiniciar puzzle_de-DE
   m_EditorClassIdentifier: 
   m_LocaleId:
-    m_Code: en-US
-  m_SharedData: {fileID: 11400000, guid: f9f0ff4644c1d2c4aa02c95e61211e9a, type: 2}
+    m_Code: de-DE
+  m_SharedData: {fileID: 11400000, guid: d74b5cc7f961415469beea6ab1977edb, type: 2}
   m_Metadata:
     m_Items: []
   m_TableData:
-  - m_Id: 43208027889004544
-    m_Localized: Dormir
+  - m_Id: 15548608512
+    m_Localized: Aventurero, si fallas en completar un puzzle, no te preocupes, siempre
+      puedes volver a internatlo pidiendole ayuda al amo de la mazmorra.
     m_Metadata:
       m_Items: []
-  - m_Id: 43208027889004545
-    m_Localized: Irse
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43208027889004546
-    m_Localized: Ahora mejor no.
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43208027889004547
-    m_Localized: Carlos
-    m_Metadata:
-      m_Items: []
-  - m_Id: 43208027889004548
-    m_Localized: Me siento super descansado.
+  - m_Id: 15548608513
+    m_Localized: Consejo viejo
     m_Metadata:
       m_Items: []
   references:

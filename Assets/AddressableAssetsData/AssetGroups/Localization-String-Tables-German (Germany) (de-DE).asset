@@ -75,6 +75,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-de-DE
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7cb5f351dfedef64daf545dc16aa2806
+    m_Address: Tuto reiniciar puzzle_de-DE
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de-DE
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7f595b049195764499402764f9aba155
     m_Address: Tienda Viejo_de-DE
     m_ReadOnly: 1

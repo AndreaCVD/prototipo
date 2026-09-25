@@ -37,10 +37,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 8d27612be793d364984f6a810823ee2a, type: 3}
   - {fileID: 21300000, guid: b64f85c13258c0b4bb416fbc98d046c4, type: 3}
   Estados_combate:
-  - {fileID: 21300000, guid: d9bbd887523389642b8cdd5dfa0a2edb, type: 3}
+  - {fileID: 21300000, guid: 4be5c430e072bfb4195ff0f75b61e1b4, type: 3}
   - {fileID: 21300000, guid: c54c5e18928423b40a5d10cdc377f64b, type: 3}
   - {fileID: 21300000, guid: b759e78c35432c84ba0bab2373555c67, type: 3}
   Estados_enamorado:
-  - {fileID: 21300000, guid: 0b082ed6be58ccc46aa46a2a66d70c85, type: 3}
-  - {fileID: 21300000, guid: 199c1b9be91007c4a99a080ac640c2a2, type: 3}
-  - {fileID: 21300000, guid: 19cbf761b783c7d4ab70a8993cf662ce, type: 3}
+  - {fileID: 21300000, guid: 61b74f473172a4f4a9cb9bffa2dc234f, type: 3}
+  - {fileID: 21300000, guid: 2b14880e1e0aa194a8f630f591779d7e, type: 3}
+  - {fileID: 21300000, guid: 5960d85f7d4c82a46a1f72b60ec5c987, type: 3}

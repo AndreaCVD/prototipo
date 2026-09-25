@@ -153,6 +153,10 @@ public class NPCAction : MonoBehaviour
     {
         s.Ataque_Aleatorio();
     }
+    void Slime_lava()
+    {
+        s.Ataque_Aleatorio();
+    }
     void Jefe_Libro()
     {
         j.Ataque_Aleatorio();

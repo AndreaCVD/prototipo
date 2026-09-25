@@ -383,8 +383,6 @@ public class CombatMonster : MonoBehaviour
     public void imgEstado_estatica(int indice) //img esado sin cambio automatico
     {
         imagenPers.sprite = player.Estados_combate[indice];
-        Debug.Log(imagenPers.sprite);
-
     }
     public void Cambiar_imgEnamorado(int indice)
     {

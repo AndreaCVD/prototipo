@@ -430,7 +430,7 @@ public class CommandManager : MonoBehaviour
                 break;
             case "escudo":
                 player_escudo = true;
-                turnRoundManager.current.Cambiar_imgEstado(0);
+                turnRoundManager.current.imgEstado_estatica(0);
                 break;
             case "intimidar":
                 turnRoundManager.current.imgAtaque_estatica(3);

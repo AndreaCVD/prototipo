@@ -87,6 +87,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-fr-FR
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ae62da08558b3894f96f7e81b40a4489
+    m_Address: Tuto n0_fr-FR
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-fr-FR
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: af542ee911502b8449434a4040122214
     m_Address: Etkis Libre_fr-FR
     m_ReadOnly: 1

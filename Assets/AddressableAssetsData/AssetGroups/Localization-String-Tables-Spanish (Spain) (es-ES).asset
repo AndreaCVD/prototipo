@@ -87,6 +87,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-es-ES
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7b8ffb529f3f81a4a84cc4112bc0ada6
+    m_Address: Tuto n0_es-ES
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-es-ES
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: a32d17491aa0e0345bbd9f5ea34e8c0a
     m_Address: Tuto reiniciar puzzle_es-ES
     m_ReadOnly: 1

@@ -51,6 +51,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-en-US
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3c707630cbdfe9e45b214301e96218da
+    m_Address: Tuto n0_en-US
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-en-US
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 43cf4a5dac5c02f4994885954219a488
     m_Address: DemoNodeGraph_en-US
     m_ReadOnly: 1

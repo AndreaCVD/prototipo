@@ -111,6 +111,11 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: da5ce788e2aaa934e95e6a9675c96bc7
+    m_Address: Assets/Localization/Tuto n0/Tuto n0 Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ec42f3d6da1e0304d80c27ada008b92a
     m_Address: Assets/Localization/Etkis/Etkis Shared Data.asset
     m_ReadOnly: 1

@@ -129,6 +129,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Locale-de-DE
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dfd8d9a444f5e934d9b4c59d9ed921ad
+    m_Address: Tuto n0_de-DE
+    m_ReadOnly: 1
+    m_SerializedLabels:
+    - Locale-de-DE
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e7749aa82453c0b4bb8083299e487b97
     m_Address: Tienda Yusseif_de-DE
     m_ReadOnly: 1

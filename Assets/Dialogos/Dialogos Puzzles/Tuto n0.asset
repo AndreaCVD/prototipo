@@ -1,0 +1,475 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8514669841816831613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f4b3c64aaf434ea0df52154c1c7680, type: 3}
+  m_Name: External Function Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -620.79987
+    y: 207.6001
+    width: 190
+    height: 80
+  IsDragging: 1
+  IsSelected: 0
+  _functionName: PararMov
+  _description: 
+  ParentNodes: []
+  ChildNode: {fileID: 2299179686330406054}
+--- !u!114 &-4474600652039648812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 554.40045
+    y: 148.40009
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Manual
+    Text: "\xA1\xA1Encuentra monedas, pociones y armaduras, en tu bolsa no parece
+      haber l\xEDmite!!"
+    CharacterSprite: {fileID: 21300000, guid: 9cea3f8dfcbfc2c469fe5dd676dbfba7, type: 3}
+  ParentNodes:
+  - {fileID: 7644398621254001097}
+  ChildNode: {fileID: -3115529520392149583}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: SentenceName_3112c2db-08b2-4bb9-b092-91dca03c8379
+  SentenceTextKey: SentenceText_7c0ad8de-8f3d-4bde-9ce7-72658520a1fa
+--- !u!114 &-4003925255777371692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f4b3c64aaf434ea0df52154c1c7680, type: 3}
+  m_Name: External Function Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 909.60016
+    y: 258.00003
+    width: 190
+    height: 80
+  IsDragging: 1
+  IsSelected: 0
+  _functionName: no_Mouse
+  _description: 
+  ParentNodes:
+  - {fileID: 8873513849825780294}
+  ChildNode: {fileID: -3115529520392149583}
+--- !u!114 &-3115529520392149583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f4b3c64aaf434ea0df52154c1c7680, type: 3}
+  m_Name: External Function Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 912.8012
+    y: 173.2001
+    width: 190
+    height: 80
+  IsDragging: 0
+  IsSelected: 0
+  _functionName: ContinuarMov
+  _description: 
+  ParentNodes:
+  - {fileID: -748218579797308518}
+  - {fileID: -4474600652039648812}
+  - {fileID: -2138821601595872476}
+  - {fileID: -4003925255777371692}
+  - {fileID: 4744874449951866459}
+  ChildNode: {fileID: 0}
+--- !u!114 &-2138821601595872476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 338.40018
+    y: 296.40012
+    width: 190
+    height: 155
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Carlos
+    Text: "No tengo ning\xFAn registro...es mi primera misi\xF3n..."
+    CharacterSprite: {fileID: 21300000, guid: a188ce1c9b6fce644b5efac5bf9be647, type: 3}
+  ParentNodes:
+  - {fileID: 8873513849825780294}
+  ChildNode: {fileID: -3115529520392149583}
+  _isExternalFunc: 1
+  _externalFunctionName: no_Mouse
+  CharacterNameKey: SentenceName_da35e201-671e-4616-8764-480fd1ce068a
+  SentenceTextKey: SentenceText_b1a2ed0f-9518-45fe-95c1-25ab837655d7
+--- !u!114 &-1772681536136929440
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 552.0002
+    y: 434.80005
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Manual
+    Text: "De los cuales a\xFAn pueden vivir por all\xE1. "
+    CharacterSprite: {fileID: 0}
+  ParentNodes:
+  - {fileID: 8070035994863220192}
+  ChildNode: {fileID: 4744874449951866459}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: SentenceName_3112c2db-08b2-4bb9-b092-91dca03c8379
+  SentenceTextKey: SentenceText_87b7cb26-963f-490c-9a6d-3a2dc49179f4
+--- !u!114 &-748218579797308518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 552.8005
+    y: -10.799866
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Manual
+    Text: "Mientras que la Constituci\xF3n y tu Clase de Armadura (CA), ser\xE1n
+      tus vitales."
+    CharacterSprite: {fileID: 21300000, guid: 79115e4d242b568468d630060213bf1e, type: 3}
+  ParentNodes:
+  - {fileID: 1145883675699619439}
+  ChildNode: {fileID: -3115529520392149583}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: SentenceName_3112c2db-08b2-4bb9-b092-91dca03c8379
+  SentenceTextKey: SentenceText_93e4235e-d031-4c91-bef4-c8d2e82d950e
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33f741ea10ebcf842a91c9b871dd032a, type: 3}
+  m_Name: Tuto n0
+  m_EditorClassIdentifier: 
+  NodesList:
+  - {fileID: 5856386948511318101}
+  - {fileID: 2299179686330406054}
+  - {fileID: -8514669841816831613}
+  - {fileID: 8873513849825780294}
+  - {fileID: 1145883675699619439}
+  - {fileID: -748218579797308518}
+  - {fileID: -4474600652039648812}
+  - {fileID: 7644398621254001097}
+  - {fileID: -3115529520392149583}
+  - {fileID: -2138821601595872476}
+  - {fileID: 8070035994863220192}
+  - {fileID: -4003925255777371692}
+  - {fileID: -1772681536136929440}
+  - {fileID: 4744874449951866459}
+  VariablesConfig: {fileID: 0}
+  _localizationTableName: Tuto n0
+  _characterNamesLocalizationName: 
+  NodeToDrawLineFrom: {fileID: 0}
+  LinePosition: {x: 0, y: 0}
+  IsLocalizationSetUp: 1
+--- !u!114 &1145883675699619439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 336.00027
+    y: -26.799911
+    width: 190
+    height: 155
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Manual
+    Text: "Fuerza, destreza y carisma son los stats que te ayudar\xE1n en combate."
+    CharacterSprite: {fileID: 21300000, guid: c9d7adfdf4a74854c8e9321fc29c505d, type: 3}
+  ParentNodes:
+  - {fileID: 8873513849825780294}
+  ChildNode: {fileID: -748218579797308518}
+  _isExternalFunc: 1
+  _externalFunctionName: no_Mouse
+  CharacterNameKey: SentenceName_3112c2db-08b2-4bb9-b092-91dca03c8379
+  SentenceTextKey: SentenceText_9fe727d5-b1b7-4e42-bbe0-f7d8d6c9f5f1
+--- !u!114 &2299179686330406054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54f4b3c64aaf434ea0df52154c1c7680, type: 3}
+  m_Name: External Function Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -423.19965
+    y: 203.6001
+    width: 190
+    height: 80
+  IsDragging: 1
+  IsSelected: 0
+  _functionName: Mouse
+  _description: 
+  ParentNodes:
+  - {fileID: -8514669841816831613}
+  ChildNode: {fileID: 5856386948511318101}
+--- !u!114 &4744874449951866459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 757.60016
+    y: 430.80005
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Manual
+    Text: 'NOTA: no suelen ser muy agradables (no molestar)'
+    CharacterSprite: {fileID: 0}
+  ParentNodes:
+  - {fileID: -1772681536136929440}
+  ChildNode: {fileID: -3115529520392149583}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: SentenceName_3112c2db-08b2-4bb9-b092-91dca03c8379
+  SentenceTextKey: SentenceText_7ccdcc78-827a-4dd6-97fd-78cfa7dc224c
+--- !u!114 &5856386948511318101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: -190.39975
+    y: 170.00009
+    width: 190
+    height: 135
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: 
+    Text: "Manual del aventurero. \xBFQu\xE9 quieres leer?"
+    CharacterSprite: {fileID: 0}
+  ParentNodes:
+  - {fileID: 2299179686330406054}
+  ChildNode: {fileID: 8873513849825780294}
+  _isExternalFunc: 0
+  _externalFunctionName: 
+  CharacterNameKey: SentenceName_5b697375-dddd-424a-ae54-7262016094f0
+  SentenceTextKey: SentenceText_5cf85444-c9d6-4491-a764-1a71628fc46f
+--- !u!114 &7644398621254001097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 337.60025
+    y: 142.00015
+    width: 190
+    height: 155
+  IsDragging: 1
+  IsSelected: 0
+  _sentence:
+    CharacterName: Manual
+    Text: Con la "i" puedes investigar que hay en tu bolsa, y usarlo tanto dentro
+      como fuera de combate.
+    CharacterSprite: {fileID: 0}
+  ParentNodes:
+  - {fileID: 8873513849825780294}
+  ChildNode: {fileID: -4474600652039648812}
+  _isExternalFunc: 1
+  _externalFunctionName: no_Mouse
+  CharacterNameKey: SentenceName_3112c2db-08b2-4bb9-b092-91dca03c8379
+  SentenceTextKey: SentenceText_05b40455-dd08-4322-8aee-e86339d209d7
+--- !u!114 &8070035994863220192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a32a464d8ccff4e40a60c45b40a1e648, type: 3}
+  m_Name: Sentence Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 349.60013
+    y: 455.60025
+    width: 190
+    height: 155
+  IsDragging: 1
+  IsSelected: 1
+  _sentence:
+    CharacterName: Manual
+    Text: "Las mazmorr\xE1s son lugares magicos que suelen ser creadas por grandes
+      hechiceros."
+    CharacterSprite: {fileID: 0}
+  ParentNodes:
+  - {fileID: 8873513849825780294}
+  ChildNode: {fileID: -1772681536136929440}
+  _isExternalFunc: 1
+  _externalFunctionName: no_Mouse
+  CharacterNameKey: SentenceName_3112c2db-08b2-4bb9-b092-91dca03c8379
+  SentenceTextKey: SentenceText_cb5af824-de76-44e9-afd1-8d951b9025ff
+--- !u!114 &8873513849825780294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1717f3c6dba9fa40844ddacac301510, type: 3}
+  m_Name: Answer Node
+  m_EditorClassIdentifier: 
+  NodeGraph: {fileID: 11400000}
+  Rect:
+    serializedVersion: 2
+    x: 71.200226
+    y: 148.40005
+    width: 190
+    height: 195
+  IsDragging: 1
+  IsSelected: 0
+  Answers:
+  - "Estad\xEDsticas"
+  - Inventario
+  - "Missi\xF3n"
+  - Mazmorra
+  - Dejar de leer
+  AnswerKeys:
+  - Answer_3258a172-c6f7-418d-af70-f96aaa4f0227
+  - Answer_7739c713-0457-4894-8553-1dc3d4809efb
+  - Answer_d119a7d6-1cc4-412c-acbf-77cca4f9467d
+  - Answer_0f038ceb-9fa0-4347-8af5-383d192f1a5c
+  - Answer_a65b8151-1610-440f-8e5c-aa62a60530f6
+  ParentNodes:
+  - {fileID: 5856386948511318101}
+  ChildNodes:
+  - {fileID: 1145883675699619439}
+  - {fileID: 7644398621254001097}
+  - {fileID: -2138821601595872476}
+  - {fileID: 8070035994863220192}
+  - {fileID: -4003925255777371692}

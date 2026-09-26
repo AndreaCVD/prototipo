@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Tuto n0 Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Tuto n0
+  m_TableCollectionNameGuidString: da5ce788e2aaa934e95e6a9675c96bc7
+  m_Entries:
+  - m_Id: 153314717696
+    m_Key: SentenceText_5cf85444-c9d6-4491-a764-1a71628fc46f
+    m_Metadata:
+      m_Items: []
+  - m_Id: 153314717697
+    m_Key: SentenceName_5b697375-dddd-424a-ae54-7262016094f0
+    m_Metadata:
+      m_Items: []
+  - m_Id: 153314717698
+    m_Key: Answer_3258a172-c6f7-418d-af70-f96aaa4f0227
+    m_Metadata:
+      m_Items: []
+  - m_Id: 153314717699
+    m_Key: Answer_7739c713-0457-4894-8553-1dc3d4809efb
+    m_Metadata:
+      m_Items: []
+  - m_Id: 153314717700
+    m_Key: Answer_d119a7d6-1cc4-412c-acbf-77cca4f9467d
+    m_Metadata:
+      m_Items: []
+  - m_Id: 153314717701
+    m_Key: Answer_0f038ceb-9fa0-4347-8af5-383d192f1a5c
+    m_Metadata:
+      m_Items: []
+  - m_Id: 153314717702
+    m_Key: Answer_a65b8151-1610-440f-8e5c-aa62a60530f6
+    m_Metadata:
+      m_Items: []
+  - m_Id: 153314717703
+    m_Key: SentenceText_9fe727d5-b1b7-4e42-bbe0-f7d8d6c9f5f1
+    m_Metadata:
+      m_Items: []
+  - m_Id: 153314717704
+    m_Key: SentenceName_3112c2db-08b2-4bb9-b092-91dca03c8379
+    m_Metadata:
+      m_Items: []
+  - m_Id: 153314717705
+    m_Key: SentenceText_93e4235e-d031-4c91-bef4-c8d2e82d950e
+    m_Metadata:
+      m_Items: []
+  - m_Id: 153314717706
+    m_Key: SentenceText_7c0ad8de-8f3d-4bde-9ce7-72658520a1fa
+    m_Metadata:
+      m_Items: []
+  - m_Id: 153314717707
+    m_Key: SentenceText_05b40455-dd08-4322-8aee-e86339d209d7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 153314717708
+    m_Key: SentenceText_b1a2ed0f-9518-45fe-95c1-25ab837655d7
+    m_Metadata:
+      m_Items: []
+  - m_Id: 153314717709
+    m_Key: SentenceName_da35e201-671e-4616-8764-480fd1ce068a
+    m_Metadata:
+      m_Items: []
+  - m_Id: 153314717710
+    m_Key: SentenceText_cb5af824-de76-44e9-afd1-8d951b9025ff
+    m_Metadata:
+      m_Items: []
+  - m_Id: 153314717711
+    m_Key: SentenceText_87b7cb26-963f-490c-9a6d-3a2dc49179f4
+    m_Metadata:
+      m_Items: []
+  - m_Id: 153314717712
+    m_Key: SentenceText_7ccdcc78-827a-4dd6-97fd-78cfa7dc224c
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 1566622138992689344
+  references:
+    version: 2
+    RefIds:
+    - rid: 1566622138992689344
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1790381648813

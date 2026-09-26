@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.UIElements; // Imprescindible para UI Toolkit
 using System.Linq;
 using System.Collections; //Comparacion de Listas
+using Cursor = UnityEngine.Cursor;
 
 public class stats_UI : MonoBehaviour
 {
@@ -27,6 +28,9 @@ public class stats_UI : MonoBehaviour
     private IntegerField fieldFUE, fieldINT, fieldCAR, fieldLIFE, fieldCA;
     private VisualElement heartFill;
     private int maxLife;
+
+    //del inventario
+    private Button btn_prueva;
 
     //inv en el UI
     private VisualElement inventoryGrid;
@@ -62,6 +66,10 @@ public class stats_UI : MonoBehaviour
         fieldCA = root.Q("int_CA").Q<IntegerField>();
         heartFill = root.Q<VisualElement>("heart-fill");
 
+        btn_prueva = root.Q<Button>("btn_slot_0");
+        btn_prueva.RegisterCallback<MouseEnterEvent>(OnButtonHoverEnter);
+        btn_prueva.RegisterCallback<MouseLeaveEvent>(OnButtonHoverExit);
+
         //inventary
         inventoryGrid = root.Q<VisualElement>("inventory-grid");
         btnInventory = root.Q<Button>("btn-inventory");
@@ -78,6 +86,16 @@ public class stats_UI : MonoBehaviour
     private void OnDisable()
     {
         btnInventory.clicked -= ToggleInventary;
+    }
+
+    private void OnButtonHoverEnter(MouseEnterEvent evt)
+    {
+        Debug.Log("Mouse ha entrado");
+        // Add your hover logic here, e.g., change color, show tooltip
+    }
+    private void OnButtonHoverExit(MouseLeaveEvent evt)
+    {
+        Debug.Log("Mouse ha salido");
     }
 
     void Start()
@@ -170,10 +188,14 @@ public class stats_UI : MonoBehaviour
 
     void ToggleInventary()
     {
+        Cursor.lockState = CursorLockMode.None;
         if (!inCombat)
         {
             bool isDisplayed = inventoryGrid.style.display == DisplayStyle.Flex;
             inventoryGrid.style.display = isDisplayed ? DisplayStyle.None : DisplayStyle.Flex;
+
+            //bool isMouse = Cursor.lockState == CursorLockMode.Locked;
+            //Cursor.lockState = isMouse ? CursorLockMode.None : CursorLockMode.Locked;
         }
     }
 

@@ -49,10 +49,12 @@
                 </ui:VisualElement>
             </ui:VisualElement>
             <ui:VisualElement name="inventory-grid" class="inventory-grid" style="justify-content: space-evenly; display: flex;">
-                <ui:VisualElement name="slot-0" class="inv-slot" style="opacity: 1; visibility: visible;">
-                    <ui:VisualElement name="slot-0-icon" class="inv-slot__icon" />
-                    <ui:Label name="slot-0-badge" text="0" class="inv-slot__badge" />
-                </ui:VisualElement>
+                <ui:Button text="Button" selectable="true" name="btn_slot_0" style="background-color: rgba(188, 188, 188, 0); margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; min-width: -54px; min-height: -43px;">
+                    <ui:VisualElement name="slot-0" focusable="false" class="inv-slot" style="opacity: 1; visibility: visible;">
+                        <ui:VisualElement name="slot-0-icon" class="inv-slot__icon" />
+                        <ui:Label name="slot-0-badge" text="0" class="inv-slot__badge" />
+                    </ui:VisualElement>
+                </ui:Button>
                 <ui:VisualElement name="slot-1" class="inv-slot">
                     <ui:VisualElement name="slot-1-icon" class="inv-slot__icon" />
                     <ui:Label name="slot-1-badge" text="0" class="inv-slot__badge" />

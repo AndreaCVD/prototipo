@@ -7,6 +7,8 @@ using Cursor = UnityEngine.Cursor;
 
 public class stats_UI : MonoBehaviour
 {
+    private InputHandler escenaState;
+
     [Header("Ficha personaje")]
     [SerializeField] Parameters protagonista;
 
@@ -88,6 +90,22 @@ public class stats_UI : MonoBehaviour
         btnInventory.clicked -= ToggleInventary;
     }
 
+    void HandleEventBubbleUp(EventBase evt)
+    {
+        // Call the base function.
+       this.HandleEventBubbleUp(evt);
+        Debug.Log("ehehehehehhe");
+        if (evt.eventTypeId == PointerDownEvent.TypeId())
+        {
+            // ...
+        }
+        else if (evt.eventTypeId == MouseUpEvent.TypeId())
+        {
+            // ...
+        }
+        // More event types
+    }
+    // Mouse en el inventario
     private void OnButtonHoverEnter(MouseEnterEvent evt)
     {
         Debug.Log("Mouse ha entrado");
@@ -100,6 +118,8 @@ public class stats_UI : MonoBehaviour
 
     void Start()
     {
+        escenaState = GameObject.Find("personaje").GetComponent<InputHandler>();
+
         llaves = 0;
         llaveMaestra = 0;
         //espada = 0;
@@ -188,12 +208,18 @@ public class stats_UI : MonoBehaviour
 
     void ToggleInventary()
     {
-        Cursor.lockState = CursorLockMode.None;
         if (!inCombat)
         {
             bool isDisplayed = inventoryGrid.style.display == DisplayStyle.Flex;
             inventoryGrid.style.display = isDisplayed ? DisplayStyle.None : DisplayStyle.Flex;
 
+            if (!isDisplayed)
+            {
+                escenaState.ScenePause(true); //true, se para
+                Cursor.lockState = CursorLockMode.None;
+            }
+            else
+                escenaState.ScenePause(false);
             //bool isMouse = Cursor.lockState == CursorLockMode.Locked;
             //Cursor.lockState = isMouse ? CursorLockMode.None : CursorLockMode.Locked;
         }

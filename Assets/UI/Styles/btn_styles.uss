@@ -46,6 +46,19 @@
     border-color: var(--color-warm-tan);
     color: var(--color-antique-white);
 }
+.inv_btn__slot:focus {
+
+    background-color: black;
+
+}
+.inv_btn__slot {
+
+    background-color: black;
+
+}
+.Btn:focus > .child-element {
+    color: white;
+}
 
 .Btn:active {
     scale: 0.96;

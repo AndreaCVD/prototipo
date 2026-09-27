@@ -398,3 +398,6 @@
     background-color: var(--color-warm-tan);
     color: var(--color-deep-earth);
 }
+
+.inv_btn__slot {
+}

@@ -36,6 +36,26 @@
                 </ui:VisualElement>
             </ui:VisualElement>
         </ui:VisualElement>
+        <ui:VisualElement name="info_items_inventario" style="flex-grow: 1; position: absolute; bottom: 163px; align-items: center; width: 80%; height: 10%; left: 118px;">
+            <ui:VisualElement name="info_slot_0" style="flex-grow: 1; overflow: hidden; position: absolute; height: 76px; top: 70%; width: 148px; left: auto; background-color: rgb(137, 44, 8); justify-content: space-between; display: none; border-top-left-radius: 14px; border-top-right-radius: 14px; border-bottom-right-radius: 14px; border-bottom-left-radius: 14px; -unity-text-align: middle-center; align-items: center; align-self: center; -unity-font-style: normal; bottom: 0; right: auto;">
+                <ui:Label text="LLAVE&#10;Abre cofres en la mazmorra" style="flex-wrap: wrap; height: 75px; white-space: normal; -unity-text-align: upper-center; -unity-font-style: normal; font-size: 16px; color: rgb(228, 208, 167); -unity-font-definition: url(&quot;project://database/Assets/UI/Fonts/Alegreya_Sans_SC/AlegreyaSansSC-Bold.ttf?fileID=12800000&amp;guid=3dd824cdb4f3e3b45a1d07d43edcfa14&amp;type=3#AlegreyaSansSC-Bold&quot;);" />
+            </ui:VisualElement>
+            <ui:VisualElement name="info_slot_1" style="flex-grow: 1; overflow: hidden; position: absolute; height: 76px; top: 70%; width: 148px; left: auto; background-color: rgb(137, 44, 8); justify-content: space-between; display: none; border-top-left-radius: 14px; border-top-right-radius: 14px; border-bottom-right-radius: 14px; border-bottom-left-radius: 14px; -unity-text-align: middle-center; align-items: center; align-self: center; -unity-font-style: normal; bottom: 0; right: auto;">
+                <ui:Label text="LLAVE ESPECIAL&#10;Para bajar al siguiente nivel" style="flex-wrap: wrap; height: 75px; white-space: normal; -unity-text-align: upper-center; -unity-font-style: normal; font-size: 16px; color: rgb(228, 208, 167); -unity-font-definition: url(&quot;project://database/Assets/UI/Fonts/Alegreya_Sans_SC/AlegreyaSansSC-Bold.ttf?fileID=12800000&amp;guid=3dd824cdb4f3e3b45a1d07d43edcfa14&amp;type=3#AlegreyaSansSC-Bold&quot;);" />
+            </ui:VisualElement>
+            <ui:VisualElement name="info_slot_2" style="flex-grow: 1; overflow: hidden; position: absolute; height: 76px; top: 70%; width: 148px; left: auto; background-color: rgb(137, 44, 8); justify-content: space-between; display: none; border-top-left-radius: 14px; border-top-right-radius: 14px; border-bottom-right-radius: 14px; border-bottom-left-radius: 14px; -unity-text-align: middle-center; align-items: center; align-self: center; -unity-font-style: normal; bottom: 0; right: auto;">
+                <ui:Label text="POCION  VIDA&#10;&#10;+10 de tu salud" style="flex-wrap: wrap; height: 75px; white-space: normal; -unity-text-align: upper-center; -unity-font-style: normal; font-size: 16px; color: rgb(228, 208, 167); -unity-font-definition: url(&quot;project://database/Assets/UI/Fonts/Alegreya_Sans_SC/AlegreyaSansSC-Bold.ttf?fileID=12800000&amp;guid=3dd824cdb4f3e3b45a1d07d43edcfa14&amp;type=3#AlegreyaSansSC-Bold&quot;);" />
+            </ui:VisualElement>
+            <ui:VisualElement name="info_slot_3" style="flex-grow: 1; overflow: hidden; position: absolute; height: 76px; top: 70%; width: 148px; left: auto; background-color: rgb(137, 44, 8); justify-content: space-between; display: none; border-top-left-radius: 14px; border-top-right-radius: 14px; border-bottom-right-radius: 14px; border-bottom-left-radius: 14px; -unity-text-align: middle-center; align-items: center; align-self: center; -unity-font-style: normal; bottom: 0; right: auto;">
+                <ui:Label text="POCIÓN LAVA&#10;Te permite caminar por la lava" style="flex-wrap: wrap; height: 75px; white-space: normal; -unity-text-align: upper-center; -unity-font-style: normal; font-size: 16px; color: rgb(228, 208, 167); -unity-font-definition: url(&quot;project://database/Assets/UI/Fonts/Alegreya_Sans_SC/AlegreyaSansSC-Bold.ttf?fileID=12800000&amp;guid=3dd824cdb4f3e3b45a1d07d43edcfa14&amp;type=3#AlegreyaSansSC-Bold&quot;);" />
+            </ui:VisualElement>
+            <ui:VisualElement name="info_slot_4" style="flex-grow: 1; overflow: hidden; position: absolute; height: 76px; top: 70%; width: 148px; left: auto; background-color: rgb(137, 44, 8); justify-content: space-between; display: none; border-top-left-radius: 14px; border-top-right-radius: 14px; border-bottom-right-radius: 14px; border-bottom-left-radius: 14px; -unity-text-align: middle-center; align-items: center; align-self: center; -unity-font-style: normal; bottom: 0; right: auto;">
+                <ui:Label text="MONEDAS&#10;&#10;Tus ahorros" style="flex-wrap: wrap; height: 75px; white-space: normal; -unity-text-align: upper-center; -unity-font-style: normal; font-size: 16px; color: rgb(228, 208, 167); -unity-font-definition: url(&quot;project://database/Assets/UI/Fonts/Alegreya_Sans_SC/AlegreyaSansSC-Bold.ttf?fileID=12800000&amp;guid=3dd824cdb4f3e3b45a1d07d43edcfa14&amp;type=3#AlegreyaSansSC-Bold&quot;);" />
+            </ui:VisualElement>
+            <ui:VisualElement name="info_slot_5" style="flex-grow: 1; overflow: hidden; position: absolute; height: 76px; top: 70%; width: 148px; left: auto; background-color: rgb(137, 44, 8); justify-content: space-between; display: none; border-top-left-radius: 14px; border-top-right-radius: 14px; border-bottom-right-radius: 14px; border-bottom-left-radius: 14px; -unity-text-align: middle-center; align-items: center; align-self: center; -unity-font-style: normal; bottom: 0; right: auto;">
+                <ui:Label text="ARMADURA&#10;Mas protección (CA)" style="flex-wrap: wrap; height: 75px; white-space: normal; -unity-text-align: upper-center; -unity-font-style: normal; font-size: 16px; color: rgb(228, 208, 167); -unity-font-definition: url(&quot;project://database/Assets/UI/Fonts/Alegreya_Sans_SC/AlegreyaSansSC-Bold.ttf?fileID=12800000&amp;guid=3dd824cdb4f3e3b45a1d07d43edcfa14&amp;type=3#AlegreyaSansSC-Bold&quot;);" />
+            </ui:VisualElement>
+        </ui:VisualElement>
         <ui:VisualElement name="hud-bottom" class="hud-bottom">
             <ui:VisualElement name="health-container" class="health-container">
                 <ui:VisualElement name="heart-icon" class="heart">
@@ -48,33 +68,43 @@
                     <ui:IntegerField name="int_CA" value="60" focusable="false" class="fuente-personalizada card__value" />
                 </ui:VisualElement>
             </ui:VisualElement>
-            <ui:VisualElement name="inventory-grid" class="inventory-grid" style="justify-content: space-evenly; display: flex;">
-                <ui:Button text="Button" selectable="true" name="btn_slot_0" style="background-color: rgba(188, 188, 188, 0); margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; min-width: -54px; min-height: -43px;">
-                    <ui:VisualElement name="slot-0" focusable="false" class="inv-slot" style="opacity: 1; visibility: visible;">
+            <ui:VisualElement name="inventory-grid" class="inventory-grid" style="justify-content: space-evenly; display: flex; min-width: 530px; overflow: visible;">
+                <ui:Button selectable="true" name="btn_slot_0" emoji-fallback-support="false" parse-escape-sequences="false" style="background-color: rgb(68, 28, 4); margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 4px; padding-right: 4px; padding-bottom: 4px; padding-left: 4px; transform-origin: center;">
+                    <ui:VisualElement name="slot-0" focusable="false" class="inv-slot inv_btn__slot" style="opacity: 1; visibility: visible;">
                         <ui:VisualElement name="slot-0-icon" class="inv-slot__icon" />
                         <ui:Label name="slot-0-badge" text="0" class="inv-slot__badge" />
                     </ui:VisualElement>
                 </ui:Button>
-                <ui:VisualElement name="slot-1" class="inv-slot">
-                    <ui:VisualElement name="slot-1-icon" class="inv-slot__icon" />
-                    <ui:Label name="slot-1-badge" text="0" class="inv-slot__badge" />
-                </ui:VisualElement>
-                <ui:VisualElement name="slot-2" class="inv-slot">
-                    <ui:VisualElement name="slot-2-icon" class="inv-slot__icon" />
-                    <ui:Label name="slot-2-badge" text="0" class="inv-slot__badge" />
-                </ui:VisualElement>
-                <ui:VisualElement name="slot-3" class="inv-slot">
-                    <ui:VisualElement name="slot-3-icon" class="inv-slot__icon" />
-                    <ui:Label name="slot-3-badge" text="0" class="inv-slot__badge" />
-                </ui:VisualElement>
-                <ui:VisualElement name="slot-4" class="inv-slot">
-                    <ui:VisualElement name="slot-4-icon" class="inv-slot__icon" />
-                    <ui:Label name="slot-4-badge" text="0" class="inv-slot__badge" />
-                </ui:VisualElement>
-                <ui:VisualElement name="slot-5" class="inv-slot" style="display: flex; visibility: visible;">
-                    <ui:VisualElement name="slot-5-icon" class="inv-slot__icon" />
-                    <ui:Label name="slot-5-badge" text="0" class="inv-slot__badge" />
-                </ui:VisualElement>
+                <ui:Button text="Button" selectable="true" name="btn_slot_1" style="background-color: rgba(188, 188, 188, 0); margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; min-width: -54px; min-height: -43px;">
+                    <ui:VisualElement name="slot-1" focusable="true" class="inv-slot">
+                        <ui:VisualElement name="slot-1-icon" class="inv-slot__icon" />
+                        <ui:Label name="slot-1-badge" text="0" class="inv-slot__badge" />
+                    </ui:VisualElement>
+                </ui:Button>
+                <ui:Button text="Button" selectable="true" name="btn_slot_2" style="background-color: rgba(188, 188, 188, 0); margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; min-width: -54px; min-height: -43px;">
+                    <ui:VisualElement name="slot-2" class="inv-slot">
+                        <ui:VisualElement name="slot-2-icon" class="inv-slot__icon" />
+                        <ui:Label name="slot-2-badge" text="0" class="inv-slot__badge" />
+                    </ui:VisualElement>
+                </ui:Button>
+                <ui:Button text="Button" selectable="true" name="btn_slot_3" style="background-color: rgba(188, 188, 188, 0); margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; min-width: -54px; min-height: -43px;">
+                    <ui:VisualElement name="slot-3" class="inv-slot">
+                        <ui:VisualElement name="slot-3-icon" class="inv-slot__icon" />
+                        <ui:Label name="slot-3-badge" text="0" class="inv-slot__badge" />
+                    </ui:VisualElement>
+                </ui:Button>
+                <ui:Button text="Button" selectable="true" name="btn_slot_4" style="background-color: rgba(188, 188, 188, 0); margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; min-width: -54px; min-height: -43px;">
+                    <ui:VisualElement name="slot-4" class="inv-slot">
+                        <ui:VisualElement name="slot-4-icon" class="inv-slot__icon" />
+                        <ui:Label name="slot-4-badge" text="0" class="inv-slot__badge" />
+                    </ui:VisualElement>
+                </ui:Button>
+                <ui:Button text="Button" selectable="true" name="btn_slot_5" style="background-color: rgba(188, 188, 188, 0); margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; min-width: -54px; min-height: -43px;">
+                    <ui:VisualElement name="slot-5" class="inv-slot" style="display: flex; visibility: visible;">
+                        <ui:VisualElement name="slot-5-icon" class="inv-slot__icon" />
+                        <ui:Label name="slot-5-badge" text="0" class="inv-slot__badge" />
+                    </ui:VisualElement>
+                </ui:Button>
                 <ui:VisualElement name="slot-6" class="inv-slot" style="display: none; visibility: visible;">
                     <ui:VisualElement name="slot-6-icon" class="inv-slot__icon" />
                     <ui:Label name="slot-6-badge" text="0" class="inv-slot__badge" />

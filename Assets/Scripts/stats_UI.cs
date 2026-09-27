@@ -40,7 +40,8 @@ public class stats_UI : MonoBehaviour
     private VisualElement itemNotification;
     private VisualElement notifIcon;
     private Coroutine notifCoroutine;
-
+    
+    private VisualElement item_0, item_1, item_2, item_3, item_4, item_5;
     //contadores inventory
     private int llaves;
     private int llaveMaestra;
@@ -84,27 +85,72 @@ public class stats_UI : MonoBehaviour
         //Debug.Log(inventoryGrid);
         //Debug.Log(notifIcon);
 
+
+        item_0 =  root.Q<VisualElement>($"btn_slot_{0}");
+        item_1 =  root.Q<VisualElement>($"btn_slot_{1}");
+        item_2 =  root.Q<VisualElement>($"btn_slot_{2}");
+        item_3 =  root.Q<VisualElement>($"btn_slot_{3}");
+        item_4 =  root.Q<VisualElement>($"btn_slot_{4}");
+        item_5 =  root.Q<VisualElement>($"btn_slot_{5}");
+
+
+
+        item_0.RegisterCallback<FocusEvent>(OnFocusChanged);
+        item_1.RegisterCallback<FocusEvent>(OnFocusChanged);
+        item_2.RegisterCallback<FocusEvent>(OnFocusChanged);
+        item_3.RegisterCallback<FocusEvent>(OnFocusChanged);
+        item_4.RegisterCallback<FocusEvent>(OnFocusChanged);
+        item_5.RegisterCallback<FocusEvent>(OnFocusChanged);
+        //input A --> ir a la izquierda
+        //Input.GetKeyDown((KeyCode.A).clicked += MoveFocused;
+    }
+
+    void OnFocusChanged(FocusEvent evt)
+    {
+        //desactivamos todos
+        for (int i = 0; i <= 5; i++)
+        {
+            VisualElement aux = root.Q<VisualElement>($"info_slot_{i}");
+            aux.style.display = DisplayStyle.None;
+        }
+
+        if (evt.target == item_0) //si es focus, activamos la info
+        {
+            VisualElement info = root.Q<VisualElement>("info_slot_0");
+            info.style.display = DisplayStyle.Flex;
+        }
+        else if (evt.target == item_1)
+        {
+            VisualElement info = root.Q<VisualElement>("info_slot_1");
+            info.style.display = DisplayStyle.Flex;
+        }
+        else if (evt.target == item_2)
+        {
+            VisualElement info = root.Q<VisualElement>("info_slot_2");
+            info.style.display = DisplayStyle.Flex;
+        }
+        else if (evt.target == item_3)
+        {
+            VisualElement info = root.Q<VisualElement>("info_slot_3");
+            info.style.display = DisplayStyle.Flex;
+        }
+        else if (evt.target == item_4)
+        {
+            VisualElement info = root.Q<VisualElement>("info_slot_4");
+            info.style.display = DisplayStyle.Flex;
+        }
+        else if (evt.target == item_5)
+        {
+            VisualElement info = root.Q<VisualElement>("info_slot_5");
+            info.style.display = DisplayStyle.Flex;
+        }
+
     }
     private void OnDisable()
     {
         btnInventory.clicked -= ToggleInventary;
     }
 
-    void HandleEventBubbleUp(EventBase evt)
-    {
-        // Call the base function.
-       this.HandleEventBubbleUp(evt);
-        Debug.Log("ehehehehehhe");
-        if (evt.eventTypeId == PointerDownEvent.TypeId())
-        {
-            // ...
-        }
-        else if (evt.eventTypeId == MouseUpEvent.TypeId())
-        {
-            // ...
-        }
-        // More event types
-    }
     // Mouse en el inventario
     private void OnButtonHoverEnter(MouseEnterEvent evt)
     {
@@ -217,6 +263,8 @@ public class stats_UI : MonoBehaviour
             {
                 escenaState.ScenePause(true); //true, se para
                 Cursor.lockState = CursorLockMode.None;
+                root.Q<VisualElement>("btn_slot_0").Focus();
+
             }
             else
                 escenaState.ScenePause(false);
@@ -225,6 +273,16 @@ public class stats_UI : MonoBehaviour
         }
     }
 
+    void Focused_btn()
+    {
+        for (int i = 0; i < 5; i++)
+        {
+            //if (root.Q<VisualElement>($"slot-{i}-icon"))
+            //{
+            //    Debug.Log("ta focus");
+            //}
+        }
+    }
     bool areListEqual()
     {
         // Null check del inventario completo

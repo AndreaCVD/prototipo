@@ -267,22 +267,19 @@ public class stats_UI : MonoBehaviour
 
             }
             else
+            {
                 escenaState.ScenePause(false);
+                for (int i = 0; i <= 5; i++)
+                {
+                    VisualElement aux = root.Q<VisualElement>($"info_slot_{i}");
+                    aux.style.display = DisplayStyle.None;
+                }
+            }
             //bool isMouse = Cursor.lockState == CursorLockMode.Locked;
             //Cursor.lockState = isMouse ? CursorLockMode.None : CursorLockMode.Locked;
         }
     }
 
-    void Focused_btn()
-    {
-        for (int i = 0; i < 5; i++)
-        {
-            //if (root.Q<VisualElement>($"slot-{i}-icon"))
-            //{
-            //    Debug.Log("ta focus");
-            //}
-        }
-    }
     bool areListEqual()
     {
         // Null check del inventario completo

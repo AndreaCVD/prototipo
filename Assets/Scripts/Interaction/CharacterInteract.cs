@@ -42,9 +42,9 @@ public class CharacterInteract : MonoBehaviour
         ray = new Ray(pivot_personaje.transform.position, pivot_personaje.transform.forward);
 
         //canvas_visible = Input.GetKeyDown(KeyCode.P);
-        canvas_visible = Input.GetKeyDown((KeyCode.Mouse0));
+        canvas_visible = Input.GetKeyDown((KeyCode.Space));
 
-        Invoke(nameof(Interact), 1.0f);
+        Invoke(nameof(Interact), 0f);
     }
     public void Interact()
     {

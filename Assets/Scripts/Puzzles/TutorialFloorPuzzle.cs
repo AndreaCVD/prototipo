@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class TutorialFloorPuzzle : MonoBehaviour
 {
+    [SerializeField] CanvasGroup tutorial;
+
     [SerializeField] Puzzle lista;
 
     private bool preload;
@@ -27,6 +29,7 @@ public class TutorialFloorPuzzle : MonoBehaviour
 
     void Start()
     {
+        
         InstanciarPers();
         revisarPuzzle();
 
@@ -103,8 +106,9 @@ public class TutorialFloorPuzzle : MonoBehaviour
             //Se instancia viejo de playa
             Instantiate(Viejo[2], Viejo[3].transform.position, Viejo[3].transform.rotation);
         }
-        else
+        else // viejo normal con tutorial
         {
+            tutorial.alpha = 0.3f;
             Instantiate(Viejo[0], Viejo[1].transform.position, Viejo[1].transform.rotation);
             
         }

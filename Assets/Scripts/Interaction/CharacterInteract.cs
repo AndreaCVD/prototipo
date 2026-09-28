@@ -149,7 +149,7 @@ public class CharacterInteract : MonoBehaviour
                 break;
             case "Cofre":
                 text_interaccion.text = "Abrir Cofre";
-                break;
+                break; 
             case "Puerta":
                 text_interaccion.text = "Abrir Puerta";
                 break;

@@ -275,8 +275,6 @@ public class stats_UI : MonoBehaviour
                     aux.style.display = DisplayStyle.None;
                 }
             }
-            //bool isMouse = Cursor.lockState == CursorLockMode.Locked;
-            //Cursor.lockState = isMouse ? CursorLockMode.None : CursorLockMode.Locked;
         }
     }
 

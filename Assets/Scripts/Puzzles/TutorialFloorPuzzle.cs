@@ -103,6 +103,8 @@ public class TutorialFloorPuzzle : MonoBehaviour
         //Viejo
         if (lista.NivelDesbloqueado[0].acabado)
         {
+            tutorial.alpha = 0f;
+
             //Se instancia viejo de playa
             Instantiate(Viejo[2], Viejo[3].transform.position, Viejo[3].transform.rotation);
         }

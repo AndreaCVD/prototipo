@@ -7941,6 +7941,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3726092340330504558, guid: 3848a681804d73d4fb34add03acbdab0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1470492425}
+    - targetCorrespondingSourceObject: {fileID: 3726092340330504558, guid: 3848a681804d73d4fb34add03acbdab0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1470492428}
     - targetCorrespondingSourceObject: {fileID: 2981868588886401191, guid: 3848a681804d73d4fb34add03acbdab0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1430939758}
@@ -8232,6 +8235,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dados: []
   imagenesDados: []
+--- !u!320 &1470492428
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1470492422}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: 6f59f81cbf3a53949aab9d033447d0ce, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings: []
+  m_ExposedReferences:
+    m_References: []
 --- !u!1001 &1521476942
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -2605,6 +2605,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tutorial: {fileID: 619584961}
   lista: {fileID: 11400000, guid: 92b50351187af094c96f6e51da1599fa, type: 2}
+  variables: {fileID: 11400000, guid: 61133ed5c4a3f7d488a61fd3977e33ab, type: 2}
   puertaMazmorra: {fileID: 628633756}
   candado_1: {fileID: 1957354804}
   zona_1: {fileID: 1167934477}
@@ -9048,7 +9049,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7663525706672394598, guid: 459b944f305510f4c837797037447397, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8402151408438500115, guid: 459b944f305510f4c837797037447397, type: 3}
       propertyPath: m_Pivot.x

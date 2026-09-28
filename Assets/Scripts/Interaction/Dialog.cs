@@ -42,6 +42,7 @@ public class Dialog : MonoBehaviour
         load = aux.GetComponent<LoadScene>();
         preload = aux.GetComponent<Preload>();
 
+        
         //lastEstate = load.onCombat;
     }
     //void Update()
@@ -106,10 +107,20 @@ public class Dialog : MonoBehaviour
         _dialogBehaviour.BindExternalFunction("tienda", Tienda);
         _dialogBehaviour.BindExternalFunction("moneda", moneda);
 
+        //viejo
+        _dialogBehaviour.BindExternalFunction("parar_img", parar_img);
+
         //Le enviamos el dialogo que tiene que hacer --> ESTE SIEMPRE ÚLTIMO
         _dialogBehaviour.StartDialog(dialogo);
 
     }
+    //viejo
+    public void parar_img()
+    {
+        CanvasGroup canvas = GameObject.Find("Canvas_viejo").GetComponent<CanvasGroup>();
+        canvas.alpha = 0f;
+    }
+    // Abrir Tienda
     public void Tienda()
     {
         SceneManager.LoadScene("Tienda_Yusseif", LoadSceneMode.Additive);

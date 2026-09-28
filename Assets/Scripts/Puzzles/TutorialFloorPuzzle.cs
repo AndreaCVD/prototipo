@@ -7,8 +7,11 @@ using UnityEngine.SceneManagement;
 public class TutorialFloorPuzzle : MonoBehaviour
 {
     [SerializeField] CanvasGroup tutorial;
+     private CanvasGroup viejo_interaction;
 
     [SerializeField] Puzzle lista;
+    
+    [SerializeField] private cherrydev.VariablesConfig variables;
 
     private bool preload;
 
@@ -109,10 +112,12 @@ public class TutorialFloorPuzzle : MonoBehaviour
             Instantiate(Viejo[2], Viejo[3].transform.position, Viejo[3].transform.rotation);
         }
         else // viejo normal con tutorial
-        {
+        {        
             tutorial.alpha = 0.3f;
             Instantiate(Viejo[0], Viejo[1].transform.position, Viejo[1].transform.rotation);
-            
+
+            viejo_interaction = GameObject.Find("Canvas_viejo").GetComponent<CanvasGroup>();
+            viejo_interaction.alpha = 1f;
         }
         //Etkis --> Mirar Puzzle B2
         if (lista.Nivel_1[1].acabado)

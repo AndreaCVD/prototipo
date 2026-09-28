@@ -15,6 +15,8 @@ public class CommandPanel : MonoBehaviour
     [SerializeField] Sprite iconoEspada;
     [SerializeField] Sprite iconoPocionLava;
     [SerializeField] Sprite iconoMonedas;
+    [SerializeField] Sprite iconoArmaduraCuero;
+    [SerializeField] Sprite iconoArmaduraMalla;
 
     [SerializeField] CommandManager commandManager;
     [SerializeField] Dice diceSprite;
@@ -48,10 +50,11 @@ public class CommandPanel : MonoBehaviour
     private Button btnItem, btnRun;
     //contadores inventory
     private int llaves, llaveMaestra, pocionVida, pocionLava, monedas;
+    private string armadura;
 
     private Label info_tirada, info_result;
 
-    public string armadura, nom_ataque;
+    public string ca_enemigo, nom_ataque;
     private int stat, veces_tirada, MAX_vida;
 
     private bool isJefe;
@@ -61,7 +64,7 @@ public class CommandPanel : MonoBehaviour
     void OnEnable()
     {
         MAX_vida = protagonista.stats.Get(PersonajesStats.Max_Vida);
-        armadura = " ";
+        ca_enemigo = " ";
         nom_ataque = " ";
         veces_tirada = 1;
         enamorado = 0;
@@ -73,7 +76,7 @@ public class CommandPanel : MonoBehaviour
         pocionVida = 0;
         pocionLava = 0;
         monedas = 0;
-
+        armadura = null;
 
 
         if (load_script == null)
@@ -236,7 +239,7 @@ public class CommandPanel : MonoBehaviour
     {
         info_result.style.visibility = Visibility.Visible;
 
-        switch (armadura)
+        switch (ca_enemigo)
         {
             case "si":
                 info_result.text = "Bien hecho";
@@ -318,7 +321,7 @@ public class CommandPanel : MonoBehaviour
             if (AC_superada == 2)
             {
                 tirada_armadura.style.display = DisplayStyle.None;
-                armadura = "si";
+                ca_enemigo = "si";
                 veces_tirada = 1;
 
                 //cambiamos el dado tambien
@@ -330,7 +333,7 @@ public class CommandPanel : MonoBehaviour
             else if (AC_superada == 0)
             {
                 tirada_armadura.style.display = DisplayStyle.None;
-                armadura = "critico";
+                ca_enemigo = "critico";
                 veces_tirada = 2;
 
                 dado();
@@ -342,13 +345,13 @@ public class CommandPanel : MonoBehaviour
             {
                 tirada_armadura.style.display = DisplayStyle.None;
                 // el jugador se hace daño a si mismo
-                armadura = "fatidico";
+                ca_enemigo = "fatidico";
                 Resultado_Tirada();
                 NextAction();
             }
             else //(AC_superada == 3)
             {
-                armadura = "no";
+                ca_enemigo = "no";
                 Resultado_Tirada();
                 Back();
                 commandManager.NextTurn();
@@ -370,13 +373,13 @@ public class CommandPanel : MonoBehaviour
         if (AC_superada == 2)
         {
             tirada_armadura.style.display = DisplayStyle.None;
-            armadura = "si";
+            ca_enemigo = "si";
             veces_tirada = 1;
         }
         else //(AC_superada == 3)
         {
             tirada_armadura.style.display = DisplayStyle.None;
-            armadura = "no";
+            ca_enemigo = "no";
         }
 
         if (nom_ataque == "intimidar")
@@ -441,7 +444,7 @@ public class CommandPanel : MonoBehaviour
 
         nom_ataque = " ";
         stat = 10;
-        armadura = " ";
+        ca_enemigo = " ";
     }
     IEnumerator ChangeText(int time)
     {
@@ -454,18 +457,18 @@ public class CommandPanel : MonoBehaviour
     public void NextAction() 
     {
         //Mira la armadura y que menus abrir
-        if (armadura == "no") //No super el AC
+        if (ca_enemigo == "no") //No super el AC
         {
             Back();
             Resetear_Valores();
             commandManager.NextTurn();
         }
-        else if (armadura == "critico") //El jugador tira NAT 20
+        else if (ca_enemigo == "critico") //El jugador tira NAT 20
         {
             fuerza_options.style.display = DisplayStyle.None;
             Menu_TiradaCritico();
         }
-        else if (armadura == "fatidico") //El jugador tira NAT 1
+        else if (ca_enemigo == "fatidico") //El jugador tira NAT 1
         {
             fuerza_options.style.display = DisplayStyle.None;
             Menu_TiradaFatidica();
@@ -489,7 +492,7 @@ public class CommandPanel : MonoBehaviour
     }
     public void Daga()
     {
-        if (armadura == " ") //No ha hecho nada aun
+        if (ca_enemigo == " ") //No ha hecho nada aun
         {
             nom_ataque = "daga";
             Menu_TiradaArmadura();
@@ -501,7 +504,7 @@ public class CommandPanel : MonoBehaviour
     }
     public void Espada()
     {
-        if (armadura == " ") //No ha hecho nada aun
+        if (ca_enemigo == " ") //No ha hecho nada aun
         {
             nom_ataque = "espada";
             Menu_TiradaArmadura();
@@ -579,7 +582,7 @@ public class CommandPanel : MonoBehaviour
     public void Enamorar()
     {
         Debug.Log(isJefe);
-        if (armadura == " ") //No ha hecho nada aun
+        if (ca_enemigo == " ") //No ha hecho nada aun
         {
             string aux = commandManager.name_Target();
             if (aux == "Jefe_Lerendur" || aux == "Jefe_Libro")
@@ -593,7 +596,7 @@ public class CommandPanel : MonoBehaviour
             caris_options.style.display = DisplayStyle.None;
             Menu_TiradaArmadura();
         }
-        else if (armadura == "no")
+        else if (ca_enemigo == "no")
         {
             commandManager.model_dados(20);
 
@@ -655,7 +658,7 @@ public class CommandPanel : MonoBehaviour
     {
         // Aciertas == Menos daño al enemigo -> asustado -d4
         // Fallas == Mas daño al enemigo -> enfadadp +1d4
-        if (armadura == " ") //No ha hecho nada aun
+        if (ca_enemigo == " ") //No ha hecho nada aun
         {
             commandManager.Carlos_img("intimidar");
 
@@ -663,7 +666,7 @@ public class CommandPanel : MonoBehaviour
             caris_options.style.display = DisplayStyle.None;
             Menu_TiradaArmadura();
         }
-        else if (armadura == "no")
+        else if (ca_enemigo == "no")
         {
             Resetear_Valores();
             Back();
@@ -679,7 +682,7 @@ public class CommandPanel : MonoBehaviour
 
             commandManager.NextTurn();
         }
-        else if (armadura == "si")
+        else if (ca_enemigo == "si")
         {
             Debug.Log("armadura si del prota");
             info_result.style.visibility = Visibility.Visible;
@@ -772,12 +775,14 @@ public class CommandPanel : MonoBehaviour
         //if (protagonista.Inventario.Daga == null) return false;
         if (protagonista.Inventario.PocionLava == null) return false;
         //if (protagonista.Inventario.Espada == null) return false;
+        if (protagonista.Inventario.Armadura == null) return false;
 
         if (protagonista.Inventario.Llave.Count != llaves) return false;
         if (protagonista.Inventario.LlaveMaestra.Count != llaveMaestra) return false;
         if (protagonista.Inventario.PocionVida.Count != pocionVida) return false;
         if (protagonista.Inventario.PocionLava.Count != pocionLava) return false;
         if (protagonista.Inventario.Monedas != monedas) return false;
+        if (protagonista.Inventario.Armadura != armadura) return false;
         //if (protagonista.Inventario.Daga.Count != daga) return false;
         //if (protagonista.Inventario.Espada.Count != espada) return false;
 
@@ -802,6 +807,7 @@ public class CommandPanel : MonoBehaviour
         //daga = protagonista.Inventario.Daga.Count;
         //espada = protagonista.Inventario.Espada.Count;
         monedas = protagonista.Inventario.Monedas;
+        armadura = protagonista.Inventario.Armadura;
 
         SetSlot(0, llaves > 0 ? iconoLlave : null, llaves);
         SetSlot(1, llaveMaestra > 0 ? iconoLlaveMaestra : null, llaveMaestra);
@@ -811,6 +817,10 @@ public class CommandPanel : MonoBehaviour
         //SetSlot(5, pocionLava > 0 ? iconoPocionLava : null, pocionLava);
         SetSlot(3, pocionLava > 0 ? iconoPocionLava : null, pocionLava);
         SetSlot(4, monedas > 0 ? iconoMonedas : null, monedas);
+        if (armadura == "cuero")
+            SetSlot(5, armadura != null ? iconoArmaduraCuero : null, 1);
+        else if (armadura == "malla")
+            SetSlot(5, armadura != null ? iconoArmaduraMalla : null, 1);
     }
     void SetSlot(int index, Sprite icono, int cantidad)
     {

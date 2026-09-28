@@ -46,7 +46,7 @@
     border-color: var(--color-warm-tan);
     color: var(--color-antique-white);
 }
-.Btn:focus-visible  {
+.Btn:focus {
     outline: 2px solid blue;
     background-color: black;
 

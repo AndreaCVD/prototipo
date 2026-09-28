@@ -51,7 +51,9 @@ public class stats_UI : MonoBehaviour
     private int pocionLava;
     private int monedas;
     private string armadura;
-    private bool inCombat;
+    private bool inCombat, inInventary;
+
+    private int evt_btn;
 
     private void OnEnable()
     {
@@ -105,47 +107,6 @@ public class stats_UI : MonoBehaviour
         //Input.GetKeyDown((KeyCode.A).clicked += MoveFocused;
     }
 
-    void OnFocusChanged(FocusEvent evt)
-    {
-        //desactivamos todos
-        for (int i = 0; i <= 5; i++)
-        {
-            VisualElement aux = root.Q<VisualElement>($"info_slot_{i}");
-            aux.style.display = DisplayStyle.None;
-        }
-
-        if (evt.target == item_0) //si es focus, activamos la info
-        {
-            VisualElement info = root.Q<VisualElement>("info_slot_0");
-            info.style.display = DisplayStyle.Flex;
-        }
-        else if (evt.target == item_1)
-        {
-            VisualElement info = root.Q<VisualElement>("info_slot_1");
-            info.style.display = DisplayStyle.Flex;
-        }
-        else if (evt.target == item_2)
-        {
-            VisualElement info = root.Q<VisualElement>("info_slot_2");
-            info.style.display = DisplayStyle.Flex;
-        }
-        else if (evt.target == item_3)
-        {
-            VisualElement info = root.Q<VisualElement>("info_slot_3");
-            info.style.display = DisplayStyle.Flex;
-        }
-        else if (evt.target == item_4)
-        {
-            VisualElement info = root.Q<VisualElement>("info_slot_4");
-            info.style.display = DisplayStyle.Flex;
-        }
-        else if (evt.target == item_5)
-        {
-            VisualElement info = root.Q<VisualElement>("info_slot_5");
-            info.style.display = DisplayStyle.Flex;
-        }
-
-    }
     private void OnDisable()
     {
         btnInventory.clicked -= ToggleInventary;
@@ -174,7 +135,7 @@ public class stats_UI : MonoBehaviour
         pocionLava = 0;
         monedas = 0;
         armadura = null;
-
+        inInventary = false;
         //Seteamos valores, int -> string
         int f = protagonista.stats.Get(PersonajesStats.Fuerza);
         int i = protagonista.stats.Get(PersonajesStats.Inteligencia);
@@ -220,8 +181,12 @@ public class stats_UI : MonoBehaviour
         {
             ToggleInventary();
         }
+        if (Input.GetKeyDown(KeyCode.Space) && inInventary)
+        {
+            Use_Item();
+        }
     }
-
+    // Ocultar o visibilizar partes de la UI
     public void Iniciar_Combate()
     {
         inCombat = true;
@@ -251,7 +216,61 @@ public class stats_UI : MonoBehaviour
         hud_bottom_right.style.display = DisplayStyle.None;
         hud_bottom.style.display = DisplayStyle.None;
     }
+    // Inventario
+    void OnFocusChanged(FocusEvent evt)
+    {
 
+        //desactivamos todos
+        for (int i = 0; i <= 5; i++)
+        {
+            VisualElement aux = root.Q<VisualElement>($"info_slot_{i}");
+            aux.style.display = DisplayStyle.None;
+        }
+
+        if (evt.target == item_0) //si es focus, activamos la info
+        {
+            evt_btn = 0;
+
+            VisualElement info = root.Q<VisualElement>("info_slot_0");
+            info.style.display = DisplayStyle.Flex;
+            //item_0.style.backgroundColor =
+            //    item_0.style.backgroundColor.value.a > 0 ? new StyleColor(Color.clear) : new StyleColor(Color.gray);
+        }
+    
+        else if (evt.target == item_1)
+        {
+            evt_btn = 1;
+
+            VisualElement info = root.Q<VisualElement>("info_slot_1");
+            info.style.display = DisplayStyle.Flex;
+        }
+        else if (evt.target == item_2)
+        {
+            evt_btn = 2;
+
+            VisualElement info = root.Q<VisualElement>("info_slot_2");
+            info.style.display = DisplayStyle.Flex;
+        }
+        else if (evt.target == item_3)
+        {
+            evt_btn = 3;
+            VisualElement info = root.Q<VisualElement>("info_slot_3");
+            info.style.display = DisplayStyle.Flex;
+        }
+        else if (evt.target == item_4)
+        {
+            evt_btn = 4;
+            VisualElement info = root.Q<VisualElement>("info_slot_4");
+            info.style.display = DisplayStyle.Flex;
+        }
+        else if (evt.target == item_5)
+        {
+            evt_btn = 5;
+            VisualElement info = root.Q<VisualElement>("info_slot_5");
+            info.style.display = DisplayStyle.Flex;
+        }
+
+    }
     void ToggleInventary()
     {
         if (!inCombat)
@@ -261,13 +280,15 @@ public class stats_UI : MonoBehaviour
 
             if (!isDisplayed)
             {
+                inInventary = true;
                 escenaState.ScenePause(true); //true, se para
-                Cursor.lockState = CursorLockMode.None;
+                //Cursor.lockState = CursorLockMode.None;
                 root.Q<VisualElement>("btn_slot_0").Focus();
 
             }
             else
             {
+                inInventary = false;
                 escenaState.ScenePause(false);
                 for (int i = 0; i <= 5; i++)
                 {
@@ -277,6 +298,54 @@ public class stats_UI : MonoBehaviour
             }
         }
     }
+
+    void Use_Item()
+    {
+        if (evt_btn == 0) // llave
+        {
+            Debug.Log("Usar item llave");
+
+        }
+        else if (evt_btn == 1) // llave maestra
+        {
+            Debug.Log("Usar item llave maestra");
+
+        }
+        else if (evt_btn == 2) // pocion vida
+        {
+            int vida = protagonista.stats.values[3].value;
+            if (protagonista.Inventario.PocionVida.Count != 0)
+            {
+                if (vida > 0 && vida <= maxLife - 10) //MAX vida - 10
+                {
+                    protagonista.stats.values[3].value += 10;
+                    protagonista.Inventario.PocionVida.RemoveAt(protagonista.Inventario.PocionVida.Count - 1);
+                }
+                else if (vida > 0 && vida < maxLife)
+                {
+                    protagonista.stats.values[3].value = maxLife;
+                    protagonista.Inventario.PocionVida.RemoveAt(protagonista.Inventario.PocionVida.Count - 1);
+                }
+                else
+                    Debug.Log("Tienes vida maxima");
+            }
+        }
+        else if (evt_btn == 3) // pocion lava
+        {
+            Debug.Log("Usar item pocion lava");
+
+        }
+        else if (evt_btn == 4) // monedas
+        {
+            Debug.Log("Usar item monedas");
+
+        }
+        else if (evt_btn == 5) // armadura
+        {
+            Debug.Log("Usar item armadura");
+        }
+    }
+
 
     bool areListEqual()
     {

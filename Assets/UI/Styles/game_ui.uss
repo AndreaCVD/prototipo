@@ -288,6 +288,9 @@
     -unity-text-align: middle-center;
 }
 
+.inv_btn__slot {
+}
+
 #dialogue-box {
     position: relative;
     bottom: var(--space-2xl);
@@ -397,7 +400,4 @@
 .answer-button:active {
     background-color: var(--color-warm-tan);
     color: var(--color-deep-earth);
-}
-
-.inv_btn__slot {
 }

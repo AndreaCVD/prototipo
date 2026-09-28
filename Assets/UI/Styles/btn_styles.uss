@@ -46,12 +46,12 @@
     border-color: var(--color-warm-tan);
     color: var(--color-antique-white);
 }
-.inv_btn__slot:focus {
-
+.Btn:focus-visible  {
+    outline: 2px solid blue;
     background-color: black;
 
 }
-.inv_btn__slot {
+.inv_btn__slot:hover {
 
     background-color: black;
 

@@ -40,7 +40,8 @@ public class stats_UI : MonoBehaviour
     private VisualElement itemNotification;
     private VisualElement notifIcon;
     private Coroutine notifCoroutine;
-    
+
+    private VisualElement info_items_block;
     private VisualElement item_0, item_1, item_2, item_3, item_4, item_5;
     //contadores inventory
     private int llaves;
@@ -87,7 +88,7 @@ public class stats_UI : MonoBehaviour
         //Debug.Log(inventoryGrid);
         //Debug.Log(notifIcon);
 
-
+        info_items_block = root.Q<VisualElement>("info_items_inventario");
         item_0 =  root.Q<VisualElement>($"btn_slot_{0}");
         item_1 =  root.Q<VisualElement>($"btn_slot_{1}");
         item_2 =  root.Q<VisualElement>($"btn_slot_{2}");
@@ -145,6 +146,7 @@ public class stats_UI : MonoBehaviour
         //int h = protagonista.stats.Get(PersonajesStats.Constitucion);
 
         maxLife = protagonista.stats.Get(PersonajesStats.Max_Vida);
+        info_items_block.style.display = DisplayStyle.None; //si esta flex bloquea mouse
 
         SetFuerza(f);
         SetIntel(i);
@@ -280,6 +282,7 @@ public class stats_UI : MonoBehaviour
 
             if (!isDisplayed)
             {
+                info_items_block.style.display = DisplayStyle.Flex;
                 inInventary = true;
                 escenaState.ScenePause(true); //true, se para
                 //Cursor.lockState = CursorLockMode.None;
@@ -288,13 +291,9 @@ public class stats_UI : MonoBehaviour
             }
             else
             {
+                info_items_block.style.display = DisplayStyle.None;
                 inInventary = false;
                 escenaState.ScenePause(false);
-                for (int i = 0; i <= 5; i++)
-                {
-                    VisualElement aux = root.Q<VisualElement>($"info_slot_{i}");
-                    aux.style.display = DisplayStyle.None;
-                }
             }
         }
     }

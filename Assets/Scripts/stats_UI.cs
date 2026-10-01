@@ -314,6 +314,9 @@ public class stats_UI : MonoBehaviour
             else
             {
                 info_items_block.style.display = DisplayStyle.None;
+                VisualElement a = root.Q<VisualElement>("slot_5_choose");
+                a.style.display = DisplayStyle.None;
+
                 inInventary = false;
                 escenaState.ScenePause(false);
             }

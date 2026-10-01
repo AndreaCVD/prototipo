@@ -91,8 +91,8 @@ public class stats_UI : MonoBehaviour
         //Debug.Log(notifIcon);
 
         choose_ca = root.Q<VisualElement>("slot_5_choose");
-        btn_cuero = root.Q<VisualElement>("btn_slot_cuero");
-        btn_malla = root.Q<VisualElement>("btn_slot_malla");
+        btn_cuero = root.Q<VisualElement>($"btn_slot_{51}");
+        btn_malla = root.Q<VisualElement>($"btn_slot_{52}");
         btn_cuero.RegisterCallback<FocusEvent>(OnFocusChanged);
         btn_malla.RegisterCallback<FocusEvent>(OnFocusChanged);
 
@@ -362,7 +362,7 @@ public class stats_UI : MonoBehaviour
 
             VisualElement aux = root.Q<VisualElement>("slot_5_choose");
             aux.style.display = DisplayStyle.Flex;
-            root.Q<VisualElement>("btn_slot_cuero").Focus();
+            root.Q<VisualElement>($"btn_slot_{51}").Focus();
         }
         else if (evt_btn == 51) //cuero
         {
@@ -538,6 +538,8 @@ public class stats_UI : MonoBehaviour
         slotBadge.style.display = cantidad > 0
             ? DisplayStyle.Flex
             : DisplayStyle.None;
+        if (cantidad <= 0)
+            root.Q<VisualElement>($"btn_slot_{index}").SetEnabled(false);
     }
     void SetArmadura()
     {

@@ -18,14 +18,10 @@ MonoBehaviour:
   LlaveMaestra:
   - 
   PocionVida:
-  - 
   - pocion_tienda
   - pocion_tienda
-  PocionLava:
-  - 
-  - pocion_tienda
-  - pocion_tienda
+  PocionLava: []
   Monedas: 100
-  Armadura: cuero
+  Armadura: malla
   CA_cuero: 2
   CA_malla: 2

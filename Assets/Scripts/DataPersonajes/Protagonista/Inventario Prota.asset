@@ -27,3 +27,5 @@ MonoBehaviour:
   - pocion_tienda
   Monedas: 100
   Armadura: cuero
+  CA_cuero: 2
+  CA_malla: 2

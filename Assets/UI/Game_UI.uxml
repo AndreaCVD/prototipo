@@ -36,7 +36,7 @@
                 </ui:VisualElement>
             </ui:VisualElement>
         </ui:VisualElement>
-        <ui:VisualElement name="info_items_inventario" style="flex-grow: 1; position: absolute; bottom: 163px; align-items: center; width: 80%; height: 10%; left: 118px;">
+        <ui:VisualElement name="info_items_inventario" style="flex-grow: 1; position: absolute; bottom: 163px; align-items: center; width: 80%; height: 10%; left: 118px; display: none;">
             <ui:VisualElement name="info_slot_0" style="flex-grow: 1; overflow: hidden; position: absolute; height: 76px; top: 70%; width: 148px; left: auto; background-color: rgb(137, 44, 8); justify-content: space-between; display: none; border-top-left-radius: 14px; border-top-right-radius: 14px; border-bottom-right-radius: 14px; border-bottom-left-radius: 14px; -unity-text-align: middle-center; align-items: center; align-self: center; -unity-font-style: normal; bottom: 0; right: auto;">
                 <ui:Label text="LLAVE&#10;Abre cofres en la mazmorra" style="flex-wrap: wrap; height: 75px; white-space: normal; -unity-text-align: upper-center; -unity-font-style: normal; font-size: 16px; color: rgb(228, 208, 167); -unity-font-definition: url(&quot;project://database/Assets/UI/Fonts/Alegreya_Sans_SC/AlegreyaSansSC-Bold.ttf?fileID=12800000&amp;guid=3dd824cdb4f3e3b45a1d07d43edcfa14&amp;type=3#AlegreyaSansSC-Bold&quot;);" />
             </ui:VisualElement>
@@ -52,8 +52,22 @@
             <ui:VisualElement name="info_slot_4" style="flex-grow: 1; overflow: hidden; position: absolute; height: 76px; top: 70%; width: 148px; left: auto; background-color: rgb(137, 44, 8); justify-content: space-between; display: none; border-top-left-radius: 14px; border-top-right-radius: 14px; border-bottom-right-radius: 14px; border-bottom-left-radius: 14px; -unity-text-align: middle-center; align-items: center; align-self: center; -unity-font-style: normal; bottom: 0; right: auto;">
                 <ui:Label text="MONEDAS&#10;&#10;Tus ahorros" style="flex-wrap: wrap; height: 75px; white-space: normal; -unity-text-align: upper-center; -unity-font-style: normal; font-size: 16px; color: rgb(228, 208, 167); -unity-font-definition: url(&quot;project://database/Assets/UI/Fonts/Alegreya_Sans_SC/AlegreyaSansSC-Bold.ttf?fileID=12800000&amp;guid=3dd824cdb4f3e3b45a1d07d43edcfa14&amp;type=3#AlegreyaSansSC-Bold&quot;);" />
             </ui:VisualElement>
-            <ui:VisualElement name="info_slot_5" style="flex-grow: 1; overflow: hidden; position: absolute; height: 76px; top: 70%; width: 148px; left: auto; background-color: rgb(137, 44, 8); justify-content: space-between; display: none; border-top-left-radius: 14px; border-top-right-radius: 14px; border-bottom-right-radius: 14px; border-bottom-left-radius: 14px; -unity-text-align: middle-center; align-items: center; align-self: center; -unity-font-style: normal; bottom: 0; right: auto;">
-                <ui:Label text="ARMADURA&#10;Mas protección (CA)" style="flex-wrap: wrap; height: 75px; white-space: normal; -unity-text-align: upper-center; -unity-font-style: normal; font-size: 16px; color: rgb(228, 208, 167); -unity-font-definition: url(&quot;project://database/Assets/UI/Fonts/Alegreya_Sans_SC/AlegreyaSansSC-Bold.ttf?fileID=12800000&amp;guid=3dd824cdb4f3e3b45a1d07d43edcfa14&amp;type=3#AlegreyaSansSC-Bold&quot;);" />
+            <ui:VisualElement name="info_slot_5" style="flex-grow: 1; overflow: hidden; position: absolute; height: 76px; top: 70%; width: 148px; left: auto; background-color: rgb(137, 44, 8); justify-content: space-between; display: none; border-top-left-radius: 14px; border-top-right-radius: 14px; border-bottom-right-radius: 14px; border-bottom-left-radius: 14px; -unity-text-align: middle-center; align-items: center; align-self: center; -unity-font-style: normal; bottom: 0; right: auto; flex-direction: row;">
+                <ui:Label text="ARMADURA&#10;Mas protección (CA)&#10;(elegir)" style="flex-wrap: wrap; height: 75px; white-space: normal; -unity-text-align: upper-center; -unity-font-style: normal; font-size: 16px; color: rgb(228, 208, 167); -unity-font-definition: url(&quot;project://database/Assets/UI/Fonts/Alegreya_Sans_SC/AlegreyaSansSC-Bold.ttf?fileID=12800000&amp;guid=3dd824cdb4f3e3b45a1d07d43edcfa14&amp;type=3#AlegreyaSansSC-Bold&quot;); display: flex;" />
+            </ui:VisualElement>
+            <ui:VisualElement name="slot_5_choose" style="flex-grow: 1; position: absolute; flex-direction: row; display: none; top: 50%;">
+                <ui:Button text="Button" selectable="true" name="btn_slot_cuero" style="background-color: rgba(188, 188, 188, 0); margin-top: 0; margin-right: 4px; margin-bottom: 0; margin-left: 4px; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; min-width: -54px; min-height: -43px; border-top-width: 4px; border-right-width: 4px; border-bottom-width: 4px; border-left-width: 4px; border-top-left-radius: 8px; border-top-right-radius: 8px; border-bottom-right-radius: 8px; border-bottom-left-radius: 8px; position: relative;">
+                    <ui:VisualElement name="slot-51" class="inv-slot" style="display: flex; visibility: visible; margin-right: 0;">
+                        <ui:VisualElement name="slot-51-icon" class="inv-slot__icon" />
+                        <ui:Label name="slot-51-badge" text="0" class="inv-slot__badge" />
+                    </ui:VisualElement>
+                </ui:Button>
+                <ui:Button text="Button" selectable="true" name="btn_slot_malla" style="background-color: rgba(188, 188, 188, 0); margin-top: 0; margin-right: 4px; margin-bottom: 0; margin-left: 4px; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; min-width: -54px; min-height: -43px; border-top-width: 4px; border-right-width: 4px; border-bottom-width: 4px; border-left-width: 4px; border-top-left-radius: 8px; border-top-right-radius: 8px; border-bottom-right-radius: 8px; border-bottom-left-radius: 8px; position: relative;">
+                    <ui:VisualElement name="slot-52" class="inv-slot" style="display: flex; visibility: visible; margin-right: 0;">
+                        <ui:VisualElement name="slot-52-icon" class="inv-slot__icon" />
+                        <ui:Label name="slot-52-badge" text="0" class="inv-slot__badge" />
+                    </ui:VisualElement>
+                </ui:Button>
             </ui:VisualElement>
         </ui:VisualElement>
         <ui:VisualElement name="hud-bottom" class="hud-bottom">

@@ -14,5 +14,7 @@ public class Bolsa : ScriptableObject
     //public List<string> Monedas = new List<string>();
     public int Monedas;
     public string Armadura;
+    public int CA_cuero;
+    public int CA_malla;
 
 }

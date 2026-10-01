@@ -43,9 +43,12 @@ public class stats_UI : MonoBehaviour
 
     private VisualElement info_items_block;
     private VisualElement item_0, item_1, item_2, item_3, item_4, item_5;
+    private VisualElement choose_ca;
+    private VisualElement btn_cuero, btn_malla;
+
     //contadores inventory
-    private int llaves;
-    private int llaveMaestra;
+    private int llaves, llaveMaestra;
+    private int cuero, malla;
     //private int daga;
     //private int espada;
     private int pocionVida;
@@ -80,13 +83,18 @@ public class stats_UI : MonoBehaviour
         inventoryGrid = root.Q<VisualElement>("inventory-grid");
         btnInventory = root.Q<Button>("btn-inventory");
         btnInventory.clicked += ToggleInventary;
-
         inventoryGrid.style.display = DisplayStyle.None;
 
         itemNotification = root.Q<VisualElement>("item-notification");
         notifIcon = root.Q<VisualElement>("notif-icon");
         //Debug.Log(inventoryGrid);
         //Debug.Log(notifIcon);
+
+        choose_ca = root.Q<VisualElement>("slot_5_choose");
+        btn_cuero = root.Q<VisualElement>("btn_slot_cuero");
+        btn_malla = root.Q<VisualElement>("btn_slot_malla");
+        btn_cuero.RegisterCallback<FocusEvent>(OnFocusChanged);
+        btn_malla.RegisterCallback<FocusEvent>(OnFocusChanged);
 
         info_items_block = root.Q<VisualElement>("info_items_inventario");
         item_0 =  root.Q<VisualElement>($"btn_slot_{0}");
@@ -95,8 +103,6 @@ public class stats_UI : MonoBehaviour
         item_3 =  root.Q<VisualElement>($"btn_slot_{3}");
         item_4 =  root.Q<VisualElement>($"btn_slot_{4}");
         item_5 =  root.Q<VisualElement>($"btn_slot_{5}");
-
-
 
         item_0.RegisterCallback<FocusEvent>(OnFocusChanged);
         item_1.RegisterCallback<FocusEvent>(OnFocusChanged);
@@ -135,6 +141,8 @@ public class stats_UI : MonoBehaviour
         pocionVida = 0;
         pocionLava = 0;
         monedas = 0;
+        cuero = 0;
+        malla = 0;
         armadura = null;
         inInventary = false;
         //Seteamos valores, int -> string
@@ -153,7 +161,6 @@ public class stats_UI : MonoBehaviour
         SetCarisma(c);
         SetCA(ca);
         SetInventario();
-        SetArmadura();
     }
 
     void Update()
@@ -271,6 +278,14 @@ public class stats_UI : MonoBehaviour
             VisualElement info = root.Q<VisualElement>("info_slot_5");
             info.style.display = DisplayStyle.Flex;
         }
+        else if (evt.target == btn_cuero)
+        {
+            evt_btn = 51;
+        }
+        else if (evt.target == btn_malla)
+        {
+            evt_btn = 52;
+        }
 
     }
     void ToggleInventary()
@@ -300,6 +315,7 @@ public class stats_UI : MonoBehaviour
 
     void Use_Item()
     {
+        Debug.Log(evt_btn);
         if (evt_btn == 0) // llave
         {
             Debug.Log("Usar item llave");
@@ -341,7 +357,34 @@ public class stats_UI : MonoBehaviour
         }
         else if (evt_btn == 5) // armadura
         {
-            Debug.Log("Usar item armadura");
+            VisualElement info = root.Q<VisualElement>("info_slot_5");
+            info.style.display = DisplayStyle.None;
+
+            VisualElement aux = root.Q<VisualElement>("slot_5_choose");
+            aux.style.display = DisplayStyle.Flex;
+            root.Q<VisualElement>("btn_slot_cuero").Focus();
+        }
+        else if (evt_btn == 51) //cuero
+        {
+            VisualElement info = root.Q<VisualElement>("info_slot_5");
+            info.style.display = DisplayStyle.Flex;
+            VisualElement aux = root.Q<VisualElement>("slot_5_choose");
+            aux.style.display = DisplayStyle.None;
+            root.Q<VisualElement>("btn_slot_5").Focus();
+
+            protagonista.Inventario.Armadura = "cuero";
+            SetArmadura();
+        }
+        else if (evt_btn == 52) //malla
+        {
+            VisualElement info = root.Q<VisualElement>("info_slot_5");
+            info.style.display = DisplayStyle.Flex;
+            VisualElement aux = root.Q<VisualElement>("slot_5_choose");
+            aux.style.display = DisplayStyle.None;
+            root.Q<VisualElement>("btn_slot_5").Focus();
+
+            protagonista.Inventario.Armadura = "malla";
+            SetArmadura();
         }
     }
 
@@ -461,7 +504,7 @@ public class stats_UI : MonoBehaviour
         else if (armadura == "malla")
             SetSlot(5, armadura != null ? iconoArmaduraMalla : null, 1);
 
-        SetArmadura();
+        SetArmadura(); //al abrir boton de armadura
     }
 
     void SetSlot(int index, Sprite icono, int cantidad)
@@ -498,11 +541,16 @@ public class stats_UI : MonoBehaviour
     }
     void SetArmadura()
     {
-        if (armadura == "cuero")
-            protagonista.stats.values[4].value = 14;
-        else if (armadura == "malla")
-            protagonista.stats.values[4].value = 16;
-        else
-            protagonista.stats.values[4].value = 12;
+        // Null check antes de acceder a las listas
+        if (protagonista.Inventario.CA_cuero == 0) return;
+        if (protagonista.Inventario.CA_malla == 0) return;
+
+        cuero = protagonista.Inventario.CA_cuero;
+        malla = protagonista.Inventario.CA_malla;
+
+        SetSlot(51, cuero > 0 ? iconoArmaduraCuero : null, cuero);
+
+        SetSlot(52, malla > 0 ? iconoArmaduraMalla : null, malla);
+
     }
 }

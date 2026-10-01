@@ -42,7 +42,7 @@ public class stats_UI : MonoBehaviour
     private VisualElement notifIcon;
     private Coroutine notifCoroutine;
 
-    private VisualElement info_items_block;
+    private VisualElement info_items_block, info;
     private VisualElement item_0, item_1, item_2, item_3, item_4, item_5;
     private VisualElement choose_ca;
     private VisualElement btn_cuero, btn_malla, ca_vaciar;
@@ -99,6 +99,7 @@ public class stats_UI : MonoBehaviour
         btn_malla.RegisterCallback<FocusEvent>(OnFocusChanged);
         ca_vaciar.RegisterCallback<FocusEvent>(OnFocusChanged);
 
+        info = root.Q<VisualElement>("info_slot_5");
         info_items_block = root.Q<VisualElement>("info_items_inventario");
         item_0 =  root.Q<VisualElement>($"btn_slot_{0}");
         item_1 =  root.Q<VisualElement>($"btn_slot_{1}");
@@ -373,7 +374,10 @@ public class stats_UI : MonoBehaviour
         }
         else if (evt_btn == 5) // armadura
         {
-            VisualElement info = root.Q<VisualElement>("info_slot_5");
+            //desactivamos todos
+            for (int i = 0; i <= 5; i++)
+                root.Q<VisualElement>($"btn_slot_{i}").SetEnabled(false);
+
             info.style.display = DisplayStyle.None;
 
             VisualElement aux = root.Q<VisualElement>("slot_5_choose");
@@ -382,8 +386,12 @@ public class stats_UI : MonoBehaviour
         }
         else if (evt_btn == 51) //cuero
         {
-            VisualElement info = root.Q<VisualElement>("info_slot_5");
+            //activamos todos
+            for (int i = 0; i <= 5; i++)
+                root.Q<VisualElement>($"btn_slot_{i}").SetEnabled(true);
+
             info.style.display = DisplayStyle.Flex;
+
             VisualElement aux = root.Q<VisualElement>("slot_5_choose");
             aux.style.display = DisplayStyle.None;
             root.Q<VisualElement>("btn_slot_5").Focus();
@@ -393,8 +401,12 @@ public class stats_UI : MonoBehaviour
         }
         else if (evt_btn == 52) //malla
         {
-            VisualElement info = root.Q<VisualElement>("info_slot_5");
+            //activamos todos
+            for (int i = 0; i <= 5; i++)
+                root.Q<VisualElement>($"btn_slot_{i}").SetEnabled(true);
+
             info.style.display = DisplayStyle.Flex;
+
             VisualElement aux = root.Q<VisualElement>("slot_5_choose");
             aux.style.display = DisplayStyle.None;
             root.Q<VisualElement>("btn_slot_5").Focus();
@@ -404,6 +416,16 @@ public class stats_UI : MonoBehaviour
         }
         else if (evt_btn == 53)
         {
+            //activamos todos
+            for (int i = 0; i <= 5; i++)
+                root.Q<VisualElement>($"btn_slot_{i}").SetEnabled(true);
+
+            info.style.display = DisplayStyle.Flex;
+
+            VisualElement aux = root.Q<VisualElement>("slot_5_choose");
+            aux.style.display = DisplayStyle.None;
+            root.Q<VisualElement>("btn_slot_5").Focus();
+
             protagonista.Inventario.Armadura = "no";
             SetArmadura();
         }

@@ -22,6 +22,7 @@ public class stats_UI : MonoBehaviour
     [SerializeField] Sprite iconoMonedas;
     [SerializeField] Sprite iconoArmaduraCuero;
     [SerializeField] Sprite iconoArmaduraMalla;
+    [SerializeField] Sprite iconoVacio;
 
     //ref del UI
     private VisualElement root;
@@ -44,7 +45,7 @@ public class stats_UI : MonoBehaviour
     private VisualElement info_items_block;
     private VisualElement item_0, item_1, item_2, item_3, item_4, item_5;
     private VisualElement choose_ca;
-    private VisualElement btn_cuero, btn_malla;
+    private VisualElement btn_cuero, btn_malla, ca_vaciar;
 
     //contadores inventory
     private int llaves, llaveMaestra;
@@ -93,8 +94,10 @@ public class stats_UI : MonoBehaviour
         choose_ca = root.Q<VisualElement>("slot_5_choose");
         btn_cuero = root.Q<VisualElement>($"btn_slot_{51}");
         btn_malla = root.Q<VisualElement>($"btn_slot_{52}");
+        ca_vaciar = root.Q<VisualElement>($"btn_slot_{53}");
         btn_cuero.RegisterCallback<FocusEvent>(OnFocusChanged);
         btn_malla.RegisterCallback<FocusEvent>(OnFocusChanged);
+        ca_vaciar.RegisterCallback<FocusEvent>(OnFocusChanged);
 
         info_items_block = root.Q<VisualElement>("info_items_inventario");
         item_0 =  root.Q<VisualElement>($"btn_slot_{0}");
@@ -286,6 +289,10 @@ public class stats_UI : MonoBehaviour
         {
             evt_btn = 52;
         }
+        else if (evt.target == ca_vaciar)
+        {
+            evt_btn = 53;
+        }
 
     }
     void ToggleInventary()
@@ -386,6 +393,11 @@ public class stats_UI : MonoBehaviour
             protagonista.Inventario.Armadura = "malla";
             SetArmadura();
         }
+        else if (evt_btn == 53)
+        {
+            protagonista.Inventario.Armadura = "no";
+            SetArmadura();
+        }
     }
 
 
@@ -478,7 +490,6 @@ public class stats_UI : MonoBehaviour
         if (protagonista.Inventario.PocionVida == null) return;
         if (protagonista.Inventario.PocionLava == null) return;
         if (protagonista.Inventario.Monedas == 0) return;
-        if (protagonista.Inventario.Armadura == null) return;
         //if (protagonista.Inventario.Daga == null) return;
         //if (protagonista.Inventario.Espada == null) return;
 
@@ -489,7 +500,6 @@ public class stats_UI : MonoBehaviour
         //daga = protagonista.Inventario.Daga.Count();
         //espada = protagonista.Inventario.Espada.Count();
         monedas = protagonista.Inventario.Monedas;
-        armadura = protagonista.Inventario.Armadura;
 
         SetSlot(0, llaves > 0 ? iconoLlave : null, llaves);
         SetSlot(1, llaveMaestra > 0 ? iconoLlaveMaestra : null, llaveMaestra);
@@ -499,10 +509,7 @@ public class stats_UI : MonoBehaviour
         //SetSlot(5, pocionLava > 0 ? iconoPocionLava : null, pocionLava);
         SetSlot(3, pocionLava > 0 ? iconoPocionLava : null, pocionLava);
         SetSlot(4, monedas > 0 ? iconoMonedas : null, monedas);
-        if (armadura == "cuero")
-            SetSlot(5, armadura != null ? iconoArmaduraCuero : null, 1);
-        else if (armadura == "malla")
-            SetSlot(5, armadura != null ? iconoArmaduraMalla : null, 1);
+
 
         SetArmadura(); //al abrir boton de armadura
     }
@@ -538,17 +545,40 @@ public class stats_UI : MonoBehaviour
         slotBadge.style.display = cantidad > 0
             ? DisplayStyle.Flex
             : DisplayStyle.None;
-        if (cantidad <= 0)
+        if (cantidad <= 0 && index != 5)
             root.Q<VisualElement>($"btn_slot_{index}").SetEnabled(false);
     }
     void SetArmadura()
     {
         // Null check antes de acceder a las listas
+        if (protagonista.Inventario.Armadura == null) return;
         if (protagonista.Inventario.CA_cuero == 0) return;
         if (protagonista.Inventario.CA_malla == 0) return;
 
+        armadura = protagonista.Inventario.Armadura;
         cuero = protagonista.Inventario.CA_cuero;
         malla = protagonista.Inventario.CA_malla;
+
+        if (armadura == "cuero")
+        {
+            protagonista.stats.values[4].value = 14;
+
+            SetSlot(5, armadura != null ? iconoArmaduraCuero : null, 1);
+
+        }
+        else if (armadura == "malla")
+        {
+            protagonista.stats.values[4].value = 16;
+
+            SetSlot(5, armadura != null ? iconoArmaduraMalla : null, 1);
+
+        }
+        else
+        {
+            protagonista.stats.values[4].value = 12;
+            SetSlot(5, armadura != null ? iconoVacio : null, 0);
+
+        }
 
         SetSlot(51, cuero > 0 ? iconoArmaduraCuero : null, cuero);
 

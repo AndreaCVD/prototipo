@@ -22,6 +22,6 @@ MonoBehaviour:
   - pocion_tienda
   PocionLava: []
   Monedas: 100
-  Armadura: malla
+  Armadura: 
   CA_cuero: 2
   CA_malla: 2

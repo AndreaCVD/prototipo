@@ -227,6 +227,12 @@ public class stats_UI : MonoBehaviour
         hud_top.style.display = DisplayStyle.None;
         hud_bottom_right.style.display = DisplayStyle.None;
         hud_bottom.style.display = DisplayStyle.None;
+
+        inventoryGrid.style.display = DisplayStyle.None;
+        info_items_block.style.display = DisplayStyle.None;
+
+        //VisualElement a = root.Q<VisualElement>("slot_5_choose");
+        //a.style.display = DisplayStyle.None;
     }
     // Inventario
     void OnFocusChanged(FocusEvent evt)

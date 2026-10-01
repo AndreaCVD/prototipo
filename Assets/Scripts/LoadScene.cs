@@ -66,7 +66,8 @@ public class LoadScene : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape) && !onPause &&!onCombat)
         {
-            escenaState.ScenePause(true); //true, se para
+            if (!escenaState.scenePaused)
+                escenaState.ScenePause(true); //true, se para
             onPause = true;
             UI.Pausa();
             ChangeScene("Pause_Menu");
@@ -74,7 +75,7 @@ public class LoadScene : MonoBehaviour
         if (SceneManager.sceneCount == 1 && onPause)
         {
             UI.DesPausa();
-            escenaState.ScenePause(false); //false, se mueve
+                escenaState.ScenePause(false); //false, se mueve
             onPause = false;
         }
     }

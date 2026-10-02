@@ -37,8 +37,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 51ef5bea6aa2dd842b927d75dc044364, type: 3}
   Estados_combate:
   - {fileID: 21300000, guid: f91f6961fe60af64b809de968e2a6032, type: 3}
-  - {fileID: 21300000, guid: b58e4455c074ca14b81de6a939313334, type: 3}
-  - {fileID: 21300000, guid: 72ab27c588b3be94486e160796628fd0, type: 3}
+  - {fileID: 21300000, guid: 2ad20a30a734f584f9f214ea511b4f77, type: 3}
+  - {fileID: 21300000, guid: 9e2058fcea240954cb1fbb5231a16536, type: 3}
   Estados_enamorado:
   - {fileID: 21300000, guid: f241c3b60d7b9bc47927278527bb2d28, type: 3}
   - {fileID: 21300000, guid: 906339d938bba924ba6c90f27422dfde, type: 3}
